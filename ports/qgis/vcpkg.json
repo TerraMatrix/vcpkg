@@ -1,0 +1,89 @@
+{
+  "name": "qgis3",
+  "version": "3.18.2",
+  "description": "QGIS is a free, open source, cross platform (lin/win/mac) geographical information system (GIS)",
+  "homepage": "https://qgis.org",
+  "dependencies": [
+    "expat",
+    "hdf5",
+    "libxml2",
+    "libzip,
+    "zlib",
+    "libspatialindex,
+    "libspatialite",
+    "glib",
+    "gdal",
+    "opencl",
+    "exiv2,
+    "gsl",
+    "libpq",
+    "protobuf",
+    "proj4",
+    "geos",
+    "poly2tri",
+    "qt5-base",
+    "qt5-svg",
+    "qt5-location",
+    "qt5-tools",
+    {
+      "name": "qt5-macextras",
+      "platform": "osx"
+    }
+    {
+      "name": "qt5-winextras",
+      "platform": "windows"
+    }
+    "qwt",
+    "qca",
+    "qscintilla",
+    "qtkeychain"
+  ],
+  "default-features": [
+    "openssl",
+    "zlib"
+  ],
+  "features": {
+    "server": {
+      "description": "Determines whether QGIS server should be built"
+      "dependencies": [
+        "fastcgi"
+      ]
+    },
+    "bindings": {
+      "description": "Determines whether python bindings should be built"
+      "dependencies": [
+        "python3"
+      ]
+    },
+    "3d": {
+      "description": "Determines whether QGIS 3D library should be built"
+      "dependencies": [
+        "qt5-3d"
+      ]
+    },
+    "pdal": {
+      "description": "Determines whether PDAL support should be built"
+      "dependencies": [
+        "pdal"
+      ]
+    },
+    "quick": {
+      "description": "Determines whether QGIS Quick library should be built"
+      "dependencies": [
+        "qt5-declarative"
+      ]
+    },
+    "pip-mirrors": {
+      "description": "Use aliyun proxy to speed up pypi downloads in China",
+    },
+    "sip5": {
+      "description": "Use sip5 build qgis",
+    },
+    "debug-tools": {
+      "description": "Install debug tools for qgis",
+    },
+    "ltr": {
+      "description": "Build The long-term repositories for qgis",
+    }
+  }
+}
