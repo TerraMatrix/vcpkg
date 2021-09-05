@@ -1,0 +1,12 @@
+diff --git a/src/gui/raster/qgsrasterhistogramwidget.cpp b/src/gui/raster/qgsrasterhistogramwidget.cpp
+index 79c3e12..2a699a8 100644
+--- a/src/gui/raster/qgsrasterhistogramwidget.cpp
++++ b/src/gui/raster/qgsrasterhistogramwidget.cpp
+@@ -44,6 +44,7 @@
+ #include <qwt_plot_layout.h>
+ #include <qwt_plot_renderer.h>
+ #include <qwt_plot_histogram.h>
++#include <qwt_scale_div.h>
+ 
+ #ifdef Q_OS_WIN
+ #include <time.h>

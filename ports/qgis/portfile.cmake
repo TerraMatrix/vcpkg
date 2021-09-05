@@ -25,6 +25,11 @@ vcpkg_from_github(
         # In vcpkg, qca's library name is qca, but qgis defaults to qca-qt5 or qca2-qt5, so add qca for easy searching
         qca.patch
         fixpython3.patch
+        qgscurveeditorwidget.patch
+        qgsgradientcolorrampdialog.patch
+        qgsgraduatedhistogramwidget.patch
+        qgshistogramwidget.patch
+        qgsrasterhistogramwidget.patch
 )
 
 vcpkg_find_acquire_program(FLEX)
@@ -182,7 +187,7 @@ if(VCPKG_TARGET_IS_WINDOWS)
             file(COPY ${PYTHON_INCLUDE} DESTINATION "${PYTHON3_PATH}/Include")
             file(COPY "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR}.lib" DESTINATION "${PYTHON3_PATH}/libs")
             file(COPY "${CURRENT_INSTALLED_DIR}/debug/lib/python${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR}_d.lib" DESTINATION "${PYTHON3_PATH}/libs")
-        
+
             vcpkg_execute_required_process(
                 COMMAND "${PYTHON_EXECUTABLE}" -m pip install sip ${PIP_MIRRORS}
                 WORKING_DIRECTORY ${PYTHON3_PATH}
@@ -405,7 +410,7 @@ endif()
 vcpkg_configure_cmake(
     SOURCE_PATH ${SOURCE_PATH}
     #PREFER_NINJA
-    OPTIONS ${QGIS_OPTIONS} 
+    OPTIONS ${QGIS_OPTIONS}
     OPTIONS_DEBUG ${QGIS_OPTIONS_DEBUG}
     OPTIONS_RELEASE ${QGIS_OPTIONS_RELEASE}
 )
