@@ -1,12 +1,12 @@
 vcpkg_download_distfile(single_header
-    URLS https://github.com/approvals/ApprovalTests.cpp/releases/download/v.10.11.0/ApprovalTests.v.10.11.0.hpp
-    FILENAME ApprovalTests.v.10.11.0.hpp
-    SHA512 2b43792b28a1dd44d76584c4d3bb9cb99563f92fdeafefd747516a8cfe0baf118b27ad235e1b023b3f5f3a34ecf920c12ab8a6d337776efc036456f4277142ae
+    URLS https://github.com/approvals/ApprovalTests.cpp/releases/download/v.10.12.1/ApprovalTests.v.10.12.1.hpp
+    FILENAME ApprovalTests.v.10.12.1.hpp
+    SHA512 80921b8334c4c48380306a285e4f18f55872bced7a5f7f4c1a9db9c4fbd1cebf7c0ed8cca28e80b3024e34e2b41799976b1d36ecbf8d40e2bcfe45efab20d138
 )
 
 vcpkg_download_distfile(license_file
-    URLS https://raw.githubusercontent.com/approvals/ApprovalTests.cpp/v.10.11.0/LICENSE
-    FILENAME ApprovalTestsLicense.v.10.11.0
+    URLS https://raw.githubusercontent.com/approvals/ApprovalTests.cpp/v.10.12.1/LICENSE
+    FILENAME ApprovalTestsLicense.v.10.12.1
     SHA512 dc6b68d13b8cf959644b935f1192b02c71aa7a5cf653bd43b4480fa89eec8d4d3f16a2278ec8c3b40ab1fdb233b3173a78fd83590d6f739e0c9e8ff56c282557
 )
 
