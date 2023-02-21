@@ -24,4 +24,8 @@ echo "install  flann 2019-04-07#6"
 echo "--------------------------------------------"
 call ./bash/flann.bat
 
+echo "install  gtest 1.12.1#1"
+echo "--------------------------------------------"
+call ./bash/gtest.bat
+
 
