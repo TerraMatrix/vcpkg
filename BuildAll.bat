@@ -32,4 +32,8 @@ echo "install  glew  2.2.0"
 echo "--------------------------------------------"
 call ./bash/glew.bat
 
+echo "install  gmp  6.2.1#15"
+echo "--------------------------------------------"
+call ./bash/gmp.bat
+
 
