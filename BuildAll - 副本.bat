@@ -1,48 +1,14 @@
 
 
-echo "install  flann"
-echo "--------------------------------------------"
-vcpkg install flann[hdf5]  --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
-
-echo "install  gtest"
-echo "--------------------------------------------"
-vcpkg install gtest  --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
-
-echo "install  glew"
-echo "--------------------------------------------"
-vcpkg install glew --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
-
-echo "install  gmp"
-echo "--------------------------------------------"
-vcpkg install gmp --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
-
-echo "install  cereal"
-echo "--------------------------------------------"
-vcpkg install cereal  --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
-
-echo "install  gsl"
-echo "--------------------------------------------"
-vcpkg install gsl --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
-
-echo "install  openni2"
-echo "--------------------------------------------"
-vcpkg install openni2 --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
-
-echo "install  openexr"
-echo "--------------------------------------------"
-vcpkg install openexr --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse 
 
 echo "install  Qt5.15.2"
 echo "--------------------------------------------"
 vcpkg install qt5 qt5[3d,activeqt,charts,connectivity,datavis3d,declarative,doc,essentials,extras,graphicaleffects,imageformats,latest,location,mqtt,multimedia,networkauth,purchasing,quickcontrols,quickcontrols2,remoteobjects,script,scxml,sensors,serialbus,serialport,speech,svg,tools,translations,virtualkeyboard,webchannel,webengine,webglplugin,websockets,webview,xmlpatterns]  --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
 
-echo "install  pybind11"
-echo "--------------------------------------------"
-vcpkg install pybind11  --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
 
 echo "install  ceres"
 echo "--------------------------------------------"
-vcpkg install ceres[core,cxsparse,eigensparse,lapack,suitesparse,tools] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
+
 
 echo "install  crunch"
 echo "--------------------------------------------"

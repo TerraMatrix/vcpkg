@@ -56,5 +56,9 @@ echo "install  pybind11  2.10.0#1"
 echo "--------------------------------------------"
 call ./bash/pybind11.bat
 
+echo "install  ceres   2.1.0#3"
+echo "--------------------------------------------"
+call ./bash/ceres.bat
+
 
 
