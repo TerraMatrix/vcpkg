@@ -60,5 +60,9 @@ echo "install  ceres   2.1.0#3"
 echo "--------------------------------------------"
 call ./bash/ceres.bat
 
+echo "install  crunch  104"
+echo "--------------------------------------------"
+call ./bash/crunch.bat
+
 
 
