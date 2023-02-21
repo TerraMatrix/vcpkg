@@ -52,5 +52,9 @@ echo "install  openexr  3.1.5"
 echo "--------------------------------------------"
 call ./bash/openexr.bat
 
+echo "install  pybind11  2.10.0#1"
+echo "--------------------------------------------"
+call ./bash/pybind11.bat
+
 
 
