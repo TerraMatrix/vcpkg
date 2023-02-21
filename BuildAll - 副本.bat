@@ -1,20 +1,12 @@
 
 
 
-echo "install  Qt5.15.2"
-echo "--------------------------------------------"
-vcpkg install qt5 qt5[3d,activeqt,charts,connectivity,datavis3d,declarative,doc,essentials,extras,graphicaleffects,imageformats,latest,location,mqtt,multimedia,networkauth,purchasing,quickcontrols,quickcontrols2,remoteobjects,script,scxml,sensors,serialbus,serialport,speech,svg,tools,translations,virtualkeyboard,webchannel,webengine,webglplugin,websockets,webview,xmlpatterns]  --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
 
 
-
-
-echo "install  libkml"
-echo "--------------------------------------------"
-vcpkg install libkml --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse 
 
 echo "install  curl"
 echo "--------------------------------------------"
-vcpkg install curl[core,non-http,schannel,ssl,sspi,tool] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse 
+vcpkg install curl[core,brotli,http2,non-http,schannel,ssl,ssh,sspi,websockets,winssl] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse 
 
 echo "install proj"
 echo "--------------------------------------------"

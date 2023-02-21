@@ -72,6 +72,11 @@ echo "install  libkml  1.3.0#11"
 echo "--------------------------------------------"
 call ./bash/libkml.bat
 
+echo "install  curl  7.87.0#1"
+echo "--------------------------------------------"
+call ./bash/curl.bat
+
+
 
 
 
