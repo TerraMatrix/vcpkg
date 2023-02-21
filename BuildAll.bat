@@ -2,6 +2,10 @@ echo "install  boost"
 echo "--------------------------------------------"
 vcpkg install boost[mpi] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees --recurse
 
+echo "install  fmt"
+echo "--------------------------------------------"
+vcpkg install fmt --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees --editable
+
 echo "install  freetype"
 echo "--------------------------------------------"
 vcpkg install freetype[core,brotli,bzip2,png,zlib] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
@@ -128,7 +132,7 @@ vcpkg install cgal --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees
 
 echo "install  opencv"
 echo "--------------------------------------------"
-vcpkg install opencv[ade,contrib,cuda,dnn,eigen,ffmpeg,gdcm,halide,ipp,jasper,jpeg,lapack,nonfree,openexr,opengl,openmp,ovis,png,qt,quirc,sfm,tbb,tiff,webp,world] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees --editable
+vcpkg install opencv[default-features,ade,contrib,dnn,eigen,halide,jasper,jpeg,lapack,nonfree,opengl,openmp,png,quirc,sfm,tbb,tiff] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees --editable
 
 echo "install  osg"
 echo "--------------------------------------------"
@@ -141,3 +145,7 @@ vcpkg install osg-qt  osgearth --triplet=x64-windows --x-buildtrees-root=F:/vcpk
 echo "install  qgis"
 echo "--------------------------------------------"
 vcpkg install qgis[bindings,3d,server,pip-mirrors,debug-tools,ltr] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse  --editable
+
+echo "install  mnn"
+echo "--------------------------------------------"
+vcpkg install mnn[cuda,opencl,test,tools] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees --editable
