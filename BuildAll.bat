@@ -80,6 +80,10 @@ echo "install  proj4  8.9.9#1"
 echo "--------------------------------------------"
 call ./bash/proj4.bat
 
+echo "install  libgeotiff 1.7.1#2"
+echo "--------------------------------------------"
+call ./bash/libgeotiff.bat
+
 
 
 
