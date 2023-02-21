@@ -5,8 +5,8 @@ endif()
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO libjpeg-turbo/libjpeg-turbo
-    REF c5f269eb9665435271c05fbcaf8721fa58e9eafa # 2.1.3
-    SHA512 5d1c3cbbc7628339cfedc0f81a65ceb972aba2b8ffcc72d001f87526d0ff468f83665c78165051aa95c39200d9aaa6aee76e01266a4ea9cddb678dc6ef17ec27
+    REF "${VERSION}"
+    SHA512 20036303fbe5703a5742dc3778cc5deb2eb98d00a9852e7e80ba73c195bba011ec206c090589c482f1153f74505c3fe06d96af00f6beaa65a7fcf7ffaf626fc2
     HEAD_REF master
     PATCHES
         add-options-for-exes-docs-headers.patch
@@ -94,4 +94,4 @@ file(REMOVE_RECURSE
 file(COPY "${CMAKE_CURRENT_LIST_DIR}/usage" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}")
 file(COPY "${CMAKE_CURRENT_LIST_DIR}/vcpkg-cmake-wrapper.cmake" DESTINATION "${CURRENT_PACKAGES_DIR}/share/jpeg")
 
-file(INSTALL "${SOURCE_PATH}/LICENSE.md" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME copyright)
+vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE.md")
