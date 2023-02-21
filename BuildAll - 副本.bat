@@ -1,16 +1,8 @@
 
 
-echo "install  freetype"
-echo "--------------------------------------------"
-vcpkg install freetype[core,brotli,bzip2,png,zlib] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
-
-echo "install  hdf5"
-echo "--------------------------------------------"
-vcpkg install hdf5[core,parallel,szip,zlib]  --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
-
 echo "install  flann"
 echo "--------------------------------------------"
-vcpkg install flann[core,hdf5]  --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
+vcpkg install flann[hdf5]  --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
 
 echo "install  gtest"
 echo "--------------------------------------------"
