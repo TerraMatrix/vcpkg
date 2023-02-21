@@ -1,4 +1,4 @@
-echo "install  boost"
+echo "install  boost 1.81.0"
 echo "--------------------------------------------"
 vcpkg install boost[mpi] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees --recurse
 
