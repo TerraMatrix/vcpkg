@@ -88,6 +88,10 @@ echo "install  xerces-c 3.2.4#2"
 echo "--------------------------------------------"
 call ./bash/xerces-c.bat
 
+echo "install  libxml2 2.10.3"
+echo "--------------------------------------------"
+call ./bash/libxml2.bat
+
 
 
 
