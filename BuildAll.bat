@@ -76,6 +76,10 @@ echo "install  curl  7.87.0#1"
 echo "--------------------------------------------"
 call ./bash/curl.bat
 
+echo "install  proj4  8.9.9#1"
+echo "--------------------------------------------"
+call ./bash/proj4.bat
+
 
 
 

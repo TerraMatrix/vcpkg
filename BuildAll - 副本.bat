@@ -4,13 +4,10 @@
 
 
 
-echo "install  curl"
-echo "--------------------------------------------"
-vcpkg install curl[core,brotli,http2,non-http,schannel,ssl,ssh,sspi,websockets,winssl] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse 
 
 echo "install proj"
 echo "--------------------------------------------"
-vcpkg install proj4[core,database,tiff,tools] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse 
+vcpkg install proj4[core,tiff,tools] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse 
 
 echo "install  libgeotiff"
 echo "--------------------------------------------"
