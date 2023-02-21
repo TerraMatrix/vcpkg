@@ -8,8 +8,12 @@ echo "install  boost 1.81.0"
 echo "--------------------------------------------"
 call ./bash/boost.bat
 
-echo "install  fmt 9.1.0"
+echo "install  fmt 9.1.0#1"
 echo "--------------------------------------------"
 call ./bash/fmt.bat
+
+echo "install  freetype 2.12.1#3"
+echo "--------------------------------------------"
+call ./bash/freetype.bat
 
 
