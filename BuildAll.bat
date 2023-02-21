@@ -36,4 +36,9 @@ echo "install  gmp  6.2.1#15"
 echo "--------------------------------------------"
 call ./bash/gmp.bat
 
+echo "install  cereal  1.3.2#1"
+echo "--------------------------------------------"
+call ./bash/cereal.bat
+
+
 
