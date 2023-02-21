@@ -84,6 +84,10 @@ echo "install  libgeotiff 1.7.1#2"
 echo "--------------------------------------------"
 call ./bash/libgeotiff.bat
 
+echo "install  xerces-c 3.2.4#2"
+echo "--------------------------------------------"
+call ./bash/xerces-c.bat
+
 
 
 
