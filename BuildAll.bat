@@ -68,5 +68,10 @@ echo "install  Qt5  5.15.8"
 echo "--------------------------------------------"
 call ./bash/qt5.bat
 
+echo "install  libkml  1.3.0#11"
+echo "--------------------------------------------"
+call ./bash/libkml.bat
+
+
 
 
