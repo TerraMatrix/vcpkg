@@ -64,5 +64,9 @@ echo "install  crunch  104"
 echo "--------------------------------------------"
 call ./bash/crunch.bat
 
+echo "install  Qt5  5.15.8"
+echo "--------------------------------------------"
+call ./bash/qt5.bat
+
 
 
