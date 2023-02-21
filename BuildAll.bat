@@ -92,6 +92,10 @@ echo "install  libxml2 2.10.3"
 echo "--------------------------------------------"
 call ./bash/libxml2.bat
 
+echo "install  libpq  14.4#3"
+echo "--------------------------------------------"
+call ./bash/libpq.bat
+
 
 
 
