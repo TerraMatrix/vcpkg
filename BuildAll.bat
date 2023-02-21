@@ -48,5 +48,9 @@ echo "install  openni2  2.2.0.33#14"
 echo "--------------------------------------------"
 call ./bash/openni2.bat
 
+echo "install  openexr  3.1.5"
+echo "--------------------------------------------"
+call ./bash/openexr.bat
+
 
 
