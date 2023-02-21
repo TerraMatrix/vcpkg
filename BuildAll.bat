@@ -40,5 +40,9 @@ echo "install  cereal  1.3.2#1"
 echo "--------------------------------------------"
 call ./bash/cereal.bat
 
+echo "install  gsl  2.7.1#1"
+echo "--------------------------------------------"
+call ./bash/gsl.bat
+
 
 
