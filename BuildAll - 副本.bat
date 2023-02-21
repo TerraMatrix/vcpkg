@@ -2,32 +2,13 @@
 
 
 
-
-
-
-echo "install proj"
-echo "--------------------------------------------"
-vcpkg install proj4[core,tiff,tools] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse 
-
-echo "install  libgeotiff"
-echo "--------------------------------------------"
-vcpkg install libgeotiff --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse 
-
-echo "install  xerces-c"
-echo "--------------------------------------------"
-vcpkg install  xerces-c[icu,xmlch-wchar] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse 
-
-echo "install  libxml2"
-echo "--------------------------------------------"
-vcpkg install  libxml2 --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse 
-
 echo "install  libpq"
 echo "--------------------------------------------"
-vcpkg install  libpq[client,xml,xslt] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse 
+
 
 echo "install  liblas"
 echo "--------------------------------------------"
-vcpkg install liblas[core,jpeg,zlib] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
+
 
 echo "install  lastools"
 echo "--------------------------------------------"

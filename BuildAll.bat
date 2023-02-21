@@ -96,6 +96,10 @@ echo "install  libpq  14.4#3"
 echo "--------------------------------------------"
 call ./bash/libpq.bat
 
+echo "install  liblas  1.8.1#11"
+echo "--------------------------------------------"
+call ./bash/liblas.bat
+
 
 
 
