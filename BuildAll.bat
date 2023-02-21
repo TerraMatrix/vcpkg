@@ -44,5 +44,9 @@ echo "install  gsl  2.7.1#1"
 echo "--------------------------------------------"
 call ./bash/gsl.bat
 
+echo "install  openni2  2.2.0.33#14"
+echo "--------------------------------------------"
+call ./bash/openni2.bat
+
 
 
