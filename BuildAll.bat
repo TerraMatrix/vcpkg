@@ -28,4 +28,8 @@ echo "install  gtest 1.12.1#1"
 echo "--------------------------------------------"
 call ./bash/gtest.bat
 
+echo "install  glew  2.2.0"
+echo "--------------------------------------------"
+call ./bash/glew.bat
+
 
