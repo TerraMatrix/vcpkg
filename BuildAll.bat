@@ -108,6 +108,10 @@ echo "install  lastools  2020-05-09#1"
 echo "--------------------------------------------"
 call ./bash/lastools.bat
 
+echo "install  pdal  2.4.3#1"
+echo "--------------------------------------------"
+call ./bash/pdal.bat
+
 
 
 
