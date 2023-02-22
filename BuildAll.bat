@@ -140,4 +140,12 @@ echo "install  cgal  5.5.1#4"
 echo "--------------------------------------------"
 call ./bash/cgal.bat
 
+echo "install  opencv4  4.7.0#2"
+echo "--------------------------------------------"
+call ./bash/opencv4.bat
+
+echo "install  mnn  1.1.0#3"
+echo "--------------------------------------------"
+call ./bash/mnn.bat
+
 
