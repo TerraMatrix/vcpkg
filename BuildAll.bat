@@ -148,4 +148,12 @@ echo "install  mnn  1.1.0#3"
 echo "--------------------------------------------"
 call ./bash/mnn.bat
 
+echo "install  osg  3.6.5#18"
+echo "--------------------------------------------"
+call ./bash/osg.bat
+
+echo "install  osg-qt  Qt5#3"
+echo "--------------------------------------------"
+call ./bash/osg-qt.bat
+
 
