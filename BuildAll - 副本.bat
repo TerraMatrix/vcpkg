@@ -1,16 +1,7 @@
 
 
-echo "install  gdal"
-echo "--------------------------------------------"
-vcpkg install gdal[default-features] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse --editable
 
-echo "install  glib"
-echo "--------------------------------------------"
-vcpkg install glib --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
 
-echo "install  ilmbase"
-echo "--------------------------------------------"
-vcpkg install ilmbase --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
 
 echo "install  fontconfig"
 echo "--------------------------------------------"

@@ -120,6 +120,10 @@ echo "install  glib  2.75.3"
 echo "--------------------------------------------"
 call ./bash/glib.bat
 
+echo "install  ilmbase 3"
+echo "--------------------------------------------"
+call ./bash/ilmbase.bat
+
 
 
 
