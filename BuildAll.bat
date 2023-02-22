@@ -136,4 +136,8 @@ echo "install  ffmpeg  5.1.2#4"
 echo "--------------------------------------------"
 call ./bash/ffmpeg.bat
 
+echo "install  cgal  5.5.1#4"
+echo "--------------------------------------------"
+call ./bash/cgal.bat
+
 
