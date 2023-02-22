@@ -124,6 +124,9 @@ echo "install  ilmbase 3"
 echo "--------------------------------------------"
 call ./bash/ilmbase.bat
 
+echo "install  fontconfig  2.14.1#1"
+echo "--------------------------------------------"
+call ./bash/fontconfig.bat
 
 
 
