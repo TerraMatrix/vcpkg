@@ -112,6 +112,10 @@ echo "install  pdal  2.4.3#1"
 echo "--------------------------------------------"
 call ./bash/pdal.bat
 
+echo "install  gdal  3.6.2#2"
+echo "--------------------------------------------"
+call ./bash/gdal.bat
+
 
 
 

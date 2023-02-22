@@ -1,26 +1,8 @@
 
 
-
-
-echo "install  libpq"
-echo "--------------------------------------------"
-
-
-echo "install  liblas"
-echo "--------------------------------------------"
-
-
-echo "install  lastools"
-echo "--------------------------------------------"
-vcpkg install lastools --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
-
-echo "install  pdal"
-echo "--------------------------------------------"
-vcpkg install pdal --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
-
 echo "install  gdal"
 echo "--------------------------------------------"
-vcpkg install gdal[libspatialite,mysql-libmariadb] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse --editable
+vcpkg install gdal[default-features] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse --editable
 
 echo "install  glib"
 echo "--------------------------------------------"

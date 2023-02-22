@@ -1,1 +1,1 @@
-vcpkg install pdal[core,hdf,laszib,liblzma] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
+vcpkg install pdal[core,hdf,laszip,liblzma] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
