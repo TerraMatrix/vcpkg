@@ -60,18 +60,6 @@ echo "install  ceres   2.1.0#3"
 echo "--------------------------------------------"
 call ./bash/ceres.bat
 
-echo "install  crunch  104"
-echo "--------------------------------------------"
-call ./bash/crunch.bat
-
-echo "install  Qt5  5.15.8"
-echo "--------------------------------------------"
-call ./bash/qt5.bat
-
-echo "install  libkml  1.3.0#11"
-echo "--------------------------------------------"
-call ./bash/libkml.bat
-
 echo "install  curl  7.87.0#1"
 echo "--------------------------------------------"
 call ./bash/curl.bat
@@ -84,6 +72,22 @@ echo "install  libgeotiff 1.7.1#2"
 echo "--------------------------------------------"
 call ./bash/libgeotiff.bat
 
+echo "install  liblas  1.8.1#11"
+echo "--------------------------------------------"
+call ./bash/liblas.bat
+
+echo "install  crunch  104"
+echo "--------------------------------------------"
+call ./bash/crunch.bat
+
+echo "install  Qt5  5.15.8"
+echo "--------------------------------------------"
+call ./bash/qt5.bat
+
+echo "install  libkml  1.3.0#11"
+echo "--------------------------------------------"
+call ./bash/libkml.bat
+
 echo "install  xerces-c 3.2.4#2"
 echo "--------------------------------------------"
 call ./bash/xerces-c.bat
@@ -95,10 +99,6 @@ call ./bash/libxml2.bat
 echo "install  libpq  14.4#3"
 echo "--------------------------------------------"
 call ./bash/libpq.bat
-
-echo "install  liblas  1.8.1#11"
-echo "--------------------------------------------"
-call ./bash/liblas.bat
 
 
 
