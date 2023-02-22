@@ -116,6 +116,10 @@ echo "install  gdal  3.6.2#2"
 echo "--------------------------------------------"
 call ./bash/gdal.bat
 
+echo "install  glib  2.75.3"
+echo "--------------------------------------------"
+call ./bash/glib.bat
+
 
 
 
