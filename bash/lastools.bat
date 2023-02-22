@@ -1,0 +1,1 @@
+vcpkg install lastools --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse

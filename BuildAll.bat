@@ -76,6 +76,10 @@ echo "install  liblas  1.8.1#11"
 echo "--------------------------------------------"
 call ./bash/liblas.bat
 
+echo "install  mcc-lidar  2.1.0"
+echo "--------------------------------------------"
+call ./bash/mcc-lidar.bat
+
 echo "install  crunch  104"
 echo "--------------------------------------------"
 call ./bash/crunch.bat
@@ -99,6 +103,10 @@ call ./bash/libxml2.bat
 echo "install  libpq  14.4#3"
 echo "--------------------------------------------"
 call ./bash/libpq.bat
+
+echo "install  lastools  2020-05-09#1"
+echo "--------------------------------------------"
+call ./bash/lastools.bat
 
 
 
