@@ -128,6 +128,9 @@ echo "install  fontconfig  2.14.1#1"
 echo "--------------------------------------------"
 call ./bash/fontconfig.bat
 
+echo "install  poppler  23.1.0#1"
+echo "--------------------------------------------"
+call ./bash/poppler.bat
 
 
 
