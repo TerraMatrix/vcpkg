@@ -132,5 +132,8 @@ echo "install  poppler  23.1.0#1"
 echo "--------------------------------------------"
 call ./bash/poppler.bat
 
+echo "install  ffmpeg  5.1.2#4"
+echo "--------------------------------------------"
+call ./bash/ffmpeg.bat
 
 
