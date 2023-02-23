@@ -16,6 +16,10 @@ echo "install  sltbench  2.4.0"
 echo "--------------------------------------------"
 call ./bash/sltbench .bat
 
+echo "install  mnn  1.1.0#3"
+echo "--------------------------------------------"
+call ./bash/mnn.bat
+
 echo "install  freetype 2.12.1#3"
 echo "--------------------------------------------"
 call ./bash/freetype.bat
@@ -144,13 +148,13 @@ echo "install  cgal  5.5.1#4"
 echo "--------------------------------------------"
 call ./bash/cgal.bat
 
+echo "install  pcl  1.13.0"
+echo "--------------------------------------------"
+call ./bash/pcl.bat
+
 echo "install  opencv4  4.7.0#2"
 echo "--------------------------------------------"
 call ./bash/opencv4.bat
-
-echo "install  mnn  1.1.0#3"
-echo "--------------------------------------------"
-call ./bash/mnn.bat
 
 echo "install  osg  3.6.5#18"
 echo "--------------------------------------------"
