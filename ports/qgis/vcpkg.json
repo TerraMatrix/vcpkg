@@ -25,8 +25,8 @@
     "poly2tri",
     {
       "name": "qt5-base",
-      "host": true,
-      "default-features": false
+      "default-features": false,
+      "version>=": "5.15.8"
     },
     {
       "name": "qt5-svg",
@@ -57,6 +57,13 @@
     {
       "name": "vcpkg-get-python-packages",
       "host": true
+    }
+  ],
+   "overrides": [
+    { 
+      "name": "qt5-base", 
+      "version": "5.15.8",
+      "port-version": 3
     }
   ],
   "features": {
