@@ -1,1 +1,1 @@
-vcpkg install proj4[core,tiff,tools] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse  --editable
+vcpkg install proj4[core,net,tiff,tools] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse  --editable

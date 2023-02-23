@@ -12,6 +12,10 @@ echo "install  fmt 9.1.0#1"
 echo "--------------------------------------------"
 call ./bash/fmt.bat
 
+echo "install  sltbench  2.4.0"
+echo "--------------------------------------------"
+call ./bash/sltbench .bat
+
 echo "install  freetype 2.12.1#3"
 echo "--------------------------------------------"
 call ./bash/freetype.bat
@@ -155,5 +159,9 @@ call ./bash/osg.bat
 echo "install  osg-qt  Qt5#3"
 echo "--------------------------------------------"
 call ./bash/osg-qt.bat
+
+echo "install  qgis"
+echo "--------------------------------------------"
+call ./bash/qgis.bat
 
 
