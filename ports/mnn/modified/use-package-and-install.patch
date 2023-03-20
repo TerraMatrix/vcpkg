@@ -1,0 +1,112 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 993f15d..53f24ae 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -35,14 +35,14 @@ set(CMAKE_MODULE_PATH
+   ${CMAKE_MODULE_PATH}
+   "${CMAKE_CURRENT_LIST_DIR}/cmake"
+ )
+-#add_custom_command(OUTPUT "${CMAKE_CURRENT_LIST_DIR}/include/MNN/VCS.h"
+-#    COMMAND ${CMAKE_COMMAND} "-DNAMES=MNN"
+-#    "-DMNN_SOURCE_DIR=${CMAKE_CURRENT_LIST_DIR}"
+-#    "-DHEADER_FILE=${CMAKE_CURRENT_LIST_DIR}/include/MNN/VCS.h"
+-#    -P "${CMAKE_CURRENT_LIST_DIR}/cmake/GenerateVersionFromVCS.cmake"
+-#    COMMENT "Generating Version Control Info"
+-#)
+-#add_custom_target (GenVCSHDR DEPENDS "${CMAKE_CURRENT_LIST_DIR}/include/MNN/VCS.h")
++add_custom_command(OUTPUT "${CMAKE_CURRENT_LIST_DIR}/include/MNN/VCS.h"
++    COMMAND ${CMAKE_COMMAND} "-DNAMES=MNN"
++    "-DMNN_SOURCE_DIR=${CMAKE_CURRENT_LIST_DIR}"
++    "-DHEADER_FILE=${CMAKE_CURRENT_LIST_DIR}/include/MNN/VCS.h"
++    -P "${CMAKE_CURRENT_LIST_DIR}/cmake/GenerateVersionFromVCS.cmake"
++    COMMENT "Generating Version Control Info"
++)
++add_custom_target (GenVCSHDR DEPENDS "${CMAKE_CURRENT_LIST_DIR}/include/MNN/VCS.h")
+ # Required for OpenCL/OpenGL/Vulkan CodeGen
+ include(FindPythonInterp REQUIRED)
+ # build options
+@@ -284,6 +284,12 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "^Linux")
+         include_directories(${aarch64_linux_include})
+     endif()
+ endif()
++if(MNN_OPENCL)
++  find_package(OpenCL REQUIRED)
++endif()
++find_package(RapidJSON CONFIG REQUIRED)
++find_path(STB_INCLUDE_DIRS stb_image.h)
++find_package(Flatbuffers CONFIG REQUIRED)
+ include_directories(${CMAKE_CURRENT_LIST_DIR}/include/
+                     ${CMAKE_CURRENT_LIST_DIR}/source/
+                     ${CMAKE_CURRENT_LIST_DIR}/express/
+@@ -291,12 +297,14 @@ include_directories(${CMAKE_CURRENT_LIST_DIR}/include/
+                     ${CMAKE_CURRENT_LIST_DIR}/codegen/
+                     ${CMAKE_CURRENT_LIST_DIR}/schema/current/
+                     ${CMAKE_CURRENT_LIST_DIR}/3rd_party/
+-                    ${CMAKE_CURRENT_LIST_DIR}/3rd_party/flatbuffers/include
+                     ${CMAKE_CURRENT_LIST_DIR}/3rd_party/half
+                     ${CMAKE_CURRENT_LIST_DIR}/3rd_party/imageHelper
+-                    ${CMAKE_CURRENT_LIST_DIR}/3rd_party/OpenCLHeaders/
++                    ${RAPIDJSON_INCLUDE_DIRS}
++                    ${STB_INCLUDE_DIRS}
++                    ${OpenCL_INCLUDE_DIRS}
+                   )
+ 
++link_libraries(flatbuffers::flatbuffers ${OpenCL_LIBRARIES})
+ 
+ set(MNN_OBJECTS_TO_LINK "")
+ set(MNN_TARGETS "")
+@@ -339,9 +347,14 @@ FILE(GLOB MNN_Utils_SRC ${CMAKE_CURRENT_LIST_DIR}/source/utils/*)
+ add_library(MNNUtils OBJECT ${MNN_Utils_SRC})
+ list(APPEND MNN_OBJECTS_TO_LINK $<TARGET_OBJECTS:MNNUtils>)
+ list(APPEND MNN_TARGETS MNNUtils)
++# Compute
++FILE(GLOB MNN_Compute_SRC ${CMAKE_CURRENT_LIST_DIR}/source/backend/cpu/compute/*)
++add_library(MNNCompute OBJECT ${MNN_Compute_SRC})
++list(APPEND MNN_OBJECTS_TO_LINK $<TARGET_OBJECTS:MNNCompute>)
++list(APPEND MNN_TARGETS MNNCompute)
+ 
+ # CPU
+-FILE(GLOB MNN_CPU_SRC ${CMAKE_CURRENT_LIST_DIR}/source/backend/cpu/* ${CMAKE_CURRENT_LIST_DIR}/source/backend/cpu/compute/*)
++FILE(GLOB MNN_CPU_SRC ${CMAKE_CURRENT_LIST_DIR}/source/backend/cpu/*)
+ add_library(MNNCPU OBJECT ${MNN_CPU_SRC})
+ list(APPEND MNN_OBJECTS_TO_LINK $<TARGET_OBJECTS:MNNCPU>)
+ list(APPEND MNN_TARGETS MNNCPU)
+@@ -507,6 +520,8 @@ ENDIF()
+ 
+ # CUDA
+ IF(MNN_CUDA)
++  find_package(CUDAToolkit)
++  find_package(CUDNN)
+   add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/source/backend/cuda/)
+   list(APPEND MNN_TARGETS MNN_CUDA)
+   list(APPEND MNN_OBJECTS_TO_LINK $<TARGET_OBJECTS:MNN_CUDA>)
+@@ -617,7 +632,7 @@ if(APPLE)
+       target_link_libraries(MNN PUBLIC ${GRAPHIC})
+     ENDIF()
+ endif()
+-add_dependencies(MNN MNNCore MNNCV MNNTransform MNNMath MNNCPU)
++add_dependencies(MNN MNNCore MNNCV MNNTransform MNNMath MNNCompute MNNCPU)
+ add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/tools/converter)
+ 
+ if(CMAKE_SYSTEM_NAME MATCHES "^Linux")
+@@ -701,10 +716,13 @@ ELSEIF(NOT APPLE)
+   INSTALL(FILES ${MNN_PUB_HDRS} DESTINATION include/MNN/)
+   INSTALL(FILES ${MNN_EXPR_PUB_HDRS} DESTINATION include/MNN/expr/)
+   install(TARGETS MNN
++      RUNTIME DESTINATION bin
+       LIBRARY DESTINATION lib
+       ARCHIVE DESTINATION lib
+   )
+ ELSE()
++  INSTALL(FILES ${MNN_PUB_HDRS} DESTINATION include/MNN/)
++  INSTALL(FILES ${MNN_EXPR_PUB_HDRS} DESTINATION include/MNN/expr/)  
+   install(TARGETS MNN
+       LIBRARY DESTINATION lib
+       ARCHIVE DESTINATION lib
+@@ -718,5 +736,6 @@ ELSE()
+   ENDFOREACH()
+   IF(MNN_METAL)
+     SET_SOURCE_FILES_PROPERTIES(${CMAKE_CURRENT_BINARY_DIR}/mnn.metallib PROPERTIES MACOSX_PACKAGE_LOCATION Resources/)
++    INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/mnn.metallib DESTINATION bin)
+   ENDIF()
+ ENDIF()

@@ -54,8 +54,8 @@ function(vcpkg_qmake_configure)
         set(${var} "${${var}}" PARENT_SCOPE) # Is this correct? Or is there a vcpkg_list command for that?
     endfunction()
     # Setup Build tools
-    if(NOT VCPKG_QMAKE_COMMAND) # For users using outside QT_VER
-        set(VCPKG_QMAKE_COMMAND "${CURRENT_HOST_INSTALLED_DIR}/tools/QT_VER/bin/qmake${VCPKG_HOST_EXECUTABLE_SUFFIX}")
+    if(NOT VCPKG_QMAKE_COMMAND) # For users using outside Qt6
+        set(VCPKG_QMAKE_COMMAND "${CURRENT_HOST_INSTALLED_DIR}/tools/Qt6/bin/qmake${VCPKG_HOST_EXECUTABLE_SUFFIX}")
     endif()
 
     set(qmake_build_tools "")
@@ -118,7 +118,7 @@ function(vcpkg_qmake_configure)
 
         # Setup qt.conf
         if(NOT VCPKG_QT_CONF_${buildtype})
-            set(VCPKG_QT_CONF_${buildtype} "${CURRENT_INSTALLED_DIR}/tools/QT_VER/qt_${lowerbuildtype}.conf")
+            set(VCPKG_QT_CONF_${buildtype} "${CURRENT_INSTALLED_DIR}/tools/Qt6/qt_${lowerbuildtype}.conf")
         else()
             # Let a supplied qt.conf override everything.
             # The file will still be configured so users might use the variables within this scope.
