@@ -35,6 +35,10 @@ echo "install  flann 2019-04-07#6"
 echo "--------------------------------------------"
 call ./bash/flann.bat
 
+echo "install  glm 0.9.9.8#2"
+echo "--------------------------------------------"
+call ./bash/glm.bat
+
 echo "install  gtest 1.12.1#1"
 echo "--------------------------------------------"
 call ./bash/gtest.bat
