@@ -1,0 +1,19 @@
+diff --git a/source/backend/cuda/CMakeLists.txt b/source/backend/cuda/CMakeLists.txt
+index 993f15d..53f24ae 100644
+--- "a/source/backend/cuda/CMakeLists.txt"
++++ "b/source/backend/cuda/CMakeLists.txt"
+@@ -17,12 +17,11 @@ file(GLOB_RECURSE MNN_CUDA_SRC ${CMAKE_CURRENT_LIST_DIR}/core/* ${CMAKE_CURRENT_
+ message(STATUS "message ${CUDA_NVCC_FLAGS} !!!!!!!!!!!")
+ 
+ # add_library(MNN_Cuda SHARED ${MNN_CUDA_SRC} )
+-cuda_add_library(MNN_Cuda_Main SHARED ${MNN_CUDA_SRC} )
+-set(MNN_CUDA_LIBS MNN_Cuda_Main cudnn cublas PARENT_SCOPE)
++cuda_add_library(MNN_Cuda_Main STATIC ${MNN_CUDA_SRC} )
++set(MNN_CUDA_LIBS MNN_Cuda_Main CuDNN::CuDNN CUDA::cublas PARENT_SCOPE)
+ add_library(MNN_CUDA OBJECT Register.cpp)
+ 
+ include_directories(
+     ${CUDA_INCLUDE_DIRS}
+     ${CMAKE_SOURCE_DIR}/include/
+ )
+-

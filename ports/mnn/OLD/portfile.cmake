@@ -6,12 +6,11 @@ endif()
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO alibaba/MNN
-    REF 1.1.3
-    SHA512 4791f3e0a55f3b96531579079f63e857bf299009157efe74d0f8c61582f9e6bf11ebafcf6fddd45ce4ea87830d13788db2f3aec8e204c5eb60e8707aa64ed524
+    REF 1.1.0
+    SHA512 3e31eec9a876be571cb2d29e0a2bcdb8209a43a43a5eeae19b295fadfb1252dd5bd4ed5b7c584706171e1b531710248193bc04520a796963e2b21546acbedae0
     HEAD_REF master
     PATCHES
         use-package-and-install.patch
-        cuda.patch
 )
 
 vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
@@ -27,11 +26,11 @@ vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
     opencl      MNN_USE_SYSTEM_LIB
     metal       MNN_METAL
     metal       MNN_GPU_TRACE
-    #tools       MNN_BUILD_TOOLS
-    #tools       MNN_BUILD_QUANTOOLS
-    #tools       MNN_BUILD_TRAIN
-    #tools       MNN_EVALUATION
-    #tools       MNN_BUILD_CONVERTER
+    tools       MNN_BUILD_TOOLS
+    tools       MNN_BUILD_QUANTOOLS
+    tools       MNN_BUILD_TRAIN
+    tools       MNN_EVALUATION
+    tools       MNN_BUILD_CONVERTER
 )
 
 # 'cuda' feature in Windows failes with Ninja because of parallel PDB access. Make it optional
@@ -109,17 +108,17 @@ if("test" IN_LIST FEATURES)
     # )
 endif()
 if("tools" IN_LIST FEATURES)
-   # vcpkg_copy_tools(
-   #     TOOL_NAMES mobilenetTest.out backendTest.out testModel.out testModelWithDescrisbe.out getPerformance.out checkInvalidValue.out timeProfile.out # tools/cpp
-   #                quantized.out # tools/quantization
-   #                classficationTopkEval.out # tools/evaluation
-   #                MNNDump2Json MNNConvert # tools/converter
-   #                transformer.out train.out dataTransformer.out runTrainDemo.out # tools/train
-   #     AUTO_CLEAN
-   # )
-   # if(BUILD_SHARED)
-   #     vcpkg_copy_tools(TOOL_NAMES TestConvertResult AUTO_CLEAN) # tools/converter
-   # endif()
+    vcpkg_copy_tools(
+        TOOL_NAMES MNNV2Basic.out mobilenetTest.out backendTest.out testModel.out testModelWithDescrisbe.out getPerformance.out checkInvalidValue.out timeProfile.out # tools/cpp
+                   quantized.out # tools/quantization
+                   classficationTopkEval.out # tools/evaluation
+                   MNNDump2Json MNNConvert # tools/converter
+                   transformer.out train.out dataTransformer.out runTrainDemo.out # tools/train
+        AUTO_CLEAN
+    )
+    if(BUILD_SHARED)
+        vcpkg_copy_tools(TOOL_NAMES TestConvertResult AUTO_CLEAN) # tools/converter
+    endif()
 endif()
 if(VCPKG_LIBRARY_LINKAGE STREQUAL "static")
     # remove the others. ex) mnn.metallib

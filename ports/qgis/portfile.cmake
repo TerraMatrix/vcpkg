@@ -160,7 +160,7 @@ if(VCPKG_TARGET_IS_WINDOWS)
             GET_PIP_PATH
             URLS https://bootstrap.pypa.io/get-pip.py
             FILENAME get-pip.py
-            SHA512  c11e0131fc9ba55f80cc223de6b9b8f9cefe7368f495cba8d45bbf052e2b0dc4f2f99e7d4e4492c01596540c14dea016123a168aea116ed2bcedfb8f289717cd
+            SHA512   3f1d8849cd5d74d87c3b32b6289a1ad5184ab04a24cb4def6cb211cf5386d53d1567629bc02465976799946ffdd16c770719da74e436172d0f2e3e9bfab22d0f
         )
 
         vcpkg_execute_required_process(

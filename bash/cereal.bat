@@ -1,1 +1,1 @@
-vcpkg install cereal  --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --recurse
+vcpkg install cereal  --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees   --recurse
