@@ -17,6 +17,15 @@ index 6d242f36f..ec57131ce 100644
  /*
   * Wrapper type for FILE
   */
+@@ -56,7 +48,7 @@ DLLAPI void FCGI_SetExitStatus(int status);
+  * Wrapper stdin, stdout, and stderr variables, set up by FCGI_Accept()
+  */
+ 
+-DLLAPI extern	FCGI_FILE	_fcgi_sF[];
++DLLAPI 	FCGI_FILE	_fcgi_sF[];
+ #define FCGI_stdin	(&_fcgi_sF[0])
+ #define FCGI_stdout	(&_fcgi_sF[1])
+ #define FCGI_stderr	(&_fcgi_sF[2])
 diff --git a/include/fcgiapp.h b/include/fcgiapp.h
 index 8cadde16d..9b034def3 100644
 --- a/include/fcgiapp.h
