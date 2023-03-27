@@ -95,10 +95,6 @@ echo "install  crunch  104"
 echo "--------------------------------------------"
 call ./bash/crunch.bat
 
-echo "install  Qt5  5.15.8"
-echo "--------------------------------------------"
-call ./bash/qt5.bat
-
 echo "install  libkml  1.3.0#11"
 echo "--------------------------------------------"
 call ./bash/libkml.bat
@@ -126,6 +122,10 @@ call ./bash/gdal.bat
 echo "install  pdal  2.4.3#1"
 echo "--------------------------------------------"
 call ./bash/pdal.bat
+
+echo "install  Qt5  5.15.8"
+echo "--------------------------------------------"
+call ./bash/qt5.bat
 
 echo "install  glib  2.75.3"
 echo "--------------------------------------------"
