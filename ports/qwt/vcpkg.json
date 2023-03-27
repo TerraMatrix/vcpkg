@@ -5,6 +5,24 @@
   "description": "qt widgets library for technical applications",
   "homepage": "https://sourceforge.net/projects/qwt",
   "license": null,
+  "dependencies": [
+    {
+      "name": "qt5-base",
+      "default-features": false
+    },
+    {
+      "name": "vcpkg-qmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ],
   "features": {
     "qt5": {
       "description": "Build with Qt5",
