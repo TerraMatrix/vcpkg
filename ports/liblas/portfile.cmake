@@ -15,6 +15,7 @@ vcpkg_extract_source_archive_ex(
     PATCHES
         fix-boost-headers.patch
         fix-cmake-config.patch
+        liblas-config-version.cmake.patch
         misc-fixes.patch
 )
 
