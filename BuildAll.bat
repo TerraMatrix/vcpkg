@@ -175,6 +175,10 @@ echo "install  grpc 1.51#1"
 echo "--------------------------------------------"
 call ./bash/grpc.bat
 
+echo "install  vcglib 2022.02"
+echo "--------------------------------------------"
+call ./bash/vcglib.bat
+
 echo "install  qgis"
 echo "--------------------------------------------"
 call ./bash/qgis.bat
