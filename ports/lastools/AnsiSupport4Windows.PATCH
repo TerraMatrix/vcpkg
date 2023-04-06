@@ -1,0 +1,139 @@
+diff --git a/LASlib/src/lasreader_las.cpp b/LASlib/src/lasreader_las.cpp
+index 8c6ee16..986bc51 100644
+--- a/LASlib/src/lasreader_las.cpp
++++ b/LASlib/src/lasreader_las.cpp
+@@ -53,13 +53,17 @@ BOOL LASreaderLAS::open(const char* file_name, I32 io_buffer_size, BOOL peek_onl
+   }
+ 
+ #ifdef _MSC_VER
+-  wchar_t* utf16_file_name = UTF8toUTF16(file_name);
+-  file = _wfopen(utf16_file_name, L"rb");
++  file = fopen(file_name, "rb");
+   if (file == 0)
+   {
+-    fprintf(stderr, "ERROR: cannot open file '%ws' for read\n", utf16_file_name);
++    wchar_t *utf16_file_name = UTF8toUTF16(file_name);
++    file = _wfopen(utf16_file_name, L"rb");
++    if (file == 0)
++    {
++      fprintf(stderr, "ERROR: cannot open file '%ws' for read\n", utf16_file_name);
++    }
++    delete[] utf16_file_name;
+   }
+-  delete [] utf16_file_name;
+ #else
+   file = fopen(file_name, "rb");
+ #endif
+diff --git a/LASlib/src/laswriter_las.cpp b/LASlib/src/laswriter_las.cpp
+index 034c4e5..67e3747 100644
+--- a/LASlib/src/laswriter_las.cpp
++++ b/LASlib/src/laswriter_las.cpp
+@@ -65,13 +65,17 @@ BOOL LASwriterLAS::open(const char* file_name, const LASheader* header, U32 comp
+   }
+ 
+ #ifdef _MSC_VER
+-  wchar_t* utf16_file_name = UTF8toUTF16(file_name);
+-  file = _wfopen(utf16_file_name, L"wb");
++  file = fopen(file_name, "wb");
+   if (file == 0)
+   {
+-    fprintf(stderr, "ERROR: cannot open file '%ws' for write\n", utf16_file_name);
++    wchar_t *utf16_file_name = UTF8toUTF16(file_name);
++    file = _wfopen(utf16_file_name, L"wb");
++    if (file == 0)
++    {
++      fprintf(stderr, "ERROR: cannot open file '%ws' for write\n", utf16_file_name);
++    }
++    delete[] utf16_file_name;
+   }
+-  delete[] utf16_file_name;
+ #else
+   file = fopen(file_name, "wb");
+ #endif
+diff --git a/LASzip/src/lasindex.cpp b/LASzip/src/lasindex.cpp
+index 2621704..12c103a 100644
+--- a/LASzip/src/lasindex.cpp
++++ b/LASzip/src/lasindex.cpp
+@@ -343,9 +343,13 @@ BOOL LASindex::read(const char* file_name)
+     name[strlen(name)-1] = 'x';
+   }
+ #ifdef _MSC_VER
+-  wchar_t* utf16_name = UTF8toUTF16(name);
+-  FILE* file = _wfopen(utf16_name, L"rb");
+-  delete[] utf16_name;
++  FILE *file = fopen(name, "rb");
++  if (file == 0)
++  {
++    wchar_t *utf16_name = UTF8toUTF16(name);
++    file = _wfopen(utf16_name, L"rb");
++    delete[] utf16_name;
++  }
+ #else
+   FILE* file = fopen(name, "rb");
+ #endif
+@@ -386,13 +390,17 @@ BOOL LASindex::append(const char* file_name) const
+   lasreader->close();
+ 
+ #ifdef _MSC_VER
+-  wchar_t* utf16_file_name = UTF8toUTF16(file_name);
+-  FILE* file = _wfopen(utf16_file_name, L"rb");
++  FILE *file = fopen(file_name, "rb");
+   if (file == 0)
+   {
+-    fprintf(stderr, "ERROR: cannot open file '%ws'\n", utf16_file_name);
++    wchar_t *utf16_file_name = UTF8toUTF16(file_name);
++    file = _wfopen(utf16_file_name, L"rb");
++    if (file == 0)
++    {
++      fprintf(stderr, "ERROR: cannot open file '%ws'\n", utf16_file_name);
++    }
++    delete[] utf16_file_name;
+   }
+-  delete [] utf16_file_name;
+ #else
+   FILE* file = fopen(file_name, "rb");
+ #endif
+@@ -460,13 +468,17 @@ BOOL LASindex::append(const char* file_name) const
+ 
+   ByteStreamOut* bytestreamout;
+ #ifdef _MSC_VER
+-  utf16_file_name = UTF8toUTF16(file_name);
+-  file = _wfopen(utf16_file_name, L"rb+");
++  file = fopen(file_name, "rb+");
+   if (file == 0)
+   {
+-    fprintf(stderr, "ERROR: cannot open file '%ws'\n", utf16_file_name);
++    wchar_t *utf16_file_name = UTF8toUTF16(file_name);
++    file = _wfopen(utf16_file_name, L"rb+");
++    if (file == 0)
++    {
++      fprintf(stderr, "ERROR: cannot open file '%ws'\n", utf16_file_name);
++    }
++    delete[] utf16_file_name;
+   }
+-  delete [] utf16_file_name;
+ #else
+   file = fopen(file_name, "rb+");
+ #endif
+@@ -544,13 +556,17 @@ BOOL LASindex::write(const char* file_name) const
+     name[strlen(name)-1] = 'x';
+   }
+ #ifdef _MSC_VER
+-  wchar_t* utf16_file_name = UTF8toUTF16(name);
+-  FILE* file = _wfopen(utf16_file_name, L"wb");
++  FILE *file = fopen(name, "wb");
+   if (file == 0)
+   {
+-    fprintf(stderr, "ERROR (LASindex): cannot open file '%ws' for write\n", utf16_file_name);
++    wchar_t *utf16_file_name = UTF8toUTF16(name);
++    file = _wfopen(utf16_file_name, L"wb");
++    if (file == 0)
++    {
++      fprintf(stderr, "ERROR (LASindex): cannot open file '%ws' for write\n", utf16_file_name);
++    }
++    delete[] utf16_file_name;
+   }
+-  delete [] utf16_file_name;
+ #else
+   FILE* file = fopen(name, "wb");
+ #endif

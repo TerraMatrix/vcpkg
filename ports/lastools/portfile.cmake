@@ -13,6 +13,7 @@ vcpkg_from_github(
     PATCHES 
         "fix_install_paths_lastools.patch"
         "fix_include_directories_lastools.patch"
+        "AnsiSupport4Windows.PATCH"
 )
 
 vcpkg_cmake_configure(
