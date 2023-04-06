@@ -11,6 +11,7 @@ vcpkg_extract_source_archive_ex(
     OUT_SOURCE_PATH SOURCE_PATH
     ARCHIVE ${ARCHIVE}
     PATCHES
+        fix-usage.patch
         option-build-test.patch
 )
 
