@@ -1,1 +1,1 @@
-vcpkg install  vcglib --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees   --editable
+vcpkg install  vcglib --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --downloads-root=F:/vcpkg/downloads   --editable
