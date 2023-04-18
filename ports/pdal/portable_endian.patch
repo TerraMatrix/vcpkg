@@ -1,0 +1,37 @@
+diff --git a/pdal/util/portable_endian.hpp b/pdal/util/portable_endian.hpp
+index 03e68a251..fae1791db 100644
+--- a/pdal/util/portable_endian.hpp
++++ b/pdal/util/portable_endian.hpp
+@@ -52,6 +52,32 @@
+ #elif defined(__WINDOWS__)
+                     
+ #   include <winsock2.h>
++
++#define _WS2_32_WINSOCK_SWAP_LONGLONG(l)            \
++            ( ( ((l) >> 56) & 0x00000000000000FFLL ) |       \
++              ( ((l) >> 40) & 0x000000000000FF00LL ) |       \
++              ( ((l) >> 24) & 0x0000000000FF0000LL ) |       \
++              ( ((l) >>  8) & 0x00000000FF000000LL ) |       \
++              ( ((l) <<  8) & 0x000000FF00000000LL ) |       \
++              ( ((l) << 24) & 0x0000FF0000000000LL ) |       \
++              ( ((l) << 40) & 0x00FF000000000000LL ) |       \
++              ( ((l) << 56) & 0xFF00000000000000LL ) )
++
++#ifndef htonll
++__inline unsigned __int64 htonll ( unsigned __int64 Value ) 
++{ 
++	const unsigned __int64 Retval = _WS2_32_WINSOCK_SWAP_LONGLONG (Value);
++	return Retval;
++}
++#endif /* htonll */
++
++#ifndef ntohll
++__inline unsigned __int64 ntohll ( unsigned __int64 Value ) 
++{ 
++	const unsigned __int64 Retval = _WS2_32_WINSOCK_SWAP_LONGLONG (Value);
++	return Retval;
++}
++#endif /* ntohll */
+                      
+ #   if BYTE_ORDER == LITTLE_ENDIAN
+                       

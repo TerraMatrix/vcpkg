@@ -1,9 +1,5 @@
 vcpkg_check_linkage(ONLY_DYNAMIC_LIBRARY)
 
-# 移除 VCPKG_C_FLAGS 中的 /DWINVER=0x0601 /D_WIN32_WINNT=0x0601 定义
-string(REPLACE "/DWINVER=0x0601" "" VCPKG_C_FLAGS "${VCPKG_C_FLAGS}")
-string(REPLACE "/D_WIN32_WINNT=0x0601" "" VCPKG_C_FLAGS "${VCPKG_C_FLAGS}")
-
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO PDAL/PDAL
@@ -17,6 +13,7 @@ vcpkg_from_github(
         no-pkgconfig-requires.patch
         no-rpath.patch
         fix-gcc8-compatibility.patch #Upstream PR: https://github.com/PDAL/PDAL/pull/3864
+        portable_endian.patch
 )
 
 # Prefer pristine CMake find modules + wrappers and config files from vcpkg.
