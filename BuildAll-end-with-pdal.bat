@@ -115,7 +115,11 @@ echo "install  lastools  2020-05-09#1"
 echo "--------------------------------------------"
 call ./bash/lastools.bat
 
-echo "install  gdal  3.6.2#2"
+echo "install  poppler  23.1.0#1"
+echo "--------------------------------------------"
+call ./bash/poppler.bat
+
+echo "install  gdal  3.6.3#1"
 echo "--------------------------------------------"
 call ./bash/gdal.bat
 
