@@ -1,0 +1,49 @@
+diff --git a/src/Util.cpp b/src/Util.cpp
+index 53f15fa1..cf366718 100644
+--- a/src/Util.cpp
++++ b/src/Util.cpp
+@@ -605,6 +605,29 @@ int get_llvm_version() {
+ 
+ #ifdef _WIN32
+ 
++#if _WIN32_WINNT < 0x0602
++static ULONG
++GetCurrentThreadStackLimits(PULONG_PTR p_low_limit,
++                                 PULONG_PTR p_high_limit)
++{
++    MEMORY_BASIC_INFORMATION mbi;
++    NT_TIB *tib = (NT_TIB *)NtCurrentTeb();
++
++    if (!tib) {
++        return -1;
++    }
++
++    *p_high_limit = (ULONG_PTR)tib->StackBase;
++
++    if (VirtualQuery(tib->StackLimit, &mbi, sizeof(mbi))) {
++        *p_low_limit = (ULONG_PTR)mbi.AllocationBase;
++        return 0;
++    }
++
++    return GetLastError();
++}
++#endif
++
+ namespace {
+ 
+ struct GenericFiberArgs {
+@@ -682,7 +705,14 @@ void run_with_large_stack(const std::function<void()> &action) {
+     ULONG_PTR approx_stack_pos;
+ 
+     ULONG_PTR stack_low, stack_high;
++#if _WIN32_WINNT >= 0x0602
+     GetCurrentThreadStackLimits(&stack_low, &stack_high);
++#else
++	if( 0!=GetCurrentThreadStackLimits(&stack_low, &stack_high) ){
++		action();
++        return;
++    }
++#endif
+     ptrdiff_t stack_remaining = (char *)&approx_stack_pos - (char *)stack_low;
+ 
+     if (stack_remaining < stack_size.size) {
