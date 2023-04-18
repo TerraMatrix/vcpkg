@@ -106,7 +106,10 @@
       "dependencies": [
         {
           "name": "gdal",
-          "default-features": false
+          "default-features": false,
+          "features": [
+            "default-features"
+          ]
         }
       ]
     },
@@ -198,18 +201,13 @@
       "description": "Qt functionality for VTK",
       "dependencies": [
         {
-          "name": "qtbase",
-          "default-features": false,
-          "features": [
-            "gui",
-            "opengl",
-            "widgets"
-          ]
+          "name": "qt5-base",
+          "default-features": false
         },
-        "qtdeclarative",
-        "qtimageformats",
+        "qt5-declarative",
+        "qt5-imageformats",
         {
-          "name": "qttools",
+          "name": "qt5-tools",
           "default-features": false
         }
       ]
