@@ -8,7 +8,7 @@ if(EXISTS "${CURRENT_INSTALLED_DIR}/share/clapack/copyright")
     message(FATAL_ERROR "Can't build ${PORT} if clapack is installed. Please remove clapack:${TARGET_TRIPLET}, and try to install ${PORT}:${TARGET_TRIPLET} again.")
 endif()
 
-# 移除 VCPKG_C_FLAGS 中的 /DWINVER=0x0601 /D_WIN32_WINNT=0x0601 定义
+# 绉婚櫎 VCPKG_C_FLAGS 涓殑 /DWINVER=0x0601 /D_WIN32_WINNT=0x0601 瀹氫箟
 string(REPLACE "/DWINVER=0x0601" "" VCPKG_C_FLAGS "${VCPKG_C_FLAGS}")
 string(REPLACE "/D_WIN32_WINNT=0x0601" "" VCPKG_C_FLAGS "${VCPKG_C_FLAGS}")
 
