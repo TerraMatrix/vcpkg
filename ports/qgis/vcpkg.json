@@ -42,9 +42,27 @@
       "name": "qt5-winextras",
       "platform": "windows"
     },
-    "qwt",
-    "qca",
-    "qscintilla",
+    {
+      "name": "qwt",
+      "features": [
+        "qt5"
+      ]
+    },
+    {
+      "name": "qca",
+      "default-features": false,
+      "features": [
+        "qt5",
+        "botan"
+      ]
+    },
+    {
+      "name": "qscintilla",
+      "default-features": false,
+      "features": [
+        "qt5"
+      ]
+    },
     "qtkeychain",
     {
       "name": "vcpkg-cmake",

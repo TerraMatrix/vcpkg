@@ -52,6 +52,11 @@ if("botan" IN_LIST FEATURES)
     list(APPEND PLUGINS botan)
 endif()
 
+set(BUILD_WITH_QT6 ON)
+if("qt5" IN_LIST FEATURES)
+    set(BUILD_WITH_QT6 OFF)
+endif()
+
 # Configure and build
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
@@ -60,7 +65,7 @@ vcpkg_cmake_configure(
         "-DBUILD_PLUGINS=${PLUGINS}"
         -DBUILD_TESTS=OFF
         -DBUILD_TOOLS=OFF
-        -DBUILD_WITH_QT6=ON
+        -DBUILD_WITH_QT6=${BUILD_WITH_QT6}
         -DQCA_SUFFIX=OFF
         -DQCA_FEATURE_INSTALL_DIR=share/qca/mkspecs/features
         -DOSX_FRAMEWORK=OFF

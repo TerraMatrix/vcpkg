@@ -6,14 +6,6 @@
   "homepage": "https://userbase.kde.org/QCA",
   "dependencies": [
     {
-      "name": "qt5compat",
-      "default-features": false
-    },
-    {
-      "name": "qtbase",
-      "default-features": false
-    },
-    {
       "name": "vcpkg-cmake",
       "host": true
     },
@@ -23,13 +15,36 @@
     }
   ],
   "default-features": [
-    "botan"
+    "botan",
+    "qt5"
   ],
   "features": {
     "botan": {
       "description": "Build with botan",
       "dependencies": [
         "botan"
+      ]
+    },
+    "qt5": {
+      "description": "Build with Qt5",
+      "dependencies": [
+        {
+          "name": "qt5-base",
+          "default-features": false
+        }
+      ]
+    },
+    "qt6": {
+      "description": "Build with Qt6",
+      "dependencies": [
+        {
+          "name": "qt5compat",
+          "default-features": false
+        },
+        {
+          "name": "qtbase",
+          "default-features": false
+        }
       ]
     }
   }

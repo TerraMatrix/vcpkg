@@ -6,11 +6,11 @@ set(PYTHON_VERSION_MINOR  10)  #python310
 vcpkg_check_linkage(ONLY_DYNAMIC_LIBRARY)
 
 if("ltr" IN_LIST FEATURES)
-    set(QGIS_REF VRGIS-3.16)
-    set(QGIS_SHA512 0336f46adc300f740bfac70aec2142d1d1de7c4500c27e650014a09b6e6f4a7a6d65585e758a79bf9c73372ede2d85525b63c9c7d9aa29433ee0e4146bc4c32f)
+    set(QGIS_REF 8e7cadccf02873b0d2b635419c27d72705c9a5da)  # VRGIS-3.16
+    set(QGIS_SHA512 c2d99e2737de0b145cfacb642f124638aae4d570063125af456d4582f32d106cea4b069bab6f005e52170d73088a4d4dd9bbf6fe9b7844dbe4a64ec408b4990a)
 else()
     set(QGIS_REF master)
-    set(QGIS_SHA512 bf4fef8c605b5d52151343e7a7cbc2c6371d85034dddedca236d4e352a313baf9e3f11cf21e984cae65ac13f97c06817976961976789cdb6a3da4a1d0e3d44b1)
+    set(QGIS_SHA512 df3d3e23d2de1bd4049509d605fa0175a4bbb447f9a9814b92554fe21d1ad4bd42f14ef54354ca0bd32f0a54220a5409e20bf7767756fc1e5d594c4b370cd9ec)
 endif()
 
 vcpkg_from_github(
@@ -20,16 +20,10 @@ vcpkg_from_github(
     SHA512   ${QGIS_SHA512}
     HEAD_REF master
     PATCHES
-        # Make qgis support python's debug library
-        qgspython.patch
         # In vcpkg, qca's library name is qca, but qgis defaults to qca-qt5 or qca2-qt5, so add qca for easy searching
         qca.patch
         fixpython3.patch
         qgscurveeditorwidget.patch
-        qgsgradientcolorrampdialog.patch
-        qgsgraduatedhistogramwidget.patch
-        qgshistogramwidget.patch
-        qgsrasterhistogramwidget.patch
 )
 
 vcpkg_find_acquire_program(FLEX)

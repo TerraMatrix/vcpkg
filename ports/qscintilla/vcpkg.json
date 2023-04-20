@@ -7,13 +7,29 @@
   "license": "GPL-3.0-or-later",
   "dependencies": [
     {
-      "name": "qtbase",
-      "default-features": false
-    },
-    {
       "name": "vcpkg-qmake",
       "host": true,
       "default-features": false
     }
-  ]
+  ],
+  "features": {
+    "qt5": {
+      "description": "Build with Qt5",
+      "dependencies": [
+        {
+          "name": "qt5-base",
+          "default-features": false
+        }
+      ]
+    },
+    "qt6": {
+      "description": "Build with Qt6",
+      "dependencies": [
+        {
+          "name": "qtbase",
+          "default-features": false
+        }
+      ]
+    }
+  }
 }
