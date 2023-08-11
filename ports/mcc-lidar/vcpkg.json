@@ -1,0 +1,29 @@
+{
+  "name": "mcc-lidar",
+  "version-string": "2.1.0",
+  "description": "Multiscale Curvature Classification for LIDAR Data",
+  "homepage": "https://sourceforge.net/p/mcclidar/wiki/Home/",
+  "license": "Apache-2.0",
+    "dependencies": [
+    "boost-filesystem",
+    "boost-program-options",
+    "boost-system",
+    "liblas",
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ],
+  "features": {
+    "cuda": {
+      "description": "Support for CUDA based dense solvers",
+      "dependencies": [
+        "cuda"
+      ]
+    }
+  }
+}

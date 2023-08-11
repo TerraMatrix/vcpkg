@@ -1,0 +1,6 @@
+mcc-lidar provides CMake targets:
+
+    # C++ API
+    find_package(mcc-lidar CONFIG REQUIRED)
+    target_include_directories(main PRIVATE ${MCC_LIDAR_INCLUDE_DIR})
+    target_link_libraries(main PRIVATE ${MCC_LIDAR_LIBRARY})
