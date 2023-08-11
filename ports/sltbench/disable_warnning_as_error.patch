@@ -1,0 +1,16 @@
+diff --git "a/CMakeLists.txt" "b/CMakeLists.txt"
+index dbcf497..fa13e36 100644
+--- "a/CMakeLists.txt"
++++ "b/CMakeLists.txt"
+@@ -5,6 +5,11 @@ project (sltbench)
+ include(GNUInstallDirs)
+ set(CMAKE_INSTALL_CONFIGDIR cmake)
+ 
++if(MSVC)
++    # Disable warning C4522
++    string(REGEX REPLACE "/W[0-4]" "/W4 /wd4522" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
++endif()
++
+ # options
+ option(SLT_BUILD_TESTS "SLT_BUILD_TESTS" OFF)
+ option(SLT_BUILD_EXAMPLES "SLT_BUILD_EXAMPLES" OFF)
