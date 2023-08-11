@@ -1,0 +1,1 @@
+vcpkg install gdal[core,curl,default-features,expat,geos,gif,hdf5,iconv,jpeg,lerc,libkml,libspatialite,libxml2,lzma,netcdf,openjpeg,openssl,pcre2,png,postgresql,qhull,recommended-features,sqlite3,webp,zstd] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/vcpkg-win7/buildtrees  --downloads-root=F:/vcpkg/downloads  --recurse --editable
