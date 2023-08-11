@@ -14,6 +14,7 @@ set(PATCHES
     0004-dont-copy-vcruntime.patch
     0005-only-build-required-projects.patch
     0006-fix-duplicate-symbols.patch
+    0007-restore-support-for-windows-7.patch  #  restore-support-for-windows-7
 )
 if(VCPKG_LIBRARY_LINKAGE STREQUAL "static")
     list(PREPEND PATCHES 0001-static-library.patch)
