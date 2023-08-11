@@ -12,7 +12,6 @@ vcpkg_extract_source_archive_ex(
     OUT_SOURCE_PATH SOURCE_PATH
     PATCHES
         fix-boost-headers.patch
-        fix-geotiff.patch
         fix-cmake-config.patch
         liblas-config-version.cmake.patch
         misc-fixes.patch
@@ -34,9 +33,9 @@ vcpkg_configure_cmake(
 vcpkg_install_cmake()
 
 if (VCPKG_TARGET_IS_WINDOWS)
-    vcpkg_fixup_cmake_targets(CONFIG_PATH cmake)
+    vcpkg_cmake_config_fixup(CONFIG_PATH cmake)
 else()
-    vcpkg_fixup_cmake_targets(CONFIG_PATH share/cmake/libLAS)
+    vcpkg_cmake_config_fixup(CONFIG_PATH share/cmake/libLAS)
 endif()
 
 vcpkg_replace_string ("${CURRENT_PACKAGES_DIR}/share/liblas/liblas-config.cmake" "_DIR}/.." "_DIR}/../..")
