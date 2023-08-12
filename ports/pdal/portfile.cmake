@@ -13,7 +13,7 @@ vcpkg_from_github(
         no-pkgconfig-requires.patch
         no-rpath.patch
         fix-gcc8-compatibility.patch #Upstream PR: https://github.com/PDAL/PDAL/pull/3864
-        portable_endian.patch
+     #   portable_endian.patch   # only for win7
 )
 
 # Prefer pristine CMake find modules + wrappers and config files from vcpkg.
