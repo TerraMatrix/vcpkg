@@ -24,6 +24,7 @@ vcpkg_from_github(
         qca.patch
         fixpython3.patch
         qgscurveeditorwidget.patch
+        destructor-01.patch
 )
 
 vcpkg_find_acquire_program(FLEX)
