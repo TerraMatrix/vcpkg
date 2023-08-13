@@ -20,6 +20,8 @@ vcpkg_from_github(
     SHA512   ${QGIS_SHA512}
     HEAD_REF master
     PATCHES
+        # Make qgis support python's debug library
+        # qgspython.patch
         # In vcpkg, qca's library name is qca, but qgis defaults to qca-qt5 or qca2-qt5, so add qca for easy searching
         qca.patch
         fixpython3.patch
