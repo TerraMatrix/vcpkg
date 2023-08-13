@@ -1,0 +1,14 @@
+diff --git a/src/gui/qgsgradientcolorrampdialog.cpp b/src/gui/qgsgradientcolorrampdialog.cpp
+index 2ea7d21..a8b7a64 100644
+--- a/src/gui/qgsgradientcolorrampdialog.cpp
++++ b/src/gui/qgsgradientcolorrampdialog.cpp
+@@ -41,6 +41,9 @@
+ #include <qwt_plot_layout.h>
+ #include <qwt_symbol.h>
+ #include <qwt_legend.h>
++#include <qwt_scale_div.h>
++#include <qwt_scale_map.h>
++
+ 
+ QgsGradientColorRampDialog::QgsGradientColorRampDialog( const QgsGradientColorRamp &ramp, QWidget *parent )
+   : QDialog( parent )

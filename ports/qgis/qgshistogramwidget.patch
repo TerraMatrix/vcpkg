@@ -1,0 +1,12 @@
+diff --git a/src/gui/qgshistogramwidget.cpp b/src/gui/qgshistogramwidget.cpp
+index 7af3db2..0fb6b99 100644
+--- a/src/gui/qgshistogramwidget.cpp
++++ b/src/gui/qgshistogramwidget.cpp
+@@ -37,6 +37,7 @@
+ #include <qwt_plot_layout.h>
+ #include <qwt_plot_renderer.h>
+ #include <qwt_plot_histogram.h>
++#include <qwt_text.h>
+ 
+ 
+ QgsHistogramWidget::QgsHistogramWidget( QWidget *parent, QgsVectorLayer *layer, const QString &fieldOrExp )
