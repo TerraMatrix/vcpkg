@@ -352,8 +352,10 @@ function(vcpkg_acquire_msys out_msys_root)
     )
 
     z_vcpkg_acquire_msys_declare_package(
-        URL "https://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-python-numpy-1.20.3-1-any.pkg.tar.zst"
-        SHA512 ce73d4270942f61963e8307f6bec945d14e3774455684842b8fde836b19a4e9cbf8efd0663ffb28ad872493db70fa3a4e14bd0b248c2067199f4fee94e80e77e
+        URL "https://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-python-numpy-1.21.2-1-any.pkg.tar.zst"
+        SHA512 9782c32f21a924989eba094fcd9d33aba475196752f2359298f1aa1afbd2c159f7839e805a2d11033bbea48f6ecf56d74803ff2a5a40a73e545f498b512f962e
+       # URL "https://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-python-numpy-1.20.3-1-any.pkg.tar.zst"
+       # SHA512 ce73d4270942f61963e8307f6bec945d14e3774455684842b8fde836b19a4e9cbf8efd0663ffb28ad872493db70fa3a4e14bd0b248c2067199f4fee94e80e77e
         DEPS mingw-w64-x86_64-openblas mingw-w64-x86_64-python
     )
     z_vcpkg_acquire_msys_declare_package(
@@ -367,8 +369,8 @@ function(vcpkg_acquire_msys out_msys_root)
         DEPS mingw-w64-x86_64-gcc-libs
     )
     z_vcpkg_acquire_msys_declare_package(
-        URL "https://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-python-3.8.9-2-any.pkg.tar.zst"
-        SHA512 8a45b28b2b0471718bd1ab096958872b18ae3b25f06c30718c54d1edaf04214397330a51776f3e4eee556ac47d9e3aa5e1b211c5df0cf6be3046a6f3a79cfa7d
+        URL "https://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-python-3.9.6-2-any.pkg.tar.zst"
+        SHA512 67fc25e87d085d08062a129b0e4c929b31646832f8d0c59fe610333c3072124a08f1afc6455c8aebf8d2ac85f60d477e49d5a1d341f4273df6a5cc91c1431926
         DEPS mingw-w64-x86_64-bzip2 mingw-w64-x86_64-expat mingw-w64-x86_64-gcc-libs mingw-w64-x86_64-libffi mingw-w64-x86_64-mpdecimal mingw-w64-x86_64-ncurses mingw-w64-x86_64-openssl mingw-w64-x86_64-sqlite3 mingw-w64-x86_64-tcl mingw-w64-x86_64-tk mingw-w64-x86_64-xz mingw-w64-x86_64-zlib
     )
     z_vcpkg_acquire_msys_declare_package(
