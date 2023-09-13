@@ -19,6 +19,10 @@ echo "install  sltbench  2.4.0"
 echo "--------------------------------------------"
 call ./bash/sltbench .bat
 
+echo "install  tinyxml2 9.0.0"
+echo "--------------------------------------------"
+call ./bash/tinyxml2.bat
+
 echo "install  freetype 2.12.1#3"
 echo "--------------------------------------------"
 call ./bash/freetype.bat
