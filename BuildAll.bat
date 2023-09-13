@@ -23,6 +23,10 @@ echo "install  tinyxml2 9.0.0"
 echo "--------------------------------------------"
 call ./bash/tinyxml2.bat
 
+echo "install  cryptopp 8.7.0#3"
+echo "--------------------------------------------"
+call ./bash/cryptopp.bat
+
 echo "install  freetype 2.12.1#3"
 echo "--------------------------------------------"
 call ./bash/freetype.bat
