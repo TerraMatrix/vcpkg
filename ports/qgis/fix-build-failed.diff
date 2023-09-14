@@ -1,0 +1,12 @@
+diff --git a/cmake/FindFcgi.cmake b/cmake/FindFcgi.cmake
+index bbb7cc4..a5317be 100644
+--- a/cmake/FindFcgi.cmake
++++ b/cmake/FindFcgi.cmake
+@@ -11,6 +11,7 @@ FIND_PATH(FCGI_INCLUDE_DIR
+   /usr/local/include
+   /usr/include/fastcgi
+   "$ENV{LIB_DIR}/include"
++  "$ENV{LIB_DIR}/include/fastcgi"
+   $ENV{INCLUDE}
+   )
+ FIND_LIBRARY(FCGI_LIBRARY NAMES fcgi libfcgi PATHS 

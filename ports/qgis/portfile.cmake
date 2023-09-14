@@ -1,39 +1,51 @@
-set(QT_VERSION 5.15.6)
-set(QSCINTILLA_VERSION 2.13.4)
-set(PYTHON_VERSION_MAJOR  3)
-set(PYTHON_VERSION_MINOR  10)  #python310
-
-vcpkg_check_linkage(ONLY_DYNAMIC_LIBRARY)
-
-if("ltr" IN_LIST FEATURES)
-    set(QGIS_REF 8e7cadccf02873b0d2b635419c27d72705c9a5da)  # VRGIS-3.16
-    set(QGIS_SHA512 c2d99e2737de0b145cfacb642f124638aae4d570063125af456d4582f32d106cea4b069bab6f005e52170d73088a4d4dd9bbf6fe9b7844dbe4a64ec408b4990a)
-else()
-    set(QGIS_REF master)
-    set(QGIS_SHA512 df3d3e23d2de1bd4049509d605fa0175a4bbb447f9a9814b92554fe21d1ad4bd42f14ef54354ca0bd32f0a54220a5409e20bf7767756fc1e5d594c4b370cd9ec)
+if(EXISTS "${CURRENT_INSTALLED_DIR}/include/qt5/QtCore/qconfig.h")
+  file(READ "${CURRENT_INSTALLED_DIR}/include/qt5/QtCore/qconfig.h" QCONFIG_CONTENTS)
+  if(QCONFIG_CONTENTS)
+    STRING(REGEX REPLACE "^.*QT_VERSION_STR +\"([^\"]+)\".*$" "\\1" QT_VERSION "${QCONFIG_CONTENTS}")
+    MESSAGE(STATUS "QT_VERSION = ${QT_VERSION}")
+  endif()
 endif()
+
+if(EXISTS "${CURRENT_INSTALLED_DIR}/include/Qsci/qsciglobal.h")
+  file(READ "${CURRENT_INSTALLED_DIR}/include/Qsci/qsciglobal.h" QSCIGLOBAL_CONTENTS)
+  if(QSCIGLOBAL_CONTENTS)
+    STRING(REGEX REPLACE "^.*QSCINTILLA_VERSION_STR +\"([^\"]+)\".*$" "\\1" QSCINTILLA_VERSION "${QSCIGLOBAL_CONTENTS}")
+    MESSAGE(STATUS "QSCINTILLA_VERSION = ${QSCINTILLA_VERSION}")
+  endif()
+endif()
+
+set(PYTHON_VERSION_MAJOR  3)
+set(PYTHON_VERSION_MINOR  8)
 
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO longhuan2018/QGIS
-    REF ${QGIS_REF}
-    SHA512   ${QGIS_SHA512}
+    REPO qgis/QGIS
+    REF final-3_30_2
+    SHA512 72f9c926aeb4d5a13787e640523831217641094d00dd742fe4d9981db30c7b1349fa2a5ce36dfd5b1cc55e21f26681fc261b00c4db8e1be5c7f517b3048bea79
     HEAD_REF master
     PATCHES
-        # In vcpkg, qca's library name is qca, but qgis defaults to qca-qt5 or qca2-qt5, so add qca for easy searching
-        qca.patch
-        fixpython3.patch
-        qgscurveeditorwidget.patch
-        destructor-01.patch
+        fix-build-failed.diff
+        fix-vrgis.diff
 )
 
 vcpkg_find_acquire_program(FLEX)
 vcpkg_find_acquire_program(BISON)
-vcpkg_find_acquire_program(PYTHON3)
+if(VCPKG_TARGET_IS_WINDOWS)
+    vcpkg_find_acquire_program(PYTHON3)
+else()
+    set(PYTHON3 ${CURRENT_INSTALLED_DIR}/tools/python3/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR})
+endif()
 get_filename_component(PYTHON3_PATH ${PYTHON3} DIRECTORY)
 message(STATUS "PYTHON3 = ${PYTHON3_PATH}")
 vcpkg_add_to_path("${PYTHON3_PATH}")
-vcpkg_add_to_path("${PYTHON3_PATH}/Scripts")
+if(VCPKG_TARGET_IS_WINDOWS)
+    vcpkg_add_to_path("${PYTHON3_PATH}/Scripts")
+else()
+    vcpkg_add_to_path("${CURRENT_INSTALLED_DIR}/bin")
+    vcpkg_add_to_path("${CURRENT_INSTALLED_DIR}/tools/qt5/bin")
+    vcpkg_add_to_path("${CURRENT_INSTALLED_DIR}/tools/gdal")
+    vcpkg_add_to_path("${CURRENT_INSTALLED_DIR}/tools/libpq/bin")
+endif()
 set(PYTHON_EXECUTABLE ${PYTHON3})
 
 list(APPEND QGIS_OPTIONS -DENABLE_TESTS:BOOL=OFF)
@@ -155,7 +167,7 @@ if(VCPKG_TARGET_IS_WINDOWS)
             GET_PIP_PATH
             URLS https://bootstrap.pypa.io/get-pip.py
             FILENAME get-pip.py
-            SHA512   3f1d8849cd5d74d87c3b32b6289a1ad5184ab04a24cb4def6cb211cf5386d53d1567629bc02465976799946ffdd16c770719da74e436172d0f2e3e9bfab22d0f
+            SHA512  91e56cba31827911707bca5c036e602a2ef01e15cdce3b07b4dd102577bd6c44727dad81c65be8375ee33857d8f01633397656c4b4702b968c041aecccc29b12
         )
 
         vcpkg_execute_required_process(
@@ -175,71 +187,30 @@ if(VCPKG_TARGET_IS_WINDOWS)
 
     ##############################################################################
     #Install sip
-    if("sip5" IN_LIST FEATURES)
-        if(NOT EXISTS "${PYTHON3_PATH}/Scripts/sip5.exe")
-            MESSAGE(STATUS  "Install sip==5.5.0 for Python Begin ...")
-            file(GLOB PYTHON_INCLUDE ${CURRENT_INSTALLED_DIR}/include/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/*)
-            file(COPY ${PYTHON_INCLUDE} DESTINATION "${PYTHON3_PATH}/Include")
-            file(COPY "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR}.lib" DESTINATION "${PYTHON3_PATH}/libs")
-            file(COPY "${CURRENT_INSTALLED_DIR}/debug/lib/python${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR}_d.lib" DESTINATION "${PYTHON3_PATH}/libs")
+    if(NOT EXISTS "${PYTHON3_PATH}/Scripts/sip-install.exe")
+        MESSAGE(STATUS  "Install sip for Python Begin ...")
+        #file(GLOB PYTHON_INCLUDE ${CURRENT_INSTALLED_DIR}/include/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/*)
+        #file(COPY ${PYTHON_INCLUDE} DESTINATION "${PYTHON3_PATH}/Include")
+        #file(COPY "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR}.lib" DESTINATION "${PYTHON3_PATH}/libs")
+        #file(COPY "${CURRENT_INSTALLED_DIR}/debug/lib/python${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR}_d.lib" DESTINATION "${PYTHON3_PATH}/libs")
 
-            vcpkg_execute_required_process(
-                COMMAND "${PYTHON_EXECUTABLE}" -m pip install sip ${PIP_MIRRORS}
-                WORKING_DIRECTORY ${PYTHON3_PATH}
-                LOGNAME pip
-            )
-            MESSAGE(STATUS  "Install sip for Python End")
-        endif (NOT EXISTS "${PYTHON3_PATH}/Scripts/sip5.exe")
-    else()
-        if(NOT EXISTS "${PYTHON3_PATH}/Lib/site-packages/sip.pyd")
-            MESSAGE(STATUS  "Install sip for Python Begin ...")
-            set(SIP_VERSION "4.19.24")
-            vcpkg_download_distfile(
-                SIP_PATH
-                URLS https://www.riverbankcomputing.com/static/Downloads/sip/${SIP_VERSION}/sip-${SIP_VERSION}.tar.gz
-                FILENAME sip-${SIP_VERSION}.tar.gz
-                SHA512  c9acf8c66da6ff24ffaeed254c11deabbc587cea0eb50164f2016199af30b85980f96a2d754ae5e7fe080f9076673b1abc82e2a6a41ff2ac442fb2b326fca1c0
-            )
-
-            vcpkg_extract_source_archive(
-                 ${SIP_PATH} ${PYTHON3_PATH}
-            )
-
-            set(SIP_PATH ${PYTHON3_PATH}/sip-${SIP_VERSION})
-            file(COPY "${SIP_PATH}/siputils.py" DESTINATION "${PYTHON3_PATH}")
-            file(GLOB PYTHON_INCLUDE ${CURRENT_INSTALLED_DIR}/include/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/*)
-            file(COPY ${PYTHON_INCLUDE} DESTINATION "${PYTHON3_PATH}/Include")
-            file(COPY "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR}.lib" DESTINATION "${PYTHON3_PATH}/libs")
-
-            vcpkg_execute_required_process(
-                COMMAND "${PYTHON_EXECUTABLE}" configure.py
-                WORKING_DIRECTORY ${SIP_PATH}
-                LOGNAME pip
-            )
-
-            find_program(NMAKE nmake REQUIRED)
-            vcpkg_execute_required_process(
-                COMMAND ${NMAKE} -f Makefile install
-                WORKING_DIRECTORY ${SIP_PATH}
-                LOGNAME pip
-            )
-
-            file(REMOVE_RECURSE "${PYTHON3_PATH}/siputils.py")
-            file(REMOVE_RECURSE "${PYTHON3_PATH}/sip-${SIP_VERSION}.tar.gz.extracted")
-            file(REMOVE_RECURSE "${SIP_PATH}")
-            MESSAGE(STATUS  "Install sip for Python End")
-        endif (NOT EXISTS "${PYTHON3_PATH}/Lib/site-packages/sip.pyd")
-    endif ("sip5" IN_LIST FEATURES)
+        vcpkg_execute_required_process(
+            COMMAND "${PYTHON_EXECUTABLE}" -m pip install sip ${PIP_MIRRORS}
+            WORKING_DIRECTORY ${PYTHON3_PATH}
+            LOGNAME pip
+        )
+        MESSAGE(STATUS  "Install sip for Python End")
+    endif (NOT EXISTS "${PYTHON3_PATH}/Scripts/sip-install.exe")
 
     #Install pyqt5 pyqt3d qscintilla
     if(NOT EXISTS "${PYTHON3_PATH}/Scripts/pyuic5.exe")
         MESSAGE(STATUS  "Install PyQt5 for Python Begin ...")
         vcpkg_execute_required_process(
-            COMMAND "${PYTHON_EXECUTABLE}" -m pip install PyQt5==${QT_VERSION} PyQt5-sip QScintilla==${QSCINTILLA_VERSION} PyQt3D==${QT_VERSION} ${PIP_MIRRORS}
+            COMMAND "${PYTHON_EXECUTABLE}" -m pip install PyQt5==${QT_VERSION} PyQt5-sip QScintilla==${QSCINTILLA_VERSION} PyQt3D==${QT_VERSION} PyQt-builder ${PIP_MIRRORS}
             WORKING_DIRECTORY ${PYTHON3_PATH}
             LOGNAME pip
         )
-        file(COPY "${PYTHON3_PATH}/python${PYTHON_VERSION_MAJOR}.dll" DESTINATION "${PYTHON3_PATH}/Lib/site-packages/PyQt5")
+        #file(COPY "${PYTHON3_PATH}/python${PYTHON_VERSION_MAJOR}.dll" DESTINATION "${PYTHON3_PATH}/Lib/site-packages/PyQt5")
         MESSAGE(STATUS  "Install PyQt5 for Python End")
     endif (NOT EXISTS "${PYTHON3_PATH}/Scripts/pyuic5.exe")
 
@@ -267,6 +238,8 @@ if(VCPKG_TARGET_IS_WINDOWS)
             #    LOGNAME pip
             #)
             #MESSAGE(STATUS  "Install qgis dependencies Module for Python End")
+            #list(APPEND QGIS_OPTIONS_DEBUG -DWITH_BINDINGS:BOOL=OFF)
+            #list(APPEND QGIS_OPTIONS_RELEASE -DWITH_BINDINGS:BOOL=ON)
             list(APPEND QGIS_OPTIONS -DWITH_BINDINGS:BOOL=ON)
         else()
             list(APPEND QGIS_OPTIONS -DWITH_BINDINGS:BOOL=OFF)
@@ -277,43 +250,10 @@ if(VCPKG_TARGET_IS_WINDOWS)
 
     ##############################################################################
 
-    list(APPEND QGIS_OPTIONS -DPYTHON_EXECUTABLE:FILEPATH=${PYTHON_EXECUTABLE})
+    list(APPEND QGIS_OPTIONS -DPython_EXECUTABLE:FILEPATH=${PYTHON_EXECUTABLE})
     # flex and bison for ANGLE library
     list(APPEND QGIS_OPTIONS -DBISON_EXECUTABLE="${BISON}")
     list(APPEND QGIS_OPTIONS -DFLEX_EXECUTABLE="${FLEX}")
-
-    list(APPEND QGIS_OPTIONS -DPYUIC_PROGRAM:FILEPATH=${PYTHON3_PATH}/Scripts/pyuic5.exe)
-    list(APPEND QGIS_OPTIONS -DPYRCC_PROGRAM:FILEPATH=${PYTHON3_PATH}/Scripts/pyrcc5.exe)
-    list(APPEND QGIS_OPTIONS -DQT_LRELEASE_EXECUTABLE:FILEPATH=${CURRENT_INSTALLED_DIR}/tools/qt5-tools/bin/lrelease.exe)
-
-    if("quick" IN_LIST FEATURES)
-        list(APPEND QGIS_OPTIONS_DEBUG -DQMLPLUGINDUMP_EXECUTABLE:FILEPATH=${CURRENT_INSTALLED_DIR}/tools/qt5/debug/bin/qmlplugindump.exe)
-        list(APPEND QGIS_OPTIONS_RELEASE -DQMLPLUGINDUMP_EXECUTABLE:FILEPATH=${CURRENT_INSTALLED_DIR}/tools/qt5-declarative/bin/qmlplugindump.exe)
-    endif()
-
-    # qgis_gui depends on Qt5UiTools, and Qt5UiTools is a static library.
-    # If Qt5_EXCLUDE_STATIC_DEPENDENCIES is not set, it will add the QT release library that it depends on.
-    # so that in debug mode, it will reference both the qt debug library and the release library.
-    # In Debug mode, add Qt5_EXCLUDE_STATIC_DEPENDENCIES to avoid this bug
-    list(APPEND QGIS_OPTIONS_DEBUG -DQt5_EXCLUDE_STATIC_DEPENDENCIES:BOOL=ON)
-
-    FIND_LIB_OPTIONS(GDAL gdal gdald LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
-    FIND_LIB_OPTIONS(GEOS geos_c geos_c LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
-    FIND_LIB_OPTIONS(GSL gsl gsld LIB ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
-    FIND_LIB_OPTIONS(GSLCBLAS gslcblas gslcblasd LIB ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
-    FIND_LIB_OPTIONS(POSTGRES libpq libpq LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
-    list(APPEND QGIS_OPTIONS -DPROJ_INCLUDE_DIR:PATH=${CURRENT_INSTALLED_DIR}/include)
-    FIND_LIB_OPTIONS(PROJ proj proj_d LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
-    FIND_LIB_OPTIONS(PYTHON python${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR} python${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR}_d LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
-    FIND_LIB_OPTIONS(QCA qca qcad LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
-    FIND_LIB_OPTIONS(QWT qwt qwtd LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
-    FIND_LIB_OPTIONS(QTKEYCHAIN qt5keychain qt5keychaind LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
-    FIND_LIB_OPTIONS(QSCINTILLA qscintilla2_qt5 qscintilla2_qt5d LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
-    list(APPEND QGIS_OPTIONS -DPoly2Tri_INCLUDE_DIR="${CURRENT_INSTALLED_DIR}/include/poly2tri")
-    if("server" IN_LIST FEATURES)
-        FIND_LIB_OPTIONS(FCGI fcgi fcgi LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
-        list(APPEND QGIS_OPTIONS -DFCGI_INCLUDE_DIR="${CURRENT_INSTALLED_DIR}/include/fastcgi")
-    endif()
 
     set(SPATIALINDEX_LIB_NAME spatialindex)
     if( VCPKG_TARGET_ARCHITECTURE STREQUAL "x64" OR VCPKG_TARGET_ARCHITECTURE STREQUAL "arm64" )
@@ -321,221 +261,165 @@ if(VCPKG_TARGET_IS_WINDOWS)
     else()
         set( SPATIALINDEX_LIB_NAME "spatialindex-32" )
     endif()
-    FIND_LIB_OPTIONS(SPATIALINDEX ${SPATIALINDEX_LIB_NAME} ${SPATIALINDEX_LIB_NAME}d LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
+    FIND_LIB_OPTIONS(SPATIALINDEX ${SPATIALINDEX_LIB_NAME} ${SPATIALINDEX_LIB_NAME} LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
 
-    if("pdal" IN_LIST FEATURES)
-        FIND_LIB_OPTIONS(ZSTD zstd zstd LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
-        set(PDAL_CPP_LIBRARY_DEBUG "${CURRENT_INSTALLED_DIR}/debug/lib/pdalcpp.lib$$<SEMICOLON>ws2_32.lib")
-        set(PDAL_CPP_LIBRARY_RELEASE "${CURRENT_INSTALLED_DIR}/lib/pdalcpp.lib$$<SEMICOLON>ws2_32.lib")
-        list(APPEND QGIS_OPTIONS_DEBUG -DPDAL_CPP_LIBRARY=${PDAL_CPP_LIBRARY_DEBUG})
-        list(APPEND QGIS_OPTIONS_RELEASE -DPDAL_CPP_LIBRARY=${PDAL_CPP_LIBRARY_RELEASE})
+    # qgis_gui depends on Qt5UiTools, and Qt5UiTools is a static library.
+    # If Qt5_EXCLUDE_STATIC_DEPENDENCIES is not set, it will add the QT release library that it depends on.
+    # so that in debug mode, it will reference both the qt debug library and the release library.
+    # In Debug mode, add Qt5_EXCLUDE_STATIC_DEPENDENCIES to avoid this bug
+    list(APPEND QGIS_OPTIONS_DEBUG -DQt5_EXCLUDE_STATIC_DEPENDENCIES:BOOL=ON)
+
+    FIND_LIB_OPTIONS(GEOS geos_c geos_c LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
+    FIND_LIB_OPTIONS(GSL gsl gsld LIB ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
+    FIND_LIB_OPTIONS(GSLCBLAS gslcblas gslcblasd LIB ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
+    FIND_LIB_OPTIONS(PROJ proj proj_d LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
+    FIND_LIB_OPTIONS(QCA qca qcad LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
+    FIND_LIB_OPTIONS(QWT qwt qwtd LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
+    FIND_LIB_OPTIONS(QTKEYCHAIN qt5keychain qt5keychaind LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
+    FIND_LIB_OPTIONS(QSCINTILLA qscintilla2_qt5 qscintilla2_qt5d LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
+    if("server" IN_LIST FEATURES)
+        FIND_LIB_OPTIONS(FCGI fcgi fcgi LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
+        list(APPEND QGIS_OPTIONS -DFCGI_INCLUDE_DIR="${CURRENT_INSTALLED_DIR}/include/fastcgi")
     endif()
+
+    file(REMOVE ${SOURCE_PATH}/cmake/FindProj.cmake)
+    file(REMOVE ${SOURCE_PATH}/cmake/FindPoly2Tri.cmake)
+    file(REMOVE ${SOURCE_PATH}/cmake/FindGSL.cmake)
+
 elseif(VCPKG_TARGET_IS_LINUX OR VCPKG_TARGET_IS_OSX) # Build in UNIX
-    macro(INSTALL_PROGRAM program)
-        if(VCPKG_TARGET_IS_OSX)
-            message(STATUS "brew install ${program}")
-            vcpkg_execute_required_process(
-              COMMAND brew install ${program}
-              WORKING_DIRECTORY ${CURRENT_BUILDTREES_DIR}
-            )
-        else()
-            message(STATUS "sudo apt-get install ${program}")
-            vcpkg_execute_required_process(
-              COMMAND sudo apt-get install -y ${program}
-              WORKING_DIRECTORY ${CURRENT_BUILDTREES_DIR}
-            )
-        endif()
-    endmacro()
-
-    find_program(PIP3 pip3)
-    if (NOT PIP3)
-        INSTALL_PROGRAM(python${PYTHON_VERSION_MAJOR}-pip)
-    endif()
-
     vcpkg_execute_required_process(
         COMMAND "${PYTHON_EXECUTABLE}" -m pip install --upgrade pip ${PIP_MIRRORS}
         WORKING_DIRECTORY ${PYTHON3_PATH}
         LOGNAME pip
     )
 
+    # install  sip pyqt-builder
     vcpkg_execute_required_process(
-        COMMAND "${PYTHON_EXECUTABLE}" -m pip install sip PyQt5==${QT_VERSION} PyQt5-sip QScintilla==${QSCINTILLA_VERSION} PyQt3D==${QT_VERSION} ${PIP_MIRRORS}
+        COMMAND "${PYTHON_EXECUTABLE}" -m pip install sip pyqt-builder numpy PyQt5-sip ${PIP_MIRRORS}
         WORKING_DIRECTORY ${PYTHON3_PATH}
         LOGNAME pip
     )
 
-    find_program(PYUIC5 pyuic5)
-    if (NOT PYUIC5)
-        INSTALL_PROGRAM(pyqt5-dev-tools)
+    if(NOT EXISTS "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages/PyQt5")
+        MESSAGE(STATUS  "Install PyQt5 for Python Begin")
+        vcpkg_download_distfile(
+             PYQT5_PATH
+             URLS https://files.pythonhosted.org/packages/5c/46/b4b6eae1e24d9432905ef1d4e7c28b6610e28252527cdc38f2a75997d8b5/PyQt5-5.15.9.tar.gz
+             FILENAME PyQt5-5.15.9.tar.gz
+             SHA512  1c07d93aefe1c24e80851eb4631b80a99e7ba06e823181325456edb90285d3d22417a9f7d4c3ff9c6195bd801e7dc2bbabf0587af844a5e4b0a410c4611d119e
+        )
+
+        vcpkg_extract_source_archive(
+             ${PYQT5_PATH} ${PYTHON3_PATH}
+        )
+
+        vcpkg_execute_required_process(
+            COMMAND "${CURRENT_INSTALLED_DIR}/bin/sip-install" --target-dir "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages"
+            WORKING_DIRECTORY ${PYTHON3_PATH}/PyQt5-5.15.9
+            LOGNAME pip
+        )
+        file(REMOVE_RECURSE "${PYTHON3_PATH}/PyQt5-5.15.9")
+        MESSAGE(STATUS  "Install PyQt5 for Python End")
     endif()
 
-    find_program(PYRCC5 pyrcc5)
+    if(NOT EXISTS "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages/PyQt5/bindings/Qt3DCore")
+        MESSAGE(STATUS  "Install PyQt3D for Python Begin")
+        vcpkg_download_distfile(
+             PYQT3D_PATH
+             URLS https://files.pythonhosted.org/packages/a5/80/26e3394c25187854bd3b68865b2b46cfd285aae01bbf448ddcac6f466af0/PyQt3D-5.15.6.tar.gz
+             FILENAME PyQt3D-5.15.6.tar.gz
+             SHA512  fa1ebf773fb0a10b3ee58849c2273b6b5e9d3a5b14aa632c007381d494f6443d67e1d613a1fe65177412e6e46e9701767013ede1567a75f390930eda0bce19c4
+        )
 
-    set(VCPKG_DEVELOPMENT_WARNINGS OFF)
-    list(APPEND QGIS_OPTIONS -DQT_LRELEASE_EXECUTABLE:FILEPATH=${CURRENT_INSTALLED_DIR}/tools/qt5-tools/bin/lrelease${VCPKG_TARGET_EXECUTABLE_SUFFIX})
-    if("quick" IN_LIST FEATURES)
-        list(APPEND QGIS_OPTIONS_DEBUG -DQMLPLUGINDUMP_EXECUTABLE:FILEPATH=${CURRENT_INSTALLED_DIR}/tools/qt5/debug/bin/qmlplugindump${VCPKG_TARGET_EXECUTABLE_SUFFIX})
-        list(APPEND QGIS_OPTIONS_RELEASE -DQMLPLUGINDUMP_EXECUTABLE:FILEPATH=${CURRENT_INSTALLED_DIR}/tools/qt5-declarative/bin/qmlplugindump${VCPKG_TARGET_EXECUTABLE_SUFFIX})
-    endif()
-    list(APPEND QGIS_OPTIONS_DEBUG -DQt5_EXCLUDE_STATIC_DEPENDENCIES:BOOL=ON)
+        vcpkg_extract_source_archive(
+             ${PYQT3D_PATH} ${PYTHON3_PATH}
+        )
 
-    list(APPEND QGIS_OPTIONS_DEBUG -DQT_INSTALL_LIBS:PATH=${CURRENT_INSTALLED_DIR}/debug/lib)
-    list(APPEND QGIS_OPTIONS_RELEASE -DQT_INSTALL_LIBS:PATH=${CURRENT_INSTALLED_DIR}/lib)
-    list(APPEND QGIS_OPTIONS -DGDAL_CONFIG=" ")
-    list(APPEND QGIS_OPTIONS -DGDAL_INCLUDE_DIR:PATH=${CURRENT_INSTALLED_DIR}/include)
-    FIND_LIB_OPTIONS(GDAL gdal gdal LIBRARY ${VCPKG_TARGET_SHARED_LIBRARY_SUFFIX})
-    list(APPEND QGIS_OPTIONS -DGEOS_CONFIG=" ")
-    FIND_LIB_OPTIONS(GEOS geos geosd LIBRARY ${VCPKG_TARGET_STATIC_LIBRARY_SUFFIX})
-    list(APPEND QGIS_OPTIONS -DGSL_CONFIG=" ")
-    list(APPEND QGIS_OPTIONS -DGSL_INCLUDE_DIR:PATH=${CURRENT_INSTALLED_DIR}/include)
-    list(APPEND QGIS_OPTIONS_DEBUG -DGSL_LIBRARIES:FILEPATH=${CURRENT_INSTALLED_DIR}/debug/lib/${VCPKG_TARGET_STATIC_LIBRARY_PREFIX}gsld${VCPKG_TARGET_STATIC_LIBRARY_SUFFIX};${CURRENT_INSTALLED_DIR}/debug/lib/${VCPKG_TARGET_STATIC_LIBRARY_PREFIX}gslcblasd${VCPKG_TARGET_STATIC_LIBRARY_SUFFIX})
-    list(APPEND QGIS_OPTIONS_RELEASE -DGSL_LIBRARIES:FILEPATH="${CURRENT_INSTALLED_DIR}/lib/${VCPKG_TARGET_STATIC_LIBRARY_PREFIX}gsl${VCPKG_TARGET_STATIC_LIBRARY_SUFFIX} ${CURRENT_INSTALLED_DIR}/lib/${VCPKG_TARGET_STATIC_LIBRARY_PREFIX}gslcblas${VCPKG_TARGET_STATIC_LIBRARY_SUFFIX}")
-    list(APPEND QGIS_OPTIONS -DPYTHON_INCLUDE_PATH:PATH=${CURRENT_INSTALLED_DIR}/include/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}m)
-    FIND_LIB_OPTIONS(PYTHON python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR} python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}d LIBRARY ${VCPKG_TARGET_STATIC_LIBRARY_SUFFIX})
-    FIND_LIB_OPTIONS(QTKEYCHAIN qt5keychain qt5keychaind LIBRARY  ${VCPKG_TARGET_STATIC_LIBRARY_SUFFIX})
-    if("server" IN_LIST FEATURES)
-        FIND_LIB_OPTIONS(FCGI fcgi fcgi LIBRARY ${VCPKG_TARGET_SHARED_LIBRARY_SUFFIX})
-        list(APPEND QGIS_OPTIONS -DFCGI_INCLUDE_DIR="${CURRENT_INSTALLED_DIR}/include/fastcgi")
+        vcpkg_execute_required_process(
+            COMMAND "${CURRENT_INSTALLED_DIR}/bin/sip-install" --target-dir "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages"
+            WORKING_DIRECTORY ${PYTHON3_PATH}/PyQt3D-5.15.6
+            LOGNAME pip
+        )
+        file(REMOVE_RECURSE "${PYTHON3_PATH}/PyQt3D-5.15.6")
+        MESSAGE(STATUS  "Install PyQt3D for Python End")
     endif()
 
-    FIND_LIB_OPTIONS(SPATIALINDEX spatialindex spatialindexd LIBRARY ${VCPKG_TARGET_STATIC_LIBRARY_SUFFIX})
+    if(NOT EXISTS "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages/PyQt5/bindings/Qsci")
+        MESSAGE(STATUS  "Install QScintilla for Python Begin")
+        vcpkg_download_distfile(
+             PYQSCINTILLA_PATH
+             URLS https://files.pythonhosted.org/packages/cb/e1/1f4cac5ce5f98ca7bfcf2f8aa44b8cb9d842f92143a5f53f4892cb6d3bc1/QScintilla-2.13.4.tar.gz
+             FILENAME QScintilla-2.13.4.tar.gz
+             SHA512  591379f4d48a6de1bc61db93f6c0d1c48b6830a852679b51e27debb866524c320e2db27d919baf32576c2bf40bba62e38378673a86f22db9839746e26b0f77cd
+        )
+
+        vcpkg_extract_source_archive(
+             ${PYQSCINTILLA_PATH} ${PYTHON3_PATH}
+        )
+
+        file(COPY "${PYTHON3_PATH}/QScintilla_src-2.13.4/Python/pyproject-qt5.toml" DESTINATION "${PYTHON3_PATH}/QScintilla_src-2.13.4/Python/pyproject.toml")
+        vcpkg_execute_required_process(
+            COMMAND "${CURRENT_INSTALLED_DIR}/bin/sip-install" --target-dir "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages"
+            WORKING_DIRECTORY ${PYTHON3_PATH}/QScintilla_src-2.13.4/Python
+            LOGNAME pip
+        )
+        file(REMOVE_RECURSE "${PYTHON3_PATH}/QScintilla_src-2.13.4")
+        MESSAGE(STATUS  "Install QScintilla for Python End")
+    endif()
+
+    if(NOT EXISTS "${CURRENT_INSTALLED_DIR}/bin/gdal_merge.py")
+        MESSAGE(STATUS  "Install gdal for Python Begin")
+        vcpkg_download_distfile(
+             PYGDAL_PATH
+             URLS https://files.pythonhosted.org/packages/22/b3/bb0c26730ad1fb1bfc8994bc9b6bea9d4cd0ded48a4e33ed66408d089466/GDAL-3.7.0.tar.gz
+             FILENAME GDAL-3.7.0.tar.gz
+             SHA512  60d324369cd9274a60da834b63e177fc7e6e33018ee5ce558c9ebf060a149d2ff51246c4669cd62c6cc44d76555ae7521c234e1b592a02ad0da37b9e02afa1e3
+        )
+
+        vcpkg_extract_source_archive(
+             ${PYGDAL_PATH} ${PYTHON3_PATH}
+        )
+
+        vcpkg_execute_required_process(
+            COMMAND "${PYTHON_EXECUTABLE}" setup.py install
+            WORKING_DIRECTORY ${PYTHON3_PATH}/GDAL-3.7.0
+            LOGNAME pip
+        )
+        file(REMOVE_RECURSE "${PYTHON3_PATH}/PyQt3D-5.15.6")
+        MESSAGE(STATUS  "Install gdal for Python End")
+    endif()
+
+    set(PYUIC5 ${PYTHON3_PATH}/pyuic5)
+    set(PYRCC5 ${PYTHON3_PATH}/pyrcc5)
+
+    vcpkg_execute_required_process(
+        COMMAND "${PYTHON_EXECUTABLE}" -m pip install autopep8 python-dateutil future httplib2 lxml markupsafe mock nose2 plotly psycopg2 pygments six termcolor tz pyyaml psycopg2-binary numpy pyproj owslib jinja2 ${PIP_MIRRORS}
+        WORKING_DIRECTORY ${PYTHON3_PATH}
+        LOGNAME pip
+    )
+
+    file(REMOVE ${SOURCE_PATH}/cmake/FindProj.cmake)
+    file(REMOVE ${SOURCE_PATH}/cmake/FindPoly2Tri.cmake)
+    file(REMOVE ${SOURCE_PATH}/cmake/FindGSL.cmake)
 else() # Other build system
   message(FATAL_ERROR "Unsupport build system.")
 endif()
 
-vcpkg_configure_cmake(
+vcpkg_cmake_configure(
     SOURCE_PATH ${SOURCE_PATH}
-    #PREFER_NINJA
-    OPTIONS ${QGIS_OPTIONS}
-    OPTIONS_DEBUG ${QGIS_OPTIONS_DEBUG}
-    OPTIONS_RELEASE ${QGIS_OPTIONS_RELEASE}
+    WINDOWS_USE_MSBUILD
+    OPTIONS
+        ${QGIS_OPTIONS}
+    OPTIONS_DEBUG
+        ${QGIS_OPTIONS_DEBUG}
+    OPTIONS_RELEASE
+        ${QGIS_OPTIONS_RELEASE}
 )
 
-vcpkg_install_cmake()
+vcpkg_cmake_install()
 vcpkg_copy_pdbs()
-
-# handle qgis tools and plugins
-function(copy_path basepath)
-    file(GLOB ${basepath}_PATH ${CURRENT_PACKAGES_DIR}/${basepath}/*)
-    if( ${basepath}_PATH )
-        file(MAKE_DIRECTORY ${CURRENT_PACKAGES_DIR}/tools/${PORT}/${basepath})
-        file(COPY ${${basepath}_PATH} DESTINATION ${CURRENT_PACKAGES_DIR}/tools/${PORT}/${basepath})
-    endif()
-
-    if(EXISTS "${CURRENT_PACKAGES_DIR}/${basepath}/")
-        file(REMOVE_RECURSE ${CURRENT_PACKAGES_DIR}/${basepath}/)
-    endif()
-
-    if("debug-tools" IN_LIST FEATURES)
-        file(GLOB ${basepath}_DEBUG_PATH ${CURRENT_PACKAGES_DIR}/debug/${basepath}/*)
-        if( ${basepath}_DEBUG_PATH )
-            file(MAKE_DIRECTORY ${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/${basepath})
-            file(COPY ${${basepath}_DEBUG_PATH} DESTINATION ${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/${basepath})
-        endif()
-    endif()
-
-    if(EXISTS "${CURRENT_PACKAGES_DIR}/debug/${basepath}/")
-        file(REMOVE_RECURSE ${CURRENT_PACKAGES_DIR}/debug/${basepath}/)
-    endif()
-endfunction()
-
-file(GLOB QGIS_CMAKE_PATH ${CURRENT_PACKAGES_DIR}/*.cmake)
-if(QGIS_CMAKE_PATH)
-    file(COPY ${QGIS_CMAKE_PATH} DESTINATION ${CURRENT_PACKAGES_DIR}/share/cmake/${PORT})
-    file(REMOVE_RECURSE ${QGIS_CMAKE_PATH})
-endif()
-file(GLOB QGIS_CMAKE_PATH_DEBUG ${CURRENT_PACKAGES_DIR}/debug/*.cmake)
-if( QGIS_CMAKE_PATH_DEBUG )
-    file(REMOVE_RECURSE ${QGIS_CMAKE_PATH_DEBUG})
-endif()
-
-file(GLOB QGIS_TOOL_PATH ${CURRENT_PACKAGES_DIR}/bin/*${VCPKG_TARGET_EXECUTABLE_SUFFIX} ${CURRENT_PACKAGES_DIR}/*${VCPKG_TARGET_EXECUTABLE_SUFFIX})
-if(QGIS_TOOL_PATH)
-    file(MAKE_DIRECTORY ${CURRENT_PACKAGES_DIR}/tools/${PORT}/bin)
-    file(COPY ${QGIS_TOOL_PATH} DESTINATION ${CURRENT_PACKAGES_DIR}/tools/${PORT}/bin)
-    file(REMOVE_RECURSE ${QGIS_TOOL_PATH})
-    file(GLOB QGIS_TOOL_PATH ${CURRENT_PACKAGES_DIR}/bin/* )
-    file(COPY ${QGIS_TOOL_PATH} DESTINATION ${CURRENT_PACKAGES_DIR}/tools/${PORT}/bin)
-endif()
-
-file(GLOB QGIS_TOOL_PATH_DEBUG ${CURRENT_PACKAGES_DIR}/debug/bin/*${VCPKG_TARGET_EXECUTABLE_SUFFIX} ${CURRENT_PACKAGES_DIR}/debug/*${VCPKG_TARGET_EXECUTABLE_SUFFIX})
-if(QGIS_TOOL_PATH_DEBUG)
-    if("debug-tools" IN_LIST FEATURES)
-        file(MAKE_DIRECTORY ${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/bin)
-        file(COPY ${QGIS_TOOL_PATH_DEBUG} DESTINATION ${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/bin)
-        file(REMOVE_RECURSE ${QGIS_TOOL_PATH_DEBUG})
-        file(GLOB QGIS_TOOL_PATH_DEBUG ${CURRENT_PACKAGES_DIR}/debug/bin/* )
-        file(COPY ${QGIS_TOOL_PATH_DEBUG} DESTINATION ${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/bin)
-    else()
-        file(REMOVE_RECURSE ${QGIS_TOOL_PATH_DEBUG})
-    endif()
-endif()
-
-copy_path(doc)
-copy_path(i18n)
-copy_path(icons)
-copy_path(images)
-copy_path(plugins)
-copy_path(python)
-if("quick" IN_LIST FEATURES)
-    copy_path(qml)
-endif()
-copy_path(resources)
-if("server" IN_LIST FEATURES)
-    copy_path(server)
-endif()
-copy_path(svg)
-
-if(VCPKG_TARGET_IS_WINDOWS)
-    # Extend vcpkg_copy_tool_dependencies to support the export of dll and exe dependencies in different directories to the same directory,
-    # and support the copy of debug dependencies
-    function(vcpkg_copy_tool_dependencies_ex TOOL_DIR OUTPUT_DIR SEARCH_DIR)
-        find_program(PS_EXE powershell PATHS ${DOWNLOADS}/tool)
-        if (PS_EXE-NOTFOUND)
-            message(FATAL_ERROR "Could not find powershell in vcpkg tools, please open an issue to report this.")
-        endif()
-        macro(search_for_dependencies PATH_TO_SEARCH)
-            file(GLOB TOOLS ${TOOL_DIR}/*.exe ${TOOL_DIR}/*.dll)
-            foreach(TOOL ${TOOLS})
-                vcpkg_execute_required_process(
-                    COMMAND ${PS_EXE} -noprofile -executionpolicy Bypass -nologo
-                        -file ${CMAKE_CURRENT_LIST_DIR}/applocal.ps1
-                        -targetBinary ${TOOL}
-                        -installedDir ${PATH_TO_SEARCH}
-                        -outputDir    ${OUTPUT_DIR}
-                    WORKING_DIRECTORY ${VCPKG_ROOT_DIR}
-                    LOGNAME copy-tool-dependencies
-                )
-            endforeach()
-        endmacro()
-        search_for_dependencies(${CURRENT_PACKAGES_DIR}/${SEARCH_DIR})
-        search_for_dependencies(${CURRENT_INSTALLED_DIR}/${SEARCH_DIR})
-    endfunction()
-
-    vcpkg_copy_tool_dependencies_ex(${CURRENT_PACKAGES_DIR}/tools/${PORT}/bin ${CURRENT_PACKAGES_DIR}/tools/${PORT}/bin bin)
-    vcpkg_copy_tool_dependencies_ex(${CURRENT_PACKAGES_DIR}/tools/${PORT}/plugins ${CURRENT_PACKAGES_DIR}/tools/${PORT}/bin bin)
-    if("debug-tools" IN_LIST FEATURES)
-        vcpkg_copy_tool_dependencies_ex(${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/bin ${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/bin debug/bin)
-        vcpkg_copy_tool_dependencies_ex(${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/plugins ${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/bin debug/bin)
-    endif()
-    if("server" IN_LIST FEATURES)
-        vcpkg_copy_tool_dependencies_ex(${CURRENT_PACKAGES_DIR}/tools/${PORT}/server ${CURRENT_PACKAGES_DIR}/tools/${PORT}/bin bin)
-        if("debug-tools" IN_LIST FEATURES)
-            vcpkg_copy_tool_dependencies_ex(${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/server ${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/bin debug/bin)
-        endif()
-    endif()
-endif()
-
-file(GLOB INCLUDE_FILES "${CURRENT_PACKAGES_DIR}/include/*.h")
-if(INCLUDE_FILES)
-    file(MAKE_DIRECTORY "${CURRENT_PACKAGES_DIR}/include/${PORT}")
-    file(COPY ${INCLUDE_FILES} DESTINATION "${CURRENT_PACKAGES_DIR}/include/${PORT}")
-    file(REMOVE_RECURSE ${INCLUDE_FILES})
-endif()
-
-file(REMOVE_RECURSE
-    ${CURRENT_PACKAGES_DIR}/debug/include
-)
+vcpkg_fixup_pkgconfig()
+vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/${PORT})
 
 # Handle copyright
 file(INSTALL ${SOURCE_PATH}/COPYING DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT} RENAME copyright)
