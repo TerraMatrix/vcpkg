@@ -1,0 +1,27 @@
+diff --git a/src/python/qgspythonutilsimpl.cpp b/src/python/qgspythonutilsimpl.cpp
+index a924c9c2aa..7bfbfac9a3 100644
+--- a/src/python/qgspythonutilsimpl.cpp
++++ b/src/python/qgspythonutilsimpl.cpp
+@@ -1,4 +1,4 @@
+-/***************************************************************************
++﻿/***************************************************************************
+     qgspythonutils.cpp - routines for interfacing Python
+     ---------------------
+     begin                : October 2006
+@@ -15,11 +15,11 @@
+ 
+ // python should be first include
+ // otherwise issues some warnings
+-#ifdef _MSC_VER
+-#ifdef _DEBUG
+-#undef _DEBUG
+-#endif
+-#endif
++// #ifdef _MSC_VER
++// #ifdef _DEBUG
++// #undef _DEBUG
++// #endif
++// #endif
+ #include <Python.h>
+ 
+ #include "qgis.h"

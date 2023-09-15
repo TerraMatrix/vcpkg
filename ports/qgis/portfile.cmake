@@ -26,7 +26,11 @@ vcpkg_from_github(
     PATCHES
         fix-build-failed.diff
         fix-vrgis.diff
+        fix-qgspython.patch
 )
+
+# parallelism number
+set(VCPKG_CONCURRENCY 2)
 
 vcpkg_find_acquire_program(FLEX)
 vcpkg_find_acquire_program(BISON)
@@ -285,6 +289,7 @@ if(VCPKG_TARGET_IS_WINDOWS)
     file(REMOVE ${SOURCE_PATH}/cmake/FindProj.cmake)
     file(REMOVE ${SOURCE_PATH}/cmake/FindPoly2Tri.cmake)
     file(REMOVE ${SOURCE_PATH}/cmake/FindGSL.cmake)
+    file(REMOVE ${SOURCE_PATH}/cmake/FindSpatialindex.cmake)
 
 elseif(VCPKG_TARGET_IS_LINUX OR VCPKG_TARGET_IS_OSX) # Build in UNIX
     vcpkg_execute_required_process(
@@ -416,7 +421,15 @@ vcpkg_cmake_configure(
         ${QGIS_OPTIONS_RELEASE}
 )
 
-vcpkg_cmake_install()
+#vcpkg_cmake_install()
+execute_process (
+    COMMAND "${CMAKE_COMMAND}" -DBUILD_TYPE=Debug -P "F:/vcpkg/buildtrees/qgis/x64-windows-dbg/cmake_install.cmake"
+)
+
+execute_process(
+    COMMAND "${CMAKE_COMMAND}" -DBUILD_TYPE=Release -P "F:/vcpkg/buildtrees/qgis/x64-windows-rel/cmake_install.cmake"
+)
+
 vcpkg_copy_pdbs()
 vcpkg_fixup_pkgconfig()
 vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/${PORT})
