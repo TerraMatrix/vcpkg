@@ -1,9 +1,22 @@
 include("${CMAKE_CURRENT_LIST_DIR}/skia-functions.cmake")
 
-vcpkg_from_git(
+# git下载速度很慢
+# vcpkg_from_git(
+#     OUT_SOURCE_PATH SOURCE_PATH
+#     URL https://github.com/google/skia
+#     REF f86f242886692a18f5adc1cf9cbd6740cd0870fd
+#     PATCHES
+#         disable-msvc-env-setup.patch
+#         uwp.patch
+#         core-opengl32.patch
+# )
+
+vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    URL https://github.com/google/skia
-    REF f86f242886692a18f5adc1cf9cbd6740cd0870fd
+    REPO "google/skia"
+    REF "f86f242886692a18f5adc1cf9cbd6740cd0870fd"
+    # 如果你有REF对应的SHA512校验和，请在这里填写。第一次不知道的时候让它填写0
+    SHA512 "ac067dbbd6ce32866955d62b9ecc7056a6aeacfd80e58a75bed83dcdf57ab971bf3160569d1a68f578662158998fd0c472491e478184cdf2048b8ea84db0d0aa"  
     PATCHES
         disable-msvc-env-setup.patch
         uwp.patch

@@ -49,10 +49,26 @@ function(get_externals)
         endif()
         message(STATUS "Creating ${dir}")
         file(MAKE_DIRECTORY "${SOURCE_PATH}/third_party/externals")
-        vcpkg_from_git(
-            OUT_SOURCE_PATH staging_dir
-            ${skia_external_git_${name}}
-        )
+        if("${name}" STREQUAL "sfntly")
+             message(STATUS "name: ${name}")
+             message(STATUS "staging_dir: ${staging_dir}")
+             message(STATUS "skia_external_git_: ${skia_external_git_${name}}")
+           #  vcpkg_from_git(
+           #     OUT_SOURCE_PATH staging_dir
+           #     ${skia_external_git_${name}}
+           # )
+             vcpkg_from_github(
+                 OUT_SOURCE_PATH staging_dir
+                 REPO "googlefonts/sfntly"
+                 REF  "b55ff303ea2f9e26702b514cf6a3196a2e3e2974"
+                 SHA512 "9be54aa7c6661ca96773754767e9eb18f5cd19f8589065fab109f41bf57852c1d2d915ed6177eefda11d19b2e72acb3cb2432540ace23434d719b92b7b12f5ff"
+             )
+        else()
+            vcpkg_from_git(
+                OUT_SOURCE_PATH staging_dir
+                ${skia_external_git_${name}}
+            )
+        endif()
         file(RENAME "${staging_dir}" "${SOURCE_PATH}/${dir}")
 
         set(license_file "${SOURCE_PATH}/${dir}/${skia_external_license_${name}}")
