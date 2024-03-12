@@ -16,6 +16,8 @@ vcpkg_from_github(
         osgdb_zip_nozip.patch # This is fix symbol clashes with other libs when built in static-lib mode
         openexr3.patch
         unofficial-export.patch
+        fix-filepath-encoding.patch
+        fix-plugins.patch
 )
 
 file(REMOVE
@@ -74,7 +76,7 @@ vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
 # The package osg can be configured to use different OpenGL profiles via a custom triplet file:
 # Possible values are GLCORE, GL2, GL3, GLES1, GLES2, GLES3, and GLES2+GLES3
 if(NOT DEFINED osg_OPENGL_PROFILE)
-    set(osg_OPENGL_PROFILE "GL3")
+    set(osg_OPENGL_PROFILE "GL2")
 endif()
 
 # Plugin control variables are used only if prerequisites are satisfied.
@@ -90,6 +92,7 @@ endforeach()
 
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
+    WINDOWS_USE_MSBUILD
     OPTIONS
         ${FEATURE_OPTIONS}
         -DDYNAMIC_OPENSCENEGRAPH=${OSG_DYNAMIC}
@@ -102,7 +105,7 @@ vcpkg_cmake_configure(
         -DBUILD_OSG_PLUGIN_INVENTOR=OFF
         -DBUILD_OSG_PLUGIN_FBX=OFF
         -DBUILD_OSG_PLUGIN_DIRECTSHOW=OFF
-        -DBUILD_OSG_PLUGIN_LAS=OFF
+        #-DBUILD_OSG_PLUGIN_LAS=OFF
         -DBUILD_OSG_PLUGIN_QTKIT=OFF
         -DBUILD_OSG_PLUGIN_SVG=OFF
         -DBUILD_OSG_PLUGIN_VNC=OFF
@@ -111,7 +114,7 @@ vcpkg_cmake_configure(
         -DBUILD_OSG_PLUGIN_ZEROCONFDEVICE=OFF
         -DBUILD_DASHBOARD_REPORTS=OFF
         -DCMAKE_CXX_STANDARD=11
-        -DCMAKE_DISABLE_FIND_PACKAGE_FFmpeg=ON
+        #-DCMAKE_DISABLE_FIND_PACKAGE_FFmpeg=ON
         -DCMAKE_DISABLE_FIND_PACKAGE_DCMTK=ON
         -DCMAKE_DISABLE_FIND_PACKAGE_GStreamer=ON
         -DCMAKE_DISABLE_FIND_PACKAGE_GLIB=ON

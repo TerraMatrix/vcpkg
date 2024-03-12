@@ -1,0 +1,1854 @@
+diff --git a/src/osgViewer/GraphicsWindowWin32.cpp b/src/osgViewer/GraphicsWindowWin32.cpp
+index 88156a66..1ef04c2b 100644
+--- a/src/osgViewer/GraphicsWindowWin32.cpp
++++ b/src/osgViewer/GraphicsWindowWin32.cpp
+@@ -2208,8 +2208,10 @@ bool GraphicsWindowWin32::checkEvents()
+     if (!_realized) return false;
+ 
+     MSG msg;
+-    while (::PeekMessage(&msg, _hwnd, 0, 0, PM_REMOVE))
++    while (::PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
+     {
++        if (msg.message == WM_QUIT)
++            break ; 
+         ::TranslateMessage(&msg);
+         ::DispatchMessage(&msg);
+     }
+
+diff --git a/src/osgPlugins/ply/ply.h b/src/osgPlugins/ply/ply.h
+index ed0f03cc..c9a76635 100644
+--- a/src/osgPlugins/ply/ply.h
++++ b/src/osgPlugins/ply/ply.h
+@@ -60,7 +60,8 @@ WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+ #define PLY_FLOAT32    9
+ #define PLY_UINT8      10
+ #define PLY_INT32      11
+-#define PLY_END_TYPE   12
++#define PLY_UINT32     12
++#define PLY_END_TYPE   13
+ 
+ #define  PLY_SCALAR  0
+ #define  PLY_LIST    1
+
+diff --git a/src/osgPlugins/ply/plyfile.cpp b/src/osgPlugins/ply/plyfile.cpp
+index e75da1c5..a324db92 100644
+--- a/src/osgPlugins/ply/plyfile.cpp
++++ b/src/osgPlugins/ply/plyfile.cpp
+@@ -65,7 +65,7 @@ const char *type_names[] = {
+     "invalid",
+     "char", "short", "int",
+     "uchar", "ushort", "uint",
+-    "float", "double", "float32", "uint8", "int32"
++    "float", "double", "float32", "uint8", "int32", "uint32"
+ };
+ 
+ int ply_type_size[] = {
+@@ -1931,9 +1931,9 @@ Exit:
+ 
+ char **get_words(FILE *fp, int *nwords, char **orig_line)
+ {
+-#define BIG_STRING 4096
+-  static char str[BIG_STRING];
+-  static char str_copy[BIG_STRING];
++  #define BIG_STRING 4096
++  char str[BIG_STRING];
++  char str_copy[BIG_STRING];
+   char **words;
+   int max_words = 10;
+   int num_words = 0;
+@@ -2053,6 +2053,7 @@ double get_item_value(char *item, int type)
+       int_value = *pint;
+       return ((double) int_value);
+     case PLY_UINT:
++    case PLY_UINT32:
+       puint = (unsigned int *) item;
+       uint_value = *puint;
+       return ((double) uint_value);
+@@ -2139,6 +2140,7 @@ void write_binary_item(PlyFile *plyfile,
+           fwrite (&ushort_val, 2, 1, fp);
+           break;
+       case PLY_UINT:
++      case PLY_UINT32:
+           if( plyfile->file_type == PLY_BINARY_BE )
+           {
+               swap4BE(&uint_val);
+@@ -2211,6 +2213,7 @@ void write_ascii_item(
+     case PLY_UINT8:
+     case PLY_USHORT:
+     case PLY_UINT:
++    case PLY_UINT32:
+       fprintf (fp, "%u ", uint_val);
+       break;
+     case PLY_FLOAT:
+@@ -2276,6 +2279,7 @@ void get_stored_item(
+       *double_val = *int_val;
+       break;
+     case PLY_UINT:
++    case PLY_UINT32:
+       *uint_val = *((unsigned int *) ptr);
+       *int_val = *uint_val;
+       *double_val = *uint_val;
+@@ -2410,6 +2414,7 @@ void get_binary_item(
+           *double_val = *int_val;
+           break;
+       case PLY_UINT:
++      case PLY_UINT32:
+           result = fread (ptr, 4, 1, plyfile->fp);
+           if(result < 1)
+           {
+@@ -2511,6 +2516,7 @@ void get_ascii_item(
+       break;
+ 
+     case PLY_UINT:
++    case PLY_UINT32:
+       *uint_val = strtoul (word, (char **) NULL, 10);
+       *int_val = *uint_val;
+       *double_val = *uint_val;
+@@ -2585,6 +2591,7 @@ void store_item (
+       *pint = int_val;
+       break;
+     case PLY_UINT:
++    case PLY_UINT32:
+       puint = (unsigned int *) item;
+       *puint = uint_val;
+       break;
+
+diff --git a/src/osgPlugins/ply/vertexData.h b/src/osgPlugins/ply/vertexData.h
+index e2cd3a64..24de3bbf 100644
+--- a/src/osgPlugins/ply/vertexData.h
++++ b/src/osgPlugins/ply/vertexData.h
+@@ -17,6 +17,7 @@
+ #include <osg/PrimitiveSet>
+ 
+ #include <vector>
++#include <unordered_map>
+ 
+ ///////////////////////////////////////////////////////////////////////////////
+ //!
+@@ -62,7 +63,7 @@ namespace ply
+         // Function which reads all the vertices and colors if color info is
+         // given and also if the user wants that information
+         void readVertices( PlyFile* file, const int nVertices,
+-                           const int vertexFields );
++                           const int vertexFields, osg::Vec3d& vtCenter);
+ 
+         // Reads the triangle indices from the ply file
+         void readTriangles( PlyFile* file, const int nFaces );
+@@ -81,8 +82,8 @@ namespace ply
+         // Normals in osg format
+         osg::ref_ptr<osg::Vec3Array> _normals;
+         // The indices of the faces in premitive set
+-        osg::ref_ptr<osg::DrawElementsUInt> _triangles;
+-        osg::ref_ptr<osg::DrawElementsUInt> _quads;
++        std::unordered_map <int, osg::ref_ptr<osg::DrawElementsUInt>> _triangles;
++        std::unordered_map <int, osg::ref_ptr<osg::DrawElementsUInt>> _quads;
+     };
+ }
+ 
+
+diff --git a/src/osgPlugins/ply/vertexData.cpp b/src/osgPlugins/ply/vertexData.cpp
+index f2db29e0..64efed28 100644
+--- a/src/osgPlugins/ply/vertexData.cpp
++++ b/src/osgPlugins/ply/vertexData.cpp
+@@ -16,11 +16,13 @@
+ #include <algorithm>
+ #include <osg/Geometry>
+ #include <osg/Geode>
++#include <osg/MatrixTransform>
+ #include <osg/io_utils>
+ #include <osgUtil/SmoothingVisitor>
+ #include <osg/TexEnv>
+ #include <osgDB/ReaderWriter>
+ #include <osgDB/FileNameUtils>
++#include <osgDB/FileUtils>
+ #include <osgDB/ReadFile>
+ #include <osg/Texture2D>
+ 
+@@ -30,13 +32,13 @@ using namespace ply;
+ 
+ /*  Constructor.  */
+ VertexData::VertexData()
+-    : _invertFaces( false )
++    : _invertFaces(false)
+ {
+     // Initialize the members
+     _vertices = NULL;
+     _colors = NULL;
+     _normals = NULL;
+-    _triangles = NULL;
++    //_triangles = NULL;
+     _diffuse = NULL;
+     _ambient = NULL;
+     _specular = NULL;
+@@ -45,15 +47,15 @@ VertexData::VertexData()
+ 
+ 
+ /*  Read the vertex and (if available/wanted) color data from the open file.  */
+-void VertexData::readVertices( PlyFile* file, const int nVertices,
+-                               const int fields )
++void VertexData::readVertices(PlyFile* file, const int nVertices,
++    const int fields, osg::Vec3d& vtCenter)
+ {
+     // temporary vertex structure for ply loading
+     struct _Vertex
+     {
+-        float           x;
+-        float           y;
+-        float           z;
++        double           x;
++        double           y;
++        double           z;
+         float           nx;
+         float           ny;
+         float           nz;
+@@ -78,94 +80,94 @@ void VertexData::readVertices( PlyFile* file, const int nVertices,
+ 
+     PlyProperty vertexProps[] =
+     {
+-        { "x", PLY_FLOAT, PLY_FLOAT, offsetof( _Vertex, x ), 0, 0, 0, 0 },
+-        { "y", PLY_FLOAT, PLY_FLOAT, offsetof( _Vertex, y ), 0, 0, 0, 0 },
+-        { "z", PLY_FLOAT, PLY_FLOAT, offsetof( _Vertex, z ), 0, 0, 0, 0 },
+-        { "nx", PLY_FLOAT, PLY_FLOAT, offsetof( _Vertex, nx ), 0, 0, 0, 0 },
++        { "x", PLY_DOUBLE, PLY_DOUBLE, offsetof(_Vertex, x), 0, 0, 0, 0 },
++        { "y", PLY_DOUBLE, PLY_DOUBLE, offsetof(_Vertex, y), 0, 0, 0, 0 },
++        { "z", PLY_DOUBLE, PLY_DOUBLE, offsetof(_Vertex, z), 0, 0, 0, 0 },
++        { "nx", PLY_FLOAT, PLY_FLOAT, offsetof(_Vertex, nx), 0, 0, 0, 0 },
+         { "ny", PLY_FLOAT, PLY_FLOAT, offsetof(_Vertex, ny), 0, 0, 0, 0 },
+         { "nz", PLY_FLOAT, PLY_FLOAT, offsetof(_Vertex, nz), 0, 0, 0, 0 },
+-        { "red", PLY_UCHAR, PLY_UCHAR, offsetof( _Vertex, red ), 0, 0, 0, 0 },
+-        { "green", PLY_UCHAR, PLY_UCHAR, offsetof( _Vertex, green ), 0, 0, 0, 0 },
+-        { "blue", PLY_UCHAR, PLY_UCHAR, offsetof( _Vertex, blue ), 0, 0, 0, 0 },
+-        { "alpha", PLY_UCHAR, PLY_UCHAR, offsetof( _Vertex, alpha ), 0, 0, 0, 0 },
+-        { "ambient_red", PLY_UCHAR, PLY_UCHAR, offsetof( _Vertex, ambient_red ), 0, 0, 0, 0 },
+-        { "ambient_green", PLY_UCHAR, PLY_UCHAR, offsetof( _Vertex, ambient_green ), 0, 0, 0, 0 },
+-        { "ambient_blue", PLY_UCHAR, PLY_UCHAR, offsetof( _Vertex, ambient_blue ), 0, 0, 0, 0 },
+-        { "diffuse_red", PLY_UCHAR, PLY_UCHAR, offsetof( _Vertex, diffuse_red ), 0, 0, 0, 0 },
+-        { "diffuse_green", PLY_UCHAR, PLY_UCHAR, offsetof( _Vertex, diffuse_green ), 0, 0, 0, 0 },
+-        { "diffuse_blue", PLY_UCHAR, PLY_UCHAR, offsetof( _Vertex, diffuse_blue ), 0, 0, 0, 0 },
+-        { "specular_red", PLY_UCHAR, PLY_UCHAR, offsetof( _Vertex, specular_red ), 0, 0, 0, 0 },
+-        { "specular_green", PLY_UCHAR, PLY_UCHAR, offsetof( _Vertex, specular_green ), 0, 0, 0, 0 },
+-        { "specular_blue", PLY_UCHAR, PLY_UCHAR, offsetof( _Vertex, specular_blue ), 0, 0, 0, 0 },
+-        { "specular_coeff", PLY_FLOAT, PLY_FLOAT, offsetof( _Vertex, specular_coeff ), 0, 0, 0, 0 },
+-        { "specular_power", PLY_FLOAT, PLY_FLOAT, offsetof( _Vertex, specular_power ), 0, 0, 0, 0 },
++        { "red", PLY_UCHAR, PLY_UCHAR, offsetof(_Vertex, red), 0, 0, 0, 0 },
++        { "green", PLY_UCHAR, PLY_UCHAR, offsetof(_Vertex, green), 0, 0, 0, 0 },
++        { "blue", PLY_UCHAR, PLY_UCHAR, offsetof(_Vertex, blue), 0, 0, 0, 0 },
++        { "alpha", PLY_UCHAR, PLY_UCHAR, offsetof(_Vertex, alpha), 0, 0, 0, 0 },
++        { "ambient_red", PLY_UCHAR, PLY_UCHAR, offsetof(_Vertex, ambient_red), 0, 0, 0, 0 },
++        { "ambient_green", PLY_UCHAR, PLY_UCHAR, offsetof(_Vertex, ambient_green), 0, 0, 0, 0 },
++        { "ambient_blue", PLY_UCHAR, PLY_UCHAR, offsetof(_Vertex, ambient_blue), 0, 0, 0, 0 },
++        { "diffuse_red", PLY_UCHAR, PLY_UCHAR, offsetof(_Vertex, diffuse_red), 0, 0, 0, 0 },
++        { "diffuse_green", PLY_UCHAR, PLY_UCHAR, offsetof(_Vertex, diffuse_green), 0, 0, 0, 0 },
++        { "diffuse_blue", PLY_UCHAR, PLY_UCHAR, offsetof(_Vertex, diffuse_blue), 0, 0, 0, 0 },
++        { "specular_red", PLY_UCHAR, PLY_UCHAR, offsetof(_Vertex, specular_red), 0, 0, 0, 0 },
++        { "specular_green", PLY_UCHAR, PLY_UCHAR, offsetof(_Vertex, specular_green), 0, 0, 0, 0 },
++        { "specular_blue", PLY_UCHAR, PLY_UCHAR, offsetof(_Vertex, specular_blue), 0, 0, 0, 0 },
++        { "specular_coeff", PLY_FLOAT, PLY_FLOAT, offsetof(_Vertex, specular_coeff), 0, 0, 0, 0 },
++        { "specular_power", PLY_FLOAT, PLY_FLOAT, offsetof(_Vertex, specular_power), 0, 0, 0, 0 },
+         { "texture_u", PLY_FLOAT, PLY_FLOAT, offsetof(_Vertex, texture_u), 0, 0, 0, 0 },
+         { "texture_v", PLY_FLOAT, PLY_FLOAT, offsetof(_Vertex, texture_v), 0, 0, 0, 0 },
+     };
+ 
+     // use all 6 properties when reading colors, only the first 3 otherwise
+-    for( int i = 0; i < 3; ++i )
+-        ply_get_property( file, "vertex", &vertexProps[i] );
++    for (int i = 0; i < 3; ++i)
++        ply_get_property(file, "vertex", &vertexProps[i]);
+ 
+     if (fields & NORMALS)
+-      for( int i = 3; i < 6; ++i )
+-        ply_get_property( file, "vertex", &vertexProps[i] );
++        for (int i = 3; i < 6; ++i)
++            ply_get_property(file, "vertex", &vertexProps[i]);
+ 
+     if (fields & RGB)
+-      for( int i = 6; i < 9; ++i )
+-        ply_get_property( file, "vertex", &vertexProps[i] );
++        for (int i = 6; i < 9; ++i)
++            ply_get_property(file, "vertex", &vertexProps[i]);
+ 
+     if (fields & RGBA)
+-        ply_get_property( file, "vertex", &vertexProps[9] );
++        ply_get_property(file, "vertex", &vertexProps[9]);
+ 
+     if (fields & AMBIENT)
+-      for( int i = 10; i < 13; ++i )
+-        ply_get_property( file, "vertex", &vertexProps[i] );
++        for (int i = 10; i < 13; ++i)
++            ply_get_property(file, "vertex", &vertexProps[i]);
+ 
+     if (fields & DIFFUSE)
+-      for( int i = 13; i < 16; ++i )
+-        ply_get_property( file, "vertex", &vertexProps[i] );
++        for (int i = 13; i < 16; ++i)
++            ply_get_property(file, "vertex", &vertexProps[i]);
+ 
+     if (fields & SPECULAR)
+-      for( int i = 16; i < 21; ++i )
+-        ply_get_property( file, "vertex", &vertexProps[i] );
++        for (int i = 16; i < 21; ++i)
++            ply_get_property(file, "vertex", &vertexProps[i]);
+ 
+     if (fields & TEXCOORD)
+         for (int i = 21; i < 23; ++i)
+             ply_get_property(file, "vertex", &vertexProps[i]);
+ 
+     // check whether array is valid otherwise allocate the space
+-    if(!_vertices.valid())
++    if (!_vertices.valid())
+         _vertices = new osg::Vec3Array;
+ 
+-    if( fields & NORMALS )
++    if (fields & NORMALS)
+     {
+-        if(!_normals.valid())
++        if (!_normals.valid())
+             _normals = new osg::Vec3Array;
+     }
+ 
+     // If read colors allocate space for color array
+-    if( fields & RGB || fields & RGBA)
++    if (fields & RGB || fields & RGBA)
+     {
+-        if(!_colors.valid())
++        if (!_colors.valid())
+             _colors = new osg::Vec4Array;
+     }
+ 
+-    if( fields & AMBIENT )
++    if (fields & AMBIENT)
+     {
+-        if(!_ambient.valid())
++        if (!_ambient.valid())
+             _ambient = new osg::Vec4Array;
+     }
+ 
+-    if( fields & DIFFUSE )
++    if (fields & DIFFUSE)
+     {
+-        if(!_diffuse.valid())
++        if (!_diffuse.valid())
+             _diffuse = new osg::Vec4Array;
+     }
+ 
+-    if( fields & SPECULAR )
++    if (fields & SPECULAR)
+     {
+-        if(!_specular.valid())
++        if (!_specular.valid())
+             _specular = new osg::Vec4Array;
+     }
+     if (fields & TEXCOORD)
+@@ -175,206 +177,301 @@ void VertexData::readVertices( PlyFile* file, const int nVertices,
+     }
+ 
+     // read in the vertices
+-    for( int i = 0; i < nVertices; ++i )
++    for (int i = 0; i < nVertices; ++i)
+     {
+-        ply_get_element( file, static_cast< void* >( &vertex ) );
+-        _vertices->push_back( osg::Vec3( vertex.x, vertex.y, vertex.z ) );
++        ply_get_element(file, static_cast<void*>(&vertex));
++        if (vtCenter.length() == 0)
++            vtCenter = osg::Vec3d(vertex.x, vertex.y, vertex.z);
++        _vertices->push_back(osg::Vec3d(vertex.x, vertex.y, vertex.z) - vtCenter);
+         if (fields & NORMALS)
+-            _normals->push_back( osg::Vec3( vertex.nx, vertex.ny, vertex.nz ) );
+-
+-        if( fields & RGBA )
+-            _colors->push_back( osg::Vec4( (unsigned int) vertex.red / 255.0,
+-                                           (unsigned int) vertex.green / 255.0 ,
+-                                           (unsigned int) vertex.blue / 255.0,
+-                                           (unsigned int) vertex.alpha / 255.0) );
+-        else if( fields & RGB )
+-            _colors->push_back( osg::Vec4( (unsigned int) vertex.red / 255.0,
+-                                           (unsigned int) vertex.green / 255.0 ,
+-                                           (unsigned int) vertex.blue / 255.0, 1.0 ) );
+-        if( fields & AMBIENT )
+-            _ambient->push_back( osg::Vec4( (unsigned int) vertex.ambient_red / 255.0,
+-                                            (unsigned int) vertex.ambient_green / 255.0 ,
+-                                            (unsigned int) vertex.ambient_blue / 255.0, 1.0 ) );
+-
+-        if( fields & DIFFUSE )
+-            _diffuse->push_back( osg::Vec4( (unsigned int) vertex.diffuse_red / 255.0,
+-                                            (unsigned int) vertex.diffuse_green / 255.0 ,
+-                                            (unsigned int) vertex.diffuse_blue / 255.0, 1.0 ) );
+-
+-        if( fields & SPECULAR )
+-            _specular->push_back( osg::Vec4( (unsigned int) vertex.specular_red / 255.0,
+-                                             (unsigned int) vertex.specular_green / 255.0 ,
+-                                             (unsigned int) vertex.specular_blue / 255.0, 1.0 ) );
++            _normals->push_back(osg::Vec3(vertex.nx, vertex.ny, vertex.nz));
++
++        if (fields & RGBA)
++            _colors->push_back(osg::Vec4((unsigned int)vertex.red / 255.0,
++                (unsigned int)vertex.green / 255.0,
++                (unsigned int)vertex.blue / 255.0,
++                (unsigned int)vertex.alpha / 255.0));
++        else if (fields & RGB)
++            _colors->push_back(osg::Vec4((unsigned int)vertex.red / 255.0,
++                (unsigned int)vertex.green / 255.0,
++                (unsigned int)vertex.blue / 255.0, 1.0));
++        if (fields & AMBIENT)
++            _ambient->push_back(osg::Vec4((unsigned int)vertex.ambient_red / 255.0,
++                (unsigned int)vertex.ambient_green / 255.0,
++                (unsigned int)vertex.ambient_blue / 255.0, 1.0));
++
++        if (fields & DIFFUSE)
++            _diffuse->push_back(osg::Vec4((unsigned int)vertex.diffuse_red / 255.0,
++                (unsigned int)vertex.diffuse_green / 255.0,
++                (unsigned int)vertex.diffuse_blue / 255.0, 1.0));
++
++        if (fields & SPECULAR)
++            _specular->push_back(osg::Vec4((unsigned int)vertex.specular_red / 255.0,
++                (unsigned int)vertex.specular_green / 255.0,
++                (unsigned int)vertex.specular_blue / 255.0, 1.0));
+         if (fields & TEXCOORD)
+-            _texcoord->push_back(osg::Vec2(vertex.texture_u,vertex.texture_v));
++            _texcoord->push_back(osg::Vec2(vertex.texture_u, vertex.texture_v));
+     }
+ }
+ 
+ 
+ /*  Read the index data from the open file.  */
+-void VertexData::readTriangles( PlyFile* file, const int nFaces )
++void VertexData::readTriangles(PlyFile* file, const int nFaces)
+ {
+     // temporary face structure for ply loading
+     struct _Face
+     {
+         unsigned char   nVertices;
+-        int*            vertices;
++        int* vertices;
++        unsigned char   nTexcoords;
++        float* texcoords;
++        unsigned char   nColors;
++        float* colors;
++        int             texnumber;
++        unsigned char r;
++        unsigned char g;
++        unsigned char b;
++        unsigned char a;
+     } face;
+ 
+     PlyProperty faceProps[] =
+     {
+-        { "vertex_indices|vertex_index", PLY_INT, PLY_INT, offsetof( _Face, vertices ),
+-          1, PLY_UCHAR, PLY_UCHAR, offsetof( _Face, nVertices ) }
++        { "vertex_indices|vertex_index", PLY_INT, PLY_INT, offsetof(_Face, vertices),
++          1, PLY_UCHAR, PLY_UCHAR, offsetof(_Face, nVertices) },
++        { "texcoord", PLY_FLOAT, PLY_FLOAT, offsetof(_Face, texcoords),
++          1, PLY_UCHAR, PLY_UCHAR, offsetof(_Face, nTexcoords) },
++        { "color", PLY_FLOAT, PLY_FLOAT, offsetof(_Face, colors),
++          1, PLY_UCHAR, PLY_UCHAR, offsetof(_Face, nColors) },
++        { "texnumber", PLY_INT, PLY_INT, offsetof(_Face, texnumber),
++          0, 0, 0, 0 },
++        { "red", PLY_UCHAR, PLY_UCHAR, offsetof(_Face, r),
++          0, 0, 0, 0 },
++        { "green", PLY_UCHAR, PLY_UCHAR, offsetof(_Face, g),
++          0, 0, 0, 0 },
++        { "blue", PLY_UCHAR, PLY_UCHAR, offsetof(_Face, b),
++          0, 0, 0, 0 },
++        { "alpha", PLY_UCHAR, PLY_UCHAR, offsetof(_Face, a),
++          0, 0, 0, 0 }
+     };
+ 
+-    ply_get_property( file, "face", &faceProps[0] );
+-
+-    if(!_triangles.valid())
+-        _triangles = new osg::DrawElementsUInt(osg::PrimitiveSet::TRIANGLES);
+-
+-    if(!_quads.valid())
+-        _quads = new osg::DrawElementsUInt(osg::PrimitiveSet::QUADS);
+-
+-
+     const char NUM_VERTICES_TRIANGLE(3);
+     const char NUM_VERTICES_QUAD(4);
+ 
++    osg::ref_ptr<osg::Vec3Array>   vertices = new osg::Vec3Array();
++    osg::ref_ptr<osg::Vec3Array>   normals = _normals.valid() ? new osg::Vec3Array : nullptr;
++    osg::ref_ptr<osg::Vec4Array>   colors = new osg::Vec4Array;
++    osg::ref_ptr<osg::Vec2Array>   texcoord = new osg::Vec2Array;
++    vertices->reserve(nFaces * 4);
++    if (normals.valid()) normals->reserve(nFaces * 4);
++    if (colors.valid()) colors->reserve(nFaces * 4);
++    texcoord->reserve(nFaces * 4);
++
++    for (int i = 0; i < 8; ++i)
++        ply_get_property(file, "face", &faceProps[i]);
++
+     // read the faces, reversing the reading direction if _invertFaces is true
+-    for( int i = 0 ; i < nFaces; i++ )
++    for (int i = 0; i < nFaces; i++)
+     {
+         // initialize face values
+         face.nVertices = 0;
+         face.vertices = 0;
++        face.nTexcoords = 0;
++        face.texcoords = 0;
++        face.nColors = 0;
++        face.colors = 0;
++        face.texnumber = 0;
++        face.r = 0;
++        face.g = 1;
++        face.b = 2;
++        face.a = 3;
++
++        ply_get_element(file, static_cast<void*>(&face));
+ 
+-        ply_get_element( file, static_cast< void* >( &face ) );
+         if (face.vertices)
+         {
+-            if (face.nVertices == NUM_VERTICES_TRIANGLE ||  face.nVertices == NUM_VERTICES_QUAD)
++            if (face.nVertices == NUM_VERTICES_TRIANGLE || face.nVertices == NUM_VERTICES_QUAD)
+             {
++                if (face.texnumber < 0)
++                    face.texnumber = 0;
++                osg::ref_ptr<osg::DrawElementsUInt> triangles = _triangles[face.texnumber];
++                osg::ref_ptr<osg::DrawElementsUInt> quads = _quads[face.texnumber];
++                if (!triangles.valid() && face.nVertices == NUM_VERTICES_TRIANGLE)
++                {
++                    triangles = new osg::DrawElementsUInt(osg::PrimitiveSet::TRIANGLES);
++                    _triangles[face.texnumber] = triangles;
++                }
++
++                if (!quads.valid() && face.nVertices == NUM_VERTICES_QUAD)
++                {
++                    quads = new osg::DrawElementsUInt(osg::PrimitiveSet::QUADS);
++                    _quads[face.texnumber] = quads;
++                }
++
+                 unsigned short index;
+-                for(int j = 0 ; j < face.nVertices ; j++)
++                for (int j = 0; j < face.nVertices; j++)
+                 {
+-                    index = ( _invertFaces ? face.nVertices - 1 - j : j );
+-                    if(face.nVertices == 4)
+-                        _quads->push_back(face.vertices[index]);
++                    index = (_invertFaces ? face.nVertices - 1 - j : j);
++                    if (face.nTexcoords > 0 || face.nColors > 0 || (face.r != 0 || face.g != 1 || face.b != 2 || face.a != 3))
++                    {
++                        vertices->push_back(_vertices->at(face.vertices[index]));
++                        if (normals.valid()) normals->push_back(_normals->at(face.vertices[index]));
++                        if (colors.valid())
++                        {
++                            if (face.nColors > 0)
++                                colors->push_back(osg::Vec4(face.colors[j * 4], face.colors[j * 4 + 1], face.colors[j * 4 + 2], face.colors[j * 4 + 3]));
++                            else if (face.r != 0 || face.g != 1 || face.b != 2 || face.a != 3)
++                                colors->push_back(osg::Vec4(face.r / 255.0, face.g / 255.0, face.b / 255.0, face.a / 255.0));
++                            else if (_colors.valid())
++                                colors->push_back(_colors->at(face.vertices[index]));
++                        }
++
++                        if (face.nTexcoords > 0)
++                            texcoord->push_back(osg::Vec2(face.texcoords[j * 2], face.texcoords[j * 2 + 1]));
++                        else if (_texcoord.valid())
++                            texcoord->push_back(_texcoord->at(face.vertices[index]));
++
++                        if (face.nVertices == NUM_VERTICES_QUAD)
++                            quads->push_back(vertices->size() - 1);
++                        else
++                            triangles->push_back(vertices->size() - 1);
++                    }
+                     else
+-                        _triangles->push_back(face.vertices[index]);
++                    {
++                        if (face.nVertices == NUM_VERTICES_QUAD)
++                            quads->push_back(face.vertices[index]);
++                        else
++                            triangles->push_back(face.vertices[index]);
++                    }
+                 }
+             }
+             // free the memory that was allocated by ply_get_element
+-            free( face.vertices );
++            if (face.vertices != nullptr)  free(face.vertices);
++            if (face.texcoords != nullptr) free(face.texcoords);
++            if (face.colors != nullptr) free(face.colors);
+         }
+     }
++
++    if (!texcoord->empty() || !colors->empty())
++    {
++        _vertices = vertices;
++        _normals = normals;
++        _colors = colors->empty() ? nullptr : colors;
++        _texcoord = texcoord->empty() ? nullptr : texcoord;
++    }
+ }
+ 
+ 
+ /*  Open a PLY file and read vertex, color and index data. and returns the node  */
+-osg::Node* VertexData::readPlyFile( const char* filename, const bool ignoreColors )
++osg::Node* VertexData::readPlyFile(const char* filename, const bool ignoreColors)
+ {
+     int     nPlyElems;
+-    char**  elemNames;
++    char** elemNames;
+     int     fileType;
+     float   version;
+     bool    result = false;
+     int     nComments;
+-    char**  comments;
++    char** comments;
+ 
+     PlyFile* file = NULL;
+ 
+     // Try to open ply file as for reading
+-    try{
+-            file  = ply_open_for_reading( const_cast< char* >( filename ),
+-                                          &nPlyElems, &elemNames,
+-                                          &fileType, &version );
++    try {
++        file = ply_open_for_reading(const_cast<char*>(filename),
++            &nPlyElems, &elemNames,
++            &fileType, &version);
+     }
+     // Catch the if any exception thrown
+-    catch( exception& e )
++    catch (exception& e)
+     {
+         MESHERROR << "Unable to read PLY file, an exception occurred:  "
+-                    << e.what() << endl;
++            << e.what() << endl;
+     }
+ 
+-    if( !file )
++    if (!file)
+     {
+         MESHERROR << "Unable to open PLY file " << filename
+-                  << " for reading." << endl;
++            << " for reading." << endl;
+         return NULL;
+     }
+ 
+-    MESHASSERT( elemNames != 0 );
++    MESHASSERT(elemNames != 0);
+ 
+ 
+     nComments = file->num_comments;
+     comments = file->comments;
+ 
+ 
+-    #ifndef NDEBUG
++#ifndef NDEBUG
+     MESHINFO << filename << ": " << nPlyElems << " elements, file type = "
+-             << fileType << ", version = " << version << endl;
+-    #endif
++        << fileType << ", version = " << version << endl;
++#endif
+ 
+-    std::string textureFile;
+-    for( int i = 0; i < nComments; i++ )
++    //std::string textureFile;
++    std::vector<std::string> textureFiles;
++    for (int i = 0; i < nComments; i++)
+     {
+-        if( equal_strings( comments[i], "modified by flipply" ) )
++        if (equal_strings(comments[i], "modified by flipply"))
+         {
+             _invertFaces = true;
+         }
+-        if (strncmp(comments[i], "TextureFile",11)==0)
++        if (strncmp(comments[i], "TextureFile", 11) == 0)
+         {
+-            textureFile = comments[i]+12;
+-            if (!osgDB::isAbsolutePath(textureFile))
++            std::string textureFile = comments[i] + 12;
++            if (!osgDB::isAbsolutePath(textureFile) || !osgDB::fileExists(textureFile))
+             {
+-                textureFile = osgDB::concatPaths(osgDB::getFilePath(filename), textureFile);
++                textureFile = osgDB::concatPaths(osgDB::getFilePath(filename), osgDB::getSimpleFileName(textureFile));
+             }
++            textureFiles.push_back(textureFile);
+         }
+     }
+-    for( int i = 0; i < nPlyElems; ++i )
++
++    osg::Vec3d vtCenter(0.0, 0.0, 0.0);
++    for (int i = 0; i < nPlyElems; ++i)
+     {
+         int nElems;
+         int nProps;
+ 
+         PlyProperty** props = NULL;
+-        try{
+-                props = ply_get_element_description( file, elemNames[i],
+-                                                     &nElems, &nProps );
++        try {
++            props = ply_get_element_description(file, elemNames[i],
++                &nElems, &nProps);
+         }
+-        catch( exception& e )
++        catch (exception& e)
+         {
+             MESHERROR << "Unable to get PLY file description, an exception occurred:  "
+-                        << e.what() << endl;
++                << e.what() << endl;
+         }
+-        MESHASSERT( props != 0 );
++        MESHASSERT(props != 0);
+ 
+-        #ifndef NDEBUG
++#ifndef NDEBUG
+         MESHINFO << "element " << i << ": name = " << elemNames[i] << ", "
+-                 << nProps << " properties, " << nElems << " elements" << endl;
+-        for( int j = 0; j < nProps; ++j )
++            << nProps << " properties, " << nElems << " elements" << endl;
++        for (int j = 0; j < nProps; ++j)
+         {
+             MESHINFO << "element " << i << ", property " << j << ": "
+-                     << "name = " << props[j]->name << endl;
++                << "name = " << props[j]->name << endl;
+         }
+-        #endif
++#endif
+ 
+         // if the string is vertex means vertex data is started
+-        if( equal_strings( elemNames[i], "vertex" ) )
++        if (equal_strings(elemNames[i], "vertex"))
+         {
+             int fields = NONE;
+             // determine if the file stores vertex colors
+-            for( int j = 0; j < nProps; ++j )
++            for (int j = 0; j < nProps; ++j)
+             {
+                 // if the string have the red means color info is there
+-                if( equal_strings( props[j]->name, "x" ) )
++                if (equal_strings(props[j]->name, "x"))
+                     fields |= XYZ;
+-                if( equal_strings( props[j]->name, "nx" ) )
++                if (equal_strings(props[j]->name, "nx"))
+                     fields |= NORMALS;
+-                if( equal_strings( props[j]->name, "alpha" ) )
++                if (equal_strings(props[j]->name, "alpha"))
+                     fields |= RGBA;
+-                if ( equal_strings( props[j]->name, "red" ) )
++                if (equal_strings(props[j]->name, "red"))
+                     fields |= RGB;
+-                if( equal_strings( props[j]->name, "ambient" ) )
++                if (equal_strings(props[j]->name, "ambient"))
+                     fields |= AMBIENT;
+-                if( equal_strings( props[j]->name, "diffuse_red" ) )
++                if (equal_strings(props[j]->name, "diffuse_red"))
+                     fields |= DIFFUSE;
+                 if (equal_strings(props[j]->name, "specular_red"))
+                     fields |= SPECULAR;
+@@ -384,50 +481,50 @@ osg::Node* VertexData::readPlyFile( const char* filename, const bool ignoreColor
+                     fields |= TEXCOORD;
+             }
+ 
+-            if( ignoreColors )
++            if (ignoreColors)
+             {
+                 fields &= ~(XYZ | NORMALS);
+-                    MESHINFO << "Colors in PLY file ignored per request." << endl;
++                MESHINFO << "Colors in PLY file ignored per request." << endl;
+             }
+ 
+             try {
+                 // Read vertices and store in a std::vector array
+-                readVertices( file, nElems, fields );
++                readVertices(file, nElems, fields, vtCenter);
+                 // Check whether all vertices are loaded or not
+-                MESHASSERT( _vertices->size() == static_cast< size_t >( nElems ) );
++                MESHASSERT(_vertices->size() == static_cast<size_t>(nElems));
+ 
+                 // Check if all the optional elements were read or not
+-                if( fields & NORMALS )
++                if (fields & NORMALS)
+                 {
+-                    MESHASSERT( _normals->size() == static_cast< size_t >( nElems ) );
++                    MESHASSERT(_normals->size() == static_cast<size_t>(nElems));
+                 }
+-                if( fields & RGB || fields & RGBA)
++                if (fields & RGB || fields & RGBA)
+                 {
+-                    MESHASSERT( _colors->size() == static_cast< size_t >( nElems ) );
++                    MESHASSERT(_colors->size() == static_cast<size_t>(nElems));
+                 }
+-                if( fields & AMBIENT )
++                if (fields & AMBIENT)
+                 {
+-                    MESHASSERT( _ambient->size() == static_cast< size_t >( nElems ) );
++                    MESHASSERT(_ambient->size() == static_cast<size_t>(nElems));
+                 }
+-                if( fields & DIFFUSE )
++                if (fields & DIFFUSE)
+                 {
+-                    MESHASSERT( _diffuse->size() == static_cast< size_t >( nElems ) );
++                    MESHASSERT(_diffuse->size() == static_cast<size_t>(nElems));
+                 }
+                 if (fields & SPECULAR)
+                 {
+-                    MESHASSERT(_specular->size() == static_cast< size_t >(nElems));
++                    MESHASSERT(_specular->size() == static_cast<size_t>(nElems));
+                 }
+                 if (fields & TEXCOORD)
+                 {
+-                    MESHASSERT(_texcoord->size() == static_cast< size_t >(nElems));
++                    MESHASSERT(_texcoord->size() == static_cast<size_t>(nElems));
+                 }
+ 
+                 result = true;
+             }
+-            catch( exception& e )
++            catch (exception& e)
+             {
+                 MESHERROR << "Unable to read vertex in PLY file, an exception occurred:  "
+-                            << e.what() << endl;
++                    << e.what() << endl;
+                 // stop for loop by setting the loop variable to break condition
+                 // this way resources still get released even on error cases
+                 i = nPlyElems;
+@@ -435,127 +532,224 @@ osg::Node* VertexData::readPlyFile( const char* filename, const bool ignoreColor
+             }
+         }
+         // If the string is face means triangle info started
+-        else if( equal_strings( elemNames[i], "face" ) )
+-        try
++        else if (equal_strings(elemNames[i], "face"))
++            try
+         {
+             // Read Triangles
+-            readTriangles( file, nElems );
++            readTriangles(file, nElems);
+             // Check whether all face elements read or not
+ #if DEBUG
+-            unsigned int nbTriangles = (_triangles.valid() ? _triangles->size() / 3 : 0) ;
+-            unsigned int nbQuads = (_quads.valid() ? _quads->size() / 4 : 0 );
++            unsigned int nbTriangles = (_triangles.valid() ? _triangles->size() / 3 : 0);
++            unsigned int nbQuads = (_quads.valid() ? _quads->size() / 4 : 0);
+ 
+-            MESHASSERT( (nbTriangles + nbQuads) == static_cast< size_t >( nElems ) );
++            MESHASSERT((nbTriangles + nbQuads) == static_cast<size_t>(nElems));
+ #endif
+             result = true;
+         }
+-        catch( exception& e )
++        catch (exception& e)
+         {
+             MESHERROR << "Unable to read PLY file, an exception occurred:  "
+-                      << e.what() << endl;
++                << e.what() << endl;
+             // stop for loop by setting the loop variable to break condition
+             // this way resources still get released even on error cases
+             i = nPlyElems;
+         }
+ 
+         // free the memory that was allocated by ply_get_element_description
+-        for( int j = 0; j < nProps; ++j )
+-            free( props[j] );
+-        free( props );
++        for (int j = 0; j < nProps; ++j)
++            free(props[j]);
++        free(props);
+     }
+ 
+-    ply_close( file );
++    ply_close(file);
+ 
+     // free the memory that was allocated by ply_open_for_reading
+-    for( int i = 0; i < nPlyElems; ++i )
+-        free( elemNames[i] );
+-    free( elemNames );
+-
+-   // If the result is true means the ply file is successfully read
+-   if(result)
+-   {
+-        // Create geometry node
+-        osg::Geometry* geom  =  new osg::Geometry;
+-
+-        // set the vertex array
+-        geom->setVertexArray(_vertices.get());
+-
+-        // Add the primitive set
+-        bool hasTriOrQuads = false;
+-        if (_triangles.valid() && _triangles->size() > 0 )
+-        {
+-            geom->addPrimitiveSet(_triangles.get());
+-            hasTriOrQuads = true;
+-        }
++    for (int i = 0; i < nPlyElems; ++i)
++        free(elemNames[i]);
++    free(elemNames);
+ 
+-        if (_quads.valid() && _quads->size() > 0 )
++    // If the result is true means the ply file is successfully read
++    if (result)
++    {
++        osg::Geode* geode = new osg::Geode;
++        for (int texIndex = 0; texIndex < textureFiles.size(); ++texIndex)
+         {
+-            geom->addPrimitiveSet(_quads.get());
+-            hasTriOrQuads = true;
+-        }
++            // Create geometry node
++            osg::ref_ptr<osg::Geometry> geom = new osg::Geometry;
++
++            // set the vertex array
++            geom->setVertexArray(_vertices.get());
+ 
+-        // Print points if the file contains unsupported primitives
+-        if(!hasTriOrQuads)
+-            geom->addPrimitiveSet(new osg::DrawArrays(GL_POINTS, 0, _vertices->size()));
++            // Add the primitive set
++            bool hasTriOrQuads = false;
++            osg::ref_ptr<osg::DrawElementsUInt> triangles = _triangles[texIndex];
++            if (triangles.valid() && triangles->size() > 0)
++            {
++                geom->addPrimitiveSet(triangles.get());
++                hasTriOrQuads = true;
++            }
+ 
++            osg::ref_ptr<osg::DrawElementsUInt> quads = _quads[texIndex];
++            if (quads.valid() && quads->size() > 0)
++            {
++                geom->addPrimitiveSet(quads.get());
++                hasTriOrQuads = true;
++            }
++
++            // Print points if the file contains unsupported primitives
++            if (!hasTriOrQuads)
++                continue;
++            //geom->addPrimitiveSet(new osg::DrawArrays(GL_POINTS, 0, _vertices->size()));
+ 
+         // Apply the colours to the model; at the moment this is a
+         // kludge because we only use one kind and apply them all the
+         // same way. Also, the priority order is completely arbitrary
+ 
+-        if(_colors.valid())
+-        {
+-            geom->setColorArray(_colors.get(), osg::Array::BIND_PER_VERTEX );
+-        }
+-        else if(_ambient.valid())
+-        {
+-            geom->setColorArray(_ambient.get(), osg::Array::BIND_PER_VERTEX );
+-        }
+-        else if(_diffuse.valid())
+-        {
+-            geom->setColorArray(_diffuse.get(), osg::Array::BIND_PER_VERTEX );
+-        }
+-        else if(_specular.valid())
+-        {
+-            geom->setColorArray(_specular.get(), osg::Array::BIND_PER_VERTEX );
+-        }
+-        else if (_texcoord.valid())
+-        {
+-            geom->setTexCoordArray(0, _texcoord.get());
++            if (_colors.valid())
++            {
++                geom->setColorArray(_colors.get(), osg::Array::BIND_PER_VERTEX);
++            }
++            else if (_ambient.valid())
++            {
++                geom->setColorArray(_ambient.get(), osg::Array::BIND_PER_VERTEX);
++            }
++            else if (_diffuse.valid())
++            {
++                geom->setColorArray(_diffuse.get(), osg::Array::BIND_PER_VERTEX);
++            }
++            else if (_specular.valid())
++            {
++                geom->setColorArray(_specular.get(), osg::Array::BIND_PER_VERTEX);
++            }
++            else if (_texcoord.valid())
++            {
++                geom->setTexCoordArray(0, _texcoord.get());
++            }
++
++            // If the model has normals, add them to the geometry
++            if (_normals.valid())
++            {
++                geom->setNormalArray(_normals.get(), osg::Array::BIND_PER_VERTEX);
++            }
++            else
++            {   // If not, use the smoothing visitor to generate them
++                // (quads will be triangulated by the smoothing visitor)
++                osgUtil::SmoothingVisitor::smooth((*geom), osg::PI / 2);
++            }
++
++            // set flage true to activate the vertex buffer object of drawable
++            geom->setUseVertexBufferObjects(true);
++
++            std::string textureFile = textureFiles[texIndex];
++            osg::ref_ptr<osg::Image> image;
++            if (!textureFile.empty() && (image = osgDB::readRefImageFile(textureFile)) != NULL)
++            {
++                osg::Texture2D* texture = new osg::Texture2D;
++                texture->setImage(image.get());
++                texture->setResizeNonPowerOfTwoHint(false);
++
++                osg::TexEnv* texenv = new osg::TexEnv;
++                texenv->setMode(osg::TexEnv::REPLACE);
++
++                osg::StateSet* stateset = geom->getOrCreateStateSet();
++                stateset->setTextureAttributeAndModes(0, texture, osg::StateAttribute::ON);
++                stateset->setTextureAttribute(0, texenv);
++            }
++
++            geode->addDrawable(geom);
+         }
+ 
+-        // If the model has normals, add them to the geometry
+-        if(_normals.valid())
++        if (geode->getNumDrawables() == 0U)
+         {
+-            geom->setNormalArray(_normals.get(), osg::Array::BIND_PER_VERTEX);
+-        }
+-        else
+-        {   // If not, use the smoothing visitor to generate them
+-            // (quads will be triangulated by the smoothing visitor)
+-            osgUtil::SmoothingVisitor::smooth((*geom), osg::PI/2);
+-        }
++            int texIndex = 0;
++            // Create geometry node
++            osg::ref_ptr<osg::Geometry> geom = new osg::Geometry;
+ 
+-        // set flage true to activate the vertex buffer object of drawable
+-        geom->setUseVertexBufferObjects(true);
++            // set the vertex array
++            geom->setVertexArray(_vertices.get());
+ 
+-        osg::ref_ptr<osg::Image> image;
+-        if (!textureFile.empty() && (image = osgDB::readRefImageFile(textureFile)) != NULL)
+-        {
+-            osg::Texture2D *texture = new osg::Texture2D;
+-            texture->setImage(image.get());
+-            texture->setResizeNonPowerOfTwoHint(false);
++            // Add the primitive set
++            bool hasTriOrQuads = false;
++            osg::ref_ptr<osg::DrawElementsUInt> triangles = _triangles[texIndex];
++            if (triangles.valid() && triangles->size() > 0)
++            {
++                geom->addPrimitiveSet(triangles.get());
++                hasTriOrQuads = true;
++            }
++
++            osg::ref_ptr<osg::DrawElementsUInt> quads = _quads[texIndex];
++            if (quads.valid() && quads->size() > 0)
++            {
++                geom->addPrimitiveSet(quads.get());
++                hasTriOrQuads = true;
++            }
+ 
+-            osg::TexEnv *texenv = new osg::TexEnv;
+-            texenv->setMode(osg::TexEnv::REPLACE);
++            // Print points if the file contains unsupported primitives
++            if (!hasTriOrQuads)
++                geom->addPrimitiveSet(new osg::DrawArrays(GL_POINTS, 0, _vertices->size()));
+ 
+-            osg::StateSet *stateset = geom->getOrCreateStateSet();
+-            stateset->setTextureAttributeAndModes(0, texture, osg::StateAttribute::ON);
+-            stateset->setTextureAttribute(0, texenv);
++            // Apply the colours to the model; at the moment this is a
++            // kludge because we only use one kind and apply them all the
++            // same way. Also, the priority order is completely arbitrary
++
++            if (_colors.valid())
++            {
++                geom->setColorArray(_colors.get(), osg::Array::BIND_PER_VERTEX);
++            }
++            else if (_ambient.valid())
++            {
++                geom->setColorArray(_ambient.get(), osg::Array::BIND_PER_VERTEX);
++            }
++            else if (_diffuse.valid())
++            {
++                geom->setColorArray(_diffuse.get(), osg::Array::BIND_PER_VERTEX);
++            }
++            else if (_specular.valid())
++            {
++                geom->setColorArray(_specular.get(), osg::Array::BIND_PER_VERTEX);
++            }
++            else if (_texcoord.valid())
++            {
++                geom->setTexCoordArray(0, _texcoord.get());
++            }
++
++            // If the model has normals, add them to the geometry
++            if (_normals.valid())
++            {
++                geom->setNormalArray(_normals.get(), osg::Array::BIND_PER_VERTEX);
++            }
++            else
++            {   // If not, use the smoothing visitor to generate them
++                // (quads will be triangulated by the smoothing visitor)
++                osgUtil::SmoothingVisitor::smooth((*geom), osg::PI / 2);
++            }
++
++            // set flage true to activate the vertex buffer object of drawable
++            geom->setUseVertexBufferObjects(true);
++
++            std::string textureFile = textureFiles.size() > texIndex ? textureFiles[texIndex] : "";
++            osg::ref_ptr<osg::Image> image;
++            if (!textureFile.empty() && (image = osgDB::readRefImageFile(textureFile)) != NULL)
++            {
++                osg::Texture2D* texture = new osg::Texture2D;
++                texture->setImage(image.get());
++                texture->setResizeNonPowerOfTwoHint(false);
++
++                osg::TexEnv* texenv = new osg::TexEnv;
++                texenv->setMode(osg::TexEnv::REPLACE);
++
++                osg::StateSet* stateset = geom->getOrCreateStateSet();
++                stateset->setTextureAttributeAndModes(0, texture, osg::StateAttribute::ON);
++                stateset->setTextureAttribute(0, texenv);
++            }
++
++            geode->addDrawable(geom);
+         }
+ 
+-        osg::Geode* geode = new osg::Geode;
+-        geode->addDrawable(geom);
+-        return geode;
++        osg::MatrixTransform* matrixTransform = new osg::MatrixTransform;
++        matrixTransform->setMatrix(osg::Matrix::translate(vtCenter));
++        matrixTransform->addChild(geode);
++        return matrixTransform;
+     }
+ 
+     return NULL;
+
+diff --git a/src/osgPlugins/obj/obj.h b/src/osgPlugins/obj/obj.h
+index 9d79c53..a01ca0e 100644
+--- a/src/osgPlugins/obj/obj.h
++++ b/src/osgPlugins/obj/obj.h
+@@ -24,6 +24,7 @@
+ #include <osg/Vec2>
+ #include <osg/Vec3>
+ #include <osg/Vec4>
++#include <osg/Vec3d>
+ 
+ #include <osgDB/ReaderWriter>
+ 
+@@ -220,6 +221,7 @@ public:
+     std::string     databasePath;
+     MaterialMap     materialMap;
+ 
++    osg::Vec3d      origin;
+     Vec3Array       vertices;
+     Vec4Array       colors;
+     Vec3Array       normals;
+
+diff --git a/src/osgPlugins/obj/obj.cpp b/src/osgPlugins/obj/obj.cpp
+index 859add6..cb40043 100644
+--- a/src/osgPlugins/obj/obj.cpp
++++ b/src/osgPlugins/obj/obj.cpp
+@@ -445,7 +445,7 @@ bool Model::readMTL(std::istream& fin)
+                         float alpha=1.0f;
+                         unsigned int fieldsRead = sscanf(line+3,"%f", &alpha);
+ 
+-                        if (fieldsRead==1)
++                        if (fieldsRead==1 && alpha>0)
+                         {
+                             material->ambient[3] = alpha;
+                             material->diffuse[3] = alpha;
+@@ -573,9 +573,10 @@ bool Model::readOBJ(std::istream& fin, const osgDB::ReaderWriter::Options* optio
+ 
+     const int LINE_SIZE = 4096;
+     char line[LINE_SIZE];
+-    float x = 0.0f, y = 0.0f, z = 0.0f, w = 0.0f;
+-    float r,g,b,a;
++    double x = 0.0f, y = 0.0f, z = 0.0f, w = 0.0f;
++    double r,g,b,a;
+ 
++    int startIndex = -1;
+     while (fin)
+     {
+         readline(fin,line,LINE_SIZE);
+@@ -615,30 +616,53 @@ bool Model::readOBJ(std::istream& fin, const osgDB::ReaderWriter::Options* optio
+         {
+             if (strncmp(line,"v ",2)==0)
+             {
+-                unsigned int fieldsRead = sscanf(line+2,"%f %f %f %f %f %f %f", &x, &y, &z, &w, &g, &b, &a);
+-
+-                if (fieldsRead==1)
+-                    vertices.push_back(osg::Vec3(x,0.0f,0.0f));
+-                else if (fieldsRead==2)
+-                    vertices.push_back(osg::Vec3(x,y,0.0f));
+-                else if (fieldsRead==3)
+-                    vertices.push_back(osg::Vec3(x,y,z));
++                if (startIndex == -1)
++                    startIndex = vertices.size();
++
++                unsigned int fieldsRead = sscanf(line+2,"%lf %lf %lf %lf %lf %lf %lf", &x, &y, &z, &w, &g, &b, &a);
++
++                if (fieldsRead == 1)
++                {
++                    if (vertices.empty())
++                        origin = osg::Vec3d(x, 0.0f, 0.0f);
++                    vertices.push_back(osg::Vec3d(x, 0.0f, 0.0f) - origin);
++                }
++                else if (fieldsRead == 2)
++                {
++                    if (vertices.empty())
++                        origin = osg::Vec3d(x, y, 0.0f);
++                    vertices.push_back(osg::Vec3d(x, y, 0.0f) - origin);
++                }
++                else if (fieldsRead == 3)
++                {
++                    if (vertices.empty())
++                        origin = osg::Vec3d(x, y, z);
++                    vertices.push_back(osg::Vec3d(x, y, z) - origin);
++                }
+                 else if (fieldsRead == 4)
+-                    vertices.push_back(osg::Vec3(x/w,y/w,z/w));
++                {
++                    if (vertices.empty())
++                        origin = osg::Vec3d(x / w, y / w, z / w);
++                    vertices.push_back(osg::Vec3d(x / w, y / w, z / w) - origin);
++                }
+                 else if (fieldsRead == 6)
+                 {
+-                    vertices.push_back(osg::Vec3(x,y,z));
++                    if (vertices.empty())
++                        origin = osg::Vec3d(x, y, z);
++                    vertices.push_back(osg::Vec3d(x,y,z) - origin);
+                     colors.push_back(osg::Vec4(w, g, b, 1.0));
+                 }
+                 else if ( fieldsRead == 7 )
+                 {
+-                    vertices.push_back(osg::Vec3(x,y,z));
++                    if (vertices.empty())
++                        origin = osg::Vec3d(x, y, z);
++                    vertices.push_back(osg::Vec3d(x,y,z) - origin);
+                     colors.push_back(osg::Vec4(w, g, b, a));
+                 }
+             }
+             else if (strncmp(line,"vn ",3)==0)
+             {
+-                unsigned int fieldsRead = sscanf(line+3,"%f %f %f", &x, &y, &z);
++                unsigned int fieldsRead = sscanf(line+3,"%lf %lf %lf", &x, &y, &z);
+ 
+                 if (fieldsRead==1) normals.push_back(osg::Vec3(x,0.0f,0.0f));
+                 else if (fieldsRead==2) normals.push_back(osg::Vec3(x,y,0.0f));
+@@ -646,7 +670,7 @@ bool Model::readOBJ(std::istream& fin, const osgDB::ReaderWriter::Options* optio
+             }
+             else if (strncmp(line,"vt ",3)==0)
+             {
+-                unsigned int fieldsRead = sscanf(line+3,"%f %f %f", &x, &y, &z);
++                unsigned int fieldsRead = sscanf(line+3,"%lf %lf %lf", &x, &y, &z);
+ 
+                 if (fieldsRead==1) texcoords.push_back(osg::Vec2(x,0.0f));
+                 else if (fieldsRead==2) texcoords.push_back(osg::Vec2(x,y));
+@@ -657,6 +681,7 @@ bool Model::readOBJ(std::istream& fin, const osgDB::ReaderWriter::Options* optio
+                      strncmp(line,"f ",2)==0)
+             {
+                 char* ptr = line+2;
++                startIndex = -1;
+ 
+                 Element* element = new Element( (line[0]=='p') ? Element::POINTS :
+                                                 (line[0]=='l') ? Element::POLYLINE :
+@@ -728,6 +753,26 @@ bool Model::readOBJ(std::istream& fin, const osgDB::ReaderWriter::Options* optio
+                 std::string materialName( line+7 );
+                 if (currentElementState.materialName != materialName)
+                 {
++                    if (startIndex != -1 && !currentElementState.materialName.empty())
++                    {
++                        Element* element = new Element(Element::POINTS);
++                        element->vertexIndices.reserve(vertices.size() - startIndex);
++                        if(normals.size()==vertices.size())
++                            element->normalIndices.reserve(vertices.size() - startIndex);
++                        if (texcoords.size() == vertices.size())
++                            element->texCoordIndices.reserve(vertices.size() - startIndex);
++                        for (int i = startIndex; i < vertices.size(); ++i)
++                        {
++                            element->vertexIndices.push_back(i);
++                            if (normals.size() == vertices.size())
++                                element->normalIndices.push_back(i);
++                            if (texcoords.size() == vertices.size())
++                                element->texCoordIndices.push_back(i);
++                        }
++                        addElement(element);
++                        startIndex = -1;
++                    }
++
+                     currentElementState.materialName = materialName;
+                     currentElementList = 0; // reset the element list to force a recompute of which ElementList to use
+                 }
+@@ -815,8 +860,27 @@ bool Model::readOBJ(std::istream& fin, const osgDB::ReaderWriter::Options* optio
+             }
+ 
+         }
++    }
+ 
++    if (startIndex != -1)
++    {
++        Element* element = new Element(Element::POINTS);
++        element->vertexIndices.reserve(vertices.size() - startIndex);
++        if (normals.size() == vertices.size())
++            element->normalIndices.reserve(vertices.size() - startIndex);
++        if (texcoords.size() == vertices.size())
++            element->texCoordIndices.reserve(vertices.size() - startIndex);
++        for (int i = startIndex; i < vertices.size(); ++i)
++        {
++            element->vertexIndices.push_back(i);
++            if (normals.size() == vertices.size())
++                element->normalIndices.push_back(i);
++            if (texcoords.size() == vertices.size())
++                element->texCoordIndices.push_back(i);
++        }
++        addElement(element);
+     }
++
+ #if 0
+     OSG_NOTICE <<"vertices :"<<vertices.size()<<std::endl;
+     OSG_NOTICE <<"normals :"<<normals.size()<<std::endl;
+
+diff --git a/src/osgPlugins/obj/ReaderWriterOBJ.cpp b/src/osgPlugins/obj/ReaderWriterOBJ.cpp
+index c16bed0..77d49ec 100644
+--- a/src/osgPlugins/obj/ReaderWriterOBJ.cpp
++++ b/src/osgPlugins/obj/ReaderWriterOBJ.cpp
+@@ -253,6 +253,9 @@ static void load_material_texture(    obj::Model &model,
+ 
+         if ( image.valid() )
+         {
++            if( osgDB::equalCaseInsensitive(osgDB::getFileExtension(filename).c_str(), "bmp") )
++                image->flipVertical();
++
+             osg::Texture2D* texture = new osg::Texture2D( image.get() );
+             osg::Texture::WrapMode textureWrapMode;
+             if(map.clamp == true)
+@@ -776,7 +779,8 @@ osg::Node* ReaderWriterOBJ::convertModelToSceneGraph(obj::Model& model, ObjOptio
+ 
+     if (model.elementStateMap.empty()) return 0;
+ 
+-    osg::Group* group = new osg::Group;
++    osg::MatrixTransform* group = new osg::MatrixTransform(osg::Matrix::translate(localOptions.rotate ? osg::Vec3d(model.origin.x(), -model.origin.z(), model.origin.y()) : model.origin));
++    //osg::Group* group = new osg::Group();
+ 
+     // set up the materials
+     MaterialToStateSetMap materialToStateSetMap;
+
+diff --git a/src/osgPlugins/las/ReaderWriterLAS.cpp b/src/osgPlugins/las/ReaderWriterLAS.cpp
+index 547d546aa..1e1cb9667 100644
+--- a/src/osgPlugins/las/ReaderWriterLAS.cpp
++++ b/src/osgPlugins/las/ReaderWriterLAS.cpp
+@@ -28,7 +28,7 @@ class ReaderWriterLAS : public osgDB::ReaderWriter
+             supportsExtension("las", "LAS point cloud format");
+             supportsExtension("laz", "compressed LAS point cloud format");
+             supportsOption("v", "Verbose output");
+-            supportsOption("noScale", "don't scale vertices according to las haeder - put schale in matixTransform");
++            supportsOption("noScale", "don't scale vertices according to las header - put scale in matrixTransform");
+             supportsOption("noReCenter", "don't transform vertex coords to re-center the pointcloud");
+         }
+ 
+@@ -48,7 +48,7 @@ class ReaderWriterLAS : public osgDB::ReaderWriter
+             if (fileName.empty()) return ReadResult::FILE_NOT_FOUND;
+ 
+             OSG_INFO << "Reading file " << fileName << std::endl;
+-            std::ifstream ifs;
++            osgDB::ifstream ifs;
+             if (!liblas::Open(ifs, file))
+             {
+                 return ReadResult::ERROR_IN_READING_FILE;
+@@ -116,7 +116,7 @@ class ReaderWriterLAS : public osgDB::ReaderWriter
+             osg::Geometry* geometry = new osg::Geometry;
+ 
+             osg::Vec3Array* vertices = new osg::Vec3Array;
+-            osg::Vec4ubArray* colours = new osg::Vec4ubArray;
++            osg::Vec4Array* colours = new osg::Vec4Array;
+ 
+             vertices->reserve(targetNumVertices);
+             colours->reserve(targetNumVertices);
+@@ -131,16 +131,54 @@ class ReaderWriterLAS : public osgDB::ReaderWriter
+             uint32_t i = 0;
+             bool singleColor = true;
+             liblas::Color singleColorValue;
++            bool b32Color = false;
+             while (reader.ReadNextPoint())
+             {
+                 liblas::Point const& p = reader.GetPoint();
+ 
+                 // Extract color components from LAS point
+                 liblas::Color c = p.GetColor();
+-                uint32_t r = c.GetRed() >> 8;
+-                uint32_t g = c.GetGreen() >> 8;
+-                uint32_t b = c.GetBlue() >> 8;
+-                uint32_t a = 255;    // default value, since LAS point has no alpha information
++                uint32_t r = c.GetRed();
++                uint32_t g = c.GetGreen();
++                uint32_t b = c.GetBlue();
++                uint32_t a = 255;
++                if (!b32Color && (r > 255 || g > 255 || b > 255))
++                {
++                    b32Color = true;
++                    for (osg::Vec4Array::iterator itc = colours->begin(); itc != colours->end(); ++itc)
++                    {
++                        osg::Vec4& cl = *itc;
++                        cl.r() = (cl.r() * 255.0f) / 65535.0f;
++                        cl.g() = (cl.g() * 255.0f) / 65535.0f;
++                        cl.b() = (cl.b() * 255.0f) / 65535.0f;
++                    }
++
++                    for (unsigned int i = 0U; i < geode->getNumDrawables(); ++i)
++                    {
++                        osg::ref_ptr<osg::Geometry> spGeometry = dynamic_cast<osg::Geometry*>(geode->getDrawable(i));
++                        if (!spGeometry.valid())
++                            continue;
++
++                        osg::ref_ptr<osg::Vec4Array> spColors = dynamic_cast<osg::Vec4Array*>(spGeometry->getColorArray());
++                        if (!spColors.valid())
++                            continue;
++
++                        for (osg::Vec4Array::iterator itc = spColors->begin(); itc != spColors->end(); ++itc)
++                        {
++                            osg::Vec4& cl = *itc;
++                            cl.r() = (cl.r() * 255.0f) / 65535.0f;
++                            cl.g() = (cl.g() * 255.0f) / 65535.0f;
++                            cl.b() = (cl.b() * 255.0f) / 65535.0f;
++                        }
++                    }
++                }
++
++                if (b32Color)
++                {
++                    r = r >> 8;
++                    g = g >> 8;
++                    b = b >> 8;
++                }
+ 
+                 if (vertices->size() == 0)
+                 {
+@@ -178,7 +216,7 @@ class ReaderWriterLAS : public osgDB::ReaderWriter
+                     geometry = new osg::Geometry;
+ 
+                     vertices = new osg::Vec3Array;
+-                    colours = new osg::Vec4ubArray;
++                    colours = new osg::Vec4Array;
+ 
+                     vertices->reserve(targetNumVertices);
+                     colours->reserve(targetNumVertices);
+@@ -203,7 +241,7 @@ class ReaderWriterLAS : public osgDB::ReaderWriter
+                 }
+                 vertices->push_back(osg::Vec3(X, Y, Z));
+ 
+-                colours->push_back(osg::Vec4ub(r, g, b, a));
++                colours->push_back(osg::Vec4(r / 255.0f, g / 255.0f, b / 255.0f, a / 255.0f));
+ 
+                 // Warning: Printing zillion of points may take looong time
+                 //std::cout << i << ". " << p << '\n';
+@@ -214,6 +252,24 @@ class ReaderWriterLAS : public osgDB::ReaderWriter
+             double mid_y = 0.5*(my.second + my.first);
+             double mid_z = 0.5*(mz.second + mz.first);
+             osg::Vec3 midVec(mid_x, mid_y, mid_z);
++
++            geometry->setUseDisplayList(true);
++            geometry->setUseVertexBufferObjects(true);
++            geometry->setVertexArray(vertices);
++            if (singleColor)
++            {
++                colours->resize(1);
++                geometry->setColorArray(colours, osg::Array::BIND_OVERALL);
++            }
++            else
++            {
++                geometry->setColorArray(colours, osg::Array::BIND_PER_VERTEX);
++
++            }
++            geometry->addPrimitiveSet(new osg::DrawArrays(GL_POINTS, 0, vertices->size()));
++
++            geode->addDrawable(geometry);
++
+             if (_recenter)
+             {
+                 //Transform vertices to midpoint
+@@ -239,24 +295,6 @@ class ReaderWriterLAS : public osgDB::ReaderWriter
+                     << std::endl << std::endl;
+             }
+ 
+-            geometry->setUseDisplayList(true);
+-            geometry->setUseVertexBufferObjects(true);
+-            geometry->setVertexArray(vertices);
+-            if (singleColor)
+-            {
+-                colours->resize(1);
+-                geometry->setColorArray(colours, osg::Array::BIND_OVERALL);
+-            }
+-            else
+-            {
+-                geometry->setColorArray(colours, osg::Array::BIND_PER_VERTEX);
+-
+-            }
+-            geometry->addPrimitiveSet(new osg::DrawArrays(GL_POINTS, 0, vertices->size()));
+-
+-            geode->addDrawable(geometry);
+-
+-
+             // MatrixTransform with the mid-point translation
+ 
+             osg::MatrixTransform *mt = new osg::MatrixTransform;
+
+diff --git a/src/osgPlugins/ffmpeg/FFmpegDecoder.cpp b/src/osgPlugins/ffmpeg/FFmpegDecoder.cpp
+index 4de143d22..1315911c2 100644
+--- a/src/osgPlugins/ffmpeg/FFmpegDecoder.cpp
++++ b/src/osgPlugins/ffmpeg/FFmpegDecoder.cpp
+@@ -62,7 +62,7 @@ bool FFmpegDecoder::open(const std::string & filename, FFmpegParameters* paramet
+     {
+         // Open video file
+         AVFormatContext * p_format_context = 0;
+-        AVInputFormat *iformat = 0;
++        const AVInputFormat *iformat = 0;
+ 
+         if (filename.compare(0, 5, "/dev/")==0)
+         {
+@@ -267,6 +267,18 @@ inline void FFmpegDecoder::flushVideoQueue()
+     m_video_queue.flush(pc);
+ }
+ 
++#if LIBAVCODEC_VERSION_INT>=AV_VERSION_INT(58,137,100)
++int av_dup_packet(AVPacket* pkt)
++{
++    AVPacket tmp_pkt;
++    if (!pkt->buf && pkt->data) {
++        tmp_pkt = *pkt;
++        return av_packet_ref(pkt, &tmp_pkt);
++    }
++    return 0;
++}
++#endif
++
+ bool FFmpegDecoder::readNextPacketNormal()
+ {
+     AVPacket packet;
+diff --git a/src/osgPlugins/ffmpeg/FFmpegDecoderAudio.cpp b/src/osgPlugins/ffmpeg/FFmpegDecoderAudio.cpp
+index 636bddd25..82cb3a0b9 100644
+--- a/src/osgPlugins/ffmpeg/FFmpegDecoderAudio.cpp
++++ b/src/osgPlugins/ffmpeg/FFmpegDecoderAudio.cpp
+@@ -34,10 +34,16 @@ static int decode_audio(AVCodecContext *avctx, int16_t *samples,
+ {
+ #if LIBAVCODEC_VERSION_MAJOR >= 53 || (LIBAVCODEC_VERSION_MAJOR==52 && LIBAVCODEC_VERSION_MINOR>=32)
+ 
++#if LIBAVCODEC_VERSION_INT>=AV_VERSION_INT(58,137,100)
++    AVPacket* avpkt = av_packet_alloc();
++    avpkt->data = const_cast<uint8_t*>(buf);
++    avpkt->size = buf_size;
++#else
+     AVPacket avpkt;
+     av_init_packet(&avpkt);
+     avpkt.data = const_cast<uint8_t *>(buf);
+     avpkt.size = buf_size;
++#endif
+ 
+     AVFrame *frame = av_frame_alloc();
+     int ret, got_frame = 0;
+@@ -45,12 +51,25 @@ static int decode_audio(AVCodecContext *avctx, int16_t *samples,
+     if (!frame)
+         return AVERROR(ENOMEM);
+ 
++#if LIBAVCODEC_VERSION_INT>=AV_VERSION_INT(58,137,100)
++    ret = avcodec_send_packet(avctx, avpkt);
++    if (ret < 0)
++        throw std::runtime_error("avcodec_send_packet failed()");
++
++    ret = avcodec_receive_frame(avctx, frame);
++    got_frame = ret>=0;
++#else
+     ret = avcodec_decode_audio4(avctx, frame, &got_frame, &avpkt);
++#endif
+ 
+ #ifdef USE_AVRESAMPLE    // libav's AVFrame structure does not contain a 'channels' field
+     if (ret >= 0 && got_frame) {
++#else
++#if LIBAVUTIL_VERSION_INT>=AV_VERSION_INT(56,74,100)
++    if (ret >= 0 && got_frame && frame->channels > 0) {
+ #else
+     if (ret >= 0 && got_frame && av_frame_get_channels(frame)>0) {
++#endif
+ #endif
+         int ch, plane_size;
+         int planar = av_sample_fmt_is_planar(avctx->sample_fmt);
+@@ -107,6 +126,9 @@ static int decode_audio(AVCodecContext *avctx, int16_t *samples,
+         *frame_size_ptr = 0;
+     }
+     av_frame_free(&frame);
++#if LIBAVCODEC_VERSION_INT>=AV_VERSION_INT(58,137,100)
++    av_packet_unref(avpkt);
++#endif
+     return ret;
+ 
+ #else
+@@ -138,6 +160,13 @@ FFmpegDecoderAudio::FFmpegDecoderAudio(PacketQueue & packets, FFmpegClocks & clo
+ FFmpegDecoderAudio::~FFmpegDecoderAudio()
+ {
+     this->close(true);
++
++    if (m_context)
++    {
++#if LIBAVFORMAT_VERSION_INT>=AV_VERSION_INT(58,79,100)
++        avcodec_free_context(&m_context);
++#endif
++    }
+ }
+ 
+ 
+@@ -151,7 +180,13 @@ void FFmpegDecoderAudio::open(AVStream * const stream, FFmpegParameters* paramet
+             return;
+ 
+         m_stream = stream;
++#if LIBAVFORMAT_VERSION_INT>=AV_VERSION_INT(58,79,100)
++        m_context = avcodec_alloc_context3(NULL);
++        if (!m_context || avcodec_parameters_to_context(m_context, stream->codecpar) < 0)
++            return;
++#else
+         m_context = stream->codec;
++#endif
+ 
+         m_in_sample_rate = m_context->sample_rate;
+         m_in_nb_channels = m_context->channels;
+@@ -214,7 +249,7 @@ printf("### CONVERTING from sample format %s TO %s\n\t\tFROM %d TO %d channels\n
+             throw std::runtime_error("invalid audio codec");;
+ 
+         // Find the decoder for the audio stream
+-        AVCodec * const p_codec = avcodec_find_decoder(m_context->codec_id);
++        const AVCodec* p_codec = avcodec_find_decoder(m_context->codec_id);
+ 
+         if (p_codec == 0)
+             throw std::runtime_error("avcodec_find_decoder() failed");
+diff --git a/src/osgPlugins/ffmpeg/FFmpegDecoderVideo.cpp b/src/osgPlugins/ffmpeg/FFmpegDecoderVideo.cpp
+index 25df979a0..aeb6847f2 100644
+--- a/src/osgPlugins/ffmpeg/FFmpegDecoderVideo.cpp
++++ b/src/osgPlugins/ffmpeg/FFmpegDecoderVideo.cpp
+@@ -51,7 +51,11 @@ FFmpegDecoderVideo::~FFmpegDecoderVideo()
+ 
+     if (m_context)
+     {
++#if LIBAVFORMAT_VERSION_INT>=AV_VERSION_INT(58,79,100)
++        avcodec_free_context(&m_context);
++#else
+         avcodec_close(m_context);
++#endif
+     }
+ 
+     OSG_INFO<<"Destructed FFmpegDecoderVideo"<<std::endl;
+@@ -62,7 +66,13 @@ FFmpegDecoderVideo::~FFmpegDecoderVideo()
+ void FFmpegDecoderVideo::open(AVStream * const stream)
+ {
+     m_stream = stream;
++#if LIBAVFORMAT_VERSION_INT>=AV_VERSION_INT(58,79,100)
++    m_context = avcodec_alloc_context3(NULL);
++    if (!m_context || avcodec_parameters_to_context(m_context, stream->codecpar) < 0)
++        return;
++#else
+     m_context = stream->codec;
++#endif
+ 
+     // Trust the video size given at this point
+     // (avcodec_open seems to sometimes return a 0x0 size)
+@@ -99,11 +109,19 @@ void FFmpegDecoderVideo::open(AVStream * const stream)
+ 
+     // Allocate converted RGB frame
+     m_frame_rgba.reset(av_frame_alloc());
++#if LIBAVCODEC_VERSION_INT>=AV_VERSION_INT(58,137,100)
++    m_buffer_rgba[0].resize(av_image_get_buffer_size(AV_PIX_FMT_RGB24, width(), height(), 1));
++#else
+     m_buffer_rgba[0].resize(avpicture_get_size(AV_PIX_FMT_RGB24, width(), height()));
++#endif
+     m_buffer_rgba[1].resize(m_buffer_rgba[0].size());
+ 
+     // Assign appropriate parts of the buffer to image planes in m_frame_rgba
++#if LIBAVCODEC_VERSION_INT>=AV_VERSION_INT(58,137,100)
++    av_image_fill_arrays(m_frame_rgba->data, m_frame_rgba->linesize, &(m_buffer_rgba[0])[0], AV_PIX_FMT_RGB24, width(), height(),1);
++#else
+     avpicture_fill((AVPicture *) (m_frame_rgba).get(), &(m_buffer_rgba[0])[0], AV_PIX_FMT_RGB24, width(), height());
++#endif
+ 
+     // Override get_buffer()/release_buffer() from codec context in order to retrieve the PTS of each frame.
+     m_context->opaque = this;
+@@ -147,7 +165,22 @@ void FFmpegDecoderVideo::run()
+     }
+ }
+ 
++#if LIBAVCODEC_VERSION_INT>=AV_VERSION_INT(58,137,100)
++int avcodec_decode_video2(AVCodecContext* avctx, AVFrame* frame, int* got_frame, const AVPacket* pkt)
++{
++    *got_frame = 0;
++    int ret = avcodec_send_packet(avctx, pkt);
++    if (ret < 0)
++        return ret;
++
++    ret = avcodec_receive_frame(avctx, frame);
++    if (ret < 0)
++        return ret;
+ 
++    *got_frame = 1;
++    return pkt->size;
++}
++#endif
+ 
+ void FFmpegDecoderVideo::decodeLoop()
+ {
+@@ -170,7 +203,6 @@ void FFmpegDecoderVideo::decodeLoop()
+ 
+             // We want to use the entire packet since some codecs will require extra information for decoding
+             const int bytes_decoded = avcodec_decode_video2(m_context, m_frame.get(), &frame_finished, &(packet.packet));
+-
+             if (bytes_decoded < 0)
+                 throw std::runtime_error("avcodec_decode_video failed()");
+ 
+@@ -283,8 +315,13 @@ void FFmpegDecoderVideo::findAspectRatio()
+     m_pixel_aspect_ratio = ratio;
+ }
+ 
++#if LIBAVCODEC_VERSION_INT>=AV_VERSION_INT(58,137,100)
++int FFmpegDecoderVideo::convert(AVFrame* dst, int dst_pix_fmt, AVFrame* src,
++    int src_pix_fmt, int src_width, int src_height)
++#else
+ int FFmpegDecoderVideo::convert(AVPicture *dst, int dst_pix_fmt, AVPicture *src,
+             int src_pix_fmt, int src_width, int src_height)
++#endif
+ {
+     osg::Timer_t startTick = osg::Timer::instance()->tick();
+ #ifdef USE_SWSCALE
+@@ -334,11 +371,18 @@ void FFmpegDecoderVideo::publishFrame(const double delay, bool audio_disabled)
+         return;
+ #endif
+ 
++#if LIBAVCODEC_VERSION_INT>=AV_VERSION_INT(58,137,100)
++    AVFrame* const src = m_frame.get();
++    AVFrame* const dst = m_frame_rgba.get();
++
++    av_image_fill_arrays(m_frame_rgba->data, m_frame_rgba->linesize, &(m_buffer_rgba[m_writeBuffer])[0], AV_PIX_FMT_RGB24, width(), height(), 1);
++#else
+     AVPicture * const src = (AVPicture *) m_frame.get();
+     AVPicture * const dst = (AVPicture *) m_frame_rgba.get();
+ 
+     // Assign appropriate parts of the buffer to image planes in m_frame_rgba
+     avpicture_fill((AVPicture *) (m_frame_rgba).get(), &(m_buffer_rgba[m_writeBuffer])[0], AV_PIX_FMT_RGB24, width(), height());
++#endif
+ 
+     // Convert YUVA420p (i.e. YUV420p plus alpha channel) using our own routine
+ 
+@@ -369,8 +413,11 @@ void FFmpegDecoderVideo::publishFrame(const double delay, bool audio_disabled)
+ }
+ 
+ 
+-
++#if LIBAVCODEC_VERSION_INT>=AV_VERSION_INT(58,137,100)
++void FFmpegDecoderVideo::yuva420pToRgba(AVFrame* const dst, AVFrame* const src, int width, int height)
++#else
+ void FFmpegDecoderVideo::yuva420pToRgba(AVPicture * const dst, AVPicture * const src, int width, int height)
++#endif
+ {
+     convert(dst, AV_PIX_FMT_RGB24, src, m_context->pix_fmt, width, height);
+ 
+diff --git a/src/osgPlugins/ffmpeg/FFmpegDecoderVideo.hpp b/src/osgPlugins/ffmpeg/FFmpegDecoderVideo.hpp
+index 778c1a9b8..ca5375b52 100644
+--- a/src/osgPlugins/ffmpeg/FFmpegDecoderVideo.hpp
++++ b/src/osgPlugins/ffmpeg/FFmpegDecoderVideo.hpp
+@@ -88,10 +88,17 @@ private:
+     void findAspectRatio();
+     void publishFrame(double delay, bool audio_disabled);
+     double synchronizeVideo(double pts);
++#if LIBAVCODEC_VERSION_INT>=AV_VERSION_INT(58,137,100)
++    void yuva420pToRgba(AVFrame* dst, AVFrame* src, int width, int height);
++
++    int convert(AVFrame* dst, int dst_pix_fmt, AVFrame* src,
++        int src_pix_fmt, int src_width, int src_height);
++#else
+     void yuva420pToRgba(AVPicture *dst, AVPicture *src, int width, int height);
+ 
+     int convert(AVPicture *dst, int dst_pix_fmt, AVPicture *src,
+                 int src_pix_fmt, int src_width, int src_height);
++#endif
+ 
+ 
+     static int getBuffer(AVCodecContext * context, AVFrame * picture, int flags);
+@@ -101,7 +108,7 @@ private:
+     FFmpegClocks &          m_clocks;
+     AVStream *              m_stream;
+     AVCodecContext *        m_context;
+-    AVCodec *               m_codec;
++    const AVCodec *         m_codec;
+     const uint8_t *         m_packet_data;
+     int                     m_bytes_remaining;
+     int64_t                 m_packet_pts;
+diff --git a/src/osgPlugins/ffmpeg/FFmpegHeaders.hpp b/src/osgPlugins/ffmpeg/FFmpegHeaders.hpp
+index fd9bd2c92..42cb6f18d 100644
+--- a/src/osgPlugins/ffmpeg/FFmpegHeaders.hpp
++++ b/src/osgPlugins/ffmpeg/FFmpegHeaders.hpp
+@@ -59,6 +59,10 @@ extern "C"
+ #define AV_SAMPLE_FMT_NB   SAMPLE_FMT_NB
+ #endif
+ 
++#if LIBAVCODEC_VERSION_INT>=AV_VERSION_INT(58,137,100)
++#include <libavutil/imgutils.h>
++#endif
++
+ }
+ 
+ 
+diff --git a/src/osgPlugins/ffmpeg/FFmpegPacket.hpp b/src/osgPlugins/ffmpeg/FFmpegPacket.hpp
+index e06bd8bb6..5c3fd9815 100644
+--- a/src/osgPlugins/ffmpeg/FFmpegPacket.hpp
++++ b/src/osgPlugins/ffmpeg/FFmpegPacket.hpp
+@@ -42,7 +42,11 @@ namespace osgFFmpeg
+         void clear()
+         {
+             if (packet.data != 0)
++#if LIBAVCODEC_VERSION_INT>=AV_VERSION_INT(57,8,0)
++                av_packet_unref(&packet);
++#else
+                 av_free_packet(&packet);
++#endif
+ 
+             release();
+         }
+diff --git a/src/osgPlugins/ffmpeg/FFmpegParameters.hpp b/src/osgPlugins/ffmpeg/FFmpegParameters.hpp
+index ebfc17f6b..1b8dd287e 100644
+--- a/src/osgPlugins/ffmpeg/FFmpegParameters.hpp
++++ b/src/osgPlugins/ffmpeg/FFmpegParameters.hpp
+@@ -20,7 +20,7 @@ public:
+ 
+     bool isFormatAvailable() const { return m_format!=NULL; }
+     
+-    AVInputFormat* getFormat() { return m_format; }
++    const AVInputFormat* getFormat() { return m_format; }
+     AVDictionary** getOptions() { return &m_options; }
+     void setContext(AVIOContext* context) { m_context = context; }
+     AVIOContext* getContext() { return m_context; }
+@@ -29,7 +29,7 @@ public:
+ 
+ protected:
+ 
+-    AVInputFormat* m_format;
++    const AVInputFormat* m_format;
+     AVIOContext* m_context;
+     AVDictionary* m_options;
+ };
+diff --git a/src/osgPlugins/ffmpeg/ReaderWriterFFmpeg.cpp b/src/osgPlugins/ffmpeg/ReaderWriterFFmpeg.cpp
+index f468ee81f..797e38717 100644
+--- a/src/osgPlugins/ffmpeg/ReaderWriterFFmpeg.cpp
++++ b/src/osgPlugins/ffmpeg/ReaderWriterFFmpeg.cpp
+@@ -115,10 +115,14 @@ public:
+ 
+ #ifdef USE_AV_LOCK_MANAGER
+         // enable thread locking
++#if LIBAVCODEC_VERSION_INT<AV_VERSION_INT(58,9,100)
+         av_lockmgr_register(&lockMgr);
++#endif
+ #endif
+         // Register all FFmpeg formats/codecs
++#if LIBAVFORMAT_VERSION_INT<AV_VERSION_INT(58,9,100)
+         av_register_all();
++#endif
+ 
+         avformat_network_init();
+     }
+@@ -220,6 +224,7 @@ private:
+     }
+ 
+ #ifdef USE_AV_LOCK_MANAGER
++#if LIBAVCODEC_VERSION_INT<AV_VERSION_INT(58,9,100)
+     static int lockMgr(void **mutex, enum AVLockOp op)
+     {
+         // returns are 0 success
+@@ -250,6 +255,7 @@ private:
+         }
+     }
+ #endif
++#endif
+ 
+ };
+ 

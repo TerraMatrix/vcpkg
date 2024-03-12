@@ -1,0 +1,13 @@
+diff --git a/extern/CMP_Core/source/cmp_math_vec4.h b/extern/CMP_Core/source/cmp_math_vec4.h
+index 4467deb70..de73e7e31 100644
+--- a/extern/CMP_Core/source/cmp_math_vec4.h
++++ b/extern/CMP_Core/source/cmp_math_vec4.h
+@@ -322,7 +322,7 @@ public:
+ };
+ 
+ #include <stdio.h>
+-#include "xmmintrin.h"
++#include "sse2neon.h"
+ #include <math.h>
+ #include <float.h> 
+ 

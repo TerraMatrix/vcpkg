@@ -15,6 +15,7 @@ vcpkg_from_github(
         fix-gcc-13-build.patch  #upstream PR: https://github.com/PDAL/PDAL/pull/4039
         gdal-3.7.patch
         mingw.patch
+        fix-win7.patch
 )
 
 # Prefer pristine CMake find modules + wrappers and config files from vcpkg.

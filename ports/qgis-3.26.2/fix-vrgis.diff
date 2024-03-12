@@ -1,0 +1,2168 @@
+ CMakeLists.txt                                     |   4 +-
+ src/analysis/raster/qgsalignraster.cpp             |   4 +-
+ src/app/CMakeLists.txt                             | 256 +++++++++++++++++++++
+ src/app/devtools/qgsappdevtoolutils.h              |   3 +-
+ src/app/maptools/qgsappmaptools.h                  |   3 +-
+ src/app/options/qgsoptionsutils.h                  |   3 +-
+ src/app/qgisapp.cpp                                |  43 +++-
+ src/app/qgisapp.h                                  |  14 +-
+ src/app/qgsmaptooladdfeature.cpp                   |  10 +-
+ src/app/qgsmaptooladdfeature.h                     |   3 +
+ src/app/qgsmaptoolselectionhandler.h               |   5 +-
+ src/app/qgsrecentprojectsitemsmodel.h              |   3 +-
+ src/core/CMakeLists.txt                            |  16 ++
+ src/core/labeling/qgspallabeling.cpp               |  12 +-
+ src/core/labeling/qgsvectorlayerlabelprovider.cpp  |   7 +
+ src/core/layout/qgslayoutexporter.cpp              |   2 +-
+ src/core/pal/feature.h                             |   5 +
+ src/core/pal/layer.cpp                             |   8 +-
+ src/core/providers/ogr/qgsogrprovider.cpp          |  14 ++
+ src/core/qgsfeaturepickermodelbase.cpp             |   6 +-
+ src/core/qgsgml.cpp                                | 149 +++++++++---
+ src/core/qgsgml.h                                  |  12 +-
+ src/core/qgsogcutils.cpp                           |  98 +++++++-
+ src/gui/CMakeLists.txt                             | 247 +++++++++++++++++++-
+ src/gui/editorwidgets/qgssearchwidgettoolbutton.h  |   2 +-
+ .../models/qgsmodelgroupboxdefinitionwidget.h      |   2 +-
+ .../processing/models/qgsmodelinputreorderwidget.h |   2 +-
+ .../processing/qgsprocessingalgorithmdialogbase.h  |   4 +-
+ .../processing/qgsprocessingwidgetwrapperimpl.h    |   2 +-
+ src/providers/spatialite/qgsspatialiteprovider.cpp |  36 ++-
+ src/providers/wfs/qgswfsprovider.cpp               |  14 +-
+ src/python/CMakeLists.txt                          |  17 +-
+ src/python/qgspythonutilsimpl.cpp                  |   2 +-
+ src/server/CMakeLists.txt                          |   2 +-
+ src/server/qgsservercachemanager.h                 |  10 +
+ src/server/qgsserverinterfaceimpl.h                |   4 +
+ src/ui/qgsdualviewbase.ui                          |   4 +-
+ src/ui/qgsnewhttpconnectionbase.ui                 |   2 +-
+ src/ui/qgsoptionsbase.ui                           |   2 +-
+ 39 files changed, 936 insertions(+), 96 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 3bd1c49af9..6a27d902be 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -697,8 +697,8 @@ else()
+ endif()
+ 
+ if(MSVC)
+-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /utf-8 /std:c++17")
+-  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /utf-8 /std:c++17")
++  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /utf-8 /std:c++17 /bigobj")
++  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /utf-8 /std:c++17 /bigobj")
+   set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO}")
+   set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
+   # disable macros that offend std::numeric_limits<T>::min()/max()
+diff --git a/src/analysis/raster/qgsalignraster.cpp b/src/analysis/raster/qgsalignraster.cpp
+index 507fb83cbe..d45e04432f 100644
+--- a/src/analysis/raster/qgsalignraster.cpp
++++ b/src/analysis/raster/qgsalignraster.cpp
+@@ -428,7 +428,7 @@ bool QgsAlignRaster::createAndWarp( const Item &raster )
+   }
+ 
+   // Open the source file.
+-  const gdal::dataset_unique_ptr hSrcDS( GDALOpen( raster.inputFilename.toLocal8Bit().constData(), GA_ReadOnly ) );
++  const gdal::dataset_unique_ptr hSrcDS( GDALOpen( raster.inputFilename.toUtf8().constData(), GA_ReadOnly ) );
+   if ( !hSrcDS )
+   {
+     mErrorMessage = QObject::tr( "Unable to open input file: %1" ).arg( raster.inputFilename );
+@@ -441,7 +441,7 @@ bool QgsAlignRaster::createAndWarp( const Item &raster )
+   const GDALDataType eDT = GDALGetRasterDataType( GDALGetRasterBand( hSrcDS.get(), 1 ) );
+ 
+   // Create the output file.
+-  const gdal::dataset_unique_ptr hDstDS( GDALCreate( hDriver, raster.outputFilename.toLocal8Bit().constData(), mXSize, mYSize,
++  const gdal::dataset_unique_ptr hDstDS( GDALCreate( hDriver, raster.outputFilename.toUtf8().constData(), mXSize, mYSize,
+                                          bandCount, eDT, nullptr ) );
+   if ( !hDstDS )
+   {
+diff --git a/src/app/CMakeLists.txt b/src/app/CMakeLists.txt
+index 3bde17e4bd..eb2e7a1ce9 100644
+--- a/src/app/CMakeLists.txt
++++ b/src/app/CMakeLists.txt
+@@ -282,11 +282,173 @@ set(QGIS_APP_SRCS
+   vector/qgsvectorelevationpropertieswidget.cpp
+ )
+ 
++SET(QGIS_APP_HDRS
++  qgisapp.h
++  qgisappinterface.h
++  qgisappstylesheet.h
++  qgsabout.h
++  qgsanimationexportdialog.h
++  qgsannotationwidget.h
++  qgsappbrowserproviders.h
++  qgsattributetabledialog.h
++  qgsbookmarkeditordialog.h
++  qgsbookmarks.h
++  qgsclipboard.h
++  qgscrashhandler.h
++  qgscustomization.h
++  qgsdatumtransformtablewidget.h
++  qgsdelattrdialog.h
++  qgsdevtoolspanelwidget.h
++  qgsdiscoverrelationsdialog.h
++  qgsdisplayangle.h
++  qgsdockablewidgethelper.h
++  qgsfeatureaction.h
++  qgsfirstrundialog.h
++  qgsfixattributedialog.h
++  qgsformannotationdialog.h
++  qgshandlebadlayers.h
++  qgshtmlannotationdialog.h
++  qgsidentifyresultsdialog.h
++  qgslayercapabilitiesmodel.h
++  qgslayerstylingwidget.h
++  qgsmapcanvasdockwidget.h
++  qgsmapsavedialog.h
++  qgsmapthemes.h
++  qgsmaptooladdfeature.h
++  qgsmaptooladdpart.h
++  qgsmaptooladdring.h
++  qgsmaptoolannotation.h
++  qgsmaptooldeletepart.h
++  qgsmaptooldeletering.h
++  qgsmaptoolfeatureaction.h
++  qgsmaptoolfillring.h
++  qgsmaptoolformannotation.h
++  qgsmaptoolhtmlannotation.h
++  qgsmaptoolidentifyaction.h
++  qgsmaptoolmeasureangle.h
++  qgsmaptoolmeasurebearing.h
++  qgsmaptoolmovefeature.h
++  qgsmaptooloffsetcurve.h
++  qgsmaptooloffsetpointsymbol.h
++  qgsmaptoolpointsymbol.h
++  qgsmaptoolreshape.h
++  qgsmaptoolreverseline.h
++  qgsmaptoolrotatefeature.h
++  qgsmaptoolrotatepointsymbols.h
++  qgsmaptoolscalefeature.h
++  qgsmaptoolselect.h
++  qgsmaptoolselectionhandler.h
++  qgsmaptoolsimplify.h
++  qgsmaptoolsplitfeatures.h
++  qgsmaptoolsplitparts.h
++  qgsmaptoolsvgannotation.h
++  qgsmaptooltextannotation.h
++  qgsmaptooltrimextendfeature.h
++  qgsmeasuredialog.h
++  qgsmeasuretool.h
++  qgsmergeattributesdialog.h
++  qgspluginmetadata.h
++  qgspluginregistry.h
++  qgspointmarkeritem.h
++  qgspointrotationitem.h
++  qgsprojectlayergroupdialog.h
++  qgsprojectproperties.h
++  qgsrastercalcdialog.h
++  qgsrecentprojectsitemsmodel.h
++  qgsrelationadddlg.h
++  qgsrelationaddpolymorphicdialog.h
++  qgsrelationmanagerdialog.h
++  qgsselectbyformdialog.h
++  qgssettingsregistryapp.h
++  qgssnappinglayertreemodel.h
++  qgssnappingwidget.h
++  qgsstatisticalsummarydockwidget.h
++  qgsstatusbarcoordinateswidget.h
++  qgsstatusbarmagnifierwidget.h
++  qgsstatusbarscalewidget.h
++  qgssvgannotationdialog.h
++  qgstemporalcontrollerdockwidget.h
++  qgstextannotationdialog.h
++  qgsundowidget.h
++  qgsversionmigration.h
++  decorations/qgsdecorationcopyright.h
++  decorations/qgsdecorationcopyrightdialog.h
++  decorations/qgsdecorationgrid.h
++  decorations/qgsdecorationgriddialog.h
++  decorations/qgsdecorationimage.h
++  decorations/qgsdecorationimagedialog.h
++  decorations/qgsdecorationitem.h
++  decorations/qgsdecorationlayoutextent.h
++  decorations/qgsdecorationlayoutextentdialog.h
++  decorations/qgsdecorationnortharrow.h
++  decorations/qgsdecorationnortharrowdialog.h
++  decorations/qgsdecorationscalebar.h
++  decorations/qgsdecorationscalebardialog.h
++  decorations/qgsdecorationtitle.h
++  decorations/qgsdecorationtitledialog.h
++  devtools/qgsappdevtoolutils.h
++  gps/qgsgpsinformationwidget.h
++  labeling/qgslabelpropertydialog.h
++  labeling/qgsmaptoolchangelabelproperties.h
++  labeling/qgsmaptoollabel.h
++  labeling/qgsmaptoolmovelabel.h
++  labeling/qgsmaptoolpinlabels.h
++  labeling/qgsmaptoolrotatelabel.h
++  labeling/qgsmaptoolshowhidelabels.h
++  locator/qgsactionlocatorfilter.h
++  locator/qgsactivelayerfeatureslocatorfilter.h
++  locator/qgsalllayersfeatureslocatorfilter.h
++  locator/qgsbookmarklocatorfilter.h
++  locator/qgsexpressioncalculatorlocatorfilter.h
++  locator/qgsgotolocatorfilter.h
++  locator/qgslayertreelocatorfilter.h
++  locator/qgslayoutlocatorfilter.h
++  locator/qgsnominatimlocatorfilter.h
++  locator/qgssettingslocatorfilter.h
++  maptools/qgsappmaptools.h
++  maptools/qgsmaptoolsdigitizingtechniquemanager.h
++  maptools/qgsmaptoolshapecircle2points.h
++  maptools/qgsmaptoolshapecircle2tangentspoint.h
++  maptools/qgsmaptoolshapecircle3points.h
++  maptools/qgsmaptoolshapecircle3tangents.h
++  maptools/qgsmaptoolshapecircleabstract.h
++  maptools/qgsmaptoolshapecirclecenterpoint.h
++  maptools/qgsmaptoolshapecircularstringabstract.h
++  maptools/qgsmaptoolshapecircularstringradius.h
++  maptools/qgsmaptoolshapeellipseabstract.h
++  maptools/qgsmaptoolshapeellipsecenter2points.h
++  maptools/qgsmaptoolshapeellipsecenterpoint.h
++  maptools/qgsmaptoolshapeellipseextent.h
++  maptools/qgsmaptoolshapeellipsefoci.h
++  maptools/qgsmaptoolshaperectangle3points.h
++  maptools/qgsmaptoolshaperectangleabstract.h
++  maptools/qgsmaptoolshaperectanglecenter.h
++  maptools/qgsmaptoolshaperectangleextent.h
++  maptools/qgsmaptoolshaperegularpolygon2points.h
++  maptools/qgsmaptoolshaperegularpolygonabstract.h
++  maptools/qgsmaptoolshaperegularpolygoncentercorner.h
++  maptools/qgsmaptoolshaperegularpolygoncenterpoint.h
++  mesh/qgsmaptooleditmeshframe.h
++  mesh/qgsmeshcalculatordialog.h
++  mesh/qgsmeshselectbyexpressiondialog.h
++  mesh/qgsmeshtransformcoordinatesdockwidget.h
++  mesh/qgsnewmeshlayerdialog.h
++  options/qgsoptions.h
++  options/qgsoptionsutils.h
++  vertextool/qgsvertexeditor.h
++  vertextool/qgsvertextool.h
++)
++
+ if (WITH_SPATIALITE)
+   set(QGIS_APP_SRCS
+     ${QGIS_APP_SRCS}
+     qgsnewspatialitelayerdialog.cpp
+   )
++
++  set(QGIS_APP_HDRS
++    ${QGIS_APP_HDRS}
++    qgsnewspatialitelayerdialog.h
++  )
+ endif()
+ 
+ if (HAVE_GEOREFERENCER)
+@@ -311,6 +473,15 @@ if (HAVE_GEOREFERENCER)
+     georeferencer/qgsgcplistwidget.cpp
+     georeferencer/qgsrasterchangecoords.cpp
+   )
++
++  set(QGIS_APP_HDRS
++    ${QGIS_APP_HDRS}
++    georeferencer/qgsgcplist.h
++    georeferencer/qgsgcplistmodel.h
++    georeferencer/qgsgeorefdatapoint.h
++    georeferencer/qgsgeoreftransform.h
++    georeferencer/qgsrasterchangecoords.h
++  )
+ endif()
+ 
+ if (WITH_3D)
+@@ -354,6 +525,11 @@ if (WITH_3D)
+     3d/qgs3dmapcanvaswidget.cpp
+     3d/qgs3dviewsmanagerdialog.cpp
+   )
++
++  set(QGIS_APP_HDRS
++    ${QGIS_APP_HDRS}
++    3d/qgs3dmapcanvaswidget.h
++  )
+ endif()
+ 
+ 
+@@ -406,6 +582,58 @@ if (POSTGRES_FOUND)
+   endif()
+ endif()
+ 
++set(QGIS_APP_UI_HDRS
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgisapp.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsabout.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsanimationexportdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsannotationwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsattributetabledialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsbookmarkeditordialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsbookmarksbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgscustomizationdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdatumtransformtablewidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdelattrdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdevtoolswidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdiscoverrelationsdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdisplayanglebase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsfirstrundialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsformannotationdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgshandlebadlayersbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsformannotationdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsidentifyresultsbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmapstylingwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmapcanvasdockwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmapsavedialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsoffsetuserinputwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgssimplifytolerancedialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmeasurebase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmergeattributesdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsnewspatialitelayerdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsprojectlayergroupdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsprojectpropertiesbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrastercalcdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrelationmanageradddialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrelationmanageraddpolymorphicdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrelationmanagerdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsstatisticalsummarybase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsformannotationdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgstextannotationdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdecorationcopyrightdialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdecorationgriddialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdecorationimagedialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdecorationlayoutextentdialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdecorationnortharrowdialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdecorationscalebardialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdecorationtitledialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsgpsinformationwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslabelpropertydialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmeshcalculatordialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmeshselectbyexpressiondialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmeshtransformcoordinatesdockwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsnewmeshlayerdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsoptionsbase.h
++)
++
+ # Test data dir for QgsAppScreenShots
+ add_definitions(-DTEST_DATA_DIR="${TEST_DATA_DIR}")
+ 
+@@ -504,6 +732,7 @@ target_include_directories(qgis_app PUBLIC
+ 
+   ${CMAKE_SOURCE_DIR}/src/app
+   ${CMAKE_SOURCE_DIR}/src/app/decorations
++  ${CMAKE_SOURCE_DIR}/src/app/devtools
+   ${CMAKE_SOURCE_DIR}/src/app/devtools/networklogger
+   ${CMAKE_SOURCE_DIR}/src/app/labeling
+   ${CMAKE_SOURCE_DIR}/src/app/layout
+@@ -513,6 +742,7 @@ target_include_directories(qgis_app PUBLIC
+   ${CMAKE_SOURCE_DIR}/src/app/maptools
+   ${CMAKE_SOURCE_DIR}/src/app/mesh
+   ${CMAKE_SOURCE_DIR}/src/app/locator
++  ${CMAKE_SOURCE_DIR}/src/app/options
+   ${CMAKE_SOURCE_DIR}/src/app/pointcloud
+   ${CMAKE_SOURCE_DIR}/src/app/vectortile
+   ${CMAKE_SOURCE_DIR}/src/plugins
+@@ -582,6 +812,32 @@ GENERATE_EXPORT_HEADER(
+    EXPORT_FILE_NAME qgis_app.h
+ )
+ 
++set(QGIS_APP_HDRS ${QGIS_APP_HDRS} ${CMAKE_CURRENT_BINARY_DIR}/qgis_app.h)
++
++if(NOT APPLE OR NOT QGIS_MACAPP_FRAMEWORK)
++  INSTALL(FILES ${QGIS_APP_HDRS} ${QGIS_APP_UI_HDRS} DESTINATION ${QGIS_INCLUDE_DIR})
++else()
++
++  set_target_properties(qgis_app PROPERTIES
++    CLEAN_DIRECT_OUTPUT 1
++    FRAMEWORK 1
++    FRAMEWORK_VERSION "${CPACK_PACKAGE_VERSION_MAJOR}.${CPACK_PACKAGE_VERSION_MINOR}"
++    MACOSX_FRAMEWORK_INFO_PLIST "${CMAKE_SOURCE_DIR}/mac/framework.info.plist.in"
++    MACOSX_FRAMEWORK_SHORT_VERSION_STRING ${COMPLETE_VERSION}
++    MACOSX_FRAMEWORK_IDENTIFIER org.qgis.qgis3_app
++    BUILD_WITH_INSTALL_RPATH TRUE
++    PUBLIC_HEADER "${QGIS_APP_HDRS}"
++    LINK_FLAGS "${CMAKE_SHARED_LINKER_FLAGS}"
++  )
++  # generated export header does not get copied with PUBLIC_HEADER files
++  add_custom_command(TARGET qgis_app
++    POST_BUILD
++    COMMAND ${CMAKE_COMMAND} -E copy qgis_app.h
++            "${QGIS_OUTPUT_DIRECTORY}/${QGIS_LIB_SUBDIR}/qgis_app.framework/Headers"
++    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
++    DEPENDS qgis_app.h
++  )
++endif()
+ 
+ if (NOT ANDROID)
+   set_target_properties(qgis_app PROPERTIES
+diff --git a/src/app/devtools/qgsappdevtoolutils.h b/src/app/devtools/qgsappdevtoolutils.h
+index d4027b4c0f..d6d289aea3 100644
+--- a/src/app/devtools/qgsappdevtoolutils.h
++++ b/src/app/devtools/qgsappdevtoolutils.h
+@@ -18,6 +18,7 @@
+ 
+ class QgsDevToolWidgetFactory;
+ #include <memory>
++#include "qgis_app.h"
+ 
+ /**
+  * \ingroup app
+@@ -27,7 +28,7 @@ class QgsDevToolWidgetFactory;
+  *
+  * \since QGIS 3.14
+  */
+-class QgsScopedDevToolWidgetFactory
++class APP_EXPORT QgsScopedDevToolWidgetFactory
+ {
+   public:
+     QgsScopedDevToolWidgetFactory();
+diff --git a/src/app/maptools/qgsappmaptools.h b/src/app/maptools/qgsappmaptools.h
+index f8df1b297d..6f627e011a 100644
+--- a/src/app/maptools/qgsappmaptools.h
++++ b/src/app/maptools/qgsappmaptools.h
+@@ -20,6 +20,7 @@
+ #include <QHash>
+ #include <QPointer>
+ 
++#include "qgis_app.h"
+ 
+ class QgsMapTool;
+ class QgsMapToolCapture;
+@@ -27,7 +28,7 @@ class QgsMapToolCapture;
+ class QgsMapCanvas;
+ class QgsAdvancedDigitizingDockWidget;
+ 
+-class QgsAppMapTools
++class APP_EXPORT QgsAppMapTools
+ {
+   public:
+     enum Tool
+diff --git a/src/app/options/qgsoptionsutils.h b/src/app/options/qgsoptionsutils.h
+index 3f213584c2..355f44cee0 100644
+--- a/src/app/options/qgsoptionsutils.h
++++ b/src/app/options/qgsoptionsutils.h
+@@ -17,6 +17,7 @@
+ 
+ class QgsOptionsWidgetFactory;
+ #include <memory>
++#include "qgis_app.h"
+ 
+ /**
+  * \ingroup app
+@@ -26,7 +27,7 @@ class QgsOptionsWidgetFactory;
+  *
+  * \since QGIS 3.16
+  */
+-class QgsScopedOptionsWidgetFactory
++class APP_EXPORT QgsScopedOptionsWidgetFactory
+ {
+   public:
+     QgsScopedOptionsWidgetFactory();
+diff --git a/src/app/qgisapp.cpp b/src/app/qgisapp.cpp
+index e833c144bf..47488a3fae 100644
+--- a/src/app/qgisapp.cpp
++++ b/src/app/qgisapp.cpp
+@@ -606,6 +606,7 @@ static void setTitleBarText_( QWidget &qgisApp )
+       caption += QStringLiteral( " [%1]" ).arg( profile->name() );
+   }
+ 
++  caption = QgisApp::instance()->titleWillChange(caption);
+   qgisApp.setWindowTitle( caption );
+ }
+ 
+@@ -975,6 +976,27 @@ QgisApp::QgisApp( QSplashScreen *splash, bool restorePlugins, bool skipBadLayers
+   }
+ 
+   sInstance = this;
++  initUI(splash, restorePlugins, skipBadLayers, skipVersionCheck, rootProfileLocation, activeProfile);
++}
++
++QgisApp::QgisApp(QWidget *parent, Qt::WindowFlags fl )
++    : QMainWindow( parent, fl )
++{
++    if ( sInstance )
++    {
++      QMessageBox::critical(
++        this,
++        tr( "Multiple Instances of QgisApp" ),
++        tr( "Multiple instances of QGIS application object detected.\nPlease contact the developers.\n" ) );
++      abort();
++    }
++
++    sInstance = this;
++}
++
++void QgisApp::initUI(QSplashScreen *splash, bool restorePlugins, bool skipBadLayers, bool skipVersionCheck, const QString& rootProfileLocation, const QString& activeProfile)
++{
++  mSplash = splash;
+   QgsRuntimeProfiler *profiler = QgsApplication::profiler();
+ 
+   QColor splashTextColor = Qgis::releaseName() == QLatin1String( "Master" ) ? QColor( 93, 153, 51 ) : Qt::black;
+@@ -995,6 +1017,7 @@ QgisApp::QgisApp( QSplashScreen *splash, bool restorePlugins, bool skipBadLayers
+   // load GUI: actions, menus, toolbars
+   startProfile( tr( "Setting up UI" ) );
+   setupUi( this );
++  setupCustomUi();
+   endProfile();
+ 
+   setDockOptions( dockOptions() | QMainWindow::GroupedDragging );
+@@ -1721,7 +1744,7 @@ QgisApp::QgisApp( QSplashScreen *splash, bool restorePlugins, bool skipBadLayers
+   mFullScreenMode = false;
+   mPrevScreenModeMaximized = false;
+   startProfile( tr( "Show main window" ) );
+-  show();
++  //show();
+   qApp->processEvents();
+   endProfile();
+ 
+@@ -3259,9 +3282,9 @@ void QgisApp::createMenus()
+   // Layer menu
+ 
+   // Panel and Toolbar Submenus
+-  mPanelMenu = new QMenu( tr( "Panels" ), this );
++  if (!mPanelMenu) mPanelMenu = new QMenu( tr( "Panels" ), this );
+   mPanelMenu->setObjectName( QStringLiteral( "mPanelMenu" ) );
+-  mToolbarMenu = new QMenu( tr( "Toolbars" ), this );
++  if (!mToolbarMenu) mToolbarMenu = new QMenu( tr( "Toolbars" ), this );
+   mToolbarMenu->setObjectName( QStringLiteral( "mToolbarMenu" ) );
+ 
+   // Get platform for menu layout customization (Gnome, Kde, Mac, Win)
+@@ -3310,7 +3333,7 @@ void QgisApp::createMenus()
+ 
+   // Window Menu
+ 
+-  mWindowMenu = new QMenu( tr( "Window" ), this );
++  if (!mWindowMenu) mWindowMenu = new QMenu( tr( "Window" ), this );
+ 
+   mWindowMenu->addAction( mActionWindowMinimize );
+   mWindowMenu->addAction( mActionWindowZoom );
+@@ -3325,11 +3348,11 @@ void QgisApp::createMenus()
+ 
+   // Database Menu
+   // don't add it yet, wait for a plugin
+-  mDatabaseMenu = new QMenu( tr( "&Database" ), menuBar() );
++  if (!mDatabaseMenu) mDatabaseMenu = new QMenu( tr( "&Database" ), menuBar() );
+   mDatabaseMenu->setObjectName( QStringLiteral( "mDatabaseMenu" ) );
+   // Web Menu
+   // don't add it yet, wait for a plugin
+-  mWebMenu = new QMenu( tr( "&Web" ), menuBar() );
++  if (!mWebMenu) mWebMenu = new QMenu( tr( "&Web" ), menuBar() );
+   mWebMenu->setObjectName( QStringLiteral( "mWebMenu" ) );
+ 
+   createProfileMenu();
+@@ -3387,7 +3410,7 @@ void QgisApp::refreshProfileMenu()
+ 
+ void QgisApp::createProfileMenu()
+ {
+-  mConfigMenu = new QMenu( this );
++  if (!mConfigMenu) mConfigMenu = new QMenu( this );
+   mConfigMenu->setObjectName( "mUserProfileMenu" );
+ 
+   settingsMenu()->insertMenu( settingsMenu()->actions().first(), mConfigMenu );
+@@ -3610,7 +3633,7 @@ void QgisApp::createToolBars()
+ 
+   // vector layer edits tool buttons
+   QToolButton *tbAllEdits = qobject_cast<QToolButton *>( mDigitizeToolBar->widgetForAction( mActionAllEdits ) );
+-  tbAllEdits->setPopupMode( QToolButton::InstantPopup );
++  if(tbAllEdits) tbAllEdits->setPopupMode( QToolButton::InstantPopup );
+ 
+   // new layer tool button
+ 
+@@ -14669,12 +14692,12 @@ QMenu *QgisApp::getMeshMenu( const QString &menuName )
+ 
+ void QgisApp::insertAddLayerAction( QAction *action )
+ {
+-  mAddLayerMenu->insertAction( mActionAddLayerSeparator, action );
++  if(mAddLayerMenu) mAddLayerMenu->insertAction( mActionAddLayerSeparator, action );
+ }
+ 
+ void QgisApp::removeAddLayerAction( QAction *action )
+ {
+-  mAddLayerMenu->removeAction( action );
++  if(mAddLayerMenu) mAddLayerMenu->removeAction( action );
+ }
+ 
+ void QgisApp::addPluginToDatabaseMenu( const QString &name, QAction *action )
+diff --git a/src/app/qgisapp.h b/src/app/qgisapp.h
+index c03ae8cfd8..677d5ba2c7 100644
+--- a/src/app/qgisapp.h
++++ b/src/app/qgisapp.h
+@@ -201,7 +201,7 @@ class QgsGeoreferencerMainWindow;
+  * \class QgisApp
+  * \brief Main window for the QGIS application
+  */
+-class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
++class APP_EXPORT QgisApp : public QMainWindow, public Ui::MainWindow
+ {
+     Q_OBJECT
+   public:
+@@ -218,6 +218,12 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
+     QgisApp( QgisApp const & ) = delete;
+     QgisApp &operator=( QgisApp const & ) = delete;
+ 
++     QgisApp(QWidget *parent, Qt::WindowFlags fl = Qt::Window );
++     void initUI(QSplashScreen *splash, bool restorePlugins = true, bool skipBadLayers = false,
++              bool skipVersionCheck = false, const QString &rootProfileLocation = QString(),
++              const QString &activeProfile = QString());
++     virtual void setupCustomUi() {}
++     virtual QString titleWillChange(const QString& title) { return title; }
+ 
+     /**
+      * Returns and adjusted uri for the layer based on current and available CRS as well as the last selected image format
+@@ -315,7 +321,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
+     void addUserInputWidget( QWidget *widget );
+ 
+     //! Sets theme (icons)
+-    void setTheme( const QString &themeName = "default" );
++    virtual void setTheme( const QString &themeName = "default" );
+ 
+     void setIconSizes( int size );
+ 
+@@ -1334,7 +1340,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
+     virtual void keyReleaseEvent( QKeyEvent *event );
+ #endif
+ 
+-  private slots:
++  public slots:
+     void newProfile();
+ 
+     void onTaskCompleteShowNotify( long taskId, int status );
+@@ -2110,7 +2116,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
+      */
+     void activeLayerChanged( QgsMapLayer *layer );
+ 
+-  private:
++  public:
+ 
+     void createPreviewImage( const QString &path, const QIcon &overlayIcon = QIcon() );
+     void startProfile( const QString &name );
+diff --git a/src/app/qgsmaptooladdfeature.cpp b/src/app/qgsmaptooladdfeature.cpp
+index 94de0eb690..93fbb43ae3 100644
+--- a/src/app/qgsmaptooladdfeature.cpp
++++ b/src/app/qgsmaptooladdfeature.cpp
+@@ -56,11 +56,17 @@ QgsMapToolAddFeature::QgsMapToolAddFeature( QgsMapCanvas *canvas, CaptureMode mo
+ bool QgsMapToolAddFeature::addFeature( QgsVectorLayer *vlayer, const QgsFeature &f, bool showModal )
+ {
+   QgsFeature feat( f );
++  QgsAttributeMap defaultAttributes;
++  emit beforeAddFeature(vlayer, &feat, &defaultAttributes);
++
+   QgsExpressionContextScope *scope = QgsExpressionContextUtils::mapToolCaptureScope( snappingMatches() );
+   QgsFeatureAction *action = new QgsFeatureAction( tr( "add feature" ), feat, vlayer, QString(), -1, this );
+   if ( QgsRubberBand *rb = takeRubberBand() )
+-    connect( action, &QgsFeatureAction::addFeatureFinished, rb, &QgsRubberBand::deleteLater );
+-  const bool res = action->addFeature( QgsAttributeMap(), showModal, scope );
++    connect( action, &QgsFeatureAction::addFeatureFinished, this, [this, rb, feat] {
++    rb->deleteLater();
++    emit digitizingCompleted(feat);
++  });// rb, &QgsRubberBand::deleteLater );
++  const bool res = action->addFeature( defaultAttributes, showModal, scope );
+   if ( showModal )
+     delete action;
+   return res;
+diff --git a/src/app/qgsmaptooladdfeature.h b/src/app/qgsmaptooladdfeature.h
+index 084003ebaf..d050db4d45 100644
+--- a/src/app/qgsmaptooladdfeature.h
++++ b/src/app/qgsmaptooladdfeature.h
+@@ -31,6 +31,9 @@ class APP_EXPORT QgsMapToolAddFeature : public QgsMapToolDigitizeFeature
+      */
+     QgsMapToolAddFeature( QgsMapCanvas *canvas, CaptureMode mode );
+ 
++signals:
++  void beforeAddFeature(QgsVectorLayer *vlayer, QgsFeature* f, QgsAttributeMap* featureAttributes);
++
+   private slots:
+ 
+     void featureDigitized( const QgsFeature &feature ) override;
+diff --git a/src/app/qgsmaptoolselectionhandler.h b/src/app/qgsmaptoolselectionhandler.h
+index bf11485d32..4bf0863290 100644
+--- a/src/app/qgsmaptoolselectionhandler.h
++++ b/src/app/qgsmaptoolselectionhandler.h
+@@ -20,6 +20,7 @@
+ #include <QWidget>
+ 
+ #include "qgsgeometry.h"
++#include "qgis_app.h"
+ 
+ class QHBoxLayout;
+ class QKeyEvent;
+@@ -40,7 +41,7 @@ class QgsIdentifyMenu;
+  *
+  * \since QGIS 3.2
+  */
+-class QgsDistanceWidget : public QWidget
++class APP_EXPORT QgsDistanceWidget : public QWidget
+ {
+     Q_OBJECT
+ 
+@@ -78,7 +79,7 @@ class QgsDistanceWidget : public QWidget
+  * \brief Utility class for handling various methods to create geometry for selection in layers.
+  * \since QGIS 3.2
+  */
+-class QgsMapToolSelectionHandler : public QObject
++class APP_EXPORT QgsMapToolSelectionHandler : public QObject
+ {
+     Q_OBJECT
+ 
+diff --git a/src/app/qgsrecentprojectsitemsmodel.h b/src/app/qgsrecentprojectsitemsmodel.h
+index 65cfdad8ea..8d8eae10ed 100644
+--- a/src/app/qgsrecentprojectsitemsmodel.h
++++ b/src/app/qgsrecentprojectsitemsmodel.h
+@@ -19,10 +19,11 @@
+ #include <QAbstractListModel>
+ #include <QStringList>
+ #include <QStyledItemDelegate>
++#include "qgis_app.h"
+ 
+ class QgsMapCanvas;
+ 
+-class QgsRecentProjectItemsModel : public QAbstractListModel
++class APP_EXPORT QgsRecentProjectItemsModel : public QAbstractListModel
+ {
+     Q_OBJECT
+ 
+diff --git a/src/core/CMakeLists.txt b/src/core/CMakeLists.txt
+index bc914de0d1..ae70af587a 100644
+--- a/src/core/CMakeLists.txt
++++ b/src/core/CMakeLists.txt
+@@ -1169,6 +1169,7 @@ set(QGIS_CORE_HDRS
+   qgssourcecache.h
+   qgsspatialiteutils.h
+   qgssqlexpressioncompiler.h
++  qgssqliteexpressioncompiler.h
+   qgssqliteutils.h
+   qgssqlstatement.h
+   qgsstatisticalsummary.h
+@@ -1282,6 +1283,8 @@ set(QGIS_CORE_HDRS
+   diagram/qgstextdiagram.h
+ 
+   dxf/qgsdxfexport.h
++  dxf/qgsdxfpaintdevice.h
++  dxf/qgsdxfpaintengine.h
+ 
+   editform/qgseditformconfig.h
+   editform/qgsattributeeditoraction.h
+@@ -1303,6 +1306,8 @@ set(QGIS_CORE_HDRS
+ 
+   externalstorage/qgsexternalstorage.h
+   externalstorage/qgsexternalstorageregistry.h
++  externalstorage/qgssimplecopyexternalstorage_p.h
++  externalstorage/qgswebdavexternalstorage_p.h
+ 
+   effects/qgsblureffect.h
+   effects/qgscoloreffect.h
+@@ -1580,6 +1585,7 @@ set(QGIS_CORE_HDRS
+   proj/qgsprojutils.h
+   proj/qgsprojectionfactors.h
+ 
++
+   metadata/qgsabstractmetadatabase.h
+   metadata/qgslayermetadata.h
+   metadata/qgslayermetadataformatter.h
+@@ -1640,6 +1646,15 @@ set(QGIS_CORE_HDRS
+   processing/qgsprocessingprovider.h
+   processing/qgsprocessingregistry.h
+   processing/qgsprocessingutils.h
++  processing/models/qgsprocessingmodelalgorithm.h
++  processing/models/qgsprocessingmodelchildalgorithm.h
++  processing/models/qgsprocessingmodelchilddependency.h
++  processing/models/qgsprocessingmodelchildparametersource.h
++  processing/models/qgsprocessingmodelcomment.h
++  processing/models/qgsprocessingmodelcomponent.h
++  processing/models/qgsprocessingmodelgroupbox.h
++  processing/models/qgsprocessingmodeloutput.h
++  processing/models/qgsprocessingmodelparameter.h
+ 
+   project/qgsproject.h
+   project/qgsprojectbadlayerhandler.h
+@@ -1777,6 +1792,7 @@ set(QGIS_CORE_HDRS
+   symbology/qgsmapinfosymbolconverter.h
+   symbology/qgsmarkersymbol.h
+   symbology/qgsmarkersymbollayer.h
++  symbology/qgsmasksymbollayer.h
+   symbology/qgsmergedfeaturerenderer.h
+   symbology/qgsnullsymbolrenderer.h
+   symbology/qgspointclusterrenderer.h
+diff --git a/src/core/labeling/qgspallabeling.cpp b/src/core/labeling/qgspallabeling.cpp
+index 14bf2018e3..ec65c33510 100644
+--- a/src/core/labeling/qgspallabeling.cpp
++++ b/src/core/labeling/qgspallabeling.cpp
+@@ -2122,8 +2122,18 @@ std::unique_ptr<QgsLabelFeature> QgsPalLayerSettings::registerFeatureWithDetails
+   if ( !centroidPoly || !wholeCentroid )
+   {
+     doClip = true;
+-  }
++    {
++      double repeatDist = repeatDistance;
++      if (mDataDefinedProperties.isActive(QgsPalLayerSettings::RepeatDistance))
++      {
++        context.expressionContext().setOriginalValueVariable(repeatDist);
++        repeatDist = mDataDefinedProperties.valueAsDouble(QgsPalLayerSettings::RepeatDistance, context.expressionContext(), repeatDist);
++      }
+ 
++      if (repeatDist > 0.0)
++        doClip = false;
++    }
++  }
+ 
+   QgsLabeling::PolygonPlacementFlags polygonPlacement = mPolygonPlacementFlags;
+   if ( mDataDefinedProperties.isActive( QgsPalLayerSettings::PolygonLabelOutside ) )
+diff --git a/src/core/labeling/qgsvectorlayerlabelprovider.cpp b/src/core/labeling/qgsvectorlayerlabelprovider.cpp
+index 1f2d3a7856..ee3c30cf3c 100644
+--- a/src/core/labeling/qgsvectorlayerlabelprovider.cpp
++++ b/src/core/labeling/qgsvectorlayerlabelprovider.cpp
+@@ -584,6 +584,13 @@ void QgsVectorLayerLabelProvider::drawLabelPrivate( pal::LabelPosition *label, Q
+     // TODO: optimize access :)
+     QgsTextLabelFeature *lf = static_cast<QgsTextLabelFeature *>( label->getFeaturePart()->feature() );
+     QString txt = lf->text( label->getPartId() );
++    if (txt.compare("@@") == 0)
++    {
++      if (!label->getFeaturePart()->labelText().isEmpty())
++        txt = label->getFeaturePart()->labelText();
++      else
++        txt = "0";
++    }
+     QFontMetricsF *labelfm = lf->labelFontMetrics();
+ 
+     if ( auto *lMaskIdProvider = context.maskIdProvider() )
+diff --git a/src/core/layout/qgslayoutexporter.cpp b/src/core/layout/qgslayoutexporter.cpp
+index 813fd7367e..a98ce5aeae 100644
+--- a/src/core/layout/qgslayoutexporter.cpp
++++ b/src/core/layout/qgslayoutexporter.cpp
+@@ -1628,7 +1628,7 @@ bool QgsLayoutExporter::georeferenceOutputPrivate( const QString &file, QgsLayou
+   // important - we need to manually specify the DPI in advance, as GDAL will otherwise
+   // assume a DPI of 150
+   CPLSetConfigOption( "GDAL_PDF_DPI", QString::number( dpi ).toLocal8Bit().constData() );
+-  gdal::dataset_unique_ptr outputDS( GDALOpen( file.toLocal8Bit().constData(), GA_Update ) );
++  gdal::dataset_unique_ptr outputDS( GDALOpen( file.toUtf8().constData(), GA_Update ) );
+   if ( outputDS )
+   {
+     if ( t )
+diff --git a/src/core/pal/feature.h b/src/core/pal/feature.h
+index 0d15254493..d544881764 100644
+--- a/src/core/pal/feature.h
++++ b/src/core/pal/feature.h
+@@ -344,6 +344,10 @@ namespace pal
+        */
+       void setTotalRepeats( int repeats );
+ 
++
++      QString labelText() const { return mLabelText; }
++      void setLabelText(const QString& text) { mLabelText = text; }
++
+     protected:
+ 
+       QgsLabelFeature *mLF = nullptr;
+@@ -360,6 +364,7 @@ namespace pal
+ 
+       mutable std::size_t mCachedMaxLineCandidates = 0;
+       mutable std::size_t mCachedMaxPolygonCandidates = 0;
++      QString mLabelText;
+ 
+       FeaturePart &operator= ( const FeaturePart & ) = delete;
+   };
+diff --git a/src/core/pal/layer.cpp b/src/core/pal/layer.cpp
+index 8cb4eecf34..42d876364d 100644
+--- a/src/core/pal/layer.cpp
++++ b/src/core/pal/layer.cpp
+@@ -391,10 +391,10 @@ void Layer::chopFeaturesAtRepeatDistance()
+     if ( canChop )
+     {
+       // never chop into segments smaller than required for the actual label text
+-      chopInterval *= std::ceil( fpart->getLabelWidth() / fpart->repeatDistance() );
++      //chopInterval *= std::ceil( fpart->getLabelWidth() / fpart->repeatDistance() );
+ 
+       // now work out how many full segments we could chop this line into
+-      possibleSegments = static_cast< int >( std::floor( featureLen / chopInterval ) );
++      possibleSegments = static_cast< int >( std::ceil( featureLen / chopInterval ) );
+ 
+       // ... and use this to work out the actual chop distance for this line. Otherwise, we risk the
+       // situation of:
+@@ -406,7 +406,7 @@ void Layer::chopFeaturesAtRepeatDistance()
+       // /--Label--/----/
+       //
+       // i.e. the labels would be off center and gravitate toward line starts
+-      chopInterval = featureLen / possibleSegments;
++      //chopInterval = featureLen / possibleSegments;
+ 
+       shouldChop = possibleSegments > 1;
+     }
+@@ -470,6 +470,7 @@ void Layer::chopFeaturesAtRepeatDistance()
+           }
+           GEOSGeometry *newgeom = GEOSGeom_createLineString_r( geosctxt, cooSeq );
+           std::unique_ptr< FeaturePart > newfpart = std::make_unique< FeaturePart >( fpart->feature(), newgeom );
++          newfpart->setLabelText(QString::number(segment));
+           repeatParts.push_back( newfpart.get() );
+           newFeatureParts.emplace_back( std::move( newfpart ) );
+           break;
+@@ -492,6 +493,7 @@ void Layer::chopFeaturesAtRepeatDistance()
+ 
+         GEOSGeometry *newgeom = GEOSGeom_createLineString_r( geosctxt, cooSeq );
+         std::unique_ptr< FeaturePart > newfpart = std::make_unique< FeaturePart >( fpart->feature(), newgeom );
++        newfpart->setLabelText(QString::number(segment));
+         repeatParts.push_back( newfpart.get() );
+         newFeatureParts.emplace_back( std::move( newfpart ) );
+         part.clear();
+diff --git a/src/core/providers/ogr/qgsogrprovider.cpp b/src/core/providers/ogr/qgsogrprovider.cpp
+index d4c35c0c3b..4b031fbf26 100644
+--- a/src/core/providers/ogr/qgsogrprovider.cpp
++++ b/src/core/providers/ogr/qgsogrprovider.cpp
+@@ -1911,6 +1911,20 @@ bool QgsOgrProvider::addAttributeOGRLevel( const QgsField &field, bool &ignoreEr
+       break;
+   }
+ 
++  if (field.defaultValueDefinition().isValid())
++  {
++    QString defaultValue = field.defaultValueDefinition().expression();    
++    if (type==OFTString || type==OFTDateTime || type==OFTDate || type==OFTTime)
++    {
++      if (!defaultValue.startsWith('\''))
++      {
++        defaultValue.replace(QLatin1String("'"), QLatin1String("''"));
++        defaultValue = QString("'%1'").arg(defaultValue);
++      }
++    }
++    OGR_Fld_SetDefault(fielddefn.get(), textEncoding()->fromUnicode(defaultValue).data());
++  }
++
+   if ( mOgrLayer->CreateField( fielddefn.get(), true ) != OGRERR_NONE )
+   {
+     pushError( tr( "OGR error creating field %1: %2" ).arg( field.name(), CPLGetLastErrorMsg() ) );
+diff --git a/src/core/qgsfeaturepickermodelbase.cpp b/src/core/qgsfeaturepickermodelbase.cpp
+index 070e23a1b8..6e02e108a0 100644
+--- a/src/core/qgsfeaturepickermodelbase.cpp
++++ b/src/core/qgsfeaturepickermodelbase.cpp
+@@ -329,14 +329,18 @@ void QgsFeaturePickerModelBase::updateCompleter()
+     }
+ 
+     // Remove all entries (except for extra entry if existent)
++    bool canRemove = rowCount(QModelIndex())>0;
++    if (canRemove)
++    {
+     beginRemoveRows( QModelIndex(), firstRow, mEntries.size() - firstRow );
+     mEntries.remove( firstRow, mEntries.size() - firstRow );
++    }
+ 
+     // if we remove all rows before endRemoveRows, setExtraIdentifierValuesUnguarded will be called
+     // and a null value will be added to mEntries, so we block setExtraIdentifierValuesUnguarded call
+ 
+     mIsSettingExtraIdentifierValue = true;
+-    endRemoveRows();
++    if (canRemove) endRemoveRows();
+     mIsSettingExtraIdentifierValue = false;
+ 
+     if ( currentEntryInNewList == -1 )
+diff --git a/src/core/qgsgml.cpp b/src/core/qgsgml.cpp
+index d1832b8103..2cfb772e39 100644
+--- a/src/core/qgsgml.cpp
++++ b/src/core/qgsgml.cpp
+@@ -978,7 +978,7 @@ void QgsGmlStreamingParser::endElement( const XML_Char *el )
+   }
+   else if ( parseMode == LowerCorner && isGMLNS && LOCALNAME_EQUALS( "lowerCorner" ) )
+   {
+-    QList<QgsPointXY> points;
++    QList<QgsPoint> points;
+     pointsFromPosListString( points, mStringCash, 2 );
+     if ( points.size() == 1 )
+     {
+@@ -989,7 +989,7 @@ void QgsGmlStreamingParser::endElement( const XML_Char *el )
+   }
+   else if ( parseMode == UpperCorner && isGMLNS && LOCALNAME_EQUALS( "upperCorner" ) )
+   {
+-    QList<QgsPointXY> points;
++    QList<QgsPoint> points;
+     pointsFromPosListString( points, mStringCash, 2 );
+     if ( points.size() == 1 )
+     {
+@@ -1034,7 +1034,7 @@ void QgsGmlStreamingParser::endElement( const XML_Char *el )
+   }
+   else if ( isGMLNS && LOCALNAME_EQUALS( "Point" ) )
+   {
+-    QList<QgsPointXY> pointList;
++    QList<QgsPoint> pointList;
+     if ( pointsFromString( pointList, mStringCash ) != 0 )
+     {
+       //error
+@@ -1078,7 +1078,7 @@ void QgsGmlStreamingParser::endElement( const XML_Char *el )
+   {
+     //add WKB point to the feature
+ 
+-    QList<QgsPointXY> pointList;
++    QList<QgsPoint> pointList;
+     if ( pointsFromString( pointList, mStringCash ) != 0 )
+     {
+       //error
+@@ -1116,7 +1116,7 @@ void QgsGmlStreamingParser::endElement( const XML_Char *el )
+   else if ( ( parseMode == Geometry || parseMode == MultiPolygon ) &&
+             isGMLNS && LOCALNAME_EQUALS( "LinearRing" ) )
+   {
+-    QList<QgsPointXY> pointList;
++    QList<QgsPoint> pointList;
+     if ( pointsFromString( pointList, mStringCash ) != 0 )
+     {
+       //error
+@@ -1144,6 +1144,10 @@ void QgsGmlStreamingParser::endElement( const XML_Char *el )
+     if ( mWkbType != QgsWkbTypes::MultiPolygon )//keep multitype in case of geometry type mix
+     {
+       mWkbType = QgsWkbTypes::Polygon;
++      if ( mDimension > 2 )
++        mWkbType = QgsWkbTypes::addZ( mWkbType );
++      if ( mDimension > 3 )
++        mWkbType = QgsWkbTypes::addM( mWkbType );
+     }
+ 
+     if ( parseMode == Geometry )
+@@ -1162,6 +1166,10 @@ void QgsGmlStreamingParser::endElement( const XML_Char *el )
+             ( LOCALNAME_EQUALS( "MultiLineString" )  || LOCALNAME_EQUALS( "MultiCurve" ) ) )
+   {
+     mWkbType = QgsWkbTypes::MultiLineString;
++    if ( mDimension > 2 )
++      mWkbType = QgsWkbTypes::addZ( mWkbType );
++    if ( mDimension > 3 )
++      mWkbType = QgsWkbTypes::addM( mWkbType );
+     mParseModeStack.pop();
+     createMultiLineFromFragments();
+   }
+@@ -1324,7 +1332,7 @@ QString QgsGmlStreamingParser::readAttribute( const QString &attributeName, cons
+ 
+ bool QgsGmlStreamingParser::createBBoxFromCoordinateString( QgsRectangle &r, const QString &coordString ) const
+ {
+-  QList<QgsPointXY> points;
++  QList<QgsPoint> points;
+   if ( pointsFromCoordinateString( points, coordString ) != 0 )
+   {
+     return false;
+@@ -1340,7 +1348,7 @@ bool QgsGmlStreamingParser::createBBoxFromCoordinateString( QgsRectangle &r, con
+   return true;
+ }
+ 
+-int QgsGmlStreamingParser::pointsFromCoordinateString( QList<QgsPointXY> &points, const QString &coordString ) const
++int QgsGmlStreamingParser::pointsFromCoordinateString( QList<QgsPoint> &points, const QString &coordString ) const
+ {
+   //tuples are separated by space, x/y by ','
+ #if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+@@ -1374,12 +1382,23 @@ int QgsGmlStreamingParser::pointsFromCoordinateString( QList<QgsPointXY> &points
+     {
+       continue;
+     }
+-    points.push_back( ( mInvertAxisOrientation ) ? QgsPointXY( y, x ) : QgsPointXY( x, y ) );
++
++    double z = std::numeric_limits<double>::quiet_NaN();
++    double m = std::numeric_limits<double>::quiet_NaN();
++    if ( tuples_coordinates.size() > 2 )
++    {
++      z = tuples_coordinates.at( 2 ).toDouble( &conversionSuccess );
++      if ( tuples_coordinates.size() > 3 )
++        m = tuples_coordinates.at( 3 ).toDouble( &conversionSuccess );
++      if ( !conversionSuccess )
++      	continue;
++    }
++    points.push_back( ( mInvertAxisOrientation ) ? QgsPoint( y, x , z, m ) : QgsPoint( x, y , z, m ) );
+   }
+   return 0;
+ }
+ 
+-int QgsGmlStreamingParser::pointsFromPosListString( QList<QgsPointXY> &points, const QString &coordString, int dimension ) const
++int QgsGmlStreamingParser::pointsFromPosListString( QList<QgsPoint> &points, const QString &coordString, int dimension ) const
+ {
+   // coordinates separated by spaces
+ #if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+@@ -1407,12 +1426,23 @@ int QgsGmlStreamingParser::pointsFromPosListString( QList<QgsPointXY> &points, c
+     {
+       continue;
+     }
+-    points.append( ( mInvertAxisOrientation ) ? QgsPointXY( y, x ) : QgsPointXY( x, y ) );
++
++    double z = std::numeric_limits<double>::quiet_NaN();
++    double m = std::numeric_limits<double>::quiet_NaN();
++    if ( dimension > 2 )
++    {
++      z = coordinates.value( i * dimension + 2 ).toDouble( &conversionSuccess );
++      if ( dimension > 3 )
++        m = coordinates.value( i * dimension + 3 ).toDouble( &conversionSuccess );
++      if ( !conversionSuccess )
++        continue;
++    }
++    points.append( ( mInvertAxisOrientation ) ? QgsPoint( y, x , z, m ) : QgsPoint( x, y , z, m ) );
+   }
+   return 0;
+ }
+ 
+-int QgsGmlStreamingParser::pointsFromString( QList<QgsPointXY> &points, const QString &coordString ) const
++int QgsGmlStreamingParser::pointsFromString( QList<QgsPoint> &points, const QString &coordString ) const
+ {
+   if ( mCoorMode == QgsGmlStreamingParser::Coordinate )
+   {
+@@ -1425,48 +1455,87 @@ int QgsGmlStreamingParser::pointsFromString( QList<QgsPointXY> &points, const QS
+   return 1;
+ }
+ 
+-int QgsGmlStreamingParser::getPointWKB( QgsWkbPtr &wkbPtr, const QgsPointXY &point ) const
++int QgsGmlStreamingParser::getPointWKB( QgsWkbPtr &wkbPtr, const QgsPoint &point ) const
+ {
+-  const int wkbSize = 1 + sizeof( int ) + 2 * sizeof( double );
++  int wkbSize = 1 + sizeof( int ) + 2 * sizeof( double );
++  auto wkbType = QgsWkbTypes::Point;
++  if ( mDimension > 2 )
++  {
++    wkbType = QgsWkbTypes::addZ( wkbType );
++    wkbSize += sizeof( double );
++  }
++  if ( mDimension > 3 )
++  {
++    wkbType = QgsWkbTypes::addM( wkbType );
++    wkbSize += sizeof( double );
++  }
+   wkbPtr = QgsWkbPtr( new unsigned char[wkbSize], wkbSize );
+ 
+   QgsWkbPtr fillPtr( wkbPtr );
+-  fillPtr << mEndian << QgsWkbTypes::Point << point.x() << point.y();
++  fillPtr << mEndian << wkbType << point.x() << point.y();
++  if ( mDimension > 2 )
++    fillPtr << point.z();
++  if ( mDimension > 3 )
++    fillPtr << point.m();
+ 
+   return 0;
+ }
+ 
+-int QgsGmlStreamingParser::getLineWKB( QgsWkbPtr &wkbPtr, const QList<QgsPointXY> &lineCoordinates ) const
++int QgsGmlStreamingParser::getLineWKB( QgsWkbPtr &wkbPtr, const QList<QgsPoint> &lineCoordinates ) const
+ {
+-  const int wkbSize = 1 + 2 * sizeof( int ) + lineCoordinates.size() * 2 * sizeof( double );
++  int wkbSize = 1 + 2 * sizeof( int ) + lineCoordinates.size() * 2 * sizeof( double );
++  auto wkbType = QgsWkbTypes::LineString;
++  if ( mDimension > 2 )
++  {
++    wkbType = QgsWkbTypes::addZ( wkbType );
++    wkbSize += lineCoordinates.size() * sizeof( double );
++  }
++  if ( mDimension > 3 )
++  {
++    wkbType = QgsWkbTypes::addM( wkbType );
++    wkbSize += lineCoordinates.size() * sizeof( double );
++  }
+   wkbPtr = QgsWkbPtr( new unsigned char[wkbSize], wkbSize );
+ 
+   QgsWkbPtr fillPtr( wkbPtr );
+ 
+-  fillPtr << mEndian << QgsWkbTypes::LineString << lineCoordinates.size();
++  fillPtr << mEndian << wkbType << lineCoordinates.size();
+ 
+-  QList<QgsPointXY>::const_iterator iter;
++  QList<QgsPoint>::const_iterator iter;
+   for ( iter = lineCoordinates.constBegin(); iter != lineCoordinates.constEnd(); ++iter )
+   {
+     fillPtr << iter->x() << iter->y();
++    if ( mDimension > 2 )
++      fillPtr << iter->z();
++    if ( mDimension > 3 )
++      fillPtr << iter->m();
+   }
+ 
+   return 0;
+ }
+ 
+-int QgsGmlStreamingParser::getRingWKB( QgsWkbPtr &wkbPtr, const QList<QgsPointXY> &ringCoordinates ) const
++int QgsGmlStreamingParser::getRingWKB( QgsWkbPtr &wkbPtr, const QList<QgsPoint> &ringCoordinates ) const
+ {
+-  const int wkbSize = sizeof( int ) + ringCoordinates.size() * 2 * sizeof( double );
++  int wkbSize = sizeof( int ) + ringCoordinates.size() * 2 * sizeof( double );
++  if (mDimension > 2)
++    wkbSize += ringCoordinates.size() * sizeof(double);
++  if (mDimension > 3)
++    wkbSize += ringCoordinates.size() * sizeof(double);
++
+   wkbPtr = QgsWkbPtr( new unsigned char[wkbSize], wkbSize );
+ 
+   QgsWkbPtr fillPtr( wkbPtr );
+ 
+   fillPtr << ringCoordinates.size();
+ 
+-  QList<QgsPointXY>::const_iterator iter;
++  QList<QgsPoint>::const_iterator iter;
+   for ( iter = ringCoordinates.constBegin(); iter != ringCoordinates.constEnd(); ++iter )
+   {
+     fillPtr << iter->x() << iter->y();
++    if ( mDimension > 2 )
++      fillPtr << iter->z();
++    if ( mDimension > 3 )
++      fillPtr << iter->m();
+   }
+ 
+   return 0;
+@@ -1476,10 +1545,15 @@ int QgsGmlStreamingParser::createMultiLineFromFragments()
+ {
+   const int size = 1 + 2 * sizeof( int ) + totalWKBFragmentSize();
+   mCurrentWKB = QgsWkbPtr( new unsigned char[size], size );
++  auto wkbType = QgsWkbTypes::MultiLineString;
++  if ( mDimension > 2 )
++    wkbType = QgsWkbTypes::addZ( wkbType );
++  if ( mDimension > 3 )
++    wkbType = QgsWkbTypes::addM( wkbType );
+ 
+   QgsWkbPtr wkbPtr( mCurrentWKB );
+ 
+-  wkbPtr << mEndian << QgsWkbTypes::MultiLineString << mCurrentWKBFragments.constBegin()->size();
++  wkbPtr << mEndian << wkbType << mCurrentWKBFragments.constBegin()->size();
+ 
+   //copy (and delete) all the wkb fragments
+   QList<QgsWkbPtr>::const_iterator wkbIt = mCurrentWKBFragments.constBegin()->constBegin();
+@@ -1491,7 +1565,7 @@ int QgsGmlStreamingParser::createMultiLineFromFragments()
+   }
+ 
+   mCurrentWKBFragments.clear();
+-  mWkbType = QgsWkbTypes::MultiLineString;
++  mWkbType = wkbType;
+   return 0;
+ }
+ 
+@@ -1499,9 +1573,14 @@ int QgsGmlStreamingParser::createMultiPointFromFragments()
+ {
+   const int size = 1 + 2 * sizeof( int ) + totalWKBFragmentSize();
+   mCurrentWKB = QgsWkbPtr( new unsigned char[size], size );
++  auto wkbType = QgsWkbTypes::MultiPoint;
++  if ( mDimension > 2 )
++    wkbType = QgsWkbTypes::addZ( wkbType );
++  if ( mDimension > 3 )
++    wkbType = QgsWkbTypes::addM( wkbType );
+ 
+   QgsWkbPtr wkbPtr( mCurrentWKB );
+-  wkbPtr << mEndian << QgsWkbTypes::MultiPoint << mCurrentWKBFragments.constBegin()->size();
++  wkbPtr << mEndian << wkbType << mCurrentWKBFragments.constBegin()->size();
+ 
+   QList<QgsWkbPtr>::const_iterator wkbIt = mCurrentWKBFragments.constBegin()->constBegin();
+   for ( ; wkbIt != mCurrentWKBFragments.constBegin()->constEnd(); ++wkbIt )
+@@ -1512,7 +1591,7 @@ int QgsGmlStreamingParser::createMultiPointFromFragments()
+   }
+ 
+   mCurrentWKBFragments.clear();
+-  mWkbType = QgsWkbTypes::MultiPoint;
++  mWkbType = wkbType;
+   return 0;
+ }
+ 
+@@ -1521,9 +1600,14 @@ int QgsGmlStreamingParser::createPolygonFromFragments()
+ {
+   const int size = 1 + 2 * sizeof( int ) + totalWKBFragmentSize();
+   mCurrentWKB = QgsWkbPtr( new unsigned char[size], size );
++  auto wkbType = QgsWkbTypes::Polygon;
++  if ( mDimension > 2 )
++    wkbType = QgsWkbTypes::addZ( wkbType );
++  if ( mDimension > 3 )
++    wkbType = QgsWkbTypes::addM( wkbType );
+ 
+   QgsWkbPtr wkbPtr( mCurrentWKB );
+-  wkbPtr << mEndian << QgsWkbTypes::Polygon << mCurrentWKBFragments.constBegin()->size();
++  wkbPtr << mEndian << wkbType << mCurrentWKBFragments.constBegin()->size();
+ 
+   QList<QgsWkbPtr>::const_iterator wkbIt = mCurrentWKBFragments.constBegin()->constBegin();
+   for ( ; wkbIt != mCurrentWKBFragments.constBegin()->constEnd(); ++wkbIt )
+@@ -1534,7 +1618,7 @@ int QgsGmlStreamingParser::createPolygonFromFragments()
+   }
+ 
+   mCurrentWKBFragments.clear();
+-  mWkbType = QgsWkbTypes::Polygon;
++  mWkbType = wkbType;
+   return 0;
+ }
+ 
+@@ -1546,9 +1630,14 @@ int QgsGmlStreamingParser::createMultiPolygonFromFragments()
+   size += mCurrentWKBFragments.size() * ( 1 + 2 * sizeof( int ) ); //fragments are just the rings
+ 
+   mCurrentWKB = QgsWkbPtr( new unsigned char[size], size );
++  auto wkbType = QgsWkbTypes::Polygon;
++  if ( mDimension > 2 )
++    wkbType = QgsWkbTypes::addZ( wkbType );
++  if ( mDimension > 3 )
++    wkbType = QgsWkbTypes::addM( wkbType );
+ 
+   QgsWkbPtr wkbPtr( mCurrentWKB );
+-  wkbPtr << ( char ) mEndian << QgsWkbTypes::MultiPolygon << mCurrentWKBFragments.size();
++  wkbPtr << ( char ) mEndian << QgsWkbTypes::multiType(wkbType) << mCurrentWKBFragments.size();
+ 
+   //have outer and inner iterators
+   QList< QList<QgsWkbPtr> >::const_iterator outerWkbIt = mCurrentWKBFragments.constBegin();
+@@ -1556,7 +1645,7 @@ int QgsGmlStreamingParser::createMultiPolygonFromFragments()
+   for ( ; outerWkbIt != mCurrentWKBFragments.constEnd(); ++outerWkbIt )
+   {
+     //new polygon
+-    wkbPtr << ( char ) mEndian << QgsWkbTypes::Polygon << outerWkbIt->size();
++    wkbPtr << ( char ) mEndian << wkbType << outerWkbIt->size();
+ 
+     QList<QgsWkbPtr>::const_iterator innerWkbIt = outerWkbIt->constBegin();
+     for ( ; innerWkbIt != outerWkbIt->constEnd(); ++innerWkbIt )
+@@ -1568,7 +1657,7 @@ int QgsGmlStreamingParser::createMultiPolygonFromFragments()
+   }
+ 
+   mCurrentWKBFragments.clear();
+-  mWkbType = QgsWkbTypes::MultiPolygon;
++  mWkbType = QgsWkbTypes::multiType( wkbType );
+   return 0;
+ }
+ 
+diff --git a/src/core/qgsgml.h b/src/core/qgsgml.h
+index 0072e3242e..0e34aa8c0d 100644
+--- a/src/core/qgsgml.h
++++ b/src/core/qgsgml.h
+@@ -219,7 +219,7 @@ class CORE_EXPORT QgsGmlStreamingParser
+      * \param coordString the text containing the coordinates
+      * \returns 0 in case of success
+      */
+-    int pointsFromCoordinateString( QList<QgsPointXY> &points, const QString &coordString ) const;
++    int pointsFromCoordinateString( QList<QgsPoint> &points, const QString &coordString ) const;
+ 
+     /**
+      * Creates a set of points from a gml:posList or gml:pos coordinate string.
+@@ -228,12 +228,12 @@ class CORE_EXPORT QgsGmlStreamingParser
+      * \param dimension number of dimensions
+      * \returns 0 in case of success
+       */
+-    int pointsFromPosListString( QList<QgsPointXY> &points, const QString &coordString, int dimension ) const;
++    int pointsFromPosListString( QList<QgsPoint> &points, const QString &coordString, int dimension ) const;
+ 
+-    int pointsFromString( QList<QgsPointXY> &points, const QString &coordString ) const;
+-    int getPointWKB( QgsWkbPtr &wkbPtr, const QgsPointXY & ) const;
+-    int getLineWKB( QgsWkbPtr &wkbPtr, const QList<QgsPointXY> &lineCoordinates ) const;
+-    int getRingWKB( QgsWkbPtr &wkbPtr, const QList<QgsPointXY> &ringCoordinates ) const;
++    int pointsFromString( QList<QgsPoint> &points, const QString &coordString ) const;
++    int getPointWKB( QgsWkbPtr &wkbPtr, const QgsPoint & ) const;
++    int getLineWKB( QgsWkbPtr &wkbPtr, const QList<QgsPoint> &lineCoordinates ) const;
++    int getRingWKB( QgsWkbPtr &wkbPtr, const QList<QgsPoint> &ringCoordinates ) const;
+ 
+     /**
+      * Creates a multiline from the information in mCurrentWKBFragments and
+diff --git a/src/core/qgsogcutils.cpp b/src/core/qgsogcutils.cpp
+index 3999d8ae91..3549fdaf24 100644
+--- a/src/core/qgsogcutils.cpp
++++ b/src/core/qgsogcutils.cpp
+@@ -1213,6 +1213,7 @@ QDomElement QgsOgcUtils::geometryToGML( const QgsGeometry &geometry,
+   QDomElement baseCoordElem;
+ 
+   bool hasZValue = false;
++  bool hasMValue = false;
+ 
+   const QByteArray wkb( geometry.asWkb() );
+   QgsConstWkbPtr wkbPtr( wkb );
+@@ -1258,6 +1259,10 @@ QDomElement QgsOgcUtils::geometryToGML( const QgsGeometry &geometry,
+       case QgsWkbTypes::Point25D:
+       case QgsWkbTypes::Point:
+       {
++        if ( QgsWkbTypes::hasZ( geometry.wkbType() ) )
++          hasZValue = true;
++        if ( QgsWkbTypes::hasM( geometry.wkbType() ) )
++          hasMValue = true;
+         QDomElement pointElem = doc.createElement( QStringLiteral( "gml:Point" ) );
+         if ( gmlVersion == GML_3_2_1 && !gmlIdBase.isEmpty() )
+           pointElem.setAttribute( QStringLiteral( "gml:id" ), gmlIdBase );
+@@ -1271,8 +1276,23 @@ QDomElement QgsOgcUtils::geometryToGML( const QgsGeometry &geometry,
+           wkbPtr >> y >> x;
+         else
+           wkbPtr >> x >> y;
+-        const QDomText coordText = doc.createTextNode( qgsDoubleToString( x, precision ) + cs + qgsDoubleToString( y, precision ) );
++        QString coordString = qgsDoubleToString( x, precision ) + cs + qgsDoubleToString( y, precision );
+ 
++        if ( hasZValue )
++        {
++          double z;
++          wkbPtr >> z;
++          coordString += cs + qgsDoubleToString(z, precision);
++        }
++
++        if ( hasMValue )
++        {
++          double m;
++          wkbPtr >> m;
++          coordString += cs + qgsDoubleToString(m, precision);
++        }
++
++        const QDomText coordText = doc.createTextNode( coordString );
+         coordElem.appendChild( coordText );
+         pointElem.appendChild( coordElem );
+         return pointElem;
+@@ -1283,6 +1303,8 @@ QDomElement QgsOgcUtils::geometryToGML( const QgsGeometry &geometry,
+         FALLTHROUGH
+       case QgsWkbTypes::MultiPoint:
+       {
++        if ( QgsWkbTypes::hasM( geometry.wkbType() ) )
++          hasMValue = true;
+         QDomElement multiPointElem = doc.createElement( QStringLiteral( "gml:MultiPoint" ) );
+         if ( gmlVersion == GML_3_2_1 && !gmlIdBase.isEmpty() )
+           multiPointElem.setAttribute( QStringLiteral( "gml:id" ), gmlIdBase );
+@@ -1308,15 +1330,27 @@ QDomElement QgsOgcUtils::geometryToGML( const QgsGeometry &geometry,
+             wkbPtr >> y >> x;
+           else
+             wkbPtr >> x >> y;
+-          const QDomText coordText = doc.createTextNode( qgsDoubleToString( x, precision ) + cs + qgsDoubleToString( y, precision ) );
+-
+-          coordElem.appendChild( coordText );
+-          pointElem.appendChild( coordElem );
++          QString coordString = qgsDoubleToString( x, precision ) + cs + qgsDoubleToString( y, precision );
+ 
+           if ( hasZValue )
+           {
+-            wkbPtr += sizeof( double );
++            double z;
++            wkbPtr >> z;
++            coordString += cs + qgsDoubleToString(z, precision);
++          }
++
++          if ( hasMValue )
++          {
++            double m;
++            wkbPtr >> m;
++            coordString += cs + qgsDoubleToString(m, precision);
+           }
++
++          const QDomText coordText = doc.createTextNode( coordString );
++
++          coordElem.appendChild( coordText );
++          pointElem.appendChild( coordElem );
++
+           pointMemberElem.appendChild( pointElem );
+           multiPointElem.appendChild( pointMemberElem );
+         }
+@@ -1328,6 +1362,8 @@ QDomElement QgsOgcUtils::geometryToGML( const QgsGeometry &geometry,
+         FALLTHROUGH
+       case QgsWkbTypes::LineString:
+       {
++        if ( QgsWkbTypes::hasM( geometry.wkbType() ) )
++          hasMValue = true;
+         QDomElement lineStringElem = doc.createElement( QStringLiteral( "gml:LineString" ) );
+         if ( gmlVersion == GML_3_2_1 && !gmlIdBase.isEmpty() )
+           lineStringElem.setAttribute( QStringLiteral( "gml:id" ), gmlIdBase );
+@@ -1357,7 +1393,16 @@ QDomElement QgsOgcUtils::geometryToGML( const QgsGeometry &geometry,
+ 
+           if ( hasZValue )
+           {
+-            wkbPtr += sizeof( double );
++            double z;
++            wkbPtr >> z;
++            coordString += cs + qgsDoubleToString(z, precision);
++          }
++
++          if ( hasMValue )
++          {
++            double m;
++            wkbPtr >> m;
++            coordString += cs + qgsDoubleToString(m, precision);
+           }
+         }
+         const QDomText coordText = doc.createTextNode( coordString );
+@@ -1371,6 +1416,8 @@ QDomElement QgsOgcUtils::geometryToGML( const QgsGeometry &geometry,
+         FALLTHROUGH
+       case QgsWkbTypes::MultiLineString:
+       {
++        if ( QgsWkbTypes::hasM( geometry.wkbType() ) )
++          hasMValue = true;
+         QDomElement multiLineStringElem = doc.createElement( QStringLiteral( "gml:MultiLineString" ) );
+         if ( gmlVersion == GML_3_2_1 && !gmlIdBase.isEmpty() )
+           multiLineStringElem.setAttribute( QStringLiteral( "gml:id" ), gmlIdBase );
+@@ -1412,7 +1459,16 @@ QDomElement QgsOgcUtils::geometryToGML( const QgsGeometry &geometry,
+ 
+             if ( hasZValue )
+             {
+-              wkbPtr += sizeof( double );
++              double z;
++              wkbPtr >> z;
++              coordString += cs + qgsDoubleToString(z, precision);
++            }
++
++            if ( hasMValue )
++            {
++              double m;
++              wkbPtr >> m;
++              coordString += cs + qgsDoubleToString(m, precision);
+             }
+           }
+           const QDomText coordText = doc.createTextNode( coordString );
+@@ -1429,6 +1485,8 @@ QDomElement QgsOgcUtils::geometryToGML( const QgsGeometry &geometry,
+         FALLTHROUGH
+       case QgsWkbTypes::Polygon:
+       {
++        if ( QgsWkbTypes::hasM( geometry.wkbType() ) )
++          hasMValue = true;
+         QDomElement polygonElem = doc.createElement( QStringLiteral( "gml:Polygon" ) );
+         if ( gmlVersion == GML_3_2_1 && !gmlIdBase.isEmpty() )
+           polygonElem.setAttribute( QStringLiteral( "gml:id" ), gmlIdBase );
+@@ -1474,7 +1532,16 @@ QDomElement QgsOgcUtils::geometryToGML( const QgsGeometry &geometry,
+             coordString += qgsDoubleToString( x, precision ) + cs + qgsDoubleToString( y, precision );
+             if ( hasZValue )
+             {
+-              wkbPtr += sizeof( double );
++              double z;
++              wkbPtr >> z;
++              coordString += cs + qgsDoubleToString(z, precision);
++            }
++
++            if ( hasMValue )
++            {
++              double m;
++              wkbPtr >> m;
++              coordString += cs + qgsDoubleToString(m, precision);
+             }
+           }
+           const QDomText coordText = doc.createTextNode( coordString );
+@@ -1491,6 +1558,8 @@ QDomElement QgsOgcUtils::geometryToGML( const QgsGeometry &geometry,
+         FALLTHROUGH
+       case QgsWkbTypes::MultiPolygon:
+       {
++        if ( QgsWkbTypes::hasM( geometry.wkbType() ) )
++          hasMValue = true;
+         QDomElement multiPolygonElem = doc.createElement( QStringLiteral( "gml:MultiPolygon" ) );
+         if ( gmlVersion == GML_3_2_1 && !gmlIdBase.isEmpty() )
+           multiPolygonElem.setAttribute( QStringLiteral( "gml:id" ), gmlIdBase );
+@@ -1545,7 +1614,16 @@ QDomElement QgsOgcUtils::geometryToGML( const QgsGeometry &geometry,
+ 
+               if ( hasZValue )
+               {
+-                wkbPtr += sizeof( double );
++                double z;
++                wkbPtr >> z;
++                coordString += cs + qgsDoubleToString(z, precision);
++              }
++
++              if ( hasMValue )
++              {
++                double m;
++                wkbPtr >> m;
++                coordString += cs + qgsDoubleToString(m, precision);
+               }
+             }
+             const QDomText coordText = doc.createTextNode( coordString );
+diff --git a/src/gui/CMakeLists.txt b/src/gui/CMakeLists.txt
+index c4bed11ed9..17c13da455 100644
+--- a/src/gui/CMakeLists.txt
++++ b/src/gui/CMakeLists.txt
+@@ -680,6 +680,7 @@ set(QGIS_GUI_HDRS
+   qgsactionmenu.h
+   qgsaddattrdialog.h
+   qgsaddtaborgroup.h
++  qgsadvanceddigitizingcanvasitem.h
+   qgsadvanceddigitizingdockwidget.h
+   qgsadvanceddigitizingfloater.h
+   qgsaggregatetoolbutton.h
+@@ -696,6 +697,7 @@ set(QGIS_GUI_HDRS
+   qgsattributetypeloaddialog.h
+   qgsblendmodecombobox.h
+   qgsbrowserdockwidget.h
++  qgsbrowserdockwidget_p.h
+   qgsbrowserwidget.h
+   qgsbrowserguimodel.h
+   qgsbrowsertreeview.h
+@@ -765,6 +767,7 @@ set(QGIS_GUI_HDRS
+   qgsfilterlineedit.h
+   qgsfindfilesbypatternwidget.h
+   qgsfloatingwidget.h
++  qgsfocuskeeper.h
+   qgsfocuswatcher.h
+   qgsfontbutton.h
+   qgsformannotation.h
+@@ -945,6 +948,7 @@ set(QGIS_GUI_HDRS
+   attributetable/qgsattributetablemodel.h
+   attributetable/qgsattributetableview.h
+   attributetable/qgsdualview.h
++  attributetable/qgsfeaturefilterwidget_p.h
+   attributetable/qgsfeaturelistmodel.h
+   attributetable/qgsfeaturelistview.h
+   attributetable/qgsfeaturelistviewdelegate.h
+@@ -1034,6 +1038,7 @@ set(QGIS_GUI_HDRS
+   editorwidgets/qgsjsoneditwidgetfactory.h
+   editorwidgets/qgsjsoneditwrapper.h
+   editorwidgets/qgsjsoneditwidget.h
++  editorwidgets/qgslistconfigdlg.h
+   editorwidgets/qgslistwidgetfactory.h
+   editorwidgets/qgslistwidgetwrapper.h
+   editorwidgets/qgsmultiedittoolbutton.h
+@@ -1133,6 +1138,7 @@ set(QGIS_GUI_HDRS
+   layout/qgslayoutshapewidget.h
+   layout/qgslayouttablebackgroundcolorsdialog.h
+   layout/qgslayoutunitscombobox.h
++  layout/qgslayoutvaliditychecks.h
+   layout/qgslayoutview.h
+   layout/qgslayoutviewmouseevent.h
+   layout/qgslayoutviewrubberband.h
+@@ -1383,6 +1389,18 @@ set_property(GLOBAL PROPERTY QGIS_GUI_HDRS ${QGIS_GUI_HDRS})
+ set(QGIS_GUI_UI_HDRS
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsadvanceddigitizingdockwidgetbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsadvanceddigitizingfloaterbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsattributeloadfrommap.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsbrowserlayerpropertiesbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsbrowserdirectorypropertiesbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsbrowserpropertiesdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsbrowserwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgscharacterselectdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgscolorbrewercolorrampwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgscolordialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgscolorramplegendnodewidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgscompoundcolorwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsconfigureshortcutsdialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgscoordinateoperationwidgetbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsauthauthoritieseditor.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsauthcertificateinfo.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsauthcertificatemanager.h
+@@ -1405,45 +1423,270 @@ set(QGIS_GUI_UI_HDRS
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsauthtrustedcasdialog.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgscredentialdialog.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgscrsdefinitionwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdatasourcemanagerdialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdatasourceselectdialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdatumtransformdialogbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdetaileditemwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgserrordialogbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsexpressionbuilderdialogbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsexpressionstoredialogbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsexpressionbuilder.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsexpressionselectiondialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsextentgroupboxwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsfeatureselectiondlg.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsfielddomainwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrangedomainwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsglobdomainwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgscodedvaluedomainwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsfindfilesbypatternwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsformlabelformatwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsgradientcolorrampdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsgroupwmsdatadialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgshistogramwidgetbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsfeaturefilterwidget.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsgenericprojectionselectorbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgshttpheaderwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsinstallgridshiftdialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslegendpatchshapewidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslimitedrandomcolorrampwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsludialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmanageconnectionsdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsvectorlayerloadstyledialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmaskingwidgetbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmessagelogviewer.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmessageviewer.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmetadatawidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsnewauxiliaryfielddialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsnewauxiliarylayerdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsnewdatabasetablenamewidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsnewgeopackagelayerdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsnewhttpconnectionbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsnewmemorylayerdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsnewvectorlayerdialogbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsnewvectortabledialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsorderbydialogbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsowssourceselectbase.h
++${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsowssourcewidgetbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsarcgisservicesourceselectbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgspointcloudquerybuilderbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgspresetcolorrampwidgetbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsprojectionselectorbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgspropertyassistantwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgspropertysizeassistantwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgspropertycolorassistantwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgspropertygenericnumericassistantwidget.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrasterlayerpropertiesbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsquerybuilderbase.h
+-  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgspointcloudquerybuilderbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsqueryresultwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrasterformatsaveoptionswidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrasterlayersaveasdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrasterpyramidsoptionswidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrelationeditorconfigwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrichtexteditorbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsquerybuilderbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgssqlcomposerdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsstyleitemslistwidgetbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgssublayersdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgssubstitutionlistwidgetbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgstablewidgetuibase.h
+-  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrendererpropsdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgstemporalmapsettingswidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgstextformatwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsunitselectionwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmapunitscalewidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsvaliditycheckresultsbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsvectorlayertemporalpropertieswidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsannotationcommonpropertieswidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsattributeformcontaineredit.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsattributetypeedit.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsattributewidgeteditgroupbox.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsattributewidgetrelationeditwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdualviewbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsfieldconditionalformatwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgseditconditionalformatrulewidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsorganizetablecolumnsdialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsauthconfigedit.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsauthmasterpassresetdialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_simplelinecallout.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_curvedlinecallout.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_ballooncallout.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgscheckboxconfigdlgbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdatetimeeditconfig.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdummyconfigdlgbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsexternalresourceconfigdlg.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsjsoneditconfigdlg.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsjsoneditwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslistconfigdlg.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrangeconfigdlgbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrelationreferenceconfigdlgbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgstexteditconfigdlg.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsuniquevaluesconfigdlgbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsvaluemapconfigdlgbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsvaluerelationconfigdlgbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgseffectstackpropertieswidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgseffectpropertieswidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_drawsource.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_blur.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_shadoweffect.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_glow.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_transform.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_coloreffects.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslabelengineconfigdialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslabelingwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslabellineanchorwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslabelobstaclesettingswidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrulebasedlabelingwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslabelingrulepropswidget.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutnewpagedialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutatlaswidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutattributeselectiondialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutattributetablewidgetbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutguidewidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayouthtmlwidgetbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutimageexportoptions.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutitemwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutlabelwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutlegendlayersdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutlegendwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutlegendnodewidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutmanualtablewidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutmapgridwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutmapwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutmaplabelingwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutmapclippingwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutmarkerwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutnewitemproperties.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutpagepropertieswidget.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgspdfexportoptions.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutpicturewidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutpolygonwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutpolylinewidgetbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutscalebarwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayoutshapewidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayouttablebackgroundstyles.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrenderercontainerbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsvectorlayerpropertiesbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgslayertreeembeddedconfigwidgetbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmeshlayerpropertiesbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmeshdatasetgrouptreewidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmeshrendereractivedatasetwidgetbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmeshstaticdatasetwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrenderermeshpropswidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsnumericformatselectorbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsbasicnumericformatwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsbearingnumericformatwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsgeographiccoordinatenumericformatwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgscurrencynumericformatwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgspercentagenumericformatwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsscientificnumericformatwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsfractionnumericformatwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsnewogrconnectionbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsvectorlayersaveasdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgspointcloudattributebyramprendererwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgspointcloudclassifiedrendererwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgspointcloudextentrendererwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgspointcloudrendererpropsdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgspointcloudrgbrendererwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsprocessingaggregatemappingpanelbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsprocessingalgorithmdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsprocessingalgorithmprogressdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsprocessingdxflayerdetailswidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsprocessingenummodelerwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsprocessingfeaturesourceoptionsbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsprocessingfieldsmappingpanelbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsprocessinghelpeditorwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsprocessingmatrixmodelerwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsprocessingmatrixparameterdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsprocessingmeshdatasettimewidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsprocessingmultipleselectiondialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsprocessingdestinationwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsprocessingparameterswidgetbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgstemporalcontrollerwidgetbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsprocessingtinmeshdatawidgetbase.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsexpressionpreviewbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmodeldesignerdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmodelinputreorderwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdbsourceselectbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgscolorrampshaderwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgshillshaderendererwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmultibandcolorrendererwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgspalettedrendererwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrastercontourrendererwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrasterhistogramwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrasterlayertemporalpropertieswidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrasterminmaxwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrastertransparencywidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrendererrasterpropswidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgssinglebandgrayrendererwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgssinglebandpseudocolorrendererwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgs25drendererwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsarrowsymbollayerwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgscategorizedsymbolrendererwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgscptcitycolorrampdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdashspacewidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdatadefinedsizelegendwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_ellipse.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsembeddedsymbolrendererwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsgraduatedsymbolrendererwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsheatmaprendererwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsinterpolatedlinesymbollayerwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsinvertedpolygonrendererwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_layerproperties.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmasksymbollayerwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsmergedfeaturerendererwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgspointclusterrendererwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgspointdisplacementrendererwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrendererpropsdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_set_dd_value.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrulebasedrendererwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsrendererrulepropsdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgssmartgroupconditionwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgssmartgroupeditordialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsstyleexportimportdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsstylegroupselectiondialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsstylemanagerdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsstylesavedialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_svgselector.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgssymbolanimationsettingswidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_simpleline.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_simplemarker.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_simplefill.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_filledmarker.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_gradientfill.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_shapeburstfill.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_markerline.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_hashline.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_svgmarker.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_rastermarker.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_animatedmarker.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_rasterfill.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_rasterline.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_gradientline.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_svgfill.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_linepatternfill.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_pointpatternfill.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_randommarkerfill.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_fontmarker.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_centroidfill.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsgeometrygeneratorwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgssymbollevelsdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgssymbolselectordialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_symbolslist.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_widget_vectorfield.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgstableeditorbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgstableeditorformattingwidgetbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsattributeactiondialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsattributeactionpropertiesdialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsattributesforminitcode.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsattributesformproperties.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsdiagrampropertiesbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsfieldcalculatorbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsjoindialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgssourcefieldsproperties.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsvectorlayersavestyledialog.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgswmsdimensiondialogbase.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsvectortilebasiclabelingwidget.h
++  ${CMAKE_CURRENT_BINARY_DIR}/../ui/ui_qgsvectortilebasicrendererwidget.h
+ )
+ 
+ if(ENABLE_MODELTEST)
+diff --git a/src/gui/editorwidgets/qgssearchwidgettoolbutton.h b/src/gui/editorwidgets/qgssearchwidgettoolbutton.h
+index 177cd1704c..11c142d88d 100644
+--- a/src/gui/editorwidgets/qgssearchwidgettoolbutton.h
++++ b/src/gui/editorwidgets/qgssearchwidgettoolbutton.h
+@@ -16,7 +16,7 @@
+ #ifndef QGSSEARCHWIDGETTOOLBUTTON_H
+ #define QGSSEARCHWIDGETTOOLBUTTON_H
+ 
+-#include "editorwidgets/core/qgssearchwidgetwrapper.h"
++#include "qgssearchwidgetwrapper.h"
+ #include "qgis_sip.h"
+ #include <QToolButton>
+ #include "qgis_gui.h"
+diff --git a/src/gui/processing/models/qgsmodelgroupboxdefinitionwidget.h b/src/gui/processing/models/qgsmodelgroupboxdefinitionwidget.h
+index ecfd294b57..46788290c5 100644
+--- a/src/gui/processing/models/qgsmodelgroupboxdefinitionwidget.h
++++ b/src/gui/processing/models/qgsmodelgroupboxdefinitionwidget.h
+@@ -21,7 +21,7 @@
+ 
+ #include <QWidget>
+ #include <QDialog>
+-#include "processing/models/qgsprocessingmodelgroupbox.h"
++#include "qgsprocessingmodelgroupbox.h"
+ #include "qgis_gui.h"
+ 
+ #define SIP_NO_FILE
+diff --git a/src/gui/processing/models/qgsmodelinputreorderwidget.h b/src/gui/processing/models/qgsmodelinputreorderwidget.h
+index 2197f9be95..dd77986b7c 100644
+--- a/src/gui/processing/models/qgsmodelinputreorderwidget.h
++++ b/src/gui/processing/models/qgsmodelinputreorderwidget.h
+@@ -21,7 +21,7 @@
+ #include "qgis.h"
+ #include "qgis_gui.h"
+ #include "ui_qgsmodelinputreorderwidgetbase.h"
+-#include "processing/models/qgsprocessingmodelparameter.h"
++#include "qgsprocessingmodelparameter.h"
+ #include <QDialog>
+ 
+ class QStandardItemModel;
+diff --git a/src/gui/processing/qgsprocessingalgorithmdialogbase.h b/src/gui/processing/qgsprocessingalgorithmdialogbase.h
+index e6fec11ece..b8eca1bad5 100644
+--- a/src/gui/processing/qgsprocessingalgorithmdialogbase.h
++++ b/src/gui/processing/qgsprocessingalgorithmdialogbase.h
+@@ -20,8 +20,8 @@
+ #include "qgis_gui.h"
+ #include "ui_qgsprocessingalgorithmdialogbase.h"
+ #include "ui_qgsprocessingalgorithmprogressdialogbase.h"
+-#include "processing/qgsprocessingcontext.h"
+-#include "processing/qgsprocessingfeedback.h"
++#include "qgsprocessingcontext.h"
++#include "qgsprocessingfeedback.h"
+ #include "qgsprocessingwidgetwrapper.h"
+ 
+ ///@cond NOT_STABLE
+diff --git a/src/gui/processing/qgsprocessingwidgetwrapperimpl.h b/src/gui/processing/qgsprocessingwidgetwrapperimpl.h
+index ed7354b763..1d1cf8261c 100644
+--- a/src/gui/processing/qgsprocessingwidgetwrapperimpl.h
++++ b/src/gui/processing/qgsprocessingwidgetwrapperimpl.h
+@@ -24,7 +24,7 @@
+ #include "qgsprocessingparameterdefinitionwidget.h"
+ #include "qgsmaptool.h"
+ #include "qgsprocessingcontext.h"
+-#include "processing/models/qgsprocessingmodelchildparametersource.h"
++#include "qgsprocessingmodelchildparametersource.h"
+ 
+ #include <QAbstractButton>
+ 
+diff --git a/src/providers/spatialite/qgsspatialiteprovider.cpp b/src/providers/spatialite/qgsspatialiteprovider.cpp
+index 7dc7f49147..0922f6efbf 100644
+--- a/src/providers/spatialite/qgsspatialiteprovider.cpp
++++ b/src/providers/spatialite/qgsspatialiteprovider.cpp
+@@ -4568,10 +4568,42 @@ bool QgsSpatiaLiteProvider::addAttributes( const QList<QgsField> &attributes )
+ 
+   for ( QList<QgsField>::const_iterator iter = attributes.begin(); iter != attributes.end(); ++iter )
+   {
+-    sql = QStringLiteral( "ALTER TABLE \"%1\" ADD COLUMN \"%2\" %3" )
++     QString defaultValue;
++     if (iter->defaultValueDefinition().isValid())
++     {      
++       switch (iter->type())
++       {
++       case QVariant::Date:
++       case QVariant::Time:
++       case QVariant::DateTime:
++       case QVariant::String:
++       case QVariant::Map:        
++         if (!defaultValue.startsWith('\''))
++         {
++           defaultValue = iter->defaultValueDefinition().expression();
++           defaultValue.replace(QLatin1String("'"), QLatin1String("''"));
++           defaultValue = QString(" DEFAULT '%1'").arg(defaultValue);
++         }
++         else
++           defaultValue = " DEFAULT " + iter->defaultValueDefinition().expression();
++         break;
++ 
++       default:
++         defaultValue = " DEFAULT " + iter->defaultValueDefinition().expression();
++         break;
++       }
++ 
++       if (defaultValue.isEmpty() && iter->constraints().constraints() & QgsFieldConstraints::ConstraintNotNull)
++         defaultValue = " DEFAULT '' ";
++     }
++ 
++     if (iter->constraints().constraints() & QgsFieldConstraints::ConstraintNotNull)
++       defaultValue += " NOT NULL ";
++
++    sql = QStringLiteral( "ALTER TABLE \"%1\" ADD COLUMN \"%2\" %3 %4" )
+           .arg( mTableName,
+                 iter->name(),
+-                iter->typeName() );
++                iter->typeName(), defaultValue);
+     ret = exec_sql( sqliteHandle( ), sql, uri().uri(), errMsg, QGS_QUERY_LOG_ORIGIN );
+     if ( ret != SQLITE_OK )
+     {
+diff --git a/src/providers/wfs/qgswfsprovider.cpp b/src/providers/wfs/qgswfsprovider.cpp
+index fb84c23c95..6a63da2f4b 100644
+--- a/src/providers/wfs/qgswfsprovider.cpp
++++ b/src/providers/wfs/qgswfsprovider.cpp
+@@ -164,7 +164,7 @@ QgsWFSProvider::QgsWFSProvider( const QString &uri, const ProviderOptions &optio
+   };
+ 
+   //Failed to detect feature type from describeFeatureType -> get first feature from layer to detect type
+-  if ( mShared->mWKBType == QgsWkbTypes::Unknown )
++  //if ( mShared->mWKBType == QgsWkbTypes::Unknown )
+   {
+     GetGeometryTypeFromOneFeature();
+ 
+@@ -758,6 +758,18 @@ void QgsWFSProvider::featureReceivedAnalyzeOneFeature( QVector<QgsFeatureUniqueI
+           }
+         }
+       }
++
++      QgsPoint point = *(geometry.vertices_begin());
++
++      if ( point.is3D() || point.dropZValue() )
++      {
++        mShared->mWKBType = QgsWkbTypes::addZ(mShared->mWKBType);
++      }
++
++      if ( point.isMeasure() || point.dropMValue() )
++      {
++        mShared->mWKBType = QgsWkbTypes::addM(mShared->mWKBType);
++      }
+     }
+   }
+ }
+diff --git a/src/python/CMakeLists.txt b/src/python/CMakeLists.txt
+index 308027a940..5c4a10f3b2 100644
+--- a/src/python/CMakeLists.txt
++++ b/src/python/CMakeLists.txt
+@@ -1,6 +1,10 @@
+ set(QGISPYTHON_SRCS qgispython.cpp qgspythonutilsimpl.cpp)
+ 
+-add_library (qgispython SHARED ${QGISPYTHON_SRCS})
++SET(QGISPYTHON_HDRS
++  qgspythonutils.h
++)
++
++add_library (qgispython SHARED ${QGISPYTHON_SRCS} ${QGISPYTHON_HDRS})
+ 
+ # require c++17
+ target_compile_features(qgispython PRIVATE cxx_std_17)
+@@ -37,11 +41,22 @@ GENERATE_EXPORT_HEADER(
+    EXPORT_FILE_NAME qgis_python.h
+  )
+ 
++set(QGISPYTHON_HDRS ${QGISPYTHON_HDRS} ${CMAKE_CURRENT_BINARY_DIR}/qgis_python.h)
++
+ if (APPLE)
+   set_target_properties(qgispython PROPERTIES BUILD_WITH_INSTALL_RPATH TRUE)
+ endif()
+ 
++IF (APPLE)
++  INSTALL(FILES ${QGISPYTHON_HDRS} DESTINATION ${QGIS_FW_SUBDIR}/qgispython.framework/Headers)
++ELSE (APPLE)
++  INSTALL(FILES ${QGISPYTHON_HDRS} DESTINATION ${QGIS_INCLUDE_DIR})
++ENDIF (APPLE)
++
+ install(TARGETS qgispython
+   RUNTIME DESTINATION ${QGIS_BIN_DIR}
+   LIBRARY DESTINATION ${QGIS_LIB_DIR}
++  ARCHIVE DESTINATION ${QGIS_LIB_DIR}
++  FRAMEWORK DESTINATION ${QGIS_FW_SUBDIR}
++  PUBLIC_HEADER DESTINATION ${QGIS_INCLUDE_DIR}
+ )
+diff --git a/src/python/qgspythonutilsimpl.cpp b/src/python/qgspythonutilsimpl.cpp
+index a924c9c2aa..0d8f31c9ca 100644
+--- a/src/python/qgspythonutilsimpl.cpp
++++ b/src/python/qgspythonutilsimpl.cpp
+@@ -17,7 +17,7 @@
+ // otherwise issues some warnings
+ #ifdef _MSC_VER
+ #ifdef _DEBUG
+-#undef _DEBUG
++//#undef _DEBUG
+ #endif
+ #endif
+ #include <Python.h>
+diff --git a/src/server/CMakeLists.txt b/src/server/CMakeLists.txt
+index f0d59edfeb..74b5698a9c 100644
+--- a/src/server/CMakeLists.txt
++++ b/src/server/CMakeLists.txt
+@@ -93,7 +93,7 @@ add_library(qgis_server SHARED ${QGIS_SERVER_SRCS} ${QGIS_SERVER_HDRS})
+ # require c++17
+ target_compile_features(qgis_server PRIVATE cxx_std_17)
+ 
+-target_include_directories(qgis_server SYSTEM PRIVATE
++target_include_directories(qgis_server SYSTEM PUBLIC
+   ${FCGI_INCLUDE_DIR}
+ )
+ 
+diff --git a/src/server/qgsservercachemanager.h b/src/server/qgsservercachemanager.h
+index 99565b7b52..435d062e79 100644
+--- a/src/server/qgsservercachemanager.h
++++ b/src/server/qgsservercachemanager.h
+@@ -19,8 +19,18 @@
+ #ifndef QGSSERVERCACHEMANAGER_H
+ #define QGSSERVERCACHEMANAGER_H
+ 
++#include "qgsconfig.h"
++
++#ifdef HAVE_SERVER_PYTHON_PLUGINS
+ #include "qgsservercachefilter.h"
+ #include "qgsaccesscontrol.h"
++#else
++#include <QMultiMap>
++class QgsServerCacheFilter;
++typedef QMultiMap<int, QgsServerCacheFilter*> QgsServerCacheFilterMap;
++class QgsAccessControl;
++class QgsAccessControlFilter;
++#endif
+ #include "qgsserverrequest.h"
+ 
+ #include <QDomDocument>
+diff --git a/src/server/qgsserverinterfaceimpl.h b/src/server/qgsserverinterfaceimpl.h
+index d6a83bd153..7f44675abe 100644
+--- a/src/server/qgsserverinterfaceimpl.h
++++ b/src/server/qgsserverinterfaceimpl.h
+@@ -24,7 +24,11 @@
+ 
+ #include "qgsserverinterface.h"
+ #include "qgscapabilitiescache.h"
++#ifdef HAVE_SERVER_PYTHON_PLUGINS
+ #include "qgsservercachemanager.h"
++#else
++class QgsServerCacheManager;
++#endif
+ 
+ /**
+  * \ingroup server
+diff --git a/src/ui/qgsdualviewbase.ui b/src/ui/qgsdualviewbase.ui
+index bea9805938..9909fa7b67 100644
+--- a/src/ui/qgsdualviewbase.ui
++++ b/src/ui/qgsdualviewbase.ui
+@@ -399,12 +399,12 @@
+   <customwidget>
+    <class>QgsAttributeTableView</class>
+    <extends>QTableView</extends>
+-   <header>attributetable/qgsattributetableview.h</header>
++   <header>qgsattributetableview.h</header>
+   </customwidget>
+   <customwidget>
+    <class>QgsFeatureListView</class>
+    <extends>QListView</extends>
+-   <header>attributetable/qgsfeaturelistview.h</header>
++   <header>qgsfeaturelistview.h</header>
+   </customwidget>
+   <customwidget>
+    <class>QgsPanelWidgetStack</class>
+diff --git a/src/ui/qgsnewhttpconnectionbase.ui b/src/ui/qgsnewhttpconnectionbase.ui
+index 699c1cadee..cf66b3b3c6 100644
+--- a/src/ui/qgsnewhttpconnectionbase.ui
++++ b/src/ui/qgsnewhttpconnectionbase.ui
+@@ -326,7 +326,7 @@
+   <customwidget>
+    <class>QgsAuthSettingsWidget</class>
+    <extends>QWidget</extends>
+-   <header>auth/qgsauthsettingswidget.h</header>
++   <header>qgsauthsettingswidget.h</header>
+    <container>1</container>
+   </customwidget>
+   <customwidget>
+diff --git a/src/ui/qgsoptionsbase.ui b/src/ui/qgsoptionsbase.ui
+index 975f8cacd1..ee37b56478 100644
+--- a/src/ui/qgsoptionsbase.ui
++++ b/src/ui/qgsoptionsbase.ui
+@@ -6069,7 +6069,7 @@ p, li { white-space: pre-wrap; }
+   <customwidget>
+    <class>QgsAuthSettingsWidget</class>
+    <extends>QWidget</extends>
+-   <header>auth/qgsauthsettingswidget.h</header>
++   <header>qgsauthsettingswidget.h</header>
+    <container>1</container>
+   </customwidget>
+   <customwidget>

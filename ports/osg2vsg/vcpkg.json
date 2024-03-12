@@ -1,0 +1,19 @@
+{
+  "name": "osg2vsg",
+  "version": "0.1.0",
+  "description": "Adapter library for converting OpenSceneGraph Images and 3D models to VulkanSceneGraph",
+  "homepage": "https://github.com/vsg-dev/osg2vsg",
+  "license": "MIT",
+  "dependencies": [
+    "vsg",
+	"osg",
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}

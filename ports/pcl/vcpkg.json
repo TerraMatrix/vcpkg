@@ -46,7 +46,7 @@
           "features": [
             "opengl",
             "openni2",
-            "qt",
+            "qt5",
             "vtk"
           ]
         }
@@ -109,13 +109,24 @@
         }
       ]
     },
-    "qt": {
+    "qt6": {
       "description": "Qt support for PCL",
       "dependencies": [
         {
           "name": "vtk",
           "features": [
-            "qt"
+            "qt6"
+          ]
+        }
+      ]
+    },
+    "qt5": {
+      "description": "Qt support for PCL",
+      "dependencies": [
+        {
+          "name": "vtk",
+          "features": [
+            "qt5"
           ]
         }
       ]

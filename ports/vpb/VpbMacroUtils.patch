@@ -1,0 +1,183 @@
+diff --git a/CMakeModules/VpbMacroUtils.cmake b/CMakeModules/VpbMacroUtils.cmake
+--- a/CMakeModules/VpbMacroUtils.cmake
++++ b/CMakeModules/VpbMacroUtils.cmake
+@@ -13,21 +13,34 @@
+ MACRO(LINK_WITH_VARIABLES TRGTNAME)
+     FOREACH(varname ${ARGN})
+         IF(${varname}_DEBUG)
++            IF(${varname}_RELEASE)
++                TARGET_LINK_LIBRARIES(${TRGTNAME} optimized "${${varname}_RELEASE}" debug "${${varname}_DEBUG}")
++            ELSE(${varname}_RELEASE)
+             TARGET_LINK_LIBRARIES(${TRGTNAME} optimized "${${varname}}" debug "${${varname}_DEBUG}")
++            ENDIF(${varname}_RELEASE)
+         ELSE(${varname}_DEBUG)
+-            TARGET_LINK_LIBRARIES(${TRGTNAME} "${${varname}}" )
++            TARGET_LINK_LIBRARIES(${TRGTNAME} ${${varname}} )
+         ENDIF(${varname}_DEBUG)
+     ENDFOREACH(varname)
+ ENDMACRO(LINK_WITH_VARIABLES TRGTNAME)
+ 
+ MACRO(LINK_INTERNAL TRGTNAME)
+-    IF((${CMAKE_MAJOR_VERSION} EQUAL 2 AND ${CMAKE_MINOR_VERSION} GREATER 4) OR (${CMAKE_MAJOR_VERSION} GREATER 2))
++    IF(NOT CMAKE24)
+         TARGET_LINK_LIBRARIES(${TRGTNAME} ${ARGN})
+-    ELSE((${CMAKE_MAJOR_VERSION} EQUAL 2 AND ${CMAKE_MINOR_VERSION} GREATER 4) OR (${CMAKE_MAJOR_VERSION} GREATER 2))
++    ELSE(NOT CMAKE24)
+         FOREACH(LINKLIB ${ARGN})
+-            TARGET_LINK_LIBRARIES(${TRGTNAME} optimized "${LINKLIB}" debug "${LINKLIB}${CMAKE_DEBUG_POSTFIX}")
++            IF(MSVC AND OSG_MSVC_VERSIONED_DLL)
++                #when using versioned names, the .dll name differ from .lib name, there is a problem with that:
++                #CMake 2.4.7, at least seem to use PREFIX instead of IMPORT_PREFIX  for computing linkage info to use into projects,
++                # so we full path name to specify linkage, this prevent automatic inferencing of dependencies, so we add explicit depemdencies
++                #to library targets used
++                TARGET_LINK_LIBRARIES(${TRGTNAME} optimized "${OUTPUT_LIBDIR}/${LINKLIB}${CMAKE_RELEASE_POSTFIX}.lib" debug "${OUTPUT_LIBDIR}/${LINKLIB}${CMAKE_DEBUG_POSTFIX}.lib")
++                ADD_DEPENDENCIES(${TRGTNAME} ${LINKLIB})
++            ELSE(MSVC AND OSG_MSVC_VERSIONED_DLL)
++                TARGET_LINK_LIBRARIES(${TRGTNAME} optimized "${LINKLIB}${CMAKE_RELEASE_POSTFIX}" debug "${LINKLIB}${CMAKE_DEBUG_POSTFIX}")
++            ENDIF(MSVC AND OSG_MSVC_VERSIONED_DLL)
+         ENDFOREACH(LINKLIB)
+-    ENDIF((${CMAKE_MAJOR_VERSION} EQUAL 2 AND ${CMAKE_MINOR_VERSION} GREATER 4) OR (${CMAKE_MAJOR_VERSION} GREATER 2))
++    ENDIF(NOT CMAKE24)
+ ENDMACRO(LINK_INTERNAL TRGTNAME)
+ 
+ MACRO(LINK_EXTERNAL TRGTNAME)
+@@ -43,7 +56,7 @@ ENDMACRO(LINK_EXTERNAL TRGTNAME)
+ 
+ MACRO(LINK_CORELIB_DEFAULT CORELIB_NAME)
+     LINK_EXTERNAL(${CORELIB_NAME} ${OPENGL_gl_LIBRARY})
+-    LINK_WITH_VARIABLES(${CORELIB_NAME} OPENTHREADS_LIBRARY)
++    #LINK_WITH_VARIABLES(${CORELIB_NAME} OPENTHREADS_LIBRARY)
+     IF(VIRTUALPLANETBUILDER_SONAMES)
+       SET_TARGET_PROPERTIES(${CORELIB_NAME} PROPERTIES VERSION ${VIRTUALPLANETBUILDER_VERSION} SOVERSION ${VIRTUALPLANETBUILDER_SOVERSION})
+     ENDIF(VIRTUALPLANETBUILDER_SONAMES)
+@@ -65,7 +78,7 @@ ENDMACRO(LINK_CORELIB_DEFAULT CORELIB_NAME)
+ MACRO(SETUP_LINK_LIBRARIES)
+     ######################################################################
+     #
+-    # This set up the libraries to link to, it assumes there are two variable: one common for a group of examples or plagins
++    # This set up the libraries to link to, it assumes there are two variable: one common for a group of examples or plugins
+     # kept in the variable TARGET_COMMON_LIBRARIES and an example or plugin specific kept in TARGET_ADDED_LIBRARIES
+     # they are combined in a single list checked for unicity
+     # the suffix ${CMAKE_DEBUG_POSTFIX} is used for differentiating optimized and debug
+@@ -90,13 +103,18 @@ MACRO(SETUP_LINK_LIBRARIES)
+ #            TARGET_LINK_LIBRARIES(${TARGET_TARGETNAME} optimized ${LINKLIB} debug "${LINKLIB}${CMAKE_DEBUG_POSTFIX}")
+ #    ENDFOREACH(LINKLIB)
+     LINK_INTERNAL(${TARGET_TARGETNAME} ${TARGET_LIBRARIES})
+-
+-    FOREACH(LINKLIB ${TARGET_EXTERNAL_LIBRARIES})
+-            TARGET_LINK_LIBRARIES(${TARGET_TARGETNAME} ${LINKLIB})
+-    ENDFOREACH(LINKLIB)
++#    FOREACH(LINKLIB ${TARGET_EXTERNAL_LIBRARIES})
++#            TARGET_LINK_LIBRARIES(${TARGET_TARGETNAME} ${LINKLIB})
++#    ENDFOREACH(LINKLIB)
++        TARGET_LINK_LIBRARIES(${TARGET_TARGETNAME} ${TARGET_EXTERNAL_LIBRARIES})
+         IF(TARGET_LIBRARIES_VARS)
+             LINK_WITH_VARIABLES(${TARGET_TARGETNAME} ${TARGET_LIBRARIES_VARS})
+         ENDIF(TARGET_LIBRARIES_VARS)
++    IF(MSVC  AND OSG_MSVC_VERSIONED_DLL)
++        #when using full path name to specify linkage, it seems that already linked libs must be specified
++            LINK_EXTERNAL(${TARGET_TARGETNAME} ${ALL_GL_LIBRARIES})
++    ENDIF(MSVC AND OSG_MSVC_VERSIONED_DLL)
++
+ ENDMACRO(SETUP_LINK_LIBRARIES)
+ 
+ ############################################################################################
+@@ -126,12 +144,42 @@ MACRO(SETUP_PLUGIN PLUGIN_NAME)
+         ADD_LIBRARY(${TARGET_TARGETNAME} STATIC ${TARGET_SRC} ${TARGET_H})
+     ENDIF(DYNAMIC_VIRTUALPLANETBUILDER)
+ 
+-    #not sure if needed, but for plugins only msvc need the d suffix
+-    IF(NOT MSVC)
+-        SET_TARGET_PROPERTIES(${TARGET_TARGETNAME} PROPERTIES DEBUG_POSTFIX "")
+-    ENDIF(NOT MSVC)
+-    SET_TARGET_PROPERTIES(${TARGET_TARGETNAME} PROPERTIES PROJECT_LABEL "${TARGET_LABEL}")
++    IF(MSVC)
++        IF(NOT CMAKE24)
++            SET_OUTPUT_DIR_PROPERTY_260(${TARGET_TARGETNAME} "${OSG_PLUGINS}")        # Sets the ouput to be /osgPlugin-X.X.X ; also ensures the /Debug /Release are removed
++        ELSE(NOT CMAKE24)
++
++            IF(OSG_MSVC_VERSIONED_DLL)
++
++                #this is a hack... the build place is set to lib/<debug or release> by LIBARARY_OUTPUT_PATH equal to OUTPUT_LIBDIR
++                #the .lib will be crated in ../ so going straight in lib by the IMPORT_PREFIX property
++                #because we want dll placed in OUTPUT_BINDIR ie the bin folder sibling of lib, we can use ../../bin to go there,
++                #it is hardcoded, we should compute OUTPUT_BINDIR position relative to OUTPUT_LIBDIR ... to be implemented
++                #changing bin to something else breaks this hack
++                #the dll are placed in bin/${OSG_PLUGINS}
+ 
++                IF(NOT MSVC_IDE)
++                    SET_TARGET_PROPERTIES(${TARGET_TARGETNAME} PROPERTIES PREFIX "../bin/${OSG_PLUGINS}/")
++                ELSE(NOT MSVC_IDE)
++                    SET_TARGET_PROPERTIES(${TARGET_TARGETNAME} PROPERTIES PREFIX "../../bin/${OSG_PLUGINS}/" IMPORT_PREFIX "../")
++                ENDIF(NOT MSVC_IDE)
++
++            ELSE(OSG_MSVC_VERSIONED_DLL)
++
++                #in standard mode (unversioned) the .lib and .dll are placed in lib/<debug or release>/${OSG_PLUGINS}.
++                #here the PREFIX property has been used, the same result would be accomplidhe by prepending ${OSG_PLUGINS}/ to OUTPUT_NAME target property
++
++                SET_TARGET_PROPERTIES(${TARGET_TARGETNAME} PROPERTIES PREFIX "${OSG_PLUGINS}/")
++            ENDIF(OSG_MSVC_VERSIONED_DLL)
++
++        ENDIF(NOT CMAKE24)
++    ENDIF(MSVC)
++
++    SET_TARGET_PROPERTIES(${TARGET_TARGETNAME} PROPERTIES PROJECT_LABEL "${TARGET_LABEL}")
++    SET_TARGET_PROPERTIES(${TARGET_TARGETNAME} PROPERTIES FOLDER "Plugins")
++    IF(APPLE)
++        SET_TARGET_PROPERTIES(${TARGET_TARGETNAME} PROPERTIES XCODE_ATTRIBUTE_WARNING_CFLAGS "")
++    ENDIF()
+     SETUP_LINK_LIBRARIES()
+ 
+ #the installation path are differentiated for win32 that install in bib versus other architecture that install in lib${LIB_POSTFIX}/${VPB_PLUGINS}
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 713cea4c..5e138dc4 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -188,7 +188,7 @@ ENDIF()
+ 
+ IF(UNIX AND NOT WIN32 AND NOT APPLE)
+   IF(CMAKE_SIZEOF_VOID_P MATCHES "8")
+-      SET(LIB_POSTFIX "64" CACHE STRING "suffix for 32/64 dir placement")
++      SET(LIB_POSTFIX "" CACHE STRING "suffix for 32/64 dir placement")
+       MARK_AS_ADVANCED(LIB_POSTFIX)
+   ENDIF()
+ ENDIF()
+
+diff --git a/applications/osgdem/osgdem.cpp b/applications/osgdem/osgdem.cpp
+index 0c1b1286..3075703a 100644
+--- a/applications/osgdem/osgdem.cpp
++++ b/applications/osgdem/osgdem.cpp
+@@ -28,6 +28,31 @@ int main(int argc, char** argv)
+ 
+     osg::ArgumentParser arguments(&argc,argv);
+ 
++    {
++        const char* exe_path = argv[0];
++        std::string gdalDataPath = CPLGetPath(exe_path);
++        gdalDataPath += "\\gdal-data";
++
++        VSIStatBufL  sStatBuf;
++        if (VSIStatL(gdalDataPath.c_str(), &sStatBuf) == 0)
++            CPLSetConfigOption("GDAL_DATA", gdalDataPath.c_str());
++
++        std::string projPath = CPLGetPath(exe_path);
++        projPath += "\\proj";
++        if (VSIStatL(projPath.c_str(), &sStatBuf) == 0)
++        {
++            static char szProjConf[1024];
++            snprintf(szProjConf, sizeof(szProjConf), "PROJ_LIB=%s", projPath.c_str());
++            putenv(szProjConf);
++        }
++
++#ifdef OSG_USE_UTF8_FILENAME
++        CPLSetConfigOption("GDAL_FILENAME_IS_UTF8", "YES");
++#else
++        CPLSetConfigOption("GDAL_FILENAME_IS_UTF8", "NO");
++#endif
++    }
++
+     // set up the usage document, in case we need to print out how to use this program.
+     arguments.getApplicationUsage()->setApplicationName(arguments.getApplicationName());
+     arguments.getApplicationUsage()->setDescription(arguments.getApplicationName()+" application is utility tools which can be used to generate paged geospatial terrain databases.");

@@ -36,9 +36,9 @@ function(z_vcpkg_fixup_rpath_in_dir)
             # compute path relative to lib
             file(RELATIVE_PATH relative_to_lib "${elf_file_dir}" "${current_prefix}/lib")
             if(relative_to_lib STREQUAL "")
-                set(rpath "\$ORIGIN")
+                set(rpath "\$ORIGIN:\$ORIGIN/lib:\$ORIGIN/../lib")
             else()
-                set(rpath "\$ORIGIN:\$ORIGIN/${relative_to_lib}")
+                set(rpath "\$ORIGIN:\$ORIGIN/lib:\$ORIGIN/../lib:\$ORIGIN/${relative_to_lib}")
             endif()
 
             # If this fails, the file is not an elf

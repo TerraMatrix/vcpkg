@@ -65,7 +65,7 @@ index 6f22319..de85066 100644
  
  # 4. Dependencies
 -include(embree)
-+find_package(embree 3 CONFIG REQUIRED)
++find_package(embree  CONFIG REQUIRED)
  target_link_libraries(igl_embree ${IGL_SCOPE}
      igl::core
 -    embree::embree

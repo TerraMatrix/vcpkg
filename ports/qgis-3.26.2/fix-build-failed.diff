@@ -1,0 +1,50 @@
+diff --git a/cmake/FindProj.cmake b/cmake/FindProj.cmake
+index ce9a7f3..09ca73d 100644
+--- a/cmake/FindProj.cmake
++++ b/cmake/FindProj.cmake
+@@ -36,6 +36,7 @@ IF (APPLE)
+   ENDIF ()
+ ENDIF (APPLE)
+ 
++IF (NOT PROJ_INCLUDE_DIR)
+ FIND_PATH(PROJ_INCLUDE_DIR proj_api.h
+   "$ENV{INCLUDE}"
+   "$ENV{LIB_DIR}/include"
+@@ -46,8 +47,9 @@ IF (NOT PROJ_INCLUDE_DIR)
+     "$ENV{LIB_DIR}/include"
+     )
+ ENDIF (NOT PROJ_INCLUDE_DIR)
++ENDIF (NOT PROJ_INCLUDE_DIR)
+ 
+-FIND_LIBRARY(PROJ_LIBRARY NAMES proj_i proj PATHS
++FIND_LIBRARY(PROJ_LIBRARY NAMES proj_i proj proj_i_d proj_d PATHS
+   "$ENV{LIB}"
+   "$ENV{LIB_DIR}/lib"
+   )
+
+diff --git a/cmake/FindFcgi.cmake b/cmake/FindFcgi.cmake
+index bbb7cc4..a5317be 100644
+--- a/cmake/FindFcgi.cmake
++++ b/cmake/FindFcgi.cmake
+@@ -11,6 +11,7 @@ FIND_PATH(FCGI_INCLUDE_DIR
+   /usr/local/include
+   /usr/include/fastcgi
+   "$ENV{LIB_DIR}/include"
++  "$ENV{LIB_DIR}/include/fastcgi"
+   $ENV{INCLUDE}
+   )
+ FIND_LIBRARY(FCGI_LIBRARY NAMES fcgi libfcgi PATHS 
+
+diff --git a/cmake/FindPoly2Tri.cmake b/cmake/FindPoly2Tri.cmake
+index 87fb34f..ac87c97 100644
+--- a/cmake/FindPoly2Tri.cmake
++++ b/cmake/FindPoly2Tri.cmake
+@@ -11,7 +11,7 @@
+ #  Poly2Tri_LIBRARY - The library needed to use Poly2Tri
+ 
+ find_path(Poly2Tri_INCLUDE_DIR poly2tri.h
+-          HINTS $ENV{LIB_DIR}/include)
++          HINTS $ENV{LIB_DIR}/include $ENV{LIB_DIR}/include/poly2tri)
+ 
+ find_library(Poly2Tri_LIBRARY NAMES poly2tri libpoly2tri
+              HINTS $ENV{LIB_DIR}/lib)

@@ -72,7 +72,7 @@
             "geojson",
             "mpi",
             "python",
-            "qt"
+            "qt5"
           ]
         },
         {
@@ -171,7 +171,7 @@
           "name": "vtk",
           "default-features": false,
           "features": [
-            "qt"
+            "qt5"
           ]
         },
         {
@@ -194,8 +194,8 @@
         }
       ]
     },
-    "qt": {
-      "description": "Qt functionality for VTK",
+    "qt6": {
+      "description": "Qt6 functionality for VTK",
       "dependencies": [
         {
           "name": "qtbase",
@@ -210,6 +210,18 @@
         "qtimageformats",
         {
           "name": "qttools",
+          "default-features": false
+        }
+      ]
+    },
+    "qt5": {
+      "description": "Qt5 functionality for VTK",
+      "dependencies": [
+        "qt5-base",
+        "qt5-declarative",
+        "qt5-imageformats",
+        {
+          "name": "qt5-tools",
           "default-features": false
         }
       ]

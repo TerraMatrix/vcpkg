@@ -1,5 +1,14 @@
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
+@@ -262,7 +262,7 @@ if(CMAKE_C_COMPILER_ID MATCHES "AppleClang|Clang|GNU|Intel" AND NOT CMAKE_SYSTEM
+ endif()
+ 
+ if (MSVC AND MSVC_VERSION GREATER_EQUAL 1914)
+-  list(APPEND mi_cflags /Zc:__cplusplus)
++  list(APPEND mi_cflags /Zc:__cplusplus /permissive-)
+ endif()
+ 
+ # extra needed libraries
 @@ -380,11 +380,11 @@ target_link_libraries(mimalloc PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/bin/mimalloc-redirect${MIMALLOC_REDIRECT_SUFFIX}.lib)
      add_custom_command(TARGET mimalloc POST_BUILD
        COMMAND "${CMAKE_COMMAND}" -E copy "${CMAKE_CURRENT_SOURCE_DIR}/bin/mimalloc-redirect${MIMALLOC_REDIRECT_SUFFIX}.dll" $<TARGET_FILE_DIR:mimalloc>

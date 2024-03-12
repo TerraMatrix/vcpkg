@@ -60,7 +60,7 @@ vcpkg_cmake_configure(
         "-DBUILD_PLUGINS=${PLUGINS}"
         -DBUILD_TESTS=OFF
         -DBUILD_TOOLS=OFF
-        -DBUILD_WITH_QT6=ON
+        -DBUILD_WITH_QT6=OFF
         -DQCA_SUFFIX=OFF
         -DQCA_FEATURE_INSTALL_DIR=share/qca/mkspecs/features
         -DOSX_FRAMEWORK=OFF

@@ -1,0 +1,897 @@
+diff --git a/applications/osgarchive/osgarchive.cpp b/applications/osgarchive/osgarchive.cpp
+index 8be99851d..d19a8b00c 100644
+--- a/applications/osgarchive/osgarchive.cpp
++++ b/applications/osgarchive/osgarchive.cpp
+@@ -17,6 +17,7 @@
+ #include <osgDB/ReadFile>
+ #include <osgDB/WriteFile>
+ #include <osgDB/FileUtils>
++#include <osgDB/ConvertUTF>
+ 
+ #include <iostream>
+ #include <algorithm>
+@@ -68,17 +69,21 @@ int main( int argc, char **argv )
+     {
+         if (!arguments.isOption(pos))
+         {
++            std::string filePath = arguments[pos];
++#ifdef OSG_USE_UTF8_FILENAME
++            filePath = osgDB::convertStringFromCurrentCodePageToUTF8(filePath);
++#endif
+             if (insert)
+             {
+-                std::string filePath = osgDB::findDataFile(arguments[pos]);
++                filePath = osgDB::findDataFile(filePath);
+                 osgDB::FileType fileType = osgDB::fileType(filePath);
+                 if (fileType==osgDB::REGULAR_FILE)
+                 {
+-                    files.push_back(arguments[pos]);
++                    files.push_back(filePath);
+                 }
+                 else if (fileType==osgDB::DIRECTORY)
+                 {
+-                    osgDB::DirectoryContents directory = osgDB::getDirectoryContents(arguments[pos]);
++                    osgDB::DirectoryContents directory = osgDB::getDirectoryContents(filePath);
+                     osgDB::DirectoryContents::iterator it = directory.begin();
+                     while( it != directory.end())
+                     {
+@@ -89,7 +94,7 @@ int main( int argc, char **argv )
+             }
+             else
+             {
+-                files.push_back(arguments[pos]);
++                files.push_back(filePath);
+             }
+         }
+     }
+@@ -124,6 +129,9 @@ int main( int argc, char **argv )
+ 
+     osg::ref_ptr<osgDB::Archive> archive;
+ 
++#ifdef OSG_USE_UTF8_FILENAME
++    archiveFilename = osgDB::convertStringFromCurrentCodePageToUTF8(archiveFilename);
++#endif
+     if (insert)
+     {
+         archive = osgDB::openArchive(archiveFilename, osgDB::Archive::WRITE);
+
+diff --git a/applications/osgconv/osgconv.cpp b/applications/osgconv/osgconv.cpp
+index 8604c1df8..513341e71 100644
+--- a/applications/osgconv/osgconv.cpp
++++ b/applications/osgconv/osgconv.cpp
+@@ -18,6 +18,7 @@
+ #include <osgDB/FileNameUtils>
+ #include <osgDB/ReaderWriter>
+ #include <osgDB/PluginQuery>
++#include <osgDB/ConvertUTF>
+ 
+ #include <osgUtil/Optimizer>
+ #include <osgUtil/Simplifier>
+@@ -636,6 +637,9 @@ int main( int argc, char **argv )
+     std::string libName;
+     while (arguments.read("-l",libName))
+     {
++#ifdef OSG_USE_UTF8_FILENAME
++        libName = osgDB::convertStringFromCurrentCodePageToUTF8(libName);
++#endif
+         if (osgDB::Registry::instance()->loadLibrary(libName)==osgDB::Registry::NOT_LOADED)
+         {
+             OSG_NOTICE<<"Unable to load library : "<<libName<<std::endl;
+@@ -761,7 +765,11 @@ int main( int argc, char **argv )
+     {
+         if (!arguments.isOption(pos))
+         {
+-            fileNames.push_back(arguments[pos]);
++            std::string fileName = arguments[pos];
++#ifdef OSG_USE_UTF8_FILENAME
++            fileName = osgDB::convertStringFromCurrentCodePageToUTF8(fileName);
++#endif
++            fileNames.push_back(fileName);
+         }
+     }
+ 
+
+diff --git a/applications/osgfilecache/osgfilecache.cpp b/applications/osgfilecache/osgfilecache.cpp
+index 0379198db..39dce1b64 100644
+--- a/applications/osgfilecache/osgfilecache.cpp
++++ b/applications/osgfilecache/osgfilecache.cpp
+@@ -25,6 +25,7 @@
+ #include <osgDB/FileUtils>
+ #include <osgDB/FileCache>
+ #include <osgDB/FileNameUtils>
++#include <osgDB/ConvertUTF>
+ 
+ #include <iostream>
+ #include <algorithm>
+@@ -443,6 +444,10 @@ int main( int argc, char **argv )
+         return 1;
+     }
+ 
++#ifdef OSG_USE_UTF8_FILENAME
++    fileCachePath = osgDB::convertStringFromCurrentCodePageToUTF8(fileCachePath);
++#endif
++
+     ldv.setFileCache(new osgDB::FileCache(fileCachePath));
+ 
+     unsigned int maxLevels = 0;
+
+diff --git a/applications/osgversion/osgversion.cpp b/applications/osgversion/osgversion.cpp
+index 2e6e0894d..fb2606cca 100644
+--- a/applications/osgversion/osgversion.cpp
++++ b/applications/osgversion/osgversion.cpp
+@@ -19,6 +19,8 @@
+ #include <osg/BoundingSphere>
+ #include <osg/Quat>
+ 
++#include <osgDB/ConvertUTF>
++
+ #ifdef BUILD_CONTRIBUTORS
+ extern void printContributors(const std::string& changeLog, bool printNumEntries);
+ #endif
+@@ -154,6 +156,9 @@ int main( int argc, char** argv)
+     while (arguments.read("-r",     changeLog) ||
+            arguments.read("--read", changeLog))
+     {
++#ifdef OSG_USE_UTF8_FILENAME
++        changeLog = osgDB::convertStringFromCurrentCodePageToUTF8(changeLog);
++#endif
+         printContributors(changeLog, arguments.read("--entries"));
+     }
+ #endif
+
+diff --git a/applications/osgviewer/osgviewer.cpp b/applications/osgviewer/osgviewer.cpp
+index d868c3faa..04654ca5a 100644
+--- a/applications/osgviewer/osgviewer.cpp
++++ b/applications/osgviewer/osgviewer.cpp
+@@ -10,6 +10,7 @@
+ */
+ 
+ #include <osgDB/ReadFile>
++#include <osgDB/ConvertUTF>
+ #include <osgUtil/Optimizer>
+ #include <osg/CoordinateSystemNode>
+ 
+@@ -77,6 +78,9 @@ int main(int argc, char** argv)
+     std::string url, username, password;
+     while(arguments.read("--login",url, username, password))
+     {
++#ifdef OSG_USE_UTF8_FILENAME
++        url = osgDB::convertStringFromCurrentCodePageToUTF8(url);
++#endif
+         osgDB::Registry::instance()->getOrCreateAuthenticationMap()->addAuthenticationDetails(
+             url,
+             new osgDB::AuthenticationDetails(username, password)
+@@ -86,6 +90,9 @@ int main(int argc, char** argv)
+     std::string device;
+     while(arguments.read("--device", device))
+     {
++#ifdef OSG_USE_UTF8_FILENAME
++        device = osgDB::convertStringFromCurrentCodePageToUTF8(device);
++#endif
+         osg::ref_ptr<osgGA::Device> dev = osgDB::readRefFile<osgGA::Device>(device);
+         if (dev.valid())
+         {
+@@ -111,6 +118,9 @@ int main(int argc, char** argv)
+         char keyForAnimationPath = '8';
+         while (arguments.read("-p",pathfile))
+         {
++#ifdef OSG_USE_UTF8_FILENAME
++            pathfile = osgDB::convertStringFromCurrentCodePageToUTF8(pathfile);
++#endif
+             osgGA::AnimationPathManipulator* apm = new osgGA::AnimationPathManipulator(pathfile);
+             if (apm && !apm->getAnimationPath()->empty())
+             {
+
+diff --git a/applications/present3D/ExportHTML.cpp b/applications/present3D/ExportHTML.cpp
+index 3c7de1397..563cbf249 100644
+--- a/applications/present3D/ExportHTML.cpp
++++ b/applications/present3D/ExportHTML.cpp
+@@ -14,6 +14,7 @@
+ #include "ExportHTML.h"
+ #include <osgDB/FileNameUtils>
+ #include <osgDB/WriteFile>
++#include <osgDB/fstream>
+ #include <sstream>
+ #include <iostream>
+ 
+@@ -133,7 +134,7 @@ bool ExportHTML::write(osgPresentation::SlideEventHandler* seh, osgViewer::Viewe
+         {
+             std::string htmlFileName = createFileName(html_basename, i, html_ext);
+ 
+-            std::ofstream fout(htmlFileName.c_str());
++            osgDB::ofstream fout(htmlFileName.c_str());
+             if (fout)
+             {
+                 std::string previous_file = i>0 ? createFileName(html_basename,i-1,html_ext) : "";
+
+diff --git a/applications/present3D/ReadShowFile.cpp b/applications/present3D/ReadShowFile.cpp
+index 21b7d4abb..dce311098 100644
+--- a/applications/present3D/ReadShowFile.cpp
++++ b/applications/present3D/ReadShowFile.cpp
+@@ -24,6 +24,7 @@
+ #include <osgDB/ReadFile>
+ #include <osgDB/FileNameUtils>
+ #include <osgDB/FileUtils>
++#include <osgDB/ConvertUTF>
+ 
+ #include <osgVolume/VolumeTile>
+ 
+@@ -216,12 +217,18 @@ osg::ref_ptr<osg::Node> p3d::readShowFiles(osg::ArgumentParser& arguments,const
+     std::string filename;
+     while (arguments.read("--image",filename))
+     {
++#ifdef OSG_USE_UTF8_FILENAME
++        filename = osgDB::convertStringFromCurrentCodePageToUTF8(filename);
++#endif
+         osg::ref_ptr<osg::Image> image = readRefImageFile(filename.c_str(), local_options.get());
+         if (image.valid()) nodeList.push_back(osg::createGeodeForImage(image));
+     }
+ 
+     while (arguments.read("--movie",filename))
+     {
++#ifdef OSG_USE_UTF8_FILENAME
++        filename = osgDB::convertStringFromCurrentCodePageToUTF8(filename);
++#endif
+         osg::ref_ptr<osg::Image> image = readRefImageFile(filename.c_str(), local_options.get());
+         osg::ImageStream* imageStream = dynamic_cast<osg::ImageStream*>(image.get());
+         if (imageStream)
+@@ -233,6 +240,9 @@ osg::ref_ptr<osg::Node> p3d::readShowFiles(osg::ArgumentParser& arguments,const
+ 
+     while (arguments.read("--dem",filename))
+     {
++#ifdef OSG_USE_UTF8_FILENAME
++        filename = osgDB::convertStringFromCurrentCodePageToUTF8(filename);
++#endif
+         osg::ref_ptr<osg::HeightField> hf = readRefHeightFieldFile(filename.c_str(), local_options.get());
+         if (hf)
+         {
+
+diff --git a/applications/present3D/SpellChecker.cpp b/applications/present3D/SpellChecker.cpp
+index 98ec2f317..ed16fccaa 100644
+--- a/applications/present3D/SpellChecker.cpp
++++ b/applications/present3D/SpellChecker.cpp
+@@ -13,6 +13,7 @@
+ 
+ #include <osgDB/FileNameUtils>
+ #include <osgDB/FileUtils>
++#include <osgDB/fstream>
+ #include <osg/Notify>
+ 
+ #include <iostream>
+@@ -30,7 +31,7 @@ void SpellChecker::checkP3dXml(const std::string& filename) const
+     std::string foundFileName = osgDB::findDataFile( filename );
+     if (foundFileName.empty()) return;
+ 
+-    std::ifstream fin(foundFileName.c_str());
++    osgDB::ifstream fin(foundFileName.c_str());
+ 
+     osgDB::XmlNode::Input input;
+     input.attach(fin);
+@@ -102,7 +103,7 @@ void XmlPatcher::stripP3dXml(const std::string& filename, std::ostream& fout) co
+     std::string foundFileName = osgDB::findDataFile( filename );
+     if (foundFileName.empty()) return;
+ 
+-    std::ifstream fin(foundFileName.c_str());
++    osgDB::ifstream fin(foundFileName.c_str());
+ 
+     osgDB::XmlNode::Input input;
+     input.attach(fin);
+@@ -157,7 +158,7 @@ osgDB::XmlNode* XmlPatcher::simplifyP3dXml(const std::string& filename) const
+     std::string foundFileName = osgDB::findDataFile( filename );
+     if (foundFileName.empty()) return 0;
+ 
+-    std::ifstream fin(foundFileName.c_str());
++    osgDB::ifstream fin(foundFileName.c_str());
+ 
+     osgDB::XmlNode::Input input;
+     input.attach(fin);
+@@ -211,7 +212,7 @@ osgDB::XmlNode* XmlPatcher::mergeP3dXml(const std::string& lhs_filename, const s
+     osg::ref_ptr<osgDB::XmlNode> rhs_doc = new osgDB::XmlNode;
+ 
+     {
+-        std::ifstream fin(lhs_foundFileName.c_str());
++        osgDB::ifstream fin(lhs_foundFileName.c_str());
+ 
+         osgDB::XmlNode::Input input;
+         input.attach(fin);
+@@ -222,7 +223,7 @@ osgDB::XmlNode* XmlPatcher::mergeP3dXml(const std::string& lhs_filename, const s
+     }
+ 
+     {
+-        std::ifstream fin(rhs_foundFileName.c_str());
++        osgDB::ifstream fin(rhs_foundFileName.c_str());
+ 
+         osgDB::XmlNode::Input input;
+         input.attach(fin);
+
+diff --git a/applications/present3D/present3D.cpp b/applications/present3D/present3D.cpp
+index ca2c5840e..4697a15f7 100644
+--- a/applications/present3D/present3D.cpp
++++ b/applications/present3D/present3D.cpp
+@@ -21,6 +21,7 @@
+ #include <osgDB/ReadFile>
+ #include <osgDB/WriteFile>
+ #include <osgDB/FileNameUtils>
++#include <osgDB/ConvertUTF>
+ #include <osgUtil/Optimizer>
+ 
+ #include <osgViewer/Viewer>
+@@ -337,6 +338,9 @@ int main( int argc, char **argv )
+     std::string url, username, password;
+     while(arguments.read("--login",url, username, password))
+     {
++#ifdef OSG_USE_UTF8_FILENAME
++        url = osgDB::convertStringFromCurrentCodePageToUTF8(url);
++#endif
+         osgDB::Registry::instance()->getOrCreateAuthenticationMap()->addAuthenticationDetails(
+             url,
+             new osgDB::AuthenticationDetails(username, password)
+@@ -362,6 +366,11 @@ int main( int argc, char **argv )
+     // check command line parameters for configuration file.
+     while (arguments.read("-c",configurationFile)) {}
+ 
++#ifdef OSG_USE_UTF8_FILENAME
++    if (!configurationFile.empty())
++        configurationFile = osgDB::convertStringFromCurrentCodePageToUTF8(configurationFile);
++#endif
++
+     osg::Vec4 clearColor(0.0f,0.0f,0.0f,0.0f);
+ 
+     while (arguments.read("--clear-color",clearColor[0],clearColor[1],clearColor[2],clearColor[3])) {}
+@@ -376,6 +385,9 @@ int main( int argc, char **argv )
+ 
+     if (arguments.read("--strip-text",filename))
+     {
++#ifdef OSG_USE_UTF8_FILENAME
++        filename = osgDB::convertStringFromCurrentCodePageToUTF8(filename);
++#endif
+         p3d::XmlPatcher patcher;
+         // patcher.stripP3dXml(filename, osg::notify(osg::NOTICE));
+ 
+@@ -390,6 +402,10 @@ int main( int argc, char **argv )
+     std::string lhs_filename, rhs_filename;
+     if (arguments.read("--merge",lhs_filename, rhs_filename))
+     {
++#ifdef OSG_USE_UTF8_FILENAME
++        lhs_filename = osgDB::convertStringFromCurrentCodePageToUTF8(lhs_filename);
++        rhs_filename = osgDB::convertStringFromCurrentCodePageToUTF8(rhs_filename);
++#endif
+         p3d::XmlPatcher patcher;
+         osg::ref_ptr<osgDB::XmlNode> newNode = patcher.mergeP3dXml(lhs_filename, rhs_filename);
+         if (newNode.valid())
+@@ -420,7 +436,12 @@ int main( int argc, char **argv )
+     if (p3dDevice)
+     {
+         osgDB::StringList devices;
++#ifdef OSG_USE_UTF8_FILENAME
++        osgDB::split(osgDB::convertStringFromCurrentCodePageToUTF8(p3dDevice), devices);
++#else
+         osgDB::split(p3dDevice, devices);
++#endif
++
+         for(osgDB::StringList::iterator i = devices.begin(); i != devices.end(); ++i)
+         {
+             addDeviceTo(viewer, *i, forwardMouseEvents);
+@@ -431,6 +452,9 @@ int main( int argc, char **argv )
+     std::string device;
+     while (arguments.read("--device", device))
+     {
++#ifdef OSG_USE_UTF8_FILENAME
++        device = osgDB::convertStringFromCurrentCodePageToUTF8(device);
++#endif
+         addDeviceTo(viewer, device, forwardMouseEvents);
+ 
+     }
+@@ -448,6 +472,10 @@ int main( int argc, char **argv )
+ 
+         osg::ref_ptr<osgDB::Options> device_options = new osgDB::Options("documentRegisteredHandlers");
+ 
++#ifdef OSG_USE_UTF8_FILENAME
++        server_address = osgDB::convertStringFromCurrentCodePageToUTF8(server_address);
++#endif
++
+         osg::ref_ptr<osgGA::Device> rest_http_device = osgDB::readRefFile<osgGA::Device>(server_address+":"+server_port+"/"+document_root+".resthttp", device_options.get());
+         if (rest_http_device.valid())
+         {
+@@ -483,6 +511,9 @@ int main( int argc, char **argv )
+         char keyForAnimationPath = '5';
+         while (arguments.read("-p",pathfile))
+         {
++#ifdef OSG_USE_UTF8_FILENAME
++            pathfile = osgDB::convertStringFromCurrentCodePageToUTF8(pathfile);
++#endif
+             osgGA::AnimationPathManipulator* apm = new osgGA::AnimationPathManipulator(pathfile);
+             if (apm && !apm->getAnimationPath()->empty())
+             {
+@@ -530,6 +561,11 @@ int main( int argc, char **argv )
+     // if we want to hide the cursor override the custom cursor.
+     if (hideCursor) cursorFileName.clear();
+ 
++#ifdef OSG_USE_UTF8_FILENAME
++    if (!cursorFileName.empty())
++        cursorFileName = osgDB::convertStringFromCurrentCodePageToUTF8(cursorFileName);
++#endif
++
+ 
+     // cluster related entries.
+     int socketNumber=8100;
+@@ -621,6 +657,9 @@ int main( int argc, char **argv )
+     // add the screen capture handler
+     std::string screenCaptureFilename = "screen_shot.jpg";
+     while(arguments.read("--screenshot", screenCaptureFilename)) {}
++#ifdef OSG_USE_UTF8_FILENAME
++    screenCaptureFilename = osgDB::convertStringFromCurrentCodePageToUTF8(screenCaptureFilename);
++#endif
+     osg::ref_ptr<osgViewer::ScreenCaptureHandler::WriteToFile> writeFile = new osgViewer::ScreenCaptureHandler::WriteToFile(
+         osgDB::getNameLessExtension(screenCaptureFilename),
+         osgDB::getFileExtension(screenCaptureFilename) );
+@@ -644,6 +683,9 @@ int main( int argc, char **argv )
+     std::string outputFileName;
+     while(arguments.read("--output",outputFileName)) {}
+ 
++#ifdef OSG_USE_UTF8_FILENAME
++    outputFileName = osgDB::convertStringFromCurrentCodePageToUTF8(outputFileName);
++#endif
+ 
+     // get details on keyboard and mouse bindings used by the viewer.
+     viewer.getUsage(*arguments.getApplicationUsage());
+@@ -975,6 +1017,9 @@ int main( int argc, char **argv )
+     }
+     else
+     {
++#ifdef OSG_USE_UTF8_FILENAME
++        exportName = osgDB::convertStringFromCurrentCodePageToUTF8(exportName);
++#endif
+         ExportHTML::write(seh.get(), viewer, exportName);
+     }
+ 
+
+diff --git a/examples/osggpx/osggpx.cpp b/examples/osggpx/osggpx.cpp
+index d6f36d6e1..1903283b8 100644
+--- a/examples/osggpx/osggpx.cpp
++++ b/examples/osggpx/osggpx.cpp
+@@ -31,6 +31,7 @@
+ #include <osgDB/FileUtils>
+ #include <osgDB/FileNameUtils>
+ #include <osgDB/XmlParser>
++#include <osgDB/ConvertUTF>
+ 
+ #include <osgText/Text>
+ 
+@@ -425,9 +426,17 @@ int main(int argv, char **argc)
+     std::string outputFilename;
+     while (arguments.read("-o",outputFilename)) {}
+ 
++#ifdef OSG_USE_UTF8_FILENAME
++    if (!outputFilename.empty())
++        outputFilename = osgDB::convertStringFromCurrentCodePageToUTF8(outputFilename);
++#endif
++
+     std::string trackFilename;
+     while (arguments.read("-t",trackFilename))
+     {
++#ifdef OSG_USE_UTF8_FILENAME
++        trackFilename = osgDB::convertStringFromCurrentCodePageToUTF8(trackFilename);
++#endif
+         osg::ref_ptr<Track> track = readTrack(trackFilename);
+         if (track.valid()) tracks.push_back(track.get());
+     }
+@@ -545,7 +554,7 @@ int main(int argv, char **argc)
+ 
+     if (!outputFilename.empty())
+     {
+-        std::ofstream fout(outputFilename.c_str());
++        osgDB::ofstream fout(outputFilename.c_str());
+ 
+         fout<<"<?xml version=\"1.0\" encoding=\"utf-8\"?><gpx version=\"1.0\" creator=\"osggpx\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://www.topografix.com/GPX/1/0\" xsi:schemaLocation=\"http://www.topografix.com/GPX/1/0 http://www.topografix.com/GPX/1/0/gpx.xsd\">"<<std::endl;
+ 
+
+diff --git a/src/osgDB/ReadFile.cpp b/src/osgDB/ReadFile.cpp
+index 34121cf80..bf31f44b5 100644
+--- a/src/osgDB/ReadFile.cpp
++++ b/src/osgDB/ReadFile.cpp
+@@ -25,6 +25,7 @@
+ 
+ #include <osgDB/Registry>
+ #include <osgDB/ReadFile>
++#include <osgDB/ConvertUTF>
+ 
+ using namespace osg;
+ using namespace osgDB;
+@@ -194,11 +195,17 @@ osg::ref_ptr<Node> osgDB::readRefNodeFiles(osg::ArgumentParser& arguments,const
+ 
+     while (arguments.read("--file-cache",filename))
+     {
++#ifdef OSG_USE_UTF8_FILENAME
++        filename = osgDB::convertStringFromCurrentCodePageToUTF8(filename);
++#endif
+         osgDB::Registry::instance()->setFileCache(new osgDB::FileCache(filename));
+     }
+ 
+     while (arguments.read("--image",filename))
+     {
++#ifdef OSG_USE_UTF8_FILENAME
++        filename = osgDB::convertStringFromCurrentCodePageToUTF8(filename);
++#endif
+         osg::ref_ptr<osg::Image> image = readRefImageFile(filename.c_str(), options);
+         if (image.valid())
+         {
+@@ -217,6 +224,9 @@ osg::ref_ptr<Node> osgDB::readRefNodeFiles(osg::ArgumentParser& arguments,const
+ 
+     while (arguments.read("--movie",filename))
+     {
++#ifdef OSG_USE_UTF8_FILENAME
++        filename = osgDB::convertStringFromCurrentCodePageToUTF8(filename);
++#endif
+         osg::ref_ptr<osg::Image> image = readRefImageFile(filename.c_str(), options);
+         osg::ref_ptr<osg::ImageStream> imageStream = dynamic_cast<osg::ImageStream*>(image.get());
+         if (imageStream.valid())
+@@ -248,6 +258,9 @@ osg::ref_ptr<Node> osgDB::readRefNodeFiles(osg::ArgumentParser& arguments,const
+ 
+     while (arguments.read("--dem",filename))
+     {
++#ifdef OSG_USE_UTF8_FILENAME
++        filename = osgDB::convertStringFromCurrentCodePageToUTF8(filename);
++#endif
+         osg::ref_ptr<osg::HeightField> hf = readRefHeightFieldFile(filename.c_str(), options);
+         if (hf)
+         {
+@@ -263,11 +276,15 @@ osg::ref_ptr<Node> osgDB::readRefNodeFiles(osg::ArgumentParser& arguments,const
+         if (!arguments.isOption(pos))
+         {
+             // not an option so assume string is a filename.
+-            osg::ref_ptr<osg::Node> node = osgDB::readRefNodeFile( arguments[pos], options);
++            filename = arguments[pos];
++#ifdef OSG_USE_UTF8_FILENAME
++            filename = osgDB::convertStringFromCurrentCodePageToUTF8(filename);
++#endif
++            osg::ref_ptr<osg::Node> node = osgDB::readRefNodeFile(filename, options);
+ 
+             if(node)
+             {
+-                if (node->getName().empty()) node->setName( arguments[pos] );
++                if (node->getName().empty()) node->setName(filename);
+                 nodeList.push_back(node);
+             }
+ 
+
+diff --git a/src/osgPlugins/RestHttpDevice/request_handler.cpp b/src/osgPlugins/RestHttpDevice/request_handler.cpp
+index 63fc9d4b5..c009e4158 100644
+--- a/src/osgPlugins/RestHttpDevice/request_handler.cpp
++++ b/src/osgPlugins/RestHttpDevice/request_handler.cpp
+@@ -9,7 +9,7 @@
+ //
+ 
+ #include "request_handler.hpp"
+-#include <fstream>
++#include <osgDB/fstream>
+ #include <sstream>
+ #include <string>
+ #include <boost/lexical_cast.hpp>
+@@ -60,7 +60,7 @@ void request_handler::handle_request(const request& req, reply& rep)
+ 
+   // Open the file to send back.
+   std::string full_path = doc_root_ + request_path;
+-  std::ifstream is(full_path.c_str(), std::ios::in | std::ios::binary);
++  osgDB::ifstream is(full_path.c_str(), std::ios::in | std::ios::binary);
+   if (!is )
+   {
+     if (!_cb.valid() || (_cb->operator()(request_path, rep) == false)) {
+
+diff --git a/src/osgPlugins/curl/ReaderWriterCURL.h b/src/osgPlugins/curl/ReaderWriterCURL.h
+index b06f8ca2c..0dbd9f447 100644
+--- a/src/osgPlugins/curl/ReaderWriterCURL.h
++++ b/src/osgPlugins/curl/ReaderWriterCURL.h
+@@ -16,6 +16,7 @@
+ 
+ #include <osgDB/ReaderWriter>
+ #include <osgDB/FileNameUtils>
++#include <osgDB/fstream>
+ 
+ namespace osg_curl
+ {
+@@ -45,7 +46,7 @@ class EasyCurl : public osg::Referenced
+ 
+             bool            _foutOpened;
+             std::string     _cacheFileName;
+-            std::ofstream   _fout;
++            osgDB::ofstream   _fout;
+             std::string     _resultMimeType;
+         };
+ 
+
+diff --git a/src/osgPlugins/freetype/FreeTypeLibrary.cpp b/src/osgPlugins/freetype/FreeTypeLibrary.cpp
+index 2b902721d..e3e49e05d 100644
+--- a/src/osgPlugins/freetype/FreeTypeLibrary.cpp
++++ b/src/osgPlugins/freetype/FreeTypeLibrary.cpp
+@@ -13,6 +13,7 @@
+ 
+ #include "FreeTypeLibrary.h"
+ #include <osg/Notify>
++#include <osgDB/ConvertUTF>
+ //#include <ft2build.h>
+ 
+ //#define PRINT_OUT_FONT_DETAILS
+@@ -62,7 +63,11 @@ bool FreeTypeLibrary::getFace(const std::string& fontfile,unsigned int index, FT
+ {
+     OpenThreads::ScopedLock<OpenThreads::Mutex> lock(getMutex());
+ 
+-    FT_Error error = FT_New_Face( _ftlibrary, fontfile.c_str(), index, &face );
++#ifdef OSG_USE_UTF8_FILENAME
++    FT_Error error = FT_New_Face( _ftlibrary, osgDB::convertStringFromUTF8toCurrentCodePage(fontfile).c_str(), index, &face );
++#else
++    FT_Error error = FT_New_Face(_ftlibrary, fontfile.c_str(), index, &face);
++#endif
+     if (error == FT_Err_Unknown_File_Format)
+     {
+         OSG_WARN<<" .... the font file could be opened and read, but it appears"<<std::endl;
+
+diff --git a/src/osgPlugins/ktx/ReaderWriterKTX.cpp b/src/osgPlugins/ktx/ReaderWriterKTX.cpp
+index a14d35c57..e95428ec1 100644
+--- a/src/osgPlugins/ktx/ReaderWriterKTX.cpp
++++ b/src/osgPlugins/ktx/ReaderWriterKTX.cpp
+@@ -15,7 +15,7 @@
+ #include <osg/Endian>
+ #include <osgDB/FileNameUtils>
+ #include <osgDB/FileUtils>
+-#include <istream>
++#include <osgDB/fstream>
+ 
+ // Macro similar to what's in FLT/TRP plugins (except it uses wide char under Windows if OSG_USE_UTF8_FILENAME)
+ #if defined(_WIN32)
+@@ -290,7 +290,7 @@ osgDB::ReaderWriter::ReadResult ReaderWriterKTX::readImage(const std::string& fi
+     if(fileName.empty())
+         return ReadResult::FILE_NOT_FOUND;
+         
+-    std::ifstream istream(fileName.c_str(), std::ios::in | std::ios::binary);
++    osgDB::ifstream istream(fileName.c_str(), std::ios::in | std::ios::binary);
+     if(!istream)
+         return ReadResult::ERROR_IN_READING_FILE;
+ 
+
+diff --git a/src/osgPlugins/logo/ReaderWriterLOGO.cpp b/src/osgPlugins/logo/ReaderWriterLOGO.cpp
+index fd168570f..1f2850863 100644
+--- a/src/osgPlugins/logo/ReaderWriterLOGO.cpp
++++ b/src/osgPlugins/logo/ReaderWriterLOGO.cpp
+@@ -12,6 +12,7 @@
+ #include <osgDB/Registry>
+ #include <osgDB/Input>
+ #include <osgDB/Output>
++#include <osgDB/fstream>
+ 
+ #include <osgUtil/CullVisitor>
+ 
+@@ -264,7 +265,7 @@ class LOGOReaderWriter : public osgDB::ReaderWriter
+             Logos::RelativePosition pos = Logos::LowerRight;
+ 
+ 
+-            std::ifstream fin(fileName.c_str());
++            osgDB::ifstream fin(fileName.c_str());
+             if (!fin) return NULL;
+ 
+             while(fin)
+
+diff --git a/src/osgPlugins/osgjs/JSON_Objects b/src/osgPlugins/osgjs/JSON_Objects
+index 66cd8d5cc..e2eb4564a 100644
+--- a/src/osgPlugins/osgjs/JSON_Objects
++++ b/src/osgPlugins/osgjs/JSON_Objects
+@@ -11,6 +11,7 @@
+ #include <osg/Notify>
+ #include <osg/PrimitiveSet>
+ #include <osg/Types>
++#include <osgDB/fstream>
+ 
+ #include <map>
+ #include <string>
+@@ -191,7 +192,7 @@ struct JSONVertexArray : public JSONArray
+ 
+     unsigned int writeData(const osg::Array* array, const std::string& filename)
+     {
+-        std::ofstream myfile;
++        osgDB::ofstream myfile;
+         myfile.open(filename.c_str(), std::ios::binary );
+         const char* b = static_cast<const char*>(array->getDataPointer());
+         myfile.write(b, array->getTotalDataSize());
+
+diff --git a/src/osgPlugins/osgjs/WriteVisitor b/src/osgPlugins/osgjs/WriteVisitor
+index 7cef22551..9f2e0d754 100644
+--- a/src/osgPlugins/osgjs/WriteVisitor
++++ b/src/osgPlugins/osgjs/WriteVisitor
+@@ -23,6 +23,7 @@
+ #include <osg/ValueObject>
+ #include <osg/Array>
+ #include <osgDB/FileNameUtils>
++#include <osgDB/fstream>
+ 
+ #include <osgAnimation/RigGeometry>
+ #include <osgAnimation/MorphGeometry>
+@@ -94,7 +95,7 @@ public:
+ 
+     std::ofstream& getBufferFile(const std::string& name) {
+         if(_buffers.find(name) == _buffers.end()) {
+-            _buffers[name] = new std::ofstream(name.c_str(), std::ios::binary);
++            _buffers[name] = new osgDB::ofstream(name.c_str(), std::ios::binary);
+         }
+         return *_buffers[name];
+     }
+
+diff --git a/src/osgPlugins/osgjs/WriteVisitor.cpp b/src/osgPlugins/osgjs/WriteVisitor.cpp
+index 91fb67f19..761949945 100644
+--- a/src/osgPlugins/osgjs/WriteVisitor.cpp
++++ b/src/osgPlugins/osgjs/WriteVisitor.cpp
+@@ -3,6 +3,7 @@
+ #include <osgDB/FileUtils>
+ #include <osgDB/ReadFile>
+ #include <osgDB/FileNameUtils>
++#include <osgDB/fstream>
+ #include <osg/UserDataContainer>
+ #include <osg/TextureRectangle>
+ #include <osg/Texture2D>
+@@ -245,7 +246,7 @@ JSONObject* createImage(osg::Image* image, bool inlineImages, int maxTextureDime
+         if (!image->getFileName().empty()) { // means that everything went ok
+             if (inlineImages) {
+ 
+-                std::ifstream in(osgDB::findDataFile(image->getFileName()).c_str(), std::ifstream::in | std::ifstream::binary);
++                osgDB::ifstream in(osgDB::findDataFile(image->getFileName()).c_str(), std::ifstream::in | std::ifstream::binary);
+                 if (in.is_open() && in.good())
+                 {
+                     // read file first to iterate
+
+diff --git a/src/osgPlugins/osgjs/json_stream b/src/osgPlugins/osgjs/json_stream
+index 00e31162d..52f2c71b7 100644
+--- a/src/osgPlugins/osgjs/json_stream
++++ b/src/osgPlugins/osgjs/json_stream
+@@ -123,7 +123,7 @@ class json_stream : public osgDB::ofstream {
+ 
+ 
+     protected:
+-        std::ofstream _stream;
++        osgDB::ofstream _stream;
+         bool _strict;
+ };
+ 
+
+diff --git a/src/osgPlugins/pnm/ReaderWriterPNM.cpp b/src/osgPlugins/pnm/ReaderWriterPNM.cpp
+index 0637326d5..e4a35dd8c 100644
+--- a/src/osgPlugins/pnm/ReaderWriterPNM.cpp
++++ b/src/osgPlugins/pnm/ReaderWriterPNM.cpp
+@@ -393,7 +393,7 @@ class ReaderWriterPNM : public osgDB::ReaderWriter
+             std::string fileName = osgDB::findDataFile( file, options );
+             if (fileName.empty()) return ReadResult::FILE_NOT_FOUND;
+ 
+-            std::ifstream fin(fileName.c_str(), std::ios_base::in | std::ios_base::binary);
++            osgDB::ifstream fin(fileName.c_str(), std::ios_base::in | std::ios_base::binary);
+             if (!fin.good())
+                 return ReadResult::ERROR_IN_READING_FILE;
+ 
+
+diff --git a/src/osgPlugins/pvr/ReaderWriterPVR.cpp b/src/osgPlugins/pvr/ReaderWriterPVR.cpp
+index a1a6d6dca..5fd9db567 100644
+--- a/src/osgPlugins/pvr/ReaderWriterPVR.cpp
++++ b/src/osgPlugins/pvr/ReaderWriterPVR.cpp
+@@ -13,6 +13,7 @@
+ 
+ #include <osgDB/FileNameUtils>
+ #include <osgDB/FileUtils>
++#include <osgDB/fstream>
+ #include <osgDB/Registry>
+ 
+ #include <stdio.h>
+@@ -247,7 +248,7 @@ public:
+         if(fileName.empty())
+             return ReadResult::FILE_NOT_FOUND;
+ 
+-        std::ifstream istream(fileName.c_str(), std::ios::in | std::ios::binary);
++        osgDB::ifstream istream(fileName.c_str(), std::ios::in | std::ios::binary);
+         if(!istream) return ReadResult::FILE_NOT_HANDLED;
+         ReadResult rr = readPVRStream(istream);
+         if(rr.validImage()) rr.getImage()->setFileName(file);
+
+diff --git a/src/osgPresentation/SlideShowConstructor.cpp b/src/osgPresentation/SlideShowConstructor.cpp
+index 8bfc2c22e..7957e8fbb 100644
+--- a/src/osgPresentation/SlideShowConstructor.cpp
++++ b/src/osgPresentation/SlideShowConstructor.cpp
+@@ -1,13 +1,14 @@
+-/* -*-c++-*- Present3D - Copyright (C) 1999-2006 Robert Osfield
++/* -*-c++-*- OpenSceneGraph - Copyright (C) 1998-2018 Robert Osfield
+  *
+- * This software is open source and may be redistributed and/or modified under
+- * the terms of the GNU General Public License (GPL) version 2.0.
+- * The full license is in LICENSE.txt file included with this distribution,.
++ * This library is open source and may be redistributed and/or modified under
++ * the terms of the OpenSceneGraph Public License (OSGPL) version 0.0 or
++ * (at your option) any later version.  The full license is in LICENSE file
++ * included with this distribution, and on the openscenegraph.org website.
+  *
+- * This software is distributed in the hope that it will be useful,
++ * This library is distributed in the hope that it will be useful,
+  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- * include LICENSE.txt for more details.
++ * OpenSceneGraph Public License for more details.
+ */
+ 
+ #include <osgPresentation/SlideShowConstructor>
+@@ -41,6 +42,7 @@
+ #include <osgDB/FileUtils>
+ #include <osgDB/Input>
+ #include <osgDB/FileNameUtils>
++#include <osgDB/fstream>
+ 
+ #include <osgWidget/PdfReader>
+ 
+@@ -1718,7 +1720,7 @@ void SlideShowConstructor::addGraph(const std::string& contents, const PositionD
+         filename = dotFileNameStream.str();
+ 
+         // write out the string to the temporary file.
+-        std::ofstream fout(filename.c_str());
++        osgDB::ofstream fout(filename.c_str());
+         fout<<contents.c_str();
+     }
+ 
+@@ -3179,7 +3181,7 @@ osg::Node* SlideShowConstructor::attachMaterialAnimation(osg::Node* model, const
+         std::string absolute_animation_file_path = osgDB::findDataFile(positionData.animation_material_filename, _options.get());
+         if (!absolute_animation_file_path.empty())
+         {
+-            std::ifstream animation_filestream(absolute_animation_file_path.c_str());
++            osgDB::ifstream animation_filestream(absolute_animation_file_path.c_str());
+             if (!animation_filestream.eof())
+             {
+                 animationMaterial = new AnimationMaterial;
+
+diff --git a/src/osgViewer/CompositeViewer.cpp b/src/osgViewer/CompositeViewer.cpp
+index bc01b28a4..5a2f6b932 100644
+--- a/src/osgViewer/CompositeViewer.cpp
++++ b/src/osgViewer/CompositeViewer.cpp
+@@ -20,6 +20,7 @@
+ #include <osgViewer/Renderer>
+ #include <osgDB/Registry>
+ #include <osgDB/ReadFile>
++#include <osgDB/ConvertUTF>
+ 
+ #include <osg/io_utils>
+ 
+@@ -55,6 +56,9 @@ CompositeViewer::CompositeViewer(osg::ArgumentParser& arguments)
+     bool readConfig = false;
+     while (arguments.read("-c",filename))
+     {
++#ifdef OSG_USE_UTF8_FILENAME
++        filename = osgDB::convertStringFromCurrentCodePageToUTF8(filename);
++#endif
+         readConfig = readConfiguration(filename) || readConfig;
+     }
+ 
+
+diff --git a/src/osgViewer/Viewer.cpp b/src/osgViewer/Viewer.cpp
+index 978109422..b69833f47 100644
+--- a/src/osgViewer/Viewer.cpp
++++ b/src/osgViewer/Viewer.cpp
+@@ -25,6 +25,7 @@
+ #include <osgDB/Registry>
+ #include <osgDB/ReadFile>
+ #include <osgDB/WriteFile>
++#include <osgDB/ConvertUTF>
+ #include <osgGA/TrackballManipulator>
+ 
+ #include <osgViewer/Viewer>
+@@ -87,6 +88,9 @@ Viewer::Viewer(osg::ArgumentParser& arguments)
+     bool readConfig = false;
+     while (arguments.read("-c",filename))
+     {
++#ifdef OSG_USE_UTF8_FILENAME
++        filename = osgDB::convertStringFromCurrentCodePageToUTF8(filename);
++#endif
+         readConfig = readConfiguration(filename) || readConfig;
+     }
+ 
+@@ -178,6 +182,10 @@ Viewer::Viewer(osg::ArgumentParser& arguments)
+         std::string intensityMapFilename;
+         while (arguments.read("--im",intensityMapFilename)) {}
+ 
++#ifdef OSG_USE_UTF8_FILENAME
++        if (!intensityMapFilename.empty())
++            intensityMapFilename = osgDB::convertStringFromCurrentCodePageToUTF8(intensityMapFilename);
++#endif
+         osg::ref_ptr<osg::Image> intensityMap = intensityMapFilename.empty() ? 0 : osgDB::readRefImageFile(intensityMapFilename);
+ 
+         if (screenNum<0) screenNum = 0;

@@ -3,10 +3,10 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO embree/embree
     REF v${VERSION}
-    SHA512 13ae19b1750197fb4887ba601c75d1b54b3c388224672b6561dd922bc9b9747139cf46ce554727e3afa13dcf152ce4d703935cb9105ced792b011f2d05fa3e95
+    SHA512 24088e4024841604f4bf0b25fb13a3cd020a5d08e6ee20c6f6d1cca843c9b6a90d62b94baada60617b4c755a06f136da91802fa27ee89c28898e6a0063fc4586
     HEAD_REF master
     PATCHES
-        no-runtime-install.patch
+        #no-runtime-install.patch
 )
 
 string(COMPARE EQUAL ${VCPKG_LIBRARY_LINKAGE} static EMBREE_STATIC_LIB)
@@ -17,14 +17,14 @@ if (NOT VCPKG_TARGET_IS_OSX)
         message(FATAL_ERROR "Microsoft Visual C++ Compiler does not support feature avx512 officially.")
     endif()
 
-    vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
-        FEATURES
-            avx     EMBREE_ISA_AVX
-            avx2    EMBREE_ISA_AVX2
-            avx512  EMBREE_ISA_AVX512
-            sse2    EMBREE_ISA_SSE2
-            sse42   EMBREE_ISA_SSE42
-    )
+        vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
+            FEATURES
+                avx     EMBREE_ISA_AVX
+                avx2    EMBREE_ISA_AVX2
+                avx512  EMBREE_ISA_AVX512
+                sse2    EMBREE_ISA_SSE2
+                sse42   EMBREE_ISA_SSE42
+        )
 elseif (VCPKG_LIBRARY_LINKAGE STREQUAL static)
     list(LENGTH FEATURES FEATURE_COUNT)
     if (FEATURE_COUNT GREATER 2)

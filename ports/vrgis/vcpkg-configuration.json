@@ -1,0 +1,287 @@
+{
+    "name": "vrgis",
+    "version": "2.0",
+    "dependencies": [
+        {
+            "name": "my-image-lib", 
+            "features": [
+                "jpeg"
+            ]
+        },
+        {
+            "name": "curl", 
+            "features": [
+                "tool"
+            ]
+        },
+        {
+            "name": "xerces-c", 
+            "features": [
+                "icu",
+                "xmlch-wchar"
+            ]
+        },
+        {
+            "name": "libpq", 
+            "features": [
+                "client",
+                "xml",
+                "xslt"
+            ]
+        },        
+        {
+            "name": "ffmpeg", 
+            "features": [
+                "all"
+            ]
+        },
+        {
+            "name": "gdal", 
+            "features": [
+                "default-features",
+                "freexl",
+                "poppler",
+                "tools"
+            ]
+        },
+        {
+            "name": "pdal", 
+            "features": [
+                "laszip",
+                "liblzma",
+                "zstd"
+            ]
+        },
+        {
+            "name": "pcl", 
+            "features": [
+                "apps",
+                "simulation",
+                "tools",
+                "openni2"
+            ]
+        },
+        {
+            "name": "osg", 
+            "features": [
+                "collada",
+                "fontconfig",
+                "freetype",
+                "nvtt",
+                "tools",
+                "plugins"
+            ]
+        },
+        {
+            "name": "osgearth", 
+            "features": [
+                "tools"
+            ]
+        },
+        {
+            "name": "libigl", 
+            "features": [
+                "embree",
+                "glfw",
+                "imgui",
+                "opengl",
+                "xml"
+            ]
+        },
+        "poissonrecon",
+        {
+            "name": "ceres", 
+            "features": [
+                "eigensparse",
+                "cxsparse",
+                "suitesparse",
+                "tools"
+            ]
+        },
+        {
+            "name": "opencv", 
+            "features": [
+                "default-features",
+                "ade",
+                "contrib",
+                "eigen",
+                "ffmpeg",
+                "freetype",
+                "gdcm",
+                "halide",
+                "ipp",
+                "jasper",
+                "lapack",
+                "openexr",
+                "opengl",
+                "openmp",
+                "ovis",
+                "sfm",
+                "tbb",
+                "python",
+                "vtk"
+            ]
+        },
+        {
+            "name": "openmvg", 
+            "features": [
+                "openmp",
+                "opencv",
+                "software"
+            ]
+        },
+        {
+            "name": "openmvs", 
+            "features": [
+                "openmp",
+                "ceres"
+            ]
+        },
+        "colmap",
+        "flann",
+        "liblas",
+        "lastools",
+        "osg-qt",
+        "rapidxml",
+        "cryptopp",
+        "pybind11",
+        "sltbench",
+        "gtest",
+        "boost-locale",
+        "boost-dll",
+        "boost-log",
+        "boost-process",
+        "mimalloc",
+        "crunch"
+    ],
+    "default-features": [
+        "default-features"
+    ],
+    "features": {
+        "webengine": { 
+            "description": "with qt5-webengine", 
+            "dependencies": [
+                "qt5-webengine"
+            ]
+        },
+        "cuda": {
+            "description": "with cuda", 
+            "dependencies": [
+                {
+                    "name": "flann", 
+                    "features": [
+                        "cuda"
+                    ]
+                },
+                {
+                    "name": "pcl", 
+                    "features": [
+                        "cuda"
+                    ]
+                },
+                {
+                    "name": "ceres", 
+                    "features": [
+                        "cuda"
+                    ]
+                },
+                {
+                    "name": "opencv", 
+                    "features": [
+                        "cuda",
+                        "cudnn"
+                    ]
+                },
+                {
+                    "name": "openmvs", 
+                    "features": [
+                        "cuda"
+                    ]
+                },
+                {
+                    "name": "colmap", 
+                    "features": [
+                        "cuda",
+                        "cuda-redist"
+                    ]
+                }
+            ]
+        },
+        "hdf5": {
+            "description": "with hdf5", 
+            "dependencies": [
+                {
+                    "name": "flann", 
+                    "features": [
+                        "hdf5"
+                    ]
+                }
+            ]
+        },
+        "nonfree": {
+            "description": "with nonfree", 
+            "dependencies": [
+                {
+                    "name": "opencv", 
+                    "features": [
+                        "nonfree"
+                    ]
+                }
+            ]
+        },
+        "other": {
+            "description": "with other", 
+            "dependencies": [
+                {
+                    "name": "wxwidgets", 
+                    "features": [
+                        "example",
+                        "fonts",
+                        "webview"
+                    ]
+                },
+                {
+                    "name": "mapnik", 
+                    "features": [
+                        "cairo",
+                        "input-csv",
+                        "input-gdal",
+                        "input-geobuf",
+                        "input-geojson",
+                        "input-ogr",
+                        "input-pgraster",
+                        "input-postgis",
+                        "input-raster",
+                        "input-shape",
+                        "input-sqlite",
+                        "input-topojson",
+                        "libxml2",
+                        "utility-geometry-to-wkb",
+                        "utility-mapnik-index",
+                        "utility-mapnik-render",
+                        "utility-ogrindex",
+                        "utility-pgsql2sqlite",
+                        "utility-shapeindex",
+                        "utility-svg2png",
+                        "webp",
+                        "viewer"
+                    ]
+                }
+            ]
+        },
+        "default-features": {
+            "description": "Platform-dependent default features",
+            "dependencies": [
+              {
+                "name": "vrgis",
+                "default-features": false,
+                "features": [
+                  "cuda",
+                  "hdf5",
+                  "nonfree"
+                ]
+              }
+            ]
+          }
+    }
+  }

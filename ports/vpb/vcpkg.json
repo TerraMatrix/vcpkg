@@ -1,0 +1,18 @@
+{
+  "name": "vpb",
+  "version": "1.1.0",
+  "description": "VirtualPlanetBuilder is terrain database creation tool that is able to read a wide range of geospatial imagery and elevation data and build from small area terrain database to massive whole planet paged databases. These databases can then be uploaded onto the internet and provide online GoogleEarth style roaming of whole planet databases, or kept on local disks for high speed access such as required for professional flight simulators.",
+  "homepage": "http://www.openscenegraph.org/index.php/documentation/tools/virtual-planet-builder",
+  "dependencies": [
+    "osg",
+    "gdal",
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}

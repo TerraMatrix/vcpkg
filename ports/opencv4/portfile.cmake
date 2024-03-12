@@ -446,6 +446,7 @@ vcpkg_cmake_configure(
         ${ADDITIONAL_BUILD_FLAGS}
         -DBUILD_IPP_IW=${WITH_IPP}
         -DOPENCV_LAPACK_FIND_PACKAGE_ONLY=ON
+        "-DGTK3_INCLUDE_DIRS=${CURRENT_INSTALLED_DIR}/include;${CURRENT_INSTALLED_DIR}/include/gtk-3.0;${CURRENT_INSTALLED_DIR}/include/pango-1.0;${CURRENT_INSTALLED_DIR}/include/cairo;${CURRENT_INSTALLED_DIR}/include/harfbuzz;${CURRENT_INSTALLED_DIR}/include/atk-1.0;${CURRENT_INSTALLED_DIR}/include/glib-2.0;${CURRENT_INSTALLED_DIR}/include/at-spi2-atk/2.0;${CURRENT_INSTALLED_DIR}/include/gdk-pixbuf-2.0;${CURRENT_INSTALLED_DIR}/include/at-spi-2.0"
 )
 
 vcpkg_cmake_install()

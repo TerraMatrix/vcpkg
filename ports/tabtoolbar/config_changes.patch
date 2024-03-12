@@ -1,0 +1,102 @@
+diff --git a/cmake/CMakeLists.txt b/cmake/CMakeLists.txt
+index d557bcb8..03f84a82 100644
+--- a/cmake/CMakeLists.txt
++++ b/cmake/CMakeLists.txt
+@@ -1,12 +1,18 @@
+ string (TOLOWER ${PROJECT_NAME} PROJECT_NAME_LOWER)
+-configure_file (project-config.cmake.in
+-  "${PROJECT_BINARY_DIR}/${PROJECT_NAME_LOWER}-config.cmake" @ONLY)
+-configure_file (project-config-version.cmake.in
+-  "${PROJECT_BINARY_DIR}/${PROJECT_NAME_LOWER}-config-version.cmake" @ONLY)
++include(CMakePackageConfigHelpers)
++configure_package_config_file(
++  "${CMAKE_CURRENT_SOURCE_DIR}/project-config.cmake.in"
++  "${CMAKE_BINARY_DIR}/share/${PROJECT_NAME_LOWER}/${PROJECT_NAME}Config.cmake" 
++  INSTALL_DESTINATION share/${PROJECT_NAME_LOWER})
+ 
+-install (FILES
+-  "${PROJECT_BINARY_DIR}/${PROJECT_NAME_LOWER}-config.cmake"
+-  DESTINATION "cmake")
+-install (FILES
+-  "${PROJECT_BINARY_DIR}/${PROJECT_NAME_LOWER}-config-version.cmake"
+-  DESTINATION "cmake")
+\ No newline at end of file
++write_basic_package_version_file(
++  ${CMAKE_BINARY_DIR}/share/${PROJECT_NAME_LOWER}/${PROJECT_NAME}ConfigVersion.cmake
++  VERSION ${PROJECT_VERSION}
++  COMPATIBILITY AnyNewerVersion )
++
++install(EXPORT ${PROJECT_NAME}Targets DESTINATION share/${PROJECT_NAME_LOWER} FILE ${PROJECT_NAME}Targets.cmake)
++install(FILES
++  "${CMAKE_BINARY_DIR}/share/${PROJECT_NAME_LOWER}/${PROJECT_NAME}Config.cmake"
++  "${CMAKE_BINARY_DIR}/share/${PROJECT_NAME_LOWER}/${PROJECT_NAME}ConfigVersion.cmake"
++  DESTINATION share/${PROJECT_NAME_LOWER}
++  )
+\ No newline at end of file
+
+diff --git a/cmake/project-config.cmake.in b/cmake/project-config.cmake.in
+index fd6fde23..b5f7458e 100644
+--- a/cmake/project-config.cmake.in
++++ b/cmake/project-config.cmake.in
+@@ -1,30 +1,4 @@
+-# This module defines
+-# @PROJECT_NAME@_FOUND, if false, do not try to link to @PROJECT_NAME@
+-# @PROJECT_NAME@_INCLUDE_DIRS, where to find the headers
+-# @PROJECT_NAME@_LIBRARY_DIRS, where to find the libs
++@PACKAGE_INIT@
+ 
+-message(STATUS "Reading ${CMAKE_CURRENT_LIST_FILE}")
+-set(@PROJECT_NAME@_Version 0.0.1)
+-message(STATUS "@PROJECT_NAME@ configuration, version ${@PROJECT_NAME@_Version}")
+-
+-get_filename_component(_DIR ${CMAKE_CURRENT_LIST_FILE} PATH)
+-get_filename_component(_ROOT ${_DIR}/.. ABSOLUTE)
+-set(@PROJECT_NAME@_INCLUDE_DIRS "${_ROOT}/include")
+-set(@PROJECT_NAME@_LIBRARY_DIRS "${_ROOT}/lib")
+-set(@PROJECT_NAME@_LIBRARIES "")
+-
+-set(SARIBBON_LIBS "SARibbonBar")
+-foreach(_var ${SARIBBON_LIBS})
+-    find_library (_var_path ${_var}
+-        PATHS "${_ROOT}/lib")
+-    list(APPEND @PROJECT_NAME@_LIBRARIES ${_var_path})
+-endforeach(_var ${SARIBBON_LIBS})
+-
+-find_library ( @LIB_NAME@
+-  PATHS "${_ROOT}/lib")
+-
+-set(@PROJECT_NAME@_BINARY_DIRS "${_ROOT}/bin")
+-set(@PROJECT_NAME@_FOUND TRUE)
+-
+-unset (_ROOT)
+-unset (_DIR)
+\ No newline at end of file
++include("${CMAKE_CURRENT_LIST_DIR}/@PROJECT_NAME@Targets.cmake")
++check_required_components(@PROJECT_NAME@)
+\ No newline at end of file
+
+diff --git a/src/SARibbonBar/CMakeLists.txt b/src/SARibbonBar/CMakeLists.txt
+index 9998ce08..c12c61e1 100644
+--- a/src/SARibbonBar/CMakeLists.txt
++++ b/src/SARibbonBar/CMakeLists.txt
+@@ -105,13 +105,16 @@ set_target_properties(${LIB_NAME} PROPERTIES
+ 	VERSION ${PROJECT_VERSION}
+ 	SOVERSION ${PROJECT_VERSION}
+ )
+-target_include_directories(${LIB_NAME} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+-install(TARGETS ${LIB_NAME}
++#target_include_directories(${LIB_NAME} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
++install(TARGETS ${LIB_NAME} EXPORT ${PROJECT_NAME}Targets
+ 	RUNTIME DESTINATION bin
+- 	LIBRARY DESTINATION bin
++ 	LIBRARY DESTINATION lib
+ 	ARCHIVE DESTINATION lib
++	PUBLIC_HEADER DESTINATION include/${PROJECT_NAME}
++	INCLUDES DESTINATION include/${PROJECT_NAME}
+ )
+-install(FILES ${HEADER_FILES} DESTINATION include)
++
++install(FILES ${HEADER_FILES} DESTINATION include/${PROJECT_NAME})
+ 
+ if(WIN32)
+ 	create_win32_resource_version(

@@ -1,0 +1,71 @@
+diff --git a/acss.pro b/acss.pro
+index ef199d4a..bbcb1952 100644
+--- a/acss.pro
++++ b/acss.pro
+@@ -1,8 +1,8 @@
+ TEMPLATE = subdirs
+ 
+-SUBDIRS = \
+-	src \
+-	examples
++SUBDIRS = src
+ 
+-#demo.depends = src
+-examples.depends = src
+\ No newline at end of file
++examples {
++    SUBDIRS += examples
++    examples.depends = src
++}
+\ No newline at end of file
+
+
+diff --git a/src/src.pro b/src/src.pro
+index 4c2efc42..afc598af 100644
+--- a/src/src.pro
++++ b/src/src.pro
+@@ -1,17 +1,16 @@
+ ACSS_OUT_ROOT = $${OUT_PWD}/..
+ CONFIG += c++14
+-CONFIG += debug_and_release
+ TARGET = $$qtLibraryTarget(qtadvancedcss)
+ DEFINES += QT_DEPRECATED_WARNINGS
+ TEMPLATE = lib
+ DESTDIR = $${ACSS_OUT_ROOT}/lib
+ QT += core gui widgets qml svg
+ 
+-!acssBuildStatic {
++!static {
+ 	CONFIG += shared
+     DEFINES += ACSS_SHARED_EXPORT
+ }
+-acsBuildStatic {
++else {
+ 	CONFIG += staticlib
+     DEFINES += ACSS_STATIC
+ }
+
+diff --git a/examples/exporter/exporter.pro b/examples/exporter/exporter.pro
+index 4c2b7ef9..69a967ef 100644
+--- a/examples/exporter/exporter.pro
++++ b/examples/exporter/exporter.pro
+@@ -26,3 +26,6 @@ LIBS += -L$${ACSS_OUT_ROOT}/lib
+ include(../../acss.pri)
+ INCLUDEPATH += ../../src
+ DEPENDPATH += ../../src    
++
++target.path=$$DESTDIR/lib
++INSTALLS += target
+\ No newline at end of file
+
+diff --git a/examples/full_features/full_features.pro b/examples/full_features/full_features.pro
+index c62b794e..3ca64d95 100644
+--- a/examples/full_features/full_features.pro
++++ b/examples/full_features/full_features.pro
+@@ -33,3 +33,6 @@ DEPENDPATH += ../../src
+ 
+ DISTFILES += \
+     qml/simple_demo.qml
++
++target.path=$$DESTDIR/lib
++INSTALLS += target

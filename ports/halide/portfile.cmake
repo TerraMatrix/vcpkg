@@ -8,6 +8,8 @@ vcpkg_from_github(
     REF ${HALIDE_VERSION_TAG}
     SHA512 918cd0a7e69e4414b98f17c5ec5cdb543ce3ae68ed07c9a80b7c0378c247a4a4fde62ade79b402e9ffcfce30c066a3fa662ea46c3a2a5b93eb5ec4e05b3fd808
     HEAD_REF release/15.x
+	PATCHES
+        fix-win7.patch
 )
 
 vcpkg_check_features(

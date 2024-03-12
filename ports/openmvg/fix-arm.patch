@@ -1,0 +1,13 @@
+diff --git a/src/openMVG/matching/metric_simd.hpp b/src/openMVG/matching/metric_simd.hpp
+index 7e09f6ed9..933893fee 100644
+--- a/src/openMVG/matching/metric_simd.hpp
++++ b/src/openMVG/matching/metric_simd.hpp
+@@ -17,7 +17,7 @@
+ #include <numeric>
+ 
+ #include <cstdint>
+-#include <immintrin.h>
++#include "sse2neon.h"
+ 
+ namespace openMVG {
+ namespace matching {

@@ -1,0 +1,80 @@
+diff --git a/src/osg2vsg/CMakeLists.txt b/src/osg2vsg/CMakeLists.txt
+index a0c8e77c..5691eee8 100644
+--- a/src/osg2vsg/CMakeLists.txt
++++ b/src/osg2vsg/CMakeLists.txt
+@@ -46,7 +46,11 @@ target_link_libraries(osg2vsg
+ )
+ 
+ 
+-install(TARGETS osg2vsg ${INSTALL_TARGETS_DEFAULT_FLAGS})
++install(TARGETS osg2vsg EXPORT osg2vsgTargets
++    LIBRARY DESTINATION lib
++    ARCHIVE DESTINATION lib
++    RUNTIME DESTINATION bin
++)
+ 
+ target_compile_definitions(osg2vsg PRIVATE ${EXTRA_DEFINES})
+ 
+
+diff --git a/applications/osggroups/CMakeLists.txt b/applications/osggroups/CMakeLists.txt
+index 45523e68..36a9d932 100644
+--- a/applications/osggroups/CMakeLists.txt
++++ b/applications/osggroups/CMakeLists.txt
+@@ -20,3 +20,6 @@ add_executable(osggroups ${SOURCES})
+ target_include_directories(osggroups PRIVATE ${OSG_INCLUDE_DIR})
+ target_link_libraries(osggroups ${OSGDB_LIBRARIES} ${OSG_LIBRARIES} ${OPENTHREADS_LIBRARY} ${CMAKE_THREAD_LIBS_INIT} ${OPENGL_LIBRARY} ${DL_LIBRARY})
+ 
++INSTALL(TARGETS osggroups
++    RUNTIME DESTINATION bin
++)
+
+diff --git a/applications/osgmaths/CMakeLists.txt b/applications/osgmaths/CMakeLists.txt
+index bcd25a56..cf77e3cc 100644
+--- a/applications/osgmaths/CMakeLists.txt
++++ b/applications/osgmaths/CMakeLists.txt
+@@ -23,3 +23,6 @@ target_link_libraries(osgmaths
+     ${OSGDB_LIBRARIES} ${OSG_LIBRARIES} ${OPENTHREADS_LIBRARY} ${CMAKE_THREAD_LIBS_INIT} ${OPENGL_LIBRARY} ${DL_LIBRARY}
+ )
+ 
++INSTALL(TARGETS osgmaths
++    RUNTIME DESTINATION bin
++)
+
+diff --git a/applications/vsgnodes/CMakeLists.txt b/applications/vsgnodes/CMakeLists.txt
+index b513c07e..673e32e8 100644
+--- a/applications/vsgnodes/CMakeLists.txt
++++ b/applications/vsgnodes/CMakeLists.txt
+@@ -3,3 +3,7 @@ set(SOURCES vsgnodes.cpp)
+ add_executable(vsgnodes ${SOURCES})
+ target_include_directories(vsgnodes PRIVATE ${OSG_INCLUDE_DIR})
+ target_link_libraries(vsgnodes vsg::vsg ${OSG_LIBRARIES})
++
++INSTALL(TARGETS vsgnodes
++    RUNTIME DESTINATION bin
++)
+
+diff --git a/applications/vsgobjects/CMakeLists.txt b/applications/vsgobjects/CMakeLists.txt
+index b513c07e..673e32e8 100644
+--- a/applications/vsgobjects/CMakeLists.txt
++++ b/applications/vsgobjects/CMakeLists.txt
+@@ -3,3 +3,7 @@ set(SOURCES vsgobjects.cpp)
+ add_executable(vsgobjects ${SOURCES})
+ target_include_directories(vsgobjects PRIVATE ${OSG_INCLUDE_DIR})
+ target_link_libraries(vsgobjects vsg::vsg ${OSG_LIBRARIES})
++
++INSTALL(TARGETS vsgobjects
++    RUNTIME DESTINATION bin
++)
+
+diff --git a/applications/vsgwithosg/CMakeLists.txt b/applications/vsgwithosg/CMakeLists.txt
+index a502d53f..6a32f971 100644
+--- a/applications/vsgwithosg/CMakeLists.txt
++++ b/applications/vsgwithosg/CMakeLists.txt
+@@ -19,3 +19,7 @@ target_link_libraries(vsgwithosg
+     ${OSGVIEWER_LIBRARIES}
+     ${OPENGL_LIBRARIES}
+ )
++
++INSTALL(TARGETS vsgwithosg
++    RUNTIME DESTINATION bin
++)

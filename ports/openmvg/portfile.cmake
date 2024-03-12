@@ -20,6 +20,14 @@ vcpkg_from_github(
         fix-coinutils.patch
 )
 
+if(VCPKG_TARGET_ARCHITECTURE STREQUAL "arm" OR VCPKG_TARGET_ARCHITECTURE STREQUAL "arm64")
+    vcpkg_apply_patches(
+        SOURCE_PATH "${SOURCE_PATH}"
+        PATCHES 
+            fix-arm.patch
+    )
+endif()
+
 set(OpenMVG_USE_OPENMP OFF)
 if("openmp" IN_LIST FEATURES)
     set(OpenMVG_USE_OPENMP ON)

@@ -1,0 +1,45 @@
+diff --git a/apps/Viewer/CMakeLists.txt b/apps/Viewer/CMakeLists.txt
+index fe0920242..d3427b0a5 100644
+--- a/apps/Viewer/CMakeLists.txt
++++ b/apps/Viewer/CMakeLists.txt
+@@ -34,7 +34,7 @@ else()
+ endif()
+ FILE(GLOB LIBRARY_FILES_H "*.h" "*.inl")
+ 
+-cxx_executable_with_flags(${VIEWER_NAME} "Apps" "${cxx_default}" "MVS;${OPENGL_LIBRARIES};${GLEW_LIBRARY};${GLFW_STATIC_LIBRARIES};GLEW::GLEW;${glfw3_LIBRARY};${GLFW3_LIBRARY};glfw;${OpenMVS_EXTRA_LIBS}" ${LIBRARY_FILES_C} ${LIBRARY_FILES_H})
++cxx_executable_with_flags(${VIEWER_NAME} "Apps" "${cxx_default}" "MVS;${OPENGL_LIBRARIES};GLEW::glew;glfw;${OpenMVS_EXTRA_LIBS}" ${LIBRARY_FILES_C} ${LIBRARY_FILES_H})
+ 
+ # Manually set Common.h as the precompiled header
+ IF(CMAKE_VERSION VERSION_GREATER_EQUAL 3.16.0)
+
+
+diff --git a/libs/Common/Types.h b/libs/Common/Types.h
+index d5dcb27e2..19085268a 100644
+--- a/libs/Common/Types.h
++++ b/libs/Common/Types.h
+@@ -158,8 +158,7 @@ namespace cv { namespace gpu = cuda; }
+ #pragma pop_macro("free")
+ 
+ #ifdef _USE_SSE
+-#include <xmmintrin.h>
+-#include <emmintrin.h>
++#include "sse2neon.h"
+ #endif
+ 
+ 
+
+diff --git a/libs/MVS/SceneReconstruct.cpp b/libs/MVS/SceneReconstruct.cpp
+index a684d3b77..d4def7f0b 100644
+--- a/libs/MVS/SceneReconstruct.cpp
++++ b/libs/MVS/SceneReconstruct.cpp
+@@ -1100,7 +1100,7 @@ bool Scene::ReconstructMesh(float distInsert, bool bUseFreeSpaceSupport, bool bU
+ 		// create graph
+ 		MaxFlow<cell_size_t,edge_cap_t> graph(delaunay.number_of_cells());
+ 		// set weights
+-		constexpr edge_cap_t maxCap(FLT_MAX*0.0001f);
++		edge_cap_t maxCap(FLT_MAX*0.0001f);
+ 		for (delaunay_t::All_cells_iterator ci=delaunay.all_cells_begin(), ce=delaunay.all_cells_end(); ci!=ce; ++ci) {
+ 			const cell_size_t ciID(ci->info());
+ 			const cell_info_t& ciInfo(infoCells[ciID]);
+
+

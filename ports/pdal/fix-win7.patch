@@ -1,0 +1,34 @@
+diff --git "a/pdal/util/portable_endian.hpp" "b/pdal/util/portable_endian.hpp"
+index 03e68a25..3a686e8f 100644
+--- "a/pdal/util/portable_endian.hpp"
++++ "b/pdal/util/portable_endian.hpp"
+@@ -68,6 +68,29 @@
+ #       define htole64(x) (x)
+ #       define le64toh(x) (x)
+ #   ifndef __MINGW32__
++#   if _WIN32_WINNT < 0x0602
++#define _WS2_32_WINSOCK_SWAP_LONGLONG(l)                                       \
++    ((((l) >> 56) & 0x00000000000000FFLL) |                                    \
++     (((l) >> 40) & 0x000000000000FF00LL) |                                    \
++     (((l) >> 24) & 0x0000000000FF0000LL) |                                    \
++     (((l) >> 8) & 0x00000000FF000000LL) |                                     \
++     (((l) << 8) & 0x000000FF00000000LL) |                                     \
++     (((l) << 24) & 0x0000FF0000000000LL) |                                    \
++     (((l) << 40) & 0x00FF000000000000LL) |                                    \
++     (((l) << 56) & 0xFF00000000000000LL))
++
++__inline unsigned __int64 htonll ( unsigned __int64 Value )
++{
++	const unsigned __int64 Retval = _WS2_32_WINSOCK_SWAP_LONGLONG (Value);
++	return Retval;
++}
++
++__inline unsigned __int64 ntohll(unsigned __int64 Value)
++{
++    const unsigned __int64 Retval = _WS2_32_WINSOCK_SWAP_LONGLONG(Value);
++    return Retval;
++}
++#   endif
+ #       define be64toh ntohll
+ #       define htobe64 htonll
+ #   else

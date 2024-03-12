@@ -10,3 +10,16 @@ index fb57176..fa84cc5 100644
        "/we4312",  # Conversion: greater size.
        "/we4456",  # Variable shadowing.
        "/we4458",  # declaration hides class member.
+
+diff --git a/src/buildtools/config/common.pri b/src/buildtools/config/common.pri
+index fedba477..5af9edf7 100644
+--- a/src/buildtools/config/common.pri
++++ b/src/buildtools/config/common.pri
+@@ -26,6 +26,7 @@ gn_args += \
+     skia_use_dawn=false \
+     toolkit_views=false \
+     treat_warnings_as_errors=false \
++    fatal_linker_warnings=false \
+     use_allocator_shim=false \
+     use_allocator=\"none\" \
+     use_custom_libcxx=false \

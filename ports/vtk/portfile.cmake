@@ -74,11 +74,16 @@ endif()
 # - add loguru as a dependency requires #8682
 vcpkg_check_features(OUT_FEATURE_OPTIONS VTK_FEATURE_OPTIONS
     FEATURES
-        "qt"          VTK_GROUP_ENABLE_Qt
-        "qt"          VTK_MODULE_ENABLE_VTK_GUISupportQt
-        "qt"          VTK_MODULE_ENABLE_VTK_GUISupportQtSQL
-        "qt"          VTK_MODULE_ENABLE_VTK_RenderingQt
-        "qt"          VTK_MODULE_ENABLE_VTK_ViewsQt
+        "qt6"         VTK_GROUP_ENABLE_Qt
+        "qt6"         VTK_MODULE_ENABLE_VTK_GUISupportQt
+        "qt6"         VTK_MODULE_ENABLE_VTK_GUISupportQtSQL
+        "qt6"         VTK_MODULE_ENABLE_VTK_RenderingQt
+        "qt6"         VTK_MODULE_ENABLE_VTK_ViewsQt
+        "qt5"         VTK_GROUP_ENABLE_Qt
+        "qt5"         VTK_MODULE_ENABLE_VTK_GUISupportQt
+        "qt5"         VTK_MODULE_ENABLE_VTK_GUISupportQtSQL
+        "qt5"         VTK_MODULE_ENABLE_VTK_RenderingQt
+        "qt5"         VTK_MODULE_ENABLE_VTK_ViewsQt
         "atlmfc"      VTK_MODULE_ENABLE_VTK_GUISupportMFC
         "vtkm"        VTK_MODULE_ENABLE_VTK_AcceleratorsVTKmCore
         "vtkm"        VTK_MODULE_ENABLE_VTK_AcceleratorsVTKmDataModel
@@ -115,11 +120,19 @@ vcpkg_check_features(OUT_FEATURE_OPTIONS VTK_FEATURE_OPTIONS
 list(TRANSFORM VTK_FEATURE_OPTIONS REPLACE "=ON" "=YES")
 list(TRANSFORM VTK_FEATURE_OPTIONS REPLACE "=OFF" "=DONT_WANT")
 
-if("qt" IN_LIST FEATURES AND NOT EXISTS "${CURRENT_HOST_INSTALLED_DIR}/tools/Qt5/bin/qmlplugindump${VCPKG_HOST_EXECUTABLE_SUFFIX}")
+set(VTK_QT_VERSION 5)
+if(("qt6" IN_LIST FEATURES OR "qt5" IN_LIST FEATURES) AND NOT EXISTS "${CURRENT_HOST_INSTALLED_DIR}/tools/Qt5/bin/qmlplugindump${VCPKG_HOST_EXECUTABLE_SUFFIX}")
     list(APPEND VTK_FEATURE_OPTIONS -DVTK_MODULE_ENABLE_VTK_GUISupportQtQuick=NO)
 endif()
-if("qt" IN_LIST FEATURES)
+if("qt6" IN_LIST FEATURES)
     file(READ "${CURRENT_INSTALLED_DIR}/share/qtbase/vcpkg_abi_info.txt" qtbase_abi_info)
+    if(qtbase_abi_info MATCHES "(^|;)gles2(;|$)")
+        message(FATAL_ERROR "VTK assumes qt to be build with desktop opengl. As such trying to build vtk with qt using GLES will fail.") 
+        # This should really be a configure error but using this approach doesn't require patching. 
+    endif()
+    set(VTK_QT_VERSION 6)
+elif("qt5" IN_LIST FEATURES)
+    file(READ "${CURRENT_INSTALLED_DIR}/share/qt5-base/vcpkg_abi_info.txt" qtbase_abi_info)
     if(qtbase_abi_info MATCHES "(^|;)gles2(;|$)")
         message(FATAL_ERROR "VTK assumes qt to be build with desktop opengl. As such trying to build vtk with qt using GLES will fail.") 
         # This should really be a configure error but using this approach doesn't require patching. 
@@ -129,7 +142,7 @@ endif()
 if("python" IN_LIST FEATURES)
     set(python_ver "")
     if(NOT VCPKG_TARGET_IS_WINDOWS)
-        set(python_ver 3.10)
+        set(python_ver 3.8)
     endif()
     list(APPEND ADDITIONAL_OPTIONS
         -DVTK_WRAP_PYTHON=ON
@@ -227,7 +240,7 @@ vcpkg_cmake_configure(
         ${ADDITIONAL_OPTIONS}
         -DVTK_DEBUG_MODULE_ALL=ON
         -DVTK_DEBUG_MODULE=ON
-        -DVTK_QT_VERSION=6
+        -DVTK_QT_VERSION=${VTK_QT_VERSION}
         -DCMAKE_INSTALL_QMLDIR:PATH=qml
         -DVCPKG_HOST_TRIPLET=${_HOST_TRIPLET}
         -DCMAKE_FIND_PACKAGE_TARGETS_GLOBAL=ON # Due to Qt6::Platform not being found on Linux platform

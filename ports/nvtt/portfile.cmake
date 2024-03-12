@@ -3,8 +3,8 @@ vcpkg_check_linkage(ONLY_STATIC_LIBRARY)
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO castano/nvidia-texture-tools
-    REF b1a90f36013522b9e5a3a2197859b72188752e3f  # 2.1.2
-    SHA512 13cf04a9856f150f7569c8c256c42fc6a5bc40586c9ca2b3ae553edf5bfcbccbba5b8538924079ed35effdd07b9e3ef4bfdb9733a2ec51f5a95f958885cc6cca
+    REF aeddd65f81d36d8cb7b169b469ef25156666077e  # 2.1.2
+    SHA512 a4ed0009465002d4c5ba227d1f0a38e80f78d85677332a48601cb0a26738e18a836e03cd579d57005c4817e09802f0b2e093b606b9c4bca1d471b9de1c57077a
     HEAD_REF master
     PATCHES
         001-define-value-for-HAVE_UNISTD_H-in-mac-os.patch
@@ -17,6 +17,15 @@ vcpkg_from_github(
         fix-intrinsic-function.patch
         fix-release-flags.patch
 )
+
+if(VCPKG_TARGET_ARCHITECTURE STREQUAL "arm" OR VCPKG_TARGET_ARCHITECTURE STREQUAL "arm64")
+    vcpkg_apply_patches(
+        SOURCE_PATH "${SOURCE_PATH}"
+        PATCHES 
+            fix-arm.patch
+    )
+    file(COPY "${CURRENT_INSTALLED_DIR}/include/sse2neon.h" DESTINATION "${SOURCE_PATH}/extern/CMP_Core/source")
+endif()
 
 vcpkg_check_features(
     OUT_FEATURE_OPTIONS FEATURE_OPTIONS
