@@ -1,0 +1,1 @@
+vcpkg install opencv4[default-features,ade,contrib,dnn,eigen,halide,jasper,jpeg,lapack,nonfree,opengl,openmp,png,quirc,sfm,tbb,tiff] --triplet=arm64-linux --x-buildtrees-root=/data/workspace/buildtrees  --downloads-root=/data/workspace/downloads --editable
