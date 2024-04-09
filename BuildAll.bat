@@ -47,6 +47,10 @@ echo "install  gtest 1.12.1#1"
 echo "--------------------------------------------"
 call ./bash/gtest.bat
 
+echo "install  glad  0.1.36"
+echo "--------------------------------------------"
+call ./bash/glad.bat
+
 echo "install  glew  2.2.0"
 echo "--------------------------------------------"
 call ./bash/glew.bat
