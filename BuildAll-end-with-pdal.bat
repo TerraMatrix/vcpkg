@@ -51,6 +51,10 @@ echo "install  glew  2.2.0"
 echo "--------------------------------------------"
 call ./bash/glew.bat
 
+echo "install  glfw3  3.3.8"
+echo "--------------------------------------------"
+call ./bash/glfw3.bat
+
 echo "install  gmp  6.2.1#15"
 echo "--------------------------------------------"
 call ./bash/gmp.bat
