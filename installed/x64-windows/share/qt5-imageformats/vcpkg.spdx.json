@@ -1,0 +1,95 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/qt5-imageformats-x64-windows-5.15.15-fd2eef44-0919-4bde-aa09-ee4ef2f4b4c5",
+  "name": "qt5-imageformats:x64-windows@5.15.15 85181241dfac73602c2792c6333ecbbede8e975e74a557da8b03f7c2bdc9dd30",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
+    ],
+    "created": "2025-10-15T05:13:54Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-0",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "qt5-imageformats",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "5.15.15",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/qt5-imageformats",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "The Qt Image Formats add-on module provides optional support for other image file formats.",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "qt5-imageformats:x64-windows",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "85181241dfac73602c2792c6333ecbbede8e975e74a557da8b03f7c2bdc9dd30",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/qt5-imageformats/portfile.cmake",
+      "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "42c8e2d5b369c108cc8a4738a95597d548a80756f5500f2db461e7c6d428cd29"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/qt5-imageformats/vcpkg.json",
+      "SPDXID": "SPDXRef-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "35f2392850d1e52c71857eb5e75804ab464c355b87766893ae7151e07aa804e2"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}

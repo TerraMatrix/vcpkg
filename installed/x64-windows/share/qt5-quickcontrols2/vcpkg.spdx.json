@@ -1,0 +1,95 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/qt5-quickcontrols2-x64-windows-5.15.15-e9107fd6-8fda-40b9-aeb8-566d09ce5bb9",
+  "name": "qt5-quickcontrols2:x64-windows@5.15.15 1bc68677af6f6b2f84019615dc2fb568f0b3f2417a594e7975dde84a6435d2ab",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
+    ],
+    "created": "2025-10-15T06:42:53Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-0",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "qt5-quickcontrols2",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "5.15.15",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/qt5-quickcontrols2",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "Qt Quick Controls provides a set of controls that can be used to build complete interfaces in Qt Quick.",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "qt5-quickcontrols2:x64-windows",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "1bc68677af6f6b2f84019615dc2fb568f0b3f2417a594e7975dde84a6435d2ab",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/qt5-quickcontrols2/portfile.cmake",
+      "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8be548df72653d3a33c65e123a768d4c4bf3675090b7b84364c2a14b57b22a41"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/qt5-quickcontrols2/vcpkg.json",
+      "SPDXID": "SPDXRef-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "35feba96e518bae0de93bc15eb2050461da3dde7dba144485913d54063f24709"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}

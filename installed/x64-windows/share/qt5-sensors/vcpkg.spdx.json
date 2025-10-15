@@ -1,0 +1,95 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/qt5-sensors-x64-windows-5.15.15-4f4e07a8-be89-4cef-b5c4-dd6f24c52173",
+  "name": "qt5-sensors:x64-windows@5.15.15 ec09d6def71ee083642daee267edd510bda825b82965577302dad986f371bccf",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
+    ],
+    "created": "2025-10-15T07:14:23Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-0",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "qt5-sensors",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "5.15.15",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/qt5-sensors",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "The Qt Sensors API provides access to sensor hardware via QML and C++ interfaces. The Qt Sensors API also provides a motion gesture recognition API for devices.",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "qt5-sensors:x64-windows",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "ec09d6def71ee083642daee267edd510bda825b82965577302dad986f371bccf",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/qt5-sensors/portfile.cmake",
+      "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "541a6a03e04e05b2867c3bdf49d4fa2b114d15233a0ca59a5d47553e1ba91375"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/qt5-sensors/vcpkg.json",
+      "SPDXID": "SPDXRef-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5da97d2c641fb48b64912b74a19dc7c7f96ebb55ab85b1a0c6dafc1bff971676"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}

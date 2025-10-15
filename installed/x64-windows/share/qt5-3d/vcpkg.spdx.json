@@ -1,0 +1,95 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/qt5-3d-x64-windows-5.15.15-f613f01b-50e4-4cdf-a3f9-06eccdceb8a9",
+  "name": "qt5-3d:x64-windows@5.15.15 9204a425164bb1b203f1d0877385d8486803d37e09f48771a4760fbb30c9df76",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
+    ],
+    "created": "2025-10-15T06:16:10Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-0",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "qt5-3d",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "5.15.15",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/qt5-3d",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "Qt 3D provides functionality for near-realtime simulation systems with support for 2D and 3D rendering in both Qt C++ and Qt Quick applications.",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "qt5-3d:x64-windows",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "9204a425164bb1b203f1d0877385d8486803d37e09f48771a4760fbb30c9df76",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/qt5-3d/portfile.cmake",
+      "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a721678077905cd85693deb75250196952efcdc654c7129e13f0db73944fe3d5"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/qt5-3d/vcpkg.json",
+      "SPDXID": "SPDXRef-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "896a7daa0b9f7b81aac2d94d25a1369cc12662b815328010b7fccecdd478979a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}
