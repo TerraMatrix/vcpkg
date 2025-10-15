@@ -1,0 +1,125 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/json-schema-validator-x64-windows-2.3.0#2-9962456c-f50f-4436-b237-3d0e3a0ea114",
+  "name": "json-schema-validator:x64-windows@2.3.0#2 22004c991457ebc98437827a734b808aebd7f73d04973083e901646aba48a699",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
+    ],
+    "created": "2025-10-15T03:33:11Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-0",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "json-schema-validator",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "2.3.0#2",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/json-schema-validator",
+      "homepage": "https://github.com/pboettch/json-schema-validator",
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "C++ library for validating JSON documents based on a JSON Schema. This validator is based on the nlohmann-json library.",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "json-schema-validator:x64-windows",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "22004c991457ebc98437827a734b808aebd7f73d04973083e901646aba48a699",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-1",
+      "name": "pboettch/json-schema-validator",
+      "downloadLocation": "git+https://github.com/pboettch/json-schema-validator@2.3.0",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "6d207031acdb94c44f96ff6346dccaf98f2c9d3619d71e419ddabff548ea34d50e8eb103622c99ae28ecb7fddedd687b297e5ad934aa0106c58ac59fc4d65ea9"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-resource-2",
+      "name": "0034c113477f83c28d4380de1ee189c25b1168e6.patch",
+      "packageFileName": "0034c113477f83c28d4380de1ee189c25b1168e6.patch",
+      "downloadLocation": "https://github.com/pboettch/json-schema-validator/commit/0034c113477f83c28d4380de1ee189c25b1168e6.patch",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "5c165b50813b0d9937ff0eb4d4a81e2d1e77718ac3b0d02b93931c8eddb4e06e4fae1822c5cc97a5b01c995916a29d0af03fcbcd8f059cb29cfeb0e2371b15e3"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/json-schema-validator/portfile.cmake",
+      "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4543ad0f196b973c43aad1cc8dde256dee471e321fcb1f259d49d75b37a04910"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/json-schema-validator/vcpkg.json",
+      "SPDXID": "SPDXRef-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d5e6501a4bf451d8124d297315a0ee4daf6f06296dcf67e7c1205e6435535336"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}

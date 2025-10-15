@@ -1,0 +1,110 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/nanoflann-x64-windows-1.6.2-edd0011f-dffd-4922-a6bb-2f4261129a13",
+  "name": "nanoflann:x64-windows@1.6.2 30261ced6fe46f8414e697ee4992a9719152551f8c4b8c180e0df25e0468bc19",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
+    ],
+    "created": "2025-10-15T03:37:05Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-0",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "nanoflann",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "1.6.2",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/nanoflann",
+      "homepage": "https://github.com/jlblancoc/nanoflann",
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "nanoflann is a C++11 header-only library for building KD-Trees of datasets with different topologies: R2, R3 (point clouds), SO(2) and SO(3) (2D and 3D rotation groups).",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "nanoflann:x64-windows",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "30261ced6fe46f8414e697ee4992a9719152551f8c4b8c180e0df25e0468bc19",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-1",
+      "name": "jlblancoc/nanoflann",
+      "downloadLocation": "git+https://github.com/jlblancoc/nanoflann@v1.6.2",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "9405970865cf5a7b5fe8316e3b528b29530eea5eac22419d602ef008a2e09dce78dbf66f3c10c1d22ce2c3d5e69a650b27818ee4eb9cee9a583488ce1c81ed2d"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/nanoflann/portfile.cmake",
+      "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "28e3509ebeb303cc664449acef3c2fd5d13de4451e662d9052355e4d110f34c4"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/nanoflann/vcpkg.json",
+      "SPDXID": "SPDXRef-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "009ae838e68e3be7e15f2a4f814c0ec690aef90e8c4c2e6a99f95ac3fc426e77"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}
