@@ -9,7 +9,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set_property(TARGET mcc-lidar APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(mcc-lidar PROPERTIES
   IMPORTED_IMPLIB_DEBUG "${_IMPORT_PREFIX}/debug/lib/mcc-lidar.lib"
-  IMPORTED_LINK_INTERFACE_LIBRARIES_DEBUG "${_IMPORT_PREFIX}/debug/lib/boost_filesystem-vc140-mt-gd.lib;${_IMPORT_PREFIX}/debug/lib/boost_program_options-vc140-mt-gd.lib;${_IMPORT_PREFIX}/debug/lib/boost_system-vc140-mt-gd.lib;liblas"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_DEBUG "Boost::filesystem;Boost::program_options;Boost::system;liblas"
   IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/debug/bin/mcc-lidar.dll"
   )
 

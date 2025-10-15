@@ -1,0 +1,12 @@
+diff --git a/cmake/mcc-lidar-config.cmake.in b/cmake/mcc-lidar-config.cmake.in
+index ef4815d..99fed03 100644
+--- a/cmake/mcc-lidar-config.cmake.in
++++ b/cmake/mcc-lidar-config.cmake.in
+@@ -21,6 +21,7 @@ set (MCC_LIDAR_BINARY_DIRS "${PROJECT_ROOT_DIR}/bin")
+ set (MCC_LIDAR_WITH_CUDA @WITH_CUDA@)
+ 
+ include(CMakeFindDependencyMacro)
++find_dependency(libLAS)
+ if(MCC_LIDAR_WITH_CUDA)
+   find_dependency(CUDAToolkit)
+ endif()
