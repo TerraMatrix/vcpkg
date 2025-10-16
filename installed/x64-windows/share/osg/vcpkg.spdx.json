@@ -1,0 +1,51 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/osg-x64-windows-3.6.5#25-ea1bd5f4-a419-4112-8e32-6650f2a09049",
+  "name": "osg:x64-windows@3.6.5#25 NONE",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
+    ],
+    "created": "2025-10-16T05:38:45Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "osg",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "3.6.5#25",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/osg",
+      "homepage": "https://www.openscenegraph.com/",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "The OpenSceneGraph is an open source high performance 3D graphics toolkit.",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "osg:x64-windows",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "NONE",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    }
+  ],
+  "files": []
+}
