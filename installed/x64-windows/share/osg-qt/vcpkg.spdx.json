@@ -1,0 +1,50 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/osg-qt-x64-windows-Qt5#3-0b9eb0ac-8000-4621-b285-05033f52e39b",
+  "name": "osg-qt:x64-windows@Qt5#3 NONE",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
+    ],
+    "created": "2025-10-16T05:41:34Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "osg-qt",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "Qt5#3",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/osg-qt",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "osgQt - Qt project for making use of OpenSceneGraph(OSG)",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "osg-qt:x64-windows",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "NONE",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    }
+  ],
+  "files": []
+}
