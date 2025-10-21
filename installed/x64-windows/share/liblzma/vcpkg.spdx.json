@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/liblzma-x64-windows-5.6.3-6c202dd7-6c84-4003-be20-7f42a84778bd",
-  "name": "liblzma:x64-windows@5.6.3 24f0638978883188e01b4e1c127eb96345221ebe511d8d441ef410165b3bede8",
+  "documentNamespace": "https://spdx.org/spdxdocs/liblzma-x64-windows-5.2.5#3-8631d0af-ec52-4657-a8a9-266c44245f9c",
+  "name": "liblzma:x64-windows@5.2.5#3 e39aacb55ce4a79d777d10bfd311fb8e4cb2efda73d92eeb9e439da61c9833df",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
     ],
-    "created": "2025-01-14T15:32:27Z"
+    "created": "2025-10-20T09:40:02Z"
   },
   "relationships": [
     {
@@ -43,6 +43,26 @@
       "relatedSpdxElement": "SPDXRef-file-4"
     },
     {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-5"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-6"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-7"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-8"
+    },
+    {
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-port"
@@ -71,15 +91,35 @@
       "spdxElementId": "SPDXRef-file-4",
       "relationshipType": "CONTAINED_BY",
       "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-5",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-6",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-7",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-8",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
     }
   ],
   "packages": [
     {
       "name": "liblzma",
       "SPDXID": "SPDXRef-port",
-      "versionInfo": "5.6.3",
+      "versionInfo": "5.2.5#3",
       "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/liblzma",
-      "homepage": "https://tukaani.org/xz/",
+      "homepage": "hhttps://github.com/xz-mirror/xz",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
@@ -89,7 +129,7 @@
     {
       "name": "liblzma:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "24f0638978883188e01b4e1c127eb96345221ebe511d8d441ef410165b3bede8",
+      "versionInfo": "e39aacb55ce4a79d777d10bfd311fb8e4cb2efda73d92eeb9e439da61c9833df",
       "downloadLocation": "NONE",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
@@ -98,23 +138,35 @@
     },
     {
       "SPDXID": "SPDXRef-resource-1",
-      "name": "tukaani-project/xz",
-      "downloadLocation": "git+https://github.com/tukaani-project/xz@v5.6.3",
+      "name": "xz-mirror/xz",
+      "downloadLocation": "git+https://github.com/xz-mirror/xz@v5.2.5",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "checksums": [
         {
           "algorithm": "SHA512",
-          "checksumValue": "0f814f4282c87cb74a8383199c1e55ec1bf49519daaf07f7b376cb644770b75cc9257c809b661405fcfd6cda28c54d799c67eb9e169665c35b1b87529468085e"
+          "checksumValue": "686f01cfe33e2194766a856c48668c661b25eee194a443524f87ce3f866e0eb54914075b4e00185921516c5211db8cd5d2658f4b91f4a3580508656f776f468e"
         }
       ]
     }
   ],
   "files": [
     {
-      "fileName": "./E:/vcpkg/vcpkg-win7-new/ports/liblzma/build-tools.patch",
+      "fileName": "./E:/vcpkg/vcpkg/ports/liblzma/add_support_ios.patch",
       "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3955592d52b4c4fae8e02929c9f23ccbe70e55c1350227355291e49d9c67fcd6"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/liblzma/build-tools.patch",
+      "SPDXID": "SPDXRef-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -125,48 +177,84 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./E:/vcpkg/vcpkg-win7-new/ports/liblzma/portfile.cmake",
-      "SPDXID": "SPDXRef-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "2cc44391422f5a41948d9a026c17aa7b300b47c5479ef2570576b434ed788091"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./E:/vcpkg/vcpkg-win7-new/ports/liblzma/usage",
+      "fileName": "./E:/vcpkg/vcpkg/ports/liblzma/enable-uwp-builds.patch",
       "SPDXID": "SPDXRef-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "8e856626fcd7a0110736379543122b37484d658078c12a55596b0664f455286d"
+          "checksumValue": "2aa2f0734a4b02479d286fddb6f4e0163c7084d5e36c4fc43f3df01fb2f3fb6a"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./E:/vcpkg/vcpkg-win7-new/ports/liblzma/vcpkg-cmake-wrapper.cmake",
+      "fileName": "./E:/vcpkg/vcpkg/ports/liblzma/fix_config_include.patch",
       "SPDXID": "SPDXRef-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "a4611673d837ec6e94f0f0f9a85a1859b85ef169e762b48a99946b9436647b39"
+          "checksumValue": "34073e84d9c184b72f6270da26a049276f2881aeb990943697cfb9b70332b583"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./E:/vcpkg/vcpkg-win7-new/ports/liblzma/vcpkg.json",
+      "fileName": "./E:/vcpkg/vcpkg/ports/liblzma/portfile.cmake",
       "SPDXID": "SPDXRef-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "45a186bdea9dc622bf655c828b5f5c09c3e30bdd5c83381ace67c9c8fc48684c"
+          "checksumValue": "6f75b89403269e4d356d558d3a1349e3ef04d2db7bb51b26a8823c58c08b5094"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/liblzma/usage",
+      "SPDXID": "SPDXRef-file-5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7e2c8d81961ea4c76c4478cf3c4ba6b7fa4e84e414f26a498ee413347d8dc082"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/liblzma/vcpkg-cmake-wrapper.cmake",
+      "SPDXID": "SPDXRef-file-6",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a07c077fc6a3b887a31943548fffa8346e70f596cf4bd1855792df80b2d846d0"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/liblzma/vcpkg.json",
+      "SPDXID": "SPDXRef-file-7",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5f7002c1687862e902bc94f7ee4bad76d544169d5aae0fac958f2663b3ec4099"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/liblzma/win_output_name.patch",
+      "SPDXID": "SPDXRef-file-8",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3d3057e5437bbf4110b31d72a571fd191bd22a3dd0bf5f78a0f68fd556a65542"
         }
       ],
       "licenseConcluded": "NOASSERTION",

@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/libffi-x64-windows-3.4.6-7fac18d2-24d9-48df-92f7-359f5a6e71f5",
-  "name": "libffi:x64-windows@3.4.6 6a187fbf97a1aa6f84b82da48cb6f7b7aea2c9bbfc14cc68962c9279437669da",
+  "documentNamespace": "https://spdx.org/spdxdocs/libffi-x64-windows-3.4.4#1-16d81d98-ddb4-4d1a-b8a6-41fd9fc6d844",
+  "name": "libffi:x64-windows@3.4.4#1 352dcdb771a7cac93c4b4eb9b30f02c04b8bdd29d7d9b58b34a4be0aba7b1fb6",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
     ],
-    "created": "2025-10-20T07:52:57Z"
+    "created": "2025-10-20T09:13:06Z"
   },
   "relationships": [
     {
@@ -48,6 +48,21 @@
       "relatedSpdxElement": "SPDXRef-file-5"
     },
     {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-6"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-7"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-8"
+    },
+    {
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-port"
@@ -81,13 +96,28 @@
       "spdxElementId": "SPDXRef-file-5",
       "relationshipType": "CONTAINED_BY",
       "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-6",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-7",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-8",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
     }
   ],
   "packages": [
     {
       "name": "libffi",
       "SPDXID": "SPDXRef-port",
-      "versionInfo": "3.4.6",
+      "versionInfo": "3.4.4#1",
       "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/libffi",
       "homepage": "https://github.com/libffi/libffi",
       "licenseConcluded": "MIT",
@@ -99,7 +129,7 @@
     {
       "name": "libffi:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "6a187fbf97a1aa6f84b82da48cb6f7b7aea2c9bbfc14cc68962c9279437669da",
+      "versionInfo": "352dcdb771a7cac93c4b4eb9b30f02c04b8bdd29d7d9b58b34a4be0aba7b1fb6",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -108,24 +138,35 @@
     },
     {
       "SPDXID": "SPDXRef-resource-1",
-      "name": "libffi-${VERSION}.tar.gz",
-      "packageFileName": "libffi-${VERSION}.tar.gz",
-      "downloadLocation": "https://github.com/libffi/libffi/releases/download/v${VERSION}/libffi-${VERSION}.tar.gz",
+      "name": "libffi/libffi",
+      "downloadLocation": "git+https://github.com/libffi/libffi@v3.4.4",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "checksums": [
         {
           "algorithm": "SHA512",
-          "checksumValue": "033d2600e879b83c6bce0eb80f69c5f32aa775bf2e962c9d39fbd21226fa19d1e79173d8eaa0d0157014d54509ea73315ad86842356fc3a303c0831c94c6ab39"
+          "checksumValue": "e3b261a7900cec61225c768ebd443884465669e0904db3f523aaaeeed74b4c03dbe23d74ff8bb69554791a798e25894a5fcbe2b13b883d3ee38aeff4c1e16a49"
         }
       ]
     }
   ],
   "files": [
     {
-      "fileName": "./E:/vcpkg/vcpkg/ports/libffi/dll-bindir.diff",
+      "fileName": "./E:/vcpkg/vcpkg/ports/libffi/CMakeLists.txt",
       "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5708b8c27419fd15ff92e766f100ebd50416999f5a2e22fe93adc2aaf351f53f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/libffi/dll-bindir.diff",
+      "SPDXID": "SPDXRef-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -136,8 +177,20 @@
       "copyrightText": "NOASSERTION"
     },
     {
+      "fileName": "./E:/vcpkg/vcpkg/ports/libffi/fficonfig.h",
+      "SPDXID": "SPDXRef-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ac8bbb1cdf0e2757cd2b2b876e18e87b449aca2b9344c9639f31e41633274570"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
       "fileName": "./E:/vcpkg/vcpkg/ports/libffi/libffiConfig.cmake",
-      "SPDXID": "SPDXRef-file-1",
+      "SPDXID": "SPDXRef-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -148,12 +201,24 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./E:/vcpkg/vcpkg/ports/libffi/portfile.cmake",
-      "SPDXID": "SPDXRef-file-2",
+      "fileName": "./E:/vcpkg/vcpkg/ports/libffi/libffiConfig.cmake.in",
+      "SPDXID": "SPDXRef-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "9810533bdc3965104e95a7494978373f7d7a4f27420aa0a6dc4903bc47a77026"
+          "checksumValue": "d2f5f4c8b08abf26021b3645d9a86bc56928d4e9de3e7ba3a6d4cd8cf30e9f01"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/libffi/portfile.cmake",
+      "SPDXID": "SPDXRef-file-5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e6ccefb2c208b66e9077d7ab87edd8b958378a07c0578cc6f13ea0e3abf82fc4"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -161,7 +226,7 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/libffi/unofficial-libffi-config.cmake",
-      "SPDXID": "SPDXRef-file-3",
+      "SPDXID": "SPDXRef-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -173,7 +238,7 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/libffi/usage",
-      "SPDXID": "SPDXRef-file-4",
+      "SPDXID": "SPDXRef-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -185,11 +250,11 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/libffi/vcpkg.json",
-      "SPDXID": "SPDXRef-file-5",
+      "SPDXID": "SPDXRef-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "38f78630af752d852f9e4ca711454087e50bad815239437e8e679091b8972b12"
+          "checksumValue": "a7ea1964478f76e0b427a84a1bbd07d64676c3319087c8834ce256ae48a93c98"
         }
       ],
       "licenseConcluded": "NOASSERTION",
