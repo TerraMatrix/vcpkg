@@ -54,21 +54,21 @@ function(vcpkg_qmake_configure)
         set(${var} "${${var}}" PARENT_SCOPE) # Is this correct? Or is there a vcpkg_list command for that?
     endfunction()
     # Setup Build tools
-    if(NOT VCPKG_QMAKE_COMMAND) # For users using outside QT_VER
-        set(VCPKG_QMAKE_COMMAND "${CURRENT_HOST_INSTALLED_DIR}/tools/QT_VER/bin/qmake${VCPKG_HOST_EXECUTABLE_SUFFIX}")
+    if(NOT VCPKG_QMAKE_COMMAND) # For users using outside qt5
+        set(VCPKG_QMAKE_COMMAND "${CURRENT_HOST_INSTALLED_DIR}/tools/qt5/bin/qmake${VCPKG_HOST_EXECUTABLE_SUFFIX}")
     endif()
 
     if(VCPKG_TARGET_IS_OSX)
         # Get Qt version
         execute_process(
-            COMMAND ${VCPKG_QMAKE_COMMAND} -query QT_VERSION
-            OUTPUT_VARIABLE QT_VERSION
+            COMMAND ${VCPKG_QMAKE_COMMAND} -query qt5SION
+            OUTPUT_VARIABLE qt5SION
             OUTPUT_STRIP_TRAILING_WHITESPACE
         )
 
         if(DEFINED VCPKG_OSX_DEPLOYMENT_TARGET)
             vcpkg_list(APPEND arg_QMAKE_OPTIONS "QMAKE_MACOSX_DEPLOYMENT_TARGET=${VCPKG_OSX_DEPLOYMENT_TARGET}")
-        elseif(${QT_VERSION} VERSION_GREATER_EQUAL 6)
+        elseif(${qt5SION} VERSION_GREATER_EQUAL 6)
             # https://doc.qt.io/qt-6/macos.html
             vcpkg_list(APPEND arg_QMAKE_OPTIONS "QMAKE_MACOSX_DEPLOYMENT_TARGET=10.15")
         else() # Qt5
@@ -137,7 +137,7 @@ function(vcpkg_qmake_configure)
 
         # Setup qt.conf
         if(NOT VCPKG_QT_CONF_${buildtype})
-            set(VCPKG_QT_CONF_${buildtype} "${CURRENT_INSTALLED_DIR}/tools/QT_VER/qt_${lowerbuildtype}.conf")
+            set(VCPKG_QT_CONF_${buildtype} "${CURRENT_INSTALLED_DIR}/tools/qt5/qt_${lowerbuildtype}.conf")
         else()
             # Let a supplied qt.conf override everything.
             # The file will still be configured so users might use the variables within this scope.
