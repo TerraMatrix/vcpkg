@@ -16,6 +16,7 @@ endif()
 
 set(PYTHON_VERSION_MAJOR  3)
 set(PYTHON_VERSION_MINOR  8)
+set(PYQT_VERSION 5.15.9)
 
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
@@ -26,6 +27,7 @@ vcpkg_from_github(
     PATCHES
         fix-build-failed.diff
         fix-vrgis.diff
+        add-pdal.patch
 )
 
 vcpkg_find_acquire_program(FLEX)
@@ -167,7 +169,7 @@ if(VCPKG_TARGET_IS_WINDOWS)
             GET_PIP_PATH
             URLS https://bootstrap.pypa.io/get-pip.py
             FILENAME get-pip.py
-            SHA512  91e56cba31827911707bca5c036e602a2ef01e15cdce3b07b4dd102577bd6c44727dad81c65be8375ee33857d8f01633397656c4b4702b968c041aecccc29b12
+            SHA512  fcfea69e6e227a6e90e30d8314bc30586cac657ad9235de46eeefda45759cbcdb14b682b63c641a06fc3d8fdc933aea85cc5a5024f921d9d0a45585ddbf9d78e
         )
 
         vcpkg_execute_required_process(
@@ -206,7 +208,7 @@ if(VCPKG_TARGET_IS_WINDOWS)
     if(NOT EXISTS "${PYTHON3_PATH}/Scripts/pyuic5.exe")
         MESSAGE(STATUS  "Install PyQt5 for Python Begin ...")
         vcpkg_execute_required_process(
-            COMMAND "${PYTHON_EXECUTABLE}" -m pip install PyQt5==${QT_VERSION} PyQt5-sip QScintilla==${QSCINTILLA_VERSION} PyQt3D==${QT_VERSION} PyQt-builder ${PIP_MIRRORS}
+            COMMAND "${PYTHON_EXECUTABLE}" -m pip install PyQt5==${PYQT_VERSION} PyQt5-sip QScintilla==${QSCINTILLA_VERSION} PyQt3D==5.15.6 PyQt-builder ${PIP_MIRRORS}
             WORKING_DIRECTORY ${PYTHON3_PATH}
             LOGNAME pip
         )
