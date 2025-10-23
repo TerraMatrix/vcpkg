@@ -25,8 +25,8 @@ endmacro()
 ####################################################################################
 
 set(PDAL_VERSION_MAJOR 2)
-set(PDAL_VERSION_MINOR 8)
-set(PDAL_VERSION_PATCH 1)
+set(PDAL_VERSION_MINOR 5)
+set(PDAL_VERSION_PATCH 3)
 
 set_and_check(PDAL_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/include")
 set_and_check(PDAL_LIBRARY_DIRS "${PACKAGE_PREFIX_DIR}/lib")
@@ -40,6 +40,6 @@ include("${CMAKE_CURRENT_LIST_DIR}/PDALTargets.cmake")
 #   an actual library that cmake knows about.  If you can figure this out,
 #   a change would be nice.
 #
-set(PDAL_LIBRARIES pdalcpp)
+set(PDAL_LIBRARIES pdalcpp pdal_util)
 
 check_required_components(PDAL)

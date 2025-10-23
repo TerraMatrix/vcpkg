@@ -1,7 +1,4 @@
 
-include(CMakeFindDependencyMacro)
-find_dependency(Threads)
-
 ####### Expanded from @PACKAGE_INIT@ by configure_package_config_file() #######
 ####### Any changes to this file will be overwritten by the next CMake run ####
 ####### The input file was nanoflannConfig.cmake.in                            ########
@@ -26,9 +23,6 @@ macro(check_required_components _NAME)
 endmacro()
 
 ####################################################################################
-
-include(CMakeFindDependencyMacro)
-find_dependency(Threads)
 
 include("${CMAKE_CURRENT_LIST_DIR}/nanoflannTargets.cmake")
 
