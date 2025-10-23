@@ -4,6 +4,7 @@
 
 # Commands may need to know the format version.
 set(CMAKE_IMPORT_FILE_VERSION 1)
+find_package(poly2tri CONFIG REQUIRED)
 
 # Import target "poly2tri::poly2tri" for configuration "Release"
 set_property(TARGET poly2tri::poly2tri APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
