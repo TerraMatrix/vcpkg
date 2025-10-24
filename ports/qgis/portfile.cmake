@@ -15,7 +15,7 @@ if(EXISTS "${CURRENT_INSTALLED_DIR}/include/Qsci/qsciglobal.h")
 endif()
 
 set(PYTHON_VERSION_MAJOR  3)
-set(PYTHON_VERSION_MINOR  8)
+set(PYTHON_VERSION_MINOR  9)
 set(PYQT_VERSION 5.15.9)
 
 vcpkg_from_github(
@@ -27,7 +27,7 @@ vcpkg_from_github(
     PATCHES
         fix-build-failed.diff
         fix-vrgis.diff
-        add-pdal.patch
+        fix-link.patch
 )
 
 vcpkg_find_acquire_program(FLEX)
@@ -224,6 +224,15 @@ if(VCPKG_TARGET_IS_WINDOWS)
         endif(sip_config)
 
         if( SIP_DEFAULT_SIP_DIR )
+            # Fix SIP_DEFAULT_SIP_DIR if it points to a different drive than PYTHON3_PATH
+            # This can happen when Python tools were originally installed on a different drive
+            string(SUBSTRING "${SIP_DEFAULT_SIP_DIR}" 0 2 SIP_DRIVE)
+            string(SUBSTRING "${PYTHON3_PATH}" 0 2 PYTHON_DRIVE)
+            if(NOT "${SIP_DRIVE}" STREQUAL "${PYTHON_DRIVE}")
+                string(SUBSTRING "${SIP_DEFAULT_SIP_DIR}" 2 -1 SIP_PATH_WITHOUT_DRIVE)
+                set(SIP_DEFAULT_SIP_DIR "${PYTHON_DRIVE}${SIP_PATH_WITHOUT_DRIVE}")
+                message(STATUS "Corrected SIP_DEFAULT_SIP_DIR to: ${SIP_DEFAULT_SIP_DIR}")
+            endif()
             if(NOT EXISTS "${SIP_DEFAULT_SIP_DIR}/QtCore/QtCoremod.sip")
                 MESSAGE(STATUS  "Install PyQt5 sip for Python Begin ...")
                     file(GLOB PYQT5_SIP "${PYTHON3_PATH}/Lib/site-packages/PyQt5/bindings/*")
