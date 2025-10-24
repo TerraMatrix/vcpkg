@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/grpc-x64-windows-1.65.5-00b0a29e-3401-4352-8fb7-c0dad1c0a928",
-  "name": "grpc:x64-windows@1.65.5 e118f8d1efae72626ff3dc7531415c3d2a82a109e116b5a03a4c832cf8290817",
+  "documentNamespace": "https://spdx.org/spdxdocs/grpc-x64-windows-1.51.1-355c96b8-cfa3-47db-b971-27e96f2db8c2",
+  "name": "grpc:x64-windows@1.51.1 a48c13b880e32f7d26400b9402268e20dc7fa065c12a5c84960c6641e7cb06f4",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
     ],
-    "created": "2025-10-13T16:30:22Z"
+    "created": "2025-10-23T09:45:18Z"
   },
   "relationships": [
     {
@@ -88,6 +88,31 @@
       "relatedSpdxElement": "SPDXRef-file-13"
     },
     {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-14"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-15"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-16"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-17"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-18"
+    },
+    {
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-port"
@@ -161,25 +186,50 @@
       "spdxElementId": "SPDXRef-file-13",
       "relationshipType": "CONTAINED_BY",
       "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-14",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-15",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-16",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-17",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-18",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
     }
   ],
   "packages": [
     {
       "name": "grpc",
       "SPDXID": "SPDXRef-port",
-      "versionInfo": "1.65.5",
+      "versionInfo": "1.51.1",
       "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/grpc",
       "homepage": "https://github.com/grpc/grpc",
       "licenseConcluded": "Apache-2.0",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
-      "description": "gRPC is a modern, open source, high-performance remote procedure call (RPC) framework that can run anywhere. gRPC enables client and server applications to communicate transparently, and simplifies the building of connected systems.",
+      "description": "An RPC library and framework",
       "comment": "This is the port (recipe) consumed by vcpkg."
     },
     {
       "name": "grpc:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "e118f8d1efae72626ff3dc7531415c3d2a82a109e116b5a03a4c832cf8290817",
+      "versionInfo": "a48c13b880e32f7d26400b9402268e20dc7fa065c12a5c84960c6641e7cb06f4",
       "downloadLocation": "NONE",
       "licenseConcluded": "Apache-2.0",
       "licenseDeclared": "NOASSERTION",
@@ -189,14 +239,14 @@
     {
       "SPDXID": "SPDXRef-resource-1",
       "name": "grpc/grpc",
-      "downloadLocation": "git+https://github.com/grpc/grpc@v1.65.5",
+      "downloadLocation": "git+https://github.com/grpc/grpc@v1.51.1",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "checksums": [
         {
           "algorithm": "SHA512",
-          "checksumValue": "a930bd9d8d0308f62fdda7ca215321b69a0cca8d8e0ce654b6938cd71dfd568fe63b5dd6ab0ee537e67751211e240b19cc23e07f5927dac318cf9be778d9fec2"
+          "checksumValue": "1bc8e7a5a15b2dca88527d111cde398b0dc1921bbc945c6df8225b4225b8ac0b43155bcf743230ce7b5962d1ab948e9363229c98a879b1befc7a939a290fb888"
         }
       ]
     }
@@ -208,7 +258,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "c806e02c487403f6b74b022fe3a24530614b6d3a52fc8ac04fc17ebacb7843f9"
+          "checksumValue": "22ca24cdae80d59d60d878b10b6e6ec28c955596df834d192dfcb8075e5d2164"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -227,12 +277,24 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./E:/vcpkg/vcpkg/ports/grpc/00004-link-gdi32-on-windows.patch",
+      "fileName": "./E:/vcpkg/vcpkg/ports/grpc/00003-undef-base64-macro.patch",
       "SPDXID": "SPDXRef-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "1661aa0d8a1c53296909687ec93331b98a4a044f2a87aa949b2f2a570e54aa26"
+          "checksumValue": "41ff105ccffd78ba2111812c562614ad7ebac0c191a63f6a9852b4ba62599a98"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/grpc/00004-link-gdi32-on-windows.patch",
+      "SPDXID": "SPDXRef-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0d85343b4cc582f5d07bb2194f37089c19e0189a7291e307925fe65968c318af"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -240,11 +302,11 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/grpc/00005-fix-uwp-error.patch",
-      "SPDXID": "SPDXRef-file-3",
+      "SPDXID": "SPDXRef-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "24dd9f4022d54919f046273f4596acee6703dc02790865d58e5abe32ba9a289a"
+          "checksumValue": "85e765373ef5b1966e8b6a0543413a23b99181b58cb555fe64cc91b950a2aa4f"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -252,7 +314,7 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/grpc/00006-utf8-range.patch",
-      "SPDXID": "SPDXRef-file-4",
+      "SPDXID": "SPDXRef-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -264,11 +326,35 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/grpc/00009-use-system-upb.patch",
-      "SPDXID": "SPDXRef-file-5",
+      "SPDXID": "SPDXRef-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f607595432abe6bc298d4369ef1a3f3f98a1d48de0177a1824a5f628d1777872"
+          "checksumValue": "3bd5a6cef18e277e8bc31caf644681b224033b5b7226359ac75f8e5861eb1a0c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/grpc/00012-fix-use-cxx17.patch",
+      "SPDXID": "SPDXRef-file-7",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1ef686a7aac801696160a7c68b56c18ad9f48ab4c52b0847ed5c7ae038c631dd"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/grpc/00014-pkgconfig-upbdefs.patch",
+      "SPDXID": "SPDXRef-file-8",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "883b8379c63914e7fd1aa2094e2015e42078c2fb8a26b011c0ad0e18834a66b2"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -276,11 +362,11 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/grpc/00015-disable-download-archive.patch",
-      "SPDXID": "SPDXRef-file-6",
+      "SPDXID": "SPDXRef-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "54a599c581a46c7a7639c526ff6f2a9a1fd6f2c4bfefe402ff62c254108b3a7c"
+          "checksumValue": "90fdd6e4a51cbc9756d1fcdd0f65e665d4b78cfd91fdbeb0228cc4e9c4ba1b73"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -288,7 +374,7 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/grpc/00016-fix-plugin-targets.patch",
-      "SPDXID": "SPDXRef-file-7",
+      "SPDXID": "SPDXRef-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -300,7 +386,7 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/grpc/00017-fix-NAN-on-Win11.patch",
-      "SPDXID": "SPDXRef-file-8",
+      "SPDXID": "SPDXRef-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -312,7 +398,7 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/grpc/00018-fix-windows-event-engine.patch",
-      "SPDXID": "SPDXRef-file-9",
+      "SPDXID": "SPDXRef-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -323,8 +409,20 @@
       "copyrightText": "NOASSERTION"
     },
     {
+      "fileName": "./E:/vcpkg/vcpkg/ports/grpc/00019-fix-utf8-range-target.patch",
+      "SPDXID": "SPDXRef-file-13",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3791e3c2ef23a335dc91324613ae2fa3c1d4c9c6a3596350118ffcda9887b4a1"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
       "fileName": "./E:/vcpkg/vcpkg/ports/grpc/gRPCTargets-vcpkg-tools.cmake",
-      "SPDXID": "SPDXRef-file-10",
+      "SPDXID": "SPDXRef-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -336,11 +434,23 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/grpc/portfile.cmake",
-      "SPDXID": "SPDXRef-file-11",
+      "SPDXID": "SPDXRef-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "49b50bb03fdd546fcc3d184a92cd5c0b7088602c35b404c9da9a9d198d7da3ff"
+          "checksumValue": "181255b34cd74a2138bb5dfecfa369fdcce63bd672653a0f2392b4b54c5caa49"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/grpc/snprintf.patch",
+      "SPDXID": "SPDXRef-file-16",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fdb2db69e046bb79d794eab2f464f1633f823753c5a9929913db771fc7462be5"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -348,7 +458,7 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/grpc/vcpkg-cmake-wrapper.cmake",
-      "SPDXID": "SPDXRef-file-12",
+      "SPDXID": "SPDXRef-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -360,11 +470,11 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/grpc/vcpkg.json",
-      "SPDXID": "SPDXRef-file-13",
+      "SPDXID": "SPDXRef-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "c9f6d0001f9377896598e0bf8ae1ba22ccf7d26576102764ac6791d73f0370af"
+          "checksumValue": "7ebf2136bd2772ca4b8ec28df4479bbb13fbb9b58e26a8495e388354c0efe5ad"
         }
       ],
       "licenseConcluded": "NOASSERTION",

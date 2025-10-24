@@ -45,56 +45,6 @@ set_target_properties(gRPC::grpc_unsecure PROPERTIES
 list(APPEND _cmake_import_check_targets gRPC::grpc_unsecure )
 list(APPEND _cmake_import_check_files_for_gRPC::grpc_unsecure "${_IMPORT_PREFIX}/debug/lib/grpc_unsecure.lib" )
 
-# Import target "gRPC::upb_base_lib" for configuration "Debug"
-set_property(TARGET gRPC::upb_base_lib APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
-set_target_properties(gRPC::upb_base_lib PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "C"
-  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/debug/lib/upb_base_lib.lib"
-  )
-
-list(APPEND _cmake_import_check_targets gRPC::upb_base_lib )
-list(APPEND _cmake_import_check_files_for_gRPC::upb_base_lib "${_IMPORT_PREFIX}/debug/lib/upb_base_lib.lib" )
-
-# Import target "gRPC::upb_json_lib" for configuration "Debug"
-set_property(TARGET gRPC::upb_json_lib APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
-set_target_properties(gRPC::upb_json_lib PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "C"
-  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/debug/lib/upb_json_lib.lib"
-  )
-
-list(APPEND _cmake_import_check_targets gRPC::upb_json_lib )
-list(APPEND _cmake_import_check_files_for_gRPC::upb_json_lib "${_IMPORT_PREFIX}/debug/lib/upb_json_lib.lib" )
-
-# Import target "gRPC::upb_mem_lib" for configuration "Debug"
-set_property(TARGET gRPC::upb_mem_lib APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
-set_target_properties(gRPC::upb_mem_lib PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "C"
-  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/debug/lib/upb_mem_lib.lib"
-  )
-
-list(APPEND _cmake_import_check_targets gRPC::upb_mem_lib )
-list(APPEND _cmake_import_check_files_for_gRPC::upb_mem_lib "${_IMPORT_PREFIX}/debug/lib/upb_mem_lib.lib" )
-
-# Import target "gRPC::upb_message_lib" for configuration "Debug"
-set_property(TARGET gRPC::upb_message_lib APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
-set_target_properties(gRPC::upb_message_lib PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "C"
-  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/debug/lib/upb_message_lib.lib"
-  )
-
-list(APPEND _cmake_import_check_targets gRPC::upb_message_lib )
-list(APPEND _cmake_import_check_files_for_gRPC::upb_message_lib "${_IMPORT_PREFIX}/debug/lib/upb_message_lib.lib" )
-
-# Import target "gRPC::upb_textformat_lib" for configuration "Debug"
-set_property(TARGET gRPC::upb_textformat_lib APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
-set_target_properties(gRPC::upb_textformat_lib PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "C"
-  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/debug/lib/upb_textformat_lib.lib"
-  )
-
-list(APPEND _cmake_import_check_targets gRPC::upb_textformat_lib )
-list(APPEND _cmake_import_check_files_for_gRPC::upb_textformat_lib "${_IMPORT_PREFIX}/debug/lib/upb_textformat_lib.lib" )
-
 # Import target "gRPC::grpc++" for configuration "Debug"
 set_property(TARGET gRPC::grpc++ APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(gRPC::grpc++ PROPERTIES
@@ -145,16 +95,6 @@ set_target_properties(gRPC::grpc++_unsecure PROPERTIES
 list(APPEND _cmake_import_check_targets gRPC::grpc++_unsecure )
 list(APPEND _cmake_import_check_files_for_gRPC::grpc++_unsecure "${_IMPORT_PREFIX}/debug/lib/grpc++_unsecure.lib" )
 
-# Import target "gRPC::grpc_authorization_provider" for configuration "Debug"
-set_property(TARGET gRPC::grpc_authorization_provider APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
-set_target_properties(gRPC::grpc_authorization_provider PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "C;CXX"
-  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/debug/lib/grpc_authorization_provider.lib"
-  )
-
-list(APPEND _cmake_import_check_targets gRPC::grpc_authorization_provider )
-list(APPEND _cmake_import_check_files_for_gRPC::grpc_authorization_provider "${_IMPORT_PREFIX}/debug/lib/grpc_authorization_provider.lib" )
-
 # Import target "gRPC::grpc_plugin_support" for configuration "Debug"
 set_property(TARGET gRPC::grpc_plugin_support APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(gRPC::grpc_plugin_support PROPERTIES
@@ -174,6 +114,69 @@ set_target_properties(gRPC::grpcpp_channelz PROPERTIES
 
 list(APPEND _cmake_import_check_targets gRPC::grpcpp_channelz )
 list(APPEND _cmake_import_check_files_for_gRPC::grpcpp_channelz "${_IMPORT_PREFIX}/debug/lib/grpcpp_channelz.lib" )
+
+# Import target "gRPC::grpc_cpp_plugin" for configuration "Debug"
+set_property(TARGET gRPC::grpc_cpp_plugin APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
+set_target_properties(gRPC::grpc_cpp_plugin PROPERTIES
+  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/tools/grpc/grpc_cpp_plugin.exe"
+  )
+
+list(APPEND _cmake_import_check_targets gRPC::grpc_cpp_plugin )
+list(APPEND _cmake_import_check_files_for_gRPC::grpc_cpp_plugin "${_IMPORT_PREFIX}/tools/grpc/grpc_cpp_plugin.exe" )
+
+# Import target "gRPC::grpc_csharp_plugin" for configuration "Debug"
+set_property(TARGET gRPC::grpc_csharp_plugin APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
+set_target_properties(gRPC::grpc_csharp_plugin PROPERTIES
+  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/tools/grpc/grpc_csharp_plugin.exe"
+  )
+
+list(APPEND _cmake_import_check_targets gRPC::grpc_csharp_plugin )
+list(APPEND _cmake_import_check_files_for_gRPC::grpc_csharp_plugin "${_IMPORT_PREFIX}/tools/grpc/grpc_csharp_plugin.exe" )
+
+# Import target "gRPC::grpc_node_plugin" for configuration "Debug"
+set_property(TARGET gRPC::grpc_node_plugin APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
+set_target_properties(gRPC::grpc_node_plugin PROPERTIES
+  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/tools/grpc/grpc_node_plugin.exe"
+  )
+
+list(APPEND _cmake_import_check_targets gRPC::grpc_node_plugin )
+list(APPEND _cmake_import_check_files_for_gRPC::grpc_node_plugin "${_IMPORT_PREFIX}/tools/grpc/grpc_node_plugin.exe" )
+
+# Import target "gRPC::grpc_objective_c_plugin" for configuration "Debug"
+set_property(TARGET gRPC::grpc_objective_c_plugin APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
+set_target_properties(gRPC::grpc_objective_c_plugin PROPERTIES
+  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/tools/grpc/grpc_objective_c_plugin.exe"
+  )
+
+list(APPEND _cmake_import_check_targets gRPC::grpc_objective_c_plugin )
+list(APPEND _cmake_import_check_files_for_gRPC::grpc_objective_c_plugin "${_IMPORT_PREFIX}/tools/grpc/grpc_objective_c_plugin.exe" )
+
+# Import target "gRPC::grpc_php_plugin" for configuration "Debug"
+set_property(TARGET gRPC::grpc_php_plugin APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
+set_target_properties(gRPC::grpc_php_plugin PROPERTIES
+  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/tools/grpc/grpc_php_plugin.exe"
+  )
+
+list(APPEND _cmake_import_check_targets gRPC::grpc_php_plugin )
+list(APPEND _cmake_import_check_files_for_gRPC::grpc_php_plugin "${_IMPORT_PREFIX}/tools/grpc/grpc_php_plugin.exe" )
+
+# Import target "gRPC::grpc_python_plugin" for configuration "Debug"
+set_property(TARGET gRPC::grpc_python_plugin APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
+set_target_properties(gRPC::grpc_python_plugin PROPERTIES
+  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/tools/grpc/grpc_python_plugin.exe"
+  )
+
+list(APPEND _cmake_import_check_targets gRPC::grpc_python_plugin )
+list(APPEND _cmake_import_check_files_for_gRPC::grpc_python_plugin "${_IMPORT_PREFIX}/tools/grpc/grpc_python_plugin.exe" )
+
+# Import target "gRPC::grpc_ruby_plugin" for configuration "Debug"
+set_property(TARGET gRPC::grpc_ruby_plugin APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
+set_target_properties(gRPC::grpc_ruby_plugin PROPERTIES
+  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/tools/grpc/grpc_ruby_plugin.exe"
+  )
+
+list(APPEND _cmake_import_check_targets gRPC::grpc_ruby_plugin )
+list(APPEND _cmake_import_check_files_for_gRPC::grpc_ruby_plugin "${_IMPORT_PREFIX}/tools/grpc/grpc_ruby_plugin.exe" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

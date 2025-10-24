@@ -1,0 +1,14 @@
+diff --git a/cmake/upb.cmake b/cmake/upb.cmake
+index 8ccd9ac284..04dd6a8306 100644
+--- a/cmake/upb.cmake
++++ b/cmake/upb.cmake
+@@ -19,4 +19,8 @@ set(_gRPC_UPB_GRPC_GENERATED_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src/core/ext/upb-g
+ 
+ set(_gRPC_UPB_LIBRARIES upb)
+ set(_gRPC_FIND_UTF8_RANGE "find_dependency(utf8_range CONFIG)")
+-add_library(utf8_range_lib ALIAS utf8_range::utf8_range)
++if(TARGET utf8_range::utf8_range)
++    add_library(utf8_range_lib ALIAS utf8_range::utf8_range)
++else()
++    add_library(utf8_range_lib INTERFACE IMPORTED)
++endif()
