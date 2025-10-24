@@ -9,7 +9,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set_property(TARGET osgEarth::osgEarth APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(osgEarth::osgEarth PROPERTIES
   IMPORTED_IMPLIB_RELEASE "${_IMPORT_PREFIX}/lib/osgEarth.lib"
-  IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "protobuf::libprotobuf;blosc_shared;GEOS::geos_c;blend2d::blend2d;GDAL::GDAL"
+  IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "blosc_shared;GEOS::geos_c;blend2d::blend2d;GDAL::GDAL"
   IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/osgEarth.dll"
   )
 

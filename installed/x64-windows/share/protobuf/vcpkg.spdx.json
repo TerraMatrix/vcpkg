@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/protobuf-x64-windows-5.26.1-9981fa20-b5b7-434b-a24b-50e1cf796cbd",
-  "name": "protobuf:x64-windows@5.26.1 71082c61afe1c555c791c15f2b6c29b7811d789976911651d53a959f2c82e375",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobuf-x64-windows-3.21.12-259762d0-727e-4ce9-b2a4-fb9d591f5a7e",
+  "name": "protobuf:x64-windows@3.21.12 402b88694bf64cb9b032faf01a325649f95393294033bc45897ed909700f838a",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
     ],
-    "created": "2025-10-13T15:48:17Z"
+    "created": "2025-10-23T06:17:27Z"
   },
   "relationships": [
     {
@@ -58,6 +58,11 @@
       "relatedSpdxElement": "SPDXRef-file-7"
     },
     {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-8"
+    },
+    {
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-port"
@@ -101,25 +106,30 @@
       "spdxElementId": "SPDXRef-file-7",
       "relationshipType": "CONTAINED_BY",
       "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-8",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
     }
   ],
   "packages": [
     {
       "name": "protobuf",
       "SPDXID": "SPDXRef-port",
-      "versionInfo": "5.26.1",
+      "versionInfo": "3.21.12",
       "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/protobuf",
       "homepage": "https://github.com/protocolbuffers/protobuf",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
-      "description": "Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data.",
+      "description": "Protocol Buffers - Google's data interchange format",
       "comment": "This is the port (recipe) consumed by vcpkg."
     },
     {
       "name": "protobuf:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "71082c61afe1c555c791c15f2b6c29b7811d789976911651d53a959f2c82e375",
+      "versionInfo": "402b88694bf64cb9b032faf01a325649f95393294033bc45897ed909700f838a",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -129,22 +139,34 @@
     {
       "SPDXID": "SPDXRef-resource-1",
       "name": "protocolbuffers/protobuf",
-      "downloadLocation": "git+https://github.com/protocolbuffers/protobuf@v5.26.1",
+      "downloadLocation": "git+https://github.com/protocolbuffers/protobuf@v3.21.12",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "checksums": [
         {
           "algorithm": "SHA512",
-          "checksumValue": "ce3eeb6d12c42157787bf97d265f34ac8e8af31070a2717b4c783e9158b6d7fbb5f239585fc38128a658315842cf7b6802cb9a80f4f391505bf806952e009da5"
+          "checksumValue": "152f8441c325e808b942153c15e82fdb533d5273b50c25c28916ec568ada880f79242bb61ee332ac5fb0d20f21239ed6f8de02ef6256cc574b1fc354d002c6b0"
         }
       ]
     }
   ],
   "files": [
     {
-      "fileName": "./E:/vcpkg/vcpkg/ports/protobuf/fix-arm64-msvc.patch",
+      "fileName": "./E:/vcpkg/vcpkg/ports/protobuf/compile_options.patch",
       "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2cee33ca7844b27e275ebed87fe419e432f9ed774c539c0aee8cc5b1923710a9"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/protobuf/fix-arm64-msvc.patch",
+      "SPDXID": "SPDXRef-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -156,11 +178,11 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/protobuf/fix-default-proto-file-path.patch",
-      "SPDXID": "SPDXRef-file-1",
+      "SPDXID": "SPDXRef-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "cd8fceee2401965c26db7408a8ab7bc44765f1755a18e03e99b533083f9852e2"
+          "checksumValue": "a991a3e51e4c0d91b30b5dcaacee9009abf510dd172efa08c9184f7d0609e3e1"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -168,11 +190,11 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/protobuf/fix-static-build.patch",
-      "SPDXID": "SPDXRef-file-2",
+      "SPDXID": "SPDXRef-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "9b14daf569768fedd44f709229f6d3894d1fda5813df93cef56e2960d0537e1a"
+          "checksumValue": "8997787fc7f393557f86475f448156fee9720f79014f7cdf398668647b525316"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -180,7 +202,7 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/protobuf/fix-utf8-range.patch",
-      "SPDXID": "SPDXRef-file-3",
+      "SPDXID": "SPDXRef-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -192,11 +214,11 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/protobuf/portfile.cmake",
-      "SPDXID": "SPDXRef-file-4",
+      "SPDXID": "SPDXRef-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "402b4566a248f13cbd571cc0cad0522e54051f93fba567a7f28b75ade5f79865"
+          "checksumValue": "a952ba2d0166e54fd576d8b063df5feeae233234f0a4dee7aa9e60599f23ebf6"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -204,7 +226,7 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/protobuf/protobuf-targets-vcpkg-protoc.cmake",
-      "SPDXID": "SPDXRef-file-5",
+      "SPDXID": "SPDXRef-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -216,11 +238,11 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/protobuf/vcpkg-cmake-wrapper.cmake",
-      "SPDXID": "SPDXRef-file-6",
+      "SPDXID": "SPDXRef-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "18480720d08ef5a87ce6744174cbe8cc451e3ffb857f2cbe2c8a6bbf385dce8a"
+          "checksumValue": "6381f7b8fdc47d1e7a9e2bb088625b73f2df8790581bb477f006fa15402ae1ca"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -228,11 +250,11 @@
     },
     {
       "fileName": "./E:/vcpkg/vcpkg/ports/protobuf/vcpkg.json",
-      "SPDXID": "SPDXRef-file-7",
+      "SPDXID": "SPDXRef-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d60888b3b73ada9b6fc1354c7856afffad1cb046461d46f7414b2c323fb2d44b"
+          "checksumValue": "c263a6d61c474400f9a712052e21b07fb37a6f162bf7178f996da9843c5d4291"
         }
       ],
       "licenseConcluded": "NOASSERTION",

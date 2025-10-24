@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/utf8-range-x64-windows-5.26.1-756f0986-81f8-418e-9f13-753cf757ceab",
-  "name": "utf8-range:x64-windows@5.26.1 091fb4cc0b7a5b9863b1f2b077b324b0aca020bfe798f24135b00b1db85f5c5c",
+  "documentNamespace": "https://spdx.org/spdxdocs/utf8-range-x64-windows-5.26.1-9457443b-0816-46b1-8370-373f1d7e1cfd",
+  "name": "utf8-range:x64-windows@5.26.1 NONE",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
     ],
-    "created": "2025-10-13T15:39:18Z"
+    "created": "2025-10-23T08:37:55Z"
   },
   "relationships": [
     {
@@ -18,38 +18,8 @@
       "relatedSpdxElement": "SPDXRef-binary"
     },
     {
-      "spdxElementId": "SPDXRef-port",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-file-0"
-    },
-    {
-      "spdxElementId": "SPDXRef-port",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-file-1"
-    },
-    {
-      "spdxElementId": "SPDXRef-port",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-file-2"
-    },
-    {
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "GENERATED_FROM",
-      "relatedSpdxElement": "SPDXRef-port"
-    },
-    {
-      "spdxElementId": "SPDXRef-file-0",
-      "relationshipType": "CONTAINED_BY",
-      "relatedSpdxElement": "SPDXRef-port"
-    },
-    {
-      "spdxElementId": "SPDXRef-file-1",
-      "relationshipType": "CONTAINED_BY",
-      "relatedSpdxElement": "SPDXRef-port"
-    },
-    {
-      "spdxElementId": "SPDXRef-file-2",
-      "relationshipType": "CONTAINED_BY",
       "relatedSpdxElement": "SPDXRef-port"
     }
   ],
@@ -69,64 +39,13 @@
     {
       "name": "utf8-range:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "091fb4cc0b7a5b9863b1f2b077b324b0aca020bfe798f24135b00b1db85f5c5c",
+      "versionInfo": "NONE",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "comment": "This is a binary package built by vcpkg."
-    },
-    {
-      "SPDXID": "SPDXRef-resource-1",
-      "name": "protocolbuffers/protobuf",
-      "downloadLocation": "git+https://github.com/protocolbuffers/protobuf@v5.26.1",
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "copyrightText": "NOASSERTION",
-      "checksums": [
-        {
-          "algorithm": "SHA512",
-          "checksumValue": "ce3eeb6d12c42157787bf97d265f34ac8e8af31070a2717b4c783e9158b6d7fbb5f239585fc38128a658315842cf7b6802cb9a80f4f391505bf806952e009da5"
-        }
-      ]
     }
   ],
-  "files": [
-    {
-      "fileName": "./E:/vcpkg/vcpkg/ports/utf8-range/fix-cmake.patch",
-      "SPDXID": "SPDXRef-file-0",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "4616671728b9bb0726da0818652339c06a271823a83a6188b5f775bb6f61ce03"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./E:/vcpkg/vcpkg/ports/utf8-range/portfile.cmake",
-      "SPDXID": "SPDXRef-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "fd2bf6a9708b7e486e2d27b32ddefd6f51361a19e47b080d6bdc6f9058d2421d"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./E:/vcpkg/vcpkg/ports/utf8-range/vcpkg.json",
-      "SPDXID": "SPDXRef-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "fd7af254805cca02c2870b6002860365a739acad3e1692b0d3b1d7fbc07531ee"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    }
-  ]
+  "files": []
 }

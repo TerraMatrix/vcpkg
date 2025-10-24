@@ -3,11 +3,11 @@
 if("${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION}" LESS 2.8)
    message(FATAL_ERROR "CMake >= 2.8.0 required")
 endif()
-if(CMAKE_VERSION VERSION_LESS "2.8.12")
-   message(FATAL_ERROR "CMake >= 2.8.12 required")
+if(CMAKE_VERSION VERSION_LESS "2.8.3")
+   message(FATAL_ERROR "CMake >= 2.8.3 required")
 endif()
 cmake_policy(PUSH)
-cmake_policy(VERSION 2.8.12...3.28)
+cmake_policy(VERSION 2.8.3...3.23)
 #----------------------------------------------------------------
 # Generated CMake target import file.
 #----------------------------------------------------------------
@@ -480,6 +480,10 @@ set_target_properties(opencv_stereo PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_plot;opencv_dnn;opencv_features2d;opencv_imgcodecs;opencv_text;opencv_videoio;opencv_calib3d;opencv_datasets;opencv_highgui;opencv_video;opencv_tracking;opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_plot;opencv_dnn;opencv_features2d;opencv_imgcodecs;opencv_text;opencv_videoio;opencv_calib3d;opencv_datasets;opencv_highgui;opencv_video;opencv_tracking"
 )
 
+if(CMAKE_VERSION VERSION_LESS 2.8.12)
+  message(FATAL_ERROR "This file relies on consumers using CMake 2.8.12 or greater.")
+endif()
+
 # Load information for each installed configuration.
 file(GLOB _cmake_config_files "${CMAKE_CURRENT_LIST_DIR}/OpenCVModules-*.cmake")
 foreach(_cmake_config_file IN LISTS _cmake_config_files)
@@ -493,12 +497,9 @@ set(_IMPORT_PREFIX)
 
 # Loop over all imported files and verify that they actually exist
 foreach(_cmake_target IN LISTS _cmake_import_check_targets)
-  if(CMAKE_VERSION VERSION_LESS "3.28"
-      OR NOT DEFINED _cmake_import_check_xcframework_for_${_cmake_target}
-      OR NOT IS_DIRECTORY "${_cmake_import_check_xcframework_for_${_cmake_target}}")
-    foreach(_cmake_file IN LISTS "_cmake_import_check_files_for_${_cmake_target}")
-      if(NOT EXISTS "${_cmake_file}")
-        message(FATAL_ERROR "The imported target \"${_cmake_target}\" references the file
+  foreach(_cmake_file IN LISTS "_cmake_import_check_files_for_${_cmake_target}")
+    if(NOT EXISTS "${_cmake_file}")
+      message(FATAL_ERROR "The imported target \"${_cmake_target}\" references the file
    \"${_cmake_file}\"
 but this file does not exist.  Possible reasons include:
 * The file was deleted, renamed, or moved to another location.
@@ -507,9 +508,8 @@ but this file does not exist.  Possible reasons include:
    \"${CMAKE_CURRENT_LIST_FILE}\"
 but not all the files it references.
 ")
-      endif()
-    endforeach()
-  endif()
+    endif()
+  endforeach()
   unset(_cmake_file)
   unset("_cmake_import_check_files_for_${_cmake_target}")
 endforeach()
