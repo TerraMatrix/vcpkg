@@ -28,6 +28,10 @@ vcpkg_from_github(
         fix-build-failed.diff
         fix-vrgis.diff
         fix-link.patch
+        qgspython.patch
+        fix-zstd-find.patch
+        fix-untwine.patch
+  
 )
 
 vcpkg_find_acquire_program(FLEX)
@@ -197,7 +201,7 @@ if(VCPKG_TARGET_IS_WINDOWS)
         #file(COPY "${CURRENT_INSTALLED_DIR}/debug/lib/python${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR}_d.lib" DESTINATION "${PYTHON3_PATH}/libs")
 
         vcpkg_execute_required_process(
-            COMMAND "${PYTHON_EXECUTABLE}" -m pip install sip ${PIP_MIRRORS}
+            COMMAND "${PYTHON_EXECUTABLE}" -m pip install sip==5.5.0 ${PIP_MIRRORS}
             WORKING_DIRECTORY ${PYTHON3_PATH}
             LOGNAME pip
         )
@@ -302,7 +306,7 @@ elseif(VCPKG_TARGET_IS_LINUX OR VCPKG_TARGET_IS_OSX) # Build in UNIX
 
     # install  sip pyqt-builder
     vcpkg_execute_required_process(
-        COMMAND "${PYTHON_EXECUTABLE}" -m pip install sip pyqt-builder numpy PyQt5-sip ${PIP_MIRRORS}
+        COMMAND "${PYTHON_EXECUTABLE}" -m pip install sip==5.5.0 pyqt-builder numpy PyQt5-sip ${PIP_MIRRORS}
         WORKING_DIRECTORY ${PYTHON3_PATH}
         LOGNAME pip
     )
@@ -426,7 +430,9 @@ vcpkg_cmake_configure(
 vcpkg_cmake_install()
 vcpkg_copy_pdbs()
 vcpkg_fixup_pkgconfig()
-vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/${PORT})
+
+# Note: QGIS doesn't provide CMake config files, it uses FindQGIS.cmake instead
+# vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/${PORT})
 
 # Handle copyright
 file(INSTALL ${SOURCE_PATH}/COPYING DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT} RENAME copyright)
