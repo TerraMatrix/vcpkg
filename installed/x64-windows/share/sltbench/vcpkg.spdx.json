@@ -1,0 +1,125 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/sltbench-x64-windows-2.4.0#3-59dca216-63a4-45c6-b6e7-368ba9645d70",
+  "name": "sltbench:x64-windows@2.4.0#3 d7f6c2dd671ccbbd6eeacf780783f67c03372a34da475b3c0a90f09deefc050c",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
+    ],
+    "created": "2025-10-13T04:02:43Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-0",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "sltbench",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "2.4.0#3",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/sltbench",
+      "homepage": "https://github.com/ivafanas/sltbench",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "C++ benchmark tool. Practical, stable and fast performance testing framework.",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "sltbench:x64-windows",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "d7f6c2dd671ccbbd6eeacf780783f67c03372a34da475b3c0a90f09deefc050c",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-1",
+      "name": "ivafanas/sltbench",
+      "downloadLocation": "git+https://github.com/ivafanas/sltbench@52c7c7852abc3159185eb79e699ad77fadfc35bd",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "0c66b51f5a950a09df47019775941554538bc3642788f61aaf8c5ec3644d5fef721391f73c3fddfd9529159f9b81c7d7ed76c7995a79f37adaf8d0ff55a99d4b"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-resource-2",
+      "name": "ec702203f406d3b1db71dac6bd39337d175cdc2c.patch",
+      "packageFileName": "ec702203f406d3b1db71dac6bd39337d175cdc2c.patch",
+      "downloadLocation": "https://github.com/ivafanas/sltbench/commit/ec702203f406d3b1db71dac6bd39337d175cdc2c.patch?full_index=1",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "ada4ac8519dc7c5537438423d83cee99cd85b84172c402438800f70f6a550875819ea94be8cffcb174a45715e6709e1fd777415424aabf65a1b3e4430b503af1"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./F:/vcpkg/vcpkg/ports/sltbench/portfile.cmake",
+      "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b6af477eda05f36bc1be430c556d2e46743c4a527b32ef0f0fd122bfedf4f5b3"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./F:/vcpkg/vcpkg/ports/sltbench/vcpkg.json",
+      "SPDXID": "SPDXRef-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c5bd13a9c2e604386cf0f49d53b491867ac69bab3ba5e785a5d3fb1fb35875f4"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/llvm-x64-windows-18.1.6#1-dfaa75f1-0906-4d61-a937-0821b51a5a6e",
+  "name": "llvm:x64-windows@18.1.6#1 NONE",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
+    ],
+    "created": "2025-10-17T05:28:56Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "llvm",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "18.1.6#1",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/llvm",
+      "homepage": "https://llvm.org",
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "The LLVM Compiler Infrastructure.",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "llvm:x64-windows",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "NONE",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    }
+  ],
+  "files": []
+}

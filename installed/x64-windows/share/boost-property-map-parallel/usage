@@ -1,0 +1,9 @@
+The package boost-property-map-parallel is compatible with built-in CMake targets of FindBoost.cmake:
+
+    find_package(Boost REQUIRED COMPONENTS property_map_parallel)
+    target_link_libraries(main PRIVATE Boost::property_map_parallel)
+
+or the generated cmake configs via:
+
+    find_package(boost_property_map_parallel REQUIRED CONFIG)
+    target_link_libraries(main PRIVATE Boost::property_map_parallel)

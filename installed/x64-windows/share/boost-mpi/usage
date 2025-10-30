@@ -1,0 +1,9 @@
+The package boost-mpi is compatible with built-in CMake targets of FindBoost.cmake:
+
+    find_package(Boost REQUIRED COMPONENTS mpi)
+    target_link_libraries(main PRIVATE Boost::mpi)
+
+or the generated cmake configs via:
+
+    find_package(boost_mpi REQUIRED CONFIG)
+    target_link_libraries(main PRIVATE Boost::mpi)
