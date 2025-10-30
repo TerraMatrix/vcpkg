@@ -18,6 +18,9 @@ set(PYTHON_VERSION_MAJOR  3)
 set(PYTHON_VERSION_MINOR  9)
 set(PYQT_VERSION 5.15.9)
 
+# Only support dynamic library linkage
+vcpkg_check_linkage(ONLY_DYNAMIC_LIBRARY)
+
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO qgis/QGIS
@@ -270,6 +273,16 @@ if(VCPKG_TARGET_IS_WINDOWS)
     list(APPEND QGIS_OPTIONS -DBISON_EXECUTABLE="${BISON}")
     list(APPEND QGIS_OPTIONS -DFLEX_EXECUTABLE="${FLEX}")
 
+    # Configure PyQt5 tool paths
+    list(APPEND QGIS_OPTIONS -DPYUIC_PROGRAM:FILEPATH=${PYTHON3_PATH}/Scripts/pyuic5.exe)
+    list(APPEND QGIS_OPTIONS -DPYRCC_PROGRAM:FILEPATH=${PYTHON3_PATH}/Scripts/pyrcc5.exe)
+    list(APPEND QGIS_OPTIONS -DQT_LRELEASE_EXECUTABLE:FILEPATH=${CURRENT_INSTALLED_DIR}/tools/qt5-tools/bin/lrelease.exe)
+
+    if("quick" IN_LIST FEATURES)
+        list(APPEND QGIS_OPTIONS_DEBUG -DQMLPLUGINDUMP_EXECUTABLE:FILEPATH=${CURRENT_INSTALLED_DIR}/tools/qt5/debug/bin/qmlplugindump.exe)
+        list(APPEND QGIS_OPTIONS_RELEASE -DQMLPLUGINDUMP_EXECUTABLE:FILEPATH=${CURRENT_INSTALLED_DIR}/tools/qt5-declarative/bin/qmlplugindump.exe)
+    endif()
+
     set(SPATIALINDEX_LIB_NAME spatialindex)
     if( VCPKG_TARGET_ARCHITECTURE STREQUAL "x64" OR VCPKG_TARGET_ARCHITECTURE STREQUAL "arm64" )
         set( SPATIALINDEX_LIB_NAME "spatialindex-64" )
@@ -284,17 +297,30 @@ if(VCPKG_TARGET_IS_WINDOWS)
     # In Debug mode, add Qt5_EXCLUDE_STATIC_DEPENDENCIES to avoid this bug
     list(APPEND QGIS_OPTIONS_DEBUG -DQt5_EXCLUDE_STATIC_DEPENDENCIES:BOOL=ON)
 
+    FIND_LIB_OPTIONS(GDAL gdal gdal LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
     FIND_LIB_OPTIONS(GEOS geos_c geos_c LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
     FIND_LIB_OPTIONS(GSL gsl gsld LIB ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
     FIND_LIB_OPTIONS(GSLCBLAS gslcblas gslcblasd LIB ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
+    FIND_LIB_OPTIONS(POSTGRES libpq libpq LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
+    list(APPEND QGIS_OPTIONS -DPROJ_INCLUDE_DIR:PATH=${CURRENT_INSTALLED_DIR}/include)
     FIND_LIB_OPTIONS(PROJ proj proj_d LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
+    FIND_LIB_OPTIONS(PYTHON python${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR} python${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR}_d LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
     FIND_LIB_OPTIONS(QCA qca qcad LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
     FIND_LIB_OPTIONS(QWT qwt qwtd LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
     FIND_LIB_OPTIONS(QTKEYCHAIN qt5keychain qt5keychaind LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
     FIND_LIB_OPTIONS(QSCINTILLA qscintilla2_qt5 qscintilla2_qt5d LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
+    list(APPEND QGIS_OPTIONS -DPoly2Tri_INCLUDE_DIR="${CURRENT_INSTALLED_DIR}/include/poly2tri")
     if("server" IN_LIST FEATURES)
         FIND_LIB_OPTIONS(FCGI fcgi fcgi LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
         list(APPEND QGIS_OPTIONS -DFCGI_INCLUDE_DIR="${CURRENT_INSTALLED_DIR}/include/fastcgi")
+    endif()
+
+    if("pdal" IN_LIST FEATURES)
+        FIND_LIB_OPTIONS(ZSTD zstd zstdd LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
+        set(PDAL_CPP_LIBRARY_DEBUG "${CURRENT_INSTALLED_DIR}/debug/lib/pdalcpp.lib$$<SEMICOLON>ws2_32.lib")
+        set(PDAL_CPP_LIBRARY_RELEASE "${CURRENT_INSTALLED_DIR}/lib/pdalcpp.lib$$<SEMICOLON>ws2_32.lib")
+        list(APPEND QGIS_OPTIONS_DEBUG -DPDAL_CPP_LIBRARY=${PDAL_CPP_LIBRARY_DEBUG})
+        list(APPEND QGIS_OPTIONS_RELEASE -DPDAL_CPP_LIBRARY=${PDAL_CPP_LIBRARY_RELEASE})
     endif()
 
 elseif(VCPKG_TARGET_IS_LINUX OR VCPKG_TARGET_IS_OSX) # Build in UNIX
@@ -430,6 +456,104 @@ vcpkg_cmake_configure(
 vcpkg_cmake_install()
 vcpkg_copy_pdbs()
 vcpkg_fixup_pkgconfig()
+
+# Handle qgis tools and plugins
+function(copy_path basepath)
+    file(GLOB ${basepath}_PATH ${CURRENT_PACKAGES_DIR}/${basepath}/*)
+    if( ${basepath}_PATH )
+        file(MAKE_DIRECTORY ${CURRENT_PACKAGES_DIR}/tools/${PORT}/${basepath})
+        file(COPY ${${basepath}_PATH} DESTINATION ${CURRENT_PACKAGES_DIR}/tools/${PORT}/${basepath})
+    endif()
+
+    if(EXISTS "${CURRENT_PACKAGES_DIR}/${basepath}/")
+        file(REMOVE_RECURSE ${CURRENT_PACKAGES_DIR}/${basepath}/)
+    endif()
+
+    if("debug-tools" IN_LIST FEATURES)
+        file(GLOB ${basepath}_DEBUG_PATH ${CURRENT_PACKAGES_DIR}/debug/${basepath}/*)
+        if( ${basepath}_DEBUG_PATH )
+            file(MAKE_DIRECTORY ${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/${basepath})
+            file(COPY ${${basepath}_DEBUG_PATH} DESTINATION ${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/${basepath})
+        endif()
+    endif()
+
+    if(EXISTS "${CURRENT_PACKAGES_DIR}/debug/${basepath}/")
+        file(REMOVE_RECURSE ${CURRENT_PACKAGES_DIR}/debug/${basepath}/)
+    endif()
+endfunction()
+
+file(GLOB QGIS_CMAKE_PATH ${CURRENT_PACKAGES_DIR}/*.cmake)
+if(QGIS_CMAKE_PATH)
+    file(COPY ${QGIS_CMAKE_PATH} DESTINATION ${CURRENT_PACKAGES_DIR}/share/cmake/${PORT})
+    file(REMOVE_RECURSE ${QGIS_CMAKE_PATH})
+endif()
+file(GLOB QGIS_CMAKE_PATH_DEBUG ${CURRENT_PACKAGES_DIR}/debug/*.cmake)
+if( QGIS_CMAKE_PATH_DEBUG )
+    file(REMOVE_RECURSE ${QGIS_CMAKE_PATH_DEBUG})
+endif()
+
+file(GLOB QGIS_TOOL_PATH ${CURRENT_PACKAGES_DIR}/bin/*${VCPKG_TARGET_EXECUTABLE_SUFFIX} ${CURRENT_PACKAGES_DIR}/*${VCPKG_TARGET_EXECUTABLE_SUFFIX})
+if(QGIS_TOOL_PATH)
+    file(MAKE_DIRECTORY ${CURRENT_PACKAGES_DIR}/tools/${PORT}/bin)
+    file(COPY ${QGIS_TOOL_PATH} DESTINATION ${CURRENT_PACKAGES_DIR}/tools/${PORT}/bin)
+    file(REMOVE_RECURSE ${QGIS_TOOL_PATH})
+    file(GLOB QGIS_TOOL_PATH ${CURRENT_PACKAGES_DIR}/bin/* )
+    file(COPY ${QGIS_TOOL_PATH} DESTINATION ${CURRENT_PACKAGES_DIR}/tools/${PORT}/bin)
+endif()
+
+file(GLOB QGIS_TOOL_PATH_DEBUG ${CURRENT_PACKAGES_DIR}/debug/bin/*${VCPKG_TARGET_EXECUTABLE_SUFFIX} ${CURRENT_PACKAGES_DIR}/debug/*${VCPKG_TARGET_EXECUTABLE_SUFFIX})
+if(QGIS_TOOL_PATH_DEBUG)
+    if("debug-tools" IN_LIST FEATURES)
+        file(MAKE_DIRECTORY ${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/bin)
+        file(COPY ${QGIS_TOOL_PATH_DEBUG} DESTINATION ${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/bin)
+        file(REMOVE_RECURSE ${QGIS_TOOL_PATH_DEBUG})
+        file(GLOB QGIS_TOOL_PATH_DEBUG ${CURRENT_PACKAGES_DIR}/debug/bin/* )
+        file(COPY ${QGIS_TOOL_PATH_DEBUG} DESTINATION ${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/bin)
+    else()
+        file(REMOVE_RECURSE ${QGIS_TOOL_PATH_DEBUG})
+    endif()
+endif()
+
+copy_path(doc)
+copy_path(i18n)
+copy_path(icons)
+copy_path(images)
+copy_path(plugins)
+copy_path(python)
+if("quick" IN_LIST FEATURES)
+    copy_path(qml)
+endif()
+copy_path(resources)
+if("server" IN_LIST FEATURES)
+    copy_path(server)
+endif()
+copy_path(svg)
+
+if(VCPKG_TARGET_IS_WINDOWS)
+    vcpkg_copy_tool_dependencies_ex(${CURRENT_PACKAGES_DIR}/tools/${PORT}/bin ${CURRENT_PACKAGES_DIR}/tools/${PORT}/bin bin)
+    vcpkg_copy_tool_dependencies_ex(${CURRENT_PACKAGES_DIR}/tools/${PORT}/plugins ${CURRENT_PACKAGES_DIR}/tools/${PORT}/bin bin)
+    if("debug-tools" IN_LIST FEATURES)
+        vcpkg_copy_tool_dependencies_ex(${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/bin ${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/bin debug/bin)
+        vcpkg_copy_tool_dependencies_ex(${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/plugins ${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/bin debug/bin)
+    endif()
+    if("server" IN_LIST FEATURES)
+        vcpkg_copy_tool_dependencies_ex(${CURRENT_PACKAGES_DIR}/tools/${PORT}/server ${CURRENT_PACKAGES_DIR}/tools/${PORT}/bin bin)
+        if("debug-tools" IN_LIST FEATURES)
+            vcpkg_copy_tool_dependencies_ex(${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/server ${CURRENT_PACKAGES_DIR}/debug/tools/${PORT}/bin debug/bin)
+        endif()
+    endif()
+endif()
+
+file(GLOB INCLUDE_FILES "${CURRENT_PACKAGES_DIR}/include/*.h")
+if(INCLUDE_FILES)
+    file(MAKE_DIRECTORY "${CURRENT_PACKAGES_DIR}/include/${PORT}")
+    file(COPY ${INCLUDE_FILES} DESTINATION "${CURRENT_PACKAGES_DIR}/include/${PORT}")
+    file(REMOVE_RECURSE ${INCLUDE_FILES})
+endif()
+
+file(REMOVE_RECURSE
+    ${CURRENT_PACKAGES_DIR}/debug/include
+)
 
 # Note: QGIS doesn't provide CMake config files, it uses FindQGIS.cmake instead
 # vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/${PORT})
