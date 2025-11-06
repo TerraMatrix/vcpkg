@@ -1,1 +1,1 @@
-vcpkg install ceres[core,cxsparse,eigensparse,lapack,suitesparse,tools] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --downloads-root=F:/vcpkg/downloads   --recurse
+vcpkg install ceres[core,eigensparse,lapack,schur,suitesparse] --triplet=x64-windows --x-buildtrees-root=F:/vcpkg/buildtrees  --downloads-root=F:/vcpkg/downloads   --recurse

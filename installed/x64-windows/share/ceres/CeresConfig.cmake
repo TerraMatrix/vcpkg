@@ -1,5 +1,5 @@
 # Ceres Solver - A fast non-linear least squares minimizer
-# Copyright 2015 Google Inc. All rights reserved.
+# Copyright 2022 Google Inc. All rights reserved.
 # http://ceres-solver.org/
 #
 # Redistribution and use in source and binary forms, with or without
@@ -114,7 +114,7 @@ function(ceres_pretty_print_cmake_list OUTPUT_VAR)
 endfunction()
 
 # The list of (optional) components this version of Ceres was compiled with.
-set(CERES_COMPILED_COMPONENTS "Multithreading")
+set(CERES_COMPILED_COMPONENTS "EigenSparse;SparseLinearAlgebraLibrary;LAPACK;SuiteSparse;SchurSpecializations")
 
 # If Ceres was not installed, then by definition it was exported
 # from a build directory.
@@ -173,14 +173,15 @@ else(CERES_WAS_INSTALLED)
 endif(CERES_WAS_INSTALLED)
 
 # Set the version.
-set(CERES_VERSION 2.1.0)
+set(CERES_VERSION 2.2.0)
 
 include(CMakeFindDependencyMacro)
-find_dependency(Threads)
-
 # Optional dependencies
+find_dependency(metis CONFIG)
+find_dependency(CHOLMOD CONFIG)
+find_dependency(SPQR CONFIG)
 
-
+find_dependency (Threads)
 
 # As imported CMake targets are not re-exported when a dependent target is
 # exported, we must invoke find_package(XXX) here to reload the definition
@@ -195,7 +196,7 @@ set(CERES_EIGEN_VERSION 3.4.0)
 # Search quietly to control the timing of the error message if not found. The
 # search should be for an exact match, but for usability reasons do a soft
 # match and reject with an explanation below.
-find_package(Eigen3 ${CERES_EIGEN_VERSION} QUIET)
+find_dependency(Eigen3 CONFIG ${CERES_EIGEN_VERSION})
 if (Eigen3_FOUND)
   if (NOT Eigen3_VERSION VERSION_EQUAL CERES_EIGEN_VERSION)
     # CMake's VERSION check in FIND_PACKAGE() will accept any version >= the
@@ -217,14 +218,55 @@ else (Eigen3_FOUND)
 endif (Eigen3_FOUND)
 
 # glog (and maybe gflags).
+#
+# Flags set during configuration and build of Ceres.
+set(CERES_USES_MINIGLOG OFF)
+set(CERES_GLOG_VERSION )
+set(CERES_GLOG_WAS_BUILT_WITH_CMAKE TRUE)
 
-include (CMakeFindDependencyMacro)
-find_dependency (glog NO_MODULE)
+set(CERES_USES_GFLAGS OFF)
+set(CERES_GFLAGS_VERSION 2.2.2)
 
-# SuiteSparse
-if (OFF)
-    find_dependency(SuiteSparse CONFIG)
-endif()
+if (CERES_USES_MINIGLOG)
+  # Output message at standard log level (not the lower STATUS) so that
+  # the message is output in GUI during configuration to warn user.
+  ceres_message("-- Found Ceres compiled with miniglog substitute "
+    "for glog, beware this will likely cause problems if glog is later linked.")
+else(CERES_USES_MINIGLOG)
+  if (CERES_GLOG_WAS_BUILT_WITH_CMAKE)
+    find_dependency(glog)
+    set(GLOG_FOUND ${glog_FOUND})
+  else()
+    # Version of glog against which Ceres was built was not built with CMake,
+    # use the exported glog find_package() module from Ceres to find it again.
+    # Append the locations of glog when Ceres was built to the search path hints.
+    list(APPEND GLOG_INCLUDE_DIR_HINTS "")
+    get_filename_component(CERES_BUILD_GLOG_LIBRARY_DIR "" PATH)
+    list(APPEND GLOG_LIBRARY_DIR_HINTS ${CERES_BUILD_GLOG_LIBRARY_DIR})
+
+    # Search quietly s/t we control the timing of the error message if not found.
+    find_package(Glog QUIET)
+  endif()
+
+  if (GLOG_FOUND)
+    ceres_message(STATUS "Found required Ceres dependency: glog")
+  else()
+    ceres_report_not_found("Missing required Ceres dependency: glog.")
+  endif()
+
+  # gflags is only a public dependency of Ceres via glog, thus is not required
+  # if Ceres was built with MINIGLOG.
+  if (CERES_USES_GFLAGS)
+    # Search quietly s/t we control the timing of the error message if not found.
+    find_package(gflags ${CERES_GFLAGS_VERSION} QUIET)
+    if (gflags_FOUND AND TARGET gflags)
+      ceres_message(STATUS "Found required Ceres dependency: gflags")
+    else()
+      ceres_report_not_found("Missing required Ceres "
+        "dependency: gflags (not found, or not found as exported CMake target).")
+    endif()
+  endif()
+endif(CERES_USES_MINIGLOG)
 
 # Import exported Ceres targets, if they have not already been imported.
 if (NOT TARGET ceres AND NOT Ceres_BINARY_DIR)

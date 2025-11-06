@@ -9,6 +9,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set_property(TARGET Ceres::ceres APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(Ceres::ceres PROPERTIES
   IMPORTED_IMPLIB_DEBUG "${_IMPORT_PREFIX}/debug/lib/ceres-debug.lib"
+  IMPORTED_LINK_DEPENDENT_LIBRARIES_DEBUG "SuiteSparse::CHOLMOD;SuiteSparse::SPQR;metis"
   IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/debug/bin/ceres-debug.dll"
   )
 

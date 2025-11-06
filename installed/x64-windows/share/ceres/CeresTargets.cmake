@@ -58,9 +58,9 @@ endif()
 add_library(Ceres::ceres SHARED IMPORTED)
 
 set_target_properties(Ceres::ceres PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Threads::Threads;glog::glog;Eigen3::Eigen"
+  INTERFACE_LINK_LIBRARIES "glog::glog;gflags;Eigen3::Eigen"
 )
 
 # Load information for each installed configuration.
