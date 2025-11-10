@@ -1,0 +1,43 @@
+diff --git a/cmake/CMakeLists.txt b/cmake/CMakeLists.txt
+index 5555555..6666666 100644
+--- a/cmake/CMakeLists.txt
++++ b/cmake/CMakeLists.txt
+@@ -8,7 +8,7 @@ set(PROJECT_ROOT_DIR "\${_DIR}/../..")
+ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/mcc-lidar-config.cmake.in
+   ${CMAKE_CURRENT_BINARY_DIR}/mcc-lidar-config.cmake @ONLY)
+ 
+-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/mcc-lidar-config.cmake
+-  DESTINATION ${MCC_LIDAR_LIB_DIR}/cmake/mcc-lidar)
++install(FILES ${CMAKE_CURRENT_BINARY_DIR}/mcc-lidar-config.cmake 
++  DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/cmake/mcc-lidar)
+ 
+ install(EXPORT depends DESTINATION ${MCC_LIDAR_LIB_DIR}/cmake/mcc-lidar
+diff --git a/cmake/mcc-lidar-config.cmake.in b/cmake/mcc-lidar-config.cmake.in
+index 7777777..8888888 100644
+--- a/cmake/mcc-lidar-config.cmake.in
++++ b/cmake/mcc-lidar-config.cmake.in
+@@ -15,15 +15,20 @@ endif()
+ get_filename_component (_DIR ${CMAKE_CURRENT_LIST_FILE} PATH)
+ get_filename_component (PROJECT_ROOT_DIR "${_DIR}/@PROJECT_ROOT_DIR@" ABSOLUTE)
+ 
+-set (MCC_LIDAR_INCLUDE_DIRS "${PROJECT_ROOT_DIR}/include")
+-set (MCC_LIDAR_LIBRARY_DIRS "${PROJECT_ROOT_DIR}/lib")
+-set (MCC_LIDAR_BINARY_DIRS "${PROJECT_ROOT_DIR}/bin")
++include(CMakeFindDependencyMacro)
++find_dependency(Boost REQUIRED COMPONENTS filesystem program_options system)
++find_dependency(libLAS CONFIG REQUIRED)
++
+ set (MCC_LIDAR_WITH_CUDA @WITH_CUDA@)
+ 
+-include(CMakeFindDependencyMacro)
+ if(MCC_LIDAR_WITH_CUDA)
+   find_dependency(CUDAToolkit)
+ endif()
++
++set (MCC_LIDAR_INCLUDE_DIRS "${PROJECT_ROOT_DIR}/include")
++set (MCC_LIDAR_LIBRARY_DIRS "${PROJECT_ROOT_DIR}/lib")
++set (MCC_LIDAR_BINARY_DIRS "${PROJECT_ROOT_DIR}/bin")
++
+ include ("${CMAKE_CURRENT_LIST_DIR}/mcc-lidar-depends.cmake")
+ set (MCC_LIDAR_LIBRARY mcc-lidar)
+ set (MCC_LIDAR_INCLUDE_DIR "${MCC_LIDAR_INCLUDE_DIRS}/mcc-lidar")
