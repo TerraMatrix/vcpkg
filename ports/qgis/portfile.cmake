@@ -215,7 +215,7 @@ if(VCPKG_TARGET_IS_WINDOWS)
     if(NOT EXISTS "${PYTHON3_PATH}/Scripts/pyuic5.exe")
         MESSAGE(STATUS  "Install PyQt5 for Python Begin ...")
         vcpkg_execute_required_process(
-            COMMAND "${PYTHON_EXECUTABLE}" -m pip install PyQt5==${PYQT_VERSION} PyQt5-sip QScintilla==${QSCINTILLA_VERSION} PyQt3D==5.15.6 PyQt-builder ${PIP_MIRRORS}
+            COMMAND "${PYTHON_EXECUTABLE}" -m pip install PyQt5==${PYQT_VERSION} PyQt5-sip>=12.13.0 QScintilla==${QSCINTILLA_VERSION} PyQt3D==5.15.6 PyQt-builder ${PIP_MIRRORS}
             WORKING_DIRECTORY ${PYTHON3_PATH}
             LOGNAME pip
         )
@@ -332,7 +332,7 @@ elseif(VCPKG_TARGET_IS_LINUX OR VCPKG_TARGET_IS_OSX) # Build in UNIX
 
     # install  sip pyqt-builder
     vcpkg_execute_required_process(
-        COMMAND "${PYTHON_EXECUTABLE}" -m pip install sip==5.5.0 pyqt-builder numpy PyQt5-sip ${PIP_MIRRORS}
+        COMMAND "${PYTHON_EXECUTABLE}" -m pip install sip==5.5.0 pyqt-builder numpy PyQt5-sip>=12.13.0 ${PIP_MIRRORS}
         WORKING_DIRECTORY ${PYTHON3_PATH}
         LOGNAME pip
     )

@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/tbb-x64-windows-2022.0.0-c495a5a3-5b9f-4cea-9eec-1edffefc4c3c",
-  "name": "tbb:x64-windows@2022.0.0 e96abfa72cb5898c10bd1fa1f0e8e8377cefbd999340b672d05898b362b22128",
+  "documentNamespace": "https://spdx.org/spdxdocs/tbb-x64-windows-2020_U3#5-d0370210-80b2-48b1-9ee7-8b45e18fedeb",
+  "name": "tbb:x64-windows@2020_U3#5 161611d812482b45784ac32a489fea2e1b23e77556fc943abbb107d282f4860f",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
     ],
-    "created": "2025-10-15T08:49:05Z"
+    "created": "2025-11-04T08:55:17Z"
   },
   "relationships": [
     {
@@ -28,6 +28,26 @@
       "relatedSpdxElement": "SPDXRef-file-1"
     },
     {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-3"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-4"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-5"
+    },
+    {
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-port"
@@ -41,16 +61,36 @@
       "spdxElementId": "SPDXRef-file-1",
       "relationshipType": "CONTAINED_BY",
       "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-2",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-3",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-4",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-5",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
     }
   ],
   "packages": [
     {
       "name": "tbb",
       "SPDXID": "SPDXRef-port",
-      "versionInfo": "2022.0.0",
+      "versionInfo": "2020_U3#5",
       "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/tbb",
-      "homepage": "https://github.com/oneapi-src/oneTBB",
-      "licenseConcluded": "Apache-2.0",
+      "homepage": "https://github.com/01org/tbb",
+      "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "description": "Intel's Threading Building Blocks.",
@@ -59,9 +99,9 @@
     {
       "name": "tbb:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "e96abfa72cb5898c10bd1fa1f0e8e8377cefbd999340b672d05898b362b22128",
+      "versionInfo": "161611d812482b45784ac32a489fea2e1b23e77556fc943abbb107d282f4860f",
       "downloadLocation": "NONE",
-      "licenseConcluded": "Apache-2.0",
+      "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "comment": "This is a binary package built by vcpkg."
@@ -69,38 +109,86 @@
     {
       "SPDXID": "SPDXRef-resource-1",
       "name": "oneapi-src/oneTBB",
-      "downloadLocation": "git+https://github.com/oneapi-src/oneTBB@v2022.0.0",
+      "downloadLocation": "git+https://github.com/oneapi-src/oneTBB@eca91f16d7490a8abfdee652dadf457ec820cc37",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "checksums": [
         {
           "algorithm": "SHA512",
-          "checksumValue": "c87b84964b2c323f61895a532968dfa6413a774c177cffbf6e798a07e74e8da5d449144875771df0a1b02657eeb2a7ae4d41c6c432dbf7ea50e3d5a9ea9f8cd3"
+          "checksumValue": "7144e1dc68304b5358e6ea330431b6f0c61fadb147efa353a5b242777d6fabf7b8cf99b79cffb51b49b911dd17a9f1879619d6eebdf319f23ec3235c89cffc25"
         }
       ]
     }
   ],
   "files": [
     {
-      "fileName": "./E:/vcpkg/vcpkg/ports/tbb/portfile.cmake",
+      "fileName": "./E:/vcpkg/vcpkg/ports/tbb/CMakeLists.txt",
       "SPDXID": "SPDXRef-file-0",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "535dcf4a0843a99e19c6126cc93ced16a0372e9b39bcba2b08eebf619b92b47f"
+          "checksumValue": "62f4dbe381e8c15d1ca304640448b3a17356b3b0a4e06eccb17548eb97882903"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./E:/vcpkg/vcpkg/ports/tbb/vcpkg.json",
+      "fileName": "./E:/vcpkg/vcpkg/ports/tbb/CONTROL",
       "SPDXID": "SPDXRef-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "a784eea797f7811e8b9304431849cdf7a1e972d6125c254accc48ee43d93da10"
+          "checksumValue": "e65919a5bd37caea9a04d9f96e742513e95c2681c88790fd2dcd52502d6486ab"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/tbb/fix-static-build.patch",
+      "SPDXID": "SPDXRef-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c01a7ad1743f76da6df5ddef11d5aed134e50f6144723cc51f02fa88c3d6b03e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/tbb/portfile.cmake",
+      "SPDXID": "SPDXRef-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e1277c6bb68f6f109e1cc9fa765dd4b4ca63f4ed479b2d1d4cd24a84896e761f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/tbb/terminate-when-buildtool-notfound.patch",
+      "SPDXID": "SPDXRef-file-4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b29e09d42edb456933634c8727f4bb31bbe11ca19373fe2bd68e61c6a50ea97f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg/ports/tbb/usage",
+      "SPDXID": "SPDXRef-file-5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "22036fe4dc9eb80873c077a815a76a6ac568ab04fce86ceb3824e001d36d4e62"
         }
       ],
       "licenseConcluded": "NOASSERTION",
