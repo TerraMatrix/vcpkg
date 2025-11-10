@@ -47,44 +47,55 @@ endmacro()
 
 ####################################################################################
 
-if(NOT DEFINED CURL_USE_PKGCONFIG)
-  if(UNIX OR (MSVC AND VCPKG_TOOLCHAIN))  # Keep in sync with root CMakeLists.txt
-    set(CURL_USE_PKGCONFIG ON)
+include(CMakeFindDependencyMacro)
+if("ON")
+  if("3")
+    find_dependency(OpenSSL "3")
   else()
-    set(CURL_USE_PKGCONFIG OFF)
+    find_dependency(OpenSSL)
   endif()
 endif()
-
-include(CMakeFindDependencyMacro)
-if()
-  find_dependency(OpenSSL )
-endif()
-if(ON)
-  find_dependency(ZLIB 1)
-endif()
-
-if("")
-  find_dependency(c-ares CONFIG)
-endif()
-if("OFF")
-  find_dependency(Libssh2 CONFIG)
-endif()
-if("OFF")
-    find_dependency(unofficial-brotli CONFIG)
-endif()
-if("OFF")
-    find_dependency(zstd CONFIG)
+if("ON")
+  find_dependency(ZLIB "1")
 endif()
 
 include("${CMAKE_CURRENT_LIST_DIR}/CURLTargets.cmake")
-check_required_components("CURL")
 
 # Alias for either shared or static library
 if(NOT TARGET CURL::libcurl)
-  add_library(CURL::libcurl INTERFACE IMPORTED)
-  set_target_properties(CURL::libcurl PROPERTIES INTERFACE_LINK_LIBRARIES CURL::libcurl_shared)
+  if(CMAKE_VERSION VERSION_GREATER_EQUAL 3.11 AND CMAKE_VERSION VERSION_LESS 3.18)
+    set_target_properties(CURL::libcurl_shared PROPERTIES IMPORTED_GLOBAL TRUE)
+  endif()
+  add_library(CURL::libcurl ALIAS CURL::libcurl_shared)
 endif()
 
 # For compatibility with CMake's FindCURL.cmake
+set(CURL_VERSION_STRING "8.16.0-DEV")
 set(CURL_LIBRARIES CURL::libcurl)
 set_and_check(CURL_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/include")
+
+set(CURL_SUPPORTED_PROTOCOLS "DICT;FILE;FTP;FTPS;GOPHER;GOPHERS;HTTP;HTTPS;IMAP;IMAPS;IPFS;IPNS;MQTT;POP3;POP3S;RTSP;SCP;SFTP;SMB;SMBS;SMTP;SMTPS;TELNET;TFTP;WS;WSS")
+set(CURL_SUPPORTED_FEATURES "alt-svc;AsynchDNS;brotli;HSTS;HTTP2;HTTPS-proxy;IPv6;Kerberos;Largefile;libz;MultiSSL;NTLM;SPNEGO;SSL;SSPI;threadsafe;TLS-SRP;Unicode;UnixSockets")
+
+foreach(_item IN LISTS CURL_SUPPORTED_PROTOCOLS CURL_SUPPORTED_FEATURES)
+  set(CURL_SUPPORTS_${_item} TRUE)
+endforeach()
+
+set(_missing_req "")
+foreach(_item IN LISTS CURL_FIND_COMPONENTS)
+  if(CURL_SUPPORTS_${_item})
+    set(CURL_${_item}_FOUND TRUE)
+  elseif(CURL_FIND_REQUIRED_${_item})
+    list(APPEND _missing_req ${_item})
+  endif()
+endforeach()
+
+if(_missing_req)
+  string(REPLACE ";" " " _missing_req "${_missing_req}")
+  if(CURL_FIND_REQUIRED)
+    message(FATAL_ERROR "CURL: missing required components: ${_missing_req}")
+  endif()
+  unset(_missing_req)
+endif()
+
+check_required_components("CURL")
