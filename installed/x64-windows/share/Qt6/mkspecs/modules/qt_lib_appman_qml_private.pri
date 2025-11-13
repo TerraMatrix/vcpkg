@@ -1,0 +1,11 @@
+QT.appman_qml_private.VERSION = 6.9.1
+QT.appman_qml_private.name = QtAppManQmlPrivate
+QT.appman_qml_private.module =
+QT.appman_qml_private.libs = $$QT_MODULE_LIB_BASE
+QT.appman_qml_private.includes = $$QT_MODULE_INCLUDE_BASE/QtAppManQmlPrivate/6.9.1 $$QT_MODULE_INCLUDE_BASE/QtAppManQmlPrivate/6.9.1/QtAppManQmlPrivate
+QT.appman_qml_private.frameworks = 
+QT.appman_qml_private.depends = appman_qml
+QT.appman_qml_private.uses = 
+QT.appman_qml_private.module_config = v2 staticlib internal_module
+QT.appman_qml_private.enabled_features = 
+QT.appman_qml_private.disabled_features = 
