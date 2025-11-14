@@ -1,0 +1,3398 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/pegtl-x64-windows-3.2.8-56f8e9eb-e935-4e65-9338-9d698f51688c",
+  "name": "pegtl:x64-windows@3.2.8 329c942f602b785a16f2388f19a00603cb78be9d89ee67d9f50ac7ac5d8127be",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
+    ],
+    "created": "2025-11-14T02:11:56Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-1",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-3"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-4"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-5"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-6"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-7"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-8"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-9"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-10"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-11"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-12"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-13"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-14"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-15"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-16"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-17"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-18"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-19"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-20"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-21"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-22"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-23"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-24"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-25"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-26"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-27"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-28"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-29"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-30"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-31"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-32"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-33"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-34"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-35"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-36"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-37"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-38"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-39"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-40"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-41"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-42"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-43"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-44"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-45"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-46"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-47"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-48"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-49"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-50"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-51"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-52"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-53"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-54"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-55"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-56"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-57"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-58"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-59"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-60"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-61"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-62"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-63"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-64"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-65"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-66"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-67"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-68"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-69"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-70"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-71"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-72"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-73"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-74"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-75"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-76"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-77"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-78"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-79"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-80"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-81"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-82"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-83"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-84"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-85"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-86"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-87"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-88"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-89"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-90"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-91"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-92"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-93"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-94"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-95"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-96"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-97"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-98"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-99"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-100"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-101"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-102"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-103"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-104"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-105"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-106"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-107"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-108"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-109"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-110"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-111"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-112"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-113"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-114"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-115"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-116"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-117"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-118"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-119"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-120"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-121"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-122"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-123"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-124"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-125"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-126"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-127"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-128"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-129"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-130"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-131"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-132"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-133"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-134"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-135"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-136"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-137"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-138"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-139"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-140"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-141"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-142"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-143"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-144"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-145"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-146"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-147"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-148"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-149"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-150"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-151"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-152"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-153"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-154"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-155"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-156"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-157"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-158"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-159"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-160"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-161"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-162"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-163"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-164"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-165"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-166"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-167"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-168"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-169"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-170"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-171"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-172"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-173"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-174"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-175"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-176"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-177"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-178"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-179"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-180"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-181"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-182"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-183"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-184"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-185"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-186"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-187"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-188"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-189"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-190"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-191"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-192"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-193"
+    }
+  ],
+  "packages": [
+    {
+      "name": "pegtl",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "3.2.8",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/pegtl",
+      "homepage": "https://github.com/taocpp/PEGTL",
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "The Parsing Expression Grammar Template Library (PEGTL) is a zero-dependency C++ header-only parser combinator library for creating parsers according to a Parsing Expression Grammar (PEG).",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "pegtl:x64-windows",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "329c942f602b785a16f2388f19a00603cb78be9d89ee67d9f50ac7ac5d8127be",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-0",
+      "name": "taocpp/pegtl",
+      "downloadLocation": "git+https://github.com/taocpp/pegtl@3.2.8",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "aecf9396edbdd65549603484d1841cd676b197d164ee2979ee5acaf657da4fa9ebc1a59fc8550cfa440ce27794cdc59cdf86a6521e4bda084c0600cb2c92f5cf"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5da690f2a9179b2f1a9fd280e722bdbcfa524209722898d8d95c33e0a28d640f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0a131bf56dc0f9cbe66e310e4ad37b6aac731a6af5e2331a8e1b73e27311636b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./BUILD_INFO",
+      "SPDXID": "SPDXRef-binary-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5e7f821ab4eb804deb535baa7b41edca682d0303cf21a91908c98d5c9a7dcf4d"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/apply_mode.hpp",
+      "SPDXID": "SPDXRef-binary-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "636999103b4402c8d8cb239bdd0033244841a6c6954e75bb6ac203db6e440834"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/argv_input.hpp",
+      "SPDXID": "SPDXRef-binary-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8dcb35a3e5bef6ea31c852277f39119ebabc56928d32d96748822f04302731ad"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/ascii.hpp",
+      "SPDXID": "SPDXRef-binary-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d22dc4f540965f03d8cef2970d20a1ddbfff767b4d041c1751f1b9bd19d59535"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/buffer_input.hpp",
+      "SPDXID": "SPDXRef-binary-file-4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "472ce0c5be82f284d4c03c5f75ccdff044ca2239bfe7c25cbdd3eedb37a281ad"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/change_action.hpp",
+      "SPDXID": "SPDXRef-binary-file-5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b8ee39a249f7db2705d12c9eaba2b6876db0e7b5c6e3789e3d6a2be146465a02"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/change_action_and_state.hpp",
+      "SPDXID": "SPDXRef-binary-file-6",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "946ef291863c0d87b52c823a496983c8e42fba7877360ce8acfa859c0c3134b3"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/change_action_and_states.hpp",
+      "SPDXID": "SPDXRef-binary-file-7",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "703e0722c529cad1878549cc212baf686fb46e408dff694af5a08d9867274c8c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/change_control.hpp",
+      "SPDXID": "SPDXRef-binary-file-8",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "74074427ae80d56ccad1836a6fd879f1d40755dc41a6f5f250d138c18648415d"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/change_state.hpp",
+      "SPDXID": "SPDXRef-binary-file-9",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "83a32ca3fbf6fbbf55d5b9ab23d72ecee9aafdda5fb5c668fcbe587a4026fe01"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/change_states.hpp",
+      "SPDXID": "SPDXRef-binary-file-10",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "bc16874513f8c69110defdaf2a70f88b8340abd3fdbec851ba50c7a1cc85e9df"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/config.hpp",
+      "SPDXID": "SPDXRef-binary-file-11",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d83dd7f635eac7d75a8bdfaa80e3536ef43a5acacc2b43455e502e403d5d577b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/abnf.hpp",
+      "SPDXID": "SPDXRef-binary-file-12",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "747a1cd608211a7fda8c9005c0810fae388618f9f634b121cb3fb063117c3974"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/add_state.hpp",
+      "SPDXID": "SPDXRef-binary-file-13",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "df18d4e97e53bdbaea2d0f2629aea8e6ccb80ffbc4968ddfe23ad6817950c2d6"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/alphabet.hpp",
+      "SPDXID": "SPDXRef-binary-file-14",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9116bdd1d65073ffb6fd4dfb68c6ab97d3bfaa293b98282c60586f72cf83c129"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/analyze.hpp",
+      "SPDXID": "SPDXRef-binary-file-15",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "adf6ba2921ac88a29789e6cd12fb0729294d54ef4f3e37f4954245c70619f537"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/analyze_traits.hpp",
+      "SPDXID": "SPDXRef-binary-file-16",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "55725fe2a842b9a5985cd14a939ccff69696b0a185e118dc196d61ae994b4658"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/check_bytes.hpp",
+      "SPDXID": "SPDXRef-binary-file-17",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "48bc83c814fa89d10863c14d4ceb0c01a17d6c0e0b8b951970946b5596693b2a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/control_action.hpp",
+      "SPDXID": "SPDXRef-binary-file-18",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fb23d273c66b9f9add82b9697927509198a1f411b644015907e3ad327028e2ee"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/coverage.hpp",
+      "SPDXID": "SPDXRef-binary-file-19",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5d8dae8b78bfb18b307794d561ee3d9467536d32aaa3253a30eb17ae46bdb162"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/forward.hpp",
+      "SPDXID": "SPDXRef-binary-file-20",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5fdce1a36c773370e849ea634da6dfcea870edd13533c7d2f9bbc3ca81f05977"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/function.hpp",
+      "SPDXID": "SPDXRef-binary-file-21",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1346421b9a2c2a134a945945dd29501db0d05119092396e7a4ac8abd5b583c51"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/http.hpp",
+      "SPDXID": "SPDXRef-binary-file-22",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "437f3c7e3475e82440e49f0534b55da9ee9ff73a37d5d7f19228939e0fdba823"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/icu/internal.hpp",
+      "SPDXID": "SPDXRef-binary-file-23",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "510f2d12a0dbc08fb6412f7bc50b831993f6c63704724db1653f64b24bac6b28"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/icu/utf16.hpp",
+      "SPDXID": "SPDXRef-binary-file-24",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5d20fc13e7831b3de2fd2852bf2475bbabe6c50349fb374c5ef4e5f1386b4e4e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/icu/utf32.hpp",
+      "SPDXID": "SPDXRef-binary-file-25",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "41dcf85a814cbd3e4ba7ca8db12bdcd4bab2549577fe090f9ee1f90805d0686f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/icu/utf8.hpp",
+      "SPDXID": "SPDXRef-binary-file-26",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8473f3ad3824f8a5065097b8218380dafaf913b2c90e3aae39a6787fa2bbe6f9"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/if_then.hpp",
+      "SPDXID": "SPDXRef-binary-file-27",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cd6f886439568f19198e4123191106d194187090c4b0685c865f6b969daec970"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/instantiate.hpp",
+      "SPDXID": "SPDXRef-binary-file-28",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "626184bd6d0ead07fc954fb38e889c12f8756a95dffa2ea85cc96ebc34157b61"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/integer.hpp",
+      "SPDXID": "SPDXRef-binary-file-29",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b9ebf94050009b01ea10c1d9d087a8dd337ea55b26ad4f150fc62a68082d5de0"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/internal/endian.hpp",
+      "SPDXID": "SPDXRef-binary-file-30",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "39be2c2fa50f72d6e422f108f855fa153c3ff31f3c6066be1743669e8edc5751"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/internal/endian_gcc.hpp",
+      "SPDXID": "SPDXRef-binary-file-31",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6348ec536ed1324690a1bc74db1eef5e1137fcd9a082cb9bb4c1c65c8db56691"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/internal/endian_win.hpp",
+      "SPDXID": "SPDXRef-binary-file-32",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4688d54588766877488286cf97d84d49c693b7f5ae6defc4766bb804fcd85dc4"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/internal/peek_mask_uint.hpp",
+      "SPDXID": "SPDXRef-binary-file-33",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "60c05bd79da1880eaa4a9e2ef2d0120579930f1021a39f9b982b350078bba9ea"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/internal/peek_mask_uint8.hpp",
+      "SPDXID": "SPDXRef-binary-file-34",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8e6aae6e8572433e68d13eb47337b3ae0b48e000505c5e3f2a230009b9b958e1"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/internal/peek_uint.hpp",
+      "SPDXID": "SPDXRef-binary-file-35",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8db3ed809190f3fcfd7c22b5abb1119e75869077c1ac4479fd85e96c230cfca9"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/internal/peek_uint8.hpp",
+      "SPDXID": "SPDXRef-binary-file-36",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c7184dd348df6b7c1dc20b153b5774d806e12d2fa99261fe120091cf1e5f49ca"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/internal/peek_utf16.hpp",
+      "SPDXID": "SPDXRef-binary-file-37",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "96b293ae111f9ed08ddd46a9308e0fb3e682fe089cd14002edaf7e0658c0f646"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/internal/peek_utf32.hpp",
+      "SPDXID": "SPDXRef-binary-file-38",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e9de3ef984ec262d7113641626684b0fd010d95e300022f3da9f64e7e6fd1417"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/internal/read_uint.hpp",
+      "SPDXID": "SPDXRef-binary-file-39",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "df14188129aa77cb5764ba0c32b35aa1a47e95520dd67a9ad36cfc5fb65ca017"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/internal/set_stack_guard.hpp",
+      "SPDXID": "SPDXRef-binary-file-40",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "bf2c464e3c2ac2483b6f4474a112a1937c98be72c3d6ba5af468feaf954a89a8"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/internal/vector_stack_guard.hpp",
+      "SPDXID": "SPDXRef-binary-file-41",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9aa4891adb27a8046555be890681af8cbfd874ffc085e3364ce53bf45a2dea7a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/iri.hpp",
+      "SPDXID": "SPDXRef-binary-file-42",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "255afc0069d1b6fb80fa750942167041ef08eb4206e6124a363295364c487579"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/json.hpp",
+      "SPDXID": "SPDXRef-binary-file-43",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d8624eaaa8170a48f1bc33c25a09795768ab7684db07f15772154ed10fd8ef9d"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/json_pointer.hpp",
+      "SPDXID": "SPDXRef-binary-file-44",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ba43dab871e4e177d3b38c486628b2cc44da214f932bb84b77099f9a54934110"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/limit_bytes.hpp",
+      "SPDXID": "SPDXRef-binary-file-45",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d7cdbe8e99cb1100b9c4e6f91d339b1e386e796ea4315202fe3608e603c45d32"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/limit_depth.hpp",
+      "SPDXID": "SPDXRef-binary-file-46",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "bebee49377efc8fc3de590eb632c933c6e9e8a7fef154f14310012ed2b7e0b26"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/parse_tree.hpp",
+      "SPDXID": "SPDXRef-binary-file-47",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "31de91d338aeee9224a5ac4c0709d41e0b566ebb05922221928be7d76215382e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/parse_tree_to_dot.hpp",
+      "SPDXID": "SPDXRef-binary-file-48",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "00f170a4ade1745e70b89199f54f62eddc4cdd2f9147b90ba3dc0157d50c8b0e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/peg.hpp",
+      "SPDXID": "SPDXRef-binary-file-49",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3aa191f9b69bddd764bef528f7c30eae317866691b766f312b76c2c35722c095"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/predicates.hpp",
+      "SPDXID": "SPDXRef-binary-file-50",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "51cbf6c6ae6720199ccda957b9c1c334d3ba9ad4a0dbaeaa23a3493e4e7d7fc5"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/print.hpp",
+      "SPDXID": "SPDXRef-binary-file-51",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c4328c010431907b380baa18bf94f54be7336862304b5aad17db5969ff81fa8e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/print_coverage.hpp",
+      "SPDXID": "SPDXRef-binary-file-52",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "992f168077cd8517a0e0811bd302ff6eafddb6f9ec1673aba26e93d0dff9cad8"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/proto3.hpp",
+      "SPDXID": "SPDXRef-binary-file-53",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "05597e165597fb18c17043a2b048c0436f51d77e6db0b37c340b457ee3a05a8a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/raw_string.hpp",
+      "SPDXID": "SPDXRef-binary-file-54",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "dba8368206d0ace3aae9990d2108fc5c02fb6576c10e1b9d6ae48caab794bee6"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/remove_first_state.hpp",
+      "SPDXID": "SPDXRef-binary-file-55",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "754bbf258c4072637fd642101081e61f6c6e439418c1c694173db4038c246c6c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/remove_last_states.hpp",
+      "SPDXID": "SPDXRef-binary-file-56",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3cc9d3088cbadb9206eb41a53cea50f803d11ee12f4ab37414efa01b8a5b7b7a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/rep_one_min_max.hpp",
+      "SPDXID": "SPDXRef-binary-file-57",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fa24c87bee774829d5b307fe95f0136dd061261adc216e290c42078947b432fa"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/rep_string.hpp",
+      "SPDXID": "SPDXRef-binary-file-58",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "778d3018cb056fd81f7e4dae52577a6d0fa004741ef13b5886c9d49b81a451af"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/separated_seq.hpp",
+      "SPDXID": "SPDXRef-binary-file-59",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a54c5b281e3e2175f36b63108428b501e45c625fc380776d5d39966f5469ef17"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/shuffle_states.hpp",
+      "SPDXID": "SPDXRef-binary-file-60",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "229798a206d8f6f598f134f543fe1a4dade68fb73e3b7027be277a59f603b6a4"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/state_control.hpp",
+      "SPDXID": "SPDXRef-binary-file-61",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "340f1ffa40b50e91a01cbf1e58fc19394a77ac1ed2b1a44a2e92bd65c9fbe8fb"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/to_string.hpp",
+      "SPDXID": "SPDXRef-binary-file-62",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "615906f87dfe699f0a16059ec624111c9019a6f9fb4ee031811e4437fd73b9eb"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/trace.hpp",
+      "SPDXID": "SPDXRef-binary-file-63",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e8e3b290471395ec13a9b0924d77a69486799a86f5edfc8ce8d933b80626c196"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/uint16.hpp",
+      "SPDXID": "SPDXRef-binary-file-64",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0ea68b5e6a86ba78e23f4f5d659c6a80c9a2806673df7ee36a077e1b753b9025"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/uint32.hpp",
+      "SPDXID": "SPDXRef-binary-file-65",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d7aa0b88b8c9d4d683a5f07f81005a8fec1b5b638e9350cd5dc920e657069313"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/uint64.hpp",
+      "SPDXID": "SPDXRef-binary-file-66",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "308269a6bb0b4582e88aca95b95fd85479896eb97a983ea9beb9f864216c4714"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/uint8.hpp",
+      "SPDXID": "SPDXRef-binary-file-67",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7858c9883783114f99cfb5a1ccad0ed52e160ac33bd8505ca88950217905276b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/unescape.hpp",
+      "SPDXID": "SPDXRef-binary-file-68",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "860758da1550032b509c89f716f0c333e65e9b64eb960e2248c2baae6cabc7f1"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/uri.hpp",
+      "SPDXID": "SPDXRef-binary-file-69",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b73cca50f52220b45e1937939a2bcb53432f8a61eaac36d308dd12567cb2809e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/utf16.hpp",
+      "SPDXID": "SPDXRef-binary-file-70",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a870818c77a33ee3c41f5f3aa54f4e7ef425b9f15391b98247298d201c058969"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/contrib/utf32.hpp",
+      "SPDXID": "SPDXRef-binary-file-71",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "faf614b2a9c690192b192b957c90287e541cdb9fb4ce49116ca023a94b430178"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/cstream_input.hpp",
+      "SPDXID": "SPDXRef-binary-file-72",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c60d48aa1c60594aba04cf4483d610890cdb859e8c6c4946ae464136c06f8f09"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/demangle.hpp",
+      "SPDXID": "SPDXRef-binary-file-73",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6af71c7f1e424855fa5e2e476eff6ee90c65511d5533a7ddc1b123868de4d62e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/disable_action.hpp",
+      "SPDXID": "SPDXRef-binary-file-74",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4758ea3624d1e50f13582abf57db8754add64cc4a0b4f7466595790e76eb08d0"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/discard_input.hpp",
+      "SPDXID": "SPDXRef-binary-file-75",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "78684c1cb4409373695be58fb88cac60ec204976f4d3e4513e1c4fb3aaad8efb"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/discard_input_on_failure.hpp",
+      "SPDXID": "SPDXRef-binary-file-76",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9917f2fa02878ad8ba081d5244040f25e5e2d150a4d2f06729d17fc939ae7895"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/discard_input_on_success.hpp",
+      "SPDXID": "SPDXRef-binary-file-77",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6c9127a250a633b577ca43db628eb2c315ed810e02243cc966263fe2c71ea42e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/enable_action.hpp",
+      "SPDXID": "SPDXRef-binary-file-78",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "77431afd421d6ccaf42af0af0eaa68120c414b43c07583cf1ac5cdfab9e45e2e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/eol.hpp",
+      "SPDXID": "SPDXRef-binary-file-79",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1107b504f9b8d2d5b09fcd7d058d96989631c9b7d3ec4b3d29fc08951182512e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/eol_pair.hpp",
+      "SPDXID": "SPDXRef-binary-file-80",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0c5c76af4091daf7e8ce6dd4dbf1ef75afe57f96766dca48a29fdddb173c1ac0"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/file_input.hpp",
+      "SPDXID": "SPDXRef-binary-file-81",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5ea6d74193a3aff8c1858071102066eb5814eac479736a846a0c6144fd17b617"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/action.hpp",
+      "SPDXID": "SPDXRef-binary-file-82",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fe183b2fe31457c200fe9175b4589af1a93c25286672b367e726c354410e7fd0"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/action_input.hpp",
+      "SPDXID": "SPDXRef-binary-file-83",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f0fd73c05d12f2f8dbc60262f782e253b105b4d5efc390292a0ff648fa9ea83d"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/any.hpp",
+      "SPDXID": "SPDXRef-binary-file-84",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "939e8e65f64062f6a3c7cfec6a545edc6d07102f81ac86c140a1c798225605d8"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/apply.hpp",
+      "SPDXID": "SPDXRef-binary-file-85",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "decb378ad79f58147a7763cd5d38228c99423330db72b1a5e8958ca12d06d152"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/apply0.hpp",
+      "SPDXID": "SPDXRef-binary-file-86",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4866d3c06968ab2c1062ea944f7f214aa2e944f0a2910fa93c4b9ecbb53401c8"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/apply0_single.hpp",
+      "SPDXID": "SPDXRef-binary-file-87",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c851e228f1821a3cb99f556ab267a5730c03df4522d06db06321c73c147daa2c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/apply_single.hpp",
+      "SPDXID": "SPDXRef-binary-file-88",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e0de4829c4dce758d354dfb15382517316ded00542ea136d7b19053c6eee5794"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/at.hpp",
+      "SPDXID": "SPDXRef-binary-file-89",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d91aa3b6dd2ac49f64d00111b2642f396fbf722a0b51053c0676c44a910d6314"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/bof.hpp",
+      "SPDXID": "SPDXRef-binary-file-90",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5e4a3a527b34688f464931001d514edea368e86aa9698725079c82cde11fde9b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/bol.hpp",
+      "SPDXID": "SPDXRef-binary-file-91",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "56a0b555fb5d40c3c933f2a5fb60b248dbfeea92f396fc5ea68c6769dcbc68ed"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/bump.hpp",
+      "SPDXID": "SPDXRef-binary-file-92",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4210963e2fe76345b9a9bd33d44b6fd5e92f98b1e70cab2049da08ddd6700090"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/bump_help.hpp",
+      "SPDXID": "SPDXRef-binary-file-93",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ca8453a371fd5ec73b2d7e27ff5842b536d9e6be711ebf031ffeea62b668b480"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/bytes.hpp",
+      "SPDXID": "SPDXRef-binary-file-94",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b815b1e8af25cddfddb966f30fc82ccdbef4ea04b2478380199d196eb154b568"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/control.hpp",
+      "SPDXID": "SPDXRef-binary-file-95",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "73b907887845f7cc5fc3b537b685967951781325e0cb9fc1569e975b3160a9d5"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/crlf_eol.hpp",
+      "SPDXID": "SPDXRef-binary-file-96",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fa6421c3f4f71541fee22e8d602c6e981bb453984912f7f89012fc3d5c61c8dd"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/cr_crlf_eol.hpp",
+      "SPDXID": "SPDXRef-binary-file-97",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "14dbf23044c3e98eff19d8f0c9423509c64310343a29b3616d2fe6220cf2ac23"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/cr_eol.hpp",
+      "SPDXID": "SPDXRef-binary-file-98",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "16c374cd7a519b75a2c3facd715923a32ea63ac50f22fff0e126a1c19c43d6d7"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/cstream_reader.hpp",
+      "SPDXID": "SPDXRef-binary-file-99",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "00f427ffa916fb17625701c1f1563f3a0d7b57e6d9fb3997038cca577d7e574e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/cstring_reader.hpp",
+      "SPDXID": "SPDXRef-binary-file-100",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6ecdf1edaa7692f877af03c798acd0b1262931c3f47a3852d4670493bc11d3ca"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/dependent_false.hpp",
+      "SPDXID": "SPDXRef-binary-file-101",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1ad8cd981003c2c0888e6206d8d5aa86f643cbf08e0602ea2966d86af4617bb5"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/disable.hpp",
+      "SPDXID": "SPDXRef-binary-file-102",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7e03d7a01979419bdce1dc1fac991264100d1e3debe3c359c4575a8a3c48cf6d"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/discard.hpp",
+      "SPDXID": "SPDXRef-binary-file-103",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "04bc1326dc3721dcc4102d4a20935257edd419a42beb518518f3deb4388489bd"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/enable.hpp",
+      "SPDXID": "SPDXRef-binary-file-104",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b0b6dbde3e8856e6d9569d4d4ccc3a8fd0007df9d4436f2f24f428a41c42b108"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/enable_control.hpp",
+      "SPDXID": "SPDXRef-binary-file-105",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "dbc7663438db192fa16b44399832f513f4f42e6db3dd5848f3860fda2729d923"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/eof.hpp",
+      "SPDXID": "SPDXRef-binary-file-106",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0687f62917a84fa21d81c1cb4834eb5e767d99b1be6bf169709c5d1b639e0fb9"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/eol.hpp",
+      "SPDXID": "SPDXRef-binary-file-107",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e45ee94a17bf21c89d4281de7dcde2835ea0a299a68a2d2f4a8310914dd7400c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/eolf.hpp",
+      "SPDXID": "SPDXRef-binary-file-108",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2b1cf197df0dedcccdce23ef0afabd676e4b4cbf78347a8bfda8e67c57790e68"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/failure.hpp",
+      "SPDXID": "SPDXRef-binary-file-109",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "620cf52bb90514b3db8960c3c2f0d4be218fa34eb3e72d029a75688c6a39071c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/filesystem.hpp",
+      "SPDXID": "SPDXRef-binary-file-110",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a6823fa03b3afa6553094b6ba1cfde5abc86b450bb2e4673a40b9bf716267d0d"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/file_mapper_posix.hpp",
+      "SPDXID": "SPDXRef-binary-file-111",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "66a9b2278ee6c6b9b03435c41e31c8857d8b0d355d2fb6e6f6508dc5b9cd69a2"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/file_mapper_win32.hpp",
+      "SPDXID": "SPDXRef-binary-file-112",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c5124006eef1efbf8eacc276ac6464c4d4720ed718928ad2bf4dce873097db76"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/file_reader.hpp",
+      "SPDXID": "SPDXRef-binary-file-113",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fb0b5d05cd19ed0d47e14ab11319af966c146859675e679eabacf11f4e5fed3a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/has_apply.hpp",
+      "SPDXID": "SPDXRef-binary-file-114",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "934acd24f2e14ac05fd119a784d692b5cbd3f79fb75d1ee2d6d7e18fd97fc74d"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/has_apply0.hpp",
+      "SPDXID": "SPDXRef-binary-file-115",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "bb4fb6931b3b4daa4cfd3d229bed7ab174df0201fb35e46da70339caeee0f472"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/has_match.hpp",
+      "SPDXID": "SPDXRef-binary-file-116",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "09eeaf50db2ddf279de8cb952784ae449947d42124531161bd5930789751b972"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/has_unwind.hpp",
+      "SPDXID": "SPDXRef-binary-file-117",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3cf23e75aa40235841de2726d50365d0aa2095f440bfc97a39794abea4e74b80"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/identifier.hpp",
+      "SPDXID": "SPDXRef-binary-file-118",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ae55bf1122cf7160be78895ecb0c727c08d88f451ef3d283b0a68eda9397b54a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/if_apply.hpp",
+      "SPDXID": "SPDXRef-binary-file-119",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f572b90cbc2cbdd3db1578dc0eb91a6f885254a2525c0d645c892ead193f9323"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/if_must.hpp",
+      "SPDXID": "SPDXRef-binary-file-120",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "684453ff88e6025e958d33a9751e81220c3a6dd937b5657f92034286ce28c80c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/if_must_else.hpp",
+      "SPDXID": "SPDXRef-binary-file-121",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "088b3d44949877fd8847457b17e6e606374ab0f874957b0cb215f50dae1aa231"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/if_then_else.hpp",
+      "SPDXID": "SPDXRef-binary-file-122",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "325f700bcebac92349269663694e8eef3023f8cb36324496285af4588a7099c1"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/input_pair.hpp",
+      "SPDXID": "SPDXRef-binary-file-123",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "119a1e122e1e4ae94a4ad869344c86ecc3e97a19c1cd45e2ab831c51545d6958"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/istream_reader.hpp",
+      "SPDXID": "SPDXRef-binary-file-124",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9e569a35b8386a5694160c09b6e6e074402743736948fc6fc0cbe474f54ec963"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/istring.hpp",
+      "SPDXID": "SPDXRef-binary-file-125",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "aa4243b573cc82ba857c9e69c547f83b23683cd38c6bf1e6896f73d66b507c2d"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/iterator.hpp",
+      "SPDXID": "SPDXRef-binary-file-126",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ed3131c9e5ddda6c868fc0447cab5fae02564d0fa45613a3f40569420d9bca9f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/lf_crlf_eol.hpp",
+      "SPDXID": "SPDXRef-binary-file-127",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ce165a8f131fbbc43347dc9ae9e331a83a90fc996e8584f509f997b2cbfaaa10"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/lf_eol.hpp",
+      "SPDXID": "SPDXRef-binary-file-128",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "bd4d28eaf4e314f18eed1e9f2b7f66f268be179509370466022ae2537b910db5"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/list.hpp",
+      "SPDXID": "SPDXRef-binary-file-129",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a6568a00b372c8d8c3bb96c99cd29dd404701cf73ee3c1ac4cd9ef691f32cff8"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/list_must.hpp",
+      "SPDXID": "SPDXRef-binary-file-130",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "42623aeff218c4b8e390e3e0fc230368045385f121256af2cd4c8dce36edb9c6"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/list_tail.hpp",
+      "SPDXID": "SPDXRef-binary-file-131",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5036090954798d13bd55132ea4b4ad63b21d581525d8bc119b39e40b91898a78"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/list_tail_pad.hpp",
+      "SPDXID": "SPDXRef-binary-file-132",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9fd3ae37c979ed11514375adf1bd2642448fead83b4387598018277b275ebe2e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/marker.hpp",
+      "SPDXID": "SPDXRef-binary-file-133",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "94e6ebe844e7e9614a52adde673c6813325091a52309ed7396f3a0a0ffec96aa"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/minus.hpp",
+      "SPDXID": "SPDXRef-binary-file-134",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "68e5d041a9cbc53053b06630dece0a78d2cac3f90df16b6d9864de651a807088"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/missing_apply.hpp",
+      "SPDXID": "SPDXRef-binary-file-135",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c818bed4ffbba7e3843d1a4771593a678e8ceaeae89216178ef060da741b6bc7"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/missing_apply0.hpp",
+      "SPDXID": "SPDXRef-binary-file-136",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "80eff3ec2bcd18d06a8592f29281fbe38d6c7542f8ca7edc35b1ed197d74279e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/must.hpp",
+      "SPDXID": "SPDXRef-binary-file-137",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3f09d0e53d21e0872d6a8bbca85ad7991c68e13083dc63e1b60faef73455cbaa"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/not_at.hpp",
+      "SPDXID": "SPDXRef-binary-file-138",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2cebbb261e4ef2c048d44422c1a4a2c074a0464443b39adbd218903d2cec252f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/one.hpp",
+      "SPDXID": "SPDXRef-binary-file-139",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b1295c8ff1b30bd7b7421440920e68dcfe00901077aaa2042dfd0b77de2919e4"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/opt.hpp",
+      "SPDXID": "SPDXRef-binary-file-140",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a8118b9280f622495185706b7bc88ce5b4c43474520f8d5dd86a19099cf6909b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/pad.hpp",
+      "SPDXID": "SPDXRef-binary-file-141",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4645bd4edb18a37e349e1cdc3843602f5ae2dd715b4f968be2b9928a051ebce6"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/pad_opt.hpp",
+      "SPDXID": "SPDXRef-binary-file-142",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0e75206a8ffb137b0b2edb885c9d4a7d16da0c1203c1ba58ba858cbe5af6c68e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/path_to_string.hpp",
+      "SPDXID": "SPDXRef-binary-file-143",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0453c6affa12fa452d28bbdc7fe261c9eadddc9e6e3708bc0f2e196a7a888774"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/peek_char.hpp",
+      "SPDXID": "SPDXRef-binary-file-144",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1e9a1e40b4cd8d612f9f226dbdd452991347c29421f22eaf8bef2993ec0eea8e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/peek_utf8.hpp",
+      "SPDXID": "SPDXRef-binary-file-145",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b31d14a6abd3bbd61a71850cdd9f5762c15c2706df9e7db151f836594ec176bf"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/pegtl_string.hpp",
+      "SPDXID": "SPDXRef-binary-file-146",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4856a4e85f5e1e8748b979d6672d383de6debad989f983f1b579bab794b0f3b7"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/plus.hpp",
+      "SPDXID": "SPDXRef-binary-file-147",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "48049fb9f736aa7d29938dce14da74987e6a8683d495ef07462f05f554fa3559"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/raise.hpp",
+      "SPDXID": "SPDXRef-binary-file-148",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2e41a8d3ca3492ebb061fa46f2c7194379f07c8e2d4e45b6d9c4b7eb00edc110"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/range.hpp",
+      "SPDXID": "SPDXRef-binary-file-149",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ca7c5c3823ac8884d286aae13d3ec979e141f5050c08062d5a9c89340a09574e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/ranges.hpp",
+      "SPDXID": "SPDXRef-binary-file-150",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a693a2ff3bd3bfd4aec0fa81e0175cd7b1ee83d3733ac3cf9f129d9e4f364de2"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/rematch.hpp",
+      "SPDXID": "SPDXRef-binary-file-151",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f136e953bc6d895103fe872ad24cc6d51969e685641df8841cdc4524f42ec48a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/rep.hpp",
+      "SPDXID": "SPDXRef-binary-file-152",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "dacff9fcc5318bdae497a147d5cfa84a4361e5e74bf639da5ea6dc04fb12bc2f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/rep_min.hpp",
+      "SPDXID": "SPDXRef-binary-file-153",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1d5cfb36f75734e9aa3b9a391b30f25ec1c14cfa36f4c7229f23a86f95388fb1"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/rep_min_max.hpp",
+      "SPDXID": "SPDXRef-binary-file-154",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "dc3c36f1f4e430a002cb0322377b50ee275e5deddc7bab35406d727cdd059137"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/rep_opt.hpp",
+      "SPDXID": "SPDXRef-binary-file-155",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "381a9656b6214f3cbc66f16a9e30045ef39a09a58a36d546178a3758506aee51"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/require.hpp",
+      "SPDXID": "SPDXRef-binary-file-156",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b2fd3920b84c9dd2c4866f2b8e76cbe9152d03078148828ffa2cae46a35fbb5e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/result_on_found.hpp",
+      "SPDXID": "SPDXRef-binary-file-157",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9342b192e0c35980612ed3eb6540da62bec25a79bb16cce97bee140bd06ba971"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/rules.hpp",
+      "SPDXID": "SPDXRef-binary-file-158",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c94c82d7494b7e3edc0ed98acb1f8fb47fb7933b0fa6a9dbc211ef9ed1e892d9"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/seq.hpp",
+      "SPDXID": "SPDXRef-binary-file-159",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7966b0091d5b64a6aa452ef29de673b04c38d00a982c201c0b97e615fa3f6ba9"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/sor.hpp",
+      "SPDXID": "SPDXRef-binary-file-160",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "946dee4f0f1430ef93f7c4ea5c3d355f7d1b043b344fed421629f4c0c38bd709"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/star.hpp",
+      "SPDXID": "SPDXRef-binary-file-161",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e132548711587dcb07949191dbaaf8c42549bae1b4535e9c40eae6867ef0c500"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/star_must.hpp",
+      "SPDXID": "SPDXRef-binary-file-162",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "024021a59b73a23c39c8494d9392105cb70dfb4ff9a7ddb6f542f9f104430243"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/state.hpp",
+      "SPDXID": "SPDXRef-binary-file-163",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a0b291bc5e7b228ecf55430e9da83f6e1da3be1605f65a7a2b07379cd413471a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/string.hpp",
+      "SPDXID": "SPDXRef-binary-file-164",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4f55fa33cb5e4218605a5a0f78f7d31127d993a67583c6e440342bfaaa4a83df"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/success.hpp",
+      "SPDXID": "SPDXRef-binary-file-165",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "133f0302a04b1bdd3ca2d54a4f3bdd9f97a14498675bb1a216bfe0b1825943fc"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/try_catch_type.hpp",
+      "SPDXID": "SPDXRef-binary-file-166",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8d3dec39881976e3dc8331ba9e15973c33354d556a2bc11b351d3d44ad3fc651"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/until.hpp",
+      "SPDXID": "SPDXRef-binary-file-167",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "67daf90b8e9005b9f0ea20a8ac89fb3fcb369d7cfa8294392a69e475dcbe80be"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/internal/unwind_guard.hpp",
+      "SPDXID": "SPDXRef-binary-file-168",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e7ad62ccb6030ca6bb0ba22ba2b3c7978f996f7f68ccdfe60044257b44f45c7a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/istream_input.hpp",
+      "SPDXID": "SPDXRef-binary-file-169",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b785e6a43cec33543c374f5a3fa5c05b81125c4c21435b91a56381418ba43c75"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/match.hpp",
+      "SPDXID": "SPDXRef-binary-file-170",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a1d6fd186afe24a1adc96ef301a94375ee5d4c22d363201ac5986980993dd453"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/memory_input.hpp",
+      "SPDXID": "SPDXRef-binary-file-171",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "812ba70d0103685a1efdc640bee3b50e02c7069dbf32770d5ebf7cb0b89f5b0f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/mmap_input.hpp",
+      "SPDXID": "SPDXRef-binary-file-172",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a0b72ea8238dd78ef6cedc423f25a6c5e869888e37bbc129ba5e4a7e875605c7"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/must_if.hpp",
+      "SPDXID": "SPDXRef-binary-file-173",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1a5b104a7cb1add7b9862b3b78d76c5b94ea50513ef92c968900aad6becdb271"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/normal.hpp",
+      "SPDXID": "SPDXRef-binary-file-174",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "71294a408970be8837552d8568a9620cb611efde0c1100601a0cc5a35b506e68"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/nothing.hpp",
+      "SPDXID": "SPDXRef-binary-file-175",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a5ff34f3cc72fcda09db6696df54c111c2bb0b8c07543381fccde6cf98b44c3a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/parse.hpp",
+      "SPDXID": "SPDXRef-binary-file-176",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c6d0d0c5a3f8bf36eff300d98615b3468fb282aeddff9f601d84ebb28255b8d7"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/parse_error.hpp",
+      "SPDXID": "SPDXRef-binary-file-177",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "06ac4d4085385a935ee4dde8210f913f3974bf88dceb73c51e7c28d62f066e94"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/position.hpp",
+      "SPDXID": "SPDXRef-binary-file-178",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e9a668ba4ce9d350688e35b2f60bc970e2b2a821fa867612bea84aa8eb4280fc"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/read_input.hpp",
+      "SPDXID": "SPDXRef-binary-file-179",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "99e8f489f3730de3d549c16df0d4e4bc9f337d26a57617760c7140a2ceffdacf"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/require_apply.hpp",
+      "SPDXID": "SPDXRef-binary-file-180",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7f75651810292f545d044723f420da19d01cfcbb66494e99ad6580c43bfd240c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/require_apply0.hpp",
+      "SPDXID": "SPDXRef-binary-file-181",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ac73e917fd081acc8f7200f3c200cd930207b487b7d55ecd2a7af775ce3c4eff"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/rewind_mode.hpp",
+      "SPDXID": "SPDXRef-binary-file-182",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "563116db17d77de8881af2342879b7f8a0c8f95b8d8ee67f51669d0830050dab"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/rules.hpp",
+      "SPDXID": "SPDXRef-binary-file-183",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7acc7aec2038b6d0949ea3a82dde48e6cea8d2a1776cbefdb559122b052d6b3e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/string_input.hpp",
+      "SPDXID": "SPDXRef-binary-file-184",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1bb7d369a66bbde6e51d08c5249515450915dd6a806dcd6bf4833cbffd0015f7"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/tracking_mode.hpp",
+      "SPDXID": "SPDXRef-binary-file-185",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cc695ae7cc2f4ecc25494cd74d1cc59243c0858b16eca652a52b8899a845b739"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/type_list.hpp",
+      "SPDXID": "SPDXRef-binary-file-186",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "650900e732c652db3e991ae40caadf13674a6f5ab65d9c480836bcdae0c8158f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/utf8.hpp",
+      "SPDXID": "SPDXRef-binary-file-187",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1204ad7897cd0d0960c4b6263812ea5312da8d30a43f2bfea8f740bd3b7c561a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/version.hpp",
+      "SPDXID": "SPDXRef-binary-file-188",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "66c7cb17c1949feaadb76e79f15a9c97be19e5c7ffef27a42fc98015e6f6d6da"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl/visit.hpp",
+      "SPDXID": "SPDXRef-binary-file-189",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "bba2f2372be0375f0e90ca481bdf0edabb2ad08817c41f9225701f0049d8b974"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/tao/pegtl.hpp",
+      "SPDXID": "SPDXRef-binary-file-190",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "552c52fe0d687af17a40de9ef316ee4b9ca503d0d5bb834fdf33241bd4fe1807"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./share/pegtl/copyright",
+      "SPDXID": "SPDXRef-binary-file-191",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d38623e03c59b8c1ff4df81dbefb3bfa798cd6ac1c5c52420c88eff09e389aa9"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./share/pegtl/pegtl-config-version.cmake",
+      "SPDXID": "SPDXRef-binary-file-192",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "60b1525a2c3076bf0630afcfede3fcc286d67e9126af05c8a1d48fcebc09a60e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./share/pegtl/pegtl-config.cmake",
+      "SPDXID": "SPDXRef-binary-file-193",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "75776b9df8345f6fb90583b3fd92d6326f89395523a046382517f42e5d51ff33"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}

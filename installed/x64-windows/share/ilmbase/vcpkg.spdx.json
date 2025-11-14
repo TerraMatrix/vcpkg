@@ -1,0 +1,103 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/ilmbase-x64-windows-3.0.0-ce130205-9fca-4349-be0a-c54f0736027d",
+  "name": "ilmbase:x64-windows@3.0.0 735e6d27b87d25fdeb6c9e63c24bb3a78ae21bde7e9ae8b801e53e55371cc2f1",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
+    ],
+    "created": "2025-11-14T02:07:14Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-1",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-0"
+    }
+  ],
+  "packages": [
+    {
+      "name": "ilmbase",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "3.0.0",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/ilmbase",
+      "homepage": "https://www.openexr.com/",
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "IlmBase is a base math library developed by Industrial Light & Magic (legacy compatibility package)",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "ilmbase:x64-windows",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "735e6d27b87d25fdeb6c9e63c24bb3a78ae21bde7e9ae8b801e53e55371cc2f1",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c317b1aea96ca5754dbe466499884e44e91615b2f5171b1167cd012cc539ace5"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c7bb7da436e83eda682f2c6f9f41138e68e5b056db7a19e21a5f937dbe9253d5"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./BUILD_INFO",
+      "SPDXID": "SPDXRef-binary-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a73b10fef47d7e23b16c4603b4eed0f405d298ac520f9cf61cf5ba087ed4e225"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}

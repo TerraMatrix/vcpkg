@@ -1,0 +1,101 @@
+{
+  "name": "qgis",
+  "version": "3.44.4",
+  "port-version": 0,
+  "description": "QGIS is a free, open source, cross-platform geographical information system (GIS)",
+  "homepage": "https://qgis.org",
+  "license": "GPL-2.0-or-later",
+  "supports": "!uwp & !static",
+  "dependencies": [
+    "duckdb",
+    {
+      "name": "exiv2",
+      "features": [
+        "xmp"
+      ]
+    },
+    "expat",
+    {
+      "name": "gdal",
+      "features": [
+        "arrow-adbc",
+        "freexl",
+        "kea",
+        "parquet",
+        "poppler",
+        "tools"
+      ]
+    },
+    "geos",
+    "gsl",
+    "jhasse-poly2tri",
+    "libpq",
+    "libspatialindex",
+    "libspatialite",
+    "libxml2",
+    "libzip",
+    "meshoptimizer",
+    "nlohmann-json",
+    "o2",
+    "proj",
+    "protobuf",
+    {
+      "name": "qca",
+      "default-features": false,
+      "features": [
+        "ossl"
+      ]
+    },
+    {
+      "name": "qtbase",
+      "features": [
+        "sql-odbc"
+      ]
+    },
+    "qtdeclarative",
+    "qtimageformats",
+    "qtkeychain-qt6",
+    "qtlocation",
+    "qtquickcontrols2",
+    "qtsvg",
+    "qttools",
+    "zlib"
+  ],
+  "default-features": [
+    "gui"
+  ],
+  "features": {
+    "gui": {
+      "description": "Build the QGIS GUI components",
+      "dependencies": [
+        "qscintilla",
+        "qtmultimedia",
+        "qwt"
+      ]
+    },
+    "3d": {
+      "description": "Enable QGIS 3D map view support",
+      "dependencies": [
+        "qt3d"
+      ]
+    },
+    "opencl": {
+      "description": "Enable OpenCL acceleration",
+      "dependencies": [
+        "opencl"
+      ]
+    },
+    "server": {
+      "description": "Build QGIS Server",
+      "dependencies": [
+        "fastcgi"
+      ]
+    },
+    "sfcgal": {
+      "description": "Enable SFCGAL geometry engine support",
+      "dependencies": [
+        "sfcgal"
+      ]
+    }
+  }
+}
