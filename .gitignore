@@ -285,7 +285,16 @@ __pycache__/
 /buildtrees/
 /build*/
 /downloads/
-/installed*/
+/installed/*
+!/installed/x64-windows/
+/installed/x64-windows/*
+!/installed/x64-windows/share/
+!/installed/x64-linux/
+/installed/x64-linux/*
+!/installed/x64-linux/share/
+!/installed/arm64-linux/
+/installed/arm64-linux/*
+!/installed/arm64-linux/share/
 /vcpkg_installed*/
 /packages/
 /scripts/buildsystems/tmp/
@@ -322,3 +331,7 @@ prefab/
 pythonenv3.8/
 .venv/
 
+############################################################
+# Claude
+############################################################
+*.claude
