@@ -8,6 +8,7 @@ vcpkg_from_github(
     HEAD_REF master
     PATCHES
         fail-on-compiler-not-supported.patch
+        gcc10-linux.patch
 )
 
 set(FEATURE_OPTIONS "")

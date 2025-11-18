@@ -1,0 +1,10 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -15,6 +15,6 @@
+ include(cmake/CheckRequirements.cmake)
+ if (NOT BOOST_COBALT_REQUIREMENTS_MATCHED)
+-    message(FATAL_ERROR "The current compiler is not supported.")
++    message(WARNING "The current compiler is not fully supported, but proceeding anyway.")
+ endif()
+
+ set(BOOST_COBALT_IS_ROOT OFF)
