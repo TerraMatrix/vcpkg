@@ -495,6 +495,16 @@ set_target_properties(unofficial::osg::osgdb_gz PROPERTIES
 list(APPEND _cmake_import_check_targets unofficial::osg::osgdb_gz )
 list(APPEND _cmake_import_check_files_for_unofficial::osg::osgdb_gz "${_IMPORT_PREFIX}/debug/plugins/osgPlugins-3.6.5/osgdb_gzd.dll" )
 
+# Import target "unofficial::osg::osgdb_dae" for configuration "Debug"
+set_property(TARGET unofficial::osg::osgdb_dae APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
+set_target_properties(unofficial::osg::osgdb_dae PROPERTIES
+  IMPORTED_COMMON_LANGUAGE_RUNTIME_DEBUG ""
+  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/debug/plugins/osgPlugins-3.6.5/osgdb_daed.dll"
+  )
+
+list(APPEND _cmake_import_check_targets unofficial::osg::osgdb_dae )
+list(APPEND _cmake_import_check_files_for_unofficial::osg::osgdb_dae "${_IMPORT_PREFIX}/debug/plugins/osgPlugins-3.6.5/osgdb_daed.dll" )
+
 # Import target "unofficial::osg::osgdb_bvh" for configuration "Debug"
 set_property(TARGET unofficial::osg::osgdb_bvh APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(unofficial::osg::osgdb_bvh PROPERTIES

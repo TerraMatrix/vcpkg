@@ -495,6 +495,16 @@ set_target_properties(unofficial::osg::osgdb_gz PROPERTIES
 list(APPEND _cmake_import_check_targets unofficial::osg::osgdb_gz )
 list(APPEND _cmake_import_check_files_for_unofficial::osg::osgdb_gz "${_IMPORT_PREFIX}/plugins/osgPlugins-3.6.5/osgdb_gz.dll" )
 
+# Import target "unofficial::osg::osgdb_dae" for configuration "Release"
+set_property(TARGET unofficial::osg::osgdb_dae APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(unofficial::osg::osgdb_dae PROPERTIES
+  IMPORTED_COMMON_LANGUAGE_RUNTIME_RELEASE ""
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/plugins/osgPlugins-3.6.5/osgdb_dae.dll"
+  )
+
+list(APPEND _cmake_import_check_targets unofficial::osg::osgdb_dae )
+list(APPEND _cmake_import_check_files_for_unofficial::osg::osgdb_dae "${_IMPORT_PREFIX}/plugins/osgPlugins-3.6.5/osgdb_dae.dll" )
+
 # Import target "unofficial::osg::osgdb_bvh" for configuration "Release"
 set_property(TARGET unofficial::osg::osgdb_bvh APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(unofficial::osg::osgdb_bvh PROPERTIES
