@@ -8,13 +8,12 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 # Import target "Boost::graph" for configuration "Debug"
 set_property(TARGET Boost::graph APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(Boost::graph PROPERTIES
-  IMPORTED_IMPLIB_DEBUG "${_IMPORT_PREFIX}/debug/lib/boost_graph-vc143-mt-gd-x64-1_86.lib"
-  IMPORTED_LINK_DEPENDENT_LIBRARIES_DEBUG "Boost::regex"
-  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/debug/bin/boost_graph-vc143-mt-gd-x64-1_86.dll"
+  IMPORTED_IMPLIB_DEBUG "${_IMPORT_PREFIX}/debug/lib/boost_graph-vc143-mt-gd-x64-1_89.lib"
+  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/debug/bin/boost_graph-vc143-mt-gd-x64-1_89.dll"
   )
 
 list(APPEND _cmake_import_check_targets Boost::graph )
-list(APPEND _cmake_import_check_files_for_Boost::graph "${_IMPORT_PREFIX}/debug/lib/boost_graph-vc143-mt-gd-x64-1_86.lib" "${_IMPORT_PREFIX}/debug/bin/boost_graph-vc143-mt-gd-x64-1_86.dll" )
+list(APPEND _cmake_import_check_files_for_Boost::graph "${_IMPORT_PREFIX}/debug/lib/boost_graph-vc143-mt-gd-x64-1_89.lib" "${_IMPORT_PREFIX}/debug/bin/boost_graph-vc143-mt-gd-x64-1_89.dll" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

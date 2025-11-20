@@ -24,12 +24,11 @@ endmacro()
 
 ####################################################################################
 
-# Get definition of 'find_dependency' macro
 include(CMakeFindDependencyMacro)
-# Find lz4. This will create 'lz4::lz4' target
-find_dependency(lz4)
-find_dependency(HDF5)
-
+find_dependency(lz4 CONFIG)
+if(ON)
+  find_dependency(HDF5 CONFIG)
+endif()
 include("${CMAKE_CURRENT_LIST_DIR}/flann-targets.cmake")
 check_required_components("flann")
 

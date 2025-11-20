@@ -60,7 +60,7 @@ add_library(Boost::mysql INTERFACE IMPORTED)
 set_target_properties(Boost::mysql PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::asio;Boost::assert;Boost::charconv;Boost::config;Boost::core;Boost::describe;Boost::endian;Boost::intrusive;Boost::mp11;Boost::optional;Boost::system;Boost::throw_exception;Boost::variant2;Threads::Threads;OpenSSL::Crypto;OpenSSL::SSL"
+  INTERFACE_LINK_LIBRARIES "Boost::asio;Boost::assert;Boost::charconv;Boost::compat;Boost::config;Boost::container;Boost::core;Boost::describe;Boost::endian;Boost::intrusive;Boost::mp11;Boost::optional;Boost::system;Boost::throw_exception;Boost::variant2;Threads::Threads;OpenSSL::Crypto;OpenSSL::SSL"
 )
 
 # Load information for each installed configuration.

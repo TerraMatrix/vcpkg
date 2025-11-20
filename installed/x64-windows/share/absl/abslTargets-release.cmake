@@ -15,6 +15,16 @@ set_target_properties(absl::poison PROPERTIES
 list(APPEND _cmake_import_check_targets absl::poison )
 list(APPEND _cmake_import_check_files_for_absl::poison "${_IMPORT_PREFIX}/lib/absl_poison.lib" )
 
+# Import target "absl::tracing_internal" for configuration "Release"
+set_property(TARGET absl::tracing_internal APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(absl::tracing_internal PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/absl_tracing_internal.lib"
+  )
+
+list(APPEND _cmake_import_check_targets absl::tracing_internal )
+list(APPEND _cmake_import_check_files_for_absl::tracing_internal "${_IMPORT_PREFIX}/lib/absl_tracing_internal.lib" )
+
 # Import target "absl::decode_rust_punycode" for configuration "Release"
 set_property(TARGET absl::decode_rust_punycode APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(absl::decode_rust_punycode PROPERTIES
@@ -164,6 +174,26 @@ set_target_properties(absl::log_flags PROPERTIES
 
 list(APPEND _cmake_import_check_targets absl::log_flags )
 list(APPEND _cmake_import_check_files_for_absl::log_flags "${_IMPORT_PREFIX}/lib/absl_log_flags.lib" )
+
+# Import target "absl::log_internal_structured_proto" for configuration "Release"
+set_property(TARGET absl::log_internal_structured_proto APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(absl::log_internal_structured_proto PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/absl_log_internal_structured_proto.lib"
+  )
+
+list(APPEND _cmake_import_check_targets absl::log_internal_structured_proto )
+list(APPEND _cmake_import_check_files_for_absl::log_internal_structured_proto "${_IMPORT_PREFIX}/lib/absl_log_internal_structured_proto.lib" )
+
+# Import target "absl::random_internal_entropy_pool" for configuration "Release"
+set_property(TARGET absl::random_internal_entropy_pool APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(absl::random_internal_entropy_pool PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/absl_random_internal_entropy_pool.lib"
+  )
+
+list(APPEND _cmake_import_check_targets absl::random_internal_entropy_pool )
+list(APPEND _cmake_import_check_files_for_absl::random_internal_entropy_pool "${_IMPORT_PREFIX}/lib/absl_random_internal_entropy_pool.lib" )
 
 # Import target "absl::abseil_dll" for configuration "Release"
 set_property(TARGET absl::abseil_dll APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)

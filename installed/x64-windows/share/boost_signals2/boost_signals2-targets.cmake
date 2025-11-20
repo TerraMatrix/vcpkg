@@ -59,7 +59,7 @@ add_library(Boost::signals2 INTERFACE IMPORTED)
 
 set_target_properties(Boost::signals2 PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::bind;Boost::config;Boost::core;Boost::function;Boost::iterator;Boost::mpl;Boost::optional;Boost::parameter;Boost::predef;Boost::preprocessor;Boost::smart_ptr;Boost::throw_exception;Boost::tuple;Boost::type_traits;Boost::variant"
+  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::bind;Boost::config;Boost::core;Boost::function;Boost::iterator;Boost::move;Boost::mpl;Boost::optional;Boost::parameter;Boost::preprocessor;Boost::smart_ptr;Boost::throw_exception;Boost::tuple;Boost::type_traits;Boost::variant"
 )
 
 # Load information for each installed configuration.

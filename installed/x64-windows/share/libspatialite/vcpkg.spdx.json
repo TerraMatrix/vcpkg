@@ -3,19 +3,69 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/libspatialite-x64-windows-5.1.0#5-487e6ca8-0799-4091-a067-00dbdfcdf510",
-  "name": "libspatialite:x64-windows@5.1.0#5 NONE",
+  "documentNamespace": "https://spdx.org/spdxdocs/libspatialite-x64-windows-5.1.0#5-89d774fc-e7c9-4369-bc6f-bfe708655f28",
+  "name": "libspatialite:x64-windows@5.1.0#5 d0ba73ffbfee4908688d297c07ed2a9e26be113ec4c5be4148f77706312bfef7",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-10T10:02:14Z"
+    "created": "2025-11-19T04:03:57Z"
   },
   "relationships": [
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "GENERATES",
       "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-3"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-4"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-5"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-6"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-7"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-8"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-8",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
     },
     {
       "spdxElementId": "SPDXRef-binary",
@@ -219,22 +269,145 @@
     {
       "name": "libspatialite:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "NONE",
+      "versionInfo": "d0ba73ffbfee4908688d297c07ed2a9e26be113ec4c5be4148f77706312bfef7",
       "downloadLocation": "NONE",
       "licenseConcluded": "LicenseRef-vcpkg-null",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-0",
+      "name": "libspatialite-5.1.0.tar.gz",
+      "packageFileName": "libspatialite-5.1.0.tar.gz",
+      "downloadLocation": "https://www.gaia-gis.it/gaia-sins/libspatialite-sources/libspatialite-5.1.0.tar.gz",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "2745b373e31cea58623224def6090c491b58409803bb71231450dfa2cfdf3aafc3fc6f680585d55d085008f8cf362c3062ae67ffc7d80257775a22eb81ef1e57"
+        }
+      ]
     }
   ],
   "files": [
+    {
+      "fileName": "./android-builtin-iconv.diff",
+      "SPDXID": "SPDXRef-port-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "33e879b89968933c9e367469873d40bd5843518fd9c07e4b3c1387f57d0256a4"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-linux-configure.patch",
+      "SPDXID": "SPDXRef-port-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e9531c9e8a83f4cc52adf313cdcdff8150d49d523da1decf25ae9f14fc326d95"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-makefiles.patch",
+      "SPDXID": "SPDXRef-port-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0d8be12599436f0a942d351598a188523a5558348347b6a5adfd4f6d583804ab"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-mingw.patch",
+      "SPDXID": "SPDXRef-port-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "509f3838c32d04eab9a0ae8cae891376d40bac8c89e2b12fb21d34792f545a03"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-utf8-source.patch",
+      "SPDXID": "SPDXRef-port-file-4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7a992aff209dff3bf6c1497b07a9a57ea8db66e050fddfa82d6ce04cea437e56"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./gaiaconfig-msvc.patch",
+      "SPDXID": "SPDXRef-port-file-5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d9a077d182035bf6fcc0782bd4d934f8fd71e31677c481ccb32f1d3e13c9f56c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./libxml2-no-http.diff",
+      "SPDXID": "SPDXRef-port-file-6",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3cbf8d0c56ffa99193b40f024d5f5e8e2f959c78a8206ce36599cd1c2d086102"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-7",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "69d4b80959d862bc7f74e3b3d69fc6ba071849deceb2708275d3fd2a5ceab57e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-8",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "960d8ffc6c878aa351b20046bf29a9c8e5603b4b244b7e6c22079ca635a5b918"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
     {
       "fileName": "./bin/spatialite.dll",
       "SPDXID": "SPDXRef-binary-file-0",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "0aedb9c57cdc8545271059d4239860e287197e0a348a0565ae800ffb16379907"
+          "checksumValue": "75ce4ffbbbd16e9c12bd2ad90411fe1b90a2a5502cdf92d21874751c5f4b31e4"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -246,7 +419,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "298ab909c6f385e37283a29c46d16d529a96c1e02e17906df031464ff5520d1a"
+          "checksumValue": "fb43c8524421120513169fc2c43501ece1660de1e86b1a30d0320334f3324fc4"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -270,7 +443,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "7903a6712faccfce2b85a4e208036607bcf8db6e1b577b0401d1363f045ed617"
+          "checksumValue": "26e8e529b10150ccbd30d84257640d4d8f69a21c33872f74fec7fb3749e1059a"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -282,7 +455,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b344e049c7f5a8d8edb36d71c9bc6c4ad9fa6fad33a334127a02fe1079797f5c"
+          "checksumValue": "524ce1ca373c640b4a1de87a991b0ebb698ce6b63d4dcf3ec3bc8cfb3b9c89d0"
         }
       ],
       "licenseConcluded": "NOASSERTION",

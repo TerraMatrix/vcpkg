@@ -72,7 +72,7 @@ else()
   set(COLLADA_DOM_INCLUDE_DIRS "${COLLADA_DOM_ROOT_DIR}/include/collada-dom2.5")
 endif()
 
-set( COLLADA_DOM_Boost_VERSION "1.86")
+set( COLLADA_DOM_Boost_VERSION "1.89")
 
 if( WIN32 )
   # search for the boost version collada-dom was compiled with

@@ -60,7 +60,7 @@ add_library(Boost::geometry INTERFACE IMPORTED)
 set_target_properties(Boost::geometry PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_14"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::algorithm;Boost::any;Boost::array;Boost::assert;Boost::concept_check;Boost::config;Boost::core;Boost::function_types;Boost::iterator;Boost::lexical_cast;Boost::math;Boost::move;Boost::mpl;Boost::multiprecision;Boost::numeric_conversion;Boost::qvm;Boost::range;Boost::rational;Boost::static_assert;Boost::throw_exception;Boost::tokenizer;Boost::tuple;Boost::type_traits;Boost::utility;Boost::variant;Boost::container;Boost::serialization"
+  INTERFACE_LINK_LIBRARIES "Boost::algorithm;Boost::any;Boost::array;Boost::assert;Boost::concept_check;Boost::config;Boost::core;Boost::crc;Boost::function_types;Boost::graph;Boost::iterator;Boost::lexical_cast;Boost::math;Boost::move;Boost::mpl;Boost::multiprecision;Boost::numeric_conversion;Boost::program_options;Boost::qvm;Boost::range;Boost::rational;Boost::static_assert;Boost::throw_exception;Boost::tokenizer;Boost::tuple;Boost::type_traits;Boost::utility;Boost::variant;Boost::container;Boost::serialization"
 )
 
 # Load information for each installed configuration.

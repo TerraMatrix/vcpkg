@@ -58,8 +58,9 @@ endif()
 add_library(Boost::heap INTERFACE IMPORTED)
 
 set_target_properties(Boost::heap PROPERTIES
+  INTERFACE_COMPILE_FEATURES "cxx_std_14"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::array;Boost::assert;Boost::bind;Boost::concept_check;Boost::config;Boost::core;Boost::intrusive;Boost::iterator;Boost::parameter;Boost::static_assert;Boost::throw_exception;Boost::type_traits"
+  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::concept_check;Boost::config;Boost::core;Boost::intrusive;Boost::iterator;Boost::parameter;Boost::static_assert;Boost::throw_exception"
 )
 
 # Load information for each installed configuration.

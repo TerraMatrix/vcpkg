@@ -3,18 +3,18 @@ include("${CURRENT_HOST_INSTALLED_DIR}/share/vcpkg-cmake-get-vars/vcpkg-port-con
 include("${CMAKE_CURRENT_LIST_DIR}/vcpkg_configure_meson.cmake")
 include("${CMAKE_CURRENT_LIST_DIR}/vcpkg_install_meson.cmake")
 
-set(meson_short_hash ac58a9)
+set(meson_short_hash d1fcc2)
 
 # Setup meson:
 set(program MESON)
-set(program_version 1.6.0)
+set(program_version 1.9.0)
 set(program_name meson)
 set(search_names meson meson.py)
 set(ref "${program_version}")
 set(path_to_search "${DOWNLOADS}/tools/meson-${program_version}-${meson_short_hash}")
 set(download_urls "https://github.com/mesonbuild/meson/archive/${ref}.tar.gz")
 set(download_filename "meson-${ref}.tar.gz")
-set(download_sha512 8cbb4af0d057e06c4efd0eb2544aa93cfa73410114f85f346e9fbf92af776f5bb5121f557d228b7cdab7f0ea7963e057b223f17036e2f36f55416fba43683248)
+set(download_sha512 ecd69b6734be14c467f7db67dd88c0e57ebfad83ce3ddada131ff3e43ac964523e1083d7c7f3803033a9a76adbc32ad26dd2e3aca69884269000ca64130bde07)
 
 find_program(SCRIPT_MESON NAMES ${search_names} PATHS "${path_to_search}" NO_DEFAULT_PATH) # NO_DEFAULT_PATH due top patching
 
@@ -37,7 +37,8 @@ if(NOT SCRIPT_MESON)
             "${CMAKE_CURRENT_LIST_DIR}/meson-intl.patch"
             "${CMAKE_CURRENT_LIST_DIR}/adjust-python-dep.patch"
             "${CMAKE_CURRENT_LIST_DIR}/adjust-args.patch"
-            "${CMAKE_CURRENT_LIST_DIR}/remove-freebsd-pcfile-specialization.patch"
+            "${CMAKE_CURRENT_LIST_DIR}/remove-pkgconfig-specialization.patch"
+            "${CMAKE_CURRENT_LIST_DIR}/meson-56879d5.diff"
     )
     file(MAKE_DIRECTORY "${path_to_search}")
     file(RENAME "${path_to_search}-tmp/meson-${ref}/meson.py" "${path_to_search}/meson.py")

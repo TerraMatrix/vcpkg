@@ -192,7 +192,7 @@ find_dependency (Threads)
 
 # Eigen.
 # Flag set during configuration and build of Ceres.
-set(CERES_EIGEN_VERSION 3.4.0)
+set(CERES_EIGEN_VERSION 3.4.1)
 # Search quietly to control the timing of the error message if not found. The
 # search should be for an exact match, but for usability reasons do a soft
 # match and reject with an explanation below.

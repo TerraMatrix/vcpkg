@@ -60,7 +60,7 @@ add_library(hdf5::hdf5-shared SHARED IMPORTED)
 set_target_properties(hdf5::hdf5-shared PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "H5_BUILT_AS_DYNAMIC_LIB"
   INTERFACE_INCLUDE_DIRECTORIES "\$<\$<BOOL:OFF>:>;${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "\$<\$<NOT:\$<PLATFORM_ID:Windows>>:>;\$<\$<BOOL:ON>:MPI::MPI_C>"
+  INTERFACE_LINK_LIBRARIES "\$<\$<PLATFORM_ID:Windows>:shlwapi>;\$<\$<NOT:\$<PLATFORM_ID:Windows>>:>;\$<\$<BOOL:ON>:MPI::MPI_C>;\$<\$<OR:\$<BOOL:>,\$<BOOL:OFF>>:Threads::Threads>"
 )
 
 # Create imported target hdf5::hdf5_tools-shared

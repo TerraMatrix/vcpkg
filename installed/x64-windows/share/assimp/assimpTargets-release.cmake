@@ -9,7 +9,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set_property(TARGET assimp::assimp APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(assimp::assimp PROPERTIES
   IMPORTED_IMPLIB_RELEASE "${_IMPORT_PREFIX}/lib/assimp-vc143-mt.lib"
-  IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "poly2tri::poly2tri;unofficial::minizip::minizip"
+  IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "poly2tri::poly2tri;unofficial::minizip::minizip;zip::zip"
   IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/assimp-vc143-mt.dll"
   )
 

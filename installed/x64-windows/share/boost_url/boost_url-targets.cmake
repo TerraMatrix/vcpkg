@@ -60,7 +60,6 @@ add_library(Boost::url SHARED IMPORTED)
 set_target_properties(Boost::url PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "BOOST_URL_NO_LIB=1;\$<IF:\$<BOOL:ON>,BOOST_URL_DYN_LINK=1,BOOST_URL_STATIC_LINK=1>"
   INTERFACE_COMPILE_FEATURES "cxx_constexpr"
-  INTERFACE_COMPILE_OPTIONS "\$<\$<CXX_COMPILER_ID:MSVC>:/EHsc>"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "Boost::align;Boost::assert;Boost::config;Boost::core;Boost::mp11;Boost::optional;Boost::static_assert;Boost::system;Boost::throw_exception;Boost::type_traits;Boost::variant2"
 )

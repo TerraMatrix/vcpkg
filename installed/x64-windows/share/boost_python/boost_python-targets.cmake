@@ -58,7 +58,7 @@ endif()
 add_library(Boost::python INTERFACE IMPORTED)
 
 set_target_properties(Boost::python PROPERTIES
-  INTERFACE_LINK_LIBRARIES "Boost::python311"
+  INTERFACE_LINK_LIBRARIES "Boost::python312"
 )
 
 # Load information for each installed configuration.
@@ -100,7 +100,7 @@ unset(_cmake_import_check_targets)
 # Make sure the targets which have been exported in some other
 # export set exist.
 unset(${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE_targets)
-foreach(_target "Boost::python311" )
+foreach(_target "Boost::python312" )
   if(NOT TARGET "${_target}" )
     set(${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE_targets "${${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE_targets} ${_target}")
   endif()

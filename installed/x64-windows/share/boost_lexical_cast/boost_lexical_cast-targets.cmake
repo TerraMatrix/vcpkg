@@ -59,7 +59,7 @@ add_library(Boost::lexical_cast INTERFACE IMPORTED)
 
 set_target_properties(Boost::lexical_cast PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::config;Boost::container;Boost::core;Boost::integer;Boost::throw_exception;Boost::type_traits"
+  INTERFACE_LINK_LIBRARIES "Boost::config;Boost::container;Boost::core;Boost::throw_exception;Boost::type_traits"
 )
 
 # Load information for each installed configuration.

@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/vcpkg-tool-gn-x64-windows-2024-02-22-275cb397-d9e2-4c30-b55f-adaed67a923e",
-  "name": "vcpkg-tool-gn:x64-windows@2024-02-22 b37363e2eac2f06d22744b211f587733dd14bf2b56a827e3a103235700d94162",
+  "documentNamespace": "https://spdx.org/spdxdocs/vcpkg-tool-gn-x64-windows-2025-08-05#1-31a6e930-68bb-4265-bce1-0659fb69da23",
+  "name": "vcpkg-tool-gn:x64-windows@2025-08-05#1 6195e34730ef3977ef81561aeeac4c01ecb44abf16f549c7ca547a0db26dfd11",
   "creationInfo": {
     "creators": [
-      "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
+      "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-10-13T05:49:21Z"
+    "created": "2025-11-20T01:04:21Z"
   },
   "relationships": [
     {
@@ -20,37 +20,47 @@
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-file-0"
+      "relatedSpdxElement": "SPDXRef-port-file-0"
     },
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-file-1"
+      "relatedSpdxElement": "SPDXRef-port-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-1",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
     },
     {
       "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "GENERATED_FROM",
-      "relatedSpdxElement": "SPDXRef-port"
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-0"
     },
     {
-      "spdxElementId": "SPDXRef-file-0",
-      "relationshipType": "CONTAINED_BY",
-      "relatedSpdxElement": "SPDXRef-port"
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-1"
     },
     {
-      "spdxElementId": "SPDXRef-file-1",
-      "relationshipType": "CONTAINED_BY",
-      "relatedSpdxElement": "SPDXRef-port"
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-3"
     }
   ],
   "packages": [
     {
       "name": "vcpkg-tool-gn",
       "SPDXID": "SPDXRef-port",
-      "versionInfo": "2024-02-22",
+      "versionInfo": "2025-08-05#1",
       "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/vcpkg-tool-gn",
       "homepage": "https://gn.googlesource.com/gn/",
-      "licenseConcluded": "NOASSERTION",
+      "licenseConcluded": "LicenseRef-vcpkg-null",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "description": "GN build system",
@@ -59,15 +69,15 @@
     {
       "name": "vcpkg-tool-gn:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "b37363e2eac2f06d22744b211f587733dd14bf2b56a827e3a103235700d94162",
+      "versionInfo": "6195e34730ef3977ef81561aeeac4c01ecb44abf16f549c7ca547a0db26dfd11",
       "downloadLocation": "NONE",
-      "licenseConcluded": "NOASSERTION",
+      "licenseConcluded": "LicenseRef-vcpkg-null",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "comment": "This is a binary package built by vcpkg."
     },
     {
-      "SPDXID": "SPDXRef-resource-1",
+      "SPDXID": "SPDXRef-resource-0",
       "name": "${download_filename}",
       "packageFileName": "${download_filename}",
       "downloadLocation": "${download_urls}",
@@ -84,24 +94,72 @@
   ],
   "files": [
     {
-      "fileName": "./F:/vcpkg/vcpkg/ports/vcpkg-tool-gn/portfile.cmake",
-      "SPDXID": "SPDXRef-file-0",
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-0",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2ad4aaf75dca3ebdc61b8f82883cc49de3f09fa9a9ca4a934845c2b34a2cfffb"
+          "checksumValue": "431605e11055234f1618435928ea0281f3a8e7151e4c50043d171efd4d8b772e"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./F:/vcpkg/vcpkg/ports/vcpkg-tool-gn/vcpkg.json",
-      "SPDXID": "SPDXRef-file-1",
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "7a0b5e354337e89b3533b8f1dd9eb66ef61a1c00fc9d2f904f1ba8918813468d"
+          "checksumValue": "cfbebd474e198bdee54e7b766afe55f27a9a59a49d117be495d829afd88c159b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./BUILD_INFO",
+      "SPDXID": "SPDXRef-binary-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a73b10fef47d7e23b16c4603b4eed0f405d298ac520f9cf61cf5ba087ed4e225"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./share/gn/version.txt",
+      "SPDXID": "SPDXRef-binary-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "444bdf6ba3768a60c856e87b4650b9644d5f5c24bf57ee206bea7490ebecd352"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./tools/gn/.cipdpkg/manifest.json",
+      "SPDXID": "SPDXRef-binary-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6c2facc62b649c32924b0424b2071d6c69d9a30f65e7c4d4bd7e8144dff6115b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./tools/gn/gn.exe",
+      "SPDXID": "SPDXRef-binary-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c65a78811faa96c895fb9b5576e3daa283a8b99762d1f1fdf25073ab15c3b1d8"
         }
       ],
       "licenseConcluded": "NOASSERTION",

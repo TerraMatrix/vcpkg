@@ -9,6 +9,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set_property(TARGET hdf5::hdf5-shared APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(hdf5::hdf5-shared PROPERTIES
   IMPORTED_IMPLIB_DEBUG "${_IMPORT_PREFIX}/debug/lib/hdf5_D.lib"
+  IMPORTED_LINK_DEPENDENT_LIBRARIES_DEBUG "libaec::sz;libaec::aec"
   IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/debug/bin/hdf5_D.dll"
   )
 

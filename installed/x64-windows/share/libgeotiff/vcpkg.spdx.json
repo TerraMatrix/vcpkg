@@ -3,19 +3,44 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/libgeotiff-x64-windows-1.7.4-fbb4935c-28bc-4224-95ff-0911e85eaa9f",
-  "name": "libgeotiff:x64-windows@1.7.4 NONE",
+  "documentNamespace": "https://spdx.org/spdxdocs/libgeotiff-x64-windows-1.7.4-4fbfd6c4-6ac5-4c4c-8c27-5f9ec39e6fef",
+  "name": "libgeotiff:x64-windows@1.7.4 af5f83d8c7e874c194288ce028db3ae1f1aafea0e0ec463dace4868be94575f6",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-10T03:21:33Z"
+    "created": "2025-11-19T03:57:20Z"
   },
   "relationships": [
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "GENERATES",
       "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-3"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-3",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
     },
     {
       "spdxElementId": "SPDXRef-binary",
@@ -229,22 +254,84 @@
     {
       "name": "libgeotiff:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "NONE",
+      "versionInfo": "af5f83d8c7e874c194288ce028db3ae1f1aafea0e0ec463dace4868be94575f6",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-0",
+      "name": "OSGeo/libgeotiff",
+      "downloadLocation": "git+https://github.com/OSGeo/libgeotiff@1.7.4",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "03468e8eeaf97d82798bf341cf2e27753eb47af985fb08fc6176be799bd0e1e879c6d1701577f7568f269cbef0bb0a20ae460bb943f847daf49aa54601441683"
+        }
+      ]
     }
   ],
   "files": [
+    {
+      "fileName": "./cmakelists.patch",
+      "SPDXID": "SPDXRef-port-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "305aebc75d602ee4624eba33f04dd3d12cc082b2aa75f0123195b25acf4e8812"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5e4a38154ac4152264597fbaf94df2c61360cf289fcd3784e2d9873d08bb3f65"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./usage",
+      "SPDXID": "SPDXRef-port-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "efa371d009799cc46a775e388ce59a310448f7b4c09b885f9e906011420f475d"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e20ce100d45ed2c6544c668e7b073e92a607f3c061ef4e272c102b7d0da13174"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
     {
       "fileName": "./bin/geotiff.dll",
       "SPDXID": "SPDXRef-binary-file-0",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "95ad0c1570f3b0756221b12291f776a5ef27d8ab5b4dd7f305bb222a6b4fe62d"
+          "checksumValue": "3f596a69da8f91de479bb84281aa095ad6f7c49546ae240d09c09073adcb055a"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -256,7 +343,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e2018d15db9775fbdec39a50dad1519034031194d7dab9afde24e70cf5300695"
+          "checksumValue": "2816fe410dbf3990d50998d7dbd1de1f21ca9e499c81edb6930f5a705b531114"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -280,7 +367,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "3fd6fbd32625d49809510ab05729c6ebeb35db2c236f01dedeb9639a04242897"
+          "checksumValue": "8c925d6572c383026ce052bf8efc9782ca4494b22b7e4c983176db8ac28ffca7"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -292,7 +379,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f9f1d2b9d74fad8274790ed3e6f954ab3f6081fa0fc8ff75d68c8f037fff984b"
+          "checksumValue": "0b1216b13c9f8d9626e6a97e65ee1995bb3b0dc7aed970d2dfdba05e8941773a"
         }
       ],
       "licenseConcluded": "NOASSERTION",

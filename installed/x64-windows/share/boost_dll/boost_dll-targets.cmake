@@ -59,7 +59,7 @@ add_library(Boost::dll INTERFACE IMPORTED)
 
 set_target_properties(Boost::dll PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::core;Boost::filesystem;Boost::function;Boost::move;Boost::predef;Boost::smart_ptr;Boost::spirit;Boost::system;Boost::throw_exception;Boost::type_index;Boost::type_traits;Boost::winapi"
+  INTERFACE_LINK_LIBRARIES "Boost::dll_boost_fs"
 )
 
 # Load information for each installed configuration.
@@ -98,8 +98,24 @@ endforeach()
 unset(_cmake_target)
 unset(_cmake_import_check_targets)
 
-# This file does not depend on other imported targets which have
-# been exported from the same project but in a separate export set.
+# Make sure the targets which have been exported in some other
+# export set exist.
+unset(${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE_targets)
+foreach(_target "Boost::dll_boost_fs" )
+  if(NOT TARGET "${_target}" )
+    set(${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE_targets "${${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE_targets} ${_target}")
+  endif()
+endforeach()
+
+if(DEFINED ${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE_targets)
+  if(CMAKE_FIND_PACKAGE_NAME)
+    set( ${CMAKE_FIND_PACKAGE_NAME}_FOUND FALSE)
+    set( ${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE "The following imported targets are referenced, but are missing: ${${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE_targets}")
+  else()
+    message(FATAL_ERROR "The following imported targets are referenced, but are missing: ${${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE_targets}")
+  endif()
+endif()
+unset(${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE_targets)
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

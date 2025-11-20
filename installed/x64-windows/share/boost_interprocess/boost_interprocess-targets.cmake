@@ -59,7 +59,7 @@ add_library(Boost::interprocess INTERFACE IMPORTED)
 
 set_target_properties(Boost::interprocess PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::container;Boost::core;Boost::intrusive;Boost::move;Boost::static_assert;Boost::type_traits;Boost::winapi;ole32;oleaut32;psapi;advapi32"
+  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::container;Boost::intrusive;Boost::move;Boost::winapi;ole32;oleaut32;psapi;advapi32"
 )
 
 # Load information for each installed configuration.

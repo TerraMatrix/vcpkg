@@ -26,7 +26,7 @@
 
 find_path(libaec_INCLUDE_DIR NAMES libaec.h DOC "AEC include directory")
 find_path(SZIP_INCLUDE_DIR NAMES szlib.h DOC "SZIP include directory")
-if (libaec_USE_STATIC_LIBS)
+if (libaec_USE_STATIC_LIBS OR (NOT DEFINED libaec_USE_STATIC_LIBS AND NOT "ON"))
   if (MSVC)
     find_library(libaec_LIBRARY NAMES aec-static.lib DOC "AEC library")
     find_library(SZIP_LIBRARY NAMES szip-static.lib DOC "SZIP compatible version of the AEC library")
@@ -36,5 +36,69 @@ if (libaec_USE_STATIC_LIBS)
   endif ()
 else ()
   find_library(libaec_LIBRARY NAMES aec DOC "AEC library")
-  find_library(SZIP_LIBRARY NAMES sz szip DOC "SZIP compatible version of the AEC library")
+  find_library(SZIP_LIBRARY NAMES sz szip NAMES_PER_DIR DOC "SZIP compatible version of the AEC library")
 endif ()
+
+# Check version here
+if (libaec_INCLUDE_DIR AND libaec_LIBRARY)
+  set(libaec_VERSION "1.1.3")
+  set(SZIP_VERSION "2.0.1")
+endif ()
+
+include(FindPackageHandleStandardArgs)
+set(${CMAKE_FIND_PACKAGE_NAME}_CONFIG "${CMAKE_CURRENT_LIST_FILE}")
+find_package_handle_standard_args(libaec
+  FOUND_VAR libaec_FOUND
+  REQUIRED_VARS libaec_LIBRARY libaec_INCLUDE_DIR SZIP_LIBRARY SZIP_INCLUDE_DIR
+  VERSION_VAR libaec_VERSION
+  CONFIG_MODE
+)
+
+if (libaec_FOUND)
+ if(0)
+  if (libaec_USE_STATIC_LIBS)
+    add_library(libaec::aec STATIC IMPORTED)
+  else ()
+    add_library(libaec::aec SHARED IMPORTED)
+    target_compile_definitions(libaec::aec INTERFACE LIBAEC_SHARED)
+    if (MSVC)
+      set_target_properties(libaec::aec PROPERTIES
+        IMPORTED_IMPLIB "${libaec_LIBRARY}"
+      )
+    endif ()
+  endif ()
+  set_target_properties(libaec::aec PROPERTIES
+    IMPORTED_LOCATION "${libaec_LIBRARY}"
+    INTERFACE_INCLUDE_DIRECTORIES "${libaec_INCLUDE_DIR}"
+  )
+
+  # SZIP
+  if (libaec_USE_STATIC_LIBS)
+    add_library(libaec::sz STATIC IMPORTED)
+  else ()
+    add_library(libaec::sz SHARED IMPORTED)
+    target_compile_definitions(libaec::sz INTERFACE LIBAEC_SHARED)
+    if (MSVC)
+      set_target_properties(libaec::sz PROPERTIES
+        IMPORTED_IMPLIB "${SZIP_LIBRARY}"
+      )
+    endif ()
+  endif ()
+  set_target_properties(libaec::sz PROPERTIES
+    IMPORTED_LOCATION "${SZIP_LIBRARY}"
+    INTERFACE_INCLUDE_DIRECTORIES "${SZIP_INCLUDE_DIR}"
+  )
+ endif()
+ include("${CMAKE_CURRENT_LIST_DIR}/libaec-targets.cmake")
+
+  # Set SZIP variables.
+  set(SZIP_FOUND TRUE)
+  set(SZIP_LIBRARIES "${SZIP_LIBRARY}")
+endif ()
+
+mark_as_advanced(
+  libaec_LIBRARY
+  libaec_INCLUDE_DIR
+  SZIP_LIBRARY
+  SZIP_INCLUDE_DIR
+)

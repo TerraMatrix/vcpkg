@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/mpi-x64-windows-1#4-c1a8fa79-cc9b-4ff8-914e-3036a3d2c94c",
-  "name": "mpi:x64-windows@1#4 15d755eddfdcbbbb0d3c2a86e9ac1cf1e696fd9dbe284664fd19b1a13b4c7593",
+  "documentNamespace": "https://spdx.org/spdxdocs/mpi-x64-windows-1#5-4e378872-6b70-45c7-aa2e-74e2ddfba9d3",
+  "name": "mpi:x64-windows@1#5 3849f3203b13a948e158deb01369dfb39c16a1b88b04077517352fb80c8c3d89",
   "creationInfo": {
     "creators": [
-      "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
+      "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-10-13T03:39:20Z"
+    "created": "2025-11-18T10:12:47Z"
   },
   "relationships": [
     {
@@ -20,36 +20,36 @@
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-file-0"
+      "relatedSpdxElement": "SPDXRef-port-file-0"
     },
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-file-1"
+      "relatedSpdxElement": "SPDXRef-port-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-1",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
     },
     {
       "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "GENERATED_FROM",
-      "relatedSpdxElement": "SPDXRef-port"
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-0"
     },
     {
-      "spdxElementId": "SPDXRef-file-0",
-      "relationshipType": "CONTAINED_BY",
-      "relatedSpdxElement": "SPDXRef-port"
-    },
-    {
-      "spdxElementId": "SPDXRef-file-1",
-      "relationshipType": "CONTAINED_BY",
-      "relatedSpdxElement": "SPDXRef-port"
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-1"
     }
   ],
   "packages": [
     {
       "name": "mpi",
       "SPDXID": "SPDXRef-port",
-      "versionInfo": "1#4",
+      "versionInfo": "1#5",
       "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/mpi",
-      "licenseConcluded": "NOASSERTION",
+      "licenseConcluded": "LicenseRef-vcpkg-null",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "description": "Message Passing Interface (MPI) is a standardized and portable message-passing standard designed by a group of researchers from academia and industry to function on a wide variety of parallel computing architectures. The standard defines the syntax and semantics of a core of library routines useful to a wide range of users writing portable message-passing programs in C, C++, and Fortran. There are several well-tested and efficient implementations of MPI, many of which are open-source or in the public domain.",
@@ -58,9 +58,9 @@
     {
       "name": "mpi:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "15d755eddfdcbbbb0d3c2a86e9ac1cf1e696fd9dbe284664fd19b1a13b4c7593",
+      "versionInfo": "3849f3203b13a948e158deb01369dfb39c16a1b88b04077517352fb80c8c3d89",
       "downloadLocation": "NONE",
-      "licenseConcluded": "NOASSERTION",
+      "licenseConcluded": "LicenseRef-vcpkg-null",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "comment": "This is a binary package built by vcpkg."
@@ -68,24 +68,48 @@
   ],
   "files": [
     {
-      "fileName": "./F:/vcpkg/vcpkg/ports/mpi/portfile.cmake",
-      "SPDXID": "SPDXRef-file-0",
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-0",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ffa02da4d461619d425f3ff1d114c4c5f31ac78725dfb8541a05bb7a613e08f7"
+          "checksumValue": "9459241655c77c594199a224b2014d1b20068f83540a7be6c8a0e19a6b5bba74"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./F:/vcpkg/vcpkg/ports/mpi/vcpkg.json",
-      "SPDXID": "SPDXRef-file-1",
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "c11cec7470df1873b5800cedcf09fef79872bafffd1e9d5989c72d53f9b13aa8"
+          "checksumValue": "dddf8b6cb5a8a022924ede729520e8372cdbaa30130c67aab87aefc766429bf9"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./BUILD_INFO",
+      "SPDXID": "SPDXRef-binary-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a73b10fef47d7e23b16c4603b4eed0f405d298ac520f9cf61cf5ba087ed4e225"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./share/mpi/vcpkg-cmake-wrapper.cmake",
+      "SPDXID": "SPDXRef-binary-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b0252c29a4bfe94869e8f58318dbedc5cee080f404a2b14562d223dbda98fb5f"
         }
       ],
       "licenseConcluded": "NOASSERTION",

@@ -59,7 +59,7 @@ add_library(Boost::multiprecision INTERFACE IMPORTED)
 
 set_target_properties(Boost::multiprecision PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::core;Boost::integer;Boost::lexical_cast;Boost::math"
+  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::core;Boost::integer;Boost::lexical_cast;Boost::math;\$<TARGET_NAME_IF_EXISTS:Boost::random>"
 )
 
 # Load information for each installed configuration.

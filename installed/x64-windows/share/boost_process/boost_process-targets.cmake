@@ -60,7 +60,7 @@ add_library(Boost::process SHARED IMPORTED)
 set_target_properties(Boost::process PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "BOOST_PROCESS_DYN_LINK"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::algorithm;Boost::asio;Boost::config;Boost::core;\$<TARGET_NAME_IF_EXISTS:Boost::filesystem>;Boost::fusion;Boost::iterator;Boost::move;Boost::optional;Boost::system;Boost::tokenizer;Boost::type_index;Boost::winapi;Boost::filesystem;ntdll;shell32;advapi32;user32"
+  INTERFACE_LINK_LIBRARIES "Boost::algorithm;Boost::asio;Boost::config;Boost::core;Boost::fusion;Boost::iterator;Boost::move;Boost::optional;Boost::system;Boost::tokenizer;Boost::type_index;Boost::winapi;Boost::filesystem;ntdll;shell32;advapi32;user32;ws2_32"
 )
 
 # Load information for each installed configuration.

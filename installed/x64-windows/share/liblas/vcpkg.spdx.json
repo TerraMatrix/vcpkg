@@ -3,19 +3,74 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/liblas-x64-windows-1.8.1#16-583bcb7d-752a-4247-80e9-2662f9e91675",
-  "name": "liblas:x64-windows@1.8.1#16 NONE",
+  "documentNamespace": "https://spdx.org/spdxdocs/liblas-x64-windows-1.8.1#16-430a8316-2d12-46d3-8582-f47d448c6b18",
+  "name": "liblas:x64-windows@1.8.1#16 b1bffa9deec674f7f7d04f29b5f77314836640e7dff8e0612a5d190c3ed5d0d1",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-10T03:23:55Z"
+    "created": "2025-11-19T03:59:09Z"
   },
   "relationships": [
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "GENERATES",
       "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-3"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-4"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-5"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-6"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-7"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-8"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-9"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-9",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
     },
     {
       "spdxElementId": "SPDXRef-binary",
@@ -503,22 +558,157 @@
     {
       "name": "liblas:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "NONE",
+      "versionInfo": "b1bffa9deec674f7f7d04f29b5f77314836640e7dff8e0612a5d190c3ed5d0d1",
       "downloadLocation": "NONE",
       "licenseConcluded": "LicenseRef-vcpkg-null",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-0",
+      "name": "libLAS-1.8.1-src.tar.bz2",
+      "packageFileName": "libLAS-1.8.1-src.tar.bz2",
+      "downloadLocation": "http://download.osgeo.org/liblas/libLAS-1.8.1.tar.bz2",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "1cb39c557af0006c54f1100d0d409977fcc1886abd155c1b144d806c47f8675a9f2125d3a9aca16bae65d2aabba84d5e5e322b42085e7db312f3d53f92342acf"
+        }
+      ]
     }
   ],
   "files": [
+    {
+      "fileName": "./fix-boost-headers.patch",
+      "SPDXID": "SPDXRef-port-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fde1c186e78472f4eb8902f28b51b18a8b40166379c710b43f89323aac7c3afd"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-cmake-config.patch",
+      "SPDXID": "SPDXRef-port-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "72bc93bffdb4824b68d38a416e068d02f090f6318b6a92c7878c53715c3c2149"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-cmake4.patch",
+      "SPDXID": "SPDXRef-port-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c6a8b6fe76430a3412dc0d8e73ae4a30d51c4e5e56b1d7a2141f9b52baf33274"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-crosscompiling.diff",
+      "SPDXID": "SPDXRef-port-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "bd62122f8d6b9b7ca645e78ff0a2313c57ef4eb102ebadd19e1d7054530f3c4f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./force-cpp11.patch",
+      "SPDXID": "SPDXRef-port-file-4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "87a38248bda6a7a62028be582100267374d9ba669a4d6863c7a0ac0dbb3df0e6"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./misc-fixes.patch",
+      "SPDXID": "SPDXRef-port-file-5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f24462aad78957b7da438586bb5d28e4e6f873981fd906c7ec118d4d8d3f3d5e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-6",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8f0aaef21d63a0083ccd989916aae7bbd2281de61ea137a42de4630d6ca08d3f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./remove_unnecessary_boost_dependency.diff",
+      "SPDXID": "SPDXRef-port-file-7",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b9888bc994581ba7e9b3e36ca0c1483229dc272180e9b33cb48e71c9e1849278"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./usage",
+      "SPDXID": "SPDXRef-port-file-8",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0e92726ac2f860c3d3eb57feef2ba76407f9ca1d1e2ad4fe919643ef67f1b334"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-9",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "20e8776265453c5d8db7e2c870ac15396f780ee0e5df948d9dc623bc6d50397e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
     {
       "fileName": "./bin/liblas.dll",
       "SPDXID": "SPDXRef-binary-file-0",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "213b76ab901d395ff401e16efb1cc8f5f212411b7bb34007dd1819c6f7a6a859"
+          "checksumValue": "cfebfbe18436d5c23796dbafa5f236b6e2ac3014ad377149d28f57d4bbbf266a"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -530,7 +720,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b2d6fe335a2d5a9cc4746e736d5464f77d63c90cbf4abdc2ed77c1437a34a62e"
+          "checksumValue": "5c70827c1b36cedd74d6dd2b5563f87bfafcbf2fd0801862d98a545f4a3a67d4"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -554,7 +744,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "65374df681e42a06fa0cda8064071efa0016ecffde899534b8b79fd88082d95b"
+          "checksumValue": "58d8c895c8ed74f8e37099325103471605ef33ce93d926e4dd305e9807924d4d"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -566,7 +756,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "9cfdc10645bdc6feeb2c0660113d33c91e1a912ed95c808cfdf6fe56ff08cc12"
+          "checksumValue": "6b5bc540bac3e3d1879582979b0ee89f9bbef67060772dcb758f8bca489ba22e"
         }
       ],
       "licenseConcluded": "NOASSERTION",

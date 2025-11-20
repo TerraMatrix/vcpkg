@@ -3,19 +3,49 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/mcc-lidar-x64-windows-2.1.0-47359d1d-8156-40d7-8fae-6d6a55e2a8ab",
-  "name": "mcc-lidar:x64-windows@2.1.0 NONE",
+  "documentNamespace": "https://spdx.org/spdxdocs/mcc-lidar-x64-windows-2.1.0-aa800a3a-68ea-4a29-bffd-4eadc54d3708",
+  "name": "mcc-lidar:x64-windows@2.1.0 5cdfd8effa15bd2a83446797091c030729ed0544cf9d98820a35018b466f84a7",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-14T09:48:36Z"
+    "created": "2025-11-20T01:14:59Z"
   },
   "relationships": [
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "GENERATES",
       "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-3"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-4"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-4",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
     },
     {
       "spdxElementId": "SPDXRef-binary",
@@ -424,22 +454,96 @@
     {
       "name": "mcc-lidar:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "NONE",
+      "versionInfo": "5cdfd8effa15bd2a83446797091c030729ed0544cf9d98820a35018b466f84a7",
       "downloadLocation": "NONE",
       "licenseConcluded": "Apache-2.0",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-0",
+      "name": "TerraMatrix/MCC-LIDAR",
+      "downloadLocation": "git+https://github.com/TerraMatrix/MCC-LIDAR@005f5262cce6e9ca0b77107c6d4a8edc54f8ece3",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "81e2967583a2f20eb49d17c10a12f427f99f9e7d6d45c1d305ae2c44dd1a1be926ddc9467a3c631ce31ef36df089a8988ee869a0c776358fcd1b9b69d1abae67"
+        }
+      ]
     }
   ],
   "files": [
+    {
+      "fileName": "./fix-cmake-config.patch",
+      "SPDXID": "SPDXRef-port-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "259f97bc79550c126cc0b7d14ccbf10a594c41cc495a58a13b7851807a3769b4"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./mcc-lidar-config.cmake.patch",
+      "SPDXID": "SPDXRef-port-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cf64545843fc6bcb1cf5435560caac1b8ac92e6420ef0fb0aaf0b5db10ac064a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4fb1d69c64661c6452d5b74213a83d0b92b56eeb4f33e581daa13384f68c4f51"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./usage",
+      "SPDXID": "SPDXRef-port-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d5834fc6afe3733c2d3e5441bc69cfa04829be3a1115431e456764626635076a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "bdabcb271e18c59bd46269224dcc6e49cfc14ce933c2baabbefdc7f647c03994"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
     {
       "fileName": "./bin/mcc-lidar.dll",
       "SPDXID": "SPDXRef-binary-file-0",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "6895944b71989f671c8ab4d6d1ebb28128dc9850edac853b4a03c4be8be01b84"
+          "checksumValue": "31d343293be85833e5a0b5d6ace878cf7b1ef4fd9aaa2e8c6b39e86399039528"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -463,7 +567,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2761fe781641561e66f9b72a9d051095d5b97d49ef68d0635300694f440a2e7e"
+          "checksumValue": "2ad1263ef279d562fb4fa6bbeca3422335540baa961e46e43100bba6d54a3f78"
         }
       ],
       "licenseConcluded": "NOASSERTION",

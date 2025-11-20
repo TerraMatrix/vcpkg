@@ -58,8 +58,9 @@ endif()
 add_library(Boost::smart_ptr INTERFACE IMPORTED)
 
 set_target_properties(Boost::smart_ptr PROPERTIES
+  INTERFACE_COMPILE_FEATURES "cxx_std_11"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::core;Boost::move;Boost::static_assert;Boost::throw_exception;Boost::type_traits"
+  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::core;Boost::throw_exception"
 )
 
 # Load information for each installed configuration.

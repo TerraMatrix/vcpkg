@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS libaec::aec libaec::sz libaec::aec_shared libaec::sz_shared)
+foreach(_cmake_expected_target IN ITEMS libaec::aec libaec::sz libaec::aec_obj libaec::sz_obj)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -55,33 +55,33 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target libaec::aec
-add_library(libaec::aec INTERFACE IMPORTED)
+add_library(libaec::aec SHARED IMPORTED)
 
 set_target_properties(libaec::aec PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
+  INTERFACE_COMPILE_DEFINITIONS "LIBAEC_SHARED"
+  INTERFACE_LINK_LIBRARIES "libaec::aec_obj"
 )
 
 # Create imported target libaec::sz
-add_library(libaec::sz INTERFACE IMPORTED)
+add_library(libaec::sz SHARED IMPORTED)
 
 set_target_properties(libaec::sz PROPERTIES
-  INTERFACE_LINK_LIBRARIES "libaec::aec"
+  INTERFACE_COMPILE_DEFINITIONS "LIBAEC_SHARED"
+  INTERFACE_LINK_LIBRARIES "libaec::sz_obj"
 )
 
-# Create imported target libaec::aec_shared
-add_library(libaec::aec_shared SHARED IMPORTED)
+# Create imported target libaec::aec_obj
+add_library(libaec::aec_obj INTERFACE IMPORTED)
 
-set_target_properties(libaec::aec_shared PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "LIBAEC_SHARED"
-  INTERFACE_LINK_LIBRARIES "libaec::aec"
+set_target_properties(libaec::aec_obj PROPERTIES
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
 )
 
-# Create imported target libaec::sz_shared
-add_library(libaec::sz_shared SHARED IMPORTED)
+# Create imported target libaec::sz_obj
+add_library(libaec::sz_obj INTERFACE IMPORTED)
 
-set_target_properties(libaec::sz_shared PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "LIBAEC_SHARED"
-  INTERFACE_LINK_LIBRARIES "libaec::sz"
+set_target_properties(libaec::sz_obj PROPERTIES
+  INTERFACE_LINK_LIBRARIES "libaec::aec_obj"
 )
 
 # Load information for each installed configuration.

@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/vcpkg-get-python-x64-windows-2024-06-22-b6f0e8c9-c4f1-44f6-a33c-0ab3a48955f2",
-  "name": "vcpkg-get-python:x64-windows@2024-06-22 54cc033c27774337a9e680ac306026a6474b8e7a671eacfcf8f48087a7b1cb87",
+  "documentNamespace": "https://spdx.org/spdxdocs/vcpkg-get-python-x64-windows-2025-02-09-10ec78ff-b17d-485e-96a6-e1d8cbde95ba",
+  "name": "vcpkg-get-python:x64-windows@2025-02-09 122c5d02ce6e8f7d2acfece704444a6cf8222d64cf6efc3cad31e831f69b56c9",
   "creationInfo": {
     "creators": [
-      "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
+      "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-10-13T03:55:10Z"
+    "created": "2025-11-18T11:52:39Z"
   },
   "relationships": [
     {
@@ -20,44 +20,44 @@
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-file-0"
+      "relatedSpdxElement": "SPDXRef-port-file-0"
     },
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-file-1"
+      "relatedSpdxElement": "SPDXRef-port-file-1"
     },
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-file-2"
+      "relatedSpdxElement": "SPDXRef-port-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-2",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
     },
     {
       "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "GENERATED_FROM",
-      "relatedSpdxElement": "SPDXRef-port"
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-0"
     },
     {
-      "spdxElementId": "SPDXRef-file-0",
-      "relationshipType": "CONTAINED_BY",
-      "relatedSpdxElement": "SPDXRef-port"
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-1"
     },
     {
-      "spdxElementId": "SPDXRef-file-1",
-      "relationshipType": "CONTAINED_BY",
-      "relatedSpdxElement": "SPDXRef-port"
-    },
-    {
-      "spdxElementId": "SPDXRef-file-2",
-      "relationshipType": "CONTAINED_BY",
-      "relatedSpdxElement": "SPDXRef-port"
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-2"
     }
   ],
   "packages": [
     {
       "name": "vcpkg-get-python",
       "SPDXID": "SPDXRef-port",
-      "versionInfo": "2024-06-22",
+      "versionInfo": "2025-02-09",
       "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/vcpkg-get-python",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -67,7 +67,7 @@
     {
       "name": "vcpkg-get-python:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "54cc033c27774337a9e680ac306026a6474b8e7a671eacfcf8f48087a7b1cb87",
+      "versionInfo": "122c5d02ce6e8f7d2acfece704444a6cf8222d64cf6efc3cad31e831f69b56c9",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -77,8 +77,8 @@
   ],
   "files": [
     {
-      "fileName": "./F:/vcpkg/vcpkg/ports/vcpkg-get-python/portfile.cmake",
-      "SPDXID": "SPDXRef-file-0",
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-0",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -89,24 +89,60 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./F:/vcpkg/vcpkg/ports/vcpkg-get-python/vcpkg-port-config.cmake",
-      "SPDXID": "SPDXRef-file-1",
+      "fileName": "./vcpkg-port-config.cmake",
+      "SPDXID": "SPDXRef-port-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "c62d26ba3ff3492aa6cfc671105e96210aad58dc654aa412c152440bff482bc9"
+          "checksumValue": "3fe76ee7e1f5384c39225476f42d9ac25be812121e15bdf8ccd256998b8225fb"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./F:/vcpkg/vcpkg/ports/vcpkg-get-python/vcpkg.json",
-      "SPDXID": "SPDXRef-file-2",
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f1d6246fef727e15ccb7e307ea1d9bd2441a6c8a129c8d95827f0d35bd1a834c"
+          "checksumValue": "c0b38dcdf103afb0dddebf96d4885fd58c40f4e356e8f9646f47417a1727c71c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./BUILD_INFO",
+      "SPDXID": "SPDXRef-binary-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "658d5b20f5215ff07e3df992736863b70b1549e3eb66e1d2190b7d73c6ba41b8"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./share/vcpkg-get-python/copyright",
+      "SPDXID": "SPDXRef-binary-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1ee376fc340e0aa6ad6a3581c94126e741468705096ac92263048a21daa86460"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./share/vcpkg-get-python/vcpkg-port-config.cmake",
+      "SPDXID": "SPDXRef-binary-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3fe76ee7e1f5384c39225476f42d9ac25be812121e15bdf8ccd256998b8225fb"
         }
       ],
       "licenseConcluded": "NOASSERTION",

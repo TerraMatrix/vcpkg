@@ -60,7 +60,7 @@ add_library(Boost::function INTERFACE IMPORTED)
 set_target_properties(Boost::function PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::bind;Boost::config;Boost::core;Boost::throw_exception;Boost::type_traits"
+  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::bind;Boost::config;Boost::core;Boost::throw_exception"
 )
 
 # Load information for each installed configuration.

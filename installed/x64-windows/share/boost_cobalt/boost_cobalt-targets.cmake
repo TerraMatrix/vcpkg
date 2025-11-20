@@ -58,10 +58,10 @@ endif()
 add_library(Boost::cobalt SHARED IMPORTED)
 
 set_target_properties(Boost::cobalt PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_COBALT_NO_LIB=1;_WIN32_WINNT=0x0601;BOOST_COBALT_DYN_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_COBALT_NO_LIB=1;_WIN32_WINNT=0x0601;BOOST_COBALT_DYN_LINK=1"
   INTERFACE_COMPILE_FEATURES "cxx_std_20"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::asio;Boost::callable_traits;Boost::circular_buffer;Boost::config;Boost::core;Boost::intrusive;Boost::leaf;Boost::mp11;Boost::preprocessor;Boost::smart_ptr;Boost::system;Boost::throw_exception;Boost::variant2"
+  INTERFACE_LINK_LIBRARIES "Boost::asio;Boost::callable_traits;Boost::circular_buffer;Boost::config;Boost::core;Boost::endian;Boost::intrusive;Boost::mp11;Boost::preprocessor;Boost::smart_ptr;Boost::static_string;Boost::system;Boost::throw_exception;Boost::variant2"
 )
 
 # Load information for each installed configuration.

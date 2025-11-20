@@ -54,6 +54,8 @@ set (${HDF5_PACKAGE_NAME}_VALID_COMPONENTS
     Tools
 )
 
+set (${HDF5_PACKAGE_NAME}_BUILD_MODE       Release)
+
 #-----------------------------------------------------------------------------
 # User Options
 #-----------------------------------------------------------------------------
@@ -82,7 +84,7 @@ set (${HDF5_PACKAGE_NAME}_BUILD_STATIC_TOOLS    OFF)
 set (${HDF5_PACKAGE_NAME}_ENABLE_NONSTANDARD_FEATURE_FLOAT16 OFF)
 #-----------------------------------------------------------------------------
 set (${HDF5_PACKAGE_NAME}_ENABLE_Z_LIB_SUPPORT  ON)
-set (${HDF5_PACKAGE_NAME}_ENABLE_SZIP_SUPPORT   OFF)
+set (${HDF5_PACKAGE_NAME}_ENABLE_SZIP_SUPPORT   ON)
 set (${HDF5_PACKAGE_NAME}_ENABLE_SZIP_ENCODING  ON)
 #-----------------------------------------------------------------------------
 set (${HDF5_PACKAGE_NAME}_ENABLE_MAP_API        OFF)
@@ -94,7 +96,7 @@ set (${HDF5_PACKAGE_NAME}_ENABLE_SUBFILING_VFD  OFF)
 set (${HDF5_PACKAGE_NAME}_ENABLE_PLUGIN_SUPPORT OFF)
 #-----------------------------------------------------------------------------
 set (${HDF5_PACKAGE_NAME}_PACKAGE_EXTLIBS       OFF)
-set (${HDF5_PACKAGE_NAME}_EXPORT_LIBRARIES      hdf5-sharedhdf5_tools-sharedhdf5_hl-sharedhdf5_cpp-sharedhdf5_hl_cpp-shared)
+set (${HDF5_PACKAGE_NAME}_EXPORT_LIBRARIES      hdf5-shared;hdf5_tools-shared;hdf5_hl-shared;hdf5_cpp-shared;hdf5_hl_cpp-shared)
 set (${HDF5_PACKAGE_NAME}_ARCHITECTURE         "")
 set (${HDF5_PACKAGE_NAME}_TOOLSET              "")
 
@@ -103,7 +105,7 @@ set (${HDF5_PACKAGE_NAME}_TOOLSET              "")
 #-----------------------------------------------------------------------------
 if (${HDF5_PACKAGE_NAME}_ENABLE_PARALLEL)
   set (${HDF5_PACKAGE_NAME}_MPI_C_INCLUDE_PATH "${VCPKG_IMPORT_PREFIX}/include")
-  set (${HDF5_PACKAGE_NAME}_MPI_C_LIBRARIES    "${VCPKG_IMPORT_PREFIX}/lib/msmpi.lib")
+  set (${HDF5_PACKAGE_NAME}_MPI_C_LIBRARIES    optimized "${VCPKG_IMPORT_PREFIX}/lib/msmpi.lib" debug "${VCPKG_IMPORT_PREFIX}/debug/lib/msmpi.lib")
   if (${HDF5_PACKAGE_NAME}_BUILD_FORTRAN)
     set (${HDF5_PACKAGE_NAME}_MPI_Fortran_INCLUDE_PATH "")
     set (${HDF5_PACKAGE_NAME}_MPI_Fortran_LIBRARIES    "")
@@ -111,6 +113,7 @@ if (${HDF5_PACKAGE_NAME}_ENABLE_PARALLEL)
   set (${HDF5_PACKAGE_NAME}_PARALLEL_FILTERED_WRITES ON)
   set (${HDF5_PACKAGE_NAME}_LARGE_PARALLEL_IO        ON)
 
+  enable_language(C) # for MPI::MPI_C
   find_package(MPI QUIET REQUIRED)
 endif ()
 
@@ -121,7 +124,7 @@ endif ()
 
 if (${HDF5_PACKAGE_NAME}_BUILD_JAVA)
   set (${HDF5_PACKAGE_NAME}_JAVA_INCLUDE_DIRS
-      ${PACKAGE_PREFIX_DIR}/lib/jarhdf5-1.14.4.jar
+      ${PACKAGE_PREFIX_DIR}/lib/jarhdf5-1.14.6.jar
       ${PACKAGE_PREFIX_DIR}/lib/slf4j-api-2.0.6.jar
       ${PACKAGE_PREFIX_DIR}/lib/slf4j-nop-2.0.6.jar
   )
@@ -155,9 +158,9 @@ endif ()
 #-----------------------------------------------------------------------------
 # Version Strings
 #-----------------------------------------------------------------------------
-set (${HDF5_PACKAGE_NAME}_VERSION_STRING 1.14.4)
+set (${HDF5_PACKAGE_NAME}_VERSION_STRING 1.14.6)
 set (${HDF5_PACKAGE_NAME}_VERSION_MAJOR  1.14)
-set (${HDF5_PACKAGE_NAME}_VERSION_MINOR  4)
+set (${HDF5_PACKAGE_NAME}_VERSION_MINOR  6)
 
 #-----------------------------------------------------------------------------
 # Don't include targets if this file is being picked up by another
@@ -166,18 +169,13 @@ set (${HDF5_PACKAGE_NAME}_VERSION_MINOR  4)
 include(CMakeFindDependencyMacro)
 if (NOT TARGET "hdf5")
   if (${HDF5_PACKAGE_NAME}_ENABLE_Z_LIB_SUPPORT AND ${HDF5_PACKAGE_NAME}_PACKAGE_EXTLIBS)
-    include (${PACKAGE_PREFIX_DIR}/share/hdf5/-targets.cmake)
+    include (${PACKAGE_PREFIX_DIR}/share/hdf5/zlib-targets.cmake)
   elseif (${HDF5_PACKAGE_NAME}_ENABLE_Z_LIB_SUPPORT)
     find_dependency(ZLIB)
   endif ()
   if (${HDF5_PACKAGE_NAME}_ENABLE_SZIP_SUPPORT AND ${HDF5_PACKAGE_NAME}_PACKAGE_EXTLIBS)
-    include (${PACKAGE_PREFIX_DIR}/share/hdf5/-targets.cmake)
+    include (${PACKAGE_PREFIX_DIR}/share/hdf5/libaec-targets.cmake)
   elseif (${HDF5_PACKAGE_NAME}_ENABLE_SZIP_SUPPORT)
-    if (${HDF5_PACKAGE_NAME}_BUILD_STATIC_LIBS)
-      set(libaec_USE_STATIC_LIBS ON)
-    else()
-      set(libaec_USE_STATIC_LIBS OFF)
-    endif()
     find_dependency(libaec)
   endif ()
   include (${PACKAGE_PREFIX_DIR}/share/hdf5/hdf5-targets.cmake)

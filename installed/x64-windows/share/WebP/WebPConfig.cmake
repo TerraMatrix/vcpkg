@@ -1,5 +1,5 @@
 get_filename_component(VCPKG_IMPORT_PREFIX "${CMAKE_CURRENT_LIST_DIR}/../../" ABSOLUTE)
-set(WebP_VERSION 1.4.0)
+set(WebP_VERSION 1.6.0)
 set(WEBP_VERSION ${WebP_VERSION})
 
 

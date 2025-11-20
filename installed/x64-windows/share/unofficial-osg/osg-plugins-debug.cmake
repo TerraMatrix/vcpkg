@@ -385,16 +385,6 @@ set_target_properties(unofficial::osg::osgdb_jp2 PROPERTIES
 list(APPEND _cmake_import_check_targets unofficial::osg::osgdb_jp2 )
 list(APPEND _cmake_import_check_files_for_unofficial::osg::osgdb_jp2 "${_IMPORT_PREFIX}/debug/plugins/osgPlugins-3.6.5/osgdb_jp2d.dll" )
 
-# Import target "unofficial::osg::osgdb_exr" for configuration "Debug"
-set_property(TARGET unofficial::osg::osgdb_exr APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
-set_target_properties(unofficial::osg::osgdb_exr PROPERTIES
-  IMPORTED_COMMON_LANGUAGE_RUNTIME_DEBUG ""
-  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/debug/plugins/osgPlugins-3.6.5/osgdb_exrd.dll"
-  )
-
-list(APPEND _cmake_import_check_targets unofficial::osg::osgdb_exr )
-list(APPEND _cmake_import_check_files_for_unofficial::osg::osgdb_exr "${_IMPORT_PREFIX}/debug/plugins/osgPlugins-3.6.5/osgdb_exrd.dll" )
-
 # Import target "unofficial::osg::osgdb_gif" for configuration "Debug"
 set_property(TARGET unofficial::osg::osgdb_gif APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(unofficial::osg::osgdb_gif PROPERTIES
@@ -744,16 +734,6 @@ set_target_properties(unofficial::osg::osgdb_txp PROPERTIES
 
 list(APPEND _cmake_import_check_targets unofficial::osg::osgdb_txp )
 list(APPEND _cmake_import_check_files_for_unofficial::osg::osgdb_txp "${_IMPORT_PREFIX}/debug/plugins/osgPlugins-3.6.5/osgdb_txpd.dll" )
-
-# Import target "unofficial::osg::osgdb_nvtt" for configuration "Debug"
-set_property(TARGET unofficial::osg::osgdb_nvtt APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
-set_target_properties(unofficial::osg::osgdb_nvtt PROPERTIES
-  IMPORTED_COMMON_LANGUAGE_RUNTIME_DEBUG ""
-  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/debug/plugins/osgPlugins-3.6.5/osgdb_nvttd.dll"
-  )
-
-list(APPEND _cmake_import_check_targets unofficial::osg::osgdb_nvtt )
-list(APPEND _cmake_import_check_files_for_unofficial::osg::osgdb_nvtt "${_IMPORT_PREFIX}/debug/plugins/osgPlugins-3.6.5/osgdb_nvttd.dll" )
 
 # Import target "unofficial::osg::osgdb_freetype" for configuration "Debug"
 set_property(TARGET unofficial::osg::osgdb_freetype APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)

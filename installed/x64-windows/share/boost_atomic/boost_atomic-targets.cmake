@@ -59,9 +59,9 @@ add_library(Boost::atomic SHARED IMPORTED)
 
 set_target_properties(Boost::atomic PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "BOOST_ATOMIC_NO_LIB;BOOST_ATOMIC_DYN_LINK"
-  INTERFACE_COMPILE_FEATURES "cxx_static_assert"
+  INTERFACE_COMPILE_FEATURES "cxx_std_11"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::type_traits;Boost::winapi;synchronization"
+  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::predef;Boost::type_traits;Boost::winapi;synchronization"
 )
 
 # Load information for each installed configuration.

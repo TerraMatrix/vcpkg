@@ -60,7 +60,7 @@ add_library(Boost::histogram INTERFACE IMPORTED)
 set_target_properties(Boost::histogram PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_14"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::config;Boost::core;Boost::mp11;Boost::throw_exception;Boost::variant2;Boost::math"
+  INTERFACE_LINK_LIBRARIES "Boost::config;Boost::core;Boost::mp11;Boost::throw_exception;Boost::variant2"
 )
 
 # Load information for each installed configuration.

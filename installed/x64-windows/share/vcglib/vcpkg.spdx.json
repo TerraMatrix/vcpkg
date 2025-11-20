@@ -3,19 +3,39 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/vcglib-x64-windows-2025.7-ad057c6d-0ac2-4b11-8982-87de4121b423",
-  "name": "vcglib:x64-windows@2025.7 NONE",
+  "documentNamespace": "https://spdx.org/spdxdocs/vcglib-x64-windows-2025.7-873ecf0e-1427-4837-80dc-337ac1f59008",
+  "name": "vcglib:x64-windows@2025.7 23946006b8f218cc582f5b681b65bd52a1c2e2426ec3f981407f08353f2bf194",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-03T05:41:57Z"
+    "created": "2025-11-18T10:42:53Z"
   },
   "relationships": [
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "GENERATES",
       "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-2",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
     },
     {
       "spdxElementId": "SPDXRef-binary",
@@ -2148,15 +2168,65 @@
     {
       "name": "vcglib:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "NONE",
+      "versionInfo": "23946006b8f218cc582f5b681b65bd52a1c2e2426ec3f981407f08353f2bf194",
       "downloadLocation": "NONE",
       "licenseConcluded": "GPL-3.0-only",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-0",
+      "name": "cnr-isti-vclab/vcglib",
+      "downloadLocation": "git+https://github.com/cnr-isti-vclab/vcglib@2025.7",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "6533dfdc48a8ee0f904c49edcd25a3c06a945cec7baa047ddbba78ae48fbf7b490718fe15eb7c729f9c097114b798ec5204302b37011906a0bed4de819616717"
+        }
+      ]
     }
   ],
   "files": [
+    {
+      "fileName": "./consume-vcpkg-eigen3.patch",
+      "SPDXID": "SPDXRef-port-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ab3b94cb5832cde546edae0ddc15b91a5895eab9a98f680b720569212f75d56d"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "416cdfbc9675c4b8ab978950b9ef0be8347f56e03d8699503f31ed051727691f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "322277b2a79e836c2ae89041446a78ae987970df89361e06bd949f01c6f5f7f7"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
     {
       "fileName": "./BUILD_INFO",
       "SPDXID": "SPDXRef-binary-file-0",

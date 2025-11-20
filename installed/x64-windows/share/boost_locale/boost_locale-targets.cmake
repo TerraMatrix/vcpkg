@@ -61,7 +61,7 @@ set_target_properties(Boost::locale PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "BOOST_LOCALE_NO_LIB;BOOST_LOCALE_DYN_LINK"
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::core;Boost::iterator;Boost::utility"
+  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::core;Boost::iterator"
 )
 
 # Load information for each installed configuration.

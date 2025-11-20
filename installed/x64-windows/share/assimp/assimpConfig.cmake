@@ -23,11 +23,10 @@ macro(check_required_components _NAME)
 endmacro()
 
 ####################################################################################
-
 include(CMakeFindDependencyMacro)
 
-if(NOT ON)
-    find_dependency(kubazip CONFIG)
+if(NOT "ON")
+    find_dependency(zip CONFIG)
     find_dependency(unofficial-minizip CONFIG)
     find_dependency(pugixml CONFIG)
     find_dependency(poly2tri CONFIG)

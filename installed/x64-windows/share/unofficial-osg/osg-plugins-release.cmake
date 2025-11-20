@@ -385,16 +385,6 @@ set_target_properties(unofficial::osg::osgdb_jp2 PROPERTIES
 list(APPEND _cmake_import_check_targets unofficial::osg::osgdb_jp2 )
 list(APPEND _cmake_import_check_files_for_unofficial::osg::osgdb_jp2 "${_IMPORT_PREFIX}/plugins/osgPlugins-3.6.5/osgdb_jp2.dll" )
 
-# Import target "unofficial::osg::osgdb_exr" for configuration "Release"
-set_property(TARGET unofficial::osg::osgdb_exr APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(unofficial::osg::osgdb_exr PROPERTIES
-  IMPORTED_COMMON_LANGUAGE_RUNTIME_RELEASE ""
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/plugins/osgPlugins-3.6.5/osgdb_exr.dll"
-  )
-
-list(APPEND _cmake_import_check_targets unofficial::osg::osgdb_exr )
-list(APPEND _cmake_import_check_files_for_unofficial::osg::osgdb_exr "${_IMPORT_PREFIX}/plugins/osgPlugins-3.6.5/osgdb_exr.dll" )
-
 # Import target "unofficial::osg::osgdb_gif" for configuration "Release"
 set_property(TARGET unofficial::osg::osgdb_gif APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(unofficial::osg::osgdb_gif PROPERTIES
@@ -744,16 +734,6 @@ set_target_properties(unofficial::osg::osgdb_txp PROPERTIES
 
 list(APPEND _cmake_import_check_targets unofficial::osg::osgdb_txp )
 list(APPEND _cmake_import_check_files_for_unofficial::osg::osgdb_txp "${_IMPORT_PREFIX}/plugins/osgPlugins-3.6.5/osgdb_txp.dll" )
-
-# Import target "unofficial::osg::osgdb_nvtt" for configuration "Release"
-set_property(TARGET unofficial::osg::osgdb_nvtt APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(unofficial::osg::osgdb_nvtt PROPERTIES
-  IMPORTED_COMMON_LANGUAGE_RUNTIME_RELEASE ""
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/plugins/osgPlugins-3.6.5/osgdb_nvtt.dll"
-  )
-
-list(APPEND _cmake_import_check_targets unofficial::osg::osgdb_nvtt )
-list(APPEND _cmake_import_check_files_for_unofficial::osg::osgdb_nvtt "${_IMPORT_PREFIX}/plugins/osgPlugins-3.6.5/osgdb_nvtt.dll" )
 
 # Import target "unofficial::osg::osgdb_freetype" for configuration "Release"
 set_property(TARGET unofficial::osg::osgdb_freetype APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)

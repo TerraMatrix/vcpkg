@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS absl::atomic_hook absl::errno_saver absl::log_severity absl::no_destructor absl::nullability absl::raw_logging_internal absl::spinlock_wait absl::config absl::dynamic_annotations absl::core_headers absl::malloc_internal absl::base_internal absl::base absl::throw_delegate absl::pretty_function absl::endian absl::scoped_set_env absl::strerror absl::fast_type_id absl::prefetch absl::poison absl::algorithm absl::algorithm_container absl::cleanup_internal absl::cleanup absl::btree absl::compressed_tuple absl::fixed_array absl::inlined_vector_internal absl::inlined_vector absl::flat_hash_map absl::flat_hash_set absl::node_hash_map absl::node_hash_set absl::hash_container_defaults absl::container_memory absl::hash_function_defaults absl::hash_policy_traits absl::common_policy_traits absl::hashtablez_sampler absl::hashtable_debug absl::hashtable_debug_hooks absl::node_slot_policy absl::raw_hash_map absl::container_common absl::raw_hash_set absl::layout absl::crc_cpu_detect absl::crc_internal absl::crc32c absl::non_temporal_arm_intrinsics absl::non_temporal_memcpy absl::crc_cord_state absl::stacktrace absl::symbolize absl::examine_stack absl::failure_signal_handler absl::debugging_internal absl::demangle_internal absl::bounded_utf8_length_sequence absl::decode_rust_punycode absl::demangle_rust absl::utf8_for_code_point absl::leak_check absl::debugging absl::flags_path_util absl::flags_program_name absl::flags_config absl::flags_marshalling absl::flags_commandlineflag_internal absl::flags_commandlineflag absl::flags_private_handle_accessor absl::flags_reflection absl::flags_internal absl::flags absl::flags_usage_internal absl::flags_usage absl::flags_parse absl::any_invocable absl::bind_front absl::function_ref absl::overload absl::hash absl::city absl::low_level_hash absl::log_internal_check_impl absl::log_internal_check_op absl::log_internal_conditions absl::log_internal_config absl::log_internal_flags absl::log_internal_format absl::log_internal_globals absl::log_internal_log_impl absl::log_internal_proto absl::log_internal_message absl::log_internal_log_sink_set absl::log_internal_nullguard absl::log_internal_nullstream absl::log_internal_strip absl::log_internal_voidify absl::log_internal_append_truncated absl::absl_check absl::absl_log absl::check absl::die_if_null absl::log_flags absl::log_globals absl::log_initialize absl::log absl::log_entry absl::log_sink absl::log_sink_registry absl::log_streamer absl::log_internal_structured absl::log_structured absl::vlog_config_internal absl::absl_vlog_is_on absl::vlog_is_on absl::log_internal_fnmatch absl::memory absl::type_traits absl::meta absl::bits absl::int128 absl::numeric absl::numeric_representation absl::sample_recorder absl::exponential_biased absl::periodic_sampler absl::random_random absl::random_bit_gen_ref absl::random_internal_mock_helpers absl::random_distributions absl::random_seed_gen_exception absl::random_seed_sequences absl::random_internal_traits absl::random_internal_distribution_caller absl::random_internal_fast_uniform_bits absl::random_internal_seed_material absl::random_internal_pool_urbg absl::random_internal_salted_seed_seq absl::random_internal_iostream_state_saver absl::random_internal_generate_real absl::random_internal_wide_multiply absl::random_internal_fastmath absl::random_internal_nonsecure_base absl::random_internal_pcg_engine absl::random_internal_randen_engine absl::random_internal_platform absl::random_internal_randen absl::random_internal_randen_slow absl::random_internal_randen_hwaes absl::random_internal_randen_hwaes_impl absl::random_internal_distribution_test_util absl::random_internal_uniform_helper absl::status absl::statusor absl::string_view absl::strings absl::charset absl::has_ostream_operator absl::strings_internal absl::str_format absl::str_format_internal absl::cord_internal absl::cordz_update_tracker absl::cordz_functions absl::cordz_statistics absl::cordz_handle absl::cordz_info absl::cordz_sample_token absl::cordz_update_scope absl::cord absl::graphcycles_internal absl::kernel_timeout_internal absl::synchronization absl::time absl::civil_time absl::time_zone absl::any absl::bad_any_cast absl::bad_any_cast_impl absl::span absl::optional absl::bad_optional_access absl::bad_variant_access absl::variant absl::compare absl::utility absl::if_constexpr absl::abseil_dll)
+foreach(_cmake_expected_target IN ITEMS absl::atomic_hook absl::errno_saver absl::log_severity absl::no_destructor absl::nullability absl::raw_logging_internal absl::spinlock_wait absl::config absl::dynamic_annotations absl::core_headers absl::malloc_internal absl::base_internal absl::base absl::throw_delegate absl::pretty_function absl::endian absl::scoped_set_env absl::strerror absl::fast_type_id absl::prefetch absl::poison absl::tracing_internal absl::iterator_traits_internal absl::iterator_traits_test_helper_internal absl::algorithm absl::algorithm_container absl::cleanup_internal absl::cleanup absl::btree absl::compressed_tuple absl::fixed_array absl::inlined_vector_internal absl::inlined_vector absl::flat_hash_map absl::flat_hash_set absl::node_hash_map absl::node_hash_set absl::hash_container_defaults absl::container_memory absl::hash_function_defaults absl::hash_policy_traits absl::common_policy_traits absl::hashtablez_sampler absl::hashtable_debug absl::hashtable_debug_hooks absl::node_slot_policy absl::raw_hash_map absl::container_common absl::hashtable_control_bytes absl::raw_hash_set absl::raw_hash_set_resize_impl absl::layout absl::crc_cpu_detect absl::crc_internal absl::crc32c absl::non_temporal_arm_intrinsics absl::non_temporal_memcpy absl::crc_cord_state absl::stacktrace absl::symbolize absl::examine_stack absl::failure_signal_handler absl::debugging_internal absl::demangle_internal absl::bounded_utf8_length_sequence absl::decode_rust_punycode absl::demangle_rust absl::utf8_for_code_point absl::leak_check absl::debugging absl::flags_path_util absl::flags_program_name absl::flags_config absl::flags_marshalling absl::flags_commandlineflag_internal absl::flags_commandlineflag absl::flags_private_handle_accessor absl::flags_reflection absl::flags_internal absl::flags absl::flags_usage_internal absl::flags_usage absl::flags_parse absl::any_invocable absl::bind_front absl::function_ref absl::overload absl::hash absl::city absl::low_level_hash absl::weakly_mixed_integer absl::log_internal_check_impl absl::log_internal_check_op absl::log_internal_conditions absl::log_internal_config absl::log_internal_flags absl::log_internal_format absl::log_internal_globals absl::log_internal_log_impl absl::log_internal_proto absl::log_internal_message absl::log_internal_log_sink_set absl::log_internal_nullguard absl::log_internal_nullstream absl::log_internal_strip absl::log_internal_voidify absl::log_internal_append_truncated absl::absl_check absl::absl_log absl::check absl::die_if_null absl::log_flags absl::log_globals absl::log_initialize absl::log absl::log_entry absl::log_sink absl::log_sink_registry absl::log_streamer absl::log_internal_structured absl::log_internal_structured_proto absl::log_structured absl::vlog_config_internal absl::absl_vlog_is_on absl::vlog_is_on absl::log_internal_fnmatch absl::memory absl::type_traits absl::meta absl::bits absl::int128 absl::numeric absl::numeric_representation absl::sample_recorder absl::exponential_biased absl::periodic_sampler absl::random_random absl::random_bit_gen_ref absl::random_internal_mock_helpers absl::random_distributions absl::random_seed_gen_exception absl::random_seed_sequences absl::random_internal_traits absl::random_internal_distribution_caller absl::random_internal_fast_uniform_bits absl::random_internal_seed_material absl::random_internal_entropy_pool absl::random_internal_salted_seed_seq absl::random_internal_iostream_state_saver absl::random_internal_generate_real absl::random_internal_wide_multiply absl::random_internal_fastmath absl::random_internal_nonsecure_base absl::random_internal_pcg_engine absl::random_internal_randen_engine absl::random_internal_platform absl::random_internal_randen absl::random_internal_randen_slow absl::random_internal_randen_hwaes absl::random_internal_randen_hwaes_impl absl::random_internal_distribution_test_util absl::random_internal_uniform_helper absl::status absl::statusor absl::string_view absl::strings absl::charset absl::has_ostream_operator absl::strings_internal absl::str_format absl::str_format_internal absl::cord_internal absl::cordz_update_tracker absl::cordz_functions absl::cordz_statistics absl::cordz_handle absl::cordz_info absl::cordz_sample_token absl::cordz_update_scope absl::cord absl::graphcycles_internal absl::kernel_timeout_internal absl::synchronization absl::time absl::civil_time absl::time_zone absl::any absl::span absl::optional absl::variant absl::compare absl::bad_any_cast absl::bad_optional_access absl::bad_variant_access absl::utility absl::abseil_dll)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -58,7 +58,7 @@ endif()
 add_library(absl::atomic_hook INTERFACE IMPORTED)
 
 set_target_properties(absl::atomic_hook PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -67,7 +67,7 @@ set_target_properties(absl::atomic_hook PROPERTIES
 add_library(absl::errno_saver INTERFACE IMPORTED)
 
 set_target_properties(absl::errno_saver PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::config;-ignore:4221"
 )
@@ -76,7 +76,7 @@ set_target_properties(absl::errno_saver PROPERTIES
 add_library(absl::log_severity INTERFACE IMPORTED)
 
 set_target_properties(absl::log_severity PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -85,7 +85,7 @@ set_target_properties(absl::log_severity PROPERTIES
 add_library(absl::no_destructor INTERFACE IMPORTED)
 
 set_target_properties(absl::no_destructor PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::config;absl::nullability;-ignore:4221"
 )
@@ -94,16 +94,16 @@ set_target_properties(absl::no_destructor PROPERTIES
 add_library(absl::nullability INTERFACE IMPORTED)
 
 set_target_properties(absl::nullability PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "absl::config;absl::core_headers;absl::type_traits;-ignore:4221"
+  INTERFACE_LINK_LIBRARIES "absl::config;absl::core_headers;-ignore:4221"
 )
 
 # Create imported target absl::raw_logging_internal
 add_library(absl::raw_logging_internal INTERFACE IMPORTED)
 
 set_target_properties(absl::raw_logging_internal PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -112,7 +112,7 @@ set_target_properties(absl::raw_logging_internal PROPERTIES
 add_library(absl::spinlock_wait INTERFACE IMPORTED)
 
 set_target_properties(absl::spinlock_wait PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -121,7 +121,7 @@ set_target_properties(absl::spinlock_wait PROPERTIES
 add_library(absl::config INTERFACE IMPORTED)
 
 set_target_properties(absl::config PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -130,7 +130,7 @@ set_target_properties(absl::config PROPERTIES
 add_library(absl::dynamic_annotations INTERFACE IMPORTED)
 
 set_target_properties(absl::dynamic_annotations PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -139,7 +139,7 @@ set_target_properties(absl::dynamic_annotations PROPERTIES
 add_library(absl::core_headers INTERFACE IMPORTED)
 
 set_target_properties(absl::core_headers PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -148,7 +148,7 @@ set_target_properties(absl::core_headers PROPERTIES
 add_library(absl::malloc_internal INTERFACE IMPORTED)
 
 set_target_properties(absl::malloc_internal PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -157,7 +157,7 @@ set_target_properties(absl::malloc_internal PROPERTIES
 add_library(absl::base_internal INTERFACE IMPORTED)
 
 set_target_properties(absl::base_internal PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -166,7 +166,7 @@ set_target_properties(absl::base_internal PROPERTIES
 add_library(absl::base INTERFACE IMPORTED)
 
 set_target_properties(absl::base PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;\$<\$<BOOL:LIBRT-NOTFOUND>:-lrt>;\$<\$<BOOL:>:-ladvapi32>;-ignore:4221"
 )
@@ -175,7 +175,7 @@ set_target_properties(absl::base PROPERTIES
 add_library(absl::throw_delegate INTERFACE IMPORTED)
 
 set_target_properties(absl::throw_delegate PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -184,7 +184,7 @@ set_target_properties(absl::throw_delegate PROPERTIES
 add_library(absl::pretty_function INTERFACE IMPORTED)
 
 set_target_properties(absl::pretty_function PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -193,7 +193,7 @@ set_target_properties(absl::pretty_function PROPERTIES
 add_library(absl::endian INTERFACE IMPORTED)
 
 set_target_properties(absl::endian PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -202,7 +202,7 @@ set_target_properties(absl::endian PROPERTIES
 add_library(absl::scoped_set_env INTERFACE IMPORTED)
 
 set_target_properties(absl::scoped_set_env PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -211,7 +211,7 @@ set_target_properties(absl::scoped_set_env PROPERTIES
 add_library(absl::strerror INTERFACE IMPORTED)
 
 set_target_properties(absl::strerror PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -220,7 +220,7 @@ set_target_properties(absl::strerror PROPERTIES
 add_library(absl::fast_type_id INTERFACE IMPORTED)
 
 set_target_properties(absl::fast_type_id PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::config;-ignore:4221;-ignore:4221"
 )
@@ -229,7 +229,7 @@ set_target_properties(absl::fast_type_id PROPERTIES
 add_library(absl::prefetch INTERFACE IMPORTED)
 
 set_target_properties(absl::prefetch PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::config;absl::core_headers;-ignore:4221;-ignore:4221"
 )
@@ -239,16 +239,44 @@ add_library(absl::poison STATIC IMPORTED)
 
 set_target_properties(absl::poison PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
+)
+
+# Create imported target absl::tracing_internal
+add_library(absl::tracing_internal STATIC IMPORTED)
+
+set_target_properties(absl::tracing_internal PROPERTIES
+  INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
+  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;\$<LINK_ONLY:-ignore:4221>"
+)
+
+# Create imported target absl::iterator_traits_internal
+add_library(absl::iterator_traits_internal INTERFACE IMPORTED)
+
+set_target_properties(absl::iterator_traits_internal PROPERTIES
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
+  INTERFACE_LINK_LIBRARIES "absl::config;absl::type_traits;-ignore:4221"
+)
+
+# Create imported target absl::iterator_traits_test_helper_internal
+add_library(absl::iterator_traits_test_helper_internal INTERFACE IMPORTED)
+
+set_target_properties(absl::iterator_traits_test_helper_internal PROPERTIES
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
+  INTERFACE_LINK_LIBRARIES "absl::config;-ignore:4221"
 )
 
 # Create imported target absl::algorithm
 add_library(absl::algorithm INTERFACE IMPORTED)
 
 set_target_properties(absl::algorithm PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -257,7 +285,7 @@ set_target_properties(absl::algorithm PROPERTIES
 add_library(absl::algorithm_container INTERFACE IMPORTED)
 
 set_target_properties(absl::algorithm_container PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -266,16 +294,16 @@ set_target_properties(absl::algorithm_container PROPERTIES
 add_library(absl::cleanup_internal INTERFACE IMPORTED)
 
 set_target_properties(absl::cleanup_internal PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "absl::base_internal;absl::core_headers;absl::utility;-ignore:4221"
+  INTERFACE_LINK_LIBRARIES "absl::core_headers;absl::utility;-ignore:4221"
 )
 
 # Create imported target absl::cleanup
 add_library(absl::cleanup INTERFACE IMPORTED)
 
 set_target_properties(absl::cleanup PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::cleanup_internal;absl::config;absl::core_headers;-ignore:4221"
 )
@@ -284,7 +312,7 @@ set_target_properties(absl::cleanup PROPERTIES
 add_library(absl::btree INTERFACE IMPORTED)
 
 set_target_properties(absl::btree PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -293,7 +321,7 @@ set_target_properties(absl::btree PROPERTIES
 add_library(absl::compressed_tuple INTERFACE IMPORTED)
 
 set_target_properties(absl::compressed_tuple PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -302,7 +330,7 @@ set_target_properties(absl::compressed_tuple PROPERTIES
 add_library(absl::fixed_array INTERFACE IMPORTED)
 
 set_target_properties(absl::fixed_array PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -311,7 +339,7 @@ set_target_properties(absl::fixed_array PROPERTIES
 add_library(absl::inlined_vector_internal INTERFACE IMPORTED)
 
 set_target_properties(absl::inlined_vector_internal PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -320,7 +348,7 @@ set_target_properties(absl::inlined_vector_internal PROPERTIES
 add_library(absl::inlined_vector INTERFACE IMPORTED)
 
 set_target_properties(absl::inlined_vector PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -329,7 +357,7 @@ set_target_properties(absl::inlined_vector PROPERTIES
 add_library(absl::flat_hash_map INTERFACE IMPORTED)
 
 set_target_properties(absl::flat_hash_map PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -338,7 +366,7 @@ set_target_properties(absl::flat_hash_map PROPERTIES
 add_library(absl::flat_hash_set INTERFACE IMPORTED)
 
 set_target_properties(absl::flat_hash_set PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -347,7 +375,7 @@ set_target_properties(absl::flat_hash_set PROPERTIES
 add_library(absl::node_hash_map INTERFACE IMPORTED)
 
 set_target_properties(absl::node_hash_map PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -356,7 +384,7 @@ set_target_properties(absl::node_hash_map PROPERTIES
 add_library(absl::node_hash_set INTERFACE IMPORTED)
 
 set_target_properties(absl::node_hash_set PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -365,7 +393,7 @@ set_target_properties(absl::node_hash_set PROPERTIES
 add_library(absl::hash_container_defaults INTERFACE IMPORTED)
 
 set_target_properties(absl::hash_container_defaults PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::config;absl::hash_function_defaults;-ignore:4221"
 )
@@ -374,7 +402,7 @@ set_target_properties(absl::hash_container_defaults PROPERTIES
 add_library(absl::container_memory INTERFACE IMPORTED)
 
 set_target_properties(absl::container_memory PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -383,7 +411,7 @@ set_target_properties(absl::container_memory PROPERTIES
 add_library(absl::hash_function_defaults INTERFACE IMPORTED)
 
 set_target_properties(absl::hash_function_defaults PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -392,7 +420,7 @@ set_target_properties(absl::hash_function_defaults PROPERTIES
 add_library(absl::hash_policy_traits INTERFACE IMPORTED)
 
 set_target_properties(absl::hash_policy_traits PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -401,7 +429,7 @@ set_target_properties(absl::hash_policy_traits PROPERTIES
 add_library(absl::common_policy_traits INTERFACE IMPORTED)
 
 set_target_properties(absl::common_policy_traits PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::meta;-ignore:4221"
 )
@@ -410,7 +438,7 @@ set_target_properties(absl::common_policy_traits PROPERTIES
 add_library(absl::hashtablez_sampler INTERFACE IMPORTED)
 
 set_target_properties(absl::hashtablez_sampler PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -419,7 +447,7 @@ set_target_properties(absl::hashtablez_sampler PROPERTIES
 add_library(absl::hashtable_debug INTERFACE IMPORTED)
 
 set_target_properties(absl::hashtable_debug PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -428,7 +456,7 @@ set_target_properties(absl::hashtable_debug PROPERTIES
 add_library(absl::hashtable_debug_hooks INTERFACE IMPORTED)
 
 set_target_properties(absl::hashtable_debug_hooks PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -437,7 +465,7 @@ set_target_properties(absl::hashtable_debug_hooks PROPERTIES
 add_library(absl::node_slot_policy INTERFACE IMPORTED)
 
 set_target_properties(absl::node_slot_policy PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -446,7 +474,7 @@ set_target_properties(absl::node_slot_policy PROPERTIES
 add_library(absl::raw_hash_map INTERFACE IMPORTED)
 
 set_target_properties(absl::raw_hash_map PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -455,25 +483,43 @@ set_target_properties(absl::raw_hash_map PROPERTIES
 add_library(absl::container_common INTERFACE IMPORTED)
 
 set_target_properties(absl::container_common PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
+)
+
+# Create imported target absl::hashtable_control_bytes
+add_library(absl::hashtable_control_bytes INTERFACE IMPORTED)
+
+set_target_properties(absl::hashtable_control_bytes PROPERTIES
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
+  INTERFACE_LINK_LIBRARIES "absl::bits;absl::config;absl::core_headers;absl::endian;-ignore:4221"
 )
 
 # Create imported target absl::raw_hash_set
 add_library(absl::raw_hash_set INTERFACE IMPORTED)
 
 set_target_properties(absl::raw_hash_set PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
+)
+
+# Create imported target absl::raw_hash_set_resize_impl
+add_library(absl::raw_hash_set_resize_impl INTERFACE IMPORTED)
+
+set_target_properties(absl::raw_hash_set_resize_impl PROPERTIES
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
+  INTERFACE_LINK_LIBRARIES "absl::config;-ignore:4221"
 )
 
 # Create imported target absl::layout
 add_library(absl::layout INTERFACE IMPORTED)
 
 set_target_properties(absl::layout PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -482,7 +528,7 @@ set_target_properties(absl::layout PROPERTIES
 add_library(absl::crc_cpu_detect INTERFACE IMPORTED)
 
 set_target_properties(absl::crc_cpu_detect PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -491,7 +537,7 @@ set_target_properties(absl::crc_cpu_detect PROPERTIES
 add_library(absl::crc_internal INTERFACE IMPORTED)
 
 set_target_properties(absl::crc_internal PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -500,7 +546,7 @@ set_target_properties(absl::crc_internal PROPERTIES
 add_library(absl::crc32c INTERFACE IMPORTED)
 
 set_target_properties(absl::crc32c PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -509,7 +555,7 @@ set_target_properties(absl::crc32c PROPERTIES
 add_library(absl::non_temporal_arm_intrinsics INTERFACE IMPORTED)
 
 set_target_properties(absl::non_temporal_arm_intrinsics PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -518,7 +564,7 @@ set_target_properties(absl::non_temporal_arm_intrinsics PROPERTIES
 add_library(absl::non_temporal_memcpy INTERFACE IMPORTED)
 
 set_target_properties(absl::non_temporal_memcpy PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -527,7 +573,7 @@ set_target_properties(absl::non_temporal_memcpy PROPERTIES
 add_library(absl::crc_cord_state INTERFACE IMPORTED)
 
 set_target_properties(absl::crc_cord_state PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -536,7 +582,7 @@ set_target_properties(absl::crc_cord_state PROPERTIES
 add_library(absl::stacktrace INTERFACE IMPORTED)
 
 set_target_properties(absl::stacktrace PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;\$<\$<BOOL:EXECINFO_LIBRARY-NOTFOUND>:EXECINFO_LIBRARY-NOTFOUND>;-ignore:4221"
 )
@@ -545,7 +591,7 @@ set_target_properties(absl::stacktrace PROPERTIES
 add_library(absl::symbolize INTERFACE IMPORTED)
 
 set_target_properties(absl::symbolize PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;\$<\$<BOOL:>:-ldbghelp>;-ignore:4221"
 )
@@ -554,7 +600,7 @@ set_target_properties(absl::symbolize PROPERTIES
 add_library(absl::examine_stack INTERFACE IMPORTED)
 
 set_target_properties(absl::examine_stack PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -563,7 +609,7 @@ set_target_properties(absl::examine_stack PROPERTIES
 add_library(absl::failure_signal_handler INTERFACE IMPORTED)
 
 set_target_properties(absl::failure_signal_handler PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -572,7 +618,7 @@ set_target_properties(absl::failure_signal_handler PROPERTIES
 add_library(absl::debugging_internal INTERFACE IMPORTED)
 
 set_target_properties(absl::debugging_internal PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -581,7 +627,7 @@ set_target_properties(absl::debugging_internal PROPERTIES
 add_library(absl::demangle_internal INTERFACE IMPORTED)
 
 set_target_properties(absl::demangle_internal PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -590,7 +636,7 @@ set_target_properties(absl::demangle_internal PROPERTIES
 add_library(absl::bounded_utf8_length_sequence INTERFACE IMPORTED)
 
 set_target_properties(absl::bounded_utf8_length_sequence PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::bits;absl::config;-ignore:4221"
 )
@@ -600,7 +646,7 @@ add_library(absl::decode_rust_punycode STATIC IMPORTED)
 
 set_target_properties(absl::decode_rust_punycode PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::bounded_utf8_length_sequence;absl::abseil_dll;absl::nullability;absl::utf8_for_code_point;\$<LINK_ONLY:-ignore:4221>"
 )
@@ -610,7 +656,7 @@ add_library(absl::demangle_rust STATIC IMPORTED)
 
 set_target_properties(absl::demangle_rust PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;absl::decode_rust_punycode;\$<LINK_ONLY:-ignore:4221>"
 )
@@ -620,7 +666,7 @@ add_library(absl::utf8_for_code_point STATIC IMPORTED)
 
 set_target_properties(absl::utf8_for_code_point PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;\$<LINK_ONLY:-ignore:4221>"
 )
@@ -629,7 +675,7 @@ set_target_properties(absl::utf8_for_code_point PROPERTIES
 add_library(absl::leak_check INTERFACE IMPORTED)
 
 set_target_properties(absl::leak_check PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -638,7 +684,7 @@ set_target_properties(absl::leak_check PROPERTIES
 add_library(absl::debugging INTERFACE IMPORTED)
 
 set_target_properties(absl::debugging PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -647,7 +693,7 @@ set_target_properties(absl::debugging PROPERTIES
 add_library(absl::flags_path_util INTERFACE IMPORTED)
 
 set_target_properties(absl::flags_path_util PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::config;absl::strings;-ignore:4221;-ignore:4221"
 )
@@ -657,9 +703,9 @@ add_library(absl::flags_program_name STATIC IMPORTED)
 
 set_target_properties(absl::flags_program_name PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;absl::flags_path_util;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
+  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;absl::no_destructor;absl::flags_path_util;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
 )
 
 # Create imported target absl::flags_config
@@ -667,9 +713,9 @@ add_library(absl::flags_config STATIC IMPORTED)
 
 set_target_properties(absl::flags_config PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;absl::flags_path_util;absl::flags_program_name;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
+  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;absl::flags_path_util;absl::flags_program_name;absl::no_destructor;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
 )
 
 # Create imported target absl::flags_marshalling
@@ -677,7 +723,7 @@ add_library(absl::flags_marshalling STATIC IMPORTED)
 
 set_target_properties(absl::flags_marshalling PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
 )
@@ -687,7 +733,7 @@ add_library(absl::flags_commandlineflag_internal STATIC IMPORTED)
 
 set_target_properties(absl::flags_commandlineflag_internal PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;absl::fast_type_id;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
 )
@@ -697,7 +743,7 @@ add_library(absl::flags_commandlineflag STATIC IMPORTED)
 
 set_target_properties(absl::flags_commandlineflag PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;absl::fast_type_id;absl::flags_commandlineflag_internal;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
 )
@@ -707,7 +753,7 @@ add_library(absl::flags_private_handle_accessor STATIC IMPORTED)
 
 set_target_properties(absl::flags_private_handle_accessor PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;absl::flags_commandlineflag;absl::flags_commandlineflag_internal;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
 )
@@ -717,9 +763,9 @@ add_library(absl::flags_reflection STATIC IMPORTED)
 
 set_target_properties(absl::flags_reflection PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;absl::flags_commandlineflag;absl::flags_private_handle_accessor;absl::flags_config;absl::no_destructor;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
+  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;absl::fast_type_id;absl::flags_commandlineflag;absl::flags_private_handle_accessor;absl::flags_config;absl::no_destructor;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
 )
 
 # Create imported target absl::flags_internal
@@ -727,18 +773,18 @@ add_library(absl::flags_internal STATIC IMPORTED)
 
 set_target_properties(absl::flags_internal PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;absl::flags_commandlineflag;absl::flags_commandlineflag_internal;absl::flags_config;absl::flags_marshalling;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
+  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;absl::fast_type_id;absl::flags_commandlineflag;absl::flags_commandlineflag_internal;absl::flags_config;absl::flags_marshalling;absl::no_destructor;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
 )
 
 # Create imported target absl::flags
 add_library(absl::flags INTERFACE IMPORTED)
 
 set_target_properties(absl::flags PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "absl::config;absl::flags_commandlineflag;absl::flags_config;absl::flags_internal;absl::flags_reflection;absl::core_headers;absl::strings;-ignore:4221;-ignore:4221"
+  INTERFACE_LINK_LIBRARIES "absl::config;absl::flags_commandlineflag;absl::flags_config;absl::flags_internal;absl::flags_reflection;absl::core_headers;absl::nullability;absl::strings;-ignore:4221;-ignore:4221"
 )
 
 # Create imported target absl::flags_usage_internal
@@ -746,7 +792,7 @@ add_library(absl::flags_usage_internal STATIC IMPORTED)
 
 set_target_properties(absl::flags_usage_internal PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;absl::flags_config;absl::flags;absl::flags_commandlineflag;absl::flags_internal;absl::flags_path_util;absl::flags_private_handle_accessor;absl::flags_program_name;absl::flags_reflection;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
 )
@@ -756,9 +802,9 @@ add_library(absl::flags_usage STATIC IMPORTED)
 
 set_target_properties(absl::flags_usage PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;absl::flags_usage_internal;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
+  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;absl::flags_usage_internal;absl::no_destructor;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
 )
 
 # Create imported target absl::flags_parse
@@ -766,16 +812,16 @@ add_library(absl::flags_parse STATIC IMPORTED)
 
 set_target_properties(absl::flags_parse PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;absl::flags_config;absl::flags;absl::flags_commandlineflag;absl::flags_commandlineflag_internal;absl::flags_internal;absl::flags_private_handle_accessor;absl::flags_program_name;absl::flags_reflection;absl::flags_usage;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
+  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;absl::flags_config;absl::flags;absl::flags_commandlineflag;absl::flags_commandlineflag_internal;absl::flags_internal;absl::flags_private_handle_accessor;absl::flags_program_name;absl::flags_reflection;absl::flags_usage;absl::no_destructor;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
 )
 
 # Create imported target absl::any_invocable
 add_library(absl::any_invocable INTERFACE IMPORTED)
 
 set_target_properties(absl::any_invocable PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -784,7 +830,7 @@ set_target_properties(absl::any_invocable PROPERTIES
 add_library(absl::bind_front INTERFACE IMPORTED)
 
 set_target_properties(absl::bind_front PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -793,7 +839,7 @@ set_target_properties(absl::bind_front PROPERTIES
 add_library(absl::function_ref INTERFACE IMPORTED)
 
 set_target_properties(absl::function_ref PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -802,7 +848,7 @@ set_target_properties(absl::function_ref PROPERTIES
 add_library(absl::overload INTERFACE IMPORTED)
 
 set_target_properties(absl::overload PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::meta;-ignore:4221"
 )
@@ -811,7 +857,7 @@ set_target_properties(absl::overload PROPERTIES
 add_library(absl::hash INTERFACE IMPORTED)
 
 set_target_properties(absl::hash PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -820,7 +866,7 @@ set_target_properties(absl::hash PROPERTIES
 add_library(absl::city INTERFACE IMPORTED)
 
 set_target_properties(absl::city PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -829,16 +875,25 @@ set_target_properties(absl::city PROPERTIES
 add_library(absl::low_level_hash INTERFACE IMPORTED)
 
 set_target_properties(absl::low_level_hash PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
+)
+
+# Create imported target absl::weakly_mixed_integer
+add_library(absl::weakly_mixed_integer INTERFACE IMPORTED)
+
+set_target_properties(absl::weakly_mixed_integer PROPERTIES
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
+  INTERFACE_LINK_LIBRARIES "absl::config;-ignore:4221"
 )
 
 # Create imported target absl::log_internal_check_impl
 add_library(absl::log_internal_check_impl INTERFACE IMPORTED)
 
 set_target_properties(absl::log_internal_check_impl PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -847,7 +902,7 @@ set_target_properties(absl::log_internal_check_impl PROPERTIES
 add_library(absl::log_internal_check_op INTERFACE IMPORTED)
 
 set_target_properties(absl::log_internal_check_op PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -856,7 +911,7 @@ set_target_properties(absl::log_internal_check_op PROPERTIES
 add_library(absl::log_internal_conditions INTERFACE IMPORTED)
 
 set_target_properties(absl::log_internal_conditions PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -865,7 +920,7 @@ set_target_properties(absl::log_internal_conditions PROPERTIES
 add_library(absl::log_internal_config INTERFACE IMPORTED)
 
 set_target_properties(absl::log_internal_config PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -874,7 +929,7 @@ set_target_properties(absl::log_internal_config PROPERTIES
 add_library(absl::log_internal_flags INTERFACE IMPORTED)
 
 set_target_properties(absl::log_internal_flags PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::flags;-ignore:4221;-ignore:4221"
 )
@@ -883,7 +938,7 @@ set_target_properties(absl::log_internal_flags PROPERTIES
 add_library(absl::log_internal_format INTERFACE IMPORTED)
 
 set_target_properties(absl::log_internal_format PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -892,7 +947,7 @@ set_target_properties(absl::log_internal_format PROPERTIES
 add_library(absl::log_internal_globals INTERFACE IMPORTED)
 
 set_target_properties(absl::log_internal_globals PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -901,7 +956,7 @@ set_target_properties(absl::log_internal_globals PROPERTIES
 add_library(absl::log_internal_log_impl INTERFACE IMPORTED)
 
 set_target_properties(absl::log_internal_log_impl PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -910,7 +965,7 @@ set_target_properties(absl::log_internal_log_impl PROPERTIES
 add_library(absl::log_internal_proto INTERFACE IMPORTED)
 
 set_target_properties(absl::log_internal_proto PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -919,7 +974,7 @@ set_target_properties(absl::log_internal_proto PROPERTIES
 add_library(absl::log_internal_message INTERFACE IMPORTED)
 
 set_target_properties(absl::log_internal_message PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -928,7 +983,7 @@ set_target_properties(absl::log_internal_message PROPERTIES
 add_library(absl::log_internal_log_sink_set INTERFACE IMPORTED)
 
 set_target_properties(absl::log_internal_log_sink_set PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;\$<\$<BOOL:>:-llog>;-ignore:4221"
 )
@@ -937,7 +992,7 @@ set_target_properties(absl::log_internal_log_sink_set PROPERTIES
 add_library(absl::log_internal_nullguard INTERFACE IMPORTED)
 
 set_target_properties(absl::log_internal_nullguard PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -946,7 +1001,7 @@ set_target_properties(absl::log_internal_nullguard PROPERTIES
 add_library(absl::log_internal_nullstream INTERFACE IMPORTED)
 
 set_target_properties(absl::log_internal_nullstream PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -955,7 +1010,7 @@ set_target_properties(absl::log_internal_nullstream PROPERTIES
 add_library(absl::log_internal_strip INTERFACE IMPORTED)
 
 set_target_properties(absl::log_internal_strip PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -964,7 +1019,7 @@ set_target_properties(absl::log_internal_strip PROPERTIES
 add_library(absl::log_internal_voidify INTERFACE IMPORTED)
 
 set_target_properties(absl::log_internal_voidify PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -973,7 +1028,7 @@ set_target_properties(absl::log_internal_voidify PROPERTIES
 add_library(absl::log_internal_append_truncated INTERFACE IMPORTED)
 
 set_target_properties(absl::log_internal_append_truncated PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -982,7 +1037,7 @@ set_target_properties(absl::log_internal_append_truncated PROPERTIES
 add_library(absl::absl_check INTERFACE IMPORTED)
 
 set_target_properties(absl::absl_check PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -991,7 +1046,7 @@ set_target_properties(absl::absl_check PROPERTIES
 add_library(absl::absl_log INTERFACE IMPORTED)
 
 set_target_properties(absl::absl_log PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1000,7 +1055,7 @@ set_target_properties(absl::absl_log PROPERTIES
 add_library(absl::check INTERFACE IMPORTED)
 
 set_target_properties(absl::check PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1009,7 +1064,7 @@ set_target_properties(absl::check PROPERTIES
 add_library(absl::die_if_null INTERFACE IMPORTED)
 
 set_target_properties(absl::die_if_null PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1019,7 +1074,7 @@ add_library(absl::log_flags STATIC IMPORTED)
 
 set_target_properties(absl::log_flags PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;absl::log_internal_flags;absl::flags;absl::flags_marshalling;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
 )
@@ -1028,7 +1083,7 @@ set_target_properties(absl::log_flags PROPERTIES
 add_library(absl::log_globals INTERFACE IMPORTED)
 
 set_target_properties(absl::log_globals PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1037,7 +1092,7 @@ set_target_properties(absl::log_globals PROPERTIES
 add_library(absl::log_initialize INTERFACE IMPORTED)
 
 set_target_properties(absl::log_initialize PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1046,7 +1101,7 @@ set_target_properties(absl::log_initialize PROPERTIES
 add_library(absl::log INTERFACE IMPORTED)
 
 set_target_properties(absl::log PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1055,7 +1110,7 @@ set_target_properties(absl::log PROPERTIES
 add_library(absl::log_entry INTERFACE IMPORTED)
 
 set_target_properties(absl::log_entry PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1064,7 +1119,7 @@ set_target_properties(absl::log_entry PROPERTIES
 add_library(absl::log_sink INTERFACE IMPORTED)
 
 set_target_properties(absl::log_sink PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1073,7 +1128,7 @@ set_target_properties(absl::log_sink PROPERTIES
 add_library(absl::log_sink_registry INTERFACE IMPORTED)
 
 set_target_properties(absl::log_sink_registry PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1082,7 +1137,7 @@ set_target_properties(absl::log_sink_registry PROPERTIES
 add_library(absl::log_streamer INTERFACE IMPORTED)
 
 set_target_properties(absl::log_streamer PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1091,16 +1146,26 @@ set_target_properties(absl::log_streamer PROPERTIES
 add_library(absl::log_internal_structured INTERFACE IMPORTED)
 
 set_target_properties(absl::log_internal_structured PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
+)
+
+# Create imported target absl::log_internal_structured_proto
+add_library(absl::log_internal_structured_proto STATIC IMPORTED)
+
+set_target_properties(absl::log_internal_structured_proto PROPERTIES
+  INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
+  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
 )
 
 # Create imported target absl::log_structured
 add_library(absl::log_structured INTERFACE IMPORTED)
 
 set_target_properties(absl::log_structured PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1109,7 +1174,7 @@ set_target_properties(absl::log_structured PROPERTIES
 add_library(absl::vlog_config_internal INTERFACE IMPORTED)
 
 set_target_properties(absl::vlog_config_internal PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1118,7 +1183,7 @@ set_target_properties(absl::vlog_config_internal PROPERTIES
 add_library(absl::absl_vlog_is_on INTERFACE IMPORTED)
 
 set_target_properties(absl::absl_vlog_is_on PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1127,7 +1192,7 @@ set_target_properties(absl::absl_vlog_is_on PROPERTIES
 add_library(absl::vlog_is_on INTERFACE IMPORTED)
 
 set_target_properties(absl::vlog_is_on PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1136,7 +1201,7 @@ set_target_properties(absl::vlog_is_on PROPERTIES
 add_library(absl::log_internal_fnmatch INTERFACE IMPORTED)
 
 set_target_properties(absl::log_internal_fnmatch PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1145,7 +1210,7 @@ set_target_properties(absl::log_internal_fnmatch PROPERTIES
 add_library(absl::memory INTERFACE IMPORTED)
 
 set_target_properties(absl::memory PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1154,7 +1219,7 @@ set_target_properties(absl::memory PROPERTIES
 add_library(absl::type_traits INTERFACE IMPORTED)
 
 set_target_properties(absl::type_traits PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1163,7 +1228,7 @@ set_target_properties(absl::type_traits PROPERTIES
 add_library(absl::meta INTERFACE IMPORTED)
 
 set_target_properties(absl::meta PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1172,7 +1237,7 @@ set_target_properties(absl::meta PROPERTIES
 add_library(absl::bits INTERFACE IMPORTED)
 
 set_target_properties(absl::bits PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1181,7 +1246,7 @@ set_target_properties(absl::bits PROPERTIES
 add_library(absl::int128 INTERFACE IMPORTED)
 
 set_target_properties(absl::int128 PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1190,7 +1255,7 @@ set_target_properties(absl::int128 PROPERTIES
 add_library(absl::numeric INTERFACE IMPORTED)
 
 set_target_properties(absl::numeric PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1199,7 +1264,7 @@ set_target_properties(absl::numeric PROPERTIES
 add_library(absl::numeric_representation INTERFACE IMPORTED)
 
 set_target_properties(absl::numeric_representation PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::config;-ignore:4221"
 )
@@ -1208,7 +1273,7 @@ set_target_properties(absl::numeric_representation PROPERTIES
 add_library(absl::sample_recorder INTERFACE IMPORTED)
 
 set_target_properties(absl::sample_recorder PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1217,7 +1282,7 @@ set_target_properties(absl::sample_recorder PROPERTIES
 add_library(absl::exponential_biased INTERFACE IMPORTED)
 
 set_target_properties(absl::exponential_biased PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1226,7 +1291,7 @@ set_target_properties(absl::exponential_biased PROPERTIES
 add_library(absl::periodic_sampler INTERFACE IMPORTED)
 
 set_target_properties(absl::periodic_sampler PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1235,7 +1300,7 @@ set_target_properties(absl::periodic_sampler PROPERTIES
 add_library(absl::random_random INTERFACE IMPORTED)
 
 set_target_properties(absl::random_random PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1244,7 +1309,7 @@ set_target_properties(absl::random_random PROPERTIES
 add_library(absl::random_bit_gen_ref INTERFACE IMPORTED)
 
 set_target_properties(absl::random_bit_gen_ref PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1253,7 +1318,7 @@ set_target_properties(absl::random_bit_gen_ref PROPERTIES
 add_library(absl::random_internal_mock_helpers INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_mock_helpers PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::config;absl::fast_type_id;absl::optional;-ignore:4221;-ignore:4221"
 )
@@ -1262,7 +1327,7 @@ set_target_properties(absl::random_internal_mock_helpers PROPERTIES
 add_library(absl::random_distributions INTERFACE IMPORTED)
 
 set_target_properties(absl::random_distributions PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1271,7 +1336,7 @@ set_target_properties(absl::random_distributions PROPERTIES
 add_library(absl::random_seed_gen_exception INTERFACE IMPORTED)
 
 set_target_properties(absl::random_seed_gen_exception PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1280,7 +1345,7 @@ set_target_properties(absl::random_seed_gen_exception PROPERTIES
 add_library(absl::random_seed_sequences INTERFACE IMPORTED)
 
 set_target_properties(absl::random_seed_sequences PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1289,7 +1354,7 @@ set_target_properties(absl::random_seed_sequences PROPERTIES
 add_library(absl::random_internal_traits INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_traits PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1298,7 +1363,7 @@ set_target_properties(absl::random_internal_traits PROPERTIES
 add_library(absl::random_internal_distribution_caller INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_distribution_caller PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1307,7 +1372,7 @@ set_target_properties(absl::random_internal_distribution_caller PROPERTIES
 add_library(absl::random_internal_fast_uniform_bits INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_fast_uniform_bits PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1316,25 +1381,26 @@ set_target_properties(absl::random_internal_fast_uniform_bits PROPERTIES
 add_library(absl::random_internal_seed_material INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_seed_material PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;\$<\$<BOOL:>:-lbcrypt>;-ignore:4221"
 )
 
-# Create imported target absl::random_internal_pool_urbg
-add_library(absl::random_internal_pool_urbg INTERFACE IMPORTED)
+# Create imported target absl::random_internal_entropy_pool
+add_library(absl::random_internal_entropy_pool STATIC IMPORTED)
 
-set_target_properties(absl::random_internal_pool_urbg PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+set_target_properties(absl::random_internal_entropy_pool PROPERTIES
+  INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
+  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;\$<LINK_ONLY:-ignore:4221>;\$<LINK_ONLY:-ignore:4221>"
 )
 
 # Create imported target absl::random_internal_salted_seed_seq
 add_library(absl::random_internal_salted_seed_seq INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_salted_seed_seq PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1343,7 +1409,7 @@ set_target_properties(absl::random_internal_salted_seed_seq PROPERTIES
 add_library(absl::random_internal_iostream_state_saver INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_iostream_state_saver PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1352,7 +1418,7 @@ set_target_properties(absl::random_internal_iostream_state_saver PROPERTIES
 add_library(absl::random_internal_generate_real INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_generate_real PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1361,7 +1427,7 @@ set_target_properties(absl::random_internal_generate_real PROPERTIES
 add_library(absl::random_internal_wide_multiply INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_wide_multiply PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1370,7 +1436,7 @@ set_target_properties(absl::random_internal_wide_multiply PROPERTIES
 add_library(absl::random_internal_fastmath INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_fastmath PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1379,7 +1445,7 @@ set_target_properties(absl::random_internal_fastmath PROPERTIES
 add_library(absl::random_internal_nonsecure_base INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_nonsecure_base PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1388,7 +1454,7 @@ set_target_properties(absl::random_internal_nonsecure_base PROPERTIES
 add_library(absl::random_internal_pcg_engine INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_pcg_engine PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1397,7 +1463,7 @@ set_target_properties(absl::random_internal_pcg_engine PROPERTIES
 add_library(absl::random_internal_randen_engine INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_randen_engine PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1406,7 +1472,7 @@ set_target_properties(absl::random_internal_randen_engine PROPERTIES
 add_library(absl::random_internal_platform INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_platform PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1415,7 +1481,7 @@ set_target_properties(absl::random_internal_platform PROPERTIES
 add_library(absl::random_internal_randen INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_randen PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1424,7 +1490,7 @@ set_target_properties(absl::random_internal_randen PROPERTIES
 add_library(absl::random_internal_randen_slow INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_randen_slow PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1433,7 +1499,7 @@ set_target_properties(absl::random_internal_randen_slow PROPERTIES
 add_library(absl::random_internal_randen_hwaes INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_randen_hwaes PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1442,7 +1508,7 @@ set_target_properties(absl::random_internal_randen_hwaes PROPERTIES
 add_library(absl::random_internal_randen_hwaes_impl INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_randen_hwaes_impl PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1451,7 +1517,7 @@ set_target_properties(absl::random_internal_randen_hwaes_impl PROPERTIES
 add_library(absl::random_internal_distribution_test_util INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_distribution_test_util PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1460,7 +1526,7 @@ set_target_properties(absl::random_internal_distribution_test_util PROPERTIES
 add_library(absl::random_internal_uniform_helper INTERFACE IMPORTED)
 
 set_target_properties(absl::random_internal_uniform_helper PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221;-ignore:4221"
 )
@@ -1470,7 +1536,7 @@ add_library(absl::status INTERFACE IMPORTED)
 
 set_target_properties(absl::status PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "\$<\$<PLATFORM_ID:AIX>:_LINUX_SOURCE_COMPAT>"
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1479,7 +1545,7 @@ set_target_properties(absl::status PROPERTIES
 add_library(absl::statusor INTERFACE IMPORTED)
 
 set_target_properties(absl::statusor PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1488,7 +1554,7 @@ set_target_properties(absl::statusor PROPERTIES
 add_library(absl::string_view INTERFACE IMPORTED)
 
 set_target_properties(absl::string_view PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1497,7 +1563,7 @@ set_target_properties(absl::string_view PROPERTIES
 add_library(absl::strings INTERFACE IMPORTED)
 
 set_target_properties(absl::strings PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1506,16 +1572,16 @@ set_target_properties(absl::strings PROPERTIES
 add_library(absl::charset INTERFACE IMPORTED)
 
 set_target_properties(absl::charset PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "absl::core_headers;absl::string_view;-ignore:4221"
+  INTERFACE_LINK_LIBRARIES "absl::config;absl::string_view;-ignore:4221"
 )
 
 # Create imported target absl::has_ostream_operator
 add_library(absl::has_ostream_operator INTERFACE IMPORTED)
 
 set_target_properties(absl::has_ostream_operator PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::config;-ignore:4221"
 )
@@ -1524,7 +1590,7 @@ set_target_properties(absl::has_ostream_operator PROPERTIES
 add_library(absl::strings_internal INTERFACE IMPORTED)
 
 set_target_properties(absl::strings_internal PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1533,7 +1599,7 @@ set_target_properties(absl::strings_internal PROPERTIES
 add_library(absl::str_format INTERFACE IMPORTED)
 
 set_target_properties(absl::str_format PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1542,7 +1608,7 @@ set_target_properties(absl::str_format PROPERTIES
 add_library(absl::str_format_internal INTERFACE IMPORTED)
 
 set_target_properties(absl::str_format_internal PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1551,7 +1617,7 @@ set_target_properties(absl::str_format_internal PROPERTIES
 add_library(absl::cord_internal INTERFACE IMPORTED)
 
 set_target_properties(absl::cord_internal PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1560,7 +1626,7 @@ set_target_properties(absl::cord_internal PROPERTIES
 add_library(absl::cordz_update_tracker INTERFACE IMPORTED)
 
 set_target_properties(absl::cordz_update_tracker PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::config;-ignore:4221"
 )
@@ -1569,7 +1635,7 @@ set_target_properties(absl::cordz_update_tracker PROPERTIES
 add_library(absl::cordz_functions INTERFACE IMPORTED)
 
 set_target_properties(absl::cordz_functions PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1578,7 +1644,7 @@ set_target_properties(absl::cordz_functions PROPERTIES
 add_library(absl::cordz_statistics INTERFACE IMPORTED)
 
 set_target_properties(absl::cordz_statistics PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::config;absl::core_headers;absl::cordz_update_tracker;absl::synchronization;-ignore:4221"
 )
@@ -1587,7 +1653,7 @@ set_target_properties(absl::cordz_statistics PROPERTIES
 add_library(absl::cordz_handle INTERFACE IMPORTED)
 
 set_target_properties(absl::cordz_handle PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1596,7 +1662,7 @@ set_target_properties(absl::cordz_handle PROPERTIES
 add_library(absl::cordz_info INTERFACE IMPORTED)
 
 set_target_properties(absl::cordz_info PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1605,7 +1671,7 @@ set_target_properties(absl::cordz_info PROPERTIES
 add_library(absl::cordz_sample_token INTERFACE IMPORTED)
 
 set_target_properties(absl::cordz_sample_token PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1614,7 +1680,7 @@ set_target_properties(absl::cordz_sample_token PROPERTIES
 add_library(absl::cordz_update_scope INTERFACE IMPORTED)
 
 set_target_properties(absl::cordz_update_scope PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::config;absl::cord_internal;absl::cordz_info;absl::cordz_update_tracker;absl::core_headers;-ignore:4221"
 )
@@ -1623,7 +1689,7 @@ set_target_properties(absl::cordz_update_scope PROPERTIES
 add_library(absl::cord INTERFACE IMPORTED)
 
 set_target_properties(absl::cord PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1632,7 +1698,7 @@ set_target_properties(absl::cord PROPERTIES
 add_library(absl::graphcycles_internal INTERFACE IMPORTED)
 
 set_target_properties(absl::graphcycles_internal PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1641,7 +1707,7 @@ set_target_properties(absl::graphcycles_internal PROPERTIES
 add_library(absl::kernel_timeout_internal INTERFACE IMPORTED)
 
 set_target_properties(absl::kernel_timeout_internal PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1650,7 +1716,7 @@ set_target_properties(absl::kernel_timeout_internal PROPERTIES
 add_library(absl::synchronization INTERFACE IMPORTED)
 
 set_target_properties(absl::synchronization PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1659,7 +1725,7 @@ set_target_properties(absl::synchronization PROPERTIES
 add_library(absl::time INTERFACE IMPORTED)
 
 set_target_properties(absl::time PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1668,7 +1734,7 @@ set_target_properties(absl::time PROPERTIES
 add_library(absl::civil_time INTERFACE IMPORTED)
 
 set_target_properties(absl::civil_time PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1677,7 +1743,7 @@ set_target_properties(absl::civil_time PROPERTIES
 add_library(absl::time_zone INTERFACE IMPORTED)
 
 set_target_properties(absl::time_zone PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1686,25 +1752,7 @@ set_target_properties(absl::time_zone PROPERTIES
 add_library(absl::any INTERFACE IMPORTED)
 
 set_target_properties(absl::any PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
-  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
-)
-
-# Create imported target absl::bad_any_cast
-add_library(absl::bad_any_cast INTERFACE IMPORTED)
-
-set_target_properties(absl::bad_any_cast PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
-  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
-)
-
-# Create imported target absl::bad_any_cast_impl
-add_library(absl::bad_any_cast_impl INTERFACE IMPORTED)
-
-set_target_properties(absl::bad_any_cast_impl PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1713,7 +1761,7 @@ set_target_properties(absl::bad_any_cast_impl PROPERTIES
 add_library(absl::span INTERFACE IMPORTED)
 
 set_target_properties(absl::span PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1722,25 +1770,7 @@ set_target_properties(absl::span PROPERTIES
 add_library(absl::optional INTERFACE IMPORTED)
 
 set_target_properties(absl::optional PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
-  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
-)
-
-# Create imported target absl::bad_optional_access
-add_library(absl::bad_optional_access INTERFACE IMPORTED)
-
-set_target_properties(absl::bad_optional_access PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
-  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
-)
-
-# Create imported target absl::bad_variant_access
-add_library(absl::bad_variant_access INTERFACE IMPORTED)
-
-set_target_properties(absl::bad_variant_access PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1749,7 +1779,7 @@ set_target_properties(absl::bad_variant_access PROPERTIES
 add_library(absl::variant INTERFACE IMPORTED)
 
 set_target_properties(absl::variant PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
 )
@@ -1758,27 +1788,45 @@ set_target_properties(absl::variant PROPERTIES
 add_library(absl::compare INTERFACE IMPORTED)
 
 set_target_properties(absl::compare PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
+)
+
+# Create imported target absl::bad_any_cast
+add_library(absl::bad_any_cast INTERFACE IMPORTED)
+
+set_target_properties(absl::bad_any_cast PROPERTIES
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
+  INTERFACE_LINK_LIBRARIES "-ignore:4221"
+)
+
+# Create imported target absl::bad_optional_access
+add_library(absl::bad_optional_access INTERFACE IMPORTED)
+
+set_target_properties(absl::bad_optional_access PROPERTIES
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
+  INTERFACE_LINK_LIBRARIES "-ignore:4221"
+)
+
+# Create imported target absl::bad_variant_access
+add_library(absl::bad_variant_access INTERFACE IMPORTED)
+
+set_target_properties(absl::bad_variant_access PROPERTIES
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
+  INTERFACE_LINK_LIBRARIES "-ignore:4221"
 )
 
 # Create imported target absl::utility
 add_library(absl::utility INTERFACE IMPORTED)
 
 set_target_properties(absl::utility PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "absl::abseil_dll;-ignore:4221"
-)
-
-# Create imported target absl::if_constexpr
-add_library(absl::if_constexpr INTERFACE IMPORTED)
-
-set_target_properties(absl::if_constexpr PROPERTIES
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
-  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "absl::config;-ignore:4221"
 )
 
 # Create imported target absl::abseil_dll
@@ -1786,7 +1834,7 @@ add_library(absl::abseil_dll SHARED IMPORTED)
 
 set_target_properties(absl::abseil_dll PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "ABSL_CONSUME_DLL"
-  INTERFACE_COMPILE_FEATURES "cxx_std_14"
+  INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
 )
 

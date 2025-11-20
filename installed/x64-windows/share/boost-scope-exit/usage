@@ -5,5 +5,5 @@ The package boost-scope-exit is compatible with built-in CMake targets of FindBo
 
 or the generated cmake configs via:
 
-    find_package(boost_scope_exit REQUIRED CONFIG)
+    find_package( REQUIRED CONFIG)
     target_link_libraries(main PRIVATE Boost::scope_exit)
