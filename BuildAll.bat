@@ -95,9 +95,9 @@ vcpkg --x-install-root=./installed --x-packages-root=./packages  --vcpkg-root=./
 @REM echo "--------------------------------------------"
 @REM call ./bash/liblas.bat
 
-echo "install  mcc-lidar  2.1.0"
-echo "--------------------------------------------"
-call ./bash/mcc-lidar.bat
+@REM echo "install  mcc-lidar  2.1.0"
+@REM echo "--------------------------------------------"
+@REM call ./bash/mcc-lidar.bat
 
 @REM echo "install  crunch  104"
 @REM echo "--------------------------------------------"
@@ -135,9 +135,13 @@ call ./bash/mcc-lidar.bat
 @REM echo "--------------------------------------------"
 @REM call ./bash/pdal.bat
 
-@REM echo "install  Qt5  5.15.8"
+@REM echo "install  Qt5  5.15.17"
 @REM echo "--------------------------------------------"
 @REM call ./bash/qt5.bat
+
+@REM echo "install  Qt  5.15.8"
+@REM echo "--------------------------------------------"
+@REM call ./bash/qt.bat
 
 @REM echo "install  glib  2.75.3"
 @REM echo "--------------------------------------------"
@@ -167,13 +171,13 @@ echo "install  opencv4  4.7.0#2"
 echo "--------------------------------------------"
 call ./bash/opencv4.bat
 
-echo "install  osg  3.6.5#18"
-echo "--------------------------------------------"
-call ./bash/osg.bat
+@REM echo "install  osg  3.6.5#27"
+@REM echo "--------------------------------------------"
+@REM call ./bash/osg.bat
 
-echo "install  osg-qt  Qt5#3"
-echo "--------------------------------------------"
-call ./bash/osg-qt.bat
+@REM echo "install  osg-qt  Qt5#3"
+@REM echo "--------------------------------------------"
+@REM call ./bash/osg-qt.bat
 
 @REM echo "install  leveldb  1.22#6"
 @REM echo "--------------------------------------------"
@@ -191,23 +195,21 @@ call ./bash/osg-qt.bat
 @REM echo "--------------------------------------------"
 @REM call ./bash/vcglib.bat
 
-echo "install  pugixml 1.14"
-echo "--------------------------------------------"
-call ./bash/pugixml.bat
+@REM echo "install  pugixml 1.14"
+@REM echo "--------------------------------------------"
+@REM call ./bash/pugixml.bat
 
-echo "install  nlohmann-json 3.11.3#1"
-echo "--------------------------------------------"
-call ./bash/nlohmann-json.bat
+@REM echo "install  nlohmann-json 3.12.0#1"
+@REM echo "--------------------------------------------"
+@REM call ./bash/nlohmann-json.bat
 
-echo "install  highway 1.2.0"
-echo "--------------------------------------------"
-call ./bash/highway.bat
+@REM echo "install  highway 1.3.0"
+@REM echo "--------------------------------------------"
+@REM call ./bash/highway.bat
 
-echo "install  skia 129#2"
-echo "--------------------------------------------"
-call ./bash/skia.bat
-
-
+@REM echo "install  skia 129#2"
+@REM echo "--------------------------------------------"
+@REM call ./bash/skia.bat
 
 echo "install  qgis"
 echo "--------------------------------------------"
