@@ -3,19 +3,34 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/boost-arm64-linux-1.89.0-1efeb155-0cc9-4cbb-8ef1-c0a4780b3b0e",
-  "name": "boost:arm64-linux@1.89.0 NONE",
+  "documentNamespace": "https://spdx.org/spdxdocs/boost-arm64-linux-1.89.0-e44c1d8d-6162-479c-84b5-c9f6b8ed663a",
+  "name": "boost:arm64-linux@1.89.0 820b722dae5c38cab85026063c667bc6981ff604a27f64b3ecf0033b56edf362",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-18T09:18:59Z"
+    "created": "2025-11-19T01:52:11Z"
   },
   "relationships": [
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "GENERATES",
       "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-0",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-1"
     },
     {
       "spdxElementId": "SPDXRef-binary",
@@ -39,7 +54,7 @@
     {
       "name": "boost:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "NONE",
+      "versionInfo": "820b722dae5c38cab85026063c667bc6981ff604a27f64b3ecf0033b56edf362",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSL-1.0",
       "licenseDeclared": "NOASSERTION",
@@ -48,6 +63,30 @@
     }
   ],
   "files": [
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4a4ca80250e3a7b1e67c16eef7a54ac668efa6cf15897294df64514329ee94ca"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "16471ec9a5c3dbec7727a062ac069ccbe805f3486de47296c62c92cf895d054c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
     {
       "fileName": "./BUILD_INFO",
       "SPDXID": "SPDXRef-binary-file-0",

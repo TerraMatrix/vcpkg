@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/sqlite3-arm64-linux-3.50.4-0ea1a568-5266-4941-8bcf-91c25a4627c3",
-  "name": "sqlite3:arm64-linux@3.50.4 6fc5f184880148747dc612f93f2aa4d5724c8f605c68ed5caeb8b0370b985597",
+  "documentNamespace": "https://spdx.org/spdxdocs/sqlite3-arm64-linux-3.50.4-b352022e-472d-4bf2-8806-4db8a51ed284",
+  "name": "sqlite3:arm64-linux@3.50.4 e00affb9cfffd0793f4fc43093579a3acdf15cde7c747f8b61c7b79e74dd43b2",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-18T08:29:09Z"
+    "created": "2025-11-19T01:43:53Z"
   },
   "relationships": [
     {
@@ -146,6 +146,11 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-14"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-15"
     }
   ],
   "packages": [
@@ -164,7 +169,7 @@
     {
       "name": "sqlite3:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "6fc5f184880148747dc612f93f2aa4d5724c8f605c68ed5caeb8b0370b985597",
+      "versionInfo": "e00affb9cfffd0793f4fc43093579a3acdf15cde7c747f8b61c7b79e74dd43b2",
       "downloadLocation": "NONE",
       "licenseConcluded": "blessing",
       "licenseDeclared": "NOASSERTION",
@@ -326,7 +331,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "1deeb04b3e085ce7a153dd5cfb007f46a974b701ccf8abe819da37cf3fcaf09a"
+          "checksumValue": "bc5f238ae75da37ae2541baf560914827ad0d8f5dff4fafe205d657d57aeada4"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -446,7 +451,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "30e1d6dbfadf0d4d9c85dbfd397865a8c67e34b6346926de397c97853f006cea"
+          "checksumValue": "4076a73cb432b7c402ec3a893e309ca340268b0bdab3c2346fd0afa2f52ee1a0"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -470,7 +475,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "42868e1d6d17ed1400ef1a8ddfe15616ace18e5aa78bb2cf669487f74ff662c5"
+          "checksumValue": "08ec804ef65761ddcef6824b34c373b50e68c56f09165c6f42cd34c3b45df5ed"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -483,6 +488,18 @@
         {
           "algorithm": "SHA256",
           "checksumValue": "66b1c462eacc7e8c92fbb83e6a60299e714fabb1498a92d740515b4ec7fd9895"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./tools/sqlite3",
+      "SPDXID": "SPDXRef-binary-file-15",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6b1a54598eda4a8682fec700c129ece6414e75e6453bf0028772cc5d8f7608c0"
         }
       ],
       "licenseConcluded": "NOASSERTION",
