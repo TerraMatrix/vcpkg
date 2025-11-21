@@ -1,0 +1,36 @@
+--- a/modules/dnn/src/layers/elementwise_layers.cpp
++++ b/modules/dnn/src/layers/elementwise_layers.cpp
+@@ -846,9 +846,13 @@ struct GeluFunctor : public BaseFunctor {
+     }
+
+     bool supportBackend(int backendId, int) {
+-        return backendId == DNN_BACKEND_OPENCV || backendId == DNN_BACKEND_CUDA || backendId == DNN_BACKEND_INFERENCE_ENGINE_NGRAPH;
++        return backendId == DNN_BACKEND_OPENCV || backendId == DNN_BACKEND_CUDA || backendId == DNN_BACKEND_INFERENCE_ENGINE_NGRAPH
++#ifdef HAVE_HALIDE
++               || backendId == DNN_BACKEND_HALIDE
++#endif
++               ;
+     }
+-
++
+     void apply(const float* srcptr, float* dstptr, int stripeStart, int len, size_t planeSize, int cn0, int cn1) const {
+         CV_UNUSED(stripeStart);
+         for (int cn = cn0; cn < cn1; cn++, srcptr += planeSize, dstptr += planeSize) {
+@@ -943,6 +947,14 @@ struct GeluFunctor : public BaseFunctor {
+     }
+ #endif // HAVE_CANN
+
++#ifdef HAVE_HALIDE
++    void attachHalide(const Halide::Expr& input, Halide::Func& top)
++    {
++        Halide::Var x("x"), y("y"), c("c"), n("n");
++        // Gelu activation: 0.5 * x * (1.0 + erf(x * sqrt(0.5)))
++        // Use tanh approximation: gelu(x) ≈ 0.5 * x * (1 + tanh(sqrt(2/pi) * (x + 0.044715 * x^3)))
++        float sqrt_2_over_pi = 0.7978845608028654f;  // sqrt(2/pi)
++        float approx_coef = 0.044715f;
++        top(x, y, c, n) = 0.5f * input * (1.0f + tanh(sqrt_2_over_pi * (input + approx_coef * input * input * input)));
++    }
++#endif  // HAVE_HALIDE
++
+     int64 getFLOPSPerElement() const { return 100; }
+ };
