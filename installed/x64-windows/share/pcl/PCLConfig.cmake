@@ -36,7 +36,12 @@ get_filename_component(VCPKG_IMPORT_PREFIX "${CMAKE_CURRENT_LIST_DIR}/../../" AB
 # - recognition
 # - stereo
 # - apps
+# - cuda_common
+# - cuda_features
+# - cuda_segmentation
+# - cuda_sample_consensus
 # - outofcore
+# - gpu_utils
 # - people
 # - simulation
 #
@@ -481,7 +486,7 @@ list(APPEND PCL_COMPILE_OPTIONS )
 #set AVX flags used compiling PCL
 list(APPEND PCL_COMPILE_OPTIONS )
 
-set(pcl_all_components  common kdtree octree search sample_consensus filters 2d geometry io features ml segmentation visualization surface registration keypoints tracking recognition stereo apps outofcore people simulation)
+set(pcl_all_components  common kdtree octree search sample_consensus filters 2d geometry io features ml segmentation visualization surface registration keypoints tracking recognition stereo apps cuda_common cuda_features cuda_segmentation cuda_sample_consensus outofcore gpu_utils people simulation)
 # insert "io_ply" before "io"
 list(FIND pcl_all_components "io" pcl_pos_io)
 list(INSERT pcl_all_components ${pcl_pos_io} "io_ply")
@@ -508,7 +513,11 @@ set(pcl_tracking_int_dep common search kdtree filters octree )
 set(pcl_recognition_int_dep common io search kdtree octree features filters registration sample_consensus ml )
 set(pcl_stereo_int_dep common io )
 set(pcl_apps_int_dep common geometry io filters sample_consensus segmentation visualization kdtree features surface octree registration keypoints tracking search recognition ml stereo 2d )
+set(pcl_cuda_features_int_dep cuda_common io common )
+set(pcl_cuda_segmentation_int_dep cuda_common io common )
+set(pcl_cuda_sample_consensus_int_dep cuda_common io common )
 set(pcl_outofcore_int_dep common io filters octree visualization )
+set(pcl_gpu_utils_int_dep common )
 set(pcl_people_int_dep common kdtree search sample_consensus filters io visualization geometry segmentation octree )
 set(pcl_simulation_int_dep common io surface kdtree features search octree visualization filters geometry )
 
