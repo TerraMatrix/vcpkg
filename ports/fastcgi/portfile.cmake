@@ -15,6 +15,13 @@ elseif(NOT VCPKG_TARGET_IS_WINDOWS)
   message("${PORT} currently requires the following library from the system package manager:\n    gettext\n    automake\n    libtool\n    libtool-bin\n\nIt can be installed with apt-get install gettext automake libtool libtool-bin")
 endif()
 
+# Set environment variables to fix m4 temporary file issue on Windows
+if(VCPKG_TARGET_IS_WINDOWS)
+    set(ENV{TMP} "${CURRENT_BUILDTREES_DIR}/tmp")
+    set(ENV{TEMP} "${CURRENT_BUILDTREES_DIR}/tmp")
+    file(MAKE_DIRECTORY "${CURRENT_BUILDTREES_DIR}/tmp")
+endif()
+
 vcpkg_configure_make(
     SOURCE_PATH "${SOURCE_PATH}"
     AUTOCONFIG
