@@ -1,37 +1,32 @@
 {
   "name": "qgis",
-  "version": "3.44.4",
-  "port-version": 0,
-  "description": "QGIS is a free, open source, cross-platform geographical information system (GIS)",
+  "version-string": "3.44.5",
+  "description": "QGIS is a free, open source, cross platform (lin/win/mac) geographical information system (GIS)",
   "homepage": "https://qgis.org",
   "license": "GPL-2.0-or-later",
-  "supports": "!uwp & !static",
+  "supports": "(windows & (x64 | arm64)) | (linux & arm64)",
   "dependencies": [
-    "duckdb",
     {
       "name": "exiv2",
       "features": [
         "xmp"
       ]
     },
+    "hdf5",
+    "glib",
+    "opencl",
     "expat",
-    {
-      "name": "gdal",
-      "features": [
-        "arrow-adbc",
-        "freexl",
-        "kea",
-        "parquet",
-        "poppler",
-        "tools"
-      ]
-    },
+    "gdal",
     "geos",
     "gsl",
     "jhasse-poly2tri",
     "libpq",
     "libspatialindex",
     "libspatialite",
+    {
+      "name": "libtasn1",
+      "platform": "ios | osx | linux"
+    },
     "libxml2",
     "libzip",
     "meshoptimizer",
@@ -46,56 +41,84 @@
         "ossl"
       ]
     },
+    "qtbase",
     {
-      "name": "qtbase",
-      "features": [
-        "sql-odbc"
-      ]
+      "name": "qtkeychain-qt6",
+      "platform": "windows"
     },
-    "qtdeclarative",
-    "qtimageformats",
-    "qtkeychain-qt6",
     "qtlocation",
-    "qtquickcontrols2",
     "qtsvg",
+    "qtconnectivity",
+    "qtserialport",
+    {
+      "name": "qtmacextras",
+      "platform": "osx"
+    },
+
+    "qwt",
     "qttools",
-    "zlib"
-  ],
-  "default-features": [
-    "gui"
+    "qscintilla",
+    "qtkeychain",
+    "zlib",
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
   ],
   "features": {
-    "gui": {
-      "description": "Build the QGIS GUI components",
-      "dependencies": [
-        "qscintilla",
-        "qtmultimedia",
-        "qwt"
-      ]
-    },
     "3d": {
-      "description": "Enable QGIS 3D map view support",
+      "description": "Determines whether QGIS 3D library should be built",
       "dependencies": [
         "qt3d"
       ]
     },
-    "opencl": {
-      "description": "Enable OpenCL acceleration",
+    "bindings": {
+      "description": "Determines whether Python bindings should be built",
       "dependencies": [
-        "opencl"
+        "gdal",
+        "python3"
+      ]
+    },
+    "gui": {
+      "description": "Determines whether the QGIS gui should be built",
+      "dependencies": [
+        {
+          "name": "qscintilla",
+          "platform": "windows"
+        },
+        "qtmultimedia",
+        {
+          "name": "qwt",
+          "platform": "windows"
+        }
+      ]
+    },
+    "pdal": {
+      "description": "Build with PDAL point cloud processing support",
+      "dependencies": [
+        "pdal"
+      ]
+    },
+    "quick": {
+      "description": "Build the QGIS quick components for mobile interfaces",
+      "dependencies": [
+        "qtdeclarative",
+        "qtquickcontrols2"
       ]
     },
     "server": {
-      "description": "Build QGIS Server",
+      "description": "Determines whether QGIS server should be built",
       "dependencies": [
         "fastcgi"
       ]
     },
-    "sfcgal": {
-      "description": "Enable SFCGAL geometry engine support",
-      "dependencies": [
-        "sfcgal"
-      ]
+    "debug-tools": {
+      "description": "Build with QGIS developer and debugging tools",
+      "dependencies": []
     }
   }
 }

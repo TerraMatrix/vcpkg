@@ -1,0 +1,28 @@
+The QGIS package provides CMake targets:
+
+    find_package(Qgis REQUIRED)
+
+    target_link_libraries(main PRIVATE Qgis::core Qgis::gui Qgis::analysis)
+
+Available targets:
+    Qgis::core       - QGIS core library
+    Qgis::gui        - QGIS GUI library
+    Qgis::analysis   - QGIS analysis library
+    Qgis::app        - QGIS application (if desktop feature is enabled)
+
+Features:
+    3d          - Enable 3D support with Qt3D
+    server      - Enable QGIS Server components
+    bindings    - Build Python bindings (requires Python)
+    gui         - Build GUI components (requires Qt widgets)
+    desktop     - Build desktop application
+    postgis     - Enable PostgreSQL/PostGIS support
+    spatialite  - Enable SpatiaLite support
+    oracle      - Enable Oracle database support
+    sfcgal      - Enable SFCGAL geometry support
+    pdal        - Enable PDAL point cloud support
+    grass       - Enable GRASS GIS support
+    test        - Enable test suite
+
+Example usage with features:
+    vcpkg install qgis[desktop,gui,3d,postgis]
