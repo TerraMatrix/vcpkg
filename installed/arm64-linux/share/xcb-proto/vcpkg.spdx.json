@@ -1,0 +1,117 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/xcb-proto-arm64-linux-1.14.1#2-7cf4a8c6-a973-4c5d-9d5c-736c471539f3",
+  "name": "xcb-proto:arm64-linux@1.14.1#2 725ce7beef97b515cde185b6d53cf934448f004c53dc2134afd4528b6a08907f",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
+    ],
+    "created": "2025-11-26T09:54:36Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-0",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-0"
+    }
+  ],
+  "packages": [
+    {
+      "name": "xcb-proto",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "1.14.1#2",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/xcb-proto",
+      "homepage": "https://xcb.freedesktop.org/",
+      "licenseConcluded": "X11-distribute-modifications-variant",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "XML-XCB protocol descriptions used by libxcb for the X11 protocol & extensions",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "xcb-proto:arm64-linux",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "725ce7beef97b515cde185b6d53cf934448f004c53dc2134afd4528b6a08907f",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "X11-distribute-modifications-variant",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-0",
+      "name": "proto/xcbproto",
+      "downloadLocation": "git+https://gitlab.freedesktop.org/xorg/proto/xcbproto@70ca65fa35c3760661b090bc4b2601daa7a099b8",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "9e08e1d2ab1fe7a8d3985568918a858ddfb31b8016ccac8ea2447631e7cede3bcc7b1ed86491d497ab871674c9b55d94fab25ee13ff6de9a44590b91d9166fda"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1e7dcabe73c286d13d394da7fb16837050157c049d03bbdefa4ab4a53e40ccdd"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c3c4601c77c2228cdeee44a03ef144fe2df4190dadd63fee754f5a73ce4cc660"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./BUILD_INFO",
+      "SPDXID": "SPDXRef-binary-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "30800ecf90b21c95708dbe4d2877bde1d381129c006aa5699aee2f731e6fd468"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}

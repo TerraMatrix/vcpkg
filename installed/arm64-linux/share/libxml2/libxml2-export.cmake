@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS LibXml2::LibXml2)
+foreach(_cmake_expected_target IN ITEMS LibXml2::LibXml2 LibXml2::xmllint LibXml2::xmlcatalog)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -61,6 +61,12 @@ set_target_properties(LibXml2::LibXml2 PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include/libxml2"
   INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:Iconv::Iconv>;\$<LINK_ONLY:Threads::Threads>;\$<LINK_ONLY:ZLIB::ZLIB>"
 )
+
+# Create imported target LibXml2::xmllint
+add_executable(LibXml2::xmllint IMPORTED)
+
+# Create imported target LibXml2::xmlcatalog
+add_executable(LibXml2::xmlcatalog IMPORTED)
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)
   message(FATAL_ERROR "This file relies on consumers using CMake 2.8.12 or greater.")
