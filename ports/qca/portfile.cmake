@@ -17,7 +17,6 @@ vcpkg_from_github(
         0001-fix-path-for-vcpkg.patch
         0002-fix-build-error.patch
         0003-Define-NOMINMAX-for-botan-plugin-with-MSVC.patch
-        0004-fix-cmake4.patch
 )
 
 vcpkg_find_acquire_program(PKGCONFIG)
@@ -55,9 +54,7 @@ endif()
 if ("ossl" IN_LIST FEATURES)
     list(APPEND PLUGINS ossl)
 endif()
-if (VCPKG_TARGET_IS_OSX AND VCPKG_LIBRARY_LINKAGE STREQUAL "dynamic")
-    message(STATUS "Building with an osx-dynamic triplet: 'softstore' disabled.")
-else()
+if ("softstore" IN_LIST FEATURES)
     list(APPEND PLUGINS softstore)
 endif()
 
