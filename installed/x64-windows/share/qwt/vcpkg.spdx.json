@@ -3,49 +3,19 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/qwt-x64-windows-6.3.0-47f7bc08-7ad8-471c-a92f-578c9abfd71d",
-  "name": "qwt:x64-windows@6.3.0 c17a8c19d408355c088fd1159c3d21d1e4895145b8fe5dc764d2fa5ce9fb71eb",
+  "documentNamespace": "https://spdx.org/spdxdocs/qwt-x64-windows-6.3.0-9cf5b7f1-85ae-4083-9860-7f15139eea0d",
+  "name": "qwt:x64-windows@6.3.0 NONE",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-24T08:24:50Z"
+    "created": "2025-11-28T06:05:23Z"
   },
   "relationships": [
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "GENERATES",
       "relatedSpdxElement": "SPDXRef-binary"
-    },
-    {
-      "spdxElementId": "SPDXRef-port",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-port-file-0"
-    },
-    {
-      "spdxElementId": "SPDXRef-port",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-port-file-1"
-    },
-    {
-      "spdxElementId": "SPDXRef-port",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-port-file-2"
-    },
-    {
-      "spdxElementId": "SPDXRef-port",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-port-file-3"
-    },
-    {
-      "spdxElementId": "SPDXRef-port",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-port-file-4"
-    },
-    {
-      "spdxElementId": "SPDXRef-port-file-4",
-      "relationshipType": "DEPENDENCY_MANIFEST_OF",
-      "relatedSpdxElement": "SPDXRef-port"
     },
     {
       "spdxElementId": "SPDXRef-binary",
@@ -11114,97 +11084,22 @@
     {
       "name": "qwt:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "c17a8c19d408355c088fd1159c3d21d1e4895145b8fe5dc764d2fa5ce9fb71eb",
+      "versionInfo": "NONE",
       "downloadLocation": "NONE",
       "licenseConcluded": "LicenseRef-vcpkg-null",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "comment": "This is a binary package built by vcpkg."
-    },
-    {
-      "SPDXID": "SPDXRef-resource-0",
-      "name": "qwt-6.3.0.zip",
-      "packageFileName": "qwt-6.3.0.zip",
-      "downloadLocation": "https://sourceforge.net/projects/qwt/qwt/files/6.3.0/qwt-6.3.0.zip",
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "copyrightText": "NOASSERTION",
-      "checksums": [
-        {
-          "algorithm": "SHA512",
-          "checksumValue": "4008c3e4dace0f18e572b473a51a293bb896abbd62b9c5f0a92734b2121923d2e2cbf67c997b84570a13bf4fdd7669b56497c82fbae35049ed856b2f0a65e475"
-        }
-      ]
     }
   ],
   "files": [
-    {
-      "fileName": "./config.patch",
-      "SPDXID": "SPDXRef-port-file-0",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "5e8405c8ee8e7187eaad307c3bcda3729cdb398c40f63fcac37fe568e61a8347"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./fix_dll_install.patch",
-      "SPDXID": "SPDXRef-port-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "670c158a7514d60c2e89fedfcf7f723cd2a85420c3ac9fa0a3dbfacb6f8603c0"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./portfile.cmake",
-      "SPDXID": "SPDXRef-port-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "c9944a6a144e840f0137ba27d606be3817191c991ee6e39b8a3acad33bd6e195"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./unofficial-qwt-config.cmake",
-      "SPDXID": "SPDXRef-port-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "10e0fd8ef00cbdbd3d1ec71a72975c4a0d23f9eb93c87768d2d14f002348e6e7"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./vcpkg.json",
-      "SPDXID": "SPDXRef-port-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "5402db19eb50d8f21dd56384a98838d508c76c56231a675f430707829f9053bc"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
     {
       "fileName": "./bin/qwt.dll",
       "SPDXID": "SPDXRef-binary-file-0",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "87ea748b4e8ddfe72047b51a38f6d30badbf2b5e94244cbe792226c22b30e533"
+          "checksumValue": "140a19f675b82738c8ca8531fe634701e5a9d35df04d813e9c18cbea73e0f3c8"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -11216,7 +11111,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e6206aac310b60170e36f41a620b4e83c8fa252af1ac49e33c461285910cbd0e"
+          "checksumValue": "fb86bd0df46e5d332ef192497851944c51c608d7e36b2ccfd348de329dbd5646"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -11240,7 +11135,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "dfa08ce1cc52494d0aa10a508ec571dd9b01ef7c19f5f796a0a5b4838ce6e6a6"
+          "checksumValue": "0301a072a46cd9b1d9a2d0fad1f9878f2641e7d5a6c3ea992db58dd939f58a66"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -11252,7 +11147,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2f168e4d20fd86e5be8b8ed97858fb9b56b206051e0294b847fa9ac134e68d77"
+          "checksumValue": "7cb7cc74da8346dbe7c78b506c25c022b6486f47187855b33bab794b4e8b76f5"
         }
       ],
       "licenseConcluded": "NOASSERTION",

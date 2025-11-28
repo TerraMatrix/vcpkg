@@ -30,7 +30,8 @@ vcpkg_from_github(
     HEAD_REF master
     PATCHES
         qscintilla_path_fix.patch
-
+        qgspython.patch
+        fix-build-failed.diff
 )
 
 # Set up Python executable
@@ -57,6 +58,9 @@ list(APPEND QGIS_OPTIONS
     -DWITH_QSCI:BOOL=ON
     -DWITH_QCA:BOOL=ON
 )
+
+# 强制使用 Qt5，避免 Qt5/Qt6 混用
+list(APPEND QGIS_OPTIONS -DBUILD_WITH_QT6:BOOL=OFF)
 
 # Add required programs
 list(APPEND QGIS_OPTIONS
@@ -111,79 +115,68 @@ else()
     list(APPEND QGIS_OPTIONS -DWITH_BINDINGS:BOOL=OFF)
 endif()
 
-# GUI components (default)
-if("gui" IN_LIST FEATURES)
-    list(APPEND QGIS_OPTIONS -DWITH_GUI:BOOL=ON)
-    # Force linking of GUI-related libraries
-    list(APPEND QGIS_OPTIONS -DQWT_FOUND:BOOL=ON)
-    list(APPEND QGIS_OPTIONS -DQSCINTILLA_FOUND:BOOL=ON)
-    list(APPEND QGIS_OPTIONS -DQCA_FOUND:BOOL=ON)
-    list(APPEND QGIS_OPTIONS -DQWT_INCLUDE_DIR:STRING=${CURRENT_INSTALLED_DIR}/include/qwt)
-    list(APPEND QGIS_OPTIONS -DQSCINTILLA_INCLUDE_DIR:STRING=${CURRENT_INSTALLED_DIR}/include/Qsci)
-    list(APPEND QGIS_OPTIONS -DQCA_INCLUDE_DIR:STRING=${CURRENT_INSTALLED_DIR}/include/QtCrypto)
-    # Set Qt5 version explicitly for bindings
-    list(APPEND QGIS_OPTIONS -DQT5_QSCINTILLA_INCLUDE_DIR:STRING=${CURRENT_INSTALLED_DIR}/include/Qsci)
-    list(APPEND QGIS_OPTIONS -DQT5_QSCINTILLA_LIBRARY:FILEPATH=${CURRENT_INSTALLED_DIR}/lib/qscintilla2_qt5${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
-else()
-    list(APPEND QGIS_OPTIONS -DWITH_GUI:BOOL=OFF)
-endif()
+# GUI 统一开启，并提供 GUI 依赖的包含与库提示
+list(APPEND QGIS_OPTIONS -DWITH_GUI:BOOL=ON)
+list(APPEND QGIS_OPTIONS -DQWT_FOUND:BOOL=ON)
+list(APPEND QGIS_OPTIONS -DQSCINTILLA_FOUND:BOOL=ON)
+list(APPEND QGIS_OPTIONS -DQCA_FOUND:BOOL=ON)
+list(APPEND QGIS_OPTIONS -DQWT_INCLUDE_DIR:STRING=${CURRENT_INSTALLED_DIR}/include/qwt)
+list(APPEND QGIS_OPTIONS -DQSCINTILLA_INCLUDE_DIR:STRING=${CURRENT_INSTALLED_DIR}/include/Qsci)
+list(APPEND QGIS_OPTIONS -DQCA_INCLUDE_DIR:STRING=${CURRENT_INSTALLED_DIR}/include/QtCrypto)
+# Qt5 QScintilla 明确指定
+list(APPEND QGIS_OPTIONS -DQT5_QSCINTILLA_INCLUDE_DIR:STRING=${CURRENT_INSTALLED_DIR}/include/Qsci)
+list(APPEND QGIS_OPTIONS -DQT5_QSCINTILLA_LIBRARY:FILEPATH=${CURRENT_INSTALLED_DIR}/lib/qscintilla2_qt5${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
 
 # Platform-specific configurations
 if(VCPKG_TARGET_IS_WINDOWS)
     # Windows-specific options
     list(APPEND QGIS_OPTIONS -DWITH_STDLIB:BOOL=ON)
 
-    # Configure Qt tools
-    if(EXISTS "${CURRENT_INSTALLED_DIR}/tools/qt6-tools/bin/lrelease.exe")
-        list(APPEND QGIS_OPTIONS -DQT_LRELEASE_EXECUTABLE:FILEPATH=${CURRENT_INSTALLED_DIR}/tools/qt6-tools/bin/lrelease.exe)
-    else()
+    # Configure Qt tools（优先 Qt5 工具）
+    if(EXISTS "${CURRENT_INSTALLED_DIR}/tools/qt5-tools/bin/lrelease.exe")
         list(APPEND QGIS_OPTIONS -DQT_LRELEASE_EXECUTABLE:FILEPATH=${CURRENT_INSTALLED_DIR}/tools/qt5-tools/bin/lrelease.exe)
+    elseif(EXISTS "${CURRENT_INSTALLED_DIR}/tools/qt6-tools/bin/lrelease.exe")
+        list(APPEND QGIS_OPTIONS -DQT_LRELEASE_EXECUTABLE:FILEPATH=${CURRENT_INSTALLED_DIR}/tools/qt6-tools/bin/lrelease.exe)
     endif()
 
-    # Configure Python UI tools
-    if(EXISTS "${PYTHON3_PATH}/Scripts/pyuic6.exe")
-        list(APPEND QGIS_OPTIONS -DPYUIC_PROGRAM:FILEPATH=${PYTHON3_PATH}/Scripts/pyuic6.exe)
-        list(APPEND QGIS_OPTIONS -DPYRCC_PROGRAM:FILEPATH=${PYTHON3_PATH}/Scripts/pyrcc6.exe)
-    elseif(EXISTS "${PYTHON3_PATH}/Scripts/pyuic5.exe")
+    # Configure Python UI tools（优先 PyQt5）
+    if(EXISTS "${PYTHON3_PATH}/Scripts/pyuic5.exe")
         list(APPEND QGIS_OPTIONS -DPYUIC_PROGRAM:FILEPATH=${PYTHON3_PATH}/Scripts/pyuic5.exe)
         list(APPEND QGIS_OPTIONS -DPYRCC_PROGRAM:FILEPATH=${PYTHON3_PATH}/Scripts/pyrcc5.exe)
+    elseif(EXISTS "${PYTHON3_PATH}/Scripts/pyuic6.exe")
+        list(APPEND QGIS_OPTIONS -DPYUIC_PROGRAM:FILEPATH=${PYTHON3_PATH}/Scripts/pyuic6.exe)
+        list(APPEND QGIS_OPTIONS -DPYRCC_PROGRAM:FILEPATH=${PYTHON3_PATH}/Scripts/pyrcc6.exe)
     endif()
 
-    # Add static library exclusion for debug builds and fix runtime library issues
+    # Add static library exclusion for debug builds
     list(APPEND QGIS_OPTIONS_DEBUG -DQt5_EXCLUDE_STATIC_DEPENDENCIES:BOOL=ON)
     list(APPEND QGIS_OPTIONS_DEBUG -DQt6_EXCLUDE_STATIC_DEPENDENCIES:BOOL=ON)
     list(APPEND QGIS_OPTIONS_DEBUG -DCMAKE_DEBUG_POSTFIX:STRING=d)
-    list(APPEND QGIS_OPTIONS_DEBUG -D_ITERATOR_DEBUG_LEVEL:STRING=2)
-    list(APPEND QGIS_OPTIONS_RELEASE -D_ITERATOR_DEBUG_LEVEL:STRING=0)
-
-    # Fix Python runtime library configuration
-    list(APPEND QGIS_OPTIONS_DEBUG -DCMAKE_CXX_FLAGS_DEBUG:STRING="/MDd /Zi /Od /Ob0 /D _DEBUG /D_ITERATOR_DEBUG_LEVEL=2")
-    list(APPEND QGIS_OPTIONS_DEBUG -DCMAKE_C_FLAGS_DEBUG:STRING="/MDd /Zi /Od /Ob0 /D _DEBUG /D_ITERATOR_DEBUG_LEVEL=2")
-    list(APPEND QGIS_OPTIONS_RELEASE -DCMAKE_CXX_FLAGS_RELEASE:STRING="/MD /O2 /DNDEBUG /D_ITERATOR_DEBUG_LEVEL=0")
-    list(APPEND QGIS_OPTIONS_RELEASE -DCMAKE_C_FLAGS_RELEASE:STRING="/MD /O2 /DNDEBUG /D_ITERATOR_DEBUG_LEVEL=0")
 
 elseif(VCPKG_TARGET_IS_LINUX)
     # Linux-specific options
     list(APPEND QGIS_OPTIONS -DWITH_STDLIB:BOOL=OFF)
 
-    # Configure Qt tools for Linux
-    if(EXISTS "${CURRENT_INSTALLED_DIR}/tools/qt6-tools/bin/lrelease")
+    # Configure Qt tools for Linux（优先 Qt5 工具）
+    if(EXISTS "${CURRENT_INSTALLED_DIR}/tools/qt5-tools/bin/lrelease")
+        list(APPEND QGIS_OPTIONS -DQT_LRELEASE_EXECUTABLE:FILEPATH=${CURRENT_INSTALLED_DIR}/tools/qt5-tools/bin/lrelease)
+    elseif(EXISTS "${CURRENT_INSTALLED_DIR}/tools/qt6-tools/bin/lrelease")
         list(APPEND QGIS_OPTIONS -DQT_LRELEASE_EXECUTABLE:FILEPATH=${CURRENT_INSTALLED_DIR}/tools/qt6-tools/bin/lrelease)
     else()
         # Try to find lrelease in PATH
-        find_program(QT_LRELEASE_EXECUTABLE lrelease6 lrelease)
+        find_program(QT_LRELEASE_EXECUTABLE lrelease lrelease6)
         if(QT_LRELEASE_EXECUTABLE)
             list(APPEND QGIS_OPTIONS -DQT_LRELEASE_EXECUTABLE:FILEPATH=${QT_LRELEASE_EXECUTABLE})
         endif()
     endif()
 
-    # Configure Python UI tools for Linux
-    find_program(PYUIC_EXECUTABLE pyuic6 pyuic5)
+    # Configure Python UI tools for Linux（优先 PyQt5）
+    find_program(PYUIC_EXECUTABLE pyuic5 pyuic6)
     if(PYUIC_EXECUTABLE)
         list(APPEND QGIS_OPTIONS -DPYUIC_PROGRAM:FILEPATH=${PYUIC_EXECUTABLE})
     endif()
 
-    find_program(PYRCC_EXECUTABLE pyrcc6 pyrcc5)
+    find_program(PYRCC_EXECUTABLE pyrcc5 pyrcc6)
     if(PYRCC_EXECUTABLE)
         list(APPEND QGIS_OPTIONS -DPYRCC_PROGRAM:FILEPATH=${PYRCC_EXECUTABLE})
     endif()
@@ -213,7 +206,7 @@ if(VCPKG_TARGET_IS_WINDOWS)
     set(SPATIALINDEX_LIB_NAME spatialindex)
     if(VCPKG_TARGET_ARCHITECTURE STREQUAL "x64" OR VCPKG_TARGET_ARCHITECTURE STREQUAL "arm64")
         set(SPATIALINDEX_LIB_NAME "spatialindex-64")
-    elseif()
+    else()
         set(SPATIALINDEX_LIB_NAME "spatialindex-32")
     endif()
 
@@ -226,15 +219,16 @@ if(VCPKG_TARGET_IS_WINDOWS)
     FIND_LIB_OPTIONS(PROJ proj proj_d LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
     FIND_LIB_OPTIONS(QCA qca qcad LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
     FIND_LIB_OPTIONS(QWT qwt qwtd LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
-    FIND_LIB_OPTIONS(QSCINTILLA qscintilla2_qt6 qscintilla2_qt6d LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
+    FIND_LIB_OPTIONS(QSCINTILLA qscintilla2_qt5 qscintilla2_qt5d LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
+    FIND_LIB_OPTIONS(QTKEYCHAIN qt5keychain qt5keychaind LIBRARY ${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
 
     # Additional library configuration to ensure proper linking
     list(APPEND QGIS_OPTIONS_DEBUG -DQWT_LIBRARY:FILEPATH=${CURRENT_INSTALLED_DIR}/debug/lib/qwtd${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
     list(APPEND QGIS_OPTIONS_DEBUG -DQCA_LIBRARY:FILEPATH=${CURRENT_INSTALLED_DIR}/debug/lib/qcad${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
-    list(APPEND QGIS_OPTIONS_DEBUG -DQSCINTILLA_LIBRARY:FILEPATH=${CURRENT_INSTALLED_DIR}/debug/lib/qscintilla2_qt6d${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
+    list(APPEND QGIS_OPTIONS_DEBUG -DQSCINTILLA_LIBRARY:FILEPATH=${CURRENT_INSTALLED_DIR}/debug/lib/qscintilla2_qt5d${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
     list(APPEND QGIS_OPTIONS_RELEASE -DQWT_LIBRARY:FILEPATH=${CURRENT_INSTALLED_DIR}/lib/qwt${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
     list(APPEND QGIS_OPTIONS_RELEASE -DQCA_LIBRARY:FILEPATH=${CURRENT_INSTALLED_DIR}/lib/qca${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
-    list(APPEND QGIS_OPTIONS_RELEASE -DQSCINTILLA_LIBRARY:FILEPATH=${CURRENT_INSTALLED_DIR}/lib/qscintilla2_qt6${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
+    list(APPEND QGIS_OPTIONS_RELEASE -DQSCINTILLA_LIBRARY:FILEPATH=${CURRENT_INSTALLED_DIR}/lib/qscintilla2_qt5${VCPKG_TARGET_IMPORT_LIBRARY_SUFFIX})
 
     list(APPEND QGIS_OPTIONS -DPoly2Tri_INCLUDE_DIR="${CURRENT_INSTALLED_DIR}/include/poly2tri")
     list(APPEND QGIS_OPTIONS -DPROJ_INCLUDE_DIR="${CURRENT_INSTALLED_DIR}/include")
@@ -252,11 +246,13 @@ if(VCPKG_TARGET_IS_WINDOWS)
             list(APPEND QGIS_OPTIONS_RELEASE -DPDAL_CPP_LIBRARY=${PDAL_CPP_LIBRARY_RELEASE})
         endif()
 
-        # Enable PDAL support in QGIS
+        # Enable PDAL support in QGIS and force EPT ON (requires ZSTD)
         list(APPEND QGIS_OPTIONS -DWITH_PDAL:BOOL=ON)
+        list(APPEND QGIS_OPTIONS -DWITH_EPT:BOOL=ON)
     else()
-        # Explicitly disable PDAL if feature is not requested
+        # Explicitly disable PDAL/EPT if feature is not requested
         list(APPEND QGIS_OPTIONS -DWITH_PDAL:BOOL=OFF)
+        list(APPEND QGIS_OPTIONS -DWITH_EPT:BOOL=OFF)
     endif()
 
 elseif(VCPKG_TARGET_IS_LINUX)
@@ -276,8 +272,10 @@ elseif(VCPKG_TARGET_IS_LINUX)
     # PDAL configuration for Linux
     if("pdal" IN_LIST FEATURES)
         list(APPEND QGIS_OPTIONS -DWITH_PDAL:BOOL=ON)
+        list(APPEND QGIS_OPTIONS -DWITH_EPT:BOOL=ON)
     else()
         list(APPEND QGIS_OPTIONS -DWITH_PDAL:BOOL=OFF)
+        list(APPEND QGIS_OPTIONS -DWITH_EPT:BOOL=OFF)
     endif()
 
     # Use find_package for most libraries on Linux
