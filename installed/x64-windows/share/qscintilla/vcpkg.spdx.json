@@ -3,19 +3,44 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/qscintilla-x64-windows-2.14.1#1-b944059b-dd0a-456a-8a46-15b4a9e585f3",
-  "name": "qscintilla:x64-windows@2.14.1#1 NONE",
+  "documentNamespace": "https://spdx.org/spdxdocs/qscintilla-x64-windows-2.14.1#1-2ec58170-d876-4cb2-b6b1-0d8dce9fd0bb",
+  "name": "qscintilla:x64-windows@2.14.1#1 a04147597a6702d0998b921f445e8f5080b4572cb9c5a5c843badb4a1d9e9c4a",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-28T07:21:39Z"
+    "created": "2025-11-24T07:56:25Z"
   },
   "relationships": [
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "GENERATES",
       "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-3"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-3",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
     },
     {
       "spdxElementId": "SPDXRef-binary",
@@ -789,22 +814,85 @@
     {
       "name": "qscintilla:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "NONE",
+      "versionInfo": "a04147597a6702d0998b921f445e8f5080b4572cb9c5a5c843badb4a1d9e9c4a",
       "downloadLocation": "NONE",
       "licenseConcluded": "GPL-3.0-or-later",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-0",
+      "name": "QScintilla-2.14.1.tar.gz",
+      "packageFileName": "QScintilla-2.14.1.tar.gz",
+      "downloadLocation": "https://www.riverbankcomputing.com/static/Downloads/QScintilla/2.14.1/QScintilla_src-2.14.1.tar.gz",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "19e2f9e0a14947501c575018df368d24eb7f8c74e74faa5246db36415bf28dc0beee507ed0e73107c02b36a99bbaf55f0ef3349f479d2332e1b92b2c4a32788a"
+        }
+      ]
     }
   ],
   "files": [
+    {
+      "fileName": "./fix-static.patch",
+      "SPDXID": "SPDXRef-port-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7fa7b832183e27efc63ae914d9f9b167600efd1fa0db554f3d33392c9708aac9"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "473e131c2fde04a6983cca9d35ae0afa9550c7868bc87384f62c4f199e04c23e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./unofficial-qscintilla-config.cmake",
+      "SPDXID": "SPDXRef-port-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9a53f4f09bcde19b77a54ece6def9f20f1daec7dd727de84020a44272def81dc"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "875e515885fd2ee31b34863f92c8588b361f1d0a963e8252c76dc283cc90ff68"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
     {
       "fileName": "./bin/qscintilla2_qt6.dll",
       "SPDXID": "SPDXRef-binary-file-0",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "5c50d2a26a14ce9bc1ef93594d9ae20d1c28eb060ff766b2bfe2e0beb89ffdeb"
+          "checksumValue": "24810fa0178c70428e3aa4ac85229fae48465c58126a744834258847d0b3d214"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -816,7 +904,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "543c69b7f5e4aca45bb855d406f53bf0eabd886f76760eb8010e41cb32eccecd"
+          "checksumValue": "93155bb449ab233a5ce76b09287cc8712c1a7afc75d0096fd74319134fa823e4"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -840,7 +928,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "7538c6a98f4266f1039f97b3cc116557a0b0a8e6a9d3b361e27c5b0f8b395c6d"
+          "checksumValue": "7845f94022e47721c8ad6e7fe16509036b382c894493c1a22a25798c0ae05121"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -852,7 +940,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "9136a4832b344e57de451679a1e640513e73040d8c02f31af014341523417f64"
+          "checksumValue": "80f8273b9b7655777023243ac1bb3ee2efbccbabd53f2d9260085a5dd6da8335"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -876,7 +964,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "9136a4832b344e57de451679a1e640513e73040d8c02f31af014341523417f64"
+          "checksumValue": "80f8273b9b7655777023243ac1bb3ee2efbccbabd53f2d9260085a5dd6da8335"
         }
       ],
       "licenseConcluded": "NOASSERTION",

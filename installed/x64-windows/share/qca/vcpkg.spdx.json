@@ -3,19 +3,59 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/qca-x64-windows-2.3.7#2-330504d6-d8a1-43e0-932e-cd9c7548f0e6",
-  "name": "qca:x64-windows@2.3.7#2 NONE",
+  "documentNamespace": "https://spdx.org/spdxdocs/qca-x64-windows-2.3.7#2-5c77c69b-c0c5-43db-a713-c60639073e71",
+  "name": "qca:x64-windows@2.3.7#2 5d28b0a47766e426cd50c2091fc9034f9fdc6e845721ec915c6c6d0b0ff65c3e",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-27T03:28:34Z"
+    "created": "2025-12-02T01:36:08Z"
   },
   "relationships": [
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "GENERATES",
       "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-3"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-4"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-5"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-6"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-6",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
     },
     {
       "spdxElementId": "SPDXRef-binary",
@@ -191,26 +231,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-34"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-35"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-36"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-37"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-38"
     }
   ],
   "packages": [
@@ -229,22 +249,120 @@
     {
       "name": "qca:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "NONE",
+      "versionInfo": "5d28b0a47766e426cd50c2091fc9034f9fdc6e845721ec915c6c6d0b0ff65c3e",
       "downloadLocation": "NONE",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-0",
+      "name": "KDE/qca",
+      "downloadLocation": "git+https://github.com/KDE/qca@v2.3.7",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "de06173aaea32aac19a24510b5dbb4bb79681217eb1e4256de36db9f7158ad485fa450ffba5e13c12a0425866923b54f9b4d6164d0eaf659fdf40e458f5ee017"
+        }
+      ]
     }
   ],
   "files": [
+    {
+      "fileName": "./0001-fix-path-for-vcpkg.patch",
+      "SPDXID": "SPDXRef-port-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7fe33b5ab18d0d1171a86933cd08fabafef0e6515e44216c86f918868f7ba886"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./0002-fix-build-error.patch",
+      "SPDXID": "SPDXRef-port-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e2cc899816024bdd57fdc94f2f4932ccf61fa9ff447228046ad19d58cd721fc9"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./0003-Define-NOMINMAX-for-botan-plugin-with-MSVC.patch",
+      "SPDXID": "SPDXRef-port-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "891a0b6cb3fcedbbafd1434b3f8a3caae31beacd9120845d88447676091d0592"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./0004-fix-cmake4.patch",
+      "SPDXID": "SPDXRef-port-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f1151063eb49b6a94f42dc6d006d8400cf44f8087bc68356de6a15357e621f27"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./mk-ca-bundle.pl",
+      "SPDXID": "SPDXRef-port-file-4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "06c56cd297371f65a844a7c062089cba6de4dccb8f0dda46a829feac2f55a25b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "782cfe16c225f812f728e17e65cc159be71bfb23ea4c9d54389aef16219b3a9b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-6",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "eccac4fb38c81bba7f17f4e08f745f573b9f292e3324bd5990ed7226109f753b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
     {
       "fileName": "./bin/Qca/crypto/qca-botan.dll",
       "SPDXID": "SPDXRef-binary-file-0",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "767ca5ad8e7e04bdb75171aa3914c6a52ce6f6123eb25da19025bdc1865bada3"
+          "checksumValue": "ea5731f2fbe66fd46e286d860b1ad5ec8f5d76bca3bb7ae73de387488b3efcb9"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -256,7 +374,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "4f68d63edf482b566eb06ca1eb2761e52b256446db2e9b7eabeaeefd3223011a"
+          "checksumValue": "b175fed2e9c85e2a7c0f568e412df1f1e132b6a377522424e2d24a513fbe23ac"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -268,31 +386,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "27fd3458cfb4f5ac36d753e81b2178d69027349fefa6285938abb7efcd9d378e"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./bin/Qca/crypto/qca-ossl.dll",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "6d82691ab237dd3edc959787671efb1cb0cdda0e24e94bc847a2a4f4be914fb0"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./bin/Qca/crypto/qca-softstore.dll",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "ea4fe63b12923a0272ee4289e116bc6bd1dff217224842be7648afe097d81e05"
+          "checksumValue": "d5d59764d83efa25fe29884529b889d64bb57c2c1abbaa777384bf519cb4cf91"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -300,11 +394,11 @@
     },
     {
       "fileName": "./bin/qca.dll",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "4e6b46bc22a69400fddcc747641ee3cac7f39bf8e3aad7b24f84f7a05f7f4d9e"
+          "checksumValue": "471a759965d0aa690a9547149a55876a6a2925b67f2f9b759819c58f9e80be09"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -312,7 +406,7 @@
     },
     {
       "fileName": "./BUILD_INFO",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -324,11 +418,11 @@
     },
     {
       "fileName": "./debug/bin/Qca/crypto/qca-botand.dll",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "c1ada5d58e1d4ace4530105188f097675401fafcf85871434d56bdd35968254a"
+          "checksumValue": "b8f5b6a2af4446b65a22510b54a93d2667b11484a65c34a82fc356975b2edb6c"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -336,11 +430,11 @@
     },
     {
       "fileName": "./debug/bin/Qca/crypto/qca-gnupgd.dll",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "94bfb8e32e9f05a0feade47182c7019a250328d2b56b28c7643a5149fe77d872"
+          "checksumValue": "10e7a08f3c5581088d1cf9578132bf0a018be15b14226f9361a48070bb0b571b"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -348,35 +442,11 @@
     },
     {
       "fileName": "./debug/bin/Qca/crypto/qca-loggerd.dll",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "1855b7e1fc7bb53eb8a890963bb42ae1aae5ac279b86143b318eae6d096806d1"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/bin/Qca/crypto/qca-ossld.dll",
-      "SPDXID": "SPDXRef-binary-file-10",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "fddde8b8660d8c318634768778b223a372263fbfff63e46e0f1b550d85a4caff"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/bin/Qca/crypto/qca-softstored.dll",
-      "SPDXID": "SPDXRef-binary-file-11",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "ac14fdd78da2ccb96b13fa2a06e9ffcaad5d929777ca3021b684e12ab191b4be"
+          "checksumValue": "f7e5a825b251f0a9630832a65583407fc60ae67879a81661f2a8a6412524e8f2"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -384,11 +454,11 @@
     },
     {
       "fileName": "./debug/bin/qcad.dll",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "14c36e9a3507a46f183b82b42054c11ceb86c7387efedf5dbeded7cecfdacf10"
+          "checksumValue": "297723b2d7cd0d61e4d028282b0657cba12878ede18e2ed5e950b985ae336118"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -396,7 +466,7 @@
     },
     {
       "fileName": "./debug/lib/qcad.lib",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -408,7 +478,7 @@
     },
     {
       "fileName": "./include/QtCrypto/qca.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -420,7 +490,7 @@
     },
     {
       "fileName": "./include/QtCrypto/qcaprovider.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -432,7 +502,7 @@
     },
     {
       "fileName": "./include/QtCrypto/qca_basic.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -444,7 +514,7 @@
     },
     {
       "fileName": "./include/QtCrypto/qca_cert.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -456,7 +526,7 @@
     },
     {
       "fileName": "./include/QtCrypto/qca_core.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -468,7 +538,7 @@
     },
     {
       "fileName": "./include/QtCrypto/qca_export.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -480,7 +550,7 @@
     },
     {
       "fileName": "./include/QtCrypto/qca_keystore.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -492,7 +562,7 @@
     },
     {
       "fileName": "./include/QtCrypto/qca_publickey.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -504,7 +574,7 @@
     },
     {
       "fileName": "./include/QtCrypto/qca_safetimer.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -516,7 +586,7 @@
     },
     {
       "fileName": "./include/QtCrypto/qca_securelayer.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -528,7 +598,7 @@
     },
     {
       "fileName": "./include/QtCrypto/qca_securemessage.h",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -540,7 +610,7 @@
     },
     {
       "fileName": "./include/QtCrypto/qca_support.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -552,7 +622,7 @@
     },
     {
       "fileName": "./include/QtCrypto/qca_textfilter.h",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -564,7 +634,7 @@
     },
     {
       "fileName": "./include/QtCrypto/qca_tools.h",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -576,7 +646,7 @@
     },
     {
       "fileName": "./include/QtCrypto/qca_version.h",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -588,7 +658,7 @@
     },
     {
       "fileName": "./include/QtCrypto/qpipe.h",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -600,7 +670,7 @@
     },
     {
       "fileName": "./include/QtCrypto/QtCrypto",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -612,7 +682,7 @@
     },
     {
       "fileName": "./lib/qca.lib",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -624,11 +694,11 @@
     },
     {
       "fileName": "./share/qca/certs/rootcerts.pem",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "dcf39b33a95c469219ab29fc3e9207529312270a2c8aa355575ca2b6eade05b5"
+          "checksumValue": "78eaa4077ebfe790108c17f153356b9b21c69f2cac3c4474c93ce2eb17544765"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -636,7 +706,7 @@
     },
     {
       "fileName": "./share/qca/copyright",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -648,7 +718,7 @@
     },
     {
       "fileName": "./share/qca/QcaConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -660,7 +730,7 @@
     },
     {
       "fileName": "./share/qca/QcaConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -672,7 +742,7 @@
     },
     {
       "fileName": "./share/qca/QcaTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -684,7 +754,7 @@
     },
     {
       "fileName": "./share/qca/QcaTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -696,7 +766,7 @@
     },
     {
       "fileName": "./share/qca/QcaTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",

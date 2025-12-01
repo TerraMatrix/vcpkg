@@ -1,0 +1,22 @@
+diff --git a/cmake/FindQScintilla.cmake b/cmake/FindQScintilla.cmake
+--- a/cmake/FindQScintilla.cmake
++++ b/cmake/FindQScintilla.cmake
+@@
+-  FIND_PATH(QSCINTILLA_INCLUDE_DIR
+-    NAMES Qsci/qsciglobal.h
+-    PATHS
+-      "${_qsci_fw}/Headers"
+-      $ENV{LIB_DIR}/include
+-      /usr/local/include
+-      /usr/include
+-    PATH_SUFFIXES ${QSCINTILLA_PATH_SUFFIXES}
+-    )
++  FIND_PATH(QSCINTILLA_INCLUDE_DIR
++    NAMES Qsci/qsciglobal.h
++    PATHS
++      "${_qsci_fw}/Headers"
++      $ENV{LIB_DIR}/include
++      /usr/local/include
++      /usr/include
++    PATH_SUFFIXES ${QSCINTILLA_PATH_SUFFIXES} .
++    )
