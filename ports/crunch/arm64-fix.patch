@@ -1,0 +1,18 @@
+--- a/inc/crn_decomp.h
++++ b/inc/crn_decomp.h
+@@ -380,6 +380,8 @@
+ #ifdef _WIN64
+    typedef uint64 ptr_bits;
+ #else
++   #ifdef __x86_64__
++      typedef uint64 ptr_bits;
++   #else
++      #ifdef __aarch64__
++         typedef uint64 ptr_bits;
++      #else
++         typedef uint32 ptr_bits;
++      #endif
++   #endif
+ #endif
+
+    template<typename T> struct int_traits { enum { cMin = crnd::cINT32_MIN, cMax = crnd::cINT32_MAX, cSigned = true }; };
