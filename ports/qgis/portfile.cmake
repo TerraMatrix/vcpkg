@@ -387,6 +387,9 @@ if(INCLUDE_FILES)
   file(COPY ${INCLUDE_FILES} DESTINATION "${CURRENT_PACKAGES_DIR}/include/${PORT}")
   file(REMOVE_RECURSE ${INCLUDE_FILES})
 endif()
+if(EXISTS "${CURRENT_PACKAGES_DIR}/include/nlohmann")
+  file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/include/nlohmann")
+endif()
 file(REMOVE_RECURSE
   ${CURRENT_PACKAGES_DIR}/debug/include
 )
