@@ -1,0 +1,38 @@
+diff --git a/src/app/CMakeLists.txt b/src/app/CMakeLists.txt
+index e60d535576..14624ac7c0 100644
+--- a/src/app/CMakeLists.txt
++++ b/src/app/CMakeLists.txt
+@@ -774,8 +774,8 @@ endif()
+ 
+ if (HAVE_GEOREFERENCER)
+   target_link_libraries(qgis_app
+-    GSL::gsl GSL::gslcblas
+-  )
++    ${GSL_LIBRARIES}
++)
+ endif()
+ 
+ GENERATE_EXPORT_HEADER(
+diff --git a/src/core/CMakeLists.txt b/src/core/CMakeLists.txt
+index b6d7665082..1a8d6f5fe1 100644
+--- a/src/core/CMakeLists.txt
++++ b/src/core/CMakeLists.txt
+@@ -2253,7 +2253,8 @@ if(ENABLE_MODELTEST)
+ endif()
+ 
+ if (NOT WITH_INTERNAL_POLY2TRI)
+-   target_link_libraries(qgis_core poly2tri::poly2tri)
++   find_package(poly2tri CONFIG REQUIRED)
++   target_link_libraries(qgis_core  poly2tri::poly2tri)
+ endif()
+ 
+ if(HAVE_OPENCL)
+@@ -2307,7 +2308,7 @@ endif()
+ if (APPLE)
+   target_link_libraries(qgis_core ${LIBTASN1_LIBRARY})
+ endif()
+-
++find_package(PROJ CONFIG REQUIRED)
+ target_link_libraries(qgis_core
+   ${QT_VERSION_BASE}::Core
+   ${QT_VERSION_BASE}::Gui

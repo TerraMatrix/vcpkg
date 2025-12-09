@@ -1,0 +1,12 @@
+diff --git a/src/providers/pdal/CMakeLists.txt b/src/providers/pdal/CMakeLists.txt
+index b6d5020d0e..de682920b8 100644
+--- a/src/providers/pdal/CMakeLists.txt
++++ b/src/providers/pdal/CMakeLists.txt
+@@ -136,6 +136,7 @@ set_target_properties(untwine PROPERTIES
+ target_link_libraries (untwine
+   ${PDAL_LIBRARIES}
+   Threads::Threads
++  Ws2_32 
+ )
+ target_include_directories(untwine PRIVATE ${UNTWINE_INCLUDE_DIRS})
+ 
