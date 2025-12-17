@@ -55,7 +55,7 @@ add_library(qca SHARED IMPORTED)
 
 set_target_properties(qca PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${VCPKG_IMPORT_PREFIX}/include/QtCrypto"
-  INTERFACE_LINK_LIBRARIES "Qt6::Core"
+  INTERFACE_LINK_LIBRARIES "Qt5::Core;crypt32;ws2_32"
 )
 
 # Load information for each installed configuration.

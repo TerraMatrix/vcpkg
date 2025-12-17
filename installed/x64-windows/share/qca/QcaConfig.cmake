@@ -25,10 +25,10 @@ endmacro()
 ####################################################################################
 
 include(CMakeFindDependencyMacro)
-find_dependency(Qt6Core)
+find_dependency(Qt5Core)
 
-if (6 EQUAL 6 AND NOT )
-    find_dependency(Qt6Core5Compat)
+if (5 EQUAL 6)
+    find_dependency(Qt5Core5Compat)
 endif()
 
 if(NOT TARGET qca)
