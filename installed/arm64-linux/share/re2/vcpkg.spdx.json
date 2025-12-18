@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/re2-arm64-linux-2025-08-12-d4ea18bb-c8b1-4636-93aa-5b394d5e0c19",
-  "name": "re2:arm64-linux@2025-08-12 b666eb7e1dc9b170972970652ef3883460de42cd5eb51dd144238b870059ef5d",
+  "documentNamespace": "https://spdx.org/spdxdocs/re2-arm64-linux-2025-08-12-e60659d9-3309-4de2-91e9-8eac7d3ea047",
+  "name": "re2:arm64-linux@2025-08-12 2ed368690be2e4f78246cc2755cd3fff51f1dd917a2b39d96ca639677799f72f",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T05:17:02Z"
+    "created": "2025-12-17T03:32:17Z"
   },
   "relationships": [
     {
@@ -101,11 +101,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-13"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-14"
     }
   ],
   "packages": [
@@ -124,7 +119,7 @@
     {
       "name": "re2:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "b666eb7e1dc9b170972970652ef3883460de42cd5eb51dd144238b870059ef5d",
+      "versionInfo": "2ed368690be2e4f78246cc2755cd3fff51f1dd917a2b39d96ca639677799f72f",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -177,31 +172,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/re2.pc",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "3421f59ba985d07fbe894416d09004347cc089ef4aaff575ca2413aec1c395a5"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libre2.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "52a9e892c88dfe28439b3b31e1f1415a3ae62f1e9d560a8987cf991e6bf895e5"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -209,11 +180,11 @@
     },
     {
       "fileName": "./share/re2/re2Targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "56c8334ab4d196a2f1d81370b6663396b5ec56795b3920bbbaf66d286eb92a1a"
+          "checksumValue": "7c261c7096a418f50c8c169dd392f5f503f2bfddc8ebc89b736537d3432fa0f3"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -221,7 +192,7 @@
     },
     {
       "fileName": "./share/re2/copyright",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -233,7 +204,7 @@
     },
     {
       "fileName": "./share/re2/re2ConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -244,20 +215,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/re2/re2Targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "a3af674104b4cbc1841a57810355772cea649f7abb6d8ee7aac64abd38d955d8"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/re2/re2Config.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -269,11 +228,11 @@
     },
     {
       "fileName": "./share/re2/re2Targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "342bc00301b32886069aa5ae344c05dd6413039bae78a11f4487180083594391"
+          "checksumValue": "e44466ec6079460153ec3b825b9e366b9dcf2913b381c8a2f6c3016ce132f8d8"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -281,7 +240,7 @@
     },
     {
       "fileName": "./include/re2/filtered_re2.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -293,7 +252,7 @@
     },
     {
       "fileName": "./include/re2/re2.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -305,7 +264,7 @@
     },
     {
       "fileName": "./include/re2/set.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -317,7 +276,7 @@
     },
     {
       "fileName": "./include/re2/stringpiece.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -328,24 +287,48 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/pkgconfig/re2.pc",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "fileName": "./lib/libre2.so.11.0.0",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "c7da6893e3f38c3c497ba6150d7e508de054786087f410381cbd9d0cf4ed03c2"
+          "checksumValue": "4d319f72a15e6694a76cc30a95401a3bda4ef482d8420cbeb1c5fef55d7ab11e"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libre2.a",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "fileName": "./lib/libre2.so.11",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "cb24280a2506c3dcbd78986610024bf639651ebdef22d7b58aca6a58d89b58ae"
+          "checksumValue": "4d319f72a15e6694a76cc30a95401a3bda4ef482d8420cbeb1c5fef55d7ab11e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/pkgconfig/re2.pc",
+      "SPDXID": "SPDXRef-binary-file-12",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a1f7ea431b14361b6a84569018e888445d57767441c47e9ed06520acf490153f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libre2.so",
+      "SPDXID": "SPDXRef-binary-file-13",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4d319f72a15e6694a76cc30a95401a3bda4ef482d8420cbeb1c5fef55d7ab11e"
         }
       ],
       "licenseConcluded": "NOASSERTION",

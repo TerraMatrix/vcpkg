@@ -55,18 +55,12 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target asmjit::asmjit
-add_library(asmjit::asmjit STATIC IMPORTED)
+add_library(asmjit::asmjit SHARED IMPORTED)
 
 set_target_properties(asmjit::asmjit PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
-  INTERFACE_COMPILE_OPTIONS "-DASMJIT_STATIC"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:c>;\$<LINK_ONLY:rt>"
 )
-
-if(CMAKE_VERSION VERSION_LESS 2.8.12)
-  message(FATAL_ERROR "This file relies on consumers using CMake 2.8.12 or greater.")
-endif()
 
 # Load information for each installed configuration.
 file(GLOB _cmake_config_files "${CMAKE_CURRENT_LIST_DIR}/asmjit-config-*.cmake")

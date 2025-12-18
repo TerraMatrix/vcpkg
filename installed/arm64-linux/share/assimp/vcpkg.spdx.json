@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/assimp-arm64-linux-6.0.2#1-442ba27a-52d8-4d51-8eac-040450ea319b",
-  "name": "assimp:arm64-linux@6.0.2#1 f607fc4a326c059a337006c87d556ee49fa68cee54156dac05d7b3a1b288c7de",
+  "documentNamespace": "https://spdx.org/spdxdocs/assimp-arm64-linux-6.0.2#1-d3870032-e7a2-4a01-b1e3-ded4fb219f8e",
+  "name": "assimp:arm64-linux@6.0.2#1 dfdf576575de566649f954b318531e7e3a3c15bb57b1d6c65f201d82b16214e0",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-26T09:52:07Z"
+    "created": "2025-12-17T02:23:41Z"
   },
   "relationships": [
     {
@@ -531,11 +531,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-98"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-99"
     }
   ],
   "packages": [
@@ -554,7 +549,7 @@
     {
       "name": "assimp:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "f607fc4a326c059a337006c87d556ee49fa68cee54156dac05d7b3a1b288c7de",
+      "versionInfo": "dfdf576575de566649f954b318531e7e3a3c15bb57b1d6c65f201d82b16214e0",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -619,31 +614,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libassimpd.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "61cab49e3b1c98b256ff79d2eb01834a90d80f516398ca4f31feb2cbea007181"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/assimp.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "6c1d4f45ce48cbd9bf1d3462055fa20a0c11f3f44898da8e9c93d6a928aa3394"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -651,11 +622,11 @@
     },
     {
       "fileName": "./share/assimp/assimpTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "14e99eb36fa1a5468adf0fac04434e455c006b4078cc330845e22ccf167e0cd4"
+          "checksumValue": "abc15db5c60b160b42a08db29d910ee1b47747e5df020c4302ed1db12bc9b318"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -663,23 +634,11 @@
     },
     {
       "fileName": "./share/assimp/assimpConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "6ca5938fe240d178cda7931344cad631b38a5412884740ab1958cae4fa37b947"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/assimp/assimpTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "5e76fd2d40ac3d19d1558528e0edc0ed7c55c74fec7de2e57f8dace7028f22ff"
+          "checksumValue": "d6a150ef1afc397ca03c6e6f4f9a3235238c9887eabaead560f5b974a2ca4850"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -687,11 +646,11 @@
     },
     {
       "fileName": "./share/assimp/assimpTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "edf2e2f6744f6f2f723901a76cefd9fc471fc1cadc31fb218b7c7d6c635d2baf"
+          "checksumValue": "9042d00dbc250320d91150edf01ffeaea167fd1aade49b8e7436a8692d53e455"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -699,7 +658,7 @@
     },
     {
       "fileName": "./share/assimp/copyright",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -711,7 +670,7 @@
     },
     {
       "fileName": "./share/assimp/assimpConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -723,7 +682,7 @@
     },
     {
       "fileName": "./include/assimp/Profiler.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -735,7 +694,7 @@
     },
     {
       "fileName": "./include/assimp/IOStream.hpp",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -747,7 +706,7 @@
     },
     {
       "fileName": "./include/assimp/XMLTools.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -759,7 +718,7 @@
     },
     {
       "fileName": "./include/assimp/ProgressHandler.hpp",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -771,7 +730,7 @@
     },
     {
       "fileName": "./include/assimp/material.inl",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -783,7 +742,7 @@
     },
     {
       "fileName": "./include/assimp/cimport.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -795,7 +754,7 @@
     },
     {
       "fileName": "./include/assimp/Hash.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -807,7 +766,7 @@
     },
     {
       "fileName": "./include/assimp/SmoothingGroups.inl",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -819,7 +778,7 @@
     },
     {
       "fileName": "./include/assimp/Bitmap.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -831,7 +790,7 @@
     },
     {
       "fileName": "./include/assimp/BlobIOSystem.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -843,7 +802,7 @@
     },
     {
       "fileName": "./include/assimp/ObjMaterial.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -855,7 +814,7 @@
     },
     {
       "fileName": "./include/assimp/Vertex.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -867,7 +826,7 @@
     },
     {
       "fileName": "./include/assimp/SceneCombiner.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -879,7 +838,7 @@
     },
     {
       "fileName": "./include/assimp/color4.inl",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -891,7 +850,7 @@
     },
     {
       "fileName": "./include/assimp/matrix4x4.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -903,7 +862,7 @@
     },
     {
       "fileName": "./include/assimp/qnan.h",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -915,7 +874,7 @@
     },
     {
       "fileName": "./include/assimp/LogAux.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -927,7 +886,7 @@
     },
     {
       "fileName": "./include/assimp/aabb.h",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -939,7 +898,7 @@
     },
     {
       "fileName": "./include/assimp/ParsingUtils.h",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -951,7 +910,7 @@
     },
     {
       "fileName": "./include/assimp/DefaultLogger.hpp",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -963,7 +922,7 @@
     },
     {
       "fileName": "./include/assimp/Importer.hpp",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -975,7 +934,7 @@
     },
     {
       "fileName": "./include/assimp/StandardShapes.h",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -987,7 +946,7 @@
     },
     {
       "fileName": "./include/assimp/cfileio.h",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -999,7 +958,7 @@
     },
     {
       "fileName": "./include/assimp/vector2.h",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1011,7 +970,7 @@
     },
     {
       "fileName": "./include/assimp/importerdesc.h",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1023,7 +982,7 @@
     },
     {
       "fileName": "./include/assimp/vector3.inl",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1035,7 +994,7 @@
     },
     {
       "fileName": "./include/assimp/StreamReader.h",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1047,7 +1006,7 @@
     },
     {
       "fileName": "./include/assimp/RemoveComments.h",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1059,7 +1018,7 @@
     },
     {
       "fileName": "./include/assimp/postprocess.h",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1071,7 +1030,7 @@
     },
     {
       "fileName": "./include/assimp/Base64.hpp",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1083,7 +1042,7 @@
     },
     {
       "fileName": "./include/assimp/AssertHandler.h",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1095,7 +1054,7 @@
     },
     {
       "fileName": "./include/assimp/StringUtils.h",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1107,7 +1066,7 @@
     },
     {
       "fileName": "./include/assimp/LineSplitter.h",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1119,7 +1078,7 @@
     },
     {
       "fileName": "./include/assimp/IOStreamBuffer.h",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1131,7 +1090,7 @@
     },
     {
       "fileName": "./include/assimp/LogStream.hpp",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1143,7 +1102,7 @@
     },
     {
       "fileName": "./include/assimp/TinyFormatter.h",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1155,7 +1114,7 @@
     },
     {
       "fileName": "./include/assimp/Exporter.hpp",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1167,7 +1126,7 @@
     },
     {
       "fileName": "./include/assimp/config.h",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1179,7 +1138,7 @@
     },
     {
       "fileName": "./include/assimp/material.h",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1191,7 +1150,7 @@
     },
     {
       "fileName": "./include/assimp/color4.h",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1203,7 +1162,7 @@
     },
     {
       "fileName": "./include/assimp/SmallVector.h",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1215,7 +1174,7 @@
     },
     {
       "fileName": "./include/assimp/SmoothingGroups.h",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1227,7 +1186,7 @@
     },
     {
       "fileName": "./include/assimp/MemoryIOWrapper.h",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1239,7 +1198,7 @@
     },
     {
       "fileName": "./include/assimp/camera.h",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1251,7 +1210,7 @@
     },
     {
       "fileName": "./include/assimp/version.h",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1263,7 +1222,7 @@
     },
     {
       "fileName": "./include/assimp/ColladaMetaData.h",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1275,7 +1234,7 @@
     },
     {
       "fileName": "./include/assimp/BaseImporter.h",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1287,7 +1246,7 @@
     },
     {
       "fileName": "./include/assimp/GltfMaterial.h",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1299,7 +1258,7 @@
     },
     {
       "fileName": "./include/assimp/texture.h",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1311,7 +1270,7 @@
     },
     {
       "fileName": "./include/assimp/matrix3x3.inl",
-      "SPDXID": "SPDXRef-binary-file-58",
+      "SPDXID": "SPDXRef-binary-file-55",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1323,7 +1282,7 @@
     },
     {
       "fileName": "./include/assimp/matrix3x3.h",
-      "SPDXID": "SPDXRef-binary-file-59",
+      "SPDXID": "SPDXRef-binary-file-56",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1335,7 +1294,7 @@
     },
     {
       "fileName": "./include/assimp/ByteSwapper.h",
-      "SPDXID": "SPDXRef-binary-file-60",
+      "SPDXID": "SPDXRef-binary-file-57",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1347,7 +1306,7 @@
     },
     {
       "fileName": "./include/assimp/GenericProperty.h",
-      "SPDXID": "SPDXRef-binary-file-61",
+      "SPDXID": "SPDXRef-binary-file-58",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1359,7 +1318,7 @@
     },
     {
       "fileName": "./include/assimp/Compiler/pstdint.h",
-      "SPDXID": "SPDXRef-binary-file-62",
+      "SPDXID": "SPDXRef-binary-file-59",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1371,7 +1330,7 @@
     },
     {
       "fileName": "./include/assimp/Compiler/pushpack1.h",
-      "SPDXID": "SPDXRef-binary-file-63",
+      "SPDXID": "SPDXRef-binary-file-60",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1383,7 +1342,7 @@
     },
     {
       "fileName": "./include/assimp/Compiler/poppack1.h",
-      "SPDXID": "SPDXRef-binary-file-64",
+      "SPDXID": "SPDXRef-binary-file-61",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1395,7 +1354,7 @@
     },
     {
       "fileName": "./include/assimp/DefaultIOStream.h",
-      "SPDXID": "SPDXRef-binary-file-65",
+      "SPDXID": "SPDXRef-binary-file-62",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1407,7 +1366,7 @@
     },
     {
       "fileName": "./include/assimp/Subdivision.h",
-      "SPDXID": "SPDXRef-binary-file-66",
+      "SPDXID": "SPDXRef-binary-file-63",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1419,7 +1378,7 @@
     },
     {
       "fileName": "./include/assimp/CreateAnimMesh.h",
-      "SPDXID": "SPDXRef-binary-file-67",
+      "SPDXID": "SPDXRef-binary-file-64",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1431,7 +1390,7 @@
     },
     {
       "fileName": "./include/assimp/ai_assert.h",
-      "SPDXID": "SPDXRef-binary-file-68",
+      "SPDXID": "SPDXRef-binary-file-65",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1443,7 +1402,7 @@
     },
     {
       "fileName": "./include/assimp/StreamWriter.h",
-      "SPDXID": "SPDXRef-binary-file-69",
+      "SPDXID": "SPDXRef-binary-file-66",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1455,7 +1414,7 @@
     },
     {
       "fileName": "./include/assimp/NullLogger.hpp",
-      "SPDXID": "SPDXRef-binary-file-70",
+      "SPDXID": "SPDXRef-binary-file-67",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1467,7 +1426,7 @@
     },
     {
       "fileName": "./include/assimp/SpatialSort.h",
-      "SPDXID": "SPDXRef-binary-file-71",
+      "SPDXID": "SPDXRef-binary-file-68",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1479,7 +1438,7 @@
     },
     {
       "fileName": "./include/assimp/mesh.h",
-      "SPDXID": "SPDXRef-binary-file-72",
+      "SPDXID": "SPDXRef-binary-file-69",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1491,7 +1450,7 @@
     },
     {
       "fileName": "./include/assimp/DefaultIOSystem.h",
-      "SPDXID": "SPDXRef-binary-file-73",
+      "SPDXID": "SPDXRef-binary-file-70",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1503,7 +1462,7 @@
     },
     {
       "fileName": "./include/assimp/types.h",
-      "SPDXID": "SPDXRef-binary-file-74",
+      "SPDXID": "SPDXRef-binary-file-71",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1515,7 +1474,7 @@
     },
     {
       "fileName": "./include/assimp/XmlParser.h",
-      "SPDXID": "SPDXRef-binary-file-75",
+      "SPDXID": "SPDXRef-binary-file-72",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1527,7 +1486,7 @@
     },
     {
       "fileName": "./include/assimp/pbrmaterial.h",
-      "SPDXID": "SPDXRef-binary-file-76",
+      "SPDXID": "SPDXRef-binary-file-73",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1539,7 +1498,7 @@
     },
     {
       "fileName": "./include/assimp/matrix4x4.inl",
-      "SPDXID": "SPDXRef-binary-file-77",
+      "SPDXID": "SPDXRef-binary-file-74",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1551,7 +1510,7 @@
     },
     {
       "fileName": "./include/assimp/quaternion.h",
-      "SPDXID": "SPDXRef-binary-file-78",
+      "SPDXID": "SPDXRef-binary-file-75",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1563,7 +1522,7 @@
     },
     {
       "fileName": "./include/assimp/MathFunctions.h",
-      "SPDXID": "SPDXRef-binary-file-79",
+      "SPDXID": "SPDXRef-binary-file-76",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1575,7 +1534,7 @@
     },
     {
       "fileName": "./include/assimp/scene.h",
-      "SPDXID": "SPDXRef-binary-file-80",
+      "SPDXID": "SPDXRef-binary-file-77",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1587,7 +1546,7 @@
     },
     {
       "fileName": "./include/assimp/quaternion.inl",
-      "SPDXID": "SPDXRef-binary-file-81",
+      "SPDXID": "SPDXRef-binary-file-78",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1599,7 +1558,7 @@
     },
     {
       "fileName": "./include/assimp/anim.h",
-      "SPDXID": "SPDXRef-binary-file-82",
+      "SPDXID": "SPDXRef-binary-file-79",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1611,7 +1570,7 @@
     },
     {
       "fileName": "./include/assimp/SkeletonMeshBuilder.h",
-      "SPDXID": "SPDXRef-binary-file-83",
+      "SPDXID": "SPDXRef-binary-file-80",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1623,7 +1582,7 @@
     },
     {
       "fileName": "./include/assimp/Exceptional.h",
-      "SPDXID": "SPDXRef-binary-file-84",
+      "SPDXID": "SPDXRef-binary-file-81",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1635,7 +1594,7 @@
     },
     {
       "fileName": "./include/assimp/SGSpatialSort.h",
-      "SPDXID": "SPDXRef-binary-file-85",
+      "SPDXID": "SPDXRef-binary-file-82",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1647,7 +1606,7 @@
     },
     {
       "fileName": "./include/assimp/Logger.hpp",
-      "SPDXID": "SPDXRef-binary-file-86",
+      "SPDXID": "SPDXRef-binary-file-83",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1659,7 +1618,7 @@
     },
     {
       "fileName": "./include/assimp/vector2.inl",
-      "SPDXID": "SPDXRef-binary-file-87",
+      "SPDXID": "SPDXRef-binary-file-84",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1671,7 +1630,7 @@
     },
     {
       "fileName": "./include/assimp/vector3.h",
-      "SPDXID": "SPDXRef-binary-file-88",
+      "SPDXID": "SPDXRef-binary-file-85",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1683,7 +1642,7 @@
     },
     {
       "fileName": "./include/assimp/light.h",
-      "SPDXID": "SPDXRef-binary-file-89",
+      "SPDXID": "SPDXRef-binary-file-86",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1695,7 +1654,7 @@
     },
     {
       "fileName": "./include/assimp/ZipArchiveIOSystem.h",
-      "SPDXID": "SPDXRef-binary-file-90",
+      "SPDXID": "SPDXRef-binary-file-87",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1707,7 +1666,7 @@
     },
     {
       "fileName": "./include/assimp/StringComparison.h",
-      "SPDXID": "SPDXRef-binary-file-91",
+      "SPDXID": "SPDXRef-binary-file-88",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1719,7 +1678,7 @@
     },
     {
       "fileName": "./include/assimp/defs.h",
-      "SPDXID": "SPDXRef-binary-file-92",
+      "SPDXID": "SPDXRef-binary-file-89",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1731,7 +1690,7 @@
     },
     {
       "fileName": "./include/assimp/cexport.h",
-      "SPDXID": "SPDXRef-binary-file-93",
+      "SPDXID": "SPDXRef-binary-file-90",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1743,7 +1702,7 @@
     },
     {
       "fileName": "./include/assimp/IOSystem.hpp",
-      "SPDXID": "SPDXRef-binary-file-94",
+      "SPDXID": "SPDXRef-binary-file-91",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1755,7 +1714,7 @@
     },
     {
       "fileName": "./include/assimp/fast_atof.h",
-      "SPDXID": "SPDXRef-binary-file-95",
+      "SPDXID": "SPDXRef-binary-file-92",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1767,7 +1726,7 @@
     },
     {
       "fileName": "./include/assimp/metadata.h",
-      "SPDXID": "SPDXRef-binary-file-96",
+      "SPDXID": "SPDXRef-binary-file-93",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1779,7 +1738,7 @@
     },
     {
       "fileName": "./include/assimp/commonMetaData.h",
-      "SPDXID": "SPDXRef-binary-file-97",
+      "SPDXID": "SPDXRef-binary-file-94",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1790,12 +1749,24 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libassimp.a",
-      "SPDXID": "SPDXRef-binary-file-98",
+      "fileName": "./lib/libassimp.so.6.0.2",
+      "SPDXID": "SPDXRef-binary-file-95",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "82d1e7e30cfaed483decaca15d2734f04902c8fdecc8b9cb053106625a5d0124"
+          "checksumValue": "70a25d06fbffab9c658a4721407ca79662dccf00dceee42ac60a74190de96f48"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libassimp.so",
+      "SPDXID": "SPDXRef-binary-file-96",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "70a25d06fbffab9c658a4721407ca79662dccf00dceee42ac60a74190de96f48"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1803,11 +1774,23 @@
     },
     {
       "fileName": "./lib/pkgconfig/assimp.pc",
-      "SPDXID": "SPDXRef-binary-file-99",
+      "SPDXID": "SPDXRef-binary-file-97",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b6632b106b5140f4676ac42380f1c0902ded23e55c2ae0007a7582204f6dae4b"
+          "checksumValue": "aa427f15b75e4b387d80a4d36ab108e501da44ba462c81d6980968c2311a1483"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libassimp.so.6",
+      "SPDXID": "SPDXRef-binary-file-98",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "70a25d06fbffab9c658a4721407ca79662dccf00dceee42ac60a74190de96f48"
         }
       ],
       "licenseConcluded": "NOASSERTION",

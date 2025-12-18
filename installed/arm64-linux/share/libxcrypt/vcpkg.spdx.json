@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/libxcrypt-arm64-linux-4.4.38#1-1ec8be6d-2b24-476f-976f-2a5a39aba409",
-  "name": "libxcrypt:arm64-linux@4.4.38#1 2e8180edc9379e7d0dbf6731df08bfc1fc96166df7f5582bc378705129700bcd",
+  "documentNamespace": "https://spdx.org/spdxdocs/libxcrypt-arm64-linux-4.4.38#1-98e1e6a7-1662-44e6-b085-5c09cd43549b",
+  "name": "libxcrypt:arm64-linux@4.4.38#1 433a88c55261b459130f618cd98efbe3eaca0cb786c1ca40396f12508566a14d",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T04:44:18Z"
+    "created": "2025-12-17T02:24:49Z"
   },
   "relationships": [
     {
@@ -126,6 +126,21 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-18"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-19"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-20"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-21"
     }
   ],
   "packages": [
@@ -144,7 +159,7 @@
     {
       "name": "libxcrypt:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "2e8180edc9379e7d0dbf6731df08bfc1fc96166df7f5582bc378705129700bcd",
+      "versionInfo": "433a88c55261b459130f618cd98efbe3eaca0cb786c1ca40396f12508566a14d",
       "downloadLocation": "NONE",
       "licenseConcluded": "LicenseRef-vcpkg-null",
       "licenseDeclared": "NOASSERTION",
@@ -197,43 +212,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "25c6473085d812615f049dd12a04b2df8c4684a93814503f05ee9eb5b8d261c9"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libcrypt.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "fdc7a078e7c754317e0be872c47bf87d4f6e32a417df0a58a3e1e01bd08dc2a0"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libxcrypt.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "68d37bf5789eba9080915a807eaa95c4b8e8e014306e2d05a87c7fc73a653d3a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libcrypt.pc",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "68d37bf5789eba9080915a807eaa95c4b8e8e014306e2d05a87c7fc73a653d3a"
+          "checksumValue": "71d1a0e967fae787cdc21e7852cc65855ba836b40a439a5053bc54dd9d993958"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -241,7 +220,7 @@
     },
     {
       "fileName": "./share/libxcrypt/man5/crypt.5",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -253,7 +232,7 @@
     },
     {
       "fileName": "./share/libxcrypt/copyright",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -265,7 +244,7 @@
     },
     {
       "fileName": "./share/libxcrypt/man3/crypt_gensalt.3",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -277,7 +256,7 @@
     },
     {
       "fileName": "./share/libxcrypt/man3/crypt_checksalt.3",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -289,7 +268,7 @@
     },
     {
       "fileName": "./share/libxcrypt/man3/crypt_rn.3",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -301,7 +280,7 @@
     },
     {
       "fileName": "./share/libxcrypt/man3/crypt_ra.3",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -313,7 +292,7 @@
     },
     {
       "fileName": "./share/libxcrypt/man3/crypt_preferred_method.3",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -325,7 +304,7 @@
     },
     {
       "fileName": "./share/libxcrypt/man3/crypt_gensalt_ra.3",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -337,7 +316,7 @@
     },
     {
       "fileName": "./share/libxcrypt/man3/crypt_r.3",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -349,7 +328,7 @@
     },
     {
       "fileName": "./share/libxcrypt/man3/crypt_gensalt_rn.3",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -361,7 +340,7 @@
     },
     {
       "fileName": "./share/libxcrypt/man3/crypt.3",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -372,8 +351,20 @@
       "copyrightText": "NOASSERTION"
     },
     {
+      "fileName": "./include/xcrypt.h",
+      "SPDXID": "SPDXRef-binary-file-12",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "27aa1b04629a87313e3218fb5887ee4967fddb299ddb5aad805d0012791adb5b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
       "fileName": "./include/crypt.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -384,12 +375,60 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libcrypt.a",
+      "fileName": "./lib/libowcrypt.so.1",
+      "SPDXID": "SPDXRef-binary-file-14",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3bb550fab4c76eb767a0d3072b15ae2ebe7870e7f0757ee780e484165bc07601"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libcrypt.so",
+      "SPDXID": "SPDXRef-binary-file-15",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3bb550fab4c76eb767a0d3072b15ae2ebe7870e7f0757ee780e484165bc07601"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libcrypt.so.1",
       "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b63258b885e532b8821f5cdfdbc0c81c80ba1ced7ef34a5531732ec829b7b434"
+          "checksumValue": "3bb550fab4c76eb767a0d3072b15ae2ebe7870e7f0757ee780e484165bc07601"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libcrypt.so.1.1.0",
+      "SPDXID": "SPDXRef-binary-file-17",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3bb550fab4c76eb767a0d3072b15ae2ebe7870e7f0757ee780e484165bc07601"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libxcrypt.so",
+      "SPDXID": "SPDXRef-binary-file-18",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3bb550fab4c76eb767a0d3072b15ae2ebe7870e7f0757ee780e484165bc07601"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -397,11 +436,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/libxcrypt.pc",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "8aa13274dc25a16bc9f44396e05aa2e855e3e44c0da1f1500403b017fc490443"
+          "checksumValue": "c86dc57dd94825382f98e3230b917a3a6391824e9d875d0b99d76c8745dcbfff"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -409,11 +448,23 @@
     },
     {
       "fileName": "./lib/pkgconfig/libcrypt.pc",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "8aa13274dc25a16bc9f44396e05aa2e855e3e44c0da1f1500403b017fc490443"
+          "checksumValue": "c86dc57dd94825382f98e3230b917a3a6391824e9d875d0b99d76c8745dcbfff"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libowcrypt.so",
+      "SPDXID": "SPDXRef-binary-file-21",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3bb550fab4c76eb767a0d3072b15ae2ebe7870e7f0757ee780e484165bc07601"
         }
       ],
       "licenseConcluded": "NOASSERTION",

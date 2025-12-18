@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/boost-chrono-arm64-linux-1.89.0-7b2c1994-9415-4b35-92b4-e82e96b24d7b",
-  "name": "boost-chrono:arm64-linux@1.89.0 54fa3a88fd8c6b4a98ca3b78f6a2bca8be6f962ee5d142adccaf526fa0287424",
+  "documentNamespace": "https://spdx.org/spdxdocs/boost-chrono-arm64-linux-1.89.0-a20f6b9a-e890-43b5-9ec3-763e2d1cadc9",
+  "name": "boost-chrono:arm64-linux@1.89.0 3c1b53ae0bd2da9205603c39648cd3c51a8fbbde8dcd03b451981161650b4760",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-17T09:56:48Z"
+    "created": "2025-12-16T09:31:05Z"
   },
   "relationships": [
     {
@@ -316,11 +316,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-56"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-57"
     }
   ],
   "packages": [
@@ -339,7 +334,7 @@
     {
       "name": "boost-chrono:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "54fa3a88fd8c6b4a98ca3b78f6a2bca8be6f962ee5d142adccaf526fa0287424",
+      "versionInfo": "3c1b53ae0bd2da9205603c39648cd3c51a8fbbde8dcd03b451981161650b4760",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSL-1.0",
       "licenseDeclared": "NOASSERTION",
@@ -392,19 +387,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libboost_chrono.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "7c0a9c4d2a182899384a0c6428a3a3b4f3ba22b118ef4ca383c4f69d541b0310"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -412,7 +395,7 @@
     },
     {
       "fileName": "./share/boost-chrono/copyright",
-      "SPDXID": "SPDXRef-binary-file-2",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -424,7 +407,7 @@
     },
     {
       "fileName": "./share/boost_chrono/boost_chrono-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -435,24 +418,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/boost_chrono/boost_chrono-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "da336ac13d7a2d8c65ee4a99f53ca8d8450993003ffaaf52a5febc11fb2983e0"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/boost_chrono/boost_chrono-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "6248ad54062fba5f78981c8216ee4ff1cc76e622c08782efcbd25e6e5090d71e"
+          "checksumValue": "b5413283853a5a38f27cb07f33e5820b1652eddf5236957236dec9870cf9f08c"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -460,11 +431,11 @@
     },
     {
       "fileName": "./share/boost_chrono/boost_chrono-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "29d804e0d12a2b090ad5f5741d4f6c71a828df71535a5a38df12607634e113f0"
+          "checksumValue": "ea9387240a4a755e78bde8aad51f365a26c9b385e6390ff7edc3782db676a126"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -472,7 +443,7 @@
     },
     {
       "fileName": "./share/boost_chrono/boost_chrono-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -484,7 +455,7 @@
     },
     {
       "fileName": "./include/boost/chrono.hpp",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -496,7 +467,7 @@
     },
     {
       "fileName": "./include/boost/chrono/floor.hpp",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -508,7 +479,7 @@
     },
     {
       "fileName": "./include/boost/chrono/typeof/boost/ratio.hpp",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -520,7 +491,7 @@
     },
     {
       "fileName": "./include/boost/chrono/typeof/boost/chrono/chrono.hpp",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -532,7 +503,7 @@
     },
     {
       "fileName": "./include/boost/chrono/duration.hpp",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -544,7 +515,7 @@
     },
     {
       "fileName": "./include/boost/chrono/chrono_io.hpp",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -556,7 +527,7 @@
     },
     {
       "fileName": "./include/boost/chrono/chrono.hpp",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -568,7 +539,7 @@
     },
     {
       "fileName": "./include/boost/chrono/thread_clock.hpp",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -580,7 +551,7 @@
     },
     {
       "fileName": "./include/boost/chrono/system_clocks.hpp",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -592,7 +563,7 @@
     },
     {
       "fileName": "./include/boost/chrono/ceil.hpp",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -604,7 +575,7 @@
     },
     {
       "fileName": "./include/boost/chrono/io_v1/chrono_io.hpp",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -616,7 +587,7 @@
     },
     {
       "fileName": "./include/boost/chrono/io/ios_base_state.hpp",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -628,7 +599,7 @@
     },
     {
       "fileName": "./include/boost/chrono/io/duration_io.hpp",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -640,7 +611,7 @@
     },
     {
       "fileName": "./include/boost/chrono/io/utility/manip_base.hpp",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -652,7 +623,7 @@
     },
     {
       "fileName": "./include/boost/chrono/io/utility/ios_base_state_ptr.hpp",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -664,7 +635,7 @@
     },
     {
       "fileName": "./include/boost/chrono/io/utility/to_string.hpp",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -676,7 +647,7 @@
     },
     {
       "fileName": "./include/boost/chrono/io/time_point_get.hpp",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -688,7 +659,7 @@
     },
     {
       "fileName": "./include/boost/chrono/io/duration_style.hpp",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -700,7 +671,7 @@
     },
     {
       "fileName": "./include/boost/chrono/io/timezone.hpp",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -712,7 +683,7 @@
     },
     {
       "fileName": "./include/boost/chrono/io/time_point_io.hpp",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -724,7 +695,7 @@
     },
     {
       "fileName": "./include/boost/chrono/io/duration_get.hpp",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -736,7 +707,7 @@
     },
     {
       "fileName": "./include/boost/chrono/io/duration_put.hpp",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -748,7 +719,7 @@
     },
     {
       "fileName": "./include/boost/chrono/io/duration_units.hpp",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -760,7 +731,7 @@
     },
     {
       "fileName": "./include/boost/chrono/io/time_point_put.hpp",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -772,7 +743,7 @@
     },
     {
       "fileName": "./include/boost/chrono/io/time_point_units.hpp",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -784,7 +755,7 @@
     },
     {
       "fileName": "./include/boost/chrono/round.hpp",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -796,7 +767,7 @@
     },
     {
       "fileName": "./include/boost/chrono/time_point.hpp",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -808,7 +779,7 @@
     },
     {
       "fileName": "./include/boost/chrono/config.hpp",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -820,7 +791,7 @@
     },
     {
       "fileName": "./include/boost/chrono/process_cpu_clocks.hpp",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -832,7 +803,7 @@
     },
     {
       "fileName": "./include/boost/chrono/include.hpp",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -844,7 +815,7 @@
     },
     {
       "fileName": "./include/boost/chrono/detail/no_warning/signed_unsigned_cmp.hpp",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -856,7 +827,7 @@
     },
     {
       "fileName": "./include/boost/chrono/detail/requires_cxx11.hpp",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -868,7 +839,7 @@
     },
     {
       "fileName": "./include/boost/chrono/detail/inlined/chrono.hpp",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -880,7 +851,7 @@
     },
     {
       "fileName": "./include/boost/chrono/detail/inlined/thread_clock.hpp",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -892,7 +863,7 @@
     },
     {
       "fileName": "./include/boost/chrono/detail/inlined/posix/chrono.hpp",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -904,7 +875,7 @@
     },
     {
       "fileName": "./include/boost/chrono/detail/inlined/posix/thread_clock.hpp",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -916,7 +887,7 @@
     },
     {
       "fileName": "./include/boost/chrono/detail/inlined/posix/process_cpu_clocks.hpp",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -928,7 +899,7 @@
     },
     {
       "fileName": "./include/boost/chrono/detail/inlined/win/chrono.hpp",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -940,7 +911,7 @@
     },
     {
       "fileName": "./include/boost/chrono/detail/inlined/win/thread_clock.hpp",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -952,7 +923,7 @@
     },
     {
       "fileName": "./include/boost/chrono/detail/inlined/win/process_cpu_clocks.hpp",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -964,7 +935,7 @@
     },
     {
       "fileName": "./include/boost/chrono/detail/inlined/mac/chrono.hpp",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -976,7 +947,7 @@
     },
     {
       "fileName": "./include/boost/chrono/detail/inlined/mac/thread_clock.hpp",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -988,7 +959,7 @@
     },
     {
       "fileName": "./include/boost/chrono/detail/inlined/mac/process_cpu_clocks.hpp",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1000,7 +971,7 @@
     },
     {
       "fileName": "./include/boost/chrono/detail/inlined/process_cpu_clocks.hpp",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1012,7 +983,7 @@
     },
     {
       "fileName": "./include/boost/chrono/detail/scan_keyword.hpp",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1024,7 +995,7 @@
     },
     {
       "fileName": "./include/boost/chrono/detail/static_assert.hpp",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1036,7 +1007,7 @@
     },
     {
       "fileName": "./include/boost/chrono/detail/is_evenly_divisible_by.hpp",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1048,7 +1019,7 @@
     },
     {
       "fileName": "./include/boost/chrono/detail/system.hpp",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1060,7 +1031,7 @@
     },
     {
       "fileName": "./include/boost/chrono/clock_string.hpp",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1071,12 +1042,24 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libboost_chrono.a",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "fileName": "./lib/libboost_chrono.so.1.89.0",
+      "SPDXID": "SPDXRef-binary-file-55",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ec7d3d55cf5acd1727c455e70ddf7b4f3905d5d1b906924f6d9b21a33201357c"
+          "checksumValue": "c0790d2de4e484500119faf82a7cadb14345830b16d3a15b6c87db77e9d1dc03"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libboost_chrono.so",
+      "SPDXID": "SPDXRef-binary-file-56",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c0790d2de4e484500119faf82a7cadb14345830b16d3a15b6c87db77e9d1dc03"
         }
       ],
       "licenseConcluded": "NOASSERTION",

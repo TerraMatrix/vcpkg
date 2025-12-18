@@ -55,7 +55,7 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target double-conversion::double-conversion
-add_library(double-conversion::double-conversion STATIC IMPORTED)
+add_library(double-conversion::double-conversion SHARED IMPORTED)
 
 set_target_properties(double-conversion::double-conversion PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"

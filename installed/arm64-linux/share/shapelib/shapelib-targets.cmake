@@ -55,7 +55,7 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target shapelib::shp
-add_library(shapelib::shp STATIC IMPORTED)
+add_library(shapelib::shp SHARED IMPORTED)
 
 set_target_properties(shapelib::shp PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"

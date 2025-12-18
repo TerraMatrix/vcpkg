@@ -26,10 +26,10 @@ endmacro()
 
 include(CMakeFindDependencyMacro)
 find_dependency(Threads)
-if("OFF")
+if("ON")
     find_dependency(ICU COMPONENTS uc data)
 endif()
-if("TRUE")
+if("")
     find_dependency(Iconv)
 endif()
 

@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/freexl-arm64-linux-2.0.0#1-ef234919-b560-40cb-8e1d-e238ae9213f5",
-  "name": "freexl:arm64-linux@2.0.0#1 3cbcc3fad73840dfc56a3a050968515bc528133c8d91e2f7ad7965be81986022",
+  "documentNamespace": "https://spdx.org/spdxdocs/freexl-arm64-linux-2.0.0#1-55001727-9d59-4ed0-8ce3-9841f673834d",
+  "name": "freexl:arm64-linux@2.0.0#1 d7f66c093e549f64127952f7a0e6286acae87a10abfb008df7c74d7e1ef9f224",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T03:31:10Z"
+    "created": "2025-12-16T11:08:30Z"
   },
   "relationships": [
     {
@@ -99,7 +99,7 @@
     {
       "name": "freexl:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "3cbcc3fad73840dfc56a3a050968515bc528133c8d91e2f7ad7965be81986022",
+      "versionInfo": "d7f66c093e549f64127952f7a0e6286acae87a10abfb008df7c74d7e1ef9f224",
       "downloadLocation": "NONE",
       "licenseConcluded": "(MPL-1.1 OR GPL-2.0-or-later OR LGPL-2.1-or-later)",
       "licenseDeclared": "NOASSERTION",
@@ -189,31 +189,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/freexl.pc",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "7aa07335ac49de8226503d05bbb7c3ed060db63c1323355ecd3076c98f480350"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libfreexl.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "2cb6863ce15f26cd6dc2e76cc2cb20773b064431f0293e4ac7b20c08d367194e"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -221,7 +197,7 @@
     },
     {
       "fileName": "./share/freexl/copyright",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -233,7 +209,7 @@
     },
     {
       "fileName": "./include/freexl.h",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -244,24 +220,48 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/pkgconfig/freexl.pc",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "fileName": "./lib/libfreexl.so.1.2.0",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b116b51855eea71001511898b50309ad52f42b4d960f4f65f464788fee95d49a"
+          "checksumValue": "401d0fffb0487d41d62acafa6445482596b3b3dcba376de7400570c09e05a2b2"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libfreexl.a",
+      "fileName": "./lib/libfreexl.so",
+      "SPDXID": "SPDXRef-binary-file-4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "401d0fffb0487d41d62acafa6445482596b3b3dcba376de7400570c09e05a2b2"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libfreexl.so.1",
+      "SPDXID": "SPDXRef-binary-file-5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "401d0fffb0487d41d62acafa6445482596b3b3dcba376de7400570c09e05a2b2"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/pkgconfig/freexl.pc",
       "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "72f9ce4f9d4cbb993350d2c2bff31600e13c0fd5bb34d8a07dc9f5376cdcd943"
+          "checksumValue": "b8cd8e09d860e9109b2f323446b7994a3cedbe535d77fa7d5d29bfe42bf4e29c"
         }
       ],
       "licenseConcluded": "NOASSERTION",

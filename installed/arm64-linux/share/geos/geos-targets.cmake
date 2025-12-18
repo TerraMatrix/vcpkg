@@ -55,11 +55,11 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target GEOS::geos
-add_library(GEOS::geos STATIC IMPORTED)
+add_library(GEOS::geos SHARED IMPORTED)
 
 set_target_properties(GEOS::geos PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include/geos;${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "GEOS::geos_cxx_flags;\$<LINK_ONLY:>"
+  INTERFACE_LINK_LIBRARIES "GEOS::geos_cxx_flags"
 )
 
 # Create imported target GEOS::geos_cxx_flags
@@ -73,11 +73,10 @@ set_target_properties(GEOS::geos_cxx_flags PROPERTIES
 )
 
 # Create imported target GEOS::geos_c
-add_library(GEOS::geos_c STATIC IMPORTED)
+add_library(GEOS::geos_c SHARED IMPORTED)
 
 set_target_properties(GEOS::geos_c PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include/geos;${_IMPORT_PREFIX}/include/geos;${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:GEOS::geos>"
 )
 
 if(CMAKE_VERSION VERSION_LESS 3.0.0)

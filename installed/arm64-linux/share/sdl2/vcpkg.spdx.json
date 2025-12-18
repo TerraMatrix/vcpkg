@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/sdl2-arm64-linux-2.32.10-a60aa258-ce49-44cc-b0f2-8d074d959b1c",
-  "name": "sdl2:arm64-linux@2.32.10 7e5e0324b554d9f363751c2905cbe933ee35e40c2aaaec96eebe1a4a80793093",
+  "documentNamespace": "https://spdx.org/spdxdocs/sdl2-arm64-linux-2.32.10-c76c5dab-a322-481e-ada8-02a06f4c6e51",
+  "name": "sdl2:arm64-linux@2.32.10 f620b531cefc1be18f1429a31524093617d7377f7f83b108e2dc7dde13cd493f",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-27T02:33:40Z"
+    "created": "2025-12-18T05:44:33Z"
   },
   "relationships": [
     {
@@ -526,16 +526,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-94"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-95"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-96"
     }
   ],
   "packages": [
@@ -554,7 +544,7 @@
     {
       "name": "sdl2:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "7e5e0324b554d9f363751c2905cbe933ee35e40c2aaaec96eebe1a4a80793093",
+      "versionInfo": "f620b531cefc1be18f1429a31524093617d7377f7f83b108e2dc7dde13cd493f",
       "downloadLocation": "NONE",
       "licenseConcluded": "Zlib",
       "licenseDeclared": "NOASSERTION",
@@ -655,43 +645,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libSDL2d.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "c7de81685a4850d094347f84d02c2b0e1471cc3b00a558a2ac285bcb7e2246ed"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/sdl2.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "2c3618ee09da772f4442f0a05ad255857c10ab5c03d005c5d2fd4b450c0743b3"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libSDL2maind.a",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "90f2aeb5f83fcd7925ca1763d13633e636119074d6098f348a871f8865f76070"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -699,7 +653,7 @@
     },
     {
       "fileName": "./share/sdl2/SDL2mainTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -710,8 +664,20 @@
       "copyrightText": "NOASSERTION"
     },
     {
+      "fileName": "./share/sdl2/SDL2Targets.cmake",
+      "SPDXID": "SPDXRef-binary-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4a95b6c8e23f5793762c3cd3574979d5011281bfff5eabfee004865a0f677d73"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
       "fileName": "./share/sdl2/SDL2Config.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -722,8 +688,20 @@
       "copyrightText": "NOASSERTION"
     },
     {
+      "fileName": "./share/sdl2/SDL2Targets-release.cmake",
+      "SPDXID": "SPDXRef-binary-file-4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "70d451345c799d2c9f6ad14cb8c9b0adc376930180d71dd1aaf34a0ee626bbde"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
       "fileName": "./share/sdl2/copyright",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -735,7 +713,7 @@
     },
     {
       "fileName": "./share/sdl2/SDL2ConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -746,32 +724,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/sdl2/SDL2staticTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "0d95a78eab45f8b7b62c889bd878f579ff6b895fd95fb9d57454b6f819492ca7"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/sdl2/SDL2staticTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "829efdfcc75e961d0df84ec4ec6f3bc8be2d1852ebfa93813011f0e8a676b56f"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/sdl2/sdlfind.cmake",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -782,20 +736,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/sdl2/SDL2staticTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-11",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "518e1490f12cf02da7118d24eb6708256448c731bc63e702e9714229ee03345d"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/sdl2/usage",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -806,20 +748,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/sdl2/SDL2mainTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-13",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "46fe6c5845bc220fade8fb399b43997bd9060a4201f7d4df519f870926519ba3"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/sdl2/SDL2mainTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -831,7 +761,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_copying.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -843,7 +773,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_test_log.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -855,7 +785,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_thread.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -867,7 +797,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_video.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -879,7 +809,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_joystick.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -891,7 +821,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_keyboard.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -903,7 +833,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_opengles2_gl2.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -915,7 +845,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_sensor.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -927,7 +857,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_hints.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -939,7 +869,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_metal.h",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -951,7 +881,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_opengl.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -963,7 +893,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_test_crc32.h",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -975,7 +905,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_opengles2_khrplatform.h",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -987,7 +917,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_quit.h",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -999,7 +929,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_pixels.h",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1011,7 +941,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_rwops.h",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1023,7 +953,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_main.h",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1035,7 +965,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_test_random.h",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1047,7 +977,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_guid.h",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1059,7 +989,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_revision.h",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1071,7 +1001,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_blendmode.h",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1083,7 +1013,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_test_fuzzer.h",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1095,7 +1025,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_test_memory.h",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1107,7 +1037,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_locale.h",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1119,7 +1049,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_egl.h",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1131,7 +1061,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_touch.h",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1143,7 +1073,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_error.h",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1155,7 +1085,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_keycode.h",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1167,7 +1097,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_system.h",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1179,7 +1109,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_mouse.h",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1191,7 +1121,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_clipboard.h",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1203,7 +1133,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_name.h",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1215,7 +1145,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_test_assert.h",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1227,7 +1157,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_vulkan.h",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1239,7 +1169,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_messagebox.h",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1251,7 +1181,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_gamecontroller.h",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1263,7 +1193,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_bits.h",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1275,7 +1205,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_surface.h",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1287,7 +1217,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_events.h",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1299,7 +1229,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_test_images.h",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1311,7 +1241,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_test_common.h",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1323,7 +1253,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_power.h",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1335,7 +1265,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_opengles2_gl2platform.h",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1347,7 +1277,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_platform.h",
-      "SPDXID": "SPDXRef-binary-file-58",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1359,7 +1289,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_filesystem.h",
-      "SPDXID": "SPDXRef-binary-file-59",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1371,7 +1301,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_opengl_glext.h",
-      "SPDXID": "SPDXRef-binary-file-60",
+      "SPDXID": "SPDXRef-binary-file-55",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1383,7 +1313,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_endian.h",
-      "SPDXID": "SPDXRef-binary-file-61",
+      "SPDXID": "SPDXRef-binary-file-56",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1395,7 +1325,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_scancode.h",
-      "SPDXID": "SPDXRef-binary-file-62",
+      "SPDXID": "SPDXRef-binary-file-57",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1407,7 +1337,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_mutex.h",
-      "SPDXID": "SPDXRef-binary-file-63",
+      "SPDXID": "SPDXRef-binary-file-58",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1419,11 +1349,11 @@
     },
     {
       "fileName": "./include/SDL2/SDL_config.h",
-      "SPDXID": "SPDXRef-binary-file-64",
+      "SPDXID": "SPDXRef-binary-file-59",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b81a67357823fd1c3c610a33c7dddb6f71a7d655c8deec96674de134e15cfc43"
+          "checksumValue": "b1d9c6ad6864e3f8105946533599ce5fa6c7f0b30aad54de868edca71bb7f4be"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1431,7 +1361,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_timer.h",
-      "SPDXID": "SPDXRef-binary-file-65",
+      "SPDXID": "SPDXRef-binary-file-60",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1443,7 +1373,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_rect.h",
-      "SPDXID": "SPDXRef-binary-file-66",
+      "SPDXID": "SPDXRef-binary-file-61",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1455,7 +1385,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_assert.h",
-      "SPDXID": "SPDXRef-binary-file-67",
+      "SPDXID": "SPDXRef-binary-file-62",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1467,7 +1397,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_test_compare.h",
-      "SPDXID": "SPDXRef-binary-file-68",
+      "SPDXID": "SPDXRef-binary-file-63",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1479,7 +1409,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_opengles2_gl2ext.h",
-      "SPDXID": "SPDXRef-binary-file-69",
+      "SPDXID": "SPDXRef-binary-file-64",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1491,7 +1421,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_stdinc.h",
-      "SPDXID": "SPDXRef-binary-file-70",
+      "SPDXID": "SPDXRef-binary-file-65",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1503,7 +1433,7 @@
     },
     {
       "fileName": "./include/SDL2/begin_code.h",
-      "SPDXID": "SPDXRef-binary-file-71",
+      "SPDXID": "SPDXRef-binary-file-66",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1515,7 +1445,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_audio.h",
-      "SPDXID": "SPDXRef-binary-file-72",
+      "SPDXID": "SPDXRef-binary-file-67",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1527,7 +1457,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_types.h",
-      "SPDXID": "SPDXRef-binary-file-73",
+      "SPDXID": "SPDXRef-binary-file-68",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1539,7 +1469,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_opengles2.h",
-      "SPDXID": "SPDXRef-binary-file-74",
+      "SPDXID": "SPDXRef-binary-file-69",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1551,7 +1481,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_opengles.h",
-      "SPDXID": "SPDXRef-binary-file-75",
+      "SPDXID": "SPDXRef-binary-file-70",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1563,7 +1493,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL.h",
-      "SPDXID": "SPDXRef-binary-file-76",
+      "SPDXID": "SPDXRef-binary-file-71",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1575,7 +1505,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_syswm.h",
-      "SPDXID": "SPDXRef-binary-file-77",
+      "SPDXID": "SPDXRef-binary-file-72",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1587,7 +1517,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_log.h",
-      "SPDXID": "SPDXRef-binary-file-78",
+      "SPDXID": "SPDXRef-binary-file-73",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1599,7 +1529,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_hidapi.h",
-      "SPDXID": "SPDXRef-binary-file-79",
+      "SPDXID": "SPDXRef-binary-file-74",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1611,7 +1541,7 @@
     },
     {
       "fileName": "./include/SDL2/close_code.h",
-      "SPDXID": "SPDXRef-binary-file-80",
+      "SPDXID": "SPDXRef-binary-file-75",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1623,7 +1553,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_haptic.h",
-      "SPDXID": "SPDXRef-binary-file-81",
+      "SPDXID": "SPDXRef-binary-file-76",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1635,7 +1565,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_version.h",
-      "SPDXID": "SPDXRef-binary-file-82",
+      "SPDXID": "SPDXRef-binary-file-77",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1647,7 +1577,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_shape.h",
-      "SPDXID": "SPDXRef-binary-file-83",
+      "SPDXID": "SPDXRef-binary-file-78",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1659,7 +1589,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_render.h",
-      "SPDXID": "SPDXRef-binary-file-84",
+      "SPDXID": "SPDXRef-binary-file-79",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1671,7 +1601,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_cpuinfo.h",
-      "SPDXID": "SPDXRef-binary-file-85",
+      "SPDXID": "SPDXRef-binary-file-80",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1683,7 +1613,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_gesture.h",
-      "SPDXID": "SPDXRef-binary-file-86",
+      "SPDXID": "SPDXRef-binary-file-81",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1695,7 +1625,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_misc.h",
-      "SPDXID": "SPDXRef-binary-file-87",
+      "SPDXID": "SPDXRef-binary-file-82",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1707,7 +1637,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_test_md5.h",
-      "SPDXID": "SPDXRef-binary-file-88",
+      "SPDXID": "SPDXRef-binary-file-83",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1719,7 +1649,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_test.h",
-      "SPDXID": "SPDXRef-binary-file-89",
+      "SPDXID": "SPDXRef-binary-file-84",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1731,7 +1661,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_loadso.h",
-      "SPDXID": "SPDXRef-binary-file-90",
+      "SPDXID": "SPDXRef-binary-file-85",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1743,7 +1673,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_test_font.h",
-      "SPDXID": "SPDXRef-binary-file-91",
+      "SPDXID": "SPDXRef-binary-file-86",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1755,7 +1685,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_atomic.h",
-      "SPDXID": "SPDXRef-binary-file-92",
+      "SPDXID": "SPDXRef-binary-file-87",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1767,7 +1697,7 @@
     },
     {
       "fileName": "./include/SDL2/SDL_test_harness.h",
-      "SPDXID": "SPDXRef-binary-file-93",
+      "SPDXID": "SPDXRef-binary-file-88",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1778,12 +1708,36 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libSDL2.a",
-      "SPDXID": "SPDXRef-binary-file-94",
+      "fileName": "./lib/libSDL2.so",
+      "SPDXID": "SPDXRef-binary-file-89",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d2cc740ca1c2c624d93ab7a831581b293a326b1e31f4f9221a853a2b27281655"
+          "checksumValue": "cb2b77e5aa22084c9e9f672eabd7a4673d0dfebf5ccb4759859c9d1249ddc8c8"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libSDL2-2.0.so.0",
+      "SPDXID": "SPDXRef-binary-file-90",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cb2b77e5aa22084c9e9f672eabd7a4673d0dfebf5ccb4759859c9d1249ddc8c8"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libSDL2-2.0.so.0.3200.10",
+      "SPDXID": "SPDXRef-binary-file-91",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cb2b77e5aa22084c9e9f672eabd7a4673d0dfebf5ccb4759859c9d1249ddc8c8"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1791,11 +1745,23 @@
     },
     {
       "fileName": "./lib/pkgconfig/sdl2.pc",
-      "SPDXID": "SPDXRef-binary-file-95",
+      "SPDXID": "SPDXRef-binary-file-92",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "1fbc30ed2b1167341f1ac31a105c702e9d6f41ac21d87a56d3394c76cecbdd28"
+          "checksumValue": "0036706cdaf88a7d9be12c9e79d45d1c1f9d2a97d9a14730f0a321afce304963"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libSDL2-2.0.so",
+      "SPDXID": "SPDXRef-binary-file-93",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cb2b77e5aa22084c9e9f672eabd7a4673d0dfebf5ccb4759859c9d1249ddc8c8"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1803,7 +1769,7 @@
     },
     {
       "fileName": "./lib/libSDL2main.a",
-      "SPDXID": "SPDXRef-binary-file-96",
+      "SPDXID": "SPDXRef-binary-file-94",
       "checksums": [
         {
           "algorithm": "SHA256",

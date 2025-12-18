@@ -3,7 +3,7 @@ if(TARGET unofficial::inih::libinih)
 endif()
 
 set(INIH_WITH_INI_READER ON)
-set(INIH_WITH_DEBUG ON)
+set(INIH_WITH_DEBUG OFF)
 
 # Compute the installation prefix relative to this file.
 get_filename_component(_IMPORT_PREFIX "${CMAKE_CURRENT_LIST_FILE}" PATH)

@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/inih-arm64-linux-62-ef950be8-5764-4aed-86a1-b1de3b90f068",
-  "name": "inih:arm64-linux@62 327f67eab98a968aa128e9f9eae2bceef93eebdbc1996110a73ab4b60724feab",
+  "documentNamespace": "https://spdx.org/spdxdocs/inih-arm64-linux-62-b363e82f-46b6-4b27-925b-9d5099486d1c",
+  "name": "inih:arm64-linux@62 7a754943a4950bba693bd8de1db36d0d46158a44d47f7d08ce709c55e6a1d69b",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-12-12T16:05:35Z"
+    "created": "2025-12-18T06:48:26Z"
   },
   "relationships": [
     {
@@ -91,26 +91,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-9"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-10"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-11"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-12"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-13"
     }
   ],
   "packages": [
@@ -129,7 +109,7 @@
     {
       "name": "inih:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "327f67eab98a968aa128e9f9eae2bceef93eebdbc1996110a73ab4b60724feab",
+      "versionInfo": "7a754943a4950bba693bd8de1db36d0d46158a44d47f7d08ce709c55e6a1d69b",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -213,56 +193,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./debug/lib/libinih.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "750bee907357b6d0cd89865664cfd720635af21c47f0de059a341ff1daef8bfc"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libINIReader.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "8d657a16db846997380bfdca3126b66f78dc671c897ac21d74e2b6cd6a3586d5"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/inih.pc",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "236e6dd6c176e9242c0dcc9f65e3e72d4101fbaf2f91cb8b132def20a5e4e35b"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/INIReader.pc",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "a39e16020bb55919db5046a66e3b77221a1534e51dc3486eaaa942eaca82da7d"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/inih/copyright",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -274,7 +206,7 @@
     },
     {
       "fileName": "./share/inih/usage",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -286,11 +218,11 @@
     },
     {
       "fileName": "./share/unofficial-inih/unofficial-inihConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "cde769b66ab3e59915b08ac353e1e5d228b756615ca96e32de3c433cbd37b2c4"
+          "checksumValue": "d404819c42d623f28046d5f2cf2cab0e6c66fe50ecfbd0b400574510b622fad8"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -298,7 +230,7 @@
     },
     {
       "fileName": "./include/INIReader.h",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -310,7 +242,7 @@
     },
     {
       "fileName": "./include/ini.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -322,7 +254,7 @@
     },
     {
       "fileName": "./lib/libinih.a",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -334,7 +266,7 @@
     },
     {
       "fileName": "./lib/libINIReader.a",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -346,7 +278,7 @@
     },
     {
       "fileName": "./lib/pkgconfig/inih.pc",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -358,7 +290,7 @@
     },
     {
       "fileName": "./lib/pkgconfig/INIReader.pc",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",

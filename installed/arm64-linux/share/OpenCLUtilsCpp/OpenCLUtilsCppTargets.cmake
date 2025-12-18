@@ -55,12 +55,12 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target OpenCL::UtilsCpp
-add_library(OpenCL::UtilsCpp STATIC IMPORTED)
+add_library(OpenCL::UtilsCpp SHARED IMPORTED)
 
 set_target_properties(OpenCL::UtilsCpp PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "CL_HPP_ENABLE_EXCEPTIONS"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:whereami>;OpenCL::HeadersCpp;OpenCL::Utils;OpenCL::OpenCL"
+  INTERFACE_LINK_LIBRARIES "OpenCL::HeadersCpp;OpenCL::Utils;OpenCL::OpenCL"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

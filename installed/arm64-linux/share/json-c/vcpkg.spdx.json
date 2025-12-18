@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/json-c-arm64-linux-0.18-20240915-fc02ec68-54bf-42f8-a94c-87331993644d",
-  "name": "json-c:arm64-linux@0.18-20240915 92412fb343a14e763c7e582e5ae4b96b8249143568e5911d47f338763c91b4bd",
+  "documentNamespace": "https://spdx.org/spdxdocs/json-c-arm64-linux-0.18-20240915-8c341e48-9a72-4edd-8dab-3c9b779a2430",
+  "name": "json-c:arm64-linux@0.18-20240915 f565e81c05c525c81503dac9924bd55d917107540d40755e4ff95bb7fd310734",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T03:44:21Z"
+    "created": "2025-12-16T11:13:39Z"
   },
   "relationships": [
     {
@@ -156,11 +156,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-24"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-25"
     }
   ],
   "packages": [
@@ -179,7 +174,7 @@
     {
       "name": "json-c:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "92412fb343a14e763c7e582e5ae4b96b8249143568e5911d47f338763c91b4bd",
+      "versionInfo": "f565e81c05c525c81503dac9924bd55d917107540d40755e4ff95bb7fd310734",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -232,31 +227,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libjson-c.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "7e52d0de6aa79a8dc3d48287b5ba9e6cf931142e713d106c1435c9fc1af46c58"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/json-c.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "5c1bc6ff50ae3a856ff396fca1d7012673d40d673a8b029f5537a4e9b87a18b3"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -264,7 +235,7 @@
     },
     {
       "fileName": "./share/json-c/copyright",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -276,11 +247,11 @@
     },
     {
       "fileName": "./share/json-c/json-c-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2892f01478385e280a80aa022629d9830d214ce9180a8929393efea3870f9f5e"
+          "checksumValue": "1b99e40c7c42ddd6128b12faaf5e4194184bbee1f319ed85d5244c46fbd2dab0"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -288,7 +259,7 @@
     },
     {
       "fileName": "./share/json-c/json-c-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -300,23 +271,11 @@
     },
     {
       "fileName": "./share/json-c/json-c-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "a2f8de0f2df3b609c8fdcf364d224d5d9a3a0f0ce04d215b2d908eca0c24d130"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/json-c/json-c-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "4bb3bf699f5da3cf76826bd62fb9a45a224c10c01a3d5ee152389f1ff2a4534c"
+          "checksumValue": "31eabf89d84145c2a7dbcc5e72037460a1e2675f5eb05d00392192c357f67a5e"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -324,7 +283,7 @@
     },
     {
       "fileName": "./include/json-c/linkhash.h",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -336,7 +295,7 @@
     },
     {
       "fileName": "./include/json-c/printbuf.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -348,7 +307,7 @@
     },
     {
       "fileName": "./include/json-c/json_pointer.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -360,7 +319,7 @@
     },
     {
       "fileName": "./include/json-c/json_config.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -372,7 +331,7 @@
     },
     {
       "fileName": "./include/json-c/json_tokener.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -384,7 +343,7 @@
     },
     {
       "fileName": "./include/json-c/json_util.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -396,7 +355,7 @@
     },
     {
       "fileName": "./include/json-c/json_object_iterator.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -408,7 +367,7 @@
     },
     {
       "fileName": "./include/json-c/json.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -420,7 +379,7 @@
     },
     {
       "fileName": "./include/json-c/json_patch.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -432,7 +391,7 @@
     },
     {
       "fileName": "./include/json-c/json_c_version.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -444,7 +403,7 @@
     },
     {
       "fileName": "./include/json-c/json_object.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -456,7 +415,7 @@
     },
     {
       "fileName": "./include/json-c/arraylist.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -468,7 +427,7 @@
     },
     {
       "fileName": "./include/json-c/json_inttypes.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -480,7 +439,7 @@
     },
     {
       "fileName": "./include/json-c/debug.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -492,7 +451,7 @@
     },
     {
       "fileName": "./include/json-c/json_visit.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -504,7 +463,7 @@
     },
     {
       "fileName": "./include/json-c/json_types.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -515,12 +474,24 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libjson-c.a",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "fileName": "./lib/libjson-c.so",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "3107d2f4b0beea6495687e4bc58986ed6ecfec8577ed1f4e2117f1e6ca1640c1"
+          "checksumValue": "261e0b588218e054c01d5bb881acf08982afb8e5aaab44bdda98de176be6d1ac"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libjson-c.so.5",
+      "SPDXID": "SPDXRef-binary-file-22",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "261e0b588218e054c01d5bb881acf08982afb8e5aaab44bdda98de176be6d1ac"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -528,11 +499,23 @@
     },
     {
       "fileName": "./lib/pkgconfig/json-c.pc",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "3a0cef5e34ec86a04f0409c1d9947add29d0272c2c3483b47f8a7af744c3ddc1"
+          "checksumValue": "02d23b0888741aca8a90247c25da4c2651b3294bb97ae2704731238ab4d1ba76"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libjson-c.so.5.4.0",
+      "SPDXID": "SPDXRef-binary-file-24",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "261e0b588218e054c01d5bb881acf08982afb8e5aaab44bdda98de176be6d1ac"
         }
       ],
       "licenseConcluded": "NOASSERTION",

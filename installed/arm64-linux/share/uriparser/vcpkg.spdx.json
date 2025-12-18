@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/uriparser-arm64-linux-0.9.9-69b3e143-bb69-4e59-a804-1dc7410868b9",
-  "name": "uriparser:arm64-linux@0.9.9 d2acc97b12797096315cc3008043b9b481761ed0c73fb4570cc96e5655cff47f",
+  "documentNamespace": "https://spdx.org/spdxdocs/uriparser-arm64-linux-0.9.9-0b7ee433-0c94-4bb3-a522-c633671af3e1",
+  "name": "uriparser:arm64-linux@0.9.9 56060099ce85271843b2ea5529d08ab51d04b94a1500470ee2e98661430187e6",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T02:22:18Z"
+    "created": "2025-12-16T10:51:45Z"
   },
   "relationships": [
     {
@@ -121,11 +121,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-16"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-17"
     }
   ],
   "packages": [
@@ -144,7 +139,7 @@
     {
       "name": "uriparser:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "d2acc97b12797096315cc3008043b9b481761ed0c73fb4570cc96e5655cff47f",
+      "versionInfo": "56060099ce85271843b2ea5529d08ab51d04b94a1500470ee2e98661430187e6",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -209,31 +204,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/liburiparser.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "ab7ea7edf8767a85acbc51d18b50877be0916596467af04e0befd3a5bb8b2dfc"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/liburiparser.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "c1d49d094858f76cc1da4306b12e9ff8e5caf7d7fe0e12618ee4f8f27ea69f9b"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -241,7 +212,7 @@
     },
     {
       "fileName": "./share/uriparser/copyright",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -253,11 +224,11 @@
     },
     {
       "fileName": "./share/uriparser/uriparser.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "53788dee6738ff66f49735ffb84b4d8db1b6fc1271f88739d9921edcacf8ceec"
+          "checksumValue": "f0e94d3394428aed3b2b8a9b882a3a28f35df60c30bcf127de02ab40f5bef897"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -265,7 +236,7 @@
     },
     {
       "fileName": "./share/uriparser/uriparser-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -277,23 +248,11 @@
     },
     {
       "fileName": "./share/uriparser/uriparser-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "38d4af89ac2584543f8036540dfd7b077525363a7bba1e801c20a2817ba0b959"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/uriparser/uriparser-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "f1dc5e2f880233c6f9c03c72d0c43a3196d19113a63889cb134da82a1189214d"
+          "checksumValue": "bf09708beccb9d7d187ab6745c4c29e6632fbf78eab1038cad7a3125f80e8d17"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -301,7 +260,7 @@
     },
     {
       "fileName": "./share/uriparser/uriparser-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -313,7 +272,7 @@
     },
     {
       "fileName": "./share/uriparser/usage",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -325,7 +284,7 @@
     },
     {
       "fileName": "./include/uriparser/UriDefsConfig.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -337,7 +296,7 @@
     },
     {
       "fileName": "./include/uriparser/Uri.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -349,7 +308,7 @@
     },
     {
       "fileName": "./include/uriparser/UriDefsUnicode.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -361,7 +320,7 @@
     },
     {
       "fileName": "./include/uriparser/UriIp4.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -373,11 +332,11 @@
     },
     {
       "fileName": "./include/uriparser/UriBase.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e56c6a5d2bfb2a56428101b9b2f104001a8513c4684712ea60d4168d3d751d77"
+          "checksumValue": "f73dc21658197ba91334ea8353afbe30b033395af5695c692468ab8934fc5cd8"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -385,7 +344,7 @@
     },
     {
       "fileName": "./include/uriparser/UriDefsAnsi.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -396,12 +355,24 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/liburiparser.a",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "fileName": "./lib/liburiparser.so",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "3e9de71b4bc729b76baeb4c4a63ff365efb6e19c4895538967df80b322e56d87"
+          "checksumValue": "b6e8b6168616dbb0ffff70e8fca977b84ecd0f12f167fdd189e97301d39bf6db"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/liburiparser.so.1",
+      "SPDXID": "SPDXRef-binary-file-14",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b6e8b6168616dbb0ffff70e8fca977b84ecd0f12f167fdd189e97301d39bf6db"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -409,11 +380,23 @@
     },
     {
       "fileName": "./lib/pkgconfig/liburiparser.pc",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "75f9e72a3065916ddefa590931d647a536764ee74792de11c5f23ff593970169"
+          "checksumValue": "a612642b28e7b78a3b9f0509b2f038063cb582e0b5c7a9d1876bde97c244b090"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/liburiparser.so.1.1.0",
+      "SPDXID": "SPDXRef-binary-file-16",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b6e8b6168616dbb0ffff70e8fca977b84ecd0f12f167fdd189e97301d39bf6db"
         }
       ],
       "licenseConcluded": "NOASSERTION",

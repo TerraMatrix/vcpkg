@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/utf8-range-arm64-linux-5.29.5-5d90f4ff-3ca2-4689-adff-9685e1e7b8b2",
-  "name": "utf8-range:arm64-linux@5.29.5 dbd27066d136edf315e9010ddf00c311b6c70871ed487ff2488b20c5794752f3",
+  "documentNamespace": "https://spdx.org/spdxdocs/utf8-range-arm64-linux-5.29.5-db3cffbd-9ded-417a-8266-5f04f0e10abb",
+  "name": "utf8-range:arm64-linux@5.29.5 cebe69f90de3455d98a6cbf6dfef5f470a69df617477f0ad1c556ba572dda3bd",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T04:50:29Z"
+    "created": "2025-12-16T12:43:47Z"
   },
   "relationships": [
     {
@@ -86,26 +86,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-9"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-10"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-11"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-12"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-13"
     }
   ],
   "packages": [
@@ -124,7 +104,7 @@
     {
       "name": "utf8-range:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "dbd27066d136edf315e9010ddf00c311b6c70871ed487ff2488b20c5794752f3",
+      "versionInfo": "cebe69f90de3455d98a6cbf6dfef5f470a69df617477f0ad1c556ba572dda3bd",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -196,44 +176,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./debug/lib/libutf8_range.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "ad07ddeca82c7c3d4ad07dcbea8e4ebb981f671adb9869bc8367155e74df1c58"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libutf8_validity.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "c72e8bf2aa57f5841d261ee98e16269f0fd604b2a7f0d5c911d54113ee4868ba"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/utf8_range.pc",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "2b9a862e89f908e8e91fd0e8931b4e4791e8ccbd80b0cccc966adc77511de6c2"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/utf8_range/utf8_range-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -245,7 +189,7 @@
     },
     {
       "fileName": "./share/utf8_range/utf8_range-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -257,7 +201,7 @@
     },
     {
       "fileName": "./share/utf8_range/utf8_range-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -268,20 +212,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/utf8_range/utf8_range-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "0f776bb8609f94631e03e7ef89418026febadcbb177cfdc1c9572ccc4cc4ffbd"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/utf8-range/copyright",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -293,7 +225,7 @@
     },
     {
       "fileName": "./include/utf8_range.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -305,7 +237,7 @@
     },
     {
       "fileName": "./include/utf8_validity.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -317,7 +249,7 @@
     },
     {
       "fileName": "./lib/libutf8_range.a",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -329,7 +261,7 @@
     },
     {
       "fileName": "./lib/libutf8_validity.a",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -341,7 +273,7 @@
     },
     {
       "fileName": "./lib/pkgconfig/utf8_range.pc",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",

@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/boost-container-arm64-linux-1.89.0-5862a9ff-889d-4663-a510-59bd0eee97ed",
-  "name": "boost-container:arm64-linux@1.89.0 7e8d6db30309d1b2b321e9d107f179875f336296bb2d0e6f4dcf4886550670a9",
+  "documentNamespace": "https://spdx.org/spdxdocs/boost-container-arm64-linux-1.89.0-992de0ae-63e1-44f1-b553-c889921ac8a1",
+  "name": "boost-container:arm64-linux@1.89.0 989135318f8b86ddfa9e2a6bbb6c6ed1c29a2f2f6f4f6632a42eb21cb2fa8cf8",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-17T09:56:55Z"
+    "created": "2025-12-16T09:31:11Z"
   },
   "relationships": [
     {
@@ -606,11 +606,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-112"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-113"
     }
   ],
   "packages": [
@@ -629,7 +624,7 @@
     {
       "name": "boost-container:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "7e8d6db30309d1b2b321e9d107f179875f336296bb2d0e6f4dcf4886550670a9",
+      "versionInfo": "989135318f8b86ddfa9e2a6bbb6c6ed1c29a2f2f6f4f6632a42eb21cb2fa8cf8",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSL-1.0",
       "licenseDeclared": "NOASSERTION",
@@ -706,19 +701,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libboost_container.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "c61c30f87844121db953aa6c743187f05cf9ab014907f71321020dd5f6075f48"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -726,7 +709,7 @@
     },
     {
       "fileName": "./share/boost-container/copyright",
-      "SPDXID": "SPDXRef-binary-file-2",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -738,11 +721,11 @@
     },
     {
       "fileName": "./share/boost_container/boost_container-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "acb8464bdb7a1bafe07108e26c9f8b8845aa238b6aed50159f450fe398d37d9a"
+          "checksumValue": "10b7543910a7a382ca9dcdeea34c82bf1c67da29108365da80c676c6ef6e6af4"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -750,7 +733,7 @@
     },
     {
       "fileName": "./share/boost_container/boost_container-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -762,23 +745,11 @@
     },
     {
       "fileName": "./share/boost_container/boost_container-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "18a374979302abf2edb861512a47b8ffc05b7bafa81d91ddc016227c3c78f77d"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/boost_container/boost_container-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "772a8e00d8d6bda5b37a87d88f76ce4151d147e030da7c75701c040368608b75"
+          "checksumValue": "deeaab40940a33801e730bc8897c73694d49ffdbe0200380e0d2548a89930b16"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -786,7 +757,7 @@
     },
     {
       "fileName": "./share/boost_container/boost_container-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -798,7 +769,7 @@
     },
     {
       "fileName": "./include/boost/container/uses_allocator_fwd.hpp",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -810,7 +781,7 @@
     },
     {
       "fileName": "./include/boost/container/stable_vector.hpp",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -822,7 +793,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/stable_vector.hpp",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -834,7 +805,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/flat_set.hpp",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -846,7 +817,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/unsynchronized_pool_resource.hpp",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -858,7 +829,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/map.hpp",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -870,7 +841,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/list.hpp",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -882,7 +853,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/set.hpp",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -894,7 +865,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/synchronized_pool_resource.hpp",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -906,7 +877,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/monotonic_buffer_resource.hpp",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -918,7 +889,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/global_resource.hpp",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -930,7 +901,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/flat_map.hpp",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -942,7 +913,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/deque.hpp",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -954,7 +925,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/slist.hpp",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -966,7 +937,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/resource_adaptor.hpp",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -978,7 +949,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/vector.hpp",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -990,7 +961,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/devector.hpp",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1002,7 +973,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/memory_resource.hpp",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1014,7 +985,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/small_vector.hpp",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1026,7 +997,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/polymorphic_allocator.hpp",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1038,7 +1009,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/pool_options.hpp",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1050,7 +1021,7 @@
     },
     {
       "fileName": "./include/boost/container/pmr/string.hpp",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1062,7 +1033,7 @@
     },
     {
       "fileName": "./include/boost/container/options.hpp",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1074,7 +1045,7 @@
     },
     {
       "fileName": "./include/boost/container/flat_set.hpp",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1086,7 +1057,7 @@
     },
     {
       "fileName": "./include/boost/container/scoped_allocator_fwd.hpp",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1098,7 +1069,7 @@
     },
     {
       "fileName": "./include/boost/container/uses_allocator.hpp",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1110,7 +1081,7 @@
     },
     {
       "fileName": "./include/boost/container/scoped_allocator.hpp",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1122,7 +1093,7 @@
     },
     {
       "fileName": "./include/boost/container/node_handle.hpp",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1134,7 +1105,7 @@
     },
     {
       "fileName": "./include/boost/container/map.hpp",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1146,7 +1117,7 @@
     },
     {
       "fileName": "./include/boost/container/list.hpp",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1158,7 +1129,7 @@
     },
     {
       "fileName": "./include/boost/container/allocator.hpp",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1170,7 +1141,7 @@
     },
     {
       "fileName": "./include/boost/container/set.hpp",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1182,7 +1153,7 @@
     },
     {
       "fileName": "./include/boost/container/static_vector.hpp",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1194,7 +1165,7 @@
     },
     {
       "fileName": "./include/boost/container/adaptive_pool.hpp",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1206,7 +1177,7 @@
     },
     {
       "fileName": "./include/boost/container/container_fwd.hpp",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1218,7 +1189,7 @@
     },
     {
       "fileName": "./include/boost/container/flat_map.hpp",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1230,7 +1201,7 @@
     },
     {
       "fileName": "./include/boost/container/deque.hpp",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1242,7 +1213,7 @@
     },
     {
       "fileName": "./include/boost/container/new_allocator.hpp",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1254,7 +1225,7 @@
     },
     {
       "fileName": "./include/boost/container/slist.hpp",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1266,7 +1237,7 @@
     },
     {
       "fileName": "./include/boost/container/allocator_traits.hpp",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1278,7 +1249,7 @@
     },
     {
       "fileName": "./include/boost/container/vector.hpp",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1290,7 +1261,7 @@
     },
     {
       "fileName": "./include/boost/container/node_allocator.hpp",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1302,7 +1273,7 @@
     },
     {
       "fileName": "./include/boost/container/devector.hpp",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1314,7 +1285,7 @@
     },
     {
       "fileName": "./include/boost/container/small_vector.hpp",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1326,7 +1297,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/alloc_lib.h",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1338,7 +1309,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/allocation_type.hpp",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1350,7 +1321,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/config_end.hpp",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1362,7 +1333,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/thread_mutex.hpp",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1374,7 +1345,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/mpl.hpp",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1386,7 +1357,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/min_max.hpp",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "SPDXID": "SPDXRef-binary-file-55",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1398,7 +1369,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/copy_move_algo.hpp",
-      "SPDXID": "SPDXRef-binary-file-58",
+      "SPDXID": "SPDXRef-binary-file-56",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1410,7 +1381,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/compare_functors.hpp",
-      "SPDXID": "SPDXRef-binary-file-59",
+      "SPDXID": "SPDXRef-binary-file-57",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1422,7 +1393,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/next_capacity.hpp",
-      "SPDXID": "SPDXRef-binary-file-60",
+      "SPDXID": "SPDXRef-binary-file-58",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1434,7 +1405,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/transform_iterator.hpp",
-      "SPDXID": "SPDXRef-binary-file-61",
+      "SPDXID": "SPDXRef-binary-file-59",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1446,7 +1417,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/function_detector.hpp",
-      "SPDXID": "SPDXRef-binary-file-62",
+      "SPDXID": "SPDXRef-binary-file-60",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1458,7 +1429,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/block_slist.hpp",
-      "SPDXID": "SPDXRef-binary-file-63",
+      "SPDXID": "SPDXRef-binary-file-61",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1470,7 +1441,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/mutex.hpp",
-      "SPDXID": "SPDXRef-binary-file-64",
+      "SPDXID": "SPDXRef-binary-file-62",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1482,7 +1453,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/type_traits.hpp",
-      "SPDXID": "SPDXRef-binary-file-65",
+      "SPDXID": "SPDXRef-binary-file-63",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1494,7 +1465,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/value_functors.hpp",
-      "SPDXID": "SPDXRef-binary-file-66",
+      "SPDXID": "SPDXRef-binary-file-64",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1506,7 +1477,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/iterators.hpp",
-      "SPDXID": "SPDXRef-binary-file-67",
+      "SPDXID": "SPDXRef-binary-file-65",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1518,7 +1489,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/singleton.hpp",
-      "SPDXID": "SPDXRef-binary-file-68",
+      "SPDXID": "SPDXRef-binary-file-66",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1530,7 +1501,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/adaptive_node_pool.hpp",
-      "SPDXID": "SPDXRef-binary-file-69",
+      "SPDXID": "SPDXRef-binary-file-67",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1542,7 +1513,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/is_container.hpp",
-      "SPDXID": "SPDXRef-binary-file-70",
+      "SPDXID": "SPDXRef-binary-file-68",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1554,7 +1525,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/allocator_version_traits.hpp",
-      "SPDXID": "SPDXRef-binary-file-71",
+      "SPDXID": "SPDXRef-binary-file-69",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1566,7 +1537,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/node_pool.hpp",
-      "SPDXID": "SPDXRef-binary-file-72",
+      "SPDXID": "SPDXRef-binary-file-70",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1578,7 +1549,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/pool_common_alloc.hpp",
-      "SPDXID": "SPDXRef-binary-file-73",
+      "SPDXID": "SPDXRef-binary-file-71",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1590,7 +1561,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/pair.hpp",
-      "SPDXID": "SPDXRef-binary-file-74",
+      "SPDXID": "SPDXRef-binary-file-72",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1602,7 +1573,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/multiallocation_chain.hpp",
-      "SPDXID": "SPDXRef-binary-file-75",
+      "SPDXID": "SPDXRef-binary-file-73",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1614,7 +1585,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/dispatch_uses_allocator.hpp",
-      "SPDXID": "SPDXRef-binary-file-76",
+      "SPDXID": "SPDXRef-binary-file-74",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1626,7 +1597,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/workaround.hpp",
-      "SPDXID": "SPDXRef-binary-file-77",
+      "SPDXID": "SPDXRef-binary-file-75",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1638,7 +1609,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/pool_common.hpp",
-      "SPDXID": "SPDXRef-binary-file-78",
+      "SPDXID": "SPDXRef-binary-file-76",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1650,7 +1621,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/dlmalloc.hpp",
-      "SPDXID": "SPDXRef-binary-file-79",
+      "SPDXID": "SPDXRef-binary-file-77",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1662,7 +1633,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/pool_resource.hpp",
-      "SPDXID": "SPDXRef-binary-file-80",
+      "SPDXID": "SPDXRef-binary-file-78",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1674,7 +1645,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/adaptive_node_pool_impl.hpp",
-      "SPDXID": "SPDXRef-binary-file-81",
+      "SPDXID": "SPDXRef-binary-file-79",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1686,7 +1657,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/placement_new.hpp",
-      "SPDXID": "SPDXRef-binary-file-82",
+      "SPDXID": "SPDXRef-binary-file-80",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1698,7 +1669,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/destroyers.hpp",
-      "SPDXID": "SPDXRef-binary-file-83",
+      "SPDXID": "SPDXRef-binary-file-81",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1710,7 +1681,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/config_begin.hpp",
-      "SPDXID": "SPDXRef-binary-file-84",
+      "SPDXID": "SPDXRef-binary-file-82",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1722,7 +1693,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/node_alloc_holder.hpp",
-      "SPDXID": "SPDXRef-binary-file-85",
+      "SPDXID": "SPDXRef-binary-file-83",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1734,7 +1705,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/advanced_insert_int.hpp",
-      "SPDXID": "SPDXRef-binary-file-86",
+      "SPDXID": "SPDXRef-binary-file-84",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1746,7 +1717,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/variadic_templates_tools.hpp",
-      "SPDXID": "SPDXRef-binary-file-87",
+      "SPDXID": "SPDXRef-binary-file-85",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1758,7 +1729,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/node_pool_impl.hpp",
-      "SPDXID": "SPDXRef-binary-file-88",
+      "SPDXID": "SPDXRef-binary-file-86",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1770,7 +1741,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/version_type.hpp",
-      "SPDXID": "SPDXRef-binary-file-89",
+      "SPDXID": "SPDXRef-binary-file-87",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1782,7 +1753,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/guards_dended.hpp",
-      "SPDXID": "SPDXRef-binary-file-90",
+      "SPDXID": "SPDXRef-binary-file-88",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1794,7 +1765,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/std_fwd.hpp",
-      "SPDXID": "SPDXRef-binary-file-91",
+      "SPDXID": "SPDXRef-binary-file-89",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1806,7 +1777,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/value_init.hpp",
-      "SPDXID": "SPDXRef-binary-file-92",
+      "SPDXID": "SPDXRef-binary-file-90",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1818,7 +1789,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/pair_key_mapped_of_value.hpp",
-      "SPDXID": "SPDXRef-binary-file-93",
+      "SPDXID": "SPDXRef-binary-file-91",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1830,7 +1801,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/container_or_allocator_rebind.hpp",
-      "SPDXID": "SPDXRef-binary-file-94",
+      "SPDXID": "SPDXRef-binary-file-92",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1842,7 +1813,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/container_rebind.hpp",
-      "SPDXID": "SPDXRef-binary-file-95",
+      "SPDXID": "SPDXRef-binary-file-93",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1854,7 +1825,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/flat_tree.hpp",
-      "SPDXID": "SPDXRef-binary-file-96",
+      "SPDXID": "SPDXRef-binary-file-94",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1866,7 +1837,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/addressof.hpp",
-      "SPDXID": "SPDXRef-binary-file-97",
+      "SPDXID": "SPDXRef-binary-file-95",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1878,7 +1849,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/construct_in_place.hpp",
-      "SPDXID": "SPDXRef-binary-file-98",
+      "SPDXID": "SPDXRef-binary-file-96",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1890,7 +1861,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/block_list.hpp",
-      "SPDXID": "SPDXRef-binary-file-99",
+      "SPDXID": "SPDXRef-binary-file-97",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1902,7 +1873,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/is_sorted.hpp",
-      "SPDXID": "SPDXRef-binary-file-100",
+      "SPDXID": "SPDXRef-binary-file-98",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1914,7 +1885,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/math_functions.hpp",
-      "SPDXID": "SPDXRef-binary-file-101",
+      "SPDXID": "SPDXRef-binary-file-99",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1926,7 +1897,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/is_pair.hpp",
-      "SPDXID": "SPDXRef-binary-file-102",
+      "SPDXID": "SPDXRef-binary-file-100",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1938,7 +1909,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/iterator.hpp",
-      "SPDXID": "SPDXRef-binary-file-103",
+      "SPDXID": "SPDXRef-binary-file-101",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1950,7 +1921,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/iterator_to_raw_pointer.hpp",
-      "SPDXID": "SPDXRef-binary-file-104",
+      "SPDXID": "SPDXRef-binary-file-102",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1962,7 +1933,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/alloc_helpers.hpp",
-      "SPDXID": "SPDXRef-binary-file-105",
+      "SPDXID": "SPDXRef-binary-file-103",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1974,7 +1945,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/is_contiguous_container.hpp",
-      "SPDXID": "SPDXRef-binary-file-106",
+      "SPDXID": "SPDXRef-binary-file-104",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1986,7 +1957,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/tree.hpp",
-      "SPDXID": "SPDXRef-binary-file-107",
+      "SPDXID": "SPDXRef-binary-file-105",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1998,7 +1969,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/minimal_char_traits_header.hpp",
-      "SPDXID": "SPDXRef-binary-file-108",
+      "SPDXID": "SPDXRef-binary-file-106",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2010,7 +1981,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/auto_link.hpp",
-      "SPDXID": "SPDXRef-binary-file-109",
+      "SPDXID": "SPDXRef-binary-file-107",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2022,7 +1993,7 @@
     },
     {
       "fileName": "./include/boost/container/detail/algorithm.hpp",
-      "SPDXID": "SPDXRef-binary-file-110",
+      "SPDXID": "SPDXRef-binary-file-108",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2034,7 +2005,7 @@
     },
     {
       "fileName": "./include/boost/container/throw_exception.hpp",
-      "SPDXID": "SPDXRef-binary-file-111",
+      "SPDXID": "SPDXRef-binary-file-109",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2046,7 +2017,7 @@
     },
     {
       "fileName": "./include/boost/container/string.hpp",
-      "SPDXID": "SPDXRef-binary-file-112",
+      "SPDXID": "SPDXRef-binary-file-110",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2057,12 +2028,24 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libboost_container.a",
-      "SPDXID": "SPDXRef-binary-file-113",
+      "fileName": "./lib/libboost_container.so",
+      "SPDXID": "SPDXRef-binary-file-111",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "8f47efa10d81d6c263f3b358e31422708eb0dced458f82b9d6dca7a7428a0d25"
+          "checksumValue": "dd15556a75af1daf6614ead961953caf4e312d19c0263c26015134592738532f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libboost_container.so.1.89.0",
+      "SPDXID": "SPDXRef-binary-file-112",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "dd15556a75af1daf6614ead961953caf4e312d19c0263c26015134592738532f"
         }
       ],
       "licenseConcluded": "NOASSERTION",

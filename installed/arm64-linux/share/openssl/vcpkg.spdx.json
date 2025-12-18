@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/openssl-arm64-linux-3.6.0#2-67884bc6-bd37-4d41-a301-427e044bd71e",
-  "name": "openssl:arm64-linux@3.6.0#2 a6848d70edc6bd7772e3406f22694dedfdf89304a5f0391841389a56bf0abb65",
+  "documentNamespace": "https://spdx.org/spdxdocs/openssl-arm64-linux-3.6.0#2-73eea454-4494-428d-be54-d7f86042b9fe",
+  "name": "openssl:arm64-linux@3.6.0#2 4bb84ddf7f3b6db4aacc06512bca4c23e5777e25b450df9e3d45e832640111ba",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-18T08:24:41Z"
+    "created": "2025-12-16T10:07:11Z"
   },
   "relationships": [
     {
@@ -936,16 +936,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-161"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-162"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-163"
     }
   ],
   "packages": [
@@ -964,7 +954,7 @@
     {
       "name": "openssl:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "a6848d70edc6bd7772e3406f22694dedfdf89304a5f0391841389a56bf0abb65",
+      "versionInfo": "4bb84ddf7f3b6db4aacc06512bca4c23e5777e25b450df9e3d45e832640111ba",
       "downloadLocation": "NONE",
       "licenseConcluded": "Apache-2.0",
       "licenseDeclared": "NOASSERTION",
@@ -1245,67 +1235,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libssl.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "e9152b8bb3aae0c4bb5206994d3c32613cd7c6b1307c34bf6d6e8c2e141f369a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libcrypto.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "a8ef5a0d1e68d399455e48ed2c19c270a1ec8d2204f0b33b3a0514bd3bdfc90d"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/openssl.pc",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "3d94721485bada72d0588de97101472950966a0d8b41aa8ec37afa11f54887ab"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libcrypto.pc",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "625c93c5a20f964bae6b9f3c3f3e7033e9d1c5695abb50049b231101845283be"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libssl.pc",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "6af8926302387485c4b536cdb6f4fc319d87d9ad0e0e2cd5784bae3874c50c4e"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1313,11 +1243,11 @@
     },
     {
       "fileName": "./share/openssl/vcpkg-cmake-wrapper.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "6adb18fa08eafcc3b9ae75799d01f316fadd6d2c170b8a8d57e537a4f0f2b53d"
+          "checksumValue": "c33de6bfa9c0e74cc9738fe05f8546080253a289d4a0e421a5ef4b2af44fed26"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1325,11 +1255,11 @@
     },
     {
       "fileName": "./share/openssl/OpenSSLConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "8cc25f45359924a7829119e851496994dc2f244a84772307736aeab6ce13b252"
+          "checksumValue": "c3ca2cd6f8ab4596bf50a41f8aa6500d21787b93eb3aa1a5b8bcd6b97be62a94"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1337,7 +1267,7 @@
     },
     {
       "fileName": "./share/openssl/copyright",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1349,7 +1279,7 @@
     },
     {
       "fileName": "./share/openssl/OpenSSLConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1361,7 +1291,7 @@
     },
     {
       "fileName": "./share/openssl/usage",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1373,7 +1303,7 @@
     },
     {
       "fileName": "./include/openssl/rand.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1385,7 +1315,7 @@
     },
     {
       "fileName": "./include/openssl/conf_api.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1397,7 +1327,7 @@
     },
     {
       "fileName": "./include/openssl/txt_db.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1409,7 +1339,7 @@
     },
     {
       "fileName": "./include/openssl/crmferr.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1421,7 +1351,7 @@
     },
     {
       "fileName": "./include/openssl/core_object.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1433,7 +1363,7 @@
     },
     {
       "fileName": "./include/openssl/safestack.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1445,7 +1375,7 @@
     },
     {
       "fileName": "./include/openssl/cast.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1457,7 +1387,7 @@
     },
     {
       "fileName": "./include/openssl/fips_names.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1469,7 +1399,7 @@
     },
     {
       "fileName": "./include/openssl/mdc2.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1481,7 +1411,7 @@
     },
     {
       "fileName": "./include/openssl/http.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1493,7 +1423,7 @@
     },
     {
       "fileName": "./include/openssl/x509_acert.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1505,7 +1435,7 @@
     },
     {
       "fileName": "./include/openssl/cmserr.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1517,7 +1447,7 @@
     },
     {
       "fileName": "./include/openssl/decoder.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1529,7 +1459,7 @@
     },
     {
       "fileName": "./include/openssl/ct.h",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1541,7 +1471,7 @@
     },
     {
       "fileName": "./include/openssl/sslerr_legacy.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1553,7 +1483,7 @@
     },
     {
       "fileName": "./include/openssl/ml_kem.h",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1565,7 +1495,7 @@
     },
     {
       "fileName": "./include/openssl/rc4.h",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1577,7 +1507,7 @@
     },
     {
       "fileName": "./include/openssl/proverr.h",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1589,7 +1519,7 @@
     },
     {
       "fileName": "./include/openssl/ripemd.h",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1601,7 +1531,7 @@
     },
     {
       "fileName": "./include/openssl/param_build.h",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1613,7 +1543,7 @@
     },
     {
       "fileName": "./include/openssl/cmp_util.h",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1625,7 +1555,7 @@
     },
     {
       "fileName": "./include/openssl/dsaerr.h",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1637,7 +1567,7 @@
     },
     {
       "fileName": "./include/openssl/evp.h",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1649,7 +1579,7 @@
     },
     {
       "fileName": "./include/openssl/conftypes.h",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1661,7 +1591,7 @@
     },
     {
       "fileName": "./include/openssl/des.h",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1673,7 +1603,7 @@
     },
     {
       "fileName": "./include/openssl/x509v3err.h",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1685,7 +1615,7 @@
     },
     {
       "fileName": "./include/openssl/ecerr.h",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1697,7 +1627,7 @@
     },
     {
       "fileName": "./include/openssl/comperr.h",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1709,7 +1639,7 @@
     },
     {
       "fileName": "./include/openssl/ess.h",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1721,7 +1651,7 @@
     },
     {
       "fileName": "./include/openssl/srtp.h",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1733,7 +1663,7 @@
     },
     {
       "fileName": "./include/openssl/ecdsa.h",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1745,7 +1675,7 @@
     },
     {
       "fileName": "./include/openssl/ocsperr.h",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1757,7 +1687,7 @@
     },
     {
       "fileName": "./include/openssl/cmac.h",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1769,7 +1699,7 @@
     },
     {
       "fileName": "./include/openssl/rsa.h",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1781,7 +1711,7 @@
     },
     {
       "fileName": "./include/openssl/obj_mac.h",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1793,7 +1723,7 @@
     },
     {
       "fileName": "./include/openssl/randerr.h",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1805,7 +1735,7 @@
     },
     {
       "fileName": "./include/openssl/storeerr.h",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1817,7 +1747,7 @@
     },
     {
       "fileName": "./include/openssl/pkcs12err.h",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1829,7 +1759,7 @@
     },
     {
       "fileName": "./include/openssl/hmac.h",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1841,7 +1771,7 @@
     },
     {
       "fileName": "./include/openssl/ts.h",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1853,7 +1783,7 @@
     },
     {
       "fileName": "./include/openssl/lhash.h",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1865,7 +1795,7 @@
     },
     {
       "fileName": "./include/openssl/bn.h",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1877,7 +1807,7 @@
     },
     {
       "fileName": "./include/openssl/self_test.h",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1889,7 +1819,7 @@
     },
     {
       "fileName": "./include/openssl/x509.h",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1901,7 +1831,7 @@
     },
     {
       "fileName": "./include/openssl/err.h",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1913,7 +1843,7 @@
     },
     {
       "fileName": "./include/openssl/md4.h",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1925,7 +1855,7 @@
     },
     {
       "fileName": "./include/openssl/decodererr.h",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1937,7 +1867,7 @@
     },
     {
       "fileName": "./include/openssl/asn1err.h",
-      "SPDXID": "SPDXRef-binary-file-58",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1949,7 +1879,7 @@
     },
     {
       "fileName": "./include/openssl/fipskey.h",
-      "SPDXID": "SPDXRef-binary-file-59",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1961,7 +1891,7 @@
     },
     {
       "fileName": "./include/openssl/opensslv.h",
-      "SPDXID": "SPDXRef-binary-file-60",
+      "SPDXID": "SPDXRef-binary-file-55",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1973,7 +1903,7 @@
     },
     {
       "fileName": "./include/openssl/cterr.h",
-      "SPDXID": "SPDXRef-binary-file-61",
+      "SPDXID": "SPDXRef-binary-file-56",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1985,7 +1915,7 @@
     },
     {
       "fileName": "./include/openssl/camellia.h",
-      "SPDXID": "SPDXRef-binary-file-62",
+      "SPDXID": "SPDXRef-binary-file-57",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1997,7 +1927,7 @@
     },
     {
       "fileName": "./include/openssl/asn1.h",
-      "SPDXID": "SPDXRef-binary-file-63",
+      "SPDXID": "SPDXRef-binary-file-58",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2009,7 +1939,7 @@
     },
     {
       "fileName": "./include/openssl/engine.h",
-      "SPDXID": "SPDXRef-binary-file-64",
+      "SPDXID": "SPDXRef-binary-file-59",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2021,7 +1951,7 @@
     },
     {
       "fileName": "./include/openssl/dsa.h",
-      "SPDXID": "SPDXRef-binary-file-65",
+      "SPDXID": "SPDXRef-binary-file-60",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2033,7 +1963,7 @@
     },
     {
       "fileName": "./include/openssl/asn1t.h",
-      "SPDXID": "SPDXRef-binary-file-66",
+      "SPDXID": "SPDXRef-binary-file-61",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2045,7 +1975,7 @@
     },
     {
       "fileName": "./include/openssl/buffererr.h",
-      "SPDXID": "SPDXRef-binary-file-67",
+      "SPDXID": "SPDXRef-binary-file-62",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2057,7 +1987,7 @@
     },
     {
       "fileName": "./include/openssl/uierr.h",
-      "SPDXID": "SPDXRef-binary-file-68",
+      "SPDXID": "SPDXRef-binary-file-63",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2069,7 +1999,7 @@
     },
     {
       "fileName": "./include/openssl/x509_vfy.h",
-      "SPDXID": "SPDXRef-binary-file-69",
+      "SPDXID": "SPDXRef-binary-file-64",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2081,7 +2011,7 @@
     },
     {
       "fileName": "./include/openssl/evperr.h",
-      "SPDXID": "SPDXRef-binary-file-70",
+      "SPDXID": "SPDXRef-binary-file-65",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2093,7 +2023,7 @@
     },
     {
       "fileName": "./include/openssl/thread.h",
-      "SPDXID": "SPDXRef-binary-file-71",
+      "SPDXID": "SPDXRef-binary-file-66",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2105,7 +2035,7 @@
     },
     {
       "fileName": "./include/openssl/configuration.h",
-      "SPDXID": "SPDXRef-binary-file-72",
+      "SPDXID": "SPDXRef-binary-file-67",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2117,7 +2047,7 @@
     },
     {
       "fileName": "./include/openssl/tls1.h",
-      "SPDXID": "SPDXRef-binary-file-73",
+      "SPDXID": "SPDXRef-binary-file-68",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2129,7 +2059,7 @@
     },
     {
       "fileName": "./include/openssl/core_dispatch.h",
-      "SPDXID": "SPDXRef-binary-file-74",
+      "SPDXID": "SPDXRef-binary-file-69",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2141,7 +2071,7 @@
     },
     {
       "fileName": "./include/openssl/trace.h",
-      "SPDXID": "SPDXRef-binary-file-75",
+      "SPDXID": "SPDXRef-binary-file-70",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2153,7 +2083,7 @@
     },
     {
       "fileName": "./include/openssl/opensslconf.h",
-      "SPDXID": "SPDXRef-binary-file-76",
+      "SPDXID": "SPDXRef-binary-file-71",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2165,7 +2095,7 @@
     },
     {
       "fileName": "./include/openssl/ocsp.h",
-      "SPDXID": "SPDXRef-binary-file-77",
+      "SPDXID": "SPDXRef-binary-file-72",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2177,7 +2107,7 @@
     },
     {
       "fileName": "./include/openssl/conferr.h",
-      "SPDXID": "SPDXRef-binary-file-78",
+      "SPDXID": "SPDXRef-binary-file-73",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2189,7 +2119,7 @@
     },
     {
       "fileName": "./include/openssl/modes.h",
-      "SPDXID": "SPDXRef-binary-file-79",
+      "SPDXID": "SPDXRef-binary-file-74",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2201,7 +2131,7 @@
     },
     {
       "fileName": "./include/openssl/e_ostime.h",
-      "SPDXID": "SPDXRef-binary-file-80",
+      "SPDXID": "SPDXRef-binary-file-75",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2213,7 +2143,7 @@
     },
     {
       "fileName": "./include/openssl/hpke.h",
-      "SPDXID": "SPDXRef-binary-file-81",
+      "SPDXID": "SPDXRef-binary-file-76",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2225,7 +2155,7 @@
     },
     {
       "fileName": "./include/openssl/whrlpool.h",
-      "SPDXID": "SPDXRef-binary-file-82",
+      "SPDXID": "SPDXRef-binary-file-77",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2237,7 +2167,7 @@
     },
     {
       "fileName": "./include/openssl/rc5.h",
-      "SPDXID": "SPDXRef-binary-file-83",
+      "SPDXID": "SPDXRef-binary-file-78",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2249,7 +2179,7 @@
     },
     {
       "fileName": "./include/openssl/ossl_typ.h",
-      "SPDXID": "SPDXRef-binary-file-84",
+      "SPDXID": "SPDXRef-binary-file-79",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2261,7 +2191,7 @@
     },
     {
       "fileName": "./include/openssl/ssl3.h",
-      "SPDXID": "SPDXRef-binary-file-85",
+      "SPDXID": "SPDXRef-binary-file-80",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2273,7 +2203,7 @@
     },
     {
       "fileName": "./include/openssl/params.h",
-      "SPDXID": "SPDXRef-binary-file-86",
+      "SPDXID": "SPDXRef-binary-file-81",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2285,7 +2215,7 @@
     },
     {
       "fileName": "./include/openssl/pem.h",
-      "SPDXID": "SPDXRef-binary-file-87",
+      "SPDXID": "SPDXRef-binary-file-82",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2297,7 +2227,7 @@
     },
     {
       "fileName": "./include/openssl/pemerr.h",
-      "SPDXID": "SPDXRef-binary-file-88",
+      "SPDXID": "SPDXRef-binary-file-83",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2309,7 +2239,7 @@
     },
     {
       "fileName": "./include/openssl/comp.h",
-      "SPDXID": "SPDXRef-binary-file-89",
+      "SPDXID": "SPDXRef-binary-file-84",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2321,7 +2251,7 @@
     },
     {
       "fileName": "./include/openssl/ssl2.h",
-      "SPDXID": "SPDXRef-binary-file-90",
+      "SPDXID": "SPDXRef-binary-file-85",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2333,7 +2263,7 @@
     },
     {
       "fileName": "./include/openssl/pkcs7.h",
-      "SPDXID": "SPDXRef-binary-file-91",
+      "SPDXID": "SPDXRef-binary-file-86",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2345,7 +2275,7 @@
     },
     {
       "fileName": "./include/openssl/objects.h",
-      "SPDXID": "SPDXRef-binary-file-92",
+      "SPDXID": "SPDXRef-binary-file-87",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2357,7 +2287,7 @@
     },
     {
       "fileName": "./include/openssl/ui.h",
-      "SPDXID": "SPDXRef-binary-file-93",
+      "SPDXID": "SPDXRef-binary-file-88",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2369,7 +2299,7 @@
     },
     {
       "fileName": "./include/openssl/idea.h",
-      "SPDXID": "SPDXRef-binary-file-94",
+      "SPDXID": "SPDXRef-binary-file-89",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2381,7 +2311,7 @@
     },
     {
       "fileName": "./include/openssl/encodererr.h",
-      "SPDXID": "SPDXRef-binary-file-95",
+      "SPDXID": "SPDXRef-binary-file-90",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2393,7 +2323,7 @@
     },
     {
       "fileName": "./include/openssl/e_os2.h",
-      "SPDXID": "SPDXRef-binary-file-96",
+      "SPDXID": "SPDXRef-binary-file-91",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2405,7 +2335,7 @@
     },
     {
       "fileName": "./include/openssl/rsaerr.h",
-      "SPDXID": "SPDXRef-binary-file-97",
+      "SPDXID": "SPDXRef-binary-file-92",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2417,7 +2347,7 @@
     },
     {
       "fileName": "./include/openssl/x509err.h",
-      "SPDXID": "SPDXRef-binary-file-98",
+      "SPDXID": "SPDXRef-binary-file-93",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2429,7 +2359,7 @@
     },
     {
       "fileName": "./include/openssl/macros.h",
-      "SPDXID": "SPDXRef-binary-file-99",
+      "SPDXID": "SPDXRef-binary-file-94",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2441,7 +2371,7 @@
     },
     {
       "fileName": "./include/openssl/asyncerr.h",
-      "SPDXID": "SPDXRef-binary-file-100",
+      "SPDXID": "SPDXRef-binary-file-95",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2453,7 +2383,7 @@
     },
     {
       "fileName": "./include/openssl/indicator.h",
-      "SPDXID": "SPDXRef-binary-file-101",
+      "SPDXID": "SPDXRef-binary-file-96",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2465,7 +2395,7 @@
     },
     {
       "fileName": "./include/openssl/md2.h",
-      "SPDXID": "SPDXRef-binary-file-102",
+      "SPDXID": "SPDXRef-binary-file-97",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2477,7 +2407,7 @@
     },
     {
       "fileName": "./include/openssl/esserr.h",
-      "SPDXID": "SPDXRef-binary-file-103",
+      "SPDXID": "SPDXRef-binary-file-98",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2489,7 +2419,7 @@
     },
     {
       "fileName": "./include/openssl/encoder.h",
-      "SPDXID": "SPDXRef-binary-file-104",
+      "SPDXID": "SPDXRef-binary-file-99",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2501,7 +2431,7 @@
     },
     {
       "fileName": "./include/openssl/kdf.h",
-      "SPDXID": "SPDXRef-binary-file-105",
+      "SPDXID": "SPDXRef-binary-file-100",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2513,7 +2443,7 @@
     },
     {
       "fileName": "./include/openssl/types.h",
-      "SPDXID": "SPDXRef-binary-file-106",
+      "SPDXID": "SPDXRef-binary-file-101",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2525,7 +2455,7 @@
     },
     {
       "fileName": "./include/openssl/byteorder.h",
-      "SPDXID": "SPDXRef-binary-file-107",
+      "SPDXID": "SPDXRef-binary-file-102",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2537,7 +2467,7 @@
     },
     {
       "fileName": "./include/openssl/pem2.h",
-      "SPDXID": "SPDXRef-binary-file-108",
+      "SPDXID": "SPDXRef-binary-file-103",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2549,7 +2479,7 @@
     },
     {
       "fileName": "./include/openssl/aes.h",
-      "SPDXID": "SPDXRef-binary-file-109",
+      "SPDXID": "SPDXRef-binary-file-104",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2561,7 +2491,7 @@
     },
     {
       "fileName": "./include/openssl/buffer.h",
-      "SPDXID": "SPDXRef-binary-file-110",
+      "SPDXID": "SPDXRef-binary-file-105",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2573,7 +2503,7 @@
     },
     {
       "fileName": "./include/openssl/provider.h",
-      "SPDXID": "SPDXRef-binary-file-111",
+      "SPDXID": "SPDXRef-binary-file-106",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2585,7 +2515,7 @@
     },
     {
       "fileName": "./include/openssl/tserr.h",
-      "SPDXID": "SPDXRef-binary-file-112",
+      "SPDXID": "SPDXRef-binary-file-107",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2597,7 +2527,7 @@
     },
     {
       "fileName": "./include/openssl/symhacks.h",
-      "SPDXID": "SPDXRef-binary-file-113",
+      "SPDXID": "SPDXRef-binary-file-108",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2609,7 +2539,7 @@
     },
     {
       "fileName": "./include/openssl/sslerr.h",
-      "SPDXID": "SPDXRef-binary-file-114",
+      "SPDXID": "SPDXRef-binary-file-109",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2621,7 +2551,7 @@
     },
     {
       "fileName": "./include/openssl/httperr.h",
-      "SPDXID": "SPDXRef-binary-file-115",
+      "SPDXID": "SPDXRef-binary-file-110",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2633,7 +2563,7 @@
     },
     {
       "fileName": "./include/openssl/crypto.h",
-      "SPDXID": "SPDXRef-binary-file-116",
+      "SPDXID": "SPDXRef-binary-file-111",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2645,7 +2575,7 @@
     },
     {
       "fileName": "./include/openssl/objectserr.h",
-      "SPDXID": "SPDXRef-binary-file-117",
+      "SPDXID": "SPDXRef-binary-file-112",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2657,7 +2587,7 @@
     },
     {
       "fileName": "./include/openssl/seed.h",
-      "SPDXID": "SPDXRef-binary-file-118",
+      "SPDXID": "SPDXRef-binary-file-113",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2669,7 +2599,7 @@
     },
     {
       "fileName": "./include/openssl/pkcs7err.h",
-      "SPDXID": "SPDXRef-binary-file-119",
+      "SPDXID": "SPDXRef-binary-file-114",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2681,7 +2611,7 @@
     },
     {
       "fileName": "./include/openssl/ssl.h",
-      "SPDXID": "SPDXRef-binary-file-120",
+      "SPDXID": "SPDXRef-binary-file-115",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2693,7 +2623,7 @@
     },
     {
       "fileName": "./include/openssl/stack.h",
-      "SPDXID": "SPDXRef-binary-file-121",
+      "SPDXID": "SPDXRef-binary-file-116",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2705,7 +2635,7 @@
     },
     {
       "fileName": "./include/openssl/x509v3.h",
-      "SPDXID": "SPDXRef-binary-file-122",
+      "SPDXID": "SPDXRef-binary-file-117",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2717,7 +2647,7 @@
     },
     {
       "fileName": "./include/openssl/kdferr.h",
-      "SPDXID": "SPDXRef-binary-file-123",
+      "SPDXID": "SPDXRef-binary-file-118",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2729,7 +2659,7 @@
     },
     {
       "fileName": "./include/openssl/crmf.h",
-      "SPDXID": "SPDXRef-binary-file-124",
+      "SPDXID": "SPDXRef-binary-file-119",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2741,7 +2671,7 @@
     },
     {
       "fileName": "./include/openssl/store.h",
-      "SPDXID": "SPDXRef-binary-file-125",
+      "SPDXID": "SPDXRef-binary-file-120",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2753,7 +2683,7 @@
     },
     {
       "fileName": "./include/openssl/dherr.h",
-      "SPDXID": "SPDXRef-binary-file-126",
+      "SPDXID": "SPDXRef-binary-file-121",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2765,7 +2695,7 @@
     },
     {
       "fileName": "./include/openssl/bioerr.h",
-      "SPDXID": "SPDXRef-binary-file-127",
+      "SPDXID": "SPDXRef-binary-file-122",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2777,7 +2707,7 @@
     },
     {
       "fileName": "./include/openssl/bio.h",
-      "SPDXID": "SPDXRef-binary-file-128",
+      "SPDXID": "SPDXRef-binary-file-123",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2789,7 +2719,7 @@
     },
     {
       "fileName": "./include/openssl/srp.h",
-      "SPDXID": "SPDXRef-binary-file-129",
+      "SPDXID": "SPDXRef-binary-file-124",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2801,7 +2731,7 @@
     },
     {
       "fileName": "./include/openssl/pkcs12.h",
-      "SPDXID": "SPDXRef-binary-file-130",
+      "SPDXID": "SPDXRef-binary-file-125",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2813,7 +2743,7 @@
     },
     {
       "fileName": "./include/openssl/md5.h",
-      "SPDXID": "SPDXRef-binary-file-131",
+      "SPDXID": "SPDXRef-binary-file-126",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2825,7 +2755,7 @@
     },
     {
       "fileName": "./include/openssl/engineerr.h",
-      "SPDXID": "SPDXRef-binary-file-132",
+      "SPDXID": "SPDXRef-binary-file-127",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2837,7 +2767,7 @@
     },
     {
       "fileName": "./include/openssl/core.h",
-      "SPDXID": "SPDXRef-binary-file-133",
+      "SPDXID": "SPDXRef-binary-file-128",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2849,7 +2779,7 @@
     },
     {
       "fileName": "./include/openssl/async.h",
-      "SPDXID": "SPDXRef-binary-file-134",
+      "SPDXID": "SPDXRef-binary-file-129",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2861,7 +2791,7 @@
     },
     {
       "fileName": "./include/openssl/cryptoerr_legacy.h",
-      "SPDXID": "SPDXRef-binary-file-135",
+      "SPDXID": "SPDXRef-binary-file-130",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2873,7 +2803,7 @@
     },
     {
       "fileName": "./include/openssl/cryptoerr.h",
-      "SPDXID": "SPDXRef-binary-file-136",
+      "SPDXID": "SPDXRef-binary-file-131",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2885,7 +2815,7 @@
     },
     {
       "fileName": "./include/openssl/ebcdic.h",
-      "SPDXID": "SPDXRef-binary-file-137",
+      "SPDXID": "SPDXRef-binary-file-132",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2897,7 +2827,7 @@
     },
     {
       "fileName": "./include/openssl/conf.h",
-      "SPDXID": "SPDXRef-binary-file-138",
+      "SPDXID": "SPDXRef-binary-file-133",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2909,7 +2839,7 @@
     },
     {
       "fileName": "./include/openssl/cmp.h",
-      "SPDXID": "SPDXRef-binary-file-139",
+      "SPDXID": "SPDXRef-binary-file-134",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2921,7 +2851,7 @@
     },
     {
       "fileName": "./include/openssl/quic.h",
-      "SPDXID": "SPDXRef-binary-file-140",
+      "SPDXID": "SPDXRef-binary-file-135",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2933,7 +2863,7 @@
     },
     {
       "fileName": "./include/openssl/ec.h",
-      "SPDXID": "SPDXRef-binary-file-141",
+      "SPDXID": "SPDXRef-binary-file-136",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2945,7 +2875,7 @@
     },
     {
       "fileName": "./include/openssl/dtls1.h",
-      "SPDXID": "SPDXRef-binary-file-142",
+      "SPDXID": "SPDXRef-binary-file-137",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2957,7 +2887,7 @@
     },
     {
       "fileName": "./include/openssl/cms.h",
-      "SPDXID": "SPDXRef-binary-file-143",
+      "SPDXID": "SPDXRef-binary-file-138",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2969,7 +2899,7 @@
     },
     {
       "fileName": "./include/openssl/ecdh.h",
-      "SPDXID": "SPDXRef-binary-file-144",
+      "SPDXID": "SPDXRef-binary-file-139",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2981,7 +2911,7 @@
     },
     {
       "fileName": "./include/openssl/core_names.h",
-      "SPDXID": "SPDXRef-binary-file-145",
+      "SPDXID": "SPDXRef-binary-file-140",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2993,7 +2923,7 @@
     },
     {
       "fileName": "./include/openssl/dh.h",
-      "SPDXID": "SPDXRef-binary-file-146",
+      "SPDXID": "SPDXRef-binary-file-141",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3005,7 +2935,7 @@
     },
     {
       "fileName": "./include/openssl/cmperr.h",
-      "SPDXID": "SPDXRef-binary-file-147",
+      "SPDXID": "SPDXRef-binary-file-142",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3017,7 +2947,7 @@
     },
     {
       "fileName": "./include/openssl/bnerr.h",
-      "SPDXID": "SPDXRef-binary-file-148",
+      "SPDXID": "SPDXRef-binary-file-143",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3029,7 +2959,7 @@
     },
     {
       "fileName": "./include/openssl/rc2.h",
-      "SPDXID": "SPDXRef-binary-file-149",
+      "SPDXID": "SPDXRef-binary-file-144",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3041,7 +2971,7 @@
     },
     {
       "fileName": "./include/openssl/blowfish.h",
-      "SPDXID": "SPDXRef-binary-file-150",
+      "SPDXID": "SPDXRef-binary-file-145",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3053,7 +2983,7 @@
     },
     {
       "fileName": "./include/openssl/sha.h",
-      "SPDXID": "SPDXRef-binary-file-151",
+      "SPDXID": "SPDXRef-binary-file-146",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3065,7 +2995,7 @@
     },
     {
       "fileName": "./include/openssl/prov_ssl.h",
-      "SPDXID": "SPDXRef-binary-file-152",
+      "SPDXID": "SPDXRef-binary-file-147",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3076,24 +3006,60 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libssl.a",
-      "SPDXID": "SPDXRef-binary-file-153",
+      "fileName": "./lib/libcrypto.so.3",
+      "SPDXID": "SPDXRef-binary-file-148",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "bf8af5273262786bdbedbaf78640066dbcbc97fdb261def434653fbe1bfe79dd"
+          "checksumValue": "49863e4ccab72f15c8666ad83905475371bd28f895e97b45f2f4e2279a113bd1"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libcrypto.a",
-      "SPDXID": "SPDXRef-binary-file-154",
+      "fileName": "./lib/ossl-modules/legacy.so",
+      "SPDXID": "SPDXRef-binary-file-149",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "4cd5d9a5cebd4804945a58b37ce3acb81c6c174a454b605be7a302d3adf74211"
+          "checksumValue": "066a3c00b0a3a397dc40556156d4112ea92a902398d4b311fb9789781119f704"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libssl.so.3",
+      "SPDXID": "SPDXRef-binary-file-150",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b856fb2a4c5063197af2974666757f4f34ccdc6d556fc2ec158dbab9b06dfb54"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libssl.so",
+      "SPDXID": "SPDXRef-binary-file-151",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b856fb2a4c5063197af2974666757f4f34ccdc6d556fc2ec158dbab9b06dfb54"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libcrypto.so",
+      "SPDXID": "SPDXRef-binary-file-152",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "49863e4ccab72f15c8666ad83905475371bd28f895e97b45f2f4e2279a113bd1"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -3101,11 +3067,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/openssl.pc",
-      "SPDXID": "SPDXRef-binary-file-155",
+      "SPDXID": "SPDXRef-binary-file-153",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e7ff4b4a35b4c04a1126a6c9536c75a68eff39ad98f6423ed6f5ad5c6cfdcfa1"
+          "checksumValue": "479fb1c3e620ee4bac1dfa19e7c9a626f74072bb9bad92e86de0c9c03789a6f0"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -3113,11 +3079,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/libcrypto.pc",
-      "SPDXID": "SPDXRef-binary-file-156",
+      "SPDXID": "SPDXRef-binary-file-154",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d86f808edd854186df089fac128f7831043e9ceb66126554e2d019dd38e95168"
+          "checksumValue": "016da52077647d646a94edd1da0188006b3d77b3506e8d8342e7b9fd03dc6eef"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -3125,11 +3091,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/libssl.pc",
-      "SPDXID": "SPDXRef-binary-file-157",
+      "SPDXID": "SPDXRef-binary-file-155",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "16ec997408b6878ec3276fe598574d921619bc1d1ea878a082adf8d880c754b6"
+          "checksumValue": "e44a0be8af6a6ed40aeff755f9eef5ba458ec25ddb899cd2d5d05eb28322d7cb"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -3137,7 +3103,7 @@
     },
     {
       "fileName": "./etc/ssl/openssl.cnf",
-      "SPDXID": "SPDXRef-binary-file-158",
+      "SPDXID": "SPDXRef-binary-file-156",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3149,7 +3115,7 @@
     },
     {
       "fileName": "./etc/ssl/ct_log_list.cnf.dist",
-      "SPDXID": "SPDXRef-binary-file-159",
+      "SPDXID": "SPDXRef-binary-file-157",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3161,7 +3127,7 @@
     },
     {
       "fileName": "./etc/ssl/certs/.keep",
-      "SPDXID": "SPDXRef-binary-file-160",
+      "SPDXID": "SPDXRef-binary-file-158",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3173,7 +3139,7 @@
     },
     {
       "fileName": "./etc/ssl/private/.keep",
-      "SPDXID": "SPDXRef-binary-file-161",
+      "SPDXID": "SPDXRef-binary-file-159",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3185,7 +3151,7 @@
     },
     {
       "fileName": "./etc/ssl/ct_log_list.cnf",
-      "SPDXID": "SPDXRef-binary-file-162",
+      "SPDXID": "SPDXRef-binary-file-160",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3197,7 +3163,7 @@
     },
     {
       "fileName": "./etc/ssl/openssl.cnf.dist",
-      "SPDXID": "SPDXRef-binary-file-163",
+      "SPDXID": "SPDXRef-binary-file-161",
       "checksums": [
         {
           "algorithm": "SHA256",

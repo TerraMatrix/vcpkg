@@ -55,7 +55,7 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target draco::draco
-add_library(draco::draco STATIC IMPORTED)
+add_library(draco::draco SHARED IMPORTED)
 
 set_target_properties(draco::draco PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_11"

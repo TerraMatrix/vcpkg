@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/pthread-stubs-arm64-linux-0.4#1-0c8dbfef-7cee-49d8-bda6-2316c9f75e56",
-  "name": "pthread-stubs:arm64-linux@0.4#1 a90a55b0a378deda5cd4563f215232180e478b5ab113e0e9b2035b4486610d98",
+  "documentNamespace": "https://spdx.org/spdxdocs/pthread-stubs-arm64-linux-0.4#1-0027dff5-60ba-4e50-ab2c-a784ef5da401",
+  "name": "pthread-stubs:arm64-linux@0.4#1 661230da0369852c47e5745c7ff26047f40a23947a17db88259bd0598560bfe5",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-26T09:54:36Z"
+    "created": "2025-12-16T11:33:46Z"
   },
   "relationships": [
     {
@@ -46,11 +46,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-2"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-3"
     }
   ],
   "packages": [
@@ -69,7 +64,7 @@
     {
       "name": "pthread-stubs:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "a90a55b0a378deda5cd4563f215232180e478b5ab113e0e9b2035b4486610d98",
+      "versionInfo": "661230da0369852c47e5745c7ff26047f40a23947a17db88259bd0598560bfe5",
       "downloadLocation": "NONE",
       "licenseConcluded": "X11-distribute-modifications-variant",
       "licenseDeclared": "NOASSERTION",
@@ -122,19 +117,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "8050c7180be6359723ba520b1c6b622a378fdcdcb944962c4ac3e04d157d561c"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/pthread-stubs.pc",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "b1b3ea9971643fd042528aae956b49e39a320d5b28b1fb613af05dea8ad462e7"
+          "checksumValue": "d6ce87baa93c0b203858bfdaea22026c29e15ea98d20301d0ed0ebb8016c71e7"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -142,7 +125,7 @@
     },
     {
       "fileName": "./share/pthread-stubs/copyright",
-      "SPDXID": "SPDXRef-binary-file-2",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -154,11 +137,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/pthread-stubs.pc",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b1b3ea9971643fd042528aae956b49e39a320d5b28b1fb613af05dea8ad462e7"
+          "checksumValue": "a44fda299dc1833f77b4105de055743722c3223682e7dc6269b53fd4ee765f0c"
         }
       ],
       "licenseConcluded": "NOASSERTION",

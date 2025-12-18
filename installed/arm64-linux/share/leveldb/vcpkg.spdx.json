@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/leveldb-arm64-linux-1.23-65f81a4c-8672-46f7-91ad-57b9eab3e920",
-  "name": "leveldb:arm64-linux@1.23 814b7395aa2a076dbc354a6babfbce828e2f93ec41a5ba3271fbb7c5cd110780",
+  "documentNamespace": "https://spdx.org/spdxdocs/leveldb-arm64-linux-1.23-4d3d9a74-11b5-48ad-a493-dd6de332ab0f",
+  "name": "leveldb:arm64-linux@1.23 b38d29e3208cdf0fc50d8b81631adf2599b4fc2e291735883349b0e7067d00b2",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T04:49:32Z"
+    "created": "2025-12-16T13:11:17Z"
   },
   "relationships": [
     {
@@ -261,16 +261,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-42"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-43"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-44"
     }
   ],
   "packages": [
@@ -289,7 +279,7 @@
     {
       "name": "leveldb:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "814b7395aa2a076dbc354a6babfbce828e2f93ec41a5ba3271fbb7c5cd110780",
+      "versionInfo": "b38d29e3208cdf0fc50d8b81631adf2599b4fc2e291735883349b0e7067d00b2",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -385,20 +375,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./debug/lib/libleveldb.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "cd76adda518a606bb445f3b34dbc9b7510e5bef87fff86654f61249e4288e886"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/leveldb/copyright",
-      "SPDXID": "SPDXRef-binary-file-2",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -410,7 +388,7 @@
     },
     {
       "fileName": "./share/leveldb/leveldbTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -422,7 +400,7 @@
     },
     {
       "fileName": "./share/leveldb/leveldbConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -433,20 +411,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/leveldb/leveldbTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "b9bae768b125f207f057364a517a136653c8427c42608e9d6856aa3abb282162"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/leveldb/leveldbTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -458,7 +424,7 @@
     },
     {
       "fileName": "./share/leveldb/leveldbConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -470,7 +436,7 @@
     },
     {
       "fileName": "./include/leveldb/c.h",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -482,7 +448,7 @@
     },
     {
       "fileName": "./include/leveldb/filter_policy.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -494,7 +460,7 @@
     },
     {
       "fileName": "./include/leveldb/comparator.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -506,7 +472,7 @@
     },
     {
       "fileName": "./include/leveldb/table.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -518,7 +484,7 @@
     },
     {
       "fileName": "./include/leveldb/db.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -530,7 +496,7 @@
     },
     {
       "fileName": "./include/leveldb/table/block_builder.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -542,7 +508,7 @@
     },
     {
       "fileName": "./include/leveldb/table/merger.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -554,7 +520,7 @@
     },
     {
       "fileName": "./include/leveldb/table/block.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -566,7 +532,7 @@
     },
     {
       "fileName": "./include/leveldb/table/format.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -578,7 +544,7 @@
     },
     {
       "fileName": "./include/leveldb/table/filter_block.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -590,7 +556,7 @@
     },
     {
       "fileName": "./include/leveldb/table/iterator_wrapper.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -602,7 +568,7 @@
     },
     {
       "fileName": "./include/leveldb/table/two_level_iterator.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -614,7 +580,7 @@
     },
     {
       "fileName": "./include/leveldb/status.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -626,7 +592,7 @@
     },
     {
       "fileName": "./include/leveldb/iterator.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -638,7 +604,7 @@
     },
     {
       "fileName": "./include/leveldb/table_builder.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -650,7 +616,7 @@
     },
     {
       "fileName": "./include/leveldb/dumpfile.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -662,7 +628,7 @@
     },
     {
       "fileName": "./include/leveldb/options.h",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -674,7 +640,7 @@
     },
     {
       "fileName": "./include/leveldb/cache.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -686,7 +652,7 @@
     },
     {
       "fileName": "./include/leveldb/write_batch.h",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -698,7 +664,7 @@
     },
     {
       "fileName": "./include/leveldb/util/hash.h",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -710,7 +676,7 @@
     },
     {
       "fileName": "./include/leveldb/util/arena.h",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -722,7 +688,7 @@
     },
     {
       "fileName": "./include/leveldb/util/windows_logger.h",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -734,7 +700,7 @@
     },
     {
       "fileName": "./include/leveldb/util/logging.h",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -746,7 +712,7 @@
     },
     {
       "fileName": "./include/leveldb/util/mutexlock.h",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -758,7 +724,7 @@
     },
     {
       "fileName": "./include/leveldb/util/histogram.h",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -770,7 +736,7 @@
     },
     {
       "fileName": "./include/leveldb/util/coding.h",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -782,7 +748,7 @@
     },
     {
       "fileName": "./include/leveldb/util/crc32c.h",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -794,7 +760,7 @@
     },
     {
       "fileName": "./include/leveldb/util/testutil.h",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -806,7 +772,7 @@
     },
     {
       "fileName": "./include/leveldb/util/random.h",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -818,7 +784,7 @@
     },
     {
       "fileName": "./include/leveldb/util/posix_logger.h",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -830,7 +796,7 @@
     },
     {
       "fileName": "./include/leveldb/util/env_windows_test_helper.h",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -842,7 +808,7 @@
     },
     {
       "fileName": "./include/leveldb/util/env_posix_test_helper.h",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -854,7 +820,7 @@
     },
     {
       "fileName": "./include/leveldb/util/no_destructor.h",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -866,7 +832,7 @@
     },
     {
       "fileName": "./include/leveldb/export.h",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -878,7 +844,7 @@
     },
     {
       "fileName": "./include/leveldb/slice.h",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -890,7 +856,7 @@
     },
     {
       "fileName": "./include/leveldb/env.h",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -902,7 +868,7 @@
     },
     {
       "fileName": "./lib/libleveldb.a",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",

@@ -8,22 +8,22 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 # Import target "LibXslt::LibXslt" for configuration "Release"
 set_property(TARGET LibXslt::LibXslt APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(LibXslt::LibXslt PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libxslt.a"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libxslt.so.1.1.43"
+  IMPORTED_SONAME_RELEASE "libxslt.so.1"
   )
 
 list(APPEND _cmake_import_check_targets LibXslt::LibXslt )
-list(APPEND _cmake_import_check_files_for_LibXslt::LibXslt "${_IMPORT_PREFIX}/lib/libxslt.a" )
+list(APPEND _cmake_import_check_files_for_LibXslt::LibXslt "${_IMPORT_PREFIX}/lib/libxslt.so.1.1.43" )
 
 # Import target "LibXslt::LibExslt" for configuration "Release"
 set_property(TARGET LibXslt::LibExslt APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(LibXslt::LibExslt PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libexslt.a"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libexslt.so.0.8.24"
+  IMPORTED_SONAME_RELEASE "libexslt.so.0"
   )
 
 list(APPEND _cmake_import_check_targets LibXslt::LibExslt )
-list(APPEND _cmake_import_check_files_for_LibXslt::LibExslt "${_IMPORT_PREFIX}/lib/libexslt.a" )
+list(APPEND _cmake_import_check_files_for_LibXslt::LibExslt "${_IMPORT_PREFIX}/lib/libexslt.so.0.8.24" )
 
 # Import target "LibXslt::xsltproc" for configuration "Release"
 set_property(TARGET LibXslt::xsltproc APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)

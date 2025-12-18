@@ -55,13 +55,13 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::locale
-add_library(Boost::locale STATIC IMPORTED)
+add_library(Boost::locale SHARED IMPORTED)
 
 set_target_properties(Boost::locale PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_LOCALE_NO_LIB;BOOST_LOCALE_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_LOCALE_NO_LIB;BOOST_LOCALE_DYN_LINK"
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::core;Boost::iterator;\$<LINK_ONLY:Boost::charconv>;\$<LINK_ONLY:Boost::predef>;\$<LINK_ONLY:Boost::thread>;\$<LINK_ONLY:Iconv::Iconv>"
+  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::core;Boost::iterator"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

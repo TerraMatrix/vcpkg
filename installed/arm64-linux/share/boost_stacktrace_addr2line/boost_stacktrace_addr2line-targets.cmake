@@ -55,12 +55,12 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::stacktrace_addr2line
-add_library(Boost::stacktrace_addr2line STATIC IMPORTED)
+add_library(Boost::stacktrace_addr2line SHARED IMPORTED)
 
 set_target_properties(Boost::stacktrace_addr2line PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_STACKTRACE_NO_LIB;BOOST_STACKTRACE_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_STACKTRACE_NO_LIB;BOOST_STACKTRACE_DYN_LINK"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::config;Boost::container_hash;Boost::core;Boost::predef;Boost::winapi;\$<LINK_ONLY:dl>"
+  INTERFACE_LINK_LIBRARIES "Boost::config;Boost::container_hash;Boost::core;Boost::predef;Boost::winapi"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

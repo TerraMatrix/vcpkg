@@ -55,10 +55,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::date_time
-add_library(Boost::date_time STATIC IMPORTED)
+add_library(Boost::date_time SHARED IMPORTED)
 
 set_target_properties(Boost::date_time PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_DATE_TIME_NO_LIB;BOOST_DATE_TIME_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_DATE_TIME_NO_LIB;BOOST_DATE_TIME_DYN_LINK"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "Boost::algorithm;Boost::assert;Boost::config;Boost::core;Boost::io;Boost::lexical_cast;Boost::numeric_conversion;Boost::range;Boost::smart_ptr;Boost::static_assert;Boost::throw_exception;Boost::tokenizer;Boost::type_traits;Boost::utility;Boost::winapi"
 )

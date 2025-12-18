@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/boost-cobalt-arm64-linux-1.89.0-8e0f1591-6c8c-4f62-9a46-3823ecc250ef",
-  "name": "boost-cobalt:arm64-linux@1.89.0 005e23cb6deb4343f8148e8c79e0f0137beffb3e3a24b438091c3e77f591c067",
+  "documentNamespace": "https://spdx.org/spdxdocs/boost-cobalt-arm64-linux-1.89.0-e91440f2-67f9-4c89-ac30-c120e2224e2c",
+  "name": "boost-cobalt:arm64-linux@1.89.0 f6e546a1a55df77897b8f38a144f004ca46b8317047817ad2eb5a5be8ae45815",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-18T07:26:40Z"
+    "created": "2025-12-16T09:59:26Z"
   },
   "relationships": [
     {
@@ -461,11 +461,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-83"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-84"
     }
   ],
   "packages": [
@@ -484,7 +479,7 @@
     {
       "name": "boost-cobalt:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "005e23cb6deb4343f8148e8c79e0f0137beffb3e3a24b438091c3e77f591c067",
+      "versionInfo": "f6e546a1a55df77897b8f38a144f004ca46b8317047817ad2eb5a5be8ae45815",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSL-1.0",
       "licenseDeclared": "NOASSERTION",
@@ -561,19 +556,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libboost_cobalt.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "3f51c0b0b7653def478d1d7799c5565a3ee2d0c183fd4af5d9526c49e73e59f7"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -581,11 +564,11 @@
     },
     {
       "fileName": "./share/boost_cobalt/boost_cobalt-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-2",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "7e7b2e26178832e254100d63b445e7948ed925e758f9e29afb53d25761ea53d8"
+          "checksumValue": "45d798413cf06c233b1bb6cc7cf6704be22b3638e04ef01ab5b77f5691085af1"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -593,23 +576,11 @@
     },
     {
       "fileName": "./share/boost_cobalt/boost_cobalt-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "8e6b0b14647ab5a1b5bdde7f5fcb3c52f27a4c34c4535cd1eeb47c61e102823f"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/boost_cobalt/boost_cobalt-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "794171a0a8f32af08fa1ef419b38e7aecdeed3fb0b88523c10fa653a05778a49"
+          "checksumValue": "bc03a4ac60ef1959d8bef4628ab77503172183e33704d3414f44c4de93786f77"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -617,7 +588,7 @@
     },
     {
       "fileName": "./share/boost_cobalt/boost_cobalt-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -629,7 +600,7 @@
     },
     {
       "fileName": "./share/boost_cobalt/boost_cobalt-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -641,7 +612,7 @@
     },
     {
       "fileName": "./share/boost-cobalt/copyright",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -653,7 +624,7 @@
     },
     {
       "fileName": "./include/boost/cobalt.hpp",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -665,7 +636,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/promise.hpp",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -677,7 +648,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/gather.hpp",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -689,7 +660,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/thread.hpp",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -701,7 +672,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/spawn.hpp",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -713,7 +684,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/generator.hpp",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -725,7 +696,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/this_coro.hpp",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -737,7 +708,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/noop.hpp",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -749,7 +720,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/async_for.hpp",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -761,7 +732,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/channel.hpp",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -773,7 +744,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/op.hpp",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -785,7 +756,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/main.hpp",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -797,7 +768,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/race.hpp",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -809,7 +780,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/concepts.hpp",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -821,7 +792,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/composition.hpp",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -833,7 +804,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/with.hpp",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -845,7 +816,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/wait_group.hpp",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -857,7 +828,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/join.hpp",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -869,7 +840,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detached.hpp",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -881,7 +852,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/task.hpp",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -893,7 +864,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/run.hpp",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -905,7 +876,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/experimental/frame.hpp",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -917,7 +888,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/experimental/context.hpp",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -929,7 +900,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/experimental/yield_context.hpp",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -941,7 +912,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/stream_file.hpp",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -953,7 +924,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/serial_port.hpp",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -965,7 +936,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/file.hpp",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -977,7 +948,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/steady_timer.hpp",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -989,7 +960,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/acceptor.hpp",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1001,7 +972,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/random_access_file.hpp",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1013,7 +984,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/seq_packet_socket.hpp",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1025,7 +996,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/sleep.hpp",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1037,7 +1008,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/ops.hpp",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1049,7 +1020,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/read.hpp",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1061,7 +1032,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/buffer.hpp",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1073,7 +1044,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/ssl.hpp",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1085,7 +1056,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/datagram_socket.hpp",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1097,7 +1068,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/system_timer.hpp",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1109,7 +1080,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/resolver.hpp",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1121,7 +1092,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/socket.hpp",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1133,7 +1104,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/stream_socket.hpp",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1145,7 +1116,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/write.hpp",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1157,7 +1128,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/signal_set.hpp",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1169,7 +1140,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/random_access_device.hpp",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1181,7 +1152,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/pipe.hpp",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1193,7 +1164,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/stream.hpp",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1205,7 +1176,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io/endpoint.hpp",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1217,7 +1188,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/unique_handle.hpp",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1229,7 +1200,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/this_thread.hpp",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1241,7 +1212,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/error.hpp",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "SPDXID": "SPDXRef-binary-file-55",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1253,7 +1224,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/config.hpp",
-      "SPDXID": "SPDXRef-binary-file-58",
+      "SPDXID": "SPDXRef-binary-file-56",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1265,7 +1236,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/io.hpp",
-      "SPDXID": "SPDXRef-binary-file-59",
+      "SPDXID": "SPDXRef-binary-file-57",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1277,7 +1248,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/promise.hpp",
-      "SPDXID": "SPDXRef-binary-file-60",
+      "SPDXID": "SPDXRef-binary-file-58",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1289,7 +1260,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/gather.hpp",
-      "SPDXID": "SPDXRef-binary-file-61",
+      "SPDXID": "SPDXRef-binary-file-59",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1301,7 +1272,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/thread.hpp",
-      "SPDXID": "SPDXRef-binary-file-62",
+      "SPDXID": "SPDXRef-binary-file-60",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1313,7 +1284,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/spawn.hpp",
-      "SPDXID": "SPDXRef-binary-file-63",
+      "SPDXID": "SPDXRef-binary-file-61",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1325,7 +1296,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/generator.hpp",
-      "SPDXID": "SPDXRef-binary-file-64",
+      "SPDXID": "SPDXRef-binary-file-62",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1337,7 +1308,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/handler.hpp",
-      "SPDXID": "SPDXRef-binary-file-65",
+      "SPDXID": "SPDXRef-binary-file-63",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1349,7 +1320,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/main.hpp",
-      "SPDXID": "SPDXRef-binary-file-66",
+      "SPDXID": "SPDXRef-binary-file-64",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1361,7 +1332,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/race.hpp",
-      "SPDXID": "SPDXRef-binary-file-67",
+      "SPDXID": "SPDXRef-binary-file-65",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1373,7 +1344,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/with.hpp",
-      "SPDXID": "SPDXRef-binary-file-68",
+      "SPDXID": "SPDXRef-binary-file-66",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1385,7 +1356,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/wait_group.hpp",
-      "SPDXID": "SPDXRef-binary-file-69",
+      "SPDXID": "SPDXRef-binary-file-67",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1397,7 +1368,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/join.hpp",
-      "SPDXID": "SPDXRef-binary-file-70",
+      "SPDXID": "SPDXRef-binary-file-68",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1409,7 +1380,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/sbo_resource.hpp",
-      "SPDXID": "SPDXRef-binary-file-71",
+      "SPDXID": "SPDXRef-binary-file-69",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1421,7 +1392,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/detached.hpp",
-      "SPDXID": "SPDXRef-binary-file-72",
+      "SPDXID": "SPDXRef-binary-file-70",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1433,7 +1404,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/task.hpp",
-      "SPDXID": "SPDXRef-binary-file-73",
+      "SPDXID": "SPDXRef-binary-file-71",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1445,7 +1416,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/forward_cancellation.hpp",
-      "SPDXID": "SPDXRef-binary-file-74",
+      "SPDXID": "SPDXRef-binary-file-72",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1457,7 +1428,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/exception.hpp",
-      "SPDXID": "SPDXRef-binary-file-75",
+      "SPDXID": "SPDXRef-binary-file-73",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1469,7 +1440,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/this_thread.hpp",
-      "SPDXID": "SPDXRef-binary-file-76",
+      "SPDXID": "SPDXRef-binary-file-74",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1481,7 +1452,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/monotonic_resource.hpp",
-      "SPDXID": "SPDXRef-binary-file-77",
+      "SPDXID": "SPDXRef-binary-file-75",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1493,7 +1464,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/wrapper.hpp",
-      "SPDXID": "SPDXRef-binary-file-78",
+      "SPDXID": "SPDXRef-binary-file-76",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1505,7 +1476,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/await_result_helper.hpp",
-      "SPDXID": "SPDXRef-binary-file-79",
+      "SPDXID": "SPDXRef-binary-file-77",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1517,7 +1488,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/util.hpp",
-      "SPDXID": "SPDXRef-binary-file-80",
+      "SPDXID": "SPDXRef-binary-file-78",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1529,7 +1500,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/detail/fork.hpp",
-      "SPDXID": "SPDXRef-binary-file-81",
+      "SPDXID": "SPDXRef-binary-file-79",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1541,7 +1512,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/result.hpp",
-      "SPDXID": "SPDXRef-binary-file-82",
+      "SPDXID": "SPDXRef-binary-file-80",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1553,7 +1524,7 @@
     },
     {
       "fileName": "./include/boost/cobalt/impl/channel.hpp",
-      "SPDXID": "SPDXRef-binary-file-83",
+      "SPDXID": "SPDXRef-binary-file-81",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1564,12 +1535,24 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libboost_cobalt.a",
-      "SPDXID": "SPDXRef-binary-file-84",
+      "fileName": "./lib/libboost_cobalt.so.1.89.0",
+      "SPDXID": "SPDXRef-binary-file-82",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "4ae427dc6dda21b80e8a66c1e33a0c40d43685eaea81b0d99a8c53b305e8accf"
+          "checksumValue": "2d9ed03f5ea971d9da2ae86835f1f4b31786da0696e5150f326573983c211f9b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libboost_cobalt.so",
+      "SPDXID": "SPDXRef-binary-file-83",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2d9ed03f5ea971d9da2ae86835f1f4b31786da0696e5150f326573983c211f9b"
         }
       ],
       "licenseConcluded": "NOASSERTION",

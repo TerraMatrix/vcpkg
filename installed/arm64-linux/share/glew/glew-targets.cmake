@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS GLEW::glew_s)
+foreach(_cmake_expected_target IN ITEMS GLEW::glew)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -54,11 +54,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
   set(_IMPORT_PREFIX "")
 endif()
 
-# Create imported target GLEW::glew_s
-add_library(GLEW::glew_s STATIC IMPORTED)
+# Create imported target GLEW::glew
+add_library(GLEW::glew SHARED IMPORTED)
 
-set_target_properties(GLEW::glew_s PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "GLEW_STATIC"
+set_target_properties(GLEW::glew PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
 )
 

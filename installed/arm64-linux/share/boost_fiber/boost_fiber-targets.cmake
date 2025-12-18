@@ -55,10 +55,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::fiber
-add_library(Boost::fiber STATIC IMPORTED)
+add_library(Boost::fiber SHARED IMPORTED)
 
 set_target_properties(Boost::fiber PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_FIBER_NO_LIB;BOOST_FIBER_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_FIBER_NO_LIB;BOOST_FIBER_DYN_LINK;BOOST_FIBERS_DYN_LINK"
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::context;Boost::core;Boost::intrusive;Boost::predef;Boost::smart_ptr"

@@ -55,7 +55,7 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target unofficial::minizip::minizip
-add_library(unofficial::minizip::minizip STATIC IMPORTED)
+add_library(unofficial::minizip::minizip SHARED IMPORTED)
 
 set_target_properties(unofficial::minizip::minizip PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include/minizip"

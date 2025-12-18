@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS pugixml::pugixml pugixml::static)
+foreach(_cmake_expected_target IN ITEMS pugixml::pugixml pugixml::shared)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -59,13 +59,13 @@ add_library(pugixml::pugixml INTERFACE IMPORTED)
 
 set_target_properties(pugixml::pugixml PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "pugixml::static"
+  INTERFACE_LINK_LIBRARIES "pugixml::shared"
 )
 
-# Create imported target pugixml::static
-add_library(pugixml::static STATIC IMPORTED)
+# Create imported target pugixml::shared
+add_library(pugixml::shared SHARED IMPORTED)
 
-set_target_properties(pugixml::static PROPERTIES
+set_target_properties(pugixml::shared PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "\$<\$<BOOL:OFF>:PUGIXML_WCHAR_MODE>;\$<\$<BOOL:OFF>:PUGIXML_COMPACT>;\$<\$<BOOL:OFF>:PUGIXML_NO_XPATH>;\$<\$<BOOL:OFF>:PUGIXML_NO_STL>;\$<\$<BOOL:OFF>:PUGIXML_NO_EXCEPTIONS>"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
 )

@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/lerc-arm64-linux-4.0.4-9a792785-fc33-48f2-9c46-4c507d59e286",
-  "name": "lerc:arm64-linux@4.0.4 1f1fca8b948e95b69c4c74853136d6d4a87de189ff12281919a53b2b5ae27d9a",
+  "documentNamespace": "https://spdx.org/spdxdocs/lerc-arm64-linux-4.0.4-4fefe6c6-ba2e-4ad1-a02a-40d518fe51c9",
+  "name": "lerc:arm64-linux@4.0.4 75e856e5d3b1196c83307b1d7dfbabe1657ca9444d8ee6ce530a3db494808f4c",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T03:45:32Z"
+    "created": "2025-12-16T11:14:18Z"
   },
   "relationships": [
     {
@@ -96,16 +96,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-9"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-10"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-11"
     }
   ],
   "packages": [
@@ -124,7 +114,7 @@
     {
       "name": "lerc:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "1f1fca8b948e95b69c4c74853136d6d4a87de189ff12281919a53b2b5ae27d9a",
+      "versionInfo": "75e856e5d3b1196c83307b1d7dfbabe1657ca9444d8ee6ce530a3db494808f4c",
       "downloadLocation": "NONE",
       "licenseConcluded": "Apache-2.0",
       "licenseDeclared": "NOASSERTION",
@@ -213,31 +203,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libLerc.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "60ccd7b965e63b6e18cfaf94e97c215914a31618d1712890904850f9a2495420"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/Lerc.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "7098359b7809351dfad2384b3b4d9dd28b434e83bb06ef9da6a757baecbd042e"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -245,11 +211,11 @@
     },
     {
       "fileName": "./share/unofficial-lerc/unofficial-lerc-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "66ebb288382268df264f289c850327a85006e84ae177c09531bd7dd4cf0076d8"
+          "checksumValue": "c6b2f662d8ae6c126330fd28d31461976df0b441416c1c13f40a757a11487c80"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -257,23 +223,11 @@
     },
     {
       "fileName": "./share/unofficial-lerc/unofficial-lerc-config-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "53f243a70d23006d96eae42945a0509819c664283c9b5de810dd888581cf9b1d"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/unofficial-lerc/unofficial-lerc-config-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "2a5b5d77be398ec323e6686ff5df50e0fe16ac6af598a74ba09aefce41bb800b"
+          "checksumValue": "ed00841d4fbd31830e949424b26957ef22139d38a697b01f5361ce6a627a9e6f"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -281,7 +235,7 @@
     },
     {
       "fileName": "./share/lerc/NOTICE",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -293,7 +247,7 @@
     },
     {
       "fileName": "./share/lerc/copyright",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -305,7 +259,7 @@
     },
     {
       "fileName": "./include/Lerc_types.h",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -317,23 +271,35 @@
     },
     {
       "fileName": "./include/Lerc_c_api.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "52fcbe96614639728dd4e39428987eaef3bbd8e2ca8bee3095b00dd03f677aa3"
+          "checksumValue": "a3e79a37fd7f0faeae4ef9a0a91398ac2a1f2814303d11a636245b2030a17b0f"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libLerc.a",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "fileName": "./lib/libLerc.so.4",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "93c4b1fb35d9c255a48b90da0ef9a5c7fd4e5324c105524ae4bcf132dd3d5605"
+          "checksumValue": "3b1e87e02dc1a08826f4806a80c547121b66ca150277fd2eb9a5a67dd5e9bc00"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libLerc.so",
+      "SPDXID": "SPDXRef-binary-file-8",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3b1e87e02dc1a08826f4806a80c547121b66ca150277fd2eb9a5a67dd5e9bc00"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -341,11 +307,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/Lerc.pc",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "12e677c2c6eb56f73168f50dbc4fc81d218e0182d4b57e098a46f989ed3102cd"
+          "checksumValue": "38d02a409563d16124f4b19f92ea8bbaa2a0dfdf0a25cbe04a63d876994aa5f6"
         }
       ],
       "licenseConcluded": "NOASSERTION",

@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/gflags-arm64-linux-2.2.2#9-acb0ff06-b875-4f11-b602-e79c18a46a02",
-  "name": "gflags:arm64-linux@2.2.2#9 695444b09765bdb6c1cab215acfff75e34f6b6f565f701c1b78708b24d44e236",
+  "documentNamespace": "https://spdx.org/spdxdocs/gflags-arm64-linux-2.2.2#9-f428e9d4-dd69-4573-b97d-f6e067114ad1",
+  "name": "gflags:arm64-linux@2.2.2#9 b04034db606a525b90020302607c90da06520cb6a52af91454321d3c101a4bf5",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T02:48:51Z"
+    "created": "2025-12-16T10:34:46Z"
   },
   "relationships": [
     {
@@ -146,21 +146,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-18"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-19"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-20"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-21"
     }
   ],
   "packages": [
@@ -179,7 +164,7 @@
     {
       "name": "gflags:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "695444b09765bdb6c1cab215acfff75e34f6b6f565f701c1b78708b24d44e236",
+      "versionInfo": "b04034db606a525b90020302607c90da06520cb6a52af91454321d3c101a4bf5",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -280,43 +265,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/bin/gflags_completions.sh",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "cc8a0aae240363a0f2561f5e664ee0e96e8f04dee152f9750583ee4344606ace"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/gflags.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "ff258b6567ec61addc19f75a08d2e17b35c3fc5aa5236a81866db30a9497df8d"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libgflags_debug.a",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "7f3717cb368e2d148cd78d06cf6c9d8c8ad183c007e29b9aedf38bac55697023"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -324,7 +273,7 @@
     },
     {
       "fileName": "./share/gflags/gflags-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -336,11 +285,11 @@
     },
     {
       "fileName": "./share/gflags/gflags-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "806eda2bf08975a6c81906c67b355be1cb8e35577991157ea592234699fc495d"
+          "checksumValue": "79e7bfcf3e103f75764f548fad67ff65cf459bfff38cac5443b3580f227bf252"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -348,11 +297,11 @@
     },
     {
       "fileName": "./share/gflags/gflags-nonamespace-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "3eab2d74a0b4dd5732902cd09aa23e6e28d243c3d1de989c30459afa0009d2a7"
+          "checksumValue": "2d22d1f26ffdcfef1bd3add0616e47a9738ae76464e86af8a2c3c1987d5e1147"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -360,11 +309,11 @@
     },
     {
       "fileName": "./share/gflags/gflags-nonamespace-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e2e927103312236a989201420146b8c3997ff9ba340ed30d4161870f11d7286a"
+          "checksumValue": "d6646cabae40903b4fa670a7b97ebbeb1db58bb023db3eb74a575abec7231d17"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -372,7 +321,7 @@
     },
     {
       "fileName": "./share/gflags/gflags-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -383,20 +332,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/gflags/gflags-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "5dc18de8ce72b4861c05fc595db7bcb8b3f48e534f6c71c2cbb9aeeeb15bd372"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/gflags/vcpkg-cmake-wrapper.cmake",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -408,7 +345,7 @@
     },
     {
       "fileName": "./share/gflags/copyright",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -420,23 +357,11 @@
     },
     {
       "fileName": "./share/gflags/gflags-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b23c56a60d1747bf5e940c1b74031761e0dcef3d0e1940efe1fd8ab39eec52aa"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/gflags/gflags-nonamespace-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-13",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "b6332a00c417e44fa72adbe9ab34679dd8587518d93d40d3613951c960f0d0cb"
+          "checksumValue": "4a4bd647a90fe1af9ceb5a5ec2acc0db819f4e3cb7c4fe7953b1887415d8e5c7"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -444,7 +369,7 @@
     },
     {
       "fileName": "./share/gflags/usage",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -456,7 +381,7 @@
     },
     {
       "fileName": "./bin/gflags_completions.sh",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -468,7 +393,7 @@
     },
     {
       "fileName": "./include/gflags/gflags_completions.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -480,11 +405,11 @@
     },
     {
       "fileName": "./include/gflags/gflags_declare.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f7ca1b3c4388cb53b503e7984ed34911be30247e97b0bea242f2115bd91fdc1f"
+          "checksumValue": "d101c69d005e42b832b85cb5f66acaee96f5c02e0fb131c6962e5edf8a039a86"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -492,7 +417,7 @@
     },
     {
       "fileName": "./include/gflags/gflags.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -504,7 +429,7 @@
     },
     {
       "fileName": "./include/gflags/gflags_gflags.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -515,24 +440,48 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/pkgconfig/gflags.pc",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "fileName": "./lib/libgflags.so.2.2",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2b8505a48384fecd6b548e0c60feb6e40daaed6cff45d806f97e0c0547a00c04"
+          "checksumValue": "95d983b745c3f60ab51f89ea7763e160efba772dd123e2e8593e81cdb5492e3f"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libgflags.a",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "fileName": "./lib/libgflags.so",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "6a5de4e6d0efde1f47d50e2a8bebd356fe76c8418135ff7603a952ff33ca6087"
+          "checksumValue": "95d983b745c3f60ab51f89ea7763e160efba772dd123e2e8593e81cdb5492e3f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/pkgconfig/gflags.pc",
+      "SPDXID": "SPDXRef-binary-file-17",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a4aa0091fd4776a7d4fc0c83a48c7efeacaed425a676ff36a7ba646f257b4f27"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libgflags.so.2.2.2",
+      "SPDXID": "SPDXRef-binary-file-18",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "95d983b745c3f60ab51f89ea7763e160efba772dd123e2e8593e81cdb5492e3f"
         }
       ],
       "licenseConcluded": "NOASSERTION",

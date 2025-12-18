@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/libaec-arm64-linux-1.1.3#1-39b3db00-a425-41e8-80e4-53cba3109dac",
-  "name": "libaec:arm64-linux@1.1.3#1 1591854857b2e14b224b6728d5c7ab2f9e2f106e20b2521f1dc4732ffec1ba53",
+  "documentNamespace": "https://spdx.org/spdxdocs/libaec-arm64-linux-1.1.3#1-3fc9e657-fcf7-4aa0-817a-88ca37b66402",
+  "name": "libaec:arm64-linux@1.1.3#1 4d7e189bc546668d7ffb318a95e57b7aca2f2e6b9bf5134f2593ecb8c584e480",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-17T10:07:03Z"
+    "created": "2025-12-16T09:19:34Z"
   },
   "relationships": [
     {
@@ -116,6 +116,11 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-13"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-14"
     }
   ],
   "packages": [
@@ -134,7 +139,7 @@
     {
       "name": "libaec:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "1591854857b2e14b224b6728d5c7ab2f9e2f106e20b2521f1dc4732ffec1ba53",
+      "versionInfo": "4d7e189bc546668d7ffb318a95e57b7aca2f2e6b9bf5134f2593ecb8c584e480",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-2-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -223,31 +228,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libsz.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "ef3e8b5a24bb510cb7278b9b69f5553a1fec49b8e9f44fd652d2a8fd867b7e9f"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libaec.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "b869204fd7568d9b83b99df9781bf7aa2e4240f1cd1773e315be8e4d7e2dd2ae"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -255,11 +236,11 @@
     },
     {
       "fileName": "./share/libaec/libaec-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "7d1687186287d7dee823c5d430052120f841c4924421d2aac70d08ffa70aaeea"
+          "checksumValue": "2b1085f0140f419f30b5421e724eb5cce6683b06675c22d5075f95ab99377a7d"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -267,11 +248,11 @@
     },
     {
       "fileName": "./share/libaec/libaec-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "a5bc23707c3a6228c9a3dfd84624819cc5b08f4b982ac79fb8b306c5badc53c2"
+          "checksumValue": "4adaed20bdc8e2801261f285e74c357c4ac4f6f809ce0e8f96d714af86803f61"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -279,7 +260,7 @@
     },
     {
       "fileName": "./share/libaec/copyright",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -290,20 +271,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/libaec/libaec-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "908bfae30fd8cf4e28e29b04b10e4ffbe3503add16c6fa2610d66ba9356fe465"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/libaec/libaec-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -315,7 +284,7 @@
     },
     {
       "fileName": "./share/libaec/usage",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -327,11 +296,11 @@
     },
     {
       "fileName": "./share/libaec/libaec-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "c1ecf03fae0a97637c0ca17ed942671993421385cdd489fb4eae895adfc05cbf"
+          "checksumValue": "0e4b1ef6cff1662a830c0f5257d1f55fa61f2defe5d6c54293ec41fcbf02db48"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -339,7 +308,7 @@
     },
     {
       "fileName": "./include/libaec.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -351,7 +320,7 @@
     },
     {
       "fileName": "./include/szlib.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -362,24 +331,72 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libsz.a",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "fileName": "./lib/libaec.so.0.1.3",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d8c5f95101e242a9e0b523e0ad19cfbfb9b94c7f21122a8c5259b5b0db7c5bfc"
+          "checksumValue": "62bbbc10978d5f776729b7787c5560c79b97c885c3cb19580e0f5ee0efcbb122"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libaec.a",
+      "fileName": "./lib/libsz.so",
+      "SPDXID": "SPDXRef-binary-file-10",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c5ae2e28df60b6671c35c164ae2289f596607cb096e5fe334ea086179c1dd441"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libsz.so.2.0.1",
+      "SPDXID": "SPDXRef-binary-file-11",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c5ae2e28df60b6671c35c164ae2289f596607cb096e5fe334ea086179c1dd441"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libaec.so.0",
+      "SPDXID": "SPDXRef-binary-file-12",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "62bbbc10978d5f776729b7787c5560c79b97c885c3cb19580e0f5ee0efcbb122"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libsz.so.2",
       "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "c767485e21164ad2b0d4e6b7c1a0f609e8b5a0ffe5626c67dc904503ba133d33"
+          "checksumValue": "c5ae2e28df60b6671c35c164ae2289f596607cb096e5fe334ea086179c1dd441"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libaec.so",
+      "SPDXID": "SPDXRef-binary-file-14",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "62bbbc10978d5f776729b7787c5560c79b97c885c3cb19580e0f5ee0efcbb122"
         }
       ],
       "licenseConcluded": "NOASSERTION",

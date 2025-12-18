@@ -6,7 +6,6 @@ endif()
 
 include(CMakeFindDependencyMacro)
 
-find_dependency(zstd CONFIG)
 if(NOT boost_assert_FOUND)
   find_dependency(boost_assert 1.89.0 EXACT HINTS "${CMAKE_CURRENT_LIST_DIR}/..")
 endif()

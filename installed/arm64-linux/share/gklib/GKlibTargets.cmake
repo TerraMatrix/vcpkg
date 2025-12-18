@@ -55,7 +55,7 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target GKlib::GKlib
-add_library(GKlib::GKlib STATIC IMPORTED)
+add_library(GKlib::GKlib SHARED IMPORTED)
 
 set_target_properties(GKlib::GKlib PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "\$<\$<PLATFORM_ID:Linux>:LINUX>;\$<\$<NOT:\$<BOOL:OFF>>:NDEBUG>;\$<\$<NOT:\$<BOOL:OFF>>:NDEBUG2>;\$<\$<BOOL:OFF>:DEBUG>;\$<\$<BOOL:OFF>:GKRAND>;\$<\$<BOOL:OFF>:NO_X86>;\$<\$<BOOL:1>:HAVE_EXEC_INFO_H>;\$<\$<BOOL:OFF>:USE_PCRE>;\$<\$<AND:\$<BOOL:OFF>,\$<BOOL:>>:HAVE_PCREPOSIX_H>;\$<\$<BOOL:1>:HAVE_REGEX_H>;\$<\$<BOOL:>:USE_GKREGEX>;\$<\$<BOOL:1>:HAVE_GETLINE>;__thread=__thread"

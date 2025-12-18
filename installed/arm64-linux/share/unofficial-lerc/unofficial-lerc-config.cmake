@@ -55,7 +55,7 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target unofficial::Lerc::Lerc
-add_library(unofficial::Lerc::Lerc STATIC IMPORTED)
+add_library(unofficial::Lerc::Lerc SHARED IMPORTED)
 
 set_target_properties(unofficial::Lerc::Lerc PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"

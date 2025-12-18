@@ -55,7 +55,7 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target expat::expat
-add_library(expat::expat STATIC IMPORTED)
+add_library(expat::expat SHARED IMPORTED)
 
 set_target_properties(expat::expat PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"

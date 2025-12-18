@@ -55,10 +55,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::random
-add_library(Boost::random STATIC IMPORTED)
+add_library(Boost::random SHARED IMPORTED)
 
 set_target_properties(Boost::random PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_RANDOM_NO_LIB;BOOST_RANDOM_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_RANDOM_NO_LIB;BOOST_RANDOM_DYN_LINK"
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::core;Boost::dynamic_bitset;Boost::integer;Boost::io;Boost::static_assert;Boost::system;Boost::throw_exception;Boost::type_traits;Boost::utility"

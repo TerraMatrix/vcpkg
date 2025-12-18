@@ -55,16 +55,11 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target unofficial::sqlite3::sqlite3
-add_library(unofficial::sqlite3::sqlite3 STATIC IMPORTED)
+add_library(unofficial::sqlite3::sqlite3 SHARED IMPORTED)
 
 set_target_properties(unofficial::sqlite3::sqlite3 PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:Threads::Threads>;\$<LINK_ONLY:dl>"
 )
-
-if(CMAKE_VERSION VERSION_LESS 2.8.12)
-  message(FATAL_ERROR "This file relies on consumers using CMake 2.8.12 or greater.")
-endif()
 
 # Load information for each installed configuration.
 file(GLOB _cmake_config_files "${CMAKE_CURRENT_LIST_DIR}/unofficial-sqlite3-targets-*.cmake")

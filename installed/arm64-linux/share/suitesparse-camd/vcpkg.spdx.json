@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/suitesparse-camd-arm64-linux-3.3.3-037cc39b-74e7-4d29-a100-5ce852fc5346",
-  "name": "suitesparse-camd:arm64-linux@3.3.3 784773b4749d34c57b812874015eee9de21ed4b8bc3549fc2736504ff4dd78f6",
+  "documentNamespace": "https://spdx.org/spdxdocs/suitesparse-camd-arm64-linux-3.3.3-ebe17ffb-ec74-4d48-8683-9aa10f401926",
+  "name": "suitesparse-camd:arm64-linux@3.3.3 fe706295259c73aee72b7c2c02ab9cd5a17dfb3d378eb59880779d4eb055fa42",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T03:13:51Z"
+    "created": "2025-12-16T10:38:11Z"
   },
   "relationships": [
     {
@@ -86,11 +86,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-10"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-11"
     }
   ],
   "packages": [
@@ -109,7 +104,7 @@
     {
       "name": "suitesparse-camd:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "784773b4749d34c57b812874015eee9de21ed4b8bc3549fc2736504ff4dd78f6",
+      "versionInfo": "fe706295259c73aee72b7c2c02ab9cd5a17dfb3d378eb59880779d4eb055fa42",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -162,31 +157,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/CAMD.pc",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "7b5566a98c36667701293dda6b954fb35eaabd0f2ff3439a50b73725f83482f7"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libcamd.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "888ea2a9908cdcdbfd23b152fb77c2d18ac1b2b15d333e4b59166978fdca6770"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -194,7 +165,7 @@
     },
     {
       "fileName": "./share/CAMD/CAMDConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -206,23 +177,11 @@
     },
     {
       "fileName": "./share/CAMD/CAMDTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "9653de9877c196510f72e016023ff3502a7ff31e9fd4f2d35d53c9614882e220"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/CAMD/CAMDTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "47d8fb720bcba5e39a6cb4b4cd961dca9b65f7dbd9bc40d8d368c7e72f6ec4fe"
+          "checksumValue": "41fc1e7833a7045817fd6008cde8c840ade6bdfb2d49503806d151f8d47b30fd"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -230,11 +189,11 @@
     },
     {
       "fileName": "./share/CAMD/CAMDTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ac151e9d39b799c64c8a5c648ddf8ca1ee73e4e6496d09bf2eb15c62d004a3a1"
+          "checksumValue": "8de76bd6b86050b3391f923538be1bb0b5d2b9167a792c730b0fc6253d39a0e8"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -242,11 +201,11 @@
     },
     {
       "fileName": "./share/CAMD/CAMDConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "3009447d3b386a3e0b52b719686461ebd37be53d15ad67aea4043558934e24ca"
+          "checksumValue": "00f84df7af49ca773fc461efb6dba145a0b0619c66b903fad5def3ed90262a8a"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -254,7 +213,7 @@
     },
     {
       "fileName": "./share/suitesparse-camd/copyright",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -266,7 +225,7 @@
     },
     {
       "fileName": "./include/suitesparse/camd.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -277,24 +236,48 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/pkgconfig/CAMD.pc",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "fileName": "./lib/libcamd.so.3.3.3",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e2336858f684f34027a7384df494f5b5b2762f53efcac9dcd77bf0bd45999224"
+          "checksumValue": "78d9bd2f772f16997699209f0ed276966c1c6e4cfa8be8579d9a63bed5c1d2c3"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libcamd.a",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "fileName": "./lib/libcamd.so",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b76fe0cd00d97e7f48801b1ea099f455c96e685893e158f3676adf50fa8e210b"
+          "checksumValue": "78d9bd2f772f16997699209f0ed276966c1c6e4cfa8be8579d9a63bed5c1d2c3"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/pkgconfig/CAMD.pc",
+      "SPDXID": "SPDXRef-binary-file-9",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3981dc627ab303c434ba53094eb9d184c43eddfaa7294d2d11e8f11b2785997d"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libcamd.so.3",
+      "SPDXID": "SPDXRef-binary-file-10",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "78d9bd2f772f16997699209f0ed276966c1c6e4cfa8be8579d9a63bed5c1d2c3"
         }
       ],
       "licenseConcluded": "NOASSERTION",

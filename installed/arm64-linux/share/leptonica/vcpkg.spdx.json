@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/leptonica-arm64-linux-1.85.0-0b403111-e9fa-4959-a80c-75122f576287",
-  "name": "leptonica:arm64-linux@1.85.0 418989ea4a28409eb2bdda98e5f0a6ee490529f058de43db690136de42f46fef",
+  "documentNamespace": "https://spdx.org/spdxdocs/leptonica-arm64-linux-1.85.0-a22784b2-331f-4dbc-8f87-fea351442428",
+  "name": "leptonica:arm64-linux@1.85.0 030d8e068bb4431bd2e63582db632c78da7ede5ca605993e445e1ea8c55f347e",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-26T12:35:40Z"
+    "created": "2025-12-16T12:39:04Z"
   },
   "relationships": [
     {
@@ -266,11 +266,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-45"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-46"
     }
   ],
   "packages": [
@@ -289,7 +284,7 @@
     {
       "name": "leptonica:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "418989ea4a28409eb2bdda98e5f0a6ee490529f058de43db690136de42f46fef",
+      "versionInfo": "030d8e068bb4431bd2e63582db632c78da7ede5ca605993e445e1ea8c55f347e",
       "downloadLocation": "NONE",
       "licenseConcluded": "LicenseRef-vcpkg-null",
       "licenseDeclared": "NOASSERTION",
@@ -354,31 +349,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libleptonica.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "1d13910c7581ee3dd7268496b4443e99ca6adf14b2a6fab13183279853551d07"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/lept.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "7dae8152cfc11f0b3fdba7aadbe9ad821ce42c49609d9936f8af54ddede2e5e6"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -386,7 +357,7 @@
     },
     {
       "fileName": "./share/leptonica/copyright",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -398,11 +369,11 @@
     },
     {
       "fileName": "./share/leptonica/LeptonicaTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "007184ff6e43885bb54845f0ce7503b1cfafd065ae5ef85d77ba7d4c58aa9f37"
+          "checksumValue": "9b358671abcd6915b1492423a301ed7ebabece1cf3120bc8dcb1bb462cc478b6"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -410,23 +381,11 @@
     },
     {
       "fileName": "./share/leptonica/LeptonicaTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "995113566e66924e4b25b0442482e6672a16ebdef796d2fa42d60bed77c313bc"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/leptonica/LeptonicaTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "9de07e385ea5d1f9fe7d2a6ee5e8e8dbcb441d2fbac3a4b44e117ef51ee370ef"
+          "checksumValue": "492caafaea9f90049a25c2d3aa481d927c5097b62e07ee6750f0c7c8b481f017"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -434,7 +393,7 @@
     },
     {
       "fileName": "./share/leptonica/LeptonicaConfig-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -446,7 +405,7 @@
     },
     {
       "fileName": "./share/leptonica/LeptonicaConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -458,7 +417,7 @@
     },
     {
       "fileName": "./include/leptonica/allheaders.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -470,7 +429,7 @@
     },
     {
       "fileName": "./include/leptonica/pix.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -482,7 +441,7 @@
     },
     {
       "fileName": "./include/leptonica/arrayaccess.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -494,7 +453,7 @@
     },
     {
       "fileName": "./include/leptonica/imageio.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -506,7 +465,7 @@
     },
     {
       "fileName": "./include/leptonica/bilateral.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -518,7 +477,7 @@
     },
     {
       "fileName": "./include/leptonica/bmp.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -530,7 +489,7 @@
     },
     {
       "fileName": "./include/leptonica/readbarcode.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -542,7 +501,7 @@
     },
     {
       "fileName": "./include/leptonica/environ.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -554,7 +513,7 @@
     },
     {
       "fileName": "./include/leptonica/alltypes.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -566,7 +525,7 @@
     },
     {
       "fileName": "./include/leptonica/bmf.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -578,7 +537,7 @@
     },
     {
       "fileName": "./include/leptonica/dewarp.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -590,7 +549,7 @@
     },
     {
       "fileName": "./include/leptonica/watershed.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -602,7 +561,7 @@
     },
     {
       "fileName": "./include/leptonica/jbclass.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -614,7 +573,7 @@
     },
     {
       "fileName": "./include/leptonica/queue.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -626,7 +585,7 @@
     },
     {
       "fileName": "./include/leptonica/heap.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -638,7 +597,7 @@
     },
     {
       "fileName": "./include/leptonica/ptra.h",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -650,7 +609,7 @@
     },
     {
       "fileName": "./include/leptonica/colorfill.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -662,7 +621,7 @@
     },
     {
       "fileName": "./include/leptonica/bmfdata.h",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -674,7 +633,7 @@
     },
     {
       "fileName": "./include/leptonica/endianness.h",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -686,7 +645,7 @@
     },
     {
       "fileName": "./include/leptonica/sudoku.h",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -698,7 +657,7 @@
     },
     {
       "fileName": "./include/leptonica/pix_internal.h",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -710,7 +669,7 @@
     },
     {
       "fileName": "./include/leptonica/regutils.h",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -722,7 +681,7 @@
     },
     {
       "fileName": "./include/leptonica/array_internal.h",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -734,7 +693,7 @@
     },
     {
       "fileName": "./include/leptonica/bbuffer.h",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -746,7 +705,7 @@
     },
     {
       "fileName": "./include/leptonica/leptwin.h",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -758,7 +717,7 @@
     },
     {
       "fileName": "./include/leptonica/hashmap.h",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -770,7 +729,7 @@
     },
     {
       "fileName": "./include/leptonica/ccbord_internal.h",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -782,7 +741,7 @@
     },
     {
       "fileName": "./include/leptonica/stack.h",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -794,7 +753,7 @@
     },
     {
       "fileName": "./include/leptonica/stringcode.h",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -806,7 +765,7 @@
     },
     {
       "fileName": "./include/leptonica/gplot.h",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -818,7 +777,7 @@
     },
     {
       "fileName": "./include/leptonica/array.h",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -830,7 +789,7 @@
     },
     {
       "fileName": "./include/leptonica/rbtree.h",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -842,7 +801,7 @@
     },
     {
       "fileName": "./include/leptonica/ccbord.h",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -854,7 +813,7 @@
     },
     {
       "fileName": "./include/leptonica/list.h",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -866,7 +825,7 @@
     },
     {
       "fileName": "./include/leptonica/morph.h",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -878,7 +837,7 @@
     },
     {
       "fileName": "./include/leptonica/recog.h",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -889,12 +848,36 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libleptonica.a",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "fileName": "./lib/libleptonica.so",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "1363f9bd7020d67d8fc7caaf3548eb3d32cab46c86e0228b22e89aaa500c3c3d"
+          "checksumValue": "cd4ff62ac6d35129e2eec4ba22401371d88a496269490c712f1d254f69fa3884"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libleptonica.so.6.0.0",
+      "SPDXID": "SPDXRef-binary-file-43",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cd4ff62ac6d35129e2eec4ba22401371d88a496269490c712f1d254f69fa3884"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libleptonica.so.6",
+      "SPDXID": "SPDXRef-binary-file-44",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cd4ff62ac6d35129e2eec4ba22401371d88a496269490c712f1d254f69fa3884"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -902,11 +885,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/lept.pc",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "9dd3ebaf02f30b1ad956d3ff518fa3f3546a8fc5bd877c620dbacd50265e0947"
+          "checksumValue": "255426e732b8c007487113a2ce71b771324e3c33e5bf20acf8ac660c9ad3d672"
         }
       ],
       "licenseConcluded": "NOASSERTION",

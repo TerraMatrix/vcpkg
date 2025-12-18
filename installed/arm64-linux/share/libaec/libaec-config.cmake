@@ -26,7 +26,7 @@
 
 find_path(libaec_INCLUDE_DIR NAMES libaec.h DOC "AEC include directory")
 find_path(SZIP_INCLUDE_DIR NAMES szlib.h DOC "SZIP include directory")
-if (libaec_USE_STATIC_LIBS OR (NOT DEFINED libaec_USE_STATIC_LIBS AND NOT "OFF"))
+if (libaec_USE_STATIC_LIBS OR (NOT DEFINED libaec_USE_STATIC_LIBS AND NOT "ON"))
   if (MSVC)
     find_library(libaec_LIBRARY NAMES aec-static.lib DOC "AEC library")
     find_library(SZIP_LIBRARY NAMES szip-static.lib DOC "SZIP compatible version of the AEC library")

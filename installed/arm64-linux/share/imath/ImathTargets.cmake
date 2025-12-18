@@ -62,7 +62,7 @@ set_target_properties(Imath::ImathConfig PROPERTIES
 )
 
 # Create imported target Imath::Imath
-add_library(Imath::Imath STATIC IMPORTED)
+add_library(Imath::Imath SHARED IMPORTED)
 
 set_target_properties(Imath::Imath PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_11"

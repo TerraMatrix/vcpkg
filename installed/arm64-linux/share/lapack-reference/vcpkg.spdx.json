@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/lapack-reference-arm64-linux-3.12.1#1-e9f15afb-ba83-4f93-850f-37cadb69dabb",
-  "name": "lapack-reference:arm64-linux@3.12.1#1 f7706aa9d8482a75c67f3974a5d4bc81669a13cea923fcd9b0cf04c17b183a37",
+  "documentNamespace": "https://spdx.org/spdxdocs/lapack-reference-arm64-linux-3.12.1#1-d9b2d949-52ef-4650-9a3d-e1a47310a2e2",
+  "name": "lapack-reference:arm64-linux@3.12.1#1 9a436eabeeb14da26d56c54f65d49580aef37dc065c2f4f6f0284d70736ba6c0",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T03:02:12Z"
+    "created": "2025-12-16T10:37:45Z"
   },
   "relationships": [
     {
@@ -126,11 +126,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-12"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-13"
     }
   ],
   "packages": [
@@ -149,7 +144,7 @@
     {
       "name": "lapack-reference:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "f7706aa9d8482a75c67f3974a5d4bc81669a13cea923fcd9b0cf04c17b183a37",
+      "versionInfo": "9a436eabeeb14da26d56c54f65d49580aef37dc065c2f4f6f0284d70736ba6c0",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause-Open-MPI",
       "licenseDeclared": "NOASSERTION",
@@ -274,31 +269,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ffc9a1ac4b3bfe33508b443be8dfa48870022ca2592c1203ebea2f65adb81ee5"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/lapack-reference.pc",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "3b6c6b1d6ff234fb34d7e63e5efb1e019a8fa2cec96cf24bde2c21a49529ad40"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/liblapack.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "1a87d47b949b75998198e0bb52dd7c36c0bd66f639943b7cfd1925620f2481f1"
+          "checksumValue": "968c1f46c9ff24862fb13a7dfc271fea2eca85def7f0ebffec7b719d44fb11fb"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -306,7 +277,7 @@
     },
     {
       "fileName": "./share/lapack-reference/lapack-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -318,7 +289,7 @@
     },
     {
       "fileName": "./share/lapack-reference/FindLAPACK.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -330,11 +301,11 @@
     },
     {
       "fileName": "./share/lapack-reference/lapack-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "a23aa02369532fb48e836c27aa55758b52de59a76530a146351dcf535d43ccc8"
+          "checksumValue": "71e9f887446b6625d8c5a04d4ad7ac06e4b512e90e42639ce1e533c709289a51"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -342,7 +313,7 @@
     },
     {
       "fileName": "./share/lapack-reference/copyright",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -353,20 +324,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/lapack-reference/lapack-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "0798e0db2ae2b87b5afcec868324c9bd75a88227b3d3d1941d34e3de1e97f8ff"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/lapack-reference/lapack-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -378,7 +337,7 @@
     },
     {
       "fileName": "./share/lapack-reference/usage",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -390,11 +349,11 @@
     },
     {
       "fileName": "./share/lapack-reference/wrapper/vcpkg-cmake-wrapper.cmake",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d03aaa1635b7e00c96830a312893afc67d0e248c4391703ef81b89e98c7ae643"
+          "checksumValue": "a1e3d49efa35f52dcbe5a8485d769d5f388332bce801937ebbf882f884893a29"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -402,11 +361,47 @@
     },
     {
       "fileName": "./share/lapack-reference/lapack-targets-release.cmake",
+      "SPDXID": "SPDXRef-binary-file-8",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "735b6d6176851105d8b9a9b1542e73f87fe6c9d8c36d1c787eb5fd9944c444e8"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/liblapack.so.3",
+      "SPDXID": "SPDXRef-binary-file-9",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d77e7d3a9f869a8ed54d0577a0515ce9a155888bdf44d795b4b686b5269dd165"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/liblapack.so.3.12.0",
+      "SPDXID": "SPDXRef-binary-file-10",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d77e7d3a9f869a8ed54d0577a0515ce9a155888bdf44d795b4b686b5269dd165"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/liblapack.so",
       "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d473c8164ee8eddc83c3fc484ec200bf8115f419ee2ce5c45cf74db342d49a7b"
+          "checksumValue": "d77e7d3a9f869a8ed54d0577a0515ce9a155888bdf44d795b4b686b5269dd165"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -418,19 +413,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f4b7ad52da97a1ff48aed827fa45b2bc4f5ba8d16b6a04191d6591244d7e9370"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./lib/liblapack.a",
-      "SPDXID": "SPDXRef-binary-file-13",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "645b0a6bcfdb03d5c540aaecc636d1bf47ae2bfc4bfb97ccb99a142910394379"
+          "checksumValue": "34e2a66151bdb6dc0ee132a606104df9f9c93dc3dc94c178b0ef2419358f2417"
         }
       ],
       "licenseConcluded": "NOASSERTION",

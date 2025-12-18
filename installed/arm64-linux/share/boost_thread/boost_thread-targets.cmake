@@ -55,10 +55,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::thread
-add_library(Boost::thread STATIC IMPORTED)
+add_library(Boost::thread SHARED IMPORTED)
 
 set_target_properties(Boost::thread PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_THREAD_NO_LIB;BOOST_THREAD_STATIC_LINK;BOOST_THREAD_USE_LIB"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_THREAD_NO_LIB;BOOST_THREAD_DYN_LINK;BOOST_THREAD_USE_DLL"
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::atomic;Boost::bind;Boost::chrono;Boost::concept_check;Boost::config;Boost::container;Boost::container_hash;Boost::core;Boost::date_time;Boost::exception;Boost::function;Boost::io;Boost::move;Boost::optional;Boost::predef;Boost::preprocessor;Boost::smart_ptr;Boost::static_assert;Boost::system;Boost::throw_exception;Boost::tuple;Boost::type_traits;Boost::utility;Boost::winapi;Threads::Threads"

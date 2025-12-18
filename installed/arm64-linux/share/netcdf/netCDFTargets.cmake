@@ -55,11 +55,11 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target netCDF::netcdf
-add_library(netCDF::netcdf STATIC IMPORTED)
+add_library(netCDF::netcdf SHARED IMPORTED)
 
 set_target_properties(netCDF::netcdf PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "m;CURL::libcurl_static"
+  INTERFACE_LINK_LIBRARIES "m"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

@@ -88,7 +88,7 @@ if(_PythonFinder_WantLibs)
     endif()
     unset(_${_PythonFinder_PREFIX}_IMPORTED_TARGETS)
 
-    if(static STREQUAL "static")
+    if(dynamic STREQUAL "static")
         # Python for Windows embeds the zlib module into the core, so we have to link against it.
         # This is a separate extension module on Unix-like platforms.
         if(WIN32)

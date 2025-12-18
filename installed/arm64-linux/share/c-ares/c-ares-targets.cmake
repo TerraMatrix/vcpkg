@@ -55,7 +55,7 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target c-ares::cares
-add_library(c-ares::cares STATIC IMPORTED)
+add_library(c-ares::cares SHARED IMPORTED)
 
 set_target_properties(c-ares::cares PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"

@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/expat-arm64-linux-2.7.3-7e5657a2-10fd-4a0f-b478-d9d5f498bf7e",
-  "name": "expat:arm64-linux@2.7.3 ec286ef4c05fca28b21969b1e41480a89570f1cb1bf07b553bca8b353a032704",
+  "documentNamespace": "https://spdx.org/spdxdocs/expat-arm64-linux-2.7.3-48ee7bd6-2735-40f5-9e51-863534b2f05d",
+  "name": "expat:arm64-linux@2.7.3 801ad58ab2b8b03f912341160703f95b62d7838bdc81c06e0c1a8cb6304dc102",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-17T03:45:08Z"
+    "created": "2025-12-16T10:07:28Z"
   },
   "relationships": [
     {
@@ -106,11 +106,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-13"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-14"
     }
   ],
   "packages": [
@@ -129,7 +124,7 @@
     {
       "name": "expat:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "ec286ef4c05fca28b21969b1e41480a89570f1cb1bf07b553bca8b353a032704",
+      "versionInfo": "801ad58ab2b8b03f912341160703f95b62d7838bdc81c06e0c1a8cb6304dc102",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -194,43 +189,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libexpat.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "596707527531ad955e94675fb9766d728ab73911f81d56b286a213947e4bcc9f"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/expat.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "1ea5c7ffe7a17042df892e39a9f0f65a0043bebac6a10289b833d97b40a82878"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/expat/expat-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "8946433bbc8f40e0ce1a6fe7a536cecf76b6e726aa9bd8493e7f020960faa10a"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -238,11 +197,11 @@
     },
     {
       "fileName": "./share/expat/expat-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e8130686b94b1bfdef7506cc8a5fb942b489b483dc4653d4cef5998d421cbc08"
+          "checksumValue": "bd366071e45523fe9b248c4e3e09a7ca1157de6443b3ca17a07220c7ea0e1ff2"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -250,11 +209,11 @@
     },
     {
       "fileName": "./share/expat/expat.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "58b09312c543d38f667f69bb6ebe86accba8c7824340684d4fece57dfec7d1f9"
+          "checksumValue": "16259d65391b17923f863f9d24a1be798fa63174cfc6e048795e6ddffd96d109"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -262,7 +221,7 @@
     },
     {
       "fileName": "./share/expat/vcpkg-cmake-wrapper.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -274,7 +233,7 @@
     },
     {
       "fileName": "./share/expat/expat-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -286,7 +245,7 @@
     },
     {
       "fileName": "./share/expat/copyright",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -298,7 +257,7 @@
     },
     {
       "fileName": "./share/expat/expat-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -310,7 +269,7 @@
     },
     {
       "fileName": "./include/expat.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -322,7 +281,7 @@
     },
     {
       "fileName": "./include/expat_config.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -334,23 +293,35 @@
     },
     {
       "fileName": "./include/expat_external.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "27a20d5c7d4fecf521203494ef3cdaf54feefc3664a3bf0110675a1b4d7f2fad"
+          "checksumValue": "855ef9c9f96a39b7b24ea414facb1fd7ba9ee000e6d42a6d50a19b4c79b45dc0"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libexpat.a",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "fileName": "./lib/libexpat.so.1.11.1",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "592b16e6aa919fd45e9c3e62cb1729e3fd82cebf3968980e0ac0cb68de61c32f"
+          "checksumValue": "b692d4ed4c57bfdd56599c13d9b2c3d76477d520708915b30a987d8b665de66a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libexpat.so.1",
+      "SPDXID": "SPDXRef-binary-file-11",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b692d4ed4c57bfdd56599c13d9b2c3d76477d520708915b30a987d8b665de66a"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -358,11 +329,23 @@
     },
     {
       "fileName": "./lib/pkgconfig/expat.pc",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "1535439bdd5ec0d425c732e9a1b4d3c80602e5c96f0273980e3304da1c64b7f3"
+          "checksumValue": "5e31780b208c4b82ea74d3d0d04bd853bb68c34cc5340606ebf482b7c77d2612"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libexpat.so",
+      "SPDXID": "SPDXRef-binary-file-13",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b692d4ed4c57bfdd56599c13d9b2c3d76477d520708915b30a987d8b665de66a"
         }
       ],
       "licenseConcluded": "NOASSERTION",

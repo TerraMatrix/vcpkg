@@ -55,12 +55,12 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::python312
-add_library(Boost::python312 STATIC IMPORTED)
+add_library(Boost::python312 SHARED IMPORTED)
 
 set_target_properties(Boost::python312 PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_PYTHON_NO_LIB;BOOST_PYTHON_STATIC_LINK;BOOST_PYTHON_STATIC_LIB"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_PYTHON_NO_LIB;BOOST_PYTHON_DYN_LINK"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::align;Boost::bind;Boost::config;Boost::conversion;Boost::core;Boost::detail;Boost::foreach;Boost::function;Boost::iterator;Boost::lexical_cast;Boost::mpl;Boost::numeric_conversion;Boost::preprocessor;Boost::smart_ptr;Boost::static_assert;Boost::tuple;Boost::type_traits;Boost::utility;Python::Module;\$<LINK_ONLY:Boost::graph>;\$<LINK_ONLY:Boost::integer>;\$<LINK_ONLY:Boost::property_map>"
+  INTERFACE_LINK_LIBRARIES "Boost::align;Boost::bind;Boost::config;Boost::conversion;Boost::core;Boost::detail;Boost::foreach;Boost::function;Boost::iterator;Boost::lexical_cast;Boost::mpl;Boost::numeric_conversion;Boost::preprocessor;Boost::smart_ptr;Boost::static_assert;Boost::tuple;Boost::type_traits;Boost::utility;Python::Module"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

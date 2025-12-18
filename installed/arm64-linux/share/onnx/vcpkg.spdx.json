@@ -3,19 +3,49 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/onnx-arm64-linux-1.17.0#2-6e2df2ac-4269-40b0-9030-b58b0d7312be",
-  "name": "onnx:arm64-linux@1.17.0#2 NONE",
+  "documentNamespace": "https://spdx.org/spdxdocs/onnx-arm64-linux-1.17.0#2-a0781a18-c0ec-4f8c-ad8e-a2d0ccb8ca04",
+  "name": "onnx:arm64-linux@1.17.0#2 6978824df464870b405545fd489f6ee577b40ccd42d6e76f6c51f041a2f29e0f",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-12-11T07:07:37Z"
+    "created": "2025-12-17T09:43:33Z"
   },
   "relationships": [
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "GENERATES",
       "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-2",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-3"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-4"
     },
     {
       "spdxElementId": "SPDXRef-binary",
@@ -531,21 +561,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-102"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-103"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-104"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-105"
     }
   ],
   "packages": [
@@ -564,15 +579,89 @@
     {
       "name": "onnx:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "NONE",
+      "versionInfo": "6978824df464870b405545fd489f6ee577b40ccd42d6e76f6c51f041a2f29e0f",
       "downloadLocation": "NONE",
       "licenseConcluded": "Apache-2.0",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-0",
+      "name": "onnx/onnx",
+      "downloadLocation": "git+https://github.com/onnx/onnx@v1.17.0",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "5a18e2b19ec9c18c8b115fb7e12ed98eddaa581c95f15c4dd420cd6c86e7caa04f9a393da589e76b89cf9b3544abd3749a8c77c2446782f37502eb74e9b1f661"
+        }
+      ]
     }
   ],
   "files": [
+    {
+      "fileName": "./fix-dependency-protobuf.patch",
+      "SPDXID": "SPDXRef-port-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ab8693317e12dd70319c97f328e85638052734404d4b497ca42123bc4613b821"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-cmakelists.patch",
+      "SPDXID": "SPDXRef-port-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "53d8a3963bbb392562a2e2af8be7538f56f462d305028a71572a7d818a83f269"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "46628a824f1e3685810d078c3711cd38827684314c34fec466c9a79c20c18e4b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-cxx_standard.patch",
+      "SPDXID": "SPDXRef-port-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "21f0783d31d386d1b3ee1be56c7175a74982f3add605346cf7db07e264598d47"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9548aec32b858c4ddc960002b2816fc2e7b467208a49456a4dea84a09b6c4f8b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
     {
       "fileName": "./BUILD_INFO",
       "SPDXID": "SPDXRef-binary-file-0",
@@ -586,32 +675,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./debug/lib/libonnx_proto.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "dba0aa18193f0f4e06f2e0ef461b8835f4396191b2427c2a5803322f77ef89ad"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libonnx.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "6dd4a1f3ffbb0f449f69163ebc2b028bfd3f41efc79aefcb5c7badf7a58d330a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/ONNX/ONNXConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -622,20 +687,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/ONNX/ONNXTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "e2caa0ce782c6724c8b6b0719d2f318865b8f9ecb91263a354cedb0fc59e7515"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/ONNX/ONNXConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -647,7 +700,7 @@
     },
     {
       "fileName": "./share/ONNX/ONNXTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -659,7 +712,7 @@
     },
     {
       "fileName": "./share/ONNX/ONNXTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -671,7 +724,7 @@
     },
     {
       "fileName": "./share/onnx/copyright",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -683,7 +736,7 @@
     },
     {
       "fileName": "./include/onnx/checker.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -695,7 +748,7 @@
     },
     {
       "fileName": "./include/onnx/shape_inference/implementation.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -707,7 +760,7 @@
     },
     {
       "fileName": "./include/onnx/shape_inference/attribute_binder.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -719,7 +772,7 @@
     },
     {
       "fileName": "./include/onnx/onnx-data.proto",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -731,7 +784,7 @@
     },
     {
       "fileName": "./include/onnx/onnx-data_pb.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -743,7 +796,7 @@
     },
     {
       "fileName": "./include/onnx/onnx-operators-ml.proto3",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -755,7 +808,7 @@
     },
     {
       "fileName": "./include/onnx/onnx-data.pb.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -767,7 +820,7 @@
     },
     {
       "fileName": "./include/onnx/py_utils.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -779,7 +832,7 @@
     },
     {
       "fileName": "./include/onnx/defs/tensor/utils.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -791,7 +844,7 @@
     },
     {
       "fileName": "./include/onnx/defs/operator_sets_ml.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -803,7 +856,7 @@
     },
     {
       "fileName": "./include/onnx/defs/data_type_utils.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -815,7 +868,7 @@
     },
     {
       "fileName": "./include/onnx/defs/tensor_util.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -827,7 +880,7 @@
     },
     {
       "fileName": "./include/onnx/defs/function.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -839,7 +892,7 @@
     },
     {
       "fileName": "./include/onnx/defs/printer.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -851,7 +904,7 @@
     },
     {
       "fileName": "./include/onnx/defs/shape_inference.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -863,7 +916,7 @@
     },
     {
       "fileName": "./include/onnx/defs/operator_sets_preview.h",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -875,7 +928,7 @@
     },
     {
       "fileName": "./include/onnx/defs/operator_sets_training.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -887,7 +940,7 @@
     },
     {
       "fileName": "./include/onnx/defs/attr_proto_util.h",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -899,7 +952,7 @@
     },
     {
       "fileName": "./include/onnx/defs/operator_sets.h",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -911,7 +964,7 @@
     },
     {
       "fileName": "./include/onnx/defs/data_propagators.h",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -923,7 +976,7 @@
     },
     {
       "fileName": "./include/onnx/defs/schema.h",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -935,7 +988,7 @@
     },
     {
       "fileName": "./include/onnx/defs/tensor_proto_util.h",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -947,7 +1000,7 @@
     },
     {
       "fileName": "./include/onnx/defs/parser.h",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -959,7 +1012,7 @@
     },
     {
       "fileName": "./include/onnx/proto_utils.h",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -971,7 +1024,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/BaseConverter.h",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -983,7 +1036,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/convert.h",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -995,7 +1048,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/helper.h",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1007,7 +1060,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/upsample_9_8.h",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1019,7 +1072,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/no_previous_version.h",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1031,7 +1084,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/upsample_9_10.h",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1043,7 +1096,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/scan_9_8.h",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1055,7 +1108,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/type_restriction.h",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1067,7 +1120,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/reshape_5_4.h",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1079,7 +1132,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/slice_9_10.h",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1091,7 +1144,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/split_12_13.h",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1103,7 +1156,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/axes_input_to_attribute.h",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1115,7 +1168,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/gemm_6_7.h",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1127,7 +1180,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/axis_attribute_to_input.h",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1139,7 +1192,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/cast_9_8.h",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1151,7 +1204,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/remove_consumed_inputs.h",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1163,7 +1216,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/sum_8_7.h",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1175,7 +1228,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/split_17_18.h",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1187,7 +1240,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/dropout_11_12.h",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1199,7 +1252,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/topk_9_10.h",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1211,7 +1264,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/gridsample_19_20.h",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1223,7 +1276,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/group_normalization_20_21.h",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1235,7 +1288,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/reshape_4_5.h",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1247,7 +1300,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/softmax_12_13.h",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1259,7 +1312,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/scatter_10_11.h",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1271,7 +1324,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/axes_attribute_to_input.h",
-      "SPDXID": "SPDXRef-binary-file-58",
+      "SPDXID": "SPDXRef-binary-file-55",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1283,7 +1336,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/extend_supported_types.h",
-      "SPDXID": "SPDXRef-binary-file-59",
+      "SPDXID": "SPDXRef-binary-file-56",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1295,7 +1348,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/broadcast_backward_compatibility.h",
-      "SPDXID": "SPDXRef-binary-file-60",
+      "SPDXID": "SPDXRef-binary-file-57",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1307,7 +1360,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/batch_normalization_13_14.h",
-      "SPDXID": "SPDXRef-binary-file-61",
+      "SPDXID": "SPDXRef-binary-file-58",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1319,7 +1372,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/q_dq_21_20.h",
-      "SPDXID": "SPDXRef-binary-file-62",
+      "SPDXID": "SPDXRef-binary-file-59",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1331,7 +1384,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/gemm_7_6.h",
-      "SPDXID": "SPDXRef-binary-file-63",
+      "SPDXID": "SPDXRef-binary-file-60",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1343,7 +1396,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/transformers.h",
-      "SPDXID": "SPDXRef-binary-file-64",
+      "SPDXID": "SPDXRef-binary-file-61",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1355,7 +1408,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/upsample_6_7.h",
-      "SPDXID": "SPDXRef-binary-file-65",
+      "SPDXID": "SPDXRef-binary-file-62",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1367,7 +1420,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/split_13_12.h",
-      "SPDXID": "SPDXRef-binary-file-66",
+      "SPDXID": "SPDXRef-binary-file-63",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1379,7 +1432,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/maxpool_8_7.h",
-      "SPDXID": "SPDXRef-binary-file-67",
+      "SPDXID": "SPDXRef-binary-file-64",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1391,7 +1444,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/compatible.h",
-      "SPDXID": "SPDXRef-binary-file-68",
+      "SPDXID": "SPDXRef-binary-file-65",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1403,7 +1456,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/resize_10_11.h",
-      "SPDXID": "SPDXRef-binary-file-69",
+      "SPDXID": "SPDXRef-binary-file-66",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1415,7 +1468,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/adapter.h",
-      "SPDXID": "SPDXRef-binary-file-70",
+      "SPDXID": "SPDXRef-binary-file-67",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1427,7 +1480,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/axis_input_to_attribute.h",
-      "SPDXID": "SPDXRef-binary-file-71",
+      "SPDXID": "SPDXRef-binary-file-68",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1439,7 +1492,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/clip_10_11.h",
-      "SPDXID": "SPDXRef-binary-file-72",
+      "SPDXID": "SPDXRef-binary-file-69",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1451,7 +1504,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/broadcast_forward_compatibility.h",
-      "SPDXID": "SPDXRef-binary-file-73",
+      "SPDXID": "SPDXRef-binary-file-70",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1463,7 +1516,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/upsample_8_9.h",
-      "SPDXID": "SPDXRef-binary-file-74",
+      "SPDXID": "SPDXRef-binary-file-71",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1475,7 +1528,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/scan_8_9.h",
-      "SPDXID": "SPDXRef-binary-file-75",
+      "SPDXID": "SPDXRef-binary-file-72",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1487,7 +1540,7 @@
     },
     {
       "fileName": "./include/onnx/version_converter/adapters/pad_10_11.h",
-      "SPDXID": "SPDXRef-binary-file-76",
+      "SPDXID": "SPDXRef-binary-file-73",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1499,7 +1552,7 @@
     },
     {
       "fileName": "./include/onnx/onnx-ml.pb.h",
-      "SPDXID": "SPDXRef-binary-file-77",
+      "SPDXID": "SPDXRef-binary-file-74",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1511,7 +1564,7 @@
     },
     {
       "fileName": "./include/onnx/inliner/inliner.h",
-      "SPDXID": "SPDXRef-binary-file-78",
+      "SPDXID": "SPDXRef-binary-file-75",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1523,7 +1576,7 @@
     },
     {
       "fileName": "./include/onnx/onnx-operators-ml.pb.h",
-      "SPDXID": "SPDXRef-binary-file-79",
+      "SPDXID": "SPDXRef-binary-file-76",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1535,7 +1588,7 @@
     },
     {
       "fileName": "./include/onnx/onnx-operators_pb.h",
-      "SPDXID": "SPDXRef-binary-file-80",
+      "SPDXID": "SPDXRef-binary-file-77",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1547,7 +1600,7 @@
     },
     {
       "fileName": "./include/onnx/onnx_pb.h",
-      "SPDXID": "SPDXRef-binary-file-81",
+      "SPDXID": "SPDXRef-binary-file-78",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1559,7 +1612,7 @@
     },
     {
       "fileName": "./include/onnx/common/graph_node_list.h",
-      "SPDXID": "SPDXRef-binary-file-82",
+      "SPDXID": "SPDXRef-binary-file-79",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1571,7 +1624,7 @@
     },
     {
       "fileName": "./include/onnx/common/interned_strings.h",
-      "SPDXID": "SPDXRef-binary-file-83",
+      "SPDXID": "SPDXRef-binary-file-80",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1583,7 +1636,7 @@
     },
     {
       "fileName": "./include/onnx/common/file_utils.h",
-      "SPDXID": "SPDXRef-binary-file-84",
+      "SPDXID": "SPDXRef-binary-file-81",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1595,7 +1648,7 @@
     },
     {
       "fileName": "./include/onnx/common/platform_helpers.h",
-      "SPDXID": "SPDXRef-binary-file-85",
+      "SPDXID": "SPDXRef-binary-file-82",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1607,7 +1660,7 @@
     },
     {
       "fileName": "./include/onnx/common/ir.h",
-      "SPDXID": "SPDXRef-binary-file-86",
+      "SPDXID": "SPDXRef-binary-file-83",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1619,7 +1672,7 @@
     },
     {
       "fileName": "./include/onnx/common/status.h",
-      "SPDXID": "SPDXRef-binary-file-87",
+      "SPDXID": "SPDXRef-binary-file-84",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1631,7 +1684,7 @@
     },
     {
       "fileName": "./include/onnx/common/common.h",
-      "SPDXID": "SPDXRef-binary-file-88",
+      "SPDXID": "SPDXRef-binary-file-85",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1643,7 +1696,7 @@
     },
     {
       "fileName": "./include/onnx/common/assertions.h",
-      "SPDXID": "SPDXRef-binary-file-89",
+      "SPDXID": "SPDXRef-binary-file-86",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1655,7 +1708,7 @@
     },
     {
       "fileName": "./include/onnx/common/proto_util.h",
-      "SPDXID": "SPDXRef-binary-file-90",
+      "SPDXID": "SPDXRef-binary-file-87",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1667,7 +1720,7 @@
     },
     {
       "fileName": "./include/onnx/common/version.h",
-      "SPDXID": "SPDXRef-binary-file-91",
+      "SPDXID": "SPDXRef-binary-file-88",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1679,7 +1732,7 @@
     },
     {
       "fileName": "./include/onnx/common/visitor.h",
-      "SPDXID": "SPDXRef-binary-file-92",
+      "SPDXID": "SPDXRef-binary-file-89",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1691,7 +1744,7 @@
     },
     {
       "fileName": "./include/onnx/common/ir_pb_converter.h",
-      "SPDXID": "SPDXRef-binary-file-93",
+      "SPDXID": "SPDXRef-binary-file-90",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1703,7 +1756,7 @@
     },
     {
       "fileName": "./include/onnx/common/model_helpers.h",
-      "SPDXID": "SPDXRef-binary-file-94",
+      "SPDXID": "SPDXRef-binary-file-91",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1715,7 +1768,7 @@
     },
     {
       "fileName": "./include/onnx/common/path.h",
-      "SPDXID": "SPDXRef-binary-file-95",
+      "SPDXID": "SPDXRef-binary-file-92",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1727,7 +1780,7 @@
     },
     {
       "fileName": "./include/onnx/common/tensor.h",
-      "SPDXID": "SPDXRef-binary-file-96",
+      "SPDXID": "SPDXRef-binary-file-93",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1739,7 +1792,7 @@
     },
     {
       "fileName": "./include/onnx/common/constants.h",
-      "SPDXID": "SPDXRef-binary-file-97",
+      "SPDXID": "SPDXRef-binary-file-94",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1751,7 +1804,7 @@
     },
     {
       "fileName": "./include/onnx/common/array_ref.h",
-      "SPDXID": "SPDXRef-binary-file-98",
+      "SPDXID": "SPDXRef-binary-file-95",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1763,7 +1816,7 @@
     },
     {
       "fileName": "./include/onnx/onnx-operators-ml.proto",
-      "SPDXID": "SPDXRef-binary-file-99",
+      "SPDXID": "SPDXRef-binary-file-96",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1775,7 +1828,7 @@
     },
     {
       "fileName": "./include/onnx/onnx-data.proto3",
-      "SPDXID": "SPDXRef-binary-file-100",
+      "SPDXID": "SPDXRef-binary-file-97",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1787,7 +1840,7 @@
     },
     {
       "fileName": "./include/onnx/onnx-ml.proto3",
-      "SPDXID": "SPDXRef-binary-file-101",
+      "SPDXID": "SPDXRef-binary-file-98",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1799,7 +1852,7 @@
     },
     {
       "fileName": "./include/onnx/string_utils.h",
-      "SPDXID": "SPDXRef-binary-file-102",
+      "SPDXID": "SPDXRef-binary-file-99",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1811,7 +1864,7 @@
     },
     {
       "fileName": "./include/onnx/onnx-ml.proto",
-      "SPDXID": "SPDXRef-binary-file-103",
+      "SPDXID": "SPDXRef-binary-file-100",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1823,11 +1876,11 @@
     },
     {
       "fileName": "./lib/libonnx_proto.a",
-      "SPDXID": "SPDXRef-binary-file-104",
+      "SPDXID": "SPDXRef-binary-file-101",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e28cc188515b99eaffeb9c1629639eed0134d1f5875d4542c472a9a98ec2b2bf"
+          "checksumValue": "74fd0ce79432351edfbc1c3651387a114c1b9e89061e8e85b926431015836b7d"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1835,11 +1888,11 @@
     },
     {
       "fileName": "./lib/libonnx.a",
-      "SPDXID": "SPDXRef-binary-file-105",
+      "SPDXID": "SPDXRef-binary-file-102",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "78ab2c4147525a6abfbe32c42b6d45647063ca90e89849a358fcec1accebcb4d"
+          "checksumValue": "51badfc0d912855396099da74aff8a99e0fd6fcd221d1bedd752a1496278a644"
         }
       ],
       "licenseConcluded": "NOASSERTION",

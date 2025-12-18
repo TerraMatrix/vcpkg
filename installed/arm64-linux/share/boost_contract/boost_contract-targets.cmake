@@ -55,10 +55,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::contract
-add_library(Boost::contract STATIC IMPORTED)
+add_library(Boost::contract SHARED IMPORTED)
 
 set_target_properties(Boost::contract PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_CONTRACT_NO_LIB;BOOST_CONTRACT_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_CONTRACT_NO_LIB;BOOST_CONTRACT_DYN_LINK"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "Boost::any;Boost::assert;Boost::config;Boost::core;Boost::exception;Boost::function;Boost::function_types;Boost::mpl;Boost::optional;Boost::preprocessor;Boost::smart_ptr;Boost::static_assert;Boost::thread;Boost::type_traits;Boost::typeof;Boost::utility"
 )

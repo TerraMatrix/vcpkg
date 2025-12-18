@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/mpfr-arm64-linux-4.2.2-a7c78a4b-acb2-4fc7-a684-4617ada80d17",
-  "name": "mpfr:arm64-linux@4.2.2 b0fa53b57b6821c5796e34ff5ecde210bd6dc47d3d3c8e8a81dc530d81fd49f0",
+  "documentNamespace": "https://spdx.org/spdxdocs/mpfr-arm64-linux-4.2.2-dbe61d6a-dcf8-4a40-baa0-3d142056b01b",
+  "name": "mpfr:arm64-linux@4.2.2 398dd0d8d0a38c815138366b7b7a4fdb1de4a63c9075f9f31b6b910555f00d23",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T04:27:40Z"
+    "created": "2025-12-16T11:42:37Z"
   },
   "relationships": [
     {
@@ -109,7 +109,7 @@
     {
       "name": "mpfr:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "b0fa53b57b6821c5796e34ff5ecde210bd6dc47d3d3c8e8a81dc530d81fd49f0",
+      "versionInfo": "398dd0d8d0a38c815138366b7b7a4fdb1de4a63c9075f9f31b6b910555f00d23",
       "downloadLocation": "NONE",
       "licenseConcluded": "LGPL-3.0-or-later",
       "licenseDeclared": "NOASSERTION",
@@ -199,31 +199,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libmpfr.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "978913434d410703026ccb78202d293141820fdbec595609151fd0b7867895c9"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/mpfr.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "e98050ece56a664dbe488bc819822293766dc8bf881876c96a81eaf2dddf96a1"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -231,7 +207,7 @@
     },
     {
       "fileName": "./share/mpfr/copyright",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -243,7 +219,7 @@
     },
     {
       "fileName": "./share/mpfr/usage",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -255,7 +231,7 @@
     },
     {
       "fileName": "./include/mpf2mpfr.h",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -267,7 +243,7 @@
     },
     {
       "fileName": "./include/mpfr.h",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -278,12 +254,36 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libmpfr.a",
+      "fileName": "./lib/libmpfr.so.6",
+      "SPDXID": "SPDXRef-binary-file-5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "db0b7dbac3f0d0d2daa3967b7cd119a8934464345eabb6be4b2494e18f603fbd"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libmpfr.so.6.2.2",
+      "SPDXID": "SPDXRef-binary-file-6",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "db0b7dbac3f0d0d2daa3967b7cd119a8934464345eabb6be4b2494e18f603fbd"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libmpfr.so",
       "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d25f206525d217e3a641c56bef9821c1531f451ea38e3126e54097350dde93a7"
+          "checksumValue": "db0b7dbac3f0d0d2daa3967b7cd119a8934464345eabb6be4b2494e18f603fbd"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -295,7 +295,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "12c2a6cc1a61f9e1263b0aae1e66e400e06d634a82f26f3aba7a3ed617a35b10"
+          "checksumValue": "56f1fcd0e274317760501c2f36847727692cebc2c6ddfa1dabb9b3bb62d731ab"
         }
       ],
       "licenseConcluded": "NOASSERTION",

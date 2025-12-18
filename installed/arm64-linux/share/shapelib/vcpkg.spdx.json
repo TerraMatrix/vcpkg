@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/shapelib-arm64-linux-1.6.2-82937e4d-f388-47ae-be73-3124aae9bbab",
-  "name": "shapelib:arm64-linux@1.6.2 28d73ee2dd3f2d070fc7d37830e68b346b451b69df04a17f56038aefc200c65c",
+  "documentNamespace": "https://spdx.org/spdxdocs/shapelib-arm64-linux-1.6.2-dd9146f6-07ce-41d5-940b-26c86bef2045",
+  "name": "shapelib:arm64-linux@1.6.2 42be1ccf5fe5df0ef5d9603744e1f64b6f1510e3db4d38064e906be20edd7187",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T10:53:11Z"
+    "created": "2025-12-16T13:12:13Z"
   },
   "relationships": [
     {
@@ -86,11 +86,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-10"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-11"
     }
   ],
   "packages": [
@@ -109,7 +104,7 @@
     {
       "name": "shapelib:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "28d73ee2dd3f2d070fc7d37830e68b346b451b69df04a17f56038aefc200c65c",
+      "versionInfo": "42be1ccf5fe5df0ef5d9603744e1f64b6f1510e3db4d38064e906be20edd7187",
       "downloadLocation": "NONE",
       "licenseConcluded": "(MIT OR LGPL-2.0-or-later)",
       "licenseDeclared": "NOASSERTION",
@@ -163,31 +158,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libshp.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "25d194a4414147f459910300f0eb85db5cceaa8cd3d10f04824829cc4b91ab2b"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/shapelib.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "90a41d748c8c9e9525321cbff85a03aae230b42c7052fba26d36fe5dbda7461c"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -195,7 +166,7 @@
     },
     {
       "fileName": "./share/shapelib/shapelib-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -207,7 +178,7 @@
     },
     {
       "fileName": "./share/shapelib/copyright",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -219,23 +190,11 @@
     },
     {
       "fileName": "./share/shapelib/shapelib-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "94ee68cb7d390416615efd77fa9696f8bf9fe1261f4ff241c27a08c70d0cc30a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/shapelib/shapelib-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "c5c23181e295b1f9450f157ec47e65a0ff787f5b9487643cc3ea0ef63298e54c"
+          "checksumValue": "0a137542b255ee0e79d08e5fc7851df80e646b1346c87efd32517c4553cf0577"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -243,11 +202,11 @@
     },
     {
       "fileName": "./share/shapelib/shapelib-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "a275cb9ca3b0f0144209e387b9c7c2ce02f0bca20e5de86ac04aa8950668a598"
+          "checksumValue": "124a985bca3437fc9802eb95abee370bd5b2127f677f28e0d04573c46a5365e4"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -255,7 +214,7 @@
     },
     {
       "fileName": "./share/shapelib/shapelib-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -267,7 +226,7 @@
     },
     {
       "fileName": "./include/shapefil.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -278,12 +237,24 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libshp.a",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "fileName": "./lib/libshp.so.4",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "03038261d50c8c8b283884b36b79deec722d5c70c23a4f9ae554eaa349928b61"
+          "checksumValue": "848c2ed36a35e404d3023fe2eccd7d00230715df41ad5a03c5cc2ab913670e1e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libshp.so.1.6.2",
+      "SPDXID": "SPDXRef-binary-file-8",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "848c2ed36a35e404d3023fe2eccd7d00230715df41ad5a03c5cc2ab913670e1e"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -291,11 +262,23 @@
     },
     {
       "fileName": "./lib/pkgconfig/shapelib.pc",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "c97664ef85fb61294c05da0b0053ebadf45c7b1d08b47bc1681c402974ee5ce6"
+          "checksumValue": "036dc3d422d9b441976356b3c805dbd726e471c594702116468a7e95b2e3b892"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libshp.so",
+      "SPDXID": "SPDXRef-binary-file-10",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "848c2ed36a35e404d3023fe2eccd7d00230715df41ad5a03c5cc2ab913670e1e"
         }
       ],
       "licenseConcluded": "NOASSERTION",

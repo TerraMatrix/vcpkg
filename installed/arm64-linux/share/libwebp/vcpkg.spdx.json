@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/libwebp-arm64-linux-1.6.0#1-00f499cf-fae2-40fc-83d5-fe0314cb08ee",
-  "name": "libwebp:arm64-linux@1.6.0#1 3131b86718a9d8b601fa6420b5ed44a4d30394f1c0fbd09344ab540e2eab4104",
+  "documentNamespace": "https://spdx.org/spdxdocs/libwebp-arm64-linux-1.6.0#1-4f12670b-7550-44ea-93ef-b4f59cdff44e",
+  "name": "libwebp:arm64-linux@1.6.0#1 1ab2b3f69f0b6dd18dd2a1985603721c6d518f692699c50b4e64abc1e818df84",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T04:02:09Z"
+    "created": "2025-12-16T11:19:00Z"
   },
   "relationships": [
     {
@@ -226,11 +226,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-34"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-35"
     }
   ],
   "packages": [
@@ -249,7 +244,7 @@
     {
       "name": "libwebp:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "3131b86718a9d8b601fa6420b5ed44a4d30394f1c0fbd09344ab540e2eab4104",
+      "versionInfo": "1ab2b3f69f0b6dd18dd2a1985603721c6d518f692699c50b4e64abc1e818df84",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -350,127 +345,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libwebpmux.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "310895f39459657959647e16dfa59fd5b183c01feb794f2df084634ad7eb1c9c"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libwebpdecoder.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "0af3dbcca762c46d367b2b7076bdee5ee712669b3f2ce63de2e4fc52b7b9436e"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libsharpyuv.a",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "e63016e42aad38bf577999e75a9706b0cb848fc83a888ead68e3117ae6cfbfad"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libwebpdecoder.pc",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "3f2e741ea3220dde75531f577032bfd66c96dea450f9a622662d51c455b8e1e6"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libsharpyuv.pc",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "53a18a6847776b34f9d23c441a766925c8aa54b3d10b87a77e4949d5a6bc21c4"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libwebpmux.pc",
-      "SPDXID": "SPDXRef-binary-file-6",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "61a13bef3891d70437d2ef8ec6a2b0ab1c80c782285fba11ca3990c64e8fffe3"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libwebp.pc",
-      "SPDXID": "SPDXRef-binary-file-7",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "175e0fe6ffb41352f5a08c7cb93e728acd2b5537a127327cbf3bec05bb43378f"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libwebpdemux.pc",
-      "SPDXID": "SPDXRef-binary-file-8",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "1cc5bb975a588dc5a7461d6965bcd7eeddae1a11c0e0a316e21ed2ac970aeca5"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libwebp.a",
-      "SPDXID": "SPDXRef-binary-file-9",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "224975620a0cd8ad719fec1260580e8876c890d8a6035b370e1e95f828967a32"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libwebpdemux.a",
-      "SPDXID": "SPDXRef-binary-file-10",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "15cf73ecbebd49b723c0087ee4aee1b900fd7eeb2c43ded327e8987b3ece352c"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -478,7 +353,7 @@
     },
     {
       "fileName": "./share/libwebp/copyright",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -490,7 +365,7 @@
     },
     {
       "fileName": "./share/libwebp/usage",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -502,11 +377,11 @@
     },
     {
       "fileName": "./share/WebP/WebPTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "98bee20921759b793eac9ca772f9cf80028e3ae20c3f9c686fd0844917af2bb7"
+          "checksumValue": "15451a83781defb6a5b77a7511b97d9cc83edaa736bfae11909ae7436cd733c5"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -514,7 +389,7 @@
     },
     {
       "fileName": "./share/WebP/WebPConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -526,7 +401,7 @@
     },
     {
       "fileName": "./share/WebP/WebPConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -537,24 +412,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/WebP/WebPTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-16",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "386aa94930ee747c3c5ca28e1e117362dafd71b7f6480cd592f8482e0f7245e3"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/WebP/WebPTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "1c7e7a94c5cb73d3a6932b0ae1f9d9c23d36f4940d24a5b442211209fbcf07b0"
+          "checksumValue": "d243609a388ecac78c4bb519c4bf501a948cf1ccbe4f0fbff87bb525a473ca25"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -562,7 +425,7 @@
     },
     {
       "fileName": "./include/webp/sharpyuv/sharpyuv_csp.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -574,7 +437,7 @@
     },
     {
       "fileName": "./include/webp/sharpyuv/sharpyuv.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -586,7 +449,7 @@
     },
     {
       "fileName": "./include/webp/demux.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -598,7 +461,7 @@
     },
     {
       "fileName": "./include/webp/mux.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -610,7 +473,7 @@
     },
     {
       "fileName": "./include/webp/mux_types.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -622,7 +485,7 @@
     },
     {
       "fileName": "./include/webp/decode.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -634,7 +497,7 @@
     },
     {
       "fileName": "./include/webp/types.h",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -646,7 +509,7 @@
     },
     {
       "fileName": "./include/webp/encode.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -657,36 +520,168 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libwebpmux.a",
+      "fileName": "./lib/libwebp.so",
+      "SPDXID": "SPDXRef-binary-file-15",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7f4b333cb11d34b1d37db154e87ec4c0f2f3a76c9e4ba1e07d7c4fd3d1df4454"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libwebpdemux.so.2.0.17",
+      "SPDXID": "SPDXRef-binary-file-16",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "114da0fc3a7d78f303eb9fd0a7761785d3cc9bd258de37b5abfdda08dc715100"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libwebpdemux.so.2",
+      "SPDXID": "SPDXRef-binary-file-17",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "114da0fc3a7d78f303eb9fd0a7761785d3cc9bd258de37b5abfdda08dc715100"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libwebpmux.so.3.1.2",
+      "SPDXID": "SPDXRef-binary-file-18",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "67342801aca1d789e93b9ccd82b944f70f57558f129dbbf61b949baca24cd91a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libwebp.so.7",
+      "SPDXID": "SPDXRef-binary-file-19",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7f4b333cb11d34b1d37db154e87ec4c0f2f3a76c9e4ba1e07d7c4fd3d1df4454"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libsharpyuv.so",
+      "SPDXID": "SPDXRef-binary-file-20",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e29e48e665bf0fda86f0228fc485dce403bb9c0f38df9317ca354c65d400097e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libwebpmux.so.3",
+      "SPDXID": "SPDXRef-binary-file-21",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "67342801aca1d789e93b9ccd82b944f70f57558f129dbbf61b949baca24cd91a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libsharpyuv.so.0",
+      "SPDXID": "SPDXRef-binary-file-22",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e29e48e665bf0fda86f0228fc485dce403bb9c0f38df9317ca354c65d400097e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libwebp.so.7.2.0",
+      "SPDXID": "SPDXRef-binary-file-23",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7f4b333cb11d34b1d37db154e87ec4c0f2f3a76c9e4ba1e07d7c4fd3d1df4454"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libsharpyuv.so.0.1.2",
+      "SPDXID": "SPDXRef-binary-file-24",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e29e48e665bf0fda86f0228fc485dce403bb9c0f38df9317ca354c65d400097e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libwebpdecoder.so",
+      "SPDXID": "SPDXRef-binary-file-25",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "dbc3601854538f938ca6c91f2f532497a17baeff0dc6a350585a532071160ac0"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libwebpdemux.so",
       "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "fd4a1301e4d69aae976bd987bfa335f3bcba45a357e457ff26105411843f7e92"
+          "checksumValue": "114da0fc3a7d78f303eb9fd0a7761785d3cc9bd258de37b5abfdda08dc715100"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libwebpdecoder.a",
+      "fileName": "./lib/libwebpmux.so",
       "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "907ea3ded3024c979ea90e28b9e6bec1b02bc6cb91d9ff3cff32b81a0904ade8"
+          "checksumValue": "67342801aca1d789e93b9ccd82b944f70f57558f129dbbf61b949baca24cd91a"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libsharpyuv.a",
+      "fileName": "./lib/libwebpdecoder.so.3.2.0",
       "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "0a9dba8b328ebc758e80aa8904db35bb376e79e39cbbdcad1c2ad7fe637d75f9"
+          "checksumValue": "dbc3601854538f938ca6c91f2f532497a17baeff0dc6a350585a532071160ac0"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -698,7 +693,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "6bb33e1078566e15c8eda8fd040485e535e08faf6cb16936118e67706dd8c9ec"
+          "checksumValue": "efc7ade5e768e6bd35f222a730dfee720a09500173072134d40e4c115da02353"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -710,7 +705,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "73fa7b7225288ed8552caa6483e2974afd6cebfd1f5defe730be038a8af75098"
+          "checksumValue": "bb06c560c4af49e95891924c88470428265001b64b2c6fbaafe11fc60981d07a"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -722,7 +717,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "242848cba18fff1326c9ed11383ac3d7a34b4e62cecf63384b9c3ebd9e10990c"
+          "checksumValue": "9f92db0bd29a4794dd2da3bd9a4a199ee79c3c6ac7ac9628dff526cc6d561f38"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -734,7 +729,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2e3b91d34eb2f0b221220811aa6b3a36f39c4cdf535754debf0173dc409f4a62"
+          "checksumValue": "1c1ff1a45d9905cd3651f3a425db61c9000101cff4ac0de8d9ee25dba4dc88b0"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -746,31 +741,19 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ecde62ef13f6d650477f0456a3120ed28a393a03129e58dd3ee46c57fe67a940"
+          "checksumValue": "db07cbbf9aa4ae146e3472a65a2eec40906c5a7f2c4e1b2ab3bbede6f565f1a8"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libwebp.a",
+      "fileName": "./lib/libwebpdecoder.so.3",
       "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "96d69af55a608f6a7e24db7068e643559c29b81780b890eba4a599e4a9c82b85"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./lib/libwebpdemux.a",
-      "SPDXID": "SPDXRef-binary-file-35",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "63eff41d183a56f1e739d49f90285d06cf707084b929cda422edca28c31806ec"
+          "checksumValue": "dbc3601854538f938ca6c91f2f532497a17baeff0dc6a350585a532071160ac0"
         }
       ],
       "licenseConcluded": "NOASSERTION",

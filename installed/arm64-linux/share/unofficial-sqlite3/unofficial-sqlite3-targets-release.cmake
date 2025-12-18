@@ -8,12 +8,12 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 # Import target "unofficial::sqlite3::sqlite3" for configuration "Release"
 set_property(TARGET unofficial::sqlite3::sqlite3 APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(unofficial::sqlite3::sqlite3 PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libsqlite3.a"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libsqlite3.so"
+  IMPORTED_SONAME_RELEASE "libsqlite3.so"
   )
 
 list(APPEND _cmake_import_check_targets unofficial::sqlite3::sqlite3 )
-list(APPEND _cmake_import_check_files_for_unofficial::sqlite3::sqlite3 "${_IMPORT_PREFIX}/lib/libsqlite3.a" )
+list(APPEND _cmake_import_check_files_for_unofficial::sqlite3::sqlite3 "${_IMPORT_PREFIX}/lib/libsqlite3.so" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

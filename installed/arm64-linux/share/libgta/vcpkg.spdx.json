@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/libgta-arm64-linux-1.0.8#5-31e57a72-73ba-41ac-939b-5b94daec7b6f",
-  "name": "libgta:arm64-linux@1.0.8#5 608a50e33316bb7f272515629ac51c4b68a1145a69e1fa74693cec3252181a29",
+  "documentNamespace": "https://spdx.org/spdxdocs/libgta-arm64-linux-1.0.8#5-7e0e9b48-b8ff-4d8d-bbd4-3f4e2a2dec11",
+  "name": "libgta:arm64-linux@1.0.8#5 173d22c708cb4536dd3474ca99452fd03f94f273ce87686c9d00d09449a191b2",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-26T13:23:37Z"
+    "created": "2025-12-16T13:04:30Z"
   },
   "relationships": [
     {
@@ -94,7 +94,7 @@
     {
       "name": "libgta:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "608a50e33316bb7f272515629ac51c4b68a1145a69e1fa74693cec3252181a29",
+      "versionInfo": "173d22c708cb4536dd3474ca99452fd03f94f273ce87686c9d00d09449a191b2",
       "downloadLocation": "NONE",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
@@ -148,31 +148,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libgta.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "72281949c305326a348420c464412ff669e3eb3b2a22e51579d489768a8c64af"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/gta.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "529797f129037a2d81480a066d5fb2caf29f9ffb3964103c0bd4332e766499a1"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -180,7 +156,7 @@
     },
     {
       "fileName": "./share/libgta/copyright",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -192,7 +168,7 @@
     },
     {
       "fileName": "./include/gta/gta_version.h",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -204,7 +180,7 @@
     },
     {
       "fileName": "./include/gta/gta.hpp",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -216,7 +192,7 @@
     },
     {
       "fileName": "./include/gta/gta.h",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -227,12 +203,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libgta.a",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "fileName": "./lib/libgta.so.0.0.4",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ceaa81e968af5425ab072f6cb2edec32ca2bd585623bb44789776e195c8fa848"
+          "checksumValue": "6471fda4f6b4a53752f37b4e1c4b76d323486c80d355a5a8a415419c20b2a6fa"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -240,11 +216,35 @@
     },
     {
       "fileName": "./lib/pkgconfig/gta.pc",
+      "SPDXID": "SPDXRef-binary-file-6",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "211241cb585f2ae7371ef06cf45686fc8359687944cae1a8fa5ef22e170466f4"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libgta.so",
+      "SPDXID": "SPDXRef-binary-file-7",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6471fda4f6b4a53752f37b4e1c4b76d323486c80d355a5a8a415419c20b2a6fa"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libgta.so.0",
       "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "85f479fed7e4316ff1bb51e062f61089b8bb3c4740cc36a83147efff7e943922"
+          "checksumValue": "6471fda4f6b4a53752f37b4e1c4b76d323486c80d355a5a8a415419c20b2a6fa"
         }
       ],
       "licenseConcluded": "NOASSERTION",

@@ -55,13 +55,13 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::filesystem
-add_library(Boost::filesystem STATIC IMPORTED)
+add_library(Boost::filesystem SHARED IMPORTED)
 
 set_target_properties(Boost::filesystem PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "BOOST_FILESYSTEM_NO_LIB;\$<\$<STREQUAL:\$<TARGET_PROPERTY:Boost::filesystem,TYPE>,SHARED_LIBRARY>:BOOST_FILESYSTEM_DYN_LINK=1>;\$<\$<STREQUAL:\$<TARGET_PROPERTY:Boost::filesystem,TYPE>,STATIC_LIBRARY>:BOOST_FILESYSTEM_STATIC_LINK=1>"
   INTERFACE_COMPILE_FEATURES "cxx_rvalue_references;cxx_strong_enums;cxx_noexcept;cxx_nullptr;cxx_defaulted_functions;cxx_defaulted_move_initializers;cxx_deleted_functions;cxx_default_function_template_args;cxx_final;cxx_override"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::container_hash;Boost::detail;Boost::io;Boost::iterator;Boost::smart_ptr;Boost::system;Boost::type_traits;\$<LINK_ONLY:Boost::core>;\$<LINK_ONLY:Boost::predef>;\$<LINK_ONLY:Boost::scope>;\$<LINK_ONLY:Boost::atomic>"
+  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::container_hash;Boost::detail;Boost::io;Boost::iterator;Boost::smart_ptr;Boost::system;Boost::type_traits"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

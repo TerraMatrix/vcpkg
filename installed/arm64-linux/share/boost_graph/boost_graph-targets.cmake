@@ -55,12 +55,12 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::graph
-add_library(Boost::graph STATIC IMPORTED)
+add_library(Boost::graph SHARED IMPORTED)
 
 set_target_properties(Boost::graph PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_GRAPH_NO_LIB;BOOST_GRAPH_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_GRAPH_NO_LIB;BOOST_GRAPH_DYN_LINK"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::algorithm;Boost::any;Boost::array;Boost::assert;Boost::bimap;Boost::bind;Boost::concept_check;Boost::config;Boost::container_hash;Boost::conversion;Boost::core;Boost::detail;Boost::foreach;Boost::function;Boost::integer;Boost::iterator;Boost::lexical_cast;Boost::math;Boost::move;Boost::mpl;Boost::multi_index;Boost::optional;Boost::parameter;Boost::preprocessor;Boost::property_map;Boost::property_tree;Boost::random;Boost::range;Boost::serialization;Boost::smart_ptr;Boost::spirit;Boost::static_assert;Boost::throw_exception;Boost::tti;Boost::tuple;Boost::type_traits;Boost::typeof;Boost::unordered;Boost::utility;Boost::xpressive;\$<LINK_ONLY:Boost::regex>"
+  INTERFACE_LINK_LIBRARIES "Boost::algorithm;Boost::any;Boost::array;Boost::assert;Boost::bimap;Boost::bind;Boost::concept_check;Boost::config;Boost::container_hash;Boost::conversion;Boost::core;Boost::detail;Boost::foreach;Boost::function;Boost::integer;Boost::iterator;Boost::lexical_cast;Boost::math;Boost::move;Boost::mpl;Boost::multi_index;Boost::optional;Boost::parameter;Boost::preprocessor;Boost::property_map;Boost::property_tree;Boost::random;Boost::range;Boost::serialization;Boost::smart_ptr;Boost::spirit;Boost::static_assert;Boost::throw_exception;Boost::tti;Boost::tuple;Boost::type_traits;Boost::typeof;Boost::unordered;Boost::utility;Boost::xpressive"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

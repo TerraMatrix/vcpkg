@@ -55,12 +55,12 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::fiber_numa
-add_library(Boost::fiber_numa STATIC IMPORTED)
+add_library(Boost::fiber_numa SHARED IMPORTED)
 
 set_target_properties(Boost::fiber_numa PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_FIBER_NO_LIB;BOOST_FIBER_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_FIBER_NO_LIB;BOOST_FIBER_DYN_LINK;BOOST_FIBERS_DYN_LINK"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::context;Boost::fiber;Boost::smart_ptr;\$<LINK_ONLY:Boost::algorithm>;\$<LINK_ONLY:Boost::filesystem>;\$<LINK_ONLY:Boost::format>"
+  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::context;Boost::fiber;Boost::smart_ptr"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

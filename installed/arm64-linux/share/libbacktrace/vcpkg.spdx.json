@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/libbacktrace-arm64-linux-2024-11-30-d4822d0b-da1b-428a-9c65-a9e8de27b19a",
-  "name": "libbacktrace:arm64-linux@2024-11-30 3e8417bae8acecd7f2b081675e0a863248b2ac008a067b87c4ae3a74d82fef01",
+  "documentNamespace": "https://spdx.org/spdxdocs/libbacktrace-arm64-linux-2024-11-30-bbf9aff4-f431-4a4a-80e9-89eb2a4634ba",
+  "name": "libbacktrace:arm64-linux@2024-11-30 e780ef655669a97c003b9efe2bf77f53daa629c0070f1d7337cf4b797b7481d3",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-18T08:36:00Z"
+    "created": "2025-12-16T10:15:47Z"
   },
   "relationships": [
     {
@@ -61,6 +61,11 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-5"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-6"
     }
   ],
   "packages": [
@@ -79,7 +84,7 @@
     {
       "name": "libbacktrace:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "3e8417bae8acecd7f2b081675e0a863248b2ac008a067b87c4ae3a74d82fef01",
+      "versionInfo": "e780ef655669a97c003b9efe2bf77f53daa629c0070f1d7337cf4b797b7481d3",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -132,19 +137,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libbacktrace.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "fc73c904ee2e81ed63ded562c0b454413a72b3ed2c10c7286369acc85ed1c9fe"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -152,7 +145,7 @@
     },
     {
       "fileName": "./share/libbacktrace/copyright",
-      "SPDXID": "SPDXRef-binary-file-2",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -164,7 +157,7 @@
     },
     {
       "fileName": "./include/backtrace-supported.h",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -176,7 +169,7 @@
     },
     {
       "fileName": "./include/backtrace.h",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -187,12 +180,36 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libbacktrace.a",
+      "fileName": "./lib/libbacktrace.so",
+      "SPDXID": "SPDXRef-binary-file-4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7c1e4cf073c54f110a0408c2ef35a7b89a58792ecf0bd8b1be297afd7952fdc0"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libbacktrace.so.0",
       "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "900384fa3e4d6286540d988b391f444afb07e1d63d8a485c3e759b89cf0b73e5"
+          "checksumValue": "7c1e4cf073c54f110a0408c2ef35a7b89a58792ecf0bd8b1be297afd7952fdc0"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libbacktrace.so.0.0.0",
+      "SPDXID": "SPDXRef-binary-file-6",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7c1e4cf073c54f110a0408c2ef35a7b89a58792ecf0bd8b1be297afd7952fdc0"
         }
       ],
       "licenseConcluded": "NOASSERTION",

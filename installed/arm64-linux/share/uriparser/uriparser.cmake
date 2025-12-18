@@ -55,10 +55,9 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target uriparser::uriparser
-add_library(uriparser::uriparser STATIC IMPORTED)
+add_library(uriparser::uriparser SHARED IMPORTED)
 
 set_target_properties(uriparser::uriparser PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "URI_STATIC_BUILD"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
 )
 

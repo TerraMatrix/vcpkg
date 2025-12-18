@@ -51,15 +51,15 @@ unset(_cmake_expected_targets)
 set(_IMPORT_PREFIX "${VCPKG_IMPORT_PREFIX}")
 
 # Create imported target kmlbase
-add_library(kmlbase STATIC IMPORTED)
+add_library(kmlbase SHARED IMPORTED)
 
 set_target_properties(kmlbase PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "\$<\$<NOT:\$<CONFIG:DEBUG>>:${VCPKG_IMPORT_PREFIX}/lib/libexpat.a>;\$<\$<CONFIG:DEBUG>:${VCPKG_IMPORT_PREFIX}/debug/lib/libexpat.a>;\$<\$<NOT:\$<CONFIG:DEBUG>>:${VCPKG_IMPORT_PREFIX}/lib/libz.a>;\$<\$<CONFIG:DEBUG>:${VCPKG_IMPORT_PREFIX}/debug/lib/libz.a>;unofficial::minizip::minizip;\$<\$<NOT:\$<CONFIG:DEBUG>>:${VCPKG_IMPORT_PREFIX}/lib/liburiparser.a>;\$<\$<CONFIG:DEBUG>:${VCPKG_IMPORT_PREFIX}/debug/lib/liburiparser.a>;\$<\$<NOT:\$<CONFIG:DEBUG>>:${VCPKG_IMPORT_PREFIX}/lib/libexpat.a>;\$<\$<CONFIG:DEBUG>:${VCPKG_IMPORT_PREFIX}/debug/lib/libexpat.a>"
+  INTERFACE_LINK_LIBRARIES "${VCPKG_IMPORT_PREFIX}/lib/libexpat.so;${VCPKG_IMPORT_PREFIX}/lib/libz.so;unofficial::minizip::minizip;${VCPKG_IMPORT_PREFIX}/lib/liburiparser.so;${VCPKG_IMPORT_PREFIX}/lib/libexpat.so"
 )
 
 # Create imported target kmldom
-add_library(kmldom STATIC IMPORTED)
+add_library(kmldom SHARED IMPORTED)
 
 set_target_properties(kmldom PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
@@ -67,7 +67,7 @@ set_target_properties(kmldom PROPERTIES
 )
 
 # Create imported target kmlxsd
-add_library(kmlxsd STATIC IMPORTED)
+add_library(kmlxsd SHARED IMPORTED)
 
 set_target_properties(kmlxsd PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
@@ -75,7 +75,7 @@ set_target_properties(kmlxsd PROPERTIES
 )
 
 # Create imported target kmlengine
-add_library(kmlengine STATIC IMPORTED)
+add_library(kmlengine SHARED IMPORTED)
 
 set_target_properties(kmlengine PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
@@ -83,7 +83,7 @@ set_target_properties(kmlengine PROPERTIES
 )
 
 # Create imported target kmlconvenience
-add_library(kmlconvenience STATIC IMPORTED)
+add_library(kmlconvenience SHARED IMPORTED)
 
 set_target_properties(kmlconvenience PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
@@ -91,7 +91,7 @@ set_target_properties(kmlconvenience PROPERTIES
 )
 
 # Create imported target kmlregionator
-add_library(kmlregionator STATIC IMPORTED)
+add_library(kmlregionator SHARED IMPORTED)
 
 set_target_properties(kmlregionator PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"

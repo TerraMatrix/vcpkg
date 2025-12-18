@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/libxml2-arm64-linux-2.15.0-1570b8a0-fd09-44a4-bfa3-468c9d96df9b",
-  "name": "libxml2:arm64-linux@2.15.0 5495b8ed4cf32d988d8282fe8e1be567f05dbef098bc9d7b53d26b06681d65c7",
+  "documentNamespace": "https://spdx.org/spdxdocs/libxml2-arm64-linux-2.15.0-110087fa-f84a-4e26-99e2-11acdb3075a7",
+  "name": "libxml2:arm64-linux@2.15.0 55415616f1add1b3f5617ff83cddcd5c134819cfce0d80c05169a6ac843b1118",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-26T09:54:03Z"
+    "created": "2025-12-16T11:33:28Z"
   },
   "relationships": [
     {
@@ -361,11 +361,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-59"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-60"
     }
   ],
   "packages": [
@@ -384,7 +379,7 @@
     {
       "name": "libxml2:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "5495b8ed4cf32d988d8282fe8e1be567f05dbef098bc9d7b53d26b06681d65c7",
+      "versionInfo": "55415616f1add1b3f5617ff83cddcd5c134819cfce0d80c05169a6ac843b1118",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -509,31 +504,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libxml2.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "1f45a45cf93be77fc987e13585c7e851c7ad8546e2c03d34c697f66ffc688f59"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libxml-2.0.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "2d3af5bf04dd5632433c1256c7464a981df8ca4563d0a79571bf5df2b427fc0a"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -541,7 +512,7 @@
     },
     {
       "fileName": "./share/libxml2/vcpkg-cmake-wrapper.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -553,7 +524,7 @@
     },
     {
       "fileName": "./share/libxml2/copyright",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -565,11 +536,11 @@
     },
     {
       "fileName": "./share/libxml2/libxml2-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b94fb51c285b43e11b8a98030f144b4051a184d21621e5f89ec37448f81414e1"
+          "checksumValue": "3749a51310526a000779fcaaf4e1f0d737ca98511fab66b222d36721c3a1b364"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -577,23 +548,11 @@
     },
     {
       "fileName": "./share/libxml2/libxml2-export.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "bb9548ff77a45b1e3a690ad87eee26abdf2b843be04d8bea911835661b5d8b9f"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/libxml2/libxml2-export-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "8ad164716c0e15fd8cb9f761b8d3f16f612fefcfff10c3d75300b7e02a797369"
+          "checksumValue": "36d5c05391d73e46be08a6ac7e27ca47bbb3478329ce679b43bacf2e9fc2ecad"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -601,7 +560,7 @@
     },
     {
       "fileName": "./share/libxml2/libxml2-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -613,7 +572,7 @@
     },
     {
       "fileName": "./share/libxml2/usage",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -625,11 +584,11 @@
     },
     {
       "fileName": "./share/libxml2/libxml2-export-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "1ea57ffcd42f95dee4148fc991635911f909b56c0bb679d44efe21984775ed43"
+          "checksumValue": "c15ee8f1ea6b131634645e730a50fcad84c3ab927a8f9a78169e2550a1094296"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -637,7 +596,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xpath.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -649,7 +608,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/schemasInternals.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -661,7 +620,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/hash.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -673,7 +632,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xmlreader.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -685,7 +644,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xmlwriter.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -697,7 +656,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/relaxng.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -709,7 +668,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/SAX2.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -721,7 +680,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xmlschemas.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -733,7 +692,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/nanohttp.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -745,7 +704,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/threads.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -757,7 +716,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xmlversion.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -769,7 +728,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xlink.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -781,7 +740,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/dict.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -793,7 +752,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xmlIO.h",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -805,7 +764,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/HTMLparser.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -817,7 +776,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xinclude.h",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -829,7 +788,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xmlregexp.h",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -841,7 +800,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xmlmemory.h",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -853,7 +812,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/nanoftp.h",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -865,7 +824,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/parserInternals.h",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -877,7 +836,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xmlerror.h",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -889,7 +848,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/c14n.h",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -901,7 +860,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/chvalid.h",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -913,7 +872,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xmlschemastypes.h",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -925,7 +884,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/valid.h",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -937,7 +896,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/schematron.h",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -949,7 +908,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xmlunicode.h",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -961,7 +920,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xmlmodule.h",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -973,7 +932,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/debugXML.h",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -985,7 +944,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/uri.h",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -997,7 +956,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xpointer.h",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1009,7 +968,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xmlautomata.h",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1021,7 +980,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xmlsave.h",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1033,7 +992,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xpathInternals.h",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1045,7 +1004,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/pattern.h",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1057,7 +1016,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xmlstring.h",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1069,7 +1028,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/HTMLtree.h",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1081,7 +1040,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/parser.h",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1093,7 +1052,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/encoding.h",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1105,7 +1064,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/entities.h",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1117,7 +1076,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/SAX.h",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1129,7 +1088,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/catalog.h",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1141,11 +1100,11 @@
     },
     {
       "fileName": "./include/libxml2/libxml/xmlexports.h",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "634fc8b80a854a71b4bb3d9dc524051468571d1e0751a8dcebb7d4904c040eb5"
+          "checksumValue": "9914c6ec6914300b4a94b001dfb4261f88743b81a22f38ef321158d29246a322"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1153,7 +1112,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/globals.h",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1165,7 +1124,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/list.h",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1177,7 +1136,7 @@
     },
     {
       "fileName": "./include/libxml2/libxml/tree.h",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1188,12 +1147,24 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libxml2.a",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "fileName": "./lib/libxml2.so",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "c13acb46eabb1aa932c85f386dfbee7bb7f8d729dc232d6cc345e635d680f5eb"
+          "checksumValue": "fa64609cd865a2ac080c2062cf5f847d3c2e000b18d724c08809550cd4c48f6a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libxml2.so.16",
+      "SPDXID": "SPDXRef-binary-file-55",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fa64609cd865a2ac080c2062cf5f847d3c2e000b18d724c08809550cd4c48f6a"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1201,11 +1172,23 @@
     },
     {
       "fileName": "./lib/pkgconfig/libxml-2.0.pc",
-      "SPDXID": "SPDXRef-binary-file-58",
+      "SPDXID": "SPDXRef-binary-file-56",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "8df643d4649c62e504a09d672583d01b68b43ea8d71fbc8476bfd78e68fec456"
+          "checksumValue": "2d197b8779c24f5eb61ac9d6ee80dbf59480348af92b2f65c67033bbbac28c36"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libxml2.so.16.1.0",
+      "SPDXID": "SPDXRef-binary-file-57",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fa64609cd865a2ac080c2062cf5f847d3c2e000b18d724c08809550cd4c48f6a"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1213,11 +1196,11 @@
     },
     {
       "fileName": "./tools/libxml2/xmllint",
-      "SPDXID": "SPDXRef-binary-file-59",
+      "SPDXID": "SPDXRef-binary-file-58",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e5b4c3a15612ee40d95ce6ab2030e3bf07c3e30e8cc6e7714616c79103233e3c"
+          "checksumValue": "ab996e47e0a33aa8ffb190d2716c92560389d2a8f0c0024255f01df99b93b675"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1225,11 +1208,11 @@
     },
     {
       "fileName": "./tools/libxml2/xmlcatalog",
-      "SPDXID": "SPDXRef-binary-file-60",
+      "SPDXID": "SPDXRef-binary-file-59",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d5f9bde023ad0553a7906d514c16b0f45e570c6b2ed44c124a8c5510f6fe5783"
+          "checksumValue": "81c8b49ad025d358e46d8d98116e8dc9b7a56732a62b41c225de26337458bbb9"
         }
       ],
       "licenseConcluded": "NOASSERTION",

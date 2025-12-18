@@ -4,7 +4,7 @@ list(FILTER z_vcpkg_icu_config_mode_args INCLUDE REGEX "^(CONFIGS?|HINTS|NAMES|N
 if(z_vcpkg_icu_config_mode_args STREQUAL "")
     cmake_policy(PUSH)
     cmake_policy(SET CMP0057 NEW)
-    if("static" STREQUAL "static")
+    if("dynamic" STREQUAL "static")
         # Fix problem: Static link libraries, ordered for traditional linker
         if("io" IN_LIST ARGS AND NOT TARGET ICU::io)
             if("in" IN_LIST ARGS)

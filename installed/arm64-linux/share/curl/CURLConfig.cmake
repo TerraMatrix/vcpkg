@@ -64,9 +64,9 @@ include("${CMAKE_CURRENT_LIST_DIR}/CURLTargets.cmake")
 # Alias for either shared or static library
 if(NOT TARGET CURL::libcurl)
   if(CMAKE_VERSION VERSION_GREATER_EQUAL 3.11 AND CMAKE_VERSION VERSION_LESS 3.18)
-    set_target_properties(CURL::libcurl_static PROPERTIES IMPORTED_GLOBAL TRUE)
+    set_target_properties(CURL::libcurl_shared PROPERTIES IMPORTED_GLOBAL TRUE)
   endif()
-  add_library(CURL::libcurl ALIAS CURL::libcurl_static)
+  add_library(CURL::libcurl ALIAS CURL::libcurl_shared)
 endif()
 
 # For compatibility with CMake's FindCURL.cmake

@@ -55,10 +55,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::wserialization
-add_library(Boost::wserialization STATIC IMPORTED)
+add_library(Boost::wserialization SHARED IMPORTED)
 
 set_target_properties(Boost::wserialization PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_SERIALIZATION_NO_LIB;BOOST_SERIALIZATION_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_SERIALIZATION_NO_LIB;BOOST_SERIALIZATION_DYN_LINK"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "Boost::serialization"
 )

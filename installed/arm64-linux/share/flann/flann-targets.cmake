@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS flann::flann_cpp_s flann::flann_s)
+foreach(_cmake_expected_target IN ITEMS flann::flann_cpp flann::flann)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -54,18 +54,18 @@ if(_IMPORT_PREFIX STREQUAL "/")
   set(_IMPORT_PREFIX "")
 endif()
 
-# Create imported target flann::flann_cpp_s
-add_library(flann::flann_cpp_s STATIC IMPORTED)
+# Create imported target flann::flann_cpp
+add_library(flann::flann_cpp SHARED IMPORTED)
 
-set_target_properties(flann::flann_cpp_s PROPERTIES
+set_target_properties(flann::flann_cpp PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "lz4::lz4"
 )
 
-# Create imported target flann::flann_s
-add_library(flann::flann_s STATIC IMPORTED)
+# Create imported target flann::flann
+add_library(flann::flann SHARED IMPORTED)
 
-set_target_properties(flann::flann_s PROPERTIES
+set_target_properties(flann::flann PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "lz4::lz4"
 )

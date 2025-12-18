@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/libdeflate-arm64-linux-1.24-050ff029-ac25-468c-89b3-136f1b1f2a28",
-  "name": "libdeflate:arm64-linux@1.24 6044defca2c1997085c0130d88f51079456014907785f4ed27c594e34ae25a2d",
+  "documentNamespace": "https://spdx.org/spdxdocs/libdeflate-arm64-linux-1.24-8264a664-38fd-4fbe-bd2e-2a9b2d852652",
+  "name": "libdeflate:arm64-linux@1.24 69cf0c1854f1af5c7ed1804bf5cbb68d02b9f8aca882675b7cda91f6352e675e",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T02:05:06Z"
+    "created": "2025-12-16T10:30:33Z"
   },
   "relationships": [
     {
@@ -96,16 +96,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-10"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-11"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-12"
     }
   ],
   "packages": [
@@ -124,7 +114,7 @@
     {
       "name": "libdeflate:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "6044defca2c1997085c0130d88f51079456014907785f4ed27c594e34ae25a2d",
+      "versionInfo": "69cf0c1854f1af5c7ed1804bf5cbb68d02b9f8aca882675b7cda91f6352e675e",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -201,31 +191,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libdeflate.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "d9674d6aef8cfda8880b25260ac4e9d8b7ef1ca276c712d54e0ae4c1d988288b"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libdeflate.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "8a9589150cb0c16d8e62c4ad0d949a167c3da774328aee0d06be5a7b7d23bef8"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -233,23 +199,11 @@
     },
     {
       "fileName": "./share/libdeflate/libdeflate-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "6c94bf6a9c985ae4aad03dc8a8646e04580904428c73325a72936a9f63007d29"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/libdeflate/libdeflate-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "bb364cdd74e1115282921bc8e053426c82de559c1b7700793ea404f95c960c49"
+          "checksumValue": "ff1236ec47137965c796c6094b155964a45258fc1ab9fa3431ed1fff7056cac6"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -257,7 +211,7 @@
     },
     {
       "fileName": "./share/libdeflate/copyright",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -269,7 +223,7 @@
     },
     {
       "fileName": "./share/libdeflate/libdeflate-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -281,11 +235,11 @@
     },
     {
       "fileName": "./share/libdeflate/libdeflate-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "19fac7ce9c820fbbcfff9e538c9b0b5c229441ec03641bc3256294706eaec476"
+          "checksumValue": "995fc400b8723089ec5e447cc89246daaf1b25ed9c348da15cfb093d8641f2f7"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -293,7 +247,7 @@
     },
     {
       "fileName": "./share/libdeflate/libdeflate-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -305,7 +259,7 @@
     },
     {
       "fileName": "./share/libdeflate/usage",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -317,7 +271,7 @@
     },
     {
       "fileName": "./include/libdeflate.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -328,12 +282,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libdeflate.a",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "fileName": "./lib/libdeflate.so",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "126ff605a66143aad275b7b07f3804dd45e799932720454bf2e5ba807f57ad5c"
+          "checksumValue": "b25bdd0c2a253533fb31e5adc9ec6978e0fca05b86974ff3f54e057e665c2583"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -341,11 +295,23 @@
     },
     {
       "fileName": "./lib/pkgconfig/libdeflate.pc",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2f64255e974ede89398d156cb3c5c058cbd831db380911655fcda999100558c3"
+          "checksumValue": "952eb48ee8bf0fbbe9fd9b2fc4257854cfad1abb96b0b35c0d6057a5975607f7"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libdeflate.so.0",
+      "SPDXID": "SPDXRef-binary-file-10",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b25bdd0c2a253533fb31e5adc9ec6978e0fca05b86974ff3f54e057e665c2583"
         }
       ],
       "licenseConcluded": "NOASSERTION",

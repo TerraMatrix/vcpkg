@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/libkml-arm64-linux-1.3.0#14-7a7a8b78-b50e-4714-821c-1ef1f911f4b0",
-  "name": "libkml:arm64-linux@1.3.0#14 16b9df89e393f3e748d0aa032d5f7a205fc5f2858b63ed1dccc6f605a7a72043",
+  "documentNamespace": "https://spdx.org/spdxdocs/libkml-arm64-linux-1.3.0#14-b573f6af-5ae5-48f5-9530-cbc7d51e3fc3",
+  "name": "libkml:arm64-linux@1.3.0#14 b75db3eadf258733ffa1c35dbf9b4686fda442c3de3e2977214e828ebb9c5d0a",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T02:27:10Z"
+    "created": "2025-12-16T10:52:48Z"
   },
   "relationships": [
     {
@@ -846,6 +846,26 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-157"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-158"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-159"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-160"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-161"
     }
   ],
   "packages": [
@@ -864,7 +884,7 @@
     {
       "name": "libkml:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "16b9df89e393f3e748d0aa032d5f7a205fc5f2858b63ed1dccc6f605a7a72043",
+      "versionInfo": "b75db3eadf258733ffa1c35dbf9b4686fda442c3de3e2977214e828ebb9c5d0a",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -977,91 +997,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libkmlbase.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "18859f9b18d598639ee45dbea5c5e5f9db40b4b9440b9feed4b220e05a6d22f1"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libkmldom.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "0dd787b9f8d99029ddf1964a691e4e47c1062ea3a24e94d9078b3555aba25b5d"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libkmlengine.a",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "cf4d4e644593670834ec66c4732b768f727f6d6020e3d45679fad3a83791fa27"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libkmlxsd.a",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "30cb2169f0628bc041cdd707707aaef0f8f855ad02dc50c29fac371e4e734ff6"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libkmlconvenience.a",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "2ec1b493f956c04eab4ea944df4fd44a6877e25d1bfdec1aa74f63f173073771"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libkml.pc",
-      "SPDXID": "SPDXRef-binary-file-6",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "cdd1d0a1a5f1788c78b05f9b44fdefabb11f34a707d5586503998061fb774557"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libkmlregionator.a",
-      "SPDXID": "SPDXRef-binary-file-7",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "b4e6ec4f08f973bf3807045ce6af766bf2abb38f7ee9d7ca3f07903cb26ff1f6"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1069,11 +1005,11 @@
     },
     {
       "fileName": "./share/libkml/LibKMLTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "93191d912fc8f0b8ffd337e87a35ddbc0380f0df4db395c6928f9aae7197b553"
+          "checksumValue": "0e874fc5dc4b3f771bcce49073d3a9285c61dc11f6c7395fa0365f815ca37bb8"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1081,7 +1017,7 @@
     },
     {
       "fileName": "./share/libkml/LibKMLConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1092,20 +1028,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/libkml/LibKMLTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-10",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "32bda2da5d26453ea1515e17dec02968e913ec33d3d8039030b4ded2d220429a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/libkml/copyright",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1117,7 +1041,7 @@
     },
     {
       "fileName": "./share/libkml/LibKMLConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1129,11 +1053,11 @@
     },
     {
       "fileName": "./share/libkml/LibKMLTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "8f37ebf6ca36927b20fa80b3759384ec1718c4c37909fecf32135cb6580b2db5"
+          "checksumValue": "2d6fc4b42f5af5d9b4f603825747512fdcf9752cff435572555a6e6abbb91c51"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1141,7 +1065,7 @@
     },
     {
       "fileName": "./include/kml/regionator/regionator_util.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1153,7 +1077,7 @@
     },
     {
       "fileName": "./include/kml/regionator/regionator_qid.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1165,7 +1089,7 @@
     },
     {
       "fileName": "./include/kml/regionator/feature_list_region_handler.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1177,7 +1101,7 @@
     },
     {
       "fileName": "./include/kml/regionator/region_handler.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1189,7 +1113,7 @@
     },
     {
       "fileName": "./include/kml/regionator/feature_list_regionator.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1201,7 +1125,7 @@
     },
     {
       "fileName": "./include/kml/regionator/regionator.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1213,7 +1137,7 @@
     },
     {
       "fileName": "./include/kml/convenience/csv_file.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1225,7 +1149,7 @@
     },
     {
       "fileName": "./include/kml/convenience/kmz_check_links.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1237,7 +1161,7 @@
     },
     {
       "fileName": "./include/kml/convenience/atom_util.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1249,7 +1173,7 @@
     },
     {
       "fileName": "./include/kml/convenience/csv_parser.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1261,7 +1185,7 @@
     },
     {
       "fileName": "./include/kml/convenience/http_client.h",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1273,7 +1197,7 @@
     },
     {
       "fileName": "./include/kml/convenience/google_picasa_web.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1285,7 +1209,7 @@
     },
     {
       "fileName": "./include/kml/convenience/feature_list.h",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1297,7 +1221,7 @@
     },
     {
       "fileName": "./include/kml/convenience/gpx_trk_pt_handler.h",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1309,7 +1233,7 @@
     },
     {
       "fileName": "./include/kml/convenience/google_maps_data.h",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1321,7 +1245,7 @@
     },
     {
       "fileName": "./include/kml/convenience/kml_feature_list_saver.h",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1333,7 +1257,7 @@
     },
     {
       "fileName": "./include/kml/convenience/convenience.h",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1345,7 +1269,7 @@
     },
     {
       "fileName": "./include/kml/convenience/element_counter.h",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1357,7 +1281,7 @@
     },
     {
       "fileName": "./include/kml/convenience/google_spreadsheets.h",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1369,7 +1293,7 @@
     },
     {
       "fileName": "./include/kml/convenience/google_doc_list.h",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1381,7 +1305,7 @@
     },
     {
       "fileName": "./include/kml/engine/entity_mapper.h",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1393,7 +1317,7 @@
     },
     {
       "fileName": "./include/kml/engine/old_schema_parser_observer.h",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1405,7 +1329,7 @@
     },
     {
       "fileName": "./include/kml/engine/engine_types.h",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1417,7 +1341,7 @@
     },
     {
       "fileName": "./include/kml/engine/style_inliner.h",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1429,7 +1353,7 @@
     },
     {
       "fileName": "./include/kml/engine/style_resolver.h",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1441,7 +1365,7 @@
     },
     {
       "fileName": "./include/kml/engine/get_links.h",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1453,7 +1377,7 @@
     },
     {
       "fileName": "./include/kml/engine/get_link_parents.h",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1465,7 +1389,7 @@
     },
     {
       "fileName": "./include/kml/engine/href.h",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1477,7 +1401,7 @@
     },
     {
       "fileName": "./include/kml/engine/feature_view.h",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1489,7 +1413,7 @@
     },
     {
       "fileName": "./include/kml/engine/kmz_file.h",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1501,7 +1425,7 @@
     },
     {
       "fileName": "./include/kml/engine/style_merger.h",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1513,7 +1437,7 @@
     },
     {
       "fileName": "./include/kml/engine/style_splitter.h",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1525,7 +1449,7 @@
     },
     {
       "fileName": "./include/kml/engine/kml_uri.h",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1537,7 +1461,7 @@
     },
     {
       "fileName": "./include/kml/engine/kml_cache.h",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1549,7 +1473,7 @@
     },
     {
       "fileName": "./include/kml/engine/feature_balloon.h",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1561,7 +1485,7 @@
     },
     {
       "fileName": "./include/kml/engine/shared_style_parser_observer.h",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1573,7 +1497,7 @@
     },
     {
       "fileName": "./include/kml/engine/kmz_cache.h",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1585,7 +1509,7 @@
     },
     {
       "fileName": "./include/kml/engine/id_mapper.h",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1597,7 +1521,7 @@
     },
     {
       "fileName": "./include/kml/engine/bbox.h",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1609,7 +1533,7 @@
     },
     {
       "fileName": "./include/kml/engine/kml_stream.h",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1621,7 +1545,7 @@
     },
     {
       "fileName": "./include/kml/engine/find_xml_namespaces.h",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1633,7 +1557,7 @@
     },
     {
       "fileName": "./include/kml/engine/object_id_parser_observer.h",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1645,7 +1569,7 @@
     },
     {
       "fileName": "./include/kml/engine/schema_parser_observer.h",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1657,7 +1581,7 @@
     },
     {
       "fileName": "./include/kml/engine/location_util.h",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1669,7 +1593,7 @@
     },
     {
       "fileName": "./include/kml/engine/merge.h",
-      "SPDXID": "SPDXRef-binary-file-58",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1681,7 +1605,7 @@
     },
     {
       "fileName": "./include/kml/engine/update.h",
-      "SPDXID": "SPDXRef-binary-file-59",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1693,7 +1617,7 @@
     },
     {
       "fileName": "./include/kml/engine/feature_visitor.h",
-      "SPDXID": "SPDXRef-binary-file-60",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1705,7 +1629,7 @@
     },
     {
       "fileName": "./include/kml/engine/link_util.h",
-      "SPDXID": "SPDXRef-binary-file-61",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1717,7 +1641,7 @@
     },
     {
       "fileName": "./include/kml/engine/kml_file.h",
-      "SPDXID": "SPDXRef-binary-file-62",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1729,7 +1653,7 @@
     },
     {
       "fileName": "./include/kml/engine/clone.h",
-      "SPDXID": "SPDXRef-binary-file-63",
+      "SPDXID": "SPDXRef-binary-file-55",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1741,7 +1665,7 @@
     },
     {
       "fileName": "./include/kml/engine/parse_old_schema.h",
-      "SPDXID": "SPDXRef-binary-file-64",
+      "SPDXID": "SPDXRef-binary-file-56",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1753,7 +1677,7 @@
     },
     {
       "fileName": "./include/kml/engine/find.h",
-      "SPDXID": "SPDXRef-binary-file-65",
+      "SPDXID": "SPDXRef-binary-file-57",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1765,7 +1689,7 @@
     },
     {
       "fileName": "./include/kml/engine.h",
-      "SPDXID": "SPDXRef-binary-file-66",
+      "SPDXID": "SPDXRef-binary-file-58",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1777,7 +1701,7 @@
     },
     {
       "fileName": "./include/kml/dom/iconstyle.h",
-      "SPDXID": "SPDXRef-binary-file-67",
+      "SPDXID": "SPDXRef-binary-file-59",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1789,7 +1713,7 @@
     },
     {
       "fileName": "./include/kml/dom/kml_ptr.h",
-      "SPDXID": "SPDXRef-binary-file-68",
+      "SPDXID": "SPDXRef-binary-file-60",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1801,7 +1725,7 @@
     },
     {
       "fileName": "./include/kml/dom/extendeddata.h",
-      "SPDXID": "SPDXRef-binary-file-69",
+      "SPDXID": "SPDXRef-binary-file-61",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1813,7 +1737,7 @@
     },
     {
       "fileName": "./include/kml/dom/overlay.h",
-      "SPDXID": "SPDXRef-binary-file-70",
+      "SPDXID": "SPDXRef-binary-file-62",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1825,7 +1749,7 @@
     },
     {
       "fileName": "./include/kml/dom/substyle.h",
-      "SPDXID": "SPDXRef-binary-file-71",
+      "SPDXID": "SPDXRef-binary-file-63",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1837,7 +1761,7 @@
     },
     {
       "fileName": "./include/kml/dom/kml.h",
-      "SPDXID": "SPDXRef-binary-file-72",
+      "SPDXID": "SPDXRef-binary-file-64",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1849,7 +1773,7 @@
     },
     {
       "fileName": "./include/kml/dom/gx_timeprimitive.h",
-      "SPDXID": "SPDXRef-binary-file-73",
+      "SPDXID": "SPDXRef-binary-file-65",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1861,7 +1785,7 @@
     },
     {
       "fileName": "./include/kml/dom/folder.h",
-      "SPDXID": "SPDXRef-binary-file-74",
+      "SPDXID": "SPDXRef-binary-file-66",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1873,7 +1797,7 @@
     },
     {
       "fileName": "./include/kml/dom/networklinkcontrol.h",
-      "SPDXID": "SPDXRef-binary-file-75",
+      "SPDXID": "SPDXRef-binary-file-67",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1885,7 +1809,7 @@
     },
     {
       "fileName": "./include/kml/dom/xal.h",
-      "SPDXID": "SPDXRef-binary-file-76",
+      "SPDXID": "SPDXRef-binary-file-68",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1897,7 +1821,7 @@
     },
     {
       "fileName": "./include/kml/dom/kml_cast.h",
-      "SPDXID": "SPDXRef-binary-file-77",
+      "SPDXID": "SPDXRef-binary-file-69",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1909,7 +1833,7 @@
     },
     {
       "fileName": "./include/kml/dom/placemark.h",
-      "SPDXID": "SPDXRef-binary-file-78",
+      "SPDXID": "SPDXRef-binary-file-70",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1921,7 +1845,7 @@
     },
     {
       "fileName": "./include/kml/dom/liststyle.h",
-      "SPDXID": "SPDXRef-binary-file-79",
+      "SPDXID": "SPDXRef-binary-file-71",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1933,7 +1857,7 @@
     },
     {
       "fileName": "./include/kml/dom/region.h",
-      "SPDXID": "SPDXRef-binary-file-80",
+      "SPDXID": "SPDXRef-binary-file-72",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1945,7 +1869,7 @@
     },
     {
       "fileName": "./include/kml/dom/stylemap.h",
-      "SPDXID": "SPDXRef-binary-file-81",
+      "SPDXID": "SPDXRef-binary-file-73",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1957,7 +1881,7 @@
     },
     {
       "fileName": "./include/kml/dom/polystyle.h",
-      "SPDXID": "SPDXRef-binary-file-82",
+      "SPDXID": "SPDXRef-binary-file-74",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1969,7 +1893,7 @@
     },
     {
       "fileName": "./include/kml/dom/timeprimitive.h",
-      "SPDXID": "SPDXRef-binary-file-83",
+      "SPDXID": "SPDXRef-binary-file-75",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1981,7 +1905,7 @@
     },
     {
       "fileName": "./include/kml/dom/abstractlatlonbox.h",
-      "SPDXID": "SPDXRef-binary-file-84",
+      "SPDXID": "SPDXRef-binary-file-76",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1993,7 +1917,7 @@
     },
     {
       "fileName": "./include/kml/dom/kml22.h",
-      "SPDXID": "SPDXRef-binary-file-85",
+      "SPDXID": "SPDXRef-binary-file-77",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2005,7 +1929,7 @@
     },
     {
       "fileName": "./include/kml/dom/xsd.h",
-      "SPDXID": "SPDXRef-binary-file-86",
+      "SPDXID": "SPDXRef-binary-file-78",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2017,7 +1941,7 @@
     },
     {
       "fileName": "./include/kml/dom/visitor.h",
-      "SPDXID": "SPDXRef-binary-file-87",
+      "SPDXID": "SPDXRef-binary-file-79",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2029,7 +1953,7 @@
     },
     {
       "fileName": "./include/kml/dom/parser_observer.h",
-      "SPDXID": "SPDXRef-binary-file-88",
+      "SPDXID": "SPDXRef-binary-file-80",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2041,7 +1965,7 @@
     },
     {
       "fileName": "./include/kml/dom/model.h",
-      "SPDXID": "SPDXRef-binary-file-89",
+      "SPDXID": "SPDXRef-binary-file-81",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2053,7 +1977,7 @@
     },
     {
       "fileName": "./include/kml/dom/object.h",
-      "SPDXID": "SPDXRef-binary-file-90",
+      "SPDXID": "SPDXRef-binary-file-82",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2065,7 +1989,7 @@
     },
     {
       "fileName": "./include/kml/dom/hotspot.h",
-      "SPDXID": "SPDXRef-binary-file-91",
+      "SPDXID": "SPDXRef-binary-file-83",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2077,7 +2001,7 @@
     },
     {
       "fileName": "./include/kml/dom/styleselector.h",
-      "SPDXID": "SPDXRef-binary-file-92",
+      "SPDXID": "SPDXRef-binary-file-84",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2089,7 +2013,7 @@
     },
     {
       "fileName": "./include/kml/dom/vec2.h",
-      "SPDXID": "SPDXRef-binary-file-93",
+      "SPDXID": "SPDXRef-binary-file-85",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2101,7 +2025,7 @@
     },
     {
       "fileName": "./include/kml/dom/linestyle.h",
-      "SPDXID": "SPDXRef-binary-file-94",
+      "SPDXID": "SPDXRef-binary-file-86",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2113,7 +2037,7 @@
     },
     {
       "fileName": "./include/kml/dom/networklink.h",
-      "SPDXID": "SPDXRef-binary-file-95",
+      "SPDXID": "SPDXRef-binary-file-87",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2125,7 +2049,7 @@
     },
     {
       "fileName": "./include/kml/dom/labelstyle.h",
-      "SPDXID": "SPDXRef-binary-file-96",
+      "SPDXID": "SPDXRef-binary-file-88",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2137,7 +2061,7 @@
     },
     {
       "fileName": "./include/kml/dom/feature.h",
-      "SPDXID": "SPDXRef-binary-file-97",
+      "SPDXID": "SPDXRef-binary-file-89",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2149,7 +2073,7 @@
     },
     {
       "fileName": "./include/kml/dom/balloonstyle.h",
-      "SPDXID": "SPDXRef-binary-file-98",
+      "SPDXID": "SPDXRef-binary-file-90",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2161,7 +2085,7 @@
     },
     {
       "fileName": "./include/kml/dom/schema.h",
-      "SPDXID": "SPDXRef-binary-file-99",
+      "SPDXID": "SPDXRef-binary-file-91",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2173,7 +2097,7 @@
     },
     {
       "fileName": "./include/kml/dom/visitor_driver.h",
-      "SPDXID": "SPDXRef-binary-file-100",
+      "SPDXID": "SPDXRef-binary-file-92",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2185,7 +2109,7 @@
     },
     {
       "fileName": "./include/kml/dom/element.h",
-      "SPDXID": "SPDXRef-binary-file-101",
+      "SPDXID": "SPDXRef-binary-file-93",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2197,7 +2121,7 @@
     },
     {
       "fileName": "./include/kml/dom/kml_funcs.h",
-      "SPDXID": "SPDXRef-binary-file-102",
+      "SPDXID": "SPDXRef-binary-file-94",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2209,7 +2133,7 @@
     },
     {
       "fileName": "./include/kml/dom/link.h",
-      "SPDXID": "SPDXRef-binary-file-103",
+      "SPDXID": "SPDXRef-binary-file-95",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2221,7 +2145,7 @@
     },
     {
       "fileName": "./include/kml/dom/kmldom.h",
-      "SPDXID": "SPDXRef-binary-file-104",
+      "SPDXID": "SPDXRef-binary-file-96",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2233,7 +2157,7 @@
     },
     {
       "fileName": "./include/kml/dom/parser.h",
-      "SPDXID": "SPDXRef-binary-file-105",
+      "SPDXID": "SPDXRef-binary-file-97",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2245,7 +2169,7 @@
     },
     {
       "fileName": "./include/kml/dom/kml_factory.h",
-      "SPDXID": "SPDXRef-binary-file-106",
+      "SPDXID": "SPDXRef-binary-file-98",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2257,7 +2181,7 @@
     },
     {
       "fileName": "./include/kml/dom/style.h",
-      "SPDXID": "SPDXRef-binary-file-107",
+      "SPDXID": "SPDXRef-binary-file-99",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2269,7 +2193,7 @@
     },
     {
       "fileName": "./include/kml/dom/gx_tour.h",
-      "SPDXID": "SPDXRef-binary-file-108",
+      "SPDXID": "SPDXRef-binary-file-100",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2281,7 +2205,7 @@
     },
     {
       "fileName": "./include/kml/dom/abstractview.h",
-      "SPDXID": "SPDXRef-binary-file-109",
+      "SPDXID": "SPDXRef-binary-file-101",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2293,7 +2217,7 @@
     },
     {
       "fileName": "./include/kml/dom/atom.h",
-      "SPDXID": "SPDXRef-binary-file-110",
+      "SPDXID": "SPDXRef-binary-file-102",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2305,7 +2229,7 @@
     },
     {
       "fileName": "./include/kml/dom/container.h",
-      "SPDXID": "SPDXRef-binary-file-111",
+      "SPDXID": "SPDXRef-binary-file-103",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2317,7 +2241,7 @@
     },
     {
       "fileName": "./include/kml/dom/snippet.h",
-      "SPDXID": "SPDXRef-binary-file-112",
+      "SPDXID": "SPDXRef-binary-file-104",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2329,7 +2253,7 @@
     },
     {
       "fileName": "./include/kml/dom/document.h",
-      "SPDXID": "SPDXRef-binary-file-113",
+      "SPDXID": "SPDXRef-binary-file-105",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2341,7 +2265,7 @@
     },
     {
       "fileName": "./include/kml/dom/geometry.h",
-      "SPDXID": "SPDXRef-binary-file-114",
+      "SPDXID": "SPDXRef-binary-file-106",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2353,7 +2277,7 @@
     },
     {
       "fileName": "./include/kml/dom/colorstyle.h",
-      "SPDXID": "SPDXRef-binary-file-115",
+      "SPDXID": "SPDXRef-binary-file-107",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2365,7 +2289,7 @@
     },
     {
       "fileName": "./include/kml/xsd/xsd_simple_type.h",
-      "SPDXID": "SPDXRef-binary-file-116",
+      "SPDXID": "SPDXRef-binary-file-108",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2377,7 +2301,7 @@
     },
     {
       "fileName": "./include/kml/xsd/xst_parser.h",
-      "SPDXID": "SPDXRef-binary-file-117",
+      "SPDXID": "SPDXRef-binary-file-109",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2389,7 +2313,7 @@
     },
     {
       "fileName": "./include/kml/xsd/xsd_primitive_type.h",
-      "SPDXID": "SPDXRef-binary-file-118",
+      "SPDXID": "SPDXRef-binary-file-110",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2401,7 +2325,7 @@
     },
     {
       "fileName": "./include/kml/xsd/xsd_file.h",
-      "SPDXID": "SPDXRef-binary-file-119",
+      "SPDXID": "SPDXRef-binary-file-111",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2413,7 +2337,7 @@
     },
     {
       "fileName": "./include/kml/xsd/xsd_util.h",
-      "SPDXID": "SPDXRef-binary-file-120",
+      "SPDXID": "SPDXRef-binary-file-112",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2425,7 +2349,7 @@
     },
     {
       "fileName": "./include/kml/xsd/xsd_handler.h",
-      "SPDXID": "SPDXRef-binary-file-121",
+      "SPDXID": "SPDXRef-binary-file-113",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2437,7 +2361,7 @@
     },
     {
       "fileName": "./include/kml/xsd/xsd_element.h",
-      "SPDXID": "SPDXRef-binary-file-122",
+      "SPDXID": "SPDXRef-binary-file-114",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2449,7 +2373,7 @@
     },
     {
       "fileName": "./include/kml/xsd/xsd_schema.h",
-      "SPDXID": "SPDXRef-binary-file-123",
+      "SPDXID": "SPDXRef-binary-file-115",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2461,7 +2385,7 @@
     },
     {
       "fileName": "./include/kml/xsd/xsd_complex_type.h",
-      "SPDXID": "SPDXRef-binary-file-124",
+      "SPDXID": "SPDXRef-binary-file-116",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2473,7 +2397,7 @@
     },
     {
       "fileName": "./include/kml/xsd/xsd_type.h",
-      "SPDXID": "SPDXRef-binary-file-125",
+      "SPDXID": "SPDXRef-binary-file-117",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2485,7 +2409,7 @@
     },
     {
       "fileName": "./include/kml/dom.h",
-      "SPDXID": "SPDXRef-binary-file-126",
+      "SPDXID": "SPDXRef-binary-file-118",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2497,7 +2421,7 @@
     },
     {
       "fileName": "./include/kml/base/vec3.h",
-      "SPDXID": "SPDXRef-binary-file-127",
+      "SPDXID": "SPDXRef-binary-file-119",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2509,7 +2433,7 @@
     },
     {
       "fileName": "./include/kml/base/csv_splitter.h",
-      "SPDXID": "SPDXRef-binary-file-128",
+      "SPDXID": "SPDXRef-binary-file-120",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2521,7 +2445,7 @@
     },
     {
       "fileName": "./include/kml/base/zip_file.h",
-      "SPDXID": "SPDXRef-binary-file-129",
+      "SPDXID": "SPDXRef-binary-file-121",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2533,7 +2457,7 @@
     },
     {
       "fileName": "./include/kml/base/string_util.h",
-      "SPDXID": "SPDXRef-binary-file-130",
+      "SPDXID": "SPDXRef-binary-file-122",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2545,7 +2469,7 @@
     },
     {
       "fileName": "./include/kml/base/net_cache.h",
-      "SPDXID": "SPDXRef-binary-file-131",
+      "SPDXID": "SPDXRef-binary-file-123",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2557,7 +2481,7 @@
     },
     {
       "fileName": "./include/kml/base/xmlns.h",
-      "SPDXID": "SPDXRef-binary-file-132",
+      "SPDXID": "SPDXRef-binary-file-124",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2569,7 +2493,7 @@
     },
     {
       "fileName": "./include/kml/base/color32.h",
-      "SPDXID": "SPDXRef-binary-file-133",
+      "SPDXID": "SPDXRef-binary-file-125",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2581,7 +2505,7 @@
     },
     {
       "fileName": "./include/kml/base/time_util.h",
-      "SPDXID": "SPDXRef-binary-file-134",
+      "SPDXID": "SPDXRef-binary-file-126",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2593,7 +2517,7 @@
     },
     {
       "fileName": "./include/kml/base/xml_namespaces.h",
-      "SPDXID": "SPDXRef-binary-file-135",
+      "SPDXID": "SPDXRef-binary-file-127",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2605,7 +2529,7 @@
     },
     {
       "fileName": "./include/kml/base/version.h",
-      "SPDXID": "SPDXRef-binary-file-136",
+      "SPDXID": "SPDXRef-binary-file-128",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2617,7 +2541,7 @@
     },
     {
       "fileName": "./include/kml/base/date_time.h",
-      "SPDXID": "SPDXRef-binary-file-137",
+      "SPDXID": "SPDXRef-binary-file-129",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2629,7 +2553,7 @@
     },
     {
       "fileName": "./include/kml/base/util.h",
-      "SPDXID": "SPDXRef-binary-file-138",
+      "SPDXID": "SPDXRef-binary-file-130",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2641,7 +2565,7 @@
     },
     {
       "fileName": "./include/kml/base/expat_handler.h",
-      "SPDXID": "SPDXRef-binary-file-139",
+      "SPDXID": "SPDXRef-binary-file-131",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2653,7 +2577,7 @@
     },
     {
       "fileName": "./include/kml/base/expat_parser.h",
-      "SPDXID": "SPDXRef-binary-file-140",
+      "SPDXID": "SPDXRef-binary-file-132",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2665,7 +2589,7 @@
     },
     {
       "fileName": "./include/kml/base/file.h",
-      "SPDXID": "SPDXRef-binary-file-141",
+      "SPDXID": "SPDXRef-binary-file-133",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2677,7 +2601,7 @@
     },
     {
       "fileName": "./include/kml/base/math_util.h",
-      "SPDXID": "SPDXRef-binary-file-142",
+      "SPDXID": "SPDXRef-binary-file-134",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2689,7 +2613,7 @@
     },
     {
       "fileName": "./include/kml/base/attributes.h",
-      "SPDXID": "SPDXRef-binary-file-143",
+      "SPDXID": "SPDXRef-binary-file-135",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2701,7 +2625,7 @@
     },
     {
       "fileName": "./include/kml/base/memory_file.h",
-      "SPDXID": "SPDXRef-binary-file-144",
+      "SPDXID": "SPDXRef-binary-file-136",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2713,7 +2637,7 @@
     },
     {
       "fileName": "./include/kml/base/xml_file.h",
-      "SPDXID": "SPDXRef-binary-file-145",
+      "SPDXID": "SPDXRef-binary-file-137",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2725,7 +2649,7 @@
     },
     {
       "fileName": "./include/kml/base/referent.h",
-      "SPDXID": "SPDXRef-binary-file-146",
+      "SPDXID": "SPDXRef-binary-file-138",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2737,7 +2661,7 @@
     },
     {
       "fileName": "./include/kml/base/xml_element.h",
-      "SPDXID": "SPDXRef-binary-file-147",
+      "SPDXID": "SPDXRef-binary-file-139",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2749,7 +2673,7 @@
     },
     {
       "fileName": "./include/kml/base/tempfile.h",
-      "SPDXID": "SPDXRef-binary-file-148",
+      "SPDXID": "SPDXRef-binary-file-140",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2761,7 +2685,7 @@
     },
     {
       "fileName": "./include/kml/base/expat_handler_ns.h",
-      "SPDXID": "SPDXRef-binary-file-149",
+      "SPDXID": "SPDXRef-binary-file-141",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2773,7 +2697,7 @@
     },
     {
       "fileName": "./include/kml/base/mimetypes.h",
-      "SPDXID": "SPDXRef-binary-file-150",
+      "SPDXID": "SPDXRef-binary-file-142",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2784,60 +2708,144 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libkmlbase.a",
+      "fileName": "./lib/libkmlregionator.so.1.3.0",
+      "SPDXID": "SPDXRef-binary-file-143",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "65ed3d44b37eea62045d5c8adf295640fe63252c4ee3b956f38a569d94ed13dd"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libkmlengine.so.1",
+      "SPDXID": "SPDXRef-binary-file-144",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cf455fe83143fada6405466b9731f9ee075e1ace27d632e46d0341e95e6f7da4"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libkmlconvenience.so.1",
+      "SPDXID": "SPDXRef-binary-file-145",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f1b627d689890a6ba10c625003f5adea8356b33aadeb58e50231113c9f9c76bf"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libkmlconvenience.so",
+      "SPDXID": "SPDXRef-binary-file-146",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f1b627d689890a6ba10c625003f5adea8356b33aadeb58e50231113c9f9c76bf"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libkmlxsd.so",
+      "SPDXID": "SPDXRef-binary-file-147",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2871c3cabf0046e469b941f4f0eb3541a91a81d93683eab07df87e61ca088ffb"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libkmlbase.so.1",
+      "SPDXID": "SPDXRef-binary-file-148",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "02db0bd07672224ae74f27a4929785362978010da56a982ecc456343ce138e4f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libkmldom.so.1.3.0",
+      "SPDXID": "SPDXRef-binary-file-149",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2ff8e09b61903b5bf4813a1d6b09085cc3129f899bf40d1e5a708e59a6c9a462"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libkmlconvenience.so.1.3.0",
+      "SPDXID": "SPDXRef-binary-file-150",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f1b627d689890a6ba10c625003f5adea8356b33aadeb58e50231113c9f9c76bf"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libkmldom.so",
       "SPDXID": "SPDXRef-binary-file-151",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e9ae3fcf7c0c88273e7de3804a2144e066c0bc29a3a9fe703f8ef91540dfc6cb"
+          "checksumValue": "2ff8e09b61903b5bf4813a1d6b09085cc3129f899bf40d1e5a708e59a6c9a462"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libkmldom.a",
+      "fileName": "./lib/libkmlbase.so.1.3.0",
       "SPDXID": "SPDXRef-binary-file-152",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2ac389f2e79fe890eeb14e071073f4858be217d061c657cba87a897213e34d91"
+          "checksumValue": "02db0bd07672224ae74f27a4929785362978010da56a982ecc456343ce138e4f"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libkmlengine.a",
+      "fileName": "./lib/libkmlregionator.so",
       "SPDXID": "SPDXRef-binary-file-153",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b64cb42c5d4ed88766f6272f26d577783f1fff3965b814f894ed07dcb733e04c"
+          "checksumValue": "65ed3d44b37eea62045d5c8adf295640fe63252c4ee3b956f38a569d94ed13dd"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libkmlxsd.a",
+      "fileName": "./lib/libkmlbase.so",
       "SPDXID": "SPDXRef-binary-file-154",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "394b9b9966c500b75046a85a9b155622fbbba251dc3dee64523eec8f5fd0b6e8"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./lib/libkmlconvenience.a",
-      "SPDXID": "SPDXRef-binary-file-155",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "cbf702b73aa201ad31bea8913bf17e001c390f3ff43f539c250621ff6ac173f3"
+          "checksumValue": "02db0bd07672224ae74f27a4929785362978010da56a982ecc456343ce138e4f"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -2845,23 +2853,83 @@
     },
     {
       "fileName": "./lib/pkgconfig/libkml.pc",
-      "SPDXID": "SPDXRef-binary-file-156",
+      "SPDXID": "SPDXRef-binary-file-155",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "c8dfc79867212d5c3af777934bf2540f91aa508a097f194964467da34f7af54d"
+          "checksumValue": "58af7f8861df27a41dadcb5893af56349ba9353ee536c42cc8b52c094edbc613"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libkmlregionator.a",
+      "fileName": "./lib/libkmlxsd.so.1.3.0",
+      "SPDXID": "SPDXRef-binary-file-156",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2871c3cabf0046e469b941f4f0eb3541a91a81d93683eab07df87e61ca088ffb"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libkmlregionator.so.1",
       "SPDXID": "SPDXRef-binary-file-157",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "4ada5863debd040042feff196fd9f36ea86d4d2f950992b15a0209da5a7ebaea"
+          "checksumValue": "65ed3d44b37eea62045d5c8adf295640fe63252c4ee3b956f38a569d94ed13dd"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libkmlxsd.so.1",
+      "SPDXID": "SPDXRef-binary-file-158",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2871c3cabf0046e469b941f4f0eb3541a91a81d93683eab07df87e61ca088ffb"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libkmlengine.so",
+      "SPDXID": "SPDXRef-binary-file-159",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cf455fe83143fada6405466b9731f9ee075e1ace27d632e46d0341e95e6f7da4"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libkmlengine.so.1.3.0",
+      "SPDXID": "SPDXRef-binary-file-160",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cf455fe83143fada6405466b9731f9ee075e1ace27d632e46d0341e95e6f7da4"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libkmldom.so.1",
+      "SPDXID": "SPDXRef-binary-file-161",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2ff8e09b61903b5bf4813a1d6b09085cc3129f899bf40d1e5a708e59a6c9a462"
         }
       ],
       "licenseConcluded": "NOASSERTION",

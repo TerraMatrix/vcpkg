@@ -55,9 +55,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target zip::zip
-add_library(zip::zip STATIC IMPORTED)
+add_library(zip::zip SHARED IMPORTED)
 
 set_target_properties(zip::zip PROPERTIES
+  INTERFACE_COMPILE_DEFINITIONS "ZIP_SHARED"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include/kubazip;${_IMPORT_PREFIX}/include/kubazip"
 )
 

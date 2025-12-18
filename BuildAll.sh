@@ -1,12 +1,12 @@
-#!/bin/bash
+!/bin/bash
 
-# 获取当前脚本所在目录
+获取当前脚本所在目录
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
-# 设置代理（如果需要）
-# export http_proxy=http://127.0.0.1:7890
-# export https_proxy=http://127.0.0.1:7890
+设置代理（如果需要）
+export http_proxy=http://127.0.0.1:7890
+export https_proxy=http://127.0.0.1:7890
 
 echo "set -install-root and -packages-root"
 ./vcpkg --x-install-root=./installed --x-packages-root=./packages --vcpkg-root=./
@@ -75,7 +75,7 @@ echo "set -install-root and -packages-root"
 # echo "--------------------------------------------"
 # ./bash/ceres.sh
 
-# echo "install curl 8.11.0#1"  //
+# echo "install curl 8.11.0#1"  
 # echo "--------------------------------------------"
 # ./bash/curl.sh
 
@@ -163,9 +163,9 @@ echo "install opencv4 4.8.0#14"
 echo "--------------------------------------------"
 ./bash/opencv4.sh
 
-# echo "install osg 3.6.5#25"  
-# echo "--------------------------------------------"
-# ./bash/osg.sh
+echo "install osg 3.6.5#25"  
+echo "--------------------------------------------"
+./bash/osg.sh
 
 echo "install osg-qt Qt5#3"  
 echo "--------------------------------------------"
@@ -175,9 +175,9 @@ echo "--------------------------------------------"
 # echo "--------------------------------------------"
 # ./bash/leveldb.sh
 
-# echo "install grpc 1.51.1"
-# echo "--------------------------------------------"
-# ./bash/grpc.sh
+echo "install grpc 1.51.1"
+echo "--------------------------------------------"
+./bash/grpc.sh
 
 # echo "install shapelib 1.6.1"
 # echo "--------------------------------------------"
@@ -199,12 +199,13 @@ echo "--------------------------------------------"
 # echo "--------------------------------------------"
 # ./bash/highway.sh
 
-# echo "install skia 129#2"
-# echo "--------------------------------------------"
-# ./bash/skia.sh
+echo "install skia 129#2"
+echo "--------------------------------------------"
+./bash/skia.sh
 
 echo "install qgis 3.30.2"
 echo "--------------------------------------------"
 ./bash/qgis.sh
+
 
 

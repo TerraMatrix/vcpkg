@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/nghttp2-arm64-linux-1.67.1-1a573557-24ee-45ad-aa97-cd15a01d7c17",
-  "name": "nghttp2:arm64-linux@1.67.1 6134febca80108359b1bb098e230394c638c5e13b6d2aaefa6afb6c30bc087b7",
+  "documentNamespace": "https://spdx.org/spdxdocs/nghttp2-arm64-linux-1.67.1-cde96cfa-c9ba-4790-bbfd-d91d37acea31",
+  "name": "nghttp2:arm64-linux@1.67.1 6218f6ed51523cc1cb752202b11981abcbe8f0596fb7881c2733af818a17f33e",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T02:50:33Z"
+    "created": "2025-12-17T01:59:40Z"
   },
   "relationships": [
     {
@@ -89,7 +89,7 @@
     {
       "name": "nghttp2:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "6134febca80108359b1bb098e230394c638c5e13b6d2aaefa6afb6c30bc087b7",
+      "versionInfo": "6218f6ed51523cc1cb752202b11981abcbe8f0596fb7881c2733af818a17f33e",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -142,31 +142,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libnghttp2.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "ce625d16d7b712cc586f0691266ebece30208951747010bc62d5ea56efd9399d"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libnghttp2.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "b8b97aa4bd2315f3eb78a0c5d229cc836504b2d29c3b51538818be7f1103d7c2"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -174,7 +150,7 @@
     },
     {
       "fileName": "./share/nghttp2/copyright",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -186,7 +162,7 @@
     },
     {
       "fileName": "./include/nghttp2/nghttp2.h",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -198,23 +174,23 @@
     },
     {
       "fileName": "./include/nghttp2/nghttp2ver.h",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "21a5d5b5998c1a7a534a2fe6279e1d629396f52907883ac2883c88c624a4167d"
+          "checksumValue": "61ea913691fb3afb07e528a1ff188a13ccc75728c53662724369bcb3d75d0b77"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libnghttp2.a",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "fileName": "./lib/libnghttp2.so.14.29.1",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "10297193c96e1bb601095673248b3c8bd941d67a0495dcf6dbc7cfec4e487190"
+          "checksumValue": "2bd038a37e1539ed2f1cd295ffb41f4a5c38ef59b13df8273c69dac87349f032"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -222,11 +198,35 @@
     },
     {
       "fileName": "./lib/pkgconfig/libnghttp2.pc",
+      "SPDXID": "SPDXRef-binary-file-5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "07786fc4517f362520dab922e51a0ea8053374e3f9c1562ffcb1607065aa9bfe"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libnghttp2.so",
+      "SPDXID": "SPDXRef-binary-file-6",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2bd038a37e1539ed2f1cd295ffb41f4a5c38ef59b13df8273c69dac87349f032"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libnghttp2.so.14",
       "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ee680da6f84323620d906f1aa1f947a06fc9fe9c5aa699498ec370b07ba1b095"
+          "checksumValue": "2bd038a37e1539ed2f1cd295ffb41f4a5c38ef59b13df8273c69dac87349f032"
         }
       ],
       "licenseConcluded": "NOASSERTION",

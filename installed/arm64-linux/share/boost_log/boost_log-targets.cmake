@@ -55,13 +55,13 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::log
-add_library(Boost::log STATIC IMPORTED)
+add_library(Boost::log SHARED IMPORTED)
 
 set_target_properties(Boost::log PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_LOG_NO_LIB;BOOST_LOG_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_LOG_NO_LIB;BOOST_LOG_DYN_LINK"
   INTERFACE_COMPILE_FEATURES "cxx_static_assert"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::core;Boost::date_time;Boost::filesystem;Boost::function_types;Boost::fusion;Boost::intrusive;Boost::move;Boost::mpl;Boost::parameter;Boost::phoenix;Boost::predef;Boost::preprocessor;Boost::proto;Boost::range;Boost::smart_ptr;Boost::system;Boost::throw_exception;Boost::type_index;Boost::type_traits;Boost::utility;\$<LINK_ONLY:Boost::align>;\$<LINK_ONLY:Boost::bind>;\$<LINK_ONLY:Boost::exception>;\$<LINK_ONLY:Boost::interprocess>;\$<LINK_ONLY:Boost::optional>;\$<LINK_ONLY:Boost::spirit>;\$<LINK_ONLY:Boost::regex>;Boost::atomic;Boost::thread;\$<LINK_ONLY:Boost::asio_core>;\$<LINK_ONLY:rt>"
+  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::core;Boost::date_time;Boost::filesystem;Boost::function_types;Boost::fusion;Boost::intrusive;Boost::move;Boost::mpl;Boost::parameter;Boost::phoenix;Boost::predef;Boost::preprocessor;Boost::proto;Boost::range;Boost::smart_ptr;Boost::system;Boost::throw_exception;Boost::type_index;Boost::type_traits;Boost::utility;Boost::atomic;Boost::thread"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

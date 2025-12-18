@@ -24,7 +24,7 @@ include("${CMAKE_CURRENT_LIST_DIR}/c-ares-targets.cmake")
 
 set(c-ares_LIBRARY c-ares::cares)
 
-if(0)
+if(1)
 	if(NOT TARGET c-ares::cares_shared)
 		add_library(c-ares::cares_shared INTERFACE IMPORTED)
 		set_target_properties(c-ares::cares_shared PROPERTIES INTERFACE_LINK_LIBRARIES "c-ares::cares")
@@ -32,7 +32,7 @@ if(0)
 	set(c-ares_SHARED_LIBRARY c-ares::cares_shared)
 endif()
 
-if(1)
+if(0)
 	if(NOT TARGET c-ares::cares_static)
 		add_library(c-ares::cares_static INTERFACE IMPORTED)
 		set_target_properties(c-ares::cares_static PROPERTIES INTERFACE_LINK_LIBRARIES "c-ares::cares")

@@ -55,10 +55,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target hwy::hwy
-add_library(hwy::hwy STATIC IMPORTED)
+add_library(hwy::hwy SHARED IMPORTED)
 
 set_target_properties(hwy::hwy PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "HWY_STATIC_DEFINE"
+  INTERFACE_COMPILE_DEFINITIONS "HWY_SHARED_DEFINE"
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
 )

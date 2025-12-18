@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/metis-arm64-linux-2025-07-04-e06e9f0b-1983-46a1-adad-96708ab7c382",
-  "name": "metis:arm64-linux@2025-07-04 8b5ba0c91cdb7cebf87db5494fb511c5c51b409497dce91f041283a499d6fff2",
+  "documentNamespace": "https://spdx.org/spdxdocs/metis-arm64-linux-2025-07-04-b10988bc-a81a-4082-a148-9c1224659f5d",
+  "name": "metis:arm64-linux@2025-07-04 c52515d6c065dfde5d0b6d96698efc821efc20f6cbb206f3cd0fdb1d9b33b2e1",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T03:02:49Z"
+    "created": "2025-12-16T10:37:58Z"
   },
   "relationships": [
     {
@@ -81,16 +81,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-7"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-8"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-9"
     }
   ],
   "packages": [
@@ -109,7 +99,7 @@
     {
       "name": "metis:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "8b5ba0c91cdb7cebf87db5494fb511c5c51b409497dce91f041283a499d6fff2",
+      "versionInfo": "c52515d6c065dfde5d0b6d96698efc821efc20f6cbb206f3cd0fdb1d9b33b2e1",
       "downloadLocation": "NONE",
       "licenseConcluded": "Apache-2.0",
       "licenseDeclared": "NOASSERTION",
@@ -186,19 +176,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libmetis.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "6abfd2eb928cdcd313a64662ccf3d7d80d3a2fd333768e220594571eaf308c98"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -206,11 +184,11 @@
     },
     {
       "fileName": "./share/metis/metisTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-2",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "43ec14dc3ddf8730bd7c35cab228a8d685265e6bc7d938ef614d3a73efab04bf"
+          "checksumValue": "74c51c91b63fdb3c220ea82688fe29b5f4f1837721bcf15852c035eb13a2c703"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -218,7 +196,7 @@
     },
     {
       "fileName": "./share/metis/copyright",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -230,7 +208,7 @@
     },
     {
       "fileName": "./share/metis/metisConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -241,20 +219,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/metis/metisTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "4e532cb408a2ad378cdcddba78c3f74f7b24332111168b4e6aa93eea60c33567"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/metis/metisConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -266,11 +232,11 @@
     },
     {
       "fileName": "./share/metis/metisTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "23dabf78e0c39a0e936a904a566383b3de9f666665d17b36b47b28cdfce1295f"
+          "checksumValue": "c5338caaefa8dfaeb6243e9acaa40e257517940fa62e3447c05e904cfa7a731e"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -278,7 +244,7 @@
     },
     {
       "fileName": "./include/metis.h",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -289,12 +255,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libmetis.a",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "fileName": "./lib/libmetis.so",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "252eec472b202d83ba5f32804431dc937c109d1cac441ffd633c52eddee2e3ad"
+          "checksumValue": "300e60827946470931339cbcd46599b65410b49e533540baa6881d61e366395d"
         }
       ],
       "licenseConcluded": "NOASSERTION",

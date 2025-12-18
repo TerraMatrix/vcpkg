@@ -55,16 +55,18 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target libaec::aec
-add_library(libaec::aec STATIC IMPORTED)
+add_library(libaec::aec SHARED IMPORTED)
 
 set_target_properties(libaec::aec PROPERTIES
+  INTERFACE_COMPILE_DEFINITIONS "LIBAEC_SHARED"
   INTERFACE_LINK_LIBRARIES "libaec::aec_obj"
 )
 
 # Create imported target libaec::sz
-add_library(libaec::sz STATIC IMPORTED)
+add_library(libaec::sz SHARED IMPORTED)
 
 set_target_properties(libaec::sz PROPERTIES
+  INTERFACE_COMPILE_DEFINITIONS "LIBAEC_SHARED"
   INTERFACE_LINK_LIBRARIES "libaec::sz_obj"
 )
 

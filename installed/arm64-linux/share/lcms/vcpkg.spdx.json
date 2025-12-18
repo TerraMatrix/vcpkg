@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/lcms-arm64-linux-2.17-d535478d-b7d1-4410-bd7e-3cf26e64efb2",
-  "name": "lcms:arm64-linux@2.17 df10182f9908c6753dff78e821c948c5002f6db514488460147fd3fefc6b7745",
+  "documentNamespace": "https://spdx.org/spdxdocs/lcms-arm64-linux-2.17-408204ed-0d11-4973-948f-0cb59796992f",
+  "name": "lcms:arm64-linux@2.17 cc9324f2d60aa3da4a28b6f9c9e0bc3e214b987457847c464fdbe1cfb2c83d9c",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-26T12:29:26Z"
+    "created": "2025-12-16T12:38:28Z"
   },
   "relationships": [
     {
@@ -124,7 +124,7 @@
     {
       "name": "lcms:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "df10182f9908c6753dff78e821c948c5002f6db514488460147fd3fefc6b7745",
+      "versionInfo": "cc9324f2d60aa3da4a28b6f9c9e0bc3e214b987457847c464fdbe1cfb2c83d9c",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -225,31 +225,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/liblcms2.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "5965211ea09bcc628973c86c198b006a02db4be2b445e8a96eb35ae4292c3af1"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/lcms2.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "ce2b674070ab356d42e9e377fd79cf53389040e18a6368f4e313d192b044cfcc"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -257,7 +233,7 @@
     },
     {
       "fileName": "./share/lcms/copyright",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -269,7 +245,7 @@
     },
     {
       "fileName": "./share/lcms/usage",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -281,7 +257,7 @@
     },
     {
       "fileName": "./share/lcms/lcms-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -293,7 +269,7 @@
     },
     {
       "fileName": "./share/lcms2/lcms2-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -305,11 +281,11 @@
     },
     {
       "fileName": "./include/lcms2.h",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "269c03864756c3c6642627d5f6710bd2793d5f7098db97ed9bcad8abdf2c2be6"
+          "checksumValue": "b416264790f9b9fd0c5e0bb809daabaa4e647d50fbcd8f84e96be46349acb4d6"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -317,7 +293,7 @@
     },
     {
       "fileName": "./include/lcms2_plugin.h",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -328,12 +304,36 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/liblcms2.a",
+      "fileName": "./lib/liblcms2.so.2",
+      "SPDXID": "SPDXRef-binary-file-7",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "43377462728fce21d4852996c478780da8de57467d4830d3df872d3a5a53c5fc"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/liblcms2.so.2.0.17",
+      "SPDXID": "SPDXRef-binary-file-8",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "43377462728fce21d4852996c478780da8de57467d4830d3df872d3a5a53c5fc"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/liblcms2.so",
       "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "9a31215b85c676e08154c0ff34ca34322543be325e882bb7711e56e1f1c7e681"
+          "checksumValue": "43377462728fce21d4852996c478780da8de57467d4830d3df872d3a5a53c5fc"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -345,7 +345,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "6ab216ca8b284b2d5738457f88c1e82770eb13b755df4978b9b4c306270878f1"
+          "checksumValue": "b615d415c92e68f5a99e8895474ac7bbbfe1d06ad5a993bac57cdb40bc6a4d56"
         }
       ],
       "licenseConcluded": "NOASSERTION",

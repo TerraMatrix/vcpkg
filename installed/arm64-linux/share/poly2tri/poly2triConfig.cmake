@@ -55,10 +55,9 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target poly2tri::poly2tri
-add_library(poly2tri::poly2tri STATIC IMPORTED)
+add_library(poly2tri::poly2tri SHARED IMPORTED)
 
 set_target_properties(poly2tri::poly2tri PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "P2T_STATIC_EXPORTS"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include/poly2tri"
 )
 

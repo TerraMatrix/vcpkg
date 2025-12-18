@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/libuuid-arm64-linux-1.0.3#15-a52020b3-aee6-4c7a-a96e-43056483ab39",
-  "name": "libuuid:arm64-linux@1.0.3#15 c7ead1c0745fe5bf944f5ab0114ad1c650fa940f6c922ecf968c23be84741956",
+  "documentNamespace": "https://spdx.org/spdxdocs/libuuid-arm64-linux-1.0.3#15-3dfba107-53e2-4fcd-afe1-c1030d28cd9f",
+  "name": "libuuid:arm64-linux@1.0.3#15 bf32f57f12e3fa79504cbddfd772ccaf239450365fcb128c6d00c31339c8365a",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-18T08:25:47Z"
+    "created": "2025-12-16T10:07:40Z"
   },
   "relationships": [
     {
@@ -86,21 +86,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-7"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-8"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-9"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-10"
     }
   ],
   "packages": [
@@ -119,7 +104,7 @@
     {
       "name": "libuuid:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "c7ead1c0745fe5bf944f5ab0114ad1c650fa940f6c922ecf968c23be84741956",
+      "versionInfo": "bf32f57f12e3fa79504cbddfd772ccaf239450365fcb128c6d00c31339c8365a",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -209,31 +194,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libuuid.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "7ce3dc443c6d9c62b722efc2fa72ae723738541ece9101fc6c479d88481f5e30"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/uuid.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "fa85ee8e114519ea3f0db0b4754fa28e8ef2b2fa3f709de55b583fb6d5e0e6c7"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -241,7 +202,7 @@
     },
     {
       "fileName": "./share/libuuid/copyright",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -253,7 +214,7 @@
     },
     {
       "fileName": "./share/unofficial-libuuid/unofficial-libuuid-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -265,7 +226,7 @@
     },
     {
       "fileName": "./share/unofficial-libuuid/unofficial-libuuid-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -277,7 +238,7 @@
     },
     {
       "fileName": "./share/unofficial-libuuid/unofficial-libuuid-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -288,20 +249,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/unofficial-libuuid/unofficial-libuuid-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "1ebed00b99482c555112955ad286a7c94fa6af4bbcdd61775bff2cd1e7147646"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./include/uuid/uuid.h",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -313,7 +262,7 @@
     },
     {
       "fileName": "./lib/libuuid.a",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -325,11 +274,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/uuid.pc",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "689c2cf0b89ef542a794e59214c4a2e2dd710d2ca374fd34670ff41e12c566e5"
+          "checksumValue": "3733058bbbaeacd0accad517a9a916f040043d16a29cc6c7a634567cf230d485"
         }
       ],
       "licenseConcluded": "NOASSERTION",

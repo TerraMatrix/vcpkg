@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/boost-fiber-arm64-linux-1.89.0-e4198a09-59c9-416e-97a8-7c3441cb46b4",
-  "name": "boost-fiber:arm64-linux@1.89.0 f265d5ec52f91b642de416e2247379bf7e3b7ea8d8fb4d2b6ad76004a1d20eb3",
+  "documentNamespace": "https://spdx.org/spdxdocs/boost-fiber-arm64-linux-1.89.0-0d5076b4-b72c-4c2a-9e8b-b850f2238181",
+  "name": "boost-fiber:arm64-linux@1.89.0 b04fc5d240b9b65d2bec6a9edde4bc5668ca88826b4fe6f174221cc409e4edff",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-18T07:51:41Z"
+    "created": "2025-12-16T09:40:28Z"
   },
   "relationships": [
     {
@@ -431,16 +431,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-79"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-80"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-81"
     }
   ],
   "packages": [
@@ -459,7 +449,7 @@
     {
       "name": "boost-fiber:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "f265d5ec52f91b642de416e2247379bf7e3b7ea8d8fb4d2b6ad76004a1d20eb3",
+      "versionInfo": "b04fc5d240b9b65d2bec6a9edde4bc5668ca88826b4fe6f174221cc409e4edff",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSL-1.0",
       "licenseDeclared": "NOASSERTION",
@@ -512,31 +502,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libboost_fiber.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "07cf03493cf29e20d3a63b3c621476be7ef649c3fe572b51732fe1328e696a03"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libboost_fiber_numa.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "ccf59e9650d4b88286428f03b7c943d552477a1875406e94e181fe567c50ce17"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -544,7 +510,7 @@
     },
     {
       "fileName": "./share/boost_fiber/boost_fiber-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -556,23 +522,11 @@
     },
     {
       "fileName": "./share/boost_fiber/boost_fiber-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "661a777813c0d597b90c0696913437d6a07c5a68329707d57b3b533c22666a95"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/boost_fiber/boost_fiber-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "df7dd296e927bf3345ae422e41683004ff414a802181c4392dc2021d1086273f"
+          "checksumValue": "542250a213529f9e6d1282aabb76f7f819b46c6687817f4302871874abf46b6d"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -580,11 +534,11 @@
     },
     {
       "fileName": "./share/boost_fiber/boost_fiber-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "10920754814e37ca0634cfb3d9e85484bcd371e49a700e3fd59566058bdf1631"
+          "checksumValue": "7894590e1ec027b1509505253d69be0401cf2078716c6a859e3afe2e6782c066"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -592,7 +546,7 @@
     },
     {
       "fileName": "./share/boost_fiber/boost_fiber-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -604,7 +558,7 @@
     },
     {
       "fileName": "./share/boost_fiber_numa/boost_fiber_numa-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -616,7 +570,7 @@
     },
     {
       "fileName": "./share/boost_fiber_numa/boost_fiber_numa-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -628,23 +582,11 @@
     },
     {
       "fileName": "./share/boost_fiber_numa/boost_fiber_numa-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "442e81f15fb7742336cbaf3376ceb21c8206450804e296ec24259eac2ceb564f"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/boost_fiber_numa/boost_fiber_numa-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-11",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "9aa1a52d1ca59e590ba88cfa2a97e8b7ae1c180dcbe30deade0f4d3d8cad5ada"
+          "checksumValue": "c6107291689f0bb15353b5e96191abc42f0d8749513c2f0947c846c29ce141e4"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -652,11 +594,11 @@
     },
     {
       "fileName": "./share/boost_fiber_numa/boost_fiber_numa-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "50ffd25030b0d0bf115bc30a6cc2df138b4512893d345bca44ba9c0efdf2dcee"
+          "checksumValue": "5f2697b07dfb95eb290c9187cc64512a32c470269396684aaade55aab2b25634"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -664,7 +606,7 @@
     },
     {
       "fileName": "./share/boost-fiber/copyright",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -676,7 +618,7 @@
     },
     {
       "fileName": "./include/boost/fiber/numa/all.hpp",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -688,7 +630,7 @@
     },
     {
       "fileName": "./include/boost/fiber/numa/pin_thread.hpp",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -700,7 +642,7 @@
     },
     {
       "fileName": "./include/boost/fiber/numa/topology.hpp",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -712,7 +654,7 @@
     },
     {
       "fileName": "./include/boost/fiber/numa/algo/work_stealing.hpp",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -724,7 +666,7 @@
     },
     {
       "fileName": "./include/boost/fiber/policy.hpp",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -736,7 +678,7 @@
     },
     {
       "fileName": "./include/boost/fiber/buffered_channel.hpp",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -748,7 +690,7 @@
     },
     {
       "fileName": "./include/boost/fiber/all.hpp",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -760,7 +702,7 @@
     },
     {
       "fileName": "./include/boost/fiber/mutex.hpp",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -772,7 +714,7 @@
     },
     {
       "fileName": "./include/boost/fiber/fixedsize_stack.hpp",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -784,7 +726,7 @@
     },
     {
       "fileName": "./include/boost/fiber/waker.hpp",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -796,7 +738,7 @@
     },
     {
       "fileName": "./include/boost/fiber/stack_allocator_wrapper.hpp",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -808,7 +750,7 @@
     },
     {
       "fileName": "./include/boost/fiber/future/promise.hpp",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -820,7 +762,7 @@
     },
     {
       "fileName": "./include/boost/fiber/future/future.hpp",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -832,7 +774,7 @@
     },
     {
       "fileName": "./include/boost/fiber/future/async.hpp",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -844,7 +786,7 @@
     },
     {
       "fileName": "./include/boost/fiber/future/packaged_task.hpp",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -856,7 +798,7 @@
     },
     {
       "fileName": "./include/boost/fiber/future/future_status.hpp",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -868,7 +810,7 @@
     },
     {
       "fileName": "./include/boost/fiber/future/detail/task_object.hpp",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -880,7 +822,7 @@
     },
     {
       "fileName": "./include/boost/fiber/future/detail/task_base.hpp",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -892,7 +834,7 @@
     },
     {
       "fileName": "./include/boost/fiber/future/detail/shared_state_object.hpp",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -904,7 +846,7 @@
     },
     {
       "fileName": "./include/boost/fiber/future/detail/shared_state.hpp",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -916,7 +858,7 @@
     },
     {
       "fileName": "./include/boost/fiber/recursive_timed_mutex.hpp",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -928,7 +870,7 @@
     },
     {
       "fileName": "./include/boost/fiber/context.hpp",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -940,7 +882,7 @@
     },
     {
       "fileName": "./include/boost/fiber/protected_fixedsize_stack.hpp",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -952,7 +894,7 @@
     },
     {
       "fileName": "./include/boost/fiber/fiber.hpp",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -964,7 +906,7 @@
     },
     {
       "fileName": "./include/boost/fiber/hip/waitfor.hpp",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -976,7 +918,7 @@
     },
     {
       "fileName": "./include/boost/fiber/exceptions.hpp",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -988,7 +930,7 @@
     },
     {
       "fileName": "./include/boost/fiber/channel_op_status.hpp",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1000,7 +942,7 @@
     },
     {
       "fileName": "./include/boost/fiber/future.hpp",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1012,7 +954,7 @@
     },
     {
       "fileName": "./include/boost/fiber/type.hpp",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1024,7 +966,7 @@
     },
     {
       "fileName": "./include/boost/fiber/pooled_fixedsize_stack.hpp",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1036,7 +978,7 @@
     },
     {
       "fileName": "./include/boost/fiber/unbuffered_channel.hpp",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1048,7 +990,7 @@
     },
     {
       "fileName": "./include/boost/fiber/properties.hpp",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1060,7 +1002,7 @@
     },
     {
       "fileName": "./include/boost/fiber/condition_variable.hpp",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1072,7 +1014,7 @@
     },
     {
       "fileName": "./include/boost/fiber/cuda/waitfor.hpp",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1084,7 +1026,7 @@
     },
     {
       "fileName": "./include/boost/fiber/algo/work_stealing.hpp",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1096,7 +1038,7 @@
     },
     {
       "fileName": "./include/boost/fiber/algo/shared_work.hpp",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1108,7 +1050,7 @@
     },
     {
       "fileName": "./include/boost/fiber/algo/round_robin.hpp",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1120,7 +1062,7 @@
     },
     {
       "fileName": "./include/boost/fiber/algo/algorithm.hpp",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1132,7 +1074,7 @@
     },
     {
       "fileName": "./include/boost/fiber/timed_mutex.hpp",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1144,7 +1086,7 @@
     },
     {
       "fileName": "./include/boost/fiber/segmented_stack.hpp",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1156,7 +1098,7 @@
     },
     {
       "fileName": "./include/boost/fiber/recursive_mutex.hpp",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1168,7 +1110,7 @@
     },
     {
       "fileName": "./include/boost/fiber/barrier.hpp",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1180,7 +1122,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/spinlock_rtm.hpp",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1192,7 +1134,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/thread_barrier.hpp",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1204,7 +1146,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/rtm.hpp",
-      "SPDXID": "SPDXRef-binary-file-58",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1216,7 +1158,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/cpu_relax.hpp",
-      "SPDXID": "SPDXRef-binary-file-59",
+      "SPDXID": "SPDXRef-binary-file-55",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1228,7 +1170,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/spinlock_status.hpp",
-      "SPDXID": "SPDXRef-binary-file-60",
+      "SPDXID": "SPDXRef-binary-file-56",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1240,7 +1182,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/spinlock_ttas.hpp",
-      "SPDXID": "SPDXRef-binary-file-61",
+      "SPDXID": "SPDXRef-binary-file-57",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1252,7 +1194,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/is_all_same.hpp",
-      "SPDXID": "SPDXRef-binary-file-62",
+      "SPDXID": "SPDXRef-binary-file-58",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1264,7 +1206,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/spinlock.hpp",
-      "SPDXID": "SPDXRef-binary-file-63",
+      "SPDXID": "SPDXRef-binary-file-59",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1276,7 +1218,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/exchange.hpp",
-      "SPDXID": "SPDXRef-binary-file-64",
+      "SPDXID": "SPDXRef-binary-file-60",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1288,7 +1230,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/futex.hpp",
-      "SPDXID": "SPDXRef-binary-file-65",
+      "SPDXID": "SPDXRef-binary-file-61",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1300,7 +1242,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/spinlock_ttas_adaptive_futex.hpp",
-      "SPDXID": "SPDXRef-binary-file-66",
+      "SPDXID": "SPDXRef-binary-file-62",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1312,7 +1254,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/convert.hpp",
-      "SPDXID": "SPDXRef-binary-file-67",
+      "SPDXID": "SPDXRef-binary-file-63",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1324,7 +1266,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/spinlock_ttas_futex.hpp",
-      "SPDXID": "SPDXRef-binary-file-68",
+      "SPDXID": "SPDXRef-binary-file-64",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1336,7 +1278,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/context_spinlock_queue.hpp",
-      "SPDXID": "SPDXRef-binary-file-69",
+      "SPDXID": "SPDXRef-binary-file-65",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1348,7 +1290,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/data.hpp",
-      "SPDXID": "SPDXRef-binary-file-70",
+      "SPDXID": "SPDXRef-binary-file-66",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1360,7 +1302,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/decay_copy.hpp",
-      "SPDXID": "SPDXRef-binary-file-71",
+      "SPDXID": "SPDXRef-binary-file-67",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1372,7 +1314,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/context_spmc_queue.hpp",
-      "SPDXID": "SPDXRef-binary-file-72",
+      "SPDXID": "SPDXRef-binary-file-68",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1384,7 +1326,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/config.hpp",
-      "SPDXID": "SPDXRef-binary-file-73",
+      "SPDXID": "SPDXRef-binary-file-69",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1396,7 +1338,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/disable_overload.hpp",
-      "SPDXID": "SPDXRef-binary-file-74",
+      "SPDXID": "SPDXRef-binary-file-70",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1408,7 +1350,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/spinlock_ttas_adaptive.hpp",
-      "SPDXID": "SPDXRef-binary-file-75",
+      "SPDXID": "SPDXRef-binary-file-71",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1420,7 +1362,7 @@
     },
     {
       "fileName": "./include/boost/fiber/detail/fss.hpp",
-      "SPDXID": "SPDXRef-binary-file-76",
+      "SPDXID": "SPDXRef-binary-file-72",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1432,7 +1374,7 @@
     },
     {
       "fileName": "./include/boost/fiber/scheduler.hpp",
-      "SPDXID": "SPDXRef-binary-file-77",
+      "SPDXID": "SPDXRef-binary-file-73",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1444,7 +1386,7 @@
     },
     {
       "fileName": "./include/boost/fiber/operations.hpp",
-      "SPDXID": "SPDXRef-binary-file-78",
+      "SPDXID": "SPDXRef-binary-file-74",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1456,7 +1398,7 @@
     },
     {
       "fileName": "./include/boost/fiber/fss.hpp",
-      "SPDXID": "SPDXRef-binary-file-79",
+      "SPDXID": "SPDXRef-binary-file-75",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1467,24 +1409,48 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libboost_fiber.a",
-      "SPDXID": "SPDXRef-binary-file-80",
+      "fileName": "./lib/libboost_fiber_numa.so.1.89.0",
+      "SPDXID": "SPDXRef-binary-file-76",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2ef860f32cc6cb5a21fddf9694957c532ff96da9b9d17a70ce2b8ebbf5028f98"
+          "checksumValue": "dafecc1e98eab7963978adc3dd63fe8e4bcaf3d426ca022a28edcdbdf88f13e1"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libboost_fiber_numa.a",
-      "SPDXID": "SPDXRef-binary-file-81",
+      "fileName": "./lib/libboost_fiber.so.1.89.0",
+      "SPDXID": "SPDXRef-binary-file-77",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "50ce104754aa2666125a0e04099161b8fdaba54edeb94687c7cfa97cd1a02c87"
+          "checksumValue": "5c236be2af5eb4cdc6f0481a2886b43a7eed11ff20a569d5d5352800ec9e733b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libboost_fiber_numa.so",
+      "SPDXID": "SPDXRef-binary-file-78",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "dafecc1e98eab7963978adc3dd63fe8e4bcaf3d426ca022a28edcdbdf88f13e1"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libboost_fiber.so",
+      "SPDXID": "SPDXRef-binary-file-79",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5c236be2af5eb4cdc6f0481a2886b43a7eed11ff20a569d5d5352800ec9e733b"
         }
       ],
       "licenseConcluded": "NOASSERTION",

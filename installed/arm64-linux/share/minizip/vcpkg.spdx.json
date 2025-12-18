@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/minizip-arm64-linux-1.3.1#1-59aadd62-f9d2-469e-912d-ef842224a76c",
-  "name": "minizip:arm64-linux@1.3.1#1 989a73163c54a478aa2bb5c33ab26ee1e11979214bc6a9d1070ad1878816ace9",
+  "documentNamespace": "https://spdx.org/spdxdocs/minizip-arm64-linux-1.3.1#1-a62df16f-6cd0-4462-a90b-056a97e331de",
+  "name": "minizip:arm64-linux@1.3.1#1 d6b8bf32d9298b7b03bb59b01318f706275fe321089ce08e3855c4bc2d0feb48",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-17T11:40:06Z"
+    "created": "2025-12-16T10:51:42Z"
   },
   "relationships": [
     {
@@ -156,21 +156,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-14"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-15"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-16"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-17"
     }
   ],
   "packages": [
@@ -189,7 +174,7 @@
     {
       "name": "minizip:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "989a73163c54a478aa2bb5c33ab26ee1e11979214bc6a9d1070ad1878816ace9",
+      "versionInfo": "d6b8bf32d9298b7b03bb59b01318f706275fe321089ce08e3855c4bc2d0feb48",
       "downloadLocation": "NONE",
       "licenseConcluded": "Zlib",
       "licenseDeclared": "NOASSERTION",
@@ -362,31 +347,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libminizip.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "f48a58ac90f46dd522cd8c946375c14afe4762ef40824f0f62fb6fef10b27faf"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/minizip.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "c86b0ab846f3decc59b158d9788a0f00e8470033d3e6e04bacb69b1ccc882bb4"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -394,7 +355,7 @@
     },
     {
       "fileName": "./share/unofficial-minizip/unofficial-minizipConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -405,24 +366,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/unofficial-minizip/unofficial-minizipTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "d1362188781e661c7d80daf554bfaca80756994e2fad8affc2b020c2a1e3d07a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/unofficial-minizip/unofficial-minizipTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "11ab7be51523870ee8ff4f51534a4549a3e01165e1023a129ceceea9ffc1193e"
+          "checksumValue": "f43bd02b18a3013fdfd501c0e5dc052f3a2df6ebca7259444e15997533360b65"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -430,11 +379,11 @@
     },
     {
       "fileName": "./share/unofficial-minizip/unofficial-minizipTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "c650b819eb3db0c64fd38a4d9a034d16595bb933e5521d5ca2f15a5922acda78"
+          "checksumValue": "ba91fcd382abd41e43d10aa2e8ef5444b8e48f689121082bcd51f213d5dbac26"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -442,7 +391,7 @@
     },
     {
       "fileName": "./share/unofficial-minizip/unofficial-minizipConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -454,7 +403,7 @@
     },
     {
       "fileName": "./share/minizip/copyright",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -466,7 +415,7 @@
     },
     {
       "fileName": "./share/minizip/minizipConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -478,7 +427,7 @@
     },
     {
       "fileName": "./share/minizip/usage",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -490,7 +439,7 @@
     },
     {
       "fileName": "./include/minizip/zip.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -502,7 +451,7 @@
     },
     {
       "fileName": "./include/minizip/mztools.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -514,7 +463,7 @@
     },
     {
       "fileName": "./include/minizip/ioapi.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -526,7 +475,7 @@
     },
     {
       "fileName": "./include/minizip/crypt.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -538,7 +487,7 @@
     },
     {
       "fileName": "./include/minizip/unzip.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -549,12 +498,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libminizip.a",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "fileName": "./lib/libminizip.so",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2d316e246da83cb8e26ffce72fe4c5cf7aa76fe89fc98bd9944c7668152206ef"
+          "checksumValue": "f46bf41601ee63d54ee2ae55dc6ccb607c2d780b210dc13e539ca687e657870f"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -562,11 +511,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/minizip.pc",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "0204bfd953796715d490d39dcb3a8f6525936197cc746540b025b269cdcbdf11"
+          "checksumValue": "0598f7fb2d19f1b712006b19ffdcd0921be30c0da3d5f9ecd9707339f17dd392"
         }
       ],
       "licenseConcluded": "NOASSERTION",

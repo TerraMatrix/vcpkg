@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/suitesparse-amd-arm64-linux-3.3.3-f5f78152-393a-44fd-9641-f2b13c1adf17",
-  "name": "suitesparse-amd:arm64-linux@3.3.3 7d6403c8f64c747f229b37eef9180c6d0761f2e8575dc0b65a168a34826e82df",
+  "documentNamespace": "https://spdx.org/spdxdocs/suitesparse-amd-arm64-linux-3.3.3-72cf0ed7-2e90-46e2-8e0b-b147fa2072e9",
+  "name": "suitesparse-amd:arm64-linux@3.3.3 c8cd472a22711a99b0ca9f057496fbd669693e2e52e132f7ec1dff9bce3cf35c",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T03:13:44Z"
+    "created": "2025-12-16T10:38:05Z"
   },
   "relationships": [
     {
@@ -86,11 +86,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-10"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-11"
     }
   ],
   "packages": [
@@ -109,7 +104,7 @@
     {
       "name": "suitesparse-amd:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "7d6403c8f64c747f229b37eef9180c6d0761f2e8575dc0b65a168a34826e82df",
+      "versionInfo": "c8cd472a22711a99b0ca9f057496fbd669693e2e52e132f7ec1dff9bce3cf35c",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -162,31 +157,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libamd.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "1991faa40a41cee8aeafec36a8c42f4cbcb16f89dc7e7824b565aa1e27f2fdb4"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/AMD.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "3e7a6cd06386c928f673db42002b3f543f7621bcc95dc9e36e271dbf207e23da"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -194,7 +165,7 @@
     },
     {
       "fileName": "./share/suitesparse-amd/copyright",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -206,7 +177,7 @@
     },
     {
       "fileName": "./share/AMD/AMDConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -217,24 +188,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/AMD/AMDTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "73d3fbfb530279283cd13036ad67bd983dc78a4945c44fc8386d6dd440e2d33b"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/AMD/AMDTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "4ae3c56b21dec457efe634c3d5fbece5b48f618507a1a89852b27e5da6aaddb3"
+          "checksumValue": "8dc7621b77db461ffb88527505a7e620160d94e7ad9c35ba01cade6f3955f840"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -242,11 +201,11 @@
     },
     {
       "fileName": "./share/AMD/AMDTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ba030a9bc2f3a8b5146582eccb2b647b6576c6f154dc59a45387a7a2234b0681"
+          "checksumValue": "7732f3056528f3001f4849db5d9067c91ce6bb06f6eba9c28b983e82bd1c8316"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -254,11 +213,11 @@
     },
     {
       "fileName": "./share/AMD/AMDConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "12de221dd96407a00f22eaa2e4ef172b8a5a6b6614b342fb36cdd34caa12aff3"
+          "checksumValue": "602c8aab7facc9ddc9a9eb5789c25e4805eeae10eac901b13979d6c2fbad6f72"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -266,7 +225,7 @@
     },
     {
       "fileName": "./include/suitesparse/amd.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -277,12 +236,24 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libamd.a",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "fileName": "./lib/libamd.so.3.3.3",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "69dd91d27fb4817b9ffb592279df7179377aa771c29f8c2048b9be7509305e39"
+          "checksumValue": "1e0611af317c1628d585a4e2430124d67b4d41b562906e8c90a91c4823363d6a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libamd.so.3",
+      "SPDXID": "SPDXRef-binary-file-8",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1e0611af317c1628d585a4e2430124d67b4d41b562906e8c90a91c4823363d6a"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -290,11 +261,23 @@
     },
     {
       "fileName": "./lib/pkgconfig/AMD.pc",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f574f3fc566f4f539d19f85c19d721aa84f3f70e86d637c8970e0b31404554fc"
+          "checksumValue": "3ea00f05f58a9e319b6b58484ad46c6c97243b165d443553886b7b229f2ffe16"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libamd.so",
+      "SPDXID": "SPDXRef-binary-file-10",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1e0611af317c1628d585a4e2430124d67b4d41b562906e8c90a91c4823363d6a"
         }
       ],
       "licenseConcluded": "NOASSERTION",

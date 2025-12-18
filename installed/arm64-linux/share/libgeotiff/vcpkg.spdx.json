@@ -3,19 +3,44 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/libgeotiff-arm64-linux-1.7.4-44fe2b38-b0af-4c7e-99ed-3833ba2b02ed",
-  "name": "libgeotiff:arm64-linux@1.7.4 NONE",
+  "documentNamespace": "https://spdx.org/spdxdocs/libgeotiff-arm64-linux-1.7.4-f7706142-730c-4259-9ba8-6426a9949bae",
+  "name": "libgeotiff:arm64-linux@1.7.4 f251c5b6bcc5df9eac99c56e365a2fb7e530e71e349426ec476b96c02a3ad1fd",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T02:22:05Z"
+    "created": "2025-12-17T04:47:05Z"
   },
   "relationships": [
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "GENERATES",
       "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-0",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-3"
     },
     {
       "spdxElementId": "SPDXRef-binary",
@@ -186,11 +211,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-33"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-34"
     }
   ],
   "packages": [
@@ -209,46 +229,84 @@
     {
       "name": "libgeotiff:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "NONE",
+      "versionInfo": "f251c5b6bcc5df9eac99c56e365a2fb7e530e71e349426ec476b96c02a3ad1fd",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-0",
+      "name": "OSGeo/libgeotiff",
+      "downloadLocation": "git+https://github.com/OSGeo/libgeotiff@1.7.4",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "03468e8eeaf97d82798bf341cf2e27753eb47af985fb08fc6176be799bd0e1e879c6d1701577f7568f269cbef0bb0a20ae460bb943f847daf49aa54601441683"
+        }
+      ]
     }
   ],
   "files": [
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e20ce100d45ed2c6544c668e7b073e92a607f3c061ef4e272c102b7d0da13174"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./cmakelists.patch",
+      "SPDXID": "SPDXRef-port-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "305aebc75d602ee4624eba33f04dd3d12cc082b2aa75f0123195b25acf4e8812"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5e4a38154ac4152264597fbaf94df2c61360cf289fcd3784e2d9873d08bb3f65"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./usage",
+      "SPDXID": "SPDXRef-port-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "efa371d009799cc46a775e388ce59a310448f7b4c09b885f9e906011420f475d"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
     {
       "fileName": "./BUILD_INFO",
       "SPDXID": "SPDXRef-binary-file-0",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libgeotiff.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "d7ba1f33ead3e844b03ecba4246ef94a3a0061e15e454355e0d9e0ace02ac90f"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libgeotiff.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "3bf0d345360598b7ebbbf31e2498e7778af340c80d574813f5402b3e58b94b16"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -256,7 +314,7 @@
     },
     {
       "fileName": "./share/libgeotiff/copyright",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -268,7 +326,7 @@
     },
     {
       "fileName": "./share/libgeotiff/usage",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -280,11 +338,11 @@
     },
     {
       "fileName": "./share/geotiff/geotiff-depends-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "5b6cdc828f4dc99182a70d6be81b8b0f297dc77764cf00bb82f14821ecf72439"
+          "checksumValue": "bd54238a6e962be6c1b2dc70e30a950317004fc5320e2982c03bfc09789b3cf2"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -292,11 +350,11 @@
     },
     {
       "fileName": "./share/geotiff/geotiff-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "88af3ef485773aa18b7a3a672ed47a04e8ed8d01169b8bdca6a9cce8b7f659a7"
+          "checksumValue": "2f919a3b3255adf706458f8296ffa503d371f756dd42ac9331ccc725903ee3c5"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -304,23 +362,11 @@
     },
     {
       "fileName": "./share/geotiff/geotiff-depends.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "cd429b621fcac8eb0bf3ec7fbbe92994423895014ee42acbb56e7114665fe6f6"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/geotiff/geotiff-depends-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "094dbe0b7364d73639655be2788697ba09d36f7af291d535a3bfd7b959e2f135"
+          "checksumValue": "fd844bbad2531e7e2a270ff243835587edcd52a2f0b90a6f0b4d93c0871e3696"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -328,7 +374,7 @@
     },
     {
       "fileName": "./share/geotiff/geotiff-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -340,7 +386,7 @@
     },
     {
       "fileName": "./include/geonames.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -352,7 +398,7 @@
     },
     {
       "fileName": "./include/geokeys.inc",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -364,7 +410,7 @@
     },
     {
       "fileName": "./include/cpl_serv.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -376,7 +422,7 @@
     },
     {
       "fileName": "./include/geo_normalize.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -388,7 +434,7 @@
     },
     {
       "fileName": "./include/geo_ctrans.inc",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -400,7 +446,7 @@
     },
     {
       "fileName": "./include/epsg_gcs.inc",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -412,7 +458,7 @@
     },
     {
       "fileName": "./include/xtiffio.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -424,7 +470,7 @@
     },
     {
       "fileName": "./include/geotiff.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -436,7 +482,7 @@
     },
     {
       "fileName": "./include/epsg_datum.inc",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -448,7 +494,7 @@
     },
     {
       "fileName": "./include/geovalues.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -460,7 +506,7 @@
     },
     {
       "fileName": "./include/geo_simpletags.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -472,7 +518,7 @@
     },
     {
       "fileName": "./include/geo_tiffp.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -484,7 +530,7 @@
     },
     {
       "fileName": "./include/geokeys_v1_1.inc",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -496,7 +542,7 @@
     },
     {
       "fileName": "./include/epsg_units.inc",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -508,7 +554,7 @@
     },
     {
       "fileName": "./include/geotiffio.h",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -520,7 +566,7 @@
     },
     {
       "fileName": "./include/geo_keyp.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -532,7 +578,7 @@
     },
     {
       "fileName": "./include/epsg_vertcs.inc",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -544,7 +590,7 @@
     },
     {
       "fileName": "./include/geo_config.h",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -556,7 +602,7 @@
     },
     {
       "fileName": "./include/geokeys.h",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -568,7 +614,7 @@
     },
     {
       "fileName": "./include/epsg_proj.inc",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -580,7 +626,7 @@
     },
     {
       "fileName": "./include/epsg_pcs.inc",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -592,7 +638,7 @@
     },
     {
       "fileName": "./include/epsg_ellipse.inc",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -604,7 +650,7 @@
     },
     {
       "fileName": "./include/epsg_pm.inc",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -615,12 +661,36 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libgeotiff.a",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "fileName": "./lib/libgeotiff.so.5",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ba48fac2579b5de0a639d8e2123eea8bdf2a2d2bc11cb593f891721033125ccf"
+          "checksumValue": "1eaa4a1de6ddd6c71c0a277add3085aeb429f56bc9c967bf87ca20150d33acc5"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libgeotiff.so.5.2.4",
+      "SPDXID": "SPDXRef-binary-file-31",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1eaa4a1de6ddd6c71c0a277add3085aeb429f56bc9c967bf87ca20150d33acc5"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libgeotiff.so",
+      "SPDXID": "SPDXRef-binary-file-32",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1eaa4a1de6ddd6c71c0a277add3085aeb429f56bc9c967bf87ca20150d33acc5"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -628,11 +698,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/libgeotiff.pc",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "bf8ee0b8e3a9a15007fefdd84f4c5c71826f33ef8a99985c3a978f3f85b903f5"
+          "checksumValue": "9cb92ece327d74724ba04e8f7df193ccea32ff268466c46d57f4ff1c05c38c96"
         }
       ],
       "licenseConcluded": "NOASSERTION",

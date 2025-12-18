@@ -8,12 +8,12 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 # Import target "liblzma::liblzma" for configuration "Release"
 set_property(TARGET liblzma::liblzma APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(liblzma::liblzma PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/liblzma.a"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/liblzma.so.5.8.1"
+  IMPORTED_SONAME_RELEASE "liblzma.so.5"
   )
 
 list(APPEND _cmake_import_check_targets liblzma::liblzma )
-list(APPEND _cmake_import_check_files_for_liblzma::liblzma "${_IMPORT_PREFIX}/lib/liblzma.a" )
+list(APPEND _cmake_import_check_files_for_liblzma::liblzma "${_IMPORT_PREFIX}/lib/liblzma.so.5.8.1" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

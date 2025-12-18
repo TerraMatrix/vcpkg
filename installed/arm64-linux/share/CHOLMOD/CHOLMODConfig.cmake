@@ -211,7 +211,7 @@ set ( _target_shared SuiteSparse::CHOLMOD )
 set ( _target_static SuiteSparse::CHOLMOD_static )
 set ( _var_prefix "CHOLMOD" )
 
-if (NOT TARGET ${_target_shared} )
+if ( NOT ON AND NOT TARGET ${_target_shared} )
     # make sure there is always an import target without suffix )
     add_library ( ${_target_shared} ALIAS ${_target_static} )
 endif ( )

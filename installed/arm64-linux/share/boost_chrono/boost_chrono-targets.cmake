@@ -55,10 +55,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::chrono
-add_library(Boost::chrono STATIC IMPORTED)
+add_library(Boost::chrono SHARED IMPORTED)
 
 set_target_properties(Boost::chrono PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_CHRONO_NO_LIB;BOOST_CHRONO_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_CHRONO_NO_LIB;BOOST_CHRONO_DYN_LINK"
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::core;Boost::integer;Boost::move;Boost::mpl;Boost::predef;Boost::ratio;Boost::static_assert;Boost::system;Boost::throw_exception;Boost::type_traits;Boost::typeof;Boost::utility;Boost::winapi"

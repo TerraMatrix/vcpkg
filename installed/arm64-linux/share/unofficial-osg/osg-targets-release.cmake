@@ -30,7 +30,7 @@ list(APPEND _cmake_import_check_files_for_unofficial::osg::osg "${_IMPORT_PREFIX
 # Import target "unofficial::osg::osgDB" for configuration "Release"
 set_property(TARGET unofficial::osg::osgDB APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(unofficial::osg::osgDB PROPERTIES
-  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "unofficial::osg::osg;unofficial::osg::osgUtil;unofficial::osg::OpenThreads;/usr/lib/aarch64-linux-gnu/libdl.so;${_IMPORT_PREFIX}/lib/libz.a;/usr/lib/aarch64-linux-gnu/libGL.so"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "unofficial::osg::osg;unofficial::osg::osgUtil;unofficial::osg::OpenThreads;/usr/lib/aarch64-linux-gnu/libdl.so;${_IMPORT_PREFIX}/lib/libz.so;/usr/lib/aarch64-linux-gnu/libGL.so"
   IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libosgDB.so.3.6.5"
   IMPORTED_SONAME_RELEASE "libosgDB.so.161"
   )

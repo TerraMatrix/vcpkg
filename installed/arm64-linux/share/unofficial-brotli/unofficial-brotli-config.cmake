@@ -55,25 +55,28 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target unofficial::brotli::brotlienc
-add_library(unofficial::brotli::brotlienc STATIC IMPORTED)
+add_library(unofficial::brotli::brotlienc SHARED IMPORTED)
 
 set_target_properties(unofficial::brotli::brotlienc PROPERTIES
+  INTERFACE_COMPILE_DEFINITIONS "BROTLI_SHARED_COMPILATION"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "m;unofficial::brotli::brotlicommon"
 )
 
 # Create imported target unofficial::brotli::brotlidec
-add_library(unofficial::brotli::brotlidec STATIC IMPORTED)
+add_library(unofficial::brotli::brotlidec SHARED IMPORTED)
 
 set_target_properties(unofficial::brotli::brotlidec PROPERTIES
+  INTERFACE_COMPILE_DEFINITIONS "BROTLI_SHARED_COMPILATION"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "m;unofficial::brotli::brotlicommon"
 )
 
 # Create imported target unofficial::brotli::brotlicommon
-add_library(unofficial::brotli::brotlicommon STATIC IMPORTED)
+add_library(unofficial::brotli::brotlicommon SHARED IMPORTED)
 
 set_target_properties(unofficial::brotli::brotlicommon PROPERTIES
+  INTERFACE_COMPILE_DEFINITIONS "BROTLI_SHARED_COMPILATION"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "m"
 )

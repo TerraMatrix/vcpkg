@@ -55,7 +55,7 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target nlohmann_json_schema_validator::validator
-add_library(nlohmann_json_schema_validator::validator STATIC IMPORTED)
+add_library(nlohmann_json_schema_validator::validator SHARED IMPORTED)
 
 set_target_properties(nlohmann_json_schema_validator::validator PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_range_for"

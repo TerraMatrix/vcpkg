@@ -55,10 +55,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::coroutine
-add_library(Boost::coroutine STATIC IMPORTED)
+add_library(Boost::coroutine SHARED IMPORTED)
 
 set_target_properties(Boost::coroutine PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_COROUTINE_NO_LIB;BOOST_COROUTINE_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_COROUTINE_NO_LIB;BOOST_COROUTINE_DYN_LINK;BOOST_COROUTINES_DYN_LINK"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::context;Boost::core;Boost::exception;Boost::move;Boost::system;Boost::throw_exception;Boost::type_traits;Boost::utility"
 )

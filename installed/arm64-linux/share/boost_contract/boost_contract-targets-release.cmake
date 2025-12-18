@@ -8,12 +8,12 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 # Import target "Boost::contract" for configuration "Release"
 set_property(TARGET Boost::contract APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(Boost::contract PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libboost_contract.a"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libboost_contract.so.1.89.0"
+  IMPORTED_SONAME_RELEASE "libboost_contract.so.1.89.0"
   )
 
 list(APPEND _cmake_import_check_targets Boost::contract )
-list(APPEND _cmake_import_check_files_for_Boost::contract "${_IMPORT_PREFIX}/lib/libboost_contract.a" )
+list(APPEND _cmake_import_check_files_for_Boost::contract "${_IMPORT_PREFIX}/lib/libboost_contract.so.1.89.0" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

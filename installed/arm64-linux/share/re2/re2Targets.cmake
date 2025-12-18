@@ -55,7 +55,7 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target re2::re2
-add_library(re2::re2 STATIC IMPORTED)
+add_library(re2::re2 SHARED IMPORTED)
 
 set_target_properties(re2::re2 PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_17"

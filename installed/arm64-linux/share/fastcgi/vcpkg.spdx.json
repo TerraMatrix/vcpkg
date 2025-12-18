@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/fastcgi-arm64-linux-2020-09-11#5-3850b6c4-0db9-4820-bcf1-2829f1106725",
-  "name": "fastcgi:arm64-linux@2020-09-11#5 5918b2d07962285ed0acc3308b2360456fab5be79bd25b06a44eff364e349d15",
+  "documentNamespace": "https://spdx.org/spdxdocs/fastcgi-arm64-linux-2020-09-11#5-58547a23-6173-4e04-a6a3-87e20ff70096",
+  "name": "fastcgi:arm64-linux@2020-09-11#5 4fbed8833e6bcd5c80c0e6335265b13f50bfa1073cf6a262b55f9072db50dee8",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-12-03T08:13:16Z"
+    "created": "2025-12-18T06:50:42Z"
   },
   "relationships": [
     {
@@ -151,11 +151,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-22"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-23"
     }
   ],
   "packages": [
@@ -174,7 +169,7 @@
     {
       "name": "fastcgi:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "5918b2d07962285ed0acc3308b2360456fab5be79bd25b06a44eff364e349d15",
+      "versionInfo": "4fbed8833e6bcd5c80c0e6335265b13f50bfa1073cf6a262b55f9072db50dee8",
       "downloadLocation": "NONE",
       "licenseConcluded": "OML",
       "licenseDeclared": "NOASSERTION",
@@ -239,55 +234,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libfcgi++.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "64ff0cde867cfc51fe6162d9913a6667d3591931267e243c240b3c0509ec83de"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libfcgi.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "46bbe28355588574701bbb44dc28d8db5de19e1859bd8d4855617e8124cc627d"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/fcgi.pc",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "de09229e11b9ea887f73505311526e36721096fda5da48aa2837971796ec2048"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/fcgi++.pc",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "bfa959398b84dc36daf979210e6d12cea7c75b9cc0a3306d12c9e6fe4811ade4"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -295,7 +242,7 @@
     },
     {
       "fileName": "./share/fastcgi/copyright",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -307,7 +254,7 @@
     },
     {
       "fileName": "./share/fastcgi/man3/FCGI_Finish.3",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -319,7 +266,7 @@
     },
     {
       "fileName": "./share/fastcgi/man3/FCGI_SetExitStatus.3",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -331,7 +278,7 @@
     },
     {
       "fileName": "./share/fastcgi/man3/FCGI_StartFilterData.3",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -343,7 +290,7 @@
     },
     {
       "fileName": "./share/fastcgi/man3/FCGI_Accept.3",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -355,7 +302,7 @@
     },
     {
       "fileName": "./share/fastcgi/man1/cgi-fcgi.1",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -367,7 +314,7 @@
     },
     {
       "fileName": "./include/fastcgi/fcgiapp.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -379,7 +326,7 @@
     },
     {
       "fileName": "./include/fastcgi/fastcgi.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -391,7 +338,7 @@
     },
     {
       "fileName": "./include/fastcgi/fcgio.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -403,7 +350,7 @@
     },
     {
       "fileName": "./include/fastcgi/fcgi_config.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -415,7 +362,7 @@
     },
     {
       "fileName": "./include/fastcgi/fcgios.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -427,7 +374,7 @@
     },
     {
       "fileName": "./include/fastcgi/fcgimisc.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -439,7 +386,7 @@
     },
     {
       "fileName": "./include/fastcgi/fcgi_stdio.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -450,24 +397,60 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libfcgi++.a",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "fileName": "./lib/libfcgi++.so.0",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "0241643562a3068058339b3c15441ee70d0373977ece8690bc9476e364f03344"
+          "checksumValue": "1fde66efbc4f2cca3e5f25252b361c05131fe106639d2eae673ca7069b6e91ba"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libfcgi.a",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "fileName": "./lib/libfcgi.so.0.0.0",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "4e73f41c5fff86e1dc1e052bd2ce4a02dc0f901d154f5ecdcc8b53659e75baec"
+          "checksumValue": "092c22c8b1ee2f6b53f6d781f31f56477a8f994c89a7e9a5669c2afb1ee9c292"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libfcgi++.so.0.0.0",
+      "SPDXID": "SPDXRef-binary-file-16",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1fde66efbc4f2cca3e5f25252b361c05131fe106639d2eae673ca7069b6e91ba"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libfcgi.so.0",
+      "SPDXID": "SPDXRef-binary-file-17",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "092c22c8b1ee2f6b53f6d781f31f56477a8f994c89a7e9a5669c2afb1ee9c292"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libfcgi.so",
+      "SPDXID": "SPDXRef-binary-file-18",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "092c22c8b1ee2f6b53f6d781f31f56477a8f994c89a7e9a5669c2afb1ee9c292"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -475,11 +458,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/fcgi.pc",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "782fc8971740ef573d8d66e3c0a0648b6724a85b7e61bcf3bb3ea2b30c7e5f69"
+          "checksumValue": "e334d670434b3862a8c9664be42f9336176adc2dd746d3581fc508138cb54249"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -487,23 +470,23 @@
     },
     {
       "fileName": "./lib/pkgconfig/fcgi++.pc",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "bfa959398b84dc36daf979210e6d12cea7c75b9cc0a3306d12c9e6fe4811ade4"
+          "checksumValue": "e890ae231b7b28d11e7698c023899db56745eb44a15ee355768186ac65576c76"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./tools/fastcgi/debug/bin/cgi-fcgi",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "fileName": "./lib/libfcgi++.so",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "eb527f905d2f933d877abec7fc0a0e68d86114013869a0eaaa64f66254367e70"
+          "checksumValue": "1fde66efbc4f2cca3e5f25252b361c05131fe106639d2eae673ca7069b6e91ba"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -511,11 +494,11 @@
     },
     {
       "fileName": "./tools/fastcgi/bin/cgi-fcgi",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2d812a0b02d76b1e978749813c51e00631a5e9c2aecaf4b45b415476af7ddbb9"
+          "checksumValue": "fde77e8dff4783dddacfe558ec900901c5f1d927e709ccc4a2af478042f63e1f"
         }
       ],
       "licenseConcluded": "NOASSERTION",

@@ -93,7 +93,7 @@ set ( _target_shared SuiteSparse::CCOLAMD )
 set ( _target_static SuiteSparse::CCOLAMD_static )
 set ( _var_prefix "CCOLAMD" )
 
-if ( NOT OFF AND NOT TARGET ${_target_shared} )
+if ( NOT ON AND NOT TARGET ${_target_shared} )
     # make sure there is always an import target without suffix )
     add_library ( ${_target_shared} ALIAS ${_target_static} )
 endif ( )

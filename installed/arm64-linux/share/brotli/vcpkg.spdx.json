@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/brotli-arm64-linux-1.1.0#1-99e3702a-6c2e-47cf-9957-52e13d1beab9",
-  "name": "brotli:arm64-linux@1.1.0#1 a090407edf626c50b9f1335b11ad7aaeeacf0c9a7635fe6acbd07fff98b6b9e7",
+  "documentNamespace": "https://spdx.org/spdxdocs/brotli-arm64-linux-1.1.0#1-c741c4f0-d049-4471-9d7b-3c6980f7d71d",
+  "name": "brotli:arm64-linux@1.1.0#1 efd2b878a2b972f6caedb5c8fe372d9956fad80bc8f4b77a2ec19d3a4263f26e",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-18T09:24:21Z"
+    "created": "2025-12-16T10:20:21Z"
   },
   "relationships": [
     {
@@ -171,11 +171,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-22"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-23"
     }
   ],
   "packages": [
@@ -194,7 +189,7 @@
     {
       "name": "brotli:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "a090407edf626c50b9f1335b11ad7aaeeacf0c9a7635fe6acbd07fff98b6b9e7",
+      "versionInfo": "efd2b878a2b972f6caedb5c8fe372d9956fad80bc8f4b77a2ec19d3a4263f26e",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -307,79 +302,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libbrotlidec.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "b0873120859b1c2254d5f8c43642815c824bed88a146468ea7c5c176ccfcf47b"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libbrotlicommon.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "af559173c6419518d76e09d672033548155873076feddaa81a5777dfa076968d"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libbrotlienc.a",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "1a0350f50f1a67c600d21ca49d5b378a37827ce257d5b41da95bc3dda1c0249f"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libbrotlicommon.pc",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "97a928539529e886248ba9b70068e977c2a3687a6fc87afaedaf7c292445ce2f"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libbrotlidec.pc",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "e3713459c989821852647d02fc54b204ad8f929141e0d6a9f55c21ddc487f766"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libbrotlienc.pc",
-      "SPDXID": "SPDXRef-binary-file-6",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "e8d847abcdfbf365b1b9c35a27f6b01defcd84e661e78e8ba5c418502815f7c5"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -387,7 +310,7 @@
     },
     {
       "fileName": "./share/brotli/copyright",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -399,7 +322,7 @@
     },
     {
       "fileName": "./share/brotli/usage",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -411,11 +334,11 @@
     },
     {
       "fileName": "./share/unofficial-brotli/unofficial-brotli-config-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f6c9780e1371cb50a81ca334844718e20c16b3f87e9ddbfcf5faa55ddd7a7458"
+          "checksumValue": "3ec06fee4a2b78533710ad6657e57b338b22784f2b0a3e3f521d16b8438db6f2"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -423,23 +346,11 @@
     },
     {
       "fileName": "./share/unofficial-brotli/unofficial-brotli-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "237a66b24f6181723289bb3d1eae0359c2ee10aa200f433e97a8345c20d4cee4"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/unofficial-brotli/unofficial-brotli-config-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-11",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "962bcf781b4727ff6874a2ca80c21895027b46c3de04f6df749040d49b2515bc"
+          "checksumValue": "ac25becf45eda04293a725771a28b382cb786e2bc5b4b352b372e25f8ee88a72"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -447,7 +358,7 @@
     },
     {
       "fileName": "./include/brotli/decode.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -459,7 +370,7 @@
     },
     {
       "fileName": "./include/brotli/shared_dictionary.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -471,7 +382,7 @@
     },
     {
       "fileName": "./include/brotli/types.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -483,7 +394,7 @@
     },
     {
       "fileName": "./include/brotli/port.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -495,7 +406,7 @@
     },
     {
       "fileName": "./include/brotli/encode.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -506,36 +417,72 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libbrotlidec.a",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "fileName": "./lib/libbrotlicommon.so.1",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "5f580102ea19d8d826f38d5d74987c8f4f5c1901ff15a372cec874a05096459a"
+          "checksumValue": "6efb94927fd2f014b90f684ad04328699e035c00573b2f5453e8a7f8934d7ba2"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libbrotlicommon.a",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "fileName": "./lib/libbrotlienc.so.1.1.0",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "36715adc60e08b4df039248b52fe4302856c4cedd7f78fc4cad160d1d6a6dfaa"
+          "checksumValue": "cf0c27f87675f53b549e497f177217835862e06ab1bf59201f935499b39f940e"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libbrotlienc.a",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "fileName": "./lib/libbrotlienc.so",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b378ae4d96969d9b542916a0f1c24ad99dbfe72011290a1da1a620dee582e55a"
+          "checksumValue": "cf0c27f87675f53b549e497f177217835862e06ab1bf59201f935499b39f940e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libbrotlicommon.so",
+      "SPDXID": "SPDXRef-binary-file-13",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6efb94927fd2f014b90f684ad04328699e035c00573b2f5453e8a7f8934d7ba2"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libbrotlidec.so.1.1.0",
+      "SPDXID": "SPDXRef-binary-file-14",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8e9c0362906af0c8b2136edc074142f4c03942598a1563dd28ed9a77f21945ad"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libbrotlienc.so.1",
+      "SPDXID": "SPDXRef-binary-file-15",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cf0c27f87675f53b549e497f177217835862e06ab1bf59201f935499b39f940e"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -543,11 +490,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/libbrotlicommon.pc",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "5fa111868e1ba286637953d5c007b685ecb3256729f8236cf8f4750d6c8fabaf"
+          "checksumValue": "44bcf93394160dd0fe51fe4f5a585fb75b17d3bc3f11c166082ff579a771a012"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -555,11 +502,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/libbrotlidec.pc",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b34f50b1f533e777902182557cf96c08b625c20c48fda53c3aac6a9630de099f"
+          "checksumValue": "4d67ed13c8e788e0a650a6837286c2d06d586601366d099554ee20fb83ba873d"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -567,11 +514,47 @@
     },
     {
       "fileName": "./lib/pkgconfig/libbrotlienc.pc",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "cb6374ceb2fa7a1b4ef42ea12741a9591837e90e58e32b4b7b65ad0aeb0a68c0"
+          "checksumValue": "1e4596d3c1c6ae4b102e66944276d98433febbd7fccde67e4801db9243c230b3"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libbrotlicommon.so.1.1.0",
+      "SPDXID": "SPDXRef-binary-file-19",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6efb94927fd2f014b90f684ad04328699e035c00573b2f5453e8a7f8934d7ba2"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libbrotlidec.so",
+      "SPDXID": "SPDXRef-binary-file-20",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8e9c0362906af0c8b2136edc074142f4c03942598a1563dd28ed9a77f21945ad"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libbrotlidec.so.1",
+      "SPDXID": "SPDXRef-binary-file-21",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8e9c0362906af0c8b2136edc074142f4c03942598a1563dd28ed9a77f21945ad"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -579,11 +562,11 @@
     },
     {
       "fileName": "./tools/brotli/brotli",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "47fac391d2c35cea9ccb436f39ef51fc4abd38d1671761140184f43367da49fd"
+          "checksumValue": "3890cf6d5cee783bc61997fdaae0f052ff923edc323127fed2620a1ffc817f03"
         }
       ],
       "licenseConcluded": "NOASSERTION",

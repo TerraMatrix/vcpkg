@@ -76,7 +76,7 @@ set_target_properties(OpenEXR::IlmThreadConfig PROPERTIES
 )
 
 # Create imported target OpenEXR::Iex
-add_library(OpenEXR::Iex STATIC IMPORTED)
+add_library(OpenEXR::Iex SHARED IMPORTED)
 
 set_target_properties(OpenEXR::Iex PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_17"
@@ -85,7 +85,7 @@ set_target_properties(OpenEXR::Iex PROPERTIES
 )
 
 # Create imported target OpenEXR::IlmThread
-add_library(OpenEXR::IlmThread STATIC IMPORTED)
+add_library(OpenEXR::IlmThread SHARED IMPORTED)
 
 set_target_properties(OpenEXR::IlmThread PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_17"
@@ -94,16 +94,16 @@ set_target_properties(OpenEXR::IlmThread PROPERTIES
 )
 
 # Create imported target OpenEXR::OpenEXRCore
-add_library(OpenEXR::OpenEXRCore STATIC IMPORTED)
+add_library(OpenEXR::OpenEXRCore SHARED IMPORTED)
 
 set_target_properties(OpenEXR::OpenEXRCore PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_17"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "OpenEXR::IlmThreadConfig;Imath::Imath;/usr/lib/aarch64-linux-gnu/libm.so;libdeflate::libdeflate_static"
+  INTERFACE_LINK_LIBRARIES "OpenEXR::IlmThreadConfig;Imath::Imath"
 )
 
 # Create imported target OpenEXR::OpenEXR
-add_library(OpenEXR::OpenEXR STATIC IMPORTED)
+add_library(OpenEXR::OpenEXR SHARED IMPORTED)
 
 set_target_properties(OpenEXR::OpenEXR PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_17"
@@ -112,7 +112,7 @@ set_target_properties(OpenEXR::OpenEXR PROPERTIES
 )
 
 # Create imported target OpenEXR::OpenEXRUtil
-add_library(OpenEXR::OpenEXRUtil STATIC IMPORTED)
+add_library(OpenEXR::OpenEXRUtil SHARED IMPORTED)
 
 set_target_properties(OpenEXR::OpenEXRUtil PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_17"

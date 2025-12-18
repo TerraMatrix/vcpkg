@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS hdf5::hdf5-static hdf5::hdf5_hl-static hdf5::hdf5_cpp-static hdf5::hdf5_hl_cpp-static)
+foreach(_cmake_expected_target IN ITEMS hdf5::hdf5-shared hdf5::hdf5_hl-shared hdf5::hdf5_cpp-shared hdf5::hdf5_hl_cpp-shared)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -54,37 +54,40 @@ if(_IMPORT_PREFIX STREQUAL "/")
   set(_IMPORT_PREFIX "")
 endif()
 
-# Create imported target hdf5::hdf5-static
-add_library(hdf5::hdf5-static STATIC IMPORTED)
+# Create imported target hdf5::hdf5-shared
+add_library(hdf5::hdf5-shared SHARED IMPORTED)
 
-set_target_properties(hdf5::hdf5-static PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "_POSIX_C_SOURCE=200809L;_GNU_SOURCE;_LARGEFILE_SOURCE;_FILE_OFFSET_BITS=64"
-  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:m>;\$<LINK_ONLY:dl>;\$<LINK_ONLY:ZLIB::ZLIB>;\$<LINK_ONLY:libaec::sz>;\$<LINK_ONLY:libaec::aec>;\$<\$<PLATFORM_ID:Windows>:>;\$<\$<NOT:\$<PLATFORM_ID:Windows>>:dl>;\$<\$<BOOL:OFF>:MPI::MPI_C>;\$<LINK_ONLY:\$<\$<OR:\$<BOOL:ON>,\$<BOOL:OFF>>:Threads::Threads>>"
+set_target_properties(hdf5::hdf5-shared PROPERTIES
+  INTERFACE_COMPILE_DEFINITIONS "H5_BUILT_AS_DYNAMIC_LIB;_POSIX_C_SOURCE=200809L;_GNU_SOURCE;_LARGEFILE_SOURCE;_FILE_OFFSET_BITS=64"
+  INTERFACE_INCLUDE_DIRECTORIES "\$<\$<BOOL:OFF>:>;${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include"
+  INTERFACE_LINK_LIBRARIES "\$<\$<PLATFORM_ID:Windows>:>;\$<\$<NOT:\$<PLATFORM_ID:Windows>>:dl>;\$<\$<BOOL:OFF>:MPI::MPI_C>;\$<\$<OR:\$<BOOL:>,\$<BOOL:OFF>>:Threads::Threads>"
 )
 
-# Create imported target hdf5::hdf5_hl-static
-add_library(hdf5::hdf5_hl-static STATIC IMPORTED)
+# Create imported target hdf5::hdf5_hl-shared
+add_library(hdf5::hdf5_hl-shared SHARED IMPORTED)
 
-set_target_properties(hdf5::hdf5_hl-static PROPERTIES
+set_target_properties(hdf5::hdf5_hl-shared PROPERTIES
+  INTERFACE_COMPILE_DEFINITIONS "H5_BUILT_AS_DYNAMIC_LIB"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "hdf5::hdf5-static"
+  INTERFACE_LINK_LIBRARIES "hdf5::hdf5-shared"
 )
 
-# Create imported target hdf5::hdf5_cpp-static
-add_library(hdf5::hdf5_cpp-static STATIC IMPORTED)
+# Create imported target hdf5::hdf5_cpp-shared
+add_library(hdf5::hdf5_cpp-shared SHARED IMPORTED)
 
-set_target_properties(hdf5::hdf5_cpp-static PROPERTIES
+set_target_properties(hdf5::hdf5_cpp-shared PROPERTIES
+  INTERFACE_COMPILE_DEFINITIONS "H5_BUILT_AS_DYNAMIC_LIB"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "hdf5::hdf5-static"
+  INTERFACE_LINK_LIBRARIES "hdf5::hdf5-shared"
 )
 
-# Create imported target hdf5::hdf5_hl_cpp-static
-add_library(hdf5::hdf5_hl_cpp-static STATIC IMPORTED)
+# Create imported target hdf5::hdf5_hl_cpp-shared
+add_library(hdf5::hdf5_hl_cpp-shared SHARED IMPORTED)
 
-set_target_properties(hdf5::hdf5_hl_cpp-static PROPERTIES
+set_target_properties(hdf5::hdf5_hl_cpp-shared PROPERTIES
+  INTERFACE_COMPILE_DEFINITIONS "H5_BUILT_AS_DYNAMIC_LIB"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "hdf5::hdf5_hl-static;hdf5::hdf5-static"
+  INTERFACE_LINK_LIBRARIES "hdf5::hdf5_hl-shared;hdf5::hdf5-shared"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

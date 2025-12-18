@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/protobuf-arm64-linux-5.29.5#2-66af5072-618b-4d06-ac9d-aacbeb0f58b4",
-  "name": "protobuf:arm64-linux@5.29.5#2 290e8df84f9c79edf91f9ef8deaf93e3d91d5c6fb1e3abda6e9e26ecdaba85c0",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobuf-arm64-linux-5.29.5#2-a4adf2b5-45e4-4eb2-ae04-22e18999c267",
+  "name": "protobuf:arm64-linux@5.29.5#2 1a46fb490c14623c1769ba69caecfc7bf5d7358a73c9747e7d9c3fef120572a3",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T05:15:31Z"
+    "created": "2025-12-16T12:53:12Z"
   },
   "relationships": [
     {
@@ -1481,21 +1481,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-281"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-282"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-283"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-284"
     }
   ],
   "packages": [
@@ -1514,7 +1499,7 @@
     {
       "name": "protobuf:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "290e8df84f9c79edf91f9ef8deaf93e3d91d5c6fb1e3abda6e9e26ecdaba85c0",
+      "versionInfo": "1a46fb490c14623c1769ba69caecfc7bf5d7358a73c9747e7d9c3fef120572a3",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -1663,79 +1648,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libprotobufd.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "d971d06f1617acf8e869365b29a5392888cbcfb00c55ef0fa835bf3ba79c19d3"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libprotocd.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "72333ea8651e717ed0c53fae2cb93c7ccb58d6048c335475390c78e95b7b6a35"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/protobuf-lite.pc",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "b1f2134f97fda8a7a8a2f532df7903d7c81882ab6625318b26f18262d66ea36c"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/protobuf.pc",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "858f199a11943f0a7028873e35a6c680ea635c5eb103e57a100741a764f1f9c5"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libprotobuf-lited.a",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "8bfc1fd7c294309608fc89610a6c3e2abaa96feaebb4b48ef76b25d8c8c861f8"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/protobuf/protobuf-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "b3229c4d2433f2143d9c3a617c3bd78650d6476868387bd210e2668cb6682d17"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1743,11 +1656,11 @@
     },
     {
       "fileName": "./share/protobuf/protobuf-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "4193cccd1f2c82d077d01fddd3d98305c9a5cb7289b2e77c4403467879593139"
+          "checksumValue": "7365225a5bd4c71416585db5b2387b0694cd91261ff60f04826cf565962df4c4"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1755,7 +1668,7 @@
     },
     {
       "fileName": "./share/protobuf/vcpkg-cmake-wrapper.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1767,7 +1680,7 @@
     },
     {
       "fileName": "./share/protobuf/copyright",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1779,11 +1692,11 @@
     },
     {
       "fileName": "./share/protobuf/protobuf-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d2312ae80e9895a7d176112c50adcf2ad766e2b082b03760aa7aaf0d08af09be"
+          "checksumValue": "528940c2f9732f10388455d1695f063fcf3fc897f201708559c6d180012a5102"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1791,7 +1704,7 @@
     },
     {
       "fileName": "./share/protobuf/protobuf-options.cmake",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1803,7 +1716,7 @@
     },
     {
       "fileName": "./share/protobuf/protobuf-generate.cmake",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1815,7 +1728,7 @@
     },
     {
       "fileName": "./share/protobuf/protobuf-module.cmake",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1827,11 +1740,11 @@
     },
     {
       "fileName": "./share/protobuf/protobuf-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "fd23d08b567b7da21dca0c5d0cbb80761767d66e8962f822d955ebb41f8c801c"
+          "checksumValue": "a3e8d1a667551d55021832c41aedeeb6f77d1d94bea5c798d099411aacf144c9"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1839,7 +1752,7 @@
     },
     {
       "fileName": "./share/protobuf/protobuf-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1851,7 +1764,7 @@
     },
     {
       "fileName": "./include/google/protobuf/source_context.proto",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1863,7 +1776,7 @@
     },
     {
       "fileName": "./include/google/protobuf/reflection_mode.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1875,7 +1788,7 @@
     },
     {
       "fileName": "./include/google/protobuf/type.proto",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1887,7 +1800,7 @@
     },
     {
       "fileName": "./include/google/protobuf/cpp_features.pb.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1899,7 +1812,7 @@
     },
     {
       "fileName": "./include/google/protobuf/service.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1911,7 +1824,7 @@
     },
     {
       "fileName": "./include/google/protobuf/reflection_ops.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1923,7 +1836,7 @@
     },
     {
       "fileName": "./include/google/protobuf/repeated_field.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1935,7 +1848,7 @@
     },
     {
       "fileName": "./include/google/protobuf/wire_format.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1947,7 +1860,7 @@
     },
     {
       "fileName": "./include/google/protobuf/arena.h",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1959,7 +1872,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/ruby/ruby_generator.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1971,7 +1884,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/scc.h",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1983,7 +1896,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/plugin.pb.h",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1995,7 +1908,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/doc_comment.h",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2007,7 +1920,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/internal_helpers.h",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2019,7 +1932,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/names.h",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2031,7 +1944,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/context.h",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2043,7 +1956,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/generator_factory.h",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2055,7 +1968,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/helpers.h",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2067,7 +1980,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/generator_common.h",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2079,7 +1992,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/field_common.h",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2091,7 +2004,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/lite/enum_field.h",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2103,7 +2016,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/lite/message.h",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2115,7 +2028,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/lite/map_field.h",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2127,7 +2040,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/lite/enum.h",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2139,7 +2052,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/lite/generator_factory.h",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2151,7 +2064,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/lite/message_builder.h",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2163,7 +2076,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/lite/message_field.h",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2175,7 +2088,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/lite/make_field_gens.h",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2187,7 +2100,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/lite/extension.h",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2199,7 +2112,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/lite/primitive_field.h",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2211,7 +2124,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/lite/string_field.h",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2223,7 +2136,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/lite/field_generator.h",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2235,7 +2148,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/options.h",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2247,7 +2160,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/name_resolver.h",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2259,7 +2172,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/message_serialization.h",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2271,7 +2184,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/file.h",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2283,7 +2196,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/java_features.pb.h",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2295,7 +2208,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/full/enum_field.h",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2307,7 +2220,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/full/service.h",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2319,7 +2232,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/full/message.h",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2331,7 +2244,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/full/map_field.h",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2343,7 +2256,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/full/enum.h",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2355,7 +2268,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/full/generator_factory.h",
-      "SPDXID": "SPDXRef-binary-file-58",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2367,7 +2280,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/full/message_builder.h",
-      "SPDXID": "SPDXRef-binary-file-59",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2379,7 +2292,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/full/message_field.h",
-      "SPDXID": "SPDXRef-binary-file-60",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2391,7 +2304,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/full/make_field_gens.h",
-      "SPDXID": "SPDXRef-binary-file-61",
+      "SPDXID": "SPDXRef-binary-file-55",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2403,7 +2316,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/full/extension.h",
-      "SPDXID": "SPDXRef-binary-file-62",
+      "SPDXID": "SPDXRef-binary-file-56",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2415,7 +2328,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/full/primitive_field.h",
-      "SPDXID": "SPDXRef-binary-file-63",
+      "SPDXID": "SPDXRef-binary-file-57",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2427,7 +2340,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/full/string_field.h",
-      "SPDXID": "SPDXRef-binary-file-64",
+      "SPDXID": "SPDXRef-binary-file-58",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2439,7 +2352,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/full/field_generator.h",
-      "SPDXID": "SPDXRef-binary-file-65",
+      "SPDXID": "SPDXRef-binary-file-59",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2451,7 +2364,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/shared_code_generator.h",
-      "SPDXID": "SPDXRef-binary-file-66",
+      "SPDXID": "SPDXRef-binary-file-60",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2463,7 +2376,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/java/generator.h",
-      "SPDXID": "SPDXRef-binary-file-67",
+      "SPDXID": "SPDXRef-binary-file-61",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2475,7 +2388,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/rust/relative_path.h",
-      "SPDXID": "SPDXRef-binary-file-68",
+      "SPDXID": "SPDXRef-binary-file-62",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2487,7 +2400,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/rust/accessors/accessors.h",
-      "SPDXID": "SPDXRef-binary-file-69",
+      "SPDXID": "SPDXRef-binary-file-63",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2499,7 +2412,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/rust/accessors/default_value.h",
-      "SPDXID": "SPDXRef-binary-file-70",
+      "SPDXID": "SPDXRef-binary-file-64",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2511,7 +2424,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/rust/accessors/generator.h",
-      "SPDXID": "SPDXRef-binary-file-71",
+      "SPDXID": "SPDXRef-binary-file-65",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2523,7 +2436,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/rust/accessors/accessor_case.h",
-      "SPDXID": "SPDXRef-binary-file-72",
+      "SPDXID": "SPDXRef-binary-file-66",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2535,7 +2448,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/rust/accessors/with_presence.h",
-      "SPDXID": "SPDXRef-binary-file-73",
+      "SPDXID": "SPDXRef-binary-file-67",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2547,7 +2460,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/rust/message.h",
-      "SPDXID": "SPDXRef-binary-file-74",
+      "SPDXID": "SPDXRef-binary-file-68",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2559,7 +2472,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/rust/rust_field_type.h",
-      "SPDXID": "SPDXRef-binary-file-75",
+      "SPDXID": "SPDXRef-binary-file-69",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2571,7 +2484,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/rust/enum.h",
-      "SPDXID": "SPDXRef-binary-file-76",
+      "SPDXID": "SPDXRef-binary-file-70",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2583,7 +2496,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/rust/context.h",
-      "SPDXID": "SPDXRef-binary-file-77",
+      "SPDXID": "SPDXRef-binary-file-71",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2595,7 +2508,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/rust/oneof.h",
-      "SPDXID": "SPDXRef-binary-file-78",
+      "SPDXID": "SPDXRef-binary-file-72",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2607,7 +2520,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/rust/generator.h",
-      "SPDXID": "SPDXRef-binary-file-79",
+      "SPDXID": "SPDXRef-binary-file-73",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2619,7 +2532,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/rust/rust_keywords.h",
-      "SPDXID": "SPDXRef-binary-file-80",
+      "SPDXID": "SPDXRef-binary-file-74",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2631,7 +2544,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/rust/upb_helpers.h",
-      "SPDXID": "SPDXRef-binary-file-81",
+      "SPDXID": "SPDXRef-binary-file-75",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2643,7 +2556,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/rust/naming.h",
-      "SPDXID": "SPDXRef-binary-file-82",
+      "SPDXID": "SPDXRef-binary-file-76",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2655,7 +2568,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/rust/crate_mapping.h",
-      "SPDXID": "SPDXRef-binary-file-83",
+      "SPDXID": "SPDXRef-binary-file-77",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2667,7 +2580,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/importer.h",
-      "SPDXID": "SPDXRef-binary-file-84",
+      "SPDXID": "SPDXRef-binary-file-78",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2679,7 +2592,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/command_line_interface.h",
-      "SPDXID": "SPDXRef-binary-file-85",
+      "SPDXID": "SPDXRef-binary-file-79",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2691,7 +2604,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/subprocess.h",
-      "SPDXID": "SPDXRef-binary-file-86",
+      "SPDXID": "SPDXRef-binary-file-80",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2703,7 +2616,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/versions.h",
-      "SPDXID": "SPDXRef-binary-file-87",
+      "SPDXID": "SPDXRef-binary-file-81",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2715,7 +2628,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/kotlin/message.h",
-      "SPDXID": "SPDXRef-binary-file-88",
+      "SPDXID": "SPDXRef-binary-file-82",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2727,7 +2640,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/kotlin/file.h",
-      "SPDXID": "SPDXRef-binary-file-89",
+      "SPDXID": "SPDXRef-binary-file-83",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2739,7 +2652,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/kotlin/generator.h",
-      "SPDXID": "SPDXRef-binary-file-90",
+      "SPDXID": "SPDXRef-binary-file-84",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2751,7 +2664,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/code_generator_lite.h",
-      "SPDXID": "SPDXRef-binary-file-91",
+      "SPDXID": "SPDXRef-binary-file-85",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2763,7 +2676,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/code_generator.h",
-      "SPDXID": "SPDXRef-binary-file-92",
+      "SPDXID": "SPDXRef-binary-file-86",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2775,7 +2688,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/plugin.h",
-      "SPDXID": "SPDXRef-binary-file-93",
+      "SPDXID": "SPDXRef-binary-file-87",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2787,7 +2700,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/plugin.proto",
-      "SPDXID": "SPDXRef-binary-file-94",
+      "SPDXID": "SPDXRef-binary-file-88",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2799,7 +2712,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/retention.h",
-      "SPDXID": "SPDXRef-binary-file-95",
+      "SPDXID": "SPDXRef-binary-file-89",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2811,7 +2724,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/zip_writer.h",
-      "SPDXID": "SPDXRef-binary-file-96",
+      "SPDXID": "SPDXRef-binary-file-90",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2823,7 +2736,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/parser.h",
-      "SPDXID": "SPDXRef-binary-file-97",
+      "SPDXID": "SPDXRef-binary-file-91",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2835,7 +2748,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/php/names.h",
-      "SPDXID": "SPDXRef-binary-file-98",
+      "SPDXID": "SPDXRef-binary-file-92",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2847,7 +2760,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/php/php_generator.h",
-      "SPDXID": "SPDXRef-binary-file-99",
+      "SPDXID": "SPDXRef-binary-file-93",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2859,7 +2772,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/csharp/csharp_options.h",
-      "SPDXID": "SPDXRef-binary-file-100",
+      "SPDXID": "SPDXRef-binary-file-94",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2871,7 +2784,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/csharp/names.h",
-      "SPDXID": "SPDXRef-binary-file-101",
+      "SPDXID": "SPDXRef-binary-file-95",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2883,7 +2796,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/csharp/csharp_message.h",
-      "SPDXID": "SPDXRef-binary-file-102",
+      "SPDXID": "SPDXRef-binary-file-96",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2895,7 +2808,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/csharp/csharp_field_base.h",
-      "SPDXID": "SPDXRef-binary-file-103",
+      "SPDXID": "SPDXRef-binary-file-97",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2907,7 +2820,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/csharp/csharp_reflection_class.h",
-      "SPDXID": "SPDXRef-binary-file-104",
+      "SPDXID": "SPDXRef-binary-file-98",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2919,7 +2832,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/csharp/csharp_enum.h",
-      "SPDXID": "SPDXRef-binary-file-105",
+      "SPDXID": "SPDXRef-binary-file-99",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2931,7 +2844,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/csharp/csharp_primitive_field.h",
-      "SPDXID": "SPDXRef-binary-file-106",
+      "SPDXID": "SPDXRef-binary-file-100",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2943,7 +2856,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/csharp/csharp_doc_comment.h",
-      "SPDXID": "SPDXRef-binary-file-107",
+      "SPDXID": "SPDXRef-binary-file-101",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2955,7 +2868,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/csharp/csharp_generator.h",
-      "SPDXID": "SPDXRef-binary-file-108",
+      "SPDXID": "SPDXRef-binary-file-102",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2967,7 +2880,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/csharp/csharp_map_field.h",
-      "SPDXID": "SPDXRef-binary-file-109",
+      "SPDXID": "SPDXRef-binary-file-103",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2979,7 +2892,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/csharp/csharp_repeated_enum_field.h",
-      "SPDXID": "SPDXRef-binary-file-110",
+      "SPDXID": "SPDXRef-binary-file-104",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2991,7 +2904,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/csharp/csharp_repeated_primitive_field.h",
-      "SPDXID": "SPDXRef-binary-file-111",
+      "SPDXID": "SPDXRef-binary-file-105",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3003,7 +2916,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/csharp/csharp_repeated_message_field.h",
-      "SPDXID": "SPDXRef-binary-file-112",
+      "SPDXID": "SPDXRef-binary-file-106",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3015,7 +2928,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/csharp/csharp_source_generator_base.h",
-      "SPDXID": "SPDXRef-binary-file-113",
+      "SPDXID": "SPDXRef-binary-file-107",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3027,7 +2940,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/csharp/csharp_message_field.h",
-      "SPDXID": "SPDXRef-binary-file-114",
+      "SPDXID": "SPDXRef-binary-file-108",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3039,7 +2952,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/csharp/csharp_wrapper_field.h",
-      "SPDXID": "SPDXRef-binary-file-115",
+      "SPDXID": "SPDXRef-binary-file-109",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3051,7 +2964,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/csharp/csharp_enum_field.h",
-      "SPDXID": "SPDXRef-binary-file-116",
+      "SPDXID": "SPDXRef-binary-file-110",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3063,7 +2976,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/csharp/csharp_helpers.h",
-      "SPDXID": "SPDXRef-binary-file-117",
+      "SPDXID": "SPDXRef-binary-file-111",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3075,7 +2988,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/cpp/padding_optimizer.h",
-      "SPDXID": "SPDXRef-binary-file-118",
+      "SPDXID": "SPDXRef-binary-file-112",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3087,7 +3000,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/cpp/service.h",
-      "SPDXID": "SPDXRef-binary-file-119",
+      "SPDXID": "SPDXRef-binary-file-113",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3099,7 +3012,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/cpp/names.h",
-      "SPDXID": "SPDXRef-binary-file-120",
+      "SPDXID": "SPDXRef-binary-file-114",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3111,7 +3024,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/cpp/message.h",
-      "SPDXID": "SPDXRef-binary-file-121",
+      "SPDXID": "SPDXRef-binary-file-115",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3123,7 +3036,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/cpp/field_generators/generators.h",
-      "SPDXID": "SPDXRef-binary-file-122",
+      "SPDXID": "SPDXRef-binary-file-116",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3135,7 +3048,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/cpp/parse_function_generator.h",
-      "SPDXID": "SPDXRef-binary-file-123",
+      "SPDXID": "SPDXRef-binary-file-117",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3147,7 +3060,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/cpp/enum.h",
-      "SPDXID": "SPDXRef-binary-file-124",
+      "SPDXID": "SPDXRef-binary-file-118",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3159,7 +3072,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/cpp/helpers.h",
-      "SPDXID": "SPDXRef-binary-file-125",
+      "SPDXID": "SPDXRef-binary-file-119",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3171,7 +3084,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/cpp/message_layout_helper.h",
-      "SPDXID": "SPDXRef-binary-file-126",
+      "SPDXID": "SPDXRef-binary-file-120",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3183,7 +3096,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/cpp/ifndef_guard.h",
-      "SPDXID": "SPDXRef-binary-file-127",
+      "SPDXID": "SPDXRef-binary-file-121",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3195,7 +3108,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/cpp/options.h",
-      "SPDXID": "SPDXRef-binary-file-128",
+      "SPDXID": "SPDXRef-binary-file-122",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3207,7 +3120,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/cpp/namespace_printer.h",
-      "SPDXID": "SPDXRef-binary-file-129",
+      "SPDXID": "SPDXRef-binary-file-123",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3219,7 +3132,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/cpp/file.h",
-      "SPDXID": "SPDXRef-binary-file-130",
+      "SPDXID": "SPDXRef-binary-file-124",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3231,7 +3144,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/cpp/extension.h",
-      "SPDXID": "SPDXRef-binary-file-131",
+      "SPDXID": "SPDXRef-binary-file-125",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3243,7 +3156,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/cpp/field.h",
-      "SPDXID": "SPDXRef-binary-file-132",
+      "SPDXID": "SPDXRef-binary-file-126",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3255,7 +3168,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/cpp/generator.h",
-      "SPDXID": "SPDXRef-binary-file-133",
+      "SPDXID": "SPDXRef-binary-file-127",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3267,7 +3180,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/cpp/tracker.h",
-      "SPDXID": "SPDXRef-binary-file-134",
+      "SPDXID": "SPDXRef-binary-file-128",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3279,7 +3192,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/objectivec/enum_field.h",
-      "SPDXID": "SPDXRef-binary-file-135",
+      "SPDXID": "SPDXRef-binary-file-129",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3291,7 +3204,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/objectivec/tf_decode_data.h",
-      "SPDXID": "SPDXRef-binary-file-136",
+      "SPDXID": "SPDXRef-binary-file-130",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3303,7 +3216,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/objectivec/names.h",
-      "SPDXID": "SPDXRef-binary-file-137",
+      "SPDXID": "SPDXRef-binary-file-131",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3315,7 +3228,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/objectivec/message.h",
-      "SPDXID": "SPDXRef-binary-file-138",
+      "SPDXID": "SPDXRef-binary-file-132",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3327,7 +3240,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/objectivec/map_field.h",
-      "SPDXID": "SPDXRef-binary-file-139",
+      "SPDXID": "SPDXRef-binary-file-133",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3339,7 +3252,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/objectivec/enum.h",
-      "SPDXID": "SPDXRef-binary-file-140",
+      "SPDXID": "SPDXRef-binary-file-134",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3351,7 +3264,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/objectivec/helpers.h",
-      "SPDXID": "SPDXRef-binary-file-141",
+      "SPDXID": "SPDXRef-binary-file-135",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3363,7 +3276,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/objectivec/import_writer.h",
-      "SPDXID": "SPDXRef-binary-file-142",
+      "SPDXID": "SPDXRef-binary-file-136",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3375,7 +3288,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/objectivec/options.h",
-      "SPDXID": "SPDXRef-binary-file-143",
+      "SPDXID": "SPDXRef-binary-file-137",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3387,7 +3300,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/objectivec/oneof.h",
-      "SPDXID": "SPDXRef-binary-file-144",
+      "SPDXID": "SPDXRef-binary-file-138",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3399,7 +3312,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/objectivec/file.h",
-      "SPDXID": "SPDXRef-binary-file-145",
+      "SPDXID": "SPDXRef-binary-file-139",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3411,7 +3324,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/objectivec/message_field.h",
-      "SPDXID": "SPDXRef-binary-file-146",
+      "SPDXID": "SPDXRef-binary-file-140",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3423,7 +3336,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/objectivec/extension.h",
-      "SPDXID": "SPDXRef-binary-file-147",
+      "SPDXID": "SPDXRef-binary-file-141",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3435,7 +3348,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/objectivec/primitive_field.h",
-      "SPDXID": "SPDXRef-binary-file-148",
+      "SPDXID": "SPDXRef-binary-file-142",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3447,7 +3360,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/objectivec/field.h",
-      "SPDXID": "SPDXRef-binary-file-149",
+      "SPDXID": "SPDXRef-binary-file-143",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3459,7 +3372,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/objectivec/nsobject_methods.h",
-      "SPDXID": "SPDXRef-binary-file-150",
+      "SPDXID": "SPDXRef-binary-file-144",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3471,7 +3384,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/objectivec/generator.h",
-      "SPDXID": "SPDXRef-binary-file-151",
+      "SPDXID": "SPDXRef-binary-file-145",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3483,7 +3396,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/objectivec/line_consumer.h",
-      "SPDXID": "SPDXRef-binary-file-152",
+      "SPDXID": "SPDXRef-binary-file-146",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3495,7 +3408,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/python/pyi_generator.h",
-      "SPDXID": "SPDXRef-binary-file-153",
+      "SPDXID": "SPDXRef-binary-file-147",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3507,7 +3420,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/python/helpers.h",
-      "SPDXID": "SPDXRef-binary-file-154",
+      "SPDXID": "SPDXRef-binary-file-148",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3519,7 +3432,7 @@
     },
     {
       "fileName": "./include/google/protobuf/compiler/python/generator.h",
-      "SPDXID": "SPDXRef-binary-file-155",
+      "SPDXID": "SPDXRef-binary-file-149",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3531,7 +3444,7 @@
     },
     {
       "fileName": "./include/google/protobuf/timestamp.proto",
-      "SPDXID": "SPDXRef-binary-file-156",
+      "SPDXID": "SPDXRef-binary-file-150",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3543,7 +3456,7 @@
     },
     {
       "fileName": "./include/google/protobuf/wire_format_lite.h",
-      "SPDXID": "SPDXRef-binary-file-157",
+      "SPDXID": "SPDXRef-binary-file-151",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3555,7 +3468,7 @@
     },
     {
       "fileName": "./include/google/protobuf/message.h",
-      "SPDXID": "SPDXRef-binary-file-158",
+      "SPDXID": "SPDXRef-binary-file-152",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3567,7 +3480,7 @@
     },
     {
       "fileName": "./include/google/protobuf/descriptor_legacy.h",
-      "SPDXID": "SPDXRef-binary-file-159",
+      "SPDXID": "SPDXRef-binary-file-153",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3579,7 +3492,7 @@
     },
     {
       "fileName": "./include/google/protobuf/map_field.h",
-      "SPDXID": "SPDXRef-binary-file-160",
+      "SPDXID": "SPDXRef-binary-file-154",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3591,7 +3504,7 @@
     },
     {
       "fileName": "./include/google/protobuf/text_format.h",
-      "SPDXID": "SPDXRef-binary-file-161",
+      "SPDXID": "SPDXRef-binary-file-155",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3603,7 +3516,7 @@
     },
     {
       "fileName": "./include/google/protobuf/reflection_internal.h",
-      "SPDXID": "SPDXRef-binary-file-162",
+      "SPDXID": "SPDXRef-binary-file-156",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3615,7 +3528,7 @@
     },
     {
       "fileName": "./include/google/protobuf/wrappers.proto",
-      "SPDXID": "SPDXRef-binary-file-163",
+      "SPDXID": "SPDXRef-binary-file-157",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3627,7 +3540,7 @@
     },
     {
       "fileName": "./include/google/protobuf/metadata_lite.h",
-      "SPDXID": "SPDXRef-binary-file-164",
+      "SPDXID": "SPDXRef-binary-file-158",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3639,7 +3552,7 @@
     },
     {
       "fileName": "./include/google/protobuf/struct.pb.h",
-      "SPDXID": "SPDXRef-binary-file-165",
+      "SPDXID": "SPDXRef-binary-file-159",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3651,7 +3564,7 @@
     },
     {
       "fileName": "./include/google/protobuf/any.pb.h",
-      "SPDXID": "SPDXRef-binary-file-166",
+      "SPDXID": "SPDXRef-binary-file-160",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3663,7 +3576,7 @@
     },
     {
       "fileName": "./include/google/protobuf/map.h",
-      "SPDXID": "SPDXRef-binary-file-167",
+      "SPDXID": "SPDXRef-binary-file-161",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3675,7 +3588,7 @@
     },
     {
       "fileName": "./include/google/protobuf/field_access_listener.h",
-      "SPDXID": "SPDXRef-binary-file-168",
+      "SPDXID": "SPDXRef-binary-file-162",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3687,7 +3600,7 @@
     },
     {
       "fileName": "./include/google/protobuf/map_type_handler.h",
-      "SPDXID": "SPDXRef-binary-file-169",
+      "SPDXID": "SPDXRef-binary-file-163",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3699,7 +3612,7 @@
     },
     {
       "fileName": "./include/google/protobuf/empty.proto",
-      "SPDXID": "SPDXRef-binary-file-170",
+      "SPDXID": "SPDXRef-binary-file-164",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3711,7 +3624,7 @@
     },
     {
       "fileName": "./include/google/protobuf/raw_ptr.h",
-      "SPDXID": "SPDXRef-binary-file-171",
+      "SPDXID": "SPDXRef-binary-file-165",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3723,7 +3636,7 @@
     },
     {
       "fileName": "./include/google/protobuf/descriptor.proto",
-      "SPDXID": "SPDXRef-binary-file-172",
+      "SPDXID": "SPDXRef-binary-file-166",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3735,7 +3648,7 @@
     },
     {
       "fileName": "./include/google/protobuf/varint_shuffle.h",
-      "SPDXID": "SPDXRef-binary-file-173",
+      "SPDXID": "SPDXRef-binary-file-167",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3747,7 +3660,7 @@
     },
     {
       "fileName": "./include/google/protobuf/serial_arena.h",
-      "SPDXID": "SPDXRef-binary-file-174",
+      "SPDXID": "SPDXRef-binary-file-168",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3759,7 +3672,7 @@
     },
     {
       "fileName": "./include/google/protobuf/arena_allocation_policy.h",
-      "SPDXID": "SPDXRef-binary-file-175",
+      "SPDXID": "SPDXRef-binary-file-169",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3771,7 +3684,7 @@
     },
     {
       "fileName": "./include/google/protobuf/api.proto",
-      "SPDXID": "SPDXRef-binary-file-176",
+      "SPDXID": "SPDXRef-binary-file-170",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3783,7 +3696,7 @@
     },
     {
       "fileName": "./include/google/protobuf/generated_message_bases.h",
-      "SPDXID": "SPDXRef-binary-file-177",
+      "SPDXID": "SPDXRef-binary-file-171",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3795,7 +3708,7 @@
     },
     {
       "fileName": "./include/google/protobuf/cpp_features.proto",
-      "SPDXID": "SPDXRef-binary-file-178",
+      "SPDXID": "SPDXRef-binary-file-172",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3807,7 +3720,7 @@
     },
     {
       "fileName": "./include/google/protobuf/has_bits.h",
-      "SPDXID": "SPDXRef-binary-file-179",
+      "SPDXID": "SPDXRef-binary-file-173",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3819,7 +3732,7 @@
     },
     {
       "fileName": "./include/google/protobuf/message_lite.h",
-      "SPDXID": "SPDXRef-binary-file-180",
+      "SPDXID": "SPDXRef-binary-file-174",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3831,7 +3744,7 @@
     },
     {
       "fileName": "./include/google/protobuf/map_field_lite.h",
-      "SPDXID": "SPDXRef-binary-file-181",
+      "SPDXID": "SPDXRef-binary-file-175",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3843,7 +3756,7 @@
     },
     {
       "fileName": "./include/google/protobuf/generated_message_util.h",
-      "SPDXID": "SPDXRef-binary-file-182",
+      "SPDXID": "SPDXRef-binary-file-176",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3855,7 +3768,7 @@
     },
     {
       "fileName": "./include/google/protobuf/extension_set.h",
-      "SPDXID": "SPDXRef-binary-file-183",
+      "SPDXID": "SPDXRef-binary-file-177",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3867,11 +3780,11 @@
     },
     {
       "fileName": "./include/google/protobuf/port_def.inc",
-      "SPDXID": "SPDXRef-binary-file-184",
+      "SPDXID": "SPDXRef-binary-file-178",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "7ea3f6040dfe8a965b9363aece2c67b437f5185a7d811dbb2469e793c7692f26"
+          "checksumValue": "56e557a9760cf817cea4c3ed74f7d48b5a055ba842b59a1d5b858689611031df"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -3879,7 +3792,7 @@
     },
     {
       "fileName": "./include/google/protobuf/endian.h",
-      "SPDXID": "SPDXRef-binary-file-185",
+      "SPDXID": "SPDXRef-binary-file-179",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3891,7 +3804,7 @@
     },
     {
       "fileName": "./include/google/protobuf/descriptor.h",
-      "SPDXID": "SPDXRef-binary-file-186",
+      "SPDXID": "SPDXRef-binary-file-180",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3903,7 +3816,7 @@
     },
     {
       "fileName": "./include/google/protobuf/field_mask.pb.h",
-      "SPDXID": "SPDXRef-binary-file-187",
+      "SPDXID": "SPDXRef-binary-file-181",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3915,7 +3828,7 @@
     },
     {
       "fileName": "./include/google/protobuf/descriptor_database.h",
-      "SPDXID": "SPDXRef-binary-file-188",
+      "SPDXID": "SPDXRef-binary-file-182",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3927,7 +3840,7 @@
     },
     {
       "fileName": "./include/google/protobuf/generated_enum_reflection.h",
-      "SPDXID": "SPDXRef-binary-file-189",
+      "SPDXID": "SPDXRef-binary-file-183",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3939,7 +3852,7 @@
     },
     {
       "fileName": "./include/google/protobuf/internal_visibility.h",
-      "SPDXID": "SPDXRef-binary-file-190",
+      "SPDXID": "SPDXRef-binary-file-184",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3951,7 +3864,7 @@
     },
     {
       "fileName": "./include/google/protobuf/explicitly_constructed.h",
-      "SPDXID": "SPDXRef-binary-file-191",
+      "SPDXID": "SPDXRef-binary-file-185",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3963,7 +3876,7 @@
     },
     {
       "fileName": "./include/google/protobuf/stubs/platform_macros.h",
-      "SPDXID": "SPDXRef-binary-file-192",
+      "SPDXID": "SPDXRef-binary-file-186",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3975,7 +3888,7 @@
     },
     {
       "fileName": "./include/google/protobuf/stubs/common.h",
-      "SPDXID": "SPDXRef-binary-file-193",
+      "SPDXID": "SPDXRef-binary-file-187",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3987,7 +3900,7 @@
     },
     {
       "fileName": "./include/google/protobuf/stubs/callback.h",
-      "SPDXID": "SPDXRef-binary-file-194",
+      "SPDXID": "SPDXRef-binary-file-188",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3999,7 +3912,7 @@
     },
     {
       "fileName": "./include/google/protobuf/stubs/status_macros.h",
-      "SPDXID": "SPDXRef-binary-file-195",
+      "SPDXID": "SPDXRef-binary-file-189",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4011,7 +3924,7 @@
     },
     {
       "fileName": "./include/google/protobuf/stubs/port.h",
-      "SPDXID": "SPDXRef-binary-file-196",
+      "SPDXID": "SPDXRef-binary-file-190",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4023,7 +3936,7 @@
     },
     {
       "fileName": "./include/google/protobuf/reflection.h",
-      "SPDXID": "SPDXRef-binary-file-197",
+      "SPDXID": "SPDXRef-binary-file-191",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4035,7 +3948,7 @@
     },
     {
       "fileName": "./include/google/protobuf/type.pb.h",
-      "SPDXID": "SPDXRef-binary-file-198",
+      "SPDXID": "SPDXRef-binary-file-192",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4047,7 +3960,7 @@
     },
     {
       "fileName": "./include/google/protobuf/any.h",
-      "SPDXID": "SPDXRef-binary-file-199",
+      "SPDXID": "SPDXRef-binary-file-193",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4059,7 +3972,7 @@
     },
     {
       "fileName": "./include/google/protobuf/io/zero_copy_stream_impl.h",
-      "SPDXID": "SPDXRef-binary-file-200",
+      "SPDXID": "SPDXRef-binary-file-194",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4071,7 +3984,7 @@
     },
     {
       "fileName": "./include/google/protobuf/io/zero_copy_stream_impl_lite.h",
-      "SPDXID": "SPDXRef-binary-file-201",
+      "SPDXID": "SPDXRef-binary-file-195",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4083,7 +3996,7 @@
     },
     {
       "fileName": "./include/google/protobuf/io/printer.h",
-      "SPDXID": "SPDXRef-binary-file-202",
+      "SPDXID": "SPDXRef-binary-file-196",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4095,7 +4008,7 @@
     },
     {
       "fileName": "./include/google/protobuf/io/coded_stream.h",
-      "SPDXID": "SPDXRef-binary-file-203",
+      "SPDXID": "SPDXRef-binary-file-197",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4107,7 +4020,7 @@
     },
     {
       "fileName": "./include/google/protobuf/io/gzip_stream.h",
-      "SPDXID": "SPDXRef-binary-file-204",
+      "SPDXID": "SPDXRef-binary-file-198",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4119,7 +4032,7 @@
     },
     {
       "fileName": "./include/google/protobuf/io/io_win32.h",
-      "SPDXID": "SPDXRef-binary-file-205",
+      "SPDXID": "SPDXRef-binary-file-199",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4131,7 +4044,7 @@
     },
     {
       "fileName": "./include/google/protobuf/io/zero_copy_stream.h",
-      "SPDXID": "SPDXRef-binary-file-206",
+      "SPDXID": "SPDXRef-binary-file-200",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4143,7 +4056,7 @@
     },
     {
       "fileName": "./include/google/protobuf/io/tokenizer.h",
-      "SPDXID": "SPDXRef-binary-file-207",
+      "SPDXID": "SPDXRef-binary-file-201",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4155,7 +4068,7 @@
     },
     {
       "fileName": "./include/google/protobuf/io/strtod.h",
-      "SPDXID": "SPDXRef-binary-file-208",
+      "SPDXID": "SPDXRef-binary-file-202",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4167,7 +4080,7 @@
     },
     {
       "fileName": "./include/google/protobuf/io/zero_copy_sink.h",
-      "SPDXID": "SPDXRef-binary-file-209",
+      "SPDXID": "SPDXRef-binary-file-203",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4179,7 +4092,7 @@
     },
     {
       "fileName": "./include/google/protobuf/map_entry.h",
-      "SPDXID": "SPDXRef-binary-file-210",
+      "SPDXID": "SPDXRef-binary-file-204",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4191,7 +4104,7 @@
     },
     {
       "fileName": "./include/google/protobuf/repeated_ptr_field.h",
-      "SPDXID": "SPDXRef-binary-file-211",
+      "SPDXID": "SPDXRef-binary-file-205",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4203,7 +4116,7 @@
     },
     {
       "fileName": "./include/google/protobuf/json/json.h",
-      "SPDXID": "SPDXRef-binary-file-212",
+      "SPDXID": "SPDXRef-binary-file-206",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4215,7 +4128,7 @@
     },
     {
       "fileName": "./include/google/protobuf/json/internal/zero_copy_buffered_stream.h",
-      "SPDXID": "SPDXRef-binary-file-213",
+      "SPDXID": "SPDXRef-binary-file-207",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4227,7 +4140,7 @@
     },
     {
       "fileName": "./include/google/protobuf/json/internal/message_path.h",
-      "SPDXID": "SPDXRef-binary-file-214",
+      "SPDXID": "SPDXRef-binary-file-208",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4239,7 +4152,7 @@
     },
     {
       "fileName": "./include/google/protobuf/json/internal/unparser_traits.h",
-      "SPDXID": "SPDXRef-binary-file-215",
+      "SPDXID": "SPDXRef-binary-file-209",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4251,7 +4164,7 @@
     },
     {
       "fileName": "./include/google/protobuf/json/internal/descriptor_traits.h",
-      "SPDXID": "SPDXRef-binary-file-216",
+      "SPDXID": "SPDXRef-binary-file-210",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4263,7 +4176,7 @@
     },
     {
       "fileName": "./include/google/protobuf/json/internal/lexer.h",
-      "SPDXID": "SPDXRef-binary-file-217",
+      "SPDXID": "SPDXRef-binary-file-211",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4275,7 +4188,7 @@
     },
     {
       "fileName": "./include/google/protobuf/json/internal/untyped_message.h",
-      "SPDXID": "SPDXRef-binary-file-218",
+      "SPDXID": "SPDXRef-binary-file-212",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4287,7 +4200,7 @@
     },
     {
       "fileName": "./include/google/protobuf/json/internal/unparser.h",
-      "SPDXID": "SPDXRef-binary-file-219",
+      "SPDXID": "SPDXRef-binary-file-213",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4299,7 +4212,7 @@
     },
     {
       "fileName": "./include/google/protobuf/json/internal/parser_traits.h",
-      "SPDXID": "SPDXRef-binary-file-220",
+      "SPDXID": "SPDXRef-binary-file-214",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4311,7 +4224,7 @@
     },
     {
       "fileName": "./include/google/protobuf/json/internal/parser.h",
-      "SPDXID": "SPDXRef-binary-file-221",
+      "SPDXID": "SPDXRef-binary-file-215",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4323,7 +4236,7 @@
     },
     {
       "fileName": "./include/google/protobuf/json/internal/writer.h",
-      "SPDXID": "SPDXRef-binary-file-222",
+      "SPDXID": "SPDXRef-binary-file-216",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4335,7 +4248,7 @@
     },
     {
       "fileName": "./include/google/protobuf/arena_align.h",
-      "SPDXID": "SPDXRef-binary-file-223",
+      "SPDXID": "SPDXRef-binary-file-217",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4347,7 +4260,7 @@
     },
     {
       "fileName": "./include/google/protobuf/thread_safe_arena.h",
-      "SPDXID": "SPDXRef-binary-file-224",
+      "SPDXID": "SPDXRef-binary-file-218",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4359,7 +4272,7 @@
     },
     {
       "fileName": "./include/google/protobuf/duration.proto",
-      "SPDXID": "SPDXRef-binary-file-225",
+      "SPDXID": "SPDXRef-binary-file-219",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4371,7 +4284,7 @@
     },
     {
       "fileName": "./include/google/protobuf/reflection_visit_field_info.h",
-      "SPDXID": "SPDXRef-binary-file-226",
+      "SPDXID": "SPDXRef-binary-file-220",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4383,7 +4296,7 @@
     },
     {
       "fileName": "./include/google/protobuf/arenaz_sampler.h",
-      "SPDXID": "SPDXRef-binary-file-227",
+      "SPDXID": "SPDXRef-binary-file-221",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4395,7 +4308,7 @@
     },
     {
       "fileName": "./include/google/protobuf/cpp_edition_defaults.h",
-      "SPDXID": "SPDXRef-binary-file-228",
+      "SPDXID": "SPDXRef-binary-file-222",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4407,7 +4320,7 @@
     },
     {
       "fileName": "./include/google/protobuf/string_block.h",
-      "SPDXID": "SPDXRef-binary-file-229",
+      "SPDXID": "SPDXRef-binary-file-223",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4419,7 +4332,7 @@
     },
     {
       "fileName": "./include/google/protobuf/arena_cleanup.h",
-      "SPDXID": "SPDXRef-binary-file-230",
+      "SPDXID": "SPDXRef-binary-file-224",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4431,7 +4344,7 @@
     },
     {
       "fileName": "./include/google/protobuf/wrappers.pb.h",
-      "SPDXID": "SPDXRef-binary-file-231",
+      "SPDXID": "SPDXRef-binary-file-225",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4443,7 +4356,7 @@
     },
     {
       "fileName": "./include/google/protobuf/parse_context.h",
-      "SPDXID": "SPDXRef-binary-file-232",
+      "SPDXID": "SPDXRef-binary-file-226",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4455,7 +4368,7 @@
     },
     {
       "fileName": "./include/google/protobuf/port_undef.inc",
-      "SPDXID": "SPDXRef-binary-file-233",
+      "SPDXID": "SPDXRef-binary-file-227",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4467,7 +4380,7 @@
     },
     {
       "fileName": "./include/google/protobuf/util/message_differencer.h",
-      "SPDXID": "SPDXRef-binary-file-234",
+      "SPDXID": "SPDXRef-binary-file-228",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4479,7 +4392,7 @@
     },
     {
       "fileName": "./include/google/protobuf/util/json_util.h",
-      "SPDXID": "SPDXRef-binary-file-235",
+      "SPDXID": "SPDXRef-binary-file-229",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4491,7 +4404,7 @@
     },
     {
       "fileName": "./include/google/protobuf/util/type_resolver.h",
-      "SPDXID": "SPDXRef-binary-file-236",
+      "SPDXID": "SPDXRef-binary-file-230",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4503,7 +4416,7 @@
     },
     {
       "fileName": "./include/google/protobuf/util/time_util.h",
-      "SPDXID": "SPDXRef-binary-file-237",
+      "SPDXID": "SPDXRef-binary-file-231",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4515,7 +4428,7 @@
     },
     {
       "fileName": "./include/google/protobuf/util/field_comparator.h",
-      "SPDXID": "SPDXRef-binary-file-238",
+      "SPDXID": "SPDXRef-binary-file-232",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4527,7 +4440,7 @@
     },
     {
       "fileName": "./include/google/protobuf/util/field_mask_util.h",
-      "SPDXID": "SPDXRef-binary-file-239",
+      "SPDXID": "SPDXRef-binary-file-233",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4539,7 +4452,7 @@
     },
     {
       "fileName": "./include/google/protobuf/util/delimited_message_util.h",
-      "SPDXID": "SPDXRef-binary-file-240",
+      "SPDXID": "SPDXRef-binary-file-234",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4551,7 +4464,7 @@
     },
     {
       "fileName": "./include/google/protobuf/util/type_resolver_util.h",
-      "SPDXID": "SPDXRef-binary-file-241",
+      "SPDXID": "SPDXRef-binary-file-235",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4563,7 +4476,7 @@
     },
     {
       "fileName": "./include/google/protobuf/generated_message_tctable_decl.h",
-      "SPDXID": "SPDXRef-binary-file-242",
+      "SPDXID": "SPDXRef-binary-file-236",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4575,7 +4488,7 @@
     },
     {
       "fileName": "./include/google/protobuf/field_mask.proto",
-      "SPDXID": "SPDXRef-binary-file-243",
+      "SPDXID": "SPDXRef-binary-file-237",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4587,7 +4500,7 @@
     },
     {
       "fileName": "./include/google/protobuf/testing/file.h",
-      "SPDXID": "SPDXRef-binary-file-244",
+      "SPDXID": "SPDXRef-binary-file-238",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4599,7 +4512,7 @@
     },
     {
       "fileName": "./include/google/protobuf/map_field_inl.h",
-      "SPDXID": "SPDXRef-binary-file-245",
+      "SPDXID": "SPDXRef-binary-file-239",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4611,7 +4524,7 @@
     },
     {
       "fileName": "./include/google/protobuf/api.pb.h",
-      "SPDXID": "SPDXRef-binary-file-246",
+      "SPDXID": "SPDXRef-binary-file-240",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4623,7 +4536,7 @@
     },
     {
       "fileName": "./include/google/protobuf/generated_enum_util.h",
-      "SPDXID": "SPDXRef-binary-file-247",
+      "SPDXID": "SPDXRef-binary-file-241",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4635,7 +4548,7 @@
     },
     {
       "fileName": "./include/google/protobuf/descriptor.pb.h",
-      "SPDXID": "SPDXRef-binary-file-248",
+      "SPDXID": "SPDXRef-binary-file-242",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4647,7 +4560,7 @@
     },
     {
       "fileName": "./include/google/protobuf/generated_message_tctable_gen.h",
-      "SPDXID": "SPDXRef-binary-file-249",
+      "SPDXID": "SPDXRef-binary-file-243",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4659,7 +4572,7 @@
     },
     {
       "fileName": "./include/google/protobuf/generated_message_reflection.h",
-      "SPDXID": "SPDXRef-binary-file-250",
+      "SPDXID": "SPDXRef-binary-file-244",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4671,7 +4584,7 @@
     },
     {
       "fileName": "./include/google/protobuf/duration.pb.h",
-      "SPDXID": "SPDXRef-binary-file-251",
+      "SPDXID": "SPDXRef-binary-file-245",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4683,7 +4596,7 @@
     },
     {
       "fileName": "./include/google/protobuf/struct.proto",
-      "SPDXID": "SPDXRef-binary-file-252",
+      "SPDXID": "SPDXRef-binary-file-246",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4695,7 +4608,7 @@
     },
     {
       "fileName": "./include/google/protobuf/reflection_visit_fields.h",
-      "SPDXID": "SPDXRef-binary-file-253",
+      "SPDXID": "SPDXRef-binary-file-247",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4707,7 +4620,7 @@
     },
     {
       "fileName": "./include/google/protobuf/extension_set_inl.h",
-      "SPDXID": "SPDXRef-binary-file-254",
+      "SPDXID": "SPDXRef-binary-file-248",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4719,7 +4632,7 @@
     },
     {
       "fileName": "./include/google/protobuf/runtime_version.h",
-      "SPDXID": "SPDXRef-binary-file-255",
+      "SPDXID": "SPDXRef-binary-file-249",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4731,7 +4644,7 @@
     },
     {
       "fileName": "./include/google/protobuf/any.proto",
-      "SPDXID": "SPDXRef-binary-file-256",
+      "SPDXID": "SPDXRef-binary-file-250",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4743,7 +4656,7 @@
     },
     {
       "fileName": "./include/google/protobuf/empty.pb.h",
-      "SPDXID": "SPDXRef-binary-file-257",
+      "SPDXID": "SPDXRef-binary-file-251",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4755,7 +4668,7 @@
     },
     {
       "fileName": "./include/google/protobuf/inlined_string_field.h",
-      "SPDXID": "SPDXRef-binary-file-258",
+      "SPDXID": "SPDXRef-binary-file-252",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4767,7 +4680,7 @@
     },
     {
       "fileName": "./include/google/protobuf/descriptor_lite.h",
-      "SPDXID": "SPDXRef-binary-file-259",
+      "SPDXID": "SPDXRef-binary-file-253",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4779,7 +4692,7 @@
     },
     {
       "fileName": "./include/google/protobuf/unknown_field_set.h",
-      "SPDXID": "SPDXRef-binary-file-260",
+      "SPDXID": "SPDXRef-binary-file-254",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4791,7 +4704,7 @@
     },
     {
       "fileName": "./include/google/protobuf/port.h",
-      "SPDXID": "SPDXRef-binary-file-261",
+      "SPDXID": "SPDXRef-binary-file-255",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4803,7 +4716,7 @@
     },
     {
       "fileName": "./include/google/protobuf/dynamic_message.h",
-      "SPDXID": "SPDXRef-binary-file-262",
+      "SPDXID": "SPDXRef-binary-file-256",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4815,7 +4728,7 @@
     },
     {
       "fileName": "./include/google/protobuf/descriptor_visitor.h",
-      "SPDXID": "SPDXRef-binary-file-263",
+      "SPDXID": "SPDXRef-binary-file-257",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4827,7 +4740,7 @@
     },
     {
       "fileName": "./include/google/protobuf/arenastring.h",
-      "SPDXID": "SPDXRef-binary-file-264",
+      "SPDXID": "SPDXRef-binary-file-258",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4839,7 +4752,7 @@
     },
     {
       "fileName": "./include/google/protobuf/implicit_weak_message.h",
-      "SPDXID": "SPDXRef-binary-file-265",
+      "SPDXID": "SPDXRef-binary-file-259",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4851,7 +4764,7 @@
     },
     {
       "fileName": "./include/google/protobuf/feature_resolver.h",
-      "SPDXID": "SPDXRef-binary-file-266",
+      "SPDXID": "SPDXRef-binary-file-260",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4863,7 +4776,7 @@
     },
     {
       "fileName": "./include/google/protobuf/timestamp.pb.h",
-      "SPDXID": "SPDXRef-binary-file-267",
+      "SPDXID": "SPDXRef-binary-file-261",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4875,7 +4788,7 @@
     },
     {
       "fileName": "./include/google/protobuf/metadata.h",
-      "SPDXID": "SPDXRef-binary-file-268",
+      "SPDXID": "SPDXRef-binary-file-262",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4887,7 +4800,7 @@
     },
     {
       "fileName": "./include/google/protobuf/source_context.pb.h",
-      "SPDXID": "SPDXRef-binary-file-269",
+      "SPDXID": "SPDXRef-binary-file-263",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4899,7 +4812,7 @@
     },
     {
       "fileName": "./include/google/protobuf/generated_message_tctable_impl.h",
-      "SPDXID": "SPDXRef-binary-file-270",
+      "SPDXID": "SPDXRef-binary-file-264",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4911,7 +4824,7 @@
     },
     {
       "fileName": "./include/upb/port/def.inc",
-      "SPDXID": "SPDXRef-binary-file-271",
+      "SPDXID": "SPDXRef-binary-file-265",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4923,7 +4836,7 @@
     },
     {
       "fileName": "./include/upb/port/vsnprintf_compat.h",
-      "SPDXID": "SPDXRef-binary-file-272",
+      "SPDXID": "SPDXRef-binary-file-266",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4935,7 +4848,7 @@
     },
     {
       "fileName": "./include/upb/port/atomic.h",
-      "SPDXID": "SPDXRef-binary-file-273",
+      "SPDXID": "SPDXRef-binary-file-267",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4947,7 +4860,7 @@
     },
     {
       "fileName": "./include/upb/port/undef.inc",
-      "SPDXID": "SPDXRef-binary-file-274",
+      "SPDXID": "SPDXRef-binary-file-268",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4959,7 +4872,7 @@
     },
     {
       "fileName": "./include/upb_generator/minitable/names.h",
-      "SPDXID": "SPDXRef-binary-file-275",
+      "SPDXID": "SPDXRef-binary-file-269",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4971,7 +4884,7 @@
     },
     {
       "fileName": "./include/upb_generator/minitable/names_internal.h",
-      "SPDXID": "SPDXRef-binary-file-276",
+      "SPDXID": "SPDXRef-binary-file-270",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4983,7 +4896,7 @@
     },
     {
       "fileName": "./include/upb_generator/common/names.h",
-      "SPDXID": "SPDXRef-binary-file-277",
+      "SPDXID": "SPDXRef-binary-file-271",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4994,24 +4907,60 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libprotoc.a",
-      "SPDXID": "SPDXRef-binary-file-278",
+      "fileName": "./lib/libprotobuf-lite.so",
+      "SPDXID": "SPDXRef-binary-file-272",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "5118f1a1954d8e3982aa399fcef60a8f8f9bababe694ba767ae8ccabefd856bc"
+          "checksumValue": "12efb4c67b326740f76295a4fec247fc5ddd6f6b7561fd2f8af8836ee5dd5749"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libprotobuf-lite.a",
-      "SPDXID": "SPDXRef-binary-file-279",
+      "fileName": "./lib/libprotoc.so",
+      "SPDXID": "SPDXRef-binary-file-273",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "1c78aa5660848672d564121d9ea3e68bc34219345428d36851ce7d7c9124b8ed"
+          "checksumValue": "08be51f27fe0dde37fddb6e07d3fd55a4f746061c7acf5642d9e7ea5bdbaf911"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libprotoc.so.29.5.0",
+      "SPDXID": "SPDXRef-binary-file-274",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "08be51f27fe0dde37fddb6e07d3fd55a4f746061c7acf5642d9e7ea5bdbaf911"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libprotobuf.so",
+      "SPDXID": "SPDXRef-binary-file-275",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5e961d6d4b0a8ff9859e89c78e69fcff2b69890c3b1482257954a105170b2a09"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libprotobuf-lite.so.29.5.0",
+      "SPDXID": "SPDXRef-binary-file-276",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "12efb4c67b326740f76295a4fec247fc5ddd6f6b7561fd2f8af8836ee5dd5749"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -5019,11 +4968,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/protobuf-lite.pc",
-      "SPDXID": "SPDXRef-binary-file-280",
+      "SPDXID": "SPDXRef-binary-file-277",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "64310a175f057dc606f9bd6a3e24a88ef8bad676cfddc48d60b0c06a33b27751"
+          "checksumValue": "925c362f88d220d1c658a2ee0e293d9d4ef6fe14c44b06d69078f809270fe6e3"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -5031,23 +4980,23 @@
     },
     {
       "fileName": "./lib/pkgconfig/protobuf.pc",
-      "SPDXID": "SPDXRef-binary-file-281",
+      "SPDXID": "SPDXRef-binary-file-278",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "0399cfa95d8456fa45be7297d5af36520c052732d08b6a695ffc12a41581d83d"
+          "checksumValue": "d411b90fdb94ebadc0ec0a957a5b07ac75a4df5f38150d7ebc04cf586e7e4889"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libprotobuf.a",
-      "SPDXID": "SPDXRef-binary-file-282",
+      "fileName": "./lib/libprotobuf.so.29.5.0",
+      "SPDXID": "SPDXRef-binary-file-279",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e48189784a9406624c6be6d80651007848261e8b14f12914aa0d45bc6b7f7432"
+          "checksumValue": "5e961d6d4b0a8ff9859e89c78e69fcff2b69890c3b1482257954a105170b2a09"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -5055,11 +5004,11 @@
     },
     {
       "fileName": "./tools/protobuf/protoc-29.5.0",
-      "SPDXID": "SPDXRef-binary-file-283",
+      "SPDXID": "SPDXRef-binary-file-280",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "5026433bf7cb7436b62b9c693c8cd83f306e7b2bd87e197ea4a148ee9ae8d7a8"
+          "checksumValue": "99526b4a24ab61725313ccb3357cad6f8634eb57f578d5604c1a27e5ec796fc9"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -5067,11 +5016,11 @@
     },
     {
       "fileName": "./tools/protobuf/protoc",
-      "SPDXID": "SPDXRef-binary-file-284",
+      "SPDXID": "SPDXRef-binary-file-281",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "5026433bf7cb7436b62b9c693c8cd83f306e7b2bd87e197ea4a148ee9ae8d7a8"
+          "checksumValue": "99526b4a24ab61725313ccb3357cad6f8634eb57f578d5604c1a27e5ec796fc9"
         }
       ],
       "licenseConcluded": "NOASSERTION",

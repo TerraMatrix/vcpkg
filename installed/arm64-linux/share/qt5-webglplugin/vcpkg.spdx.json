@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/qt5-webglplugin-arm64-linux-5.15.17-8a9a249b-36ba-40d0-bc45-f87458d40e09",
-  "name": "qt5-webglplugin:arm64-linux@5.15.17 30d4af385f780830c50183678e2271dede6c53b2f21ef7db9af1af077fc5a55f",
+  "documentNamespace": "https://spdx.org/spdxdocs/qt5-webglplugin-arm64-linux-5.15.17-6200c5aa-c663-4ab9-b958-1baa4bf379f1",
+  "name": "qt5-webglplugin:arm64-linux@5.15.17 0a49f93945b9399db1e8dddaf2e1ab17278a38fc19693e34a715644af997bd87",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-12-10T16:53:12Z"
+    "created": "2025-12-17T06:59:58Z"
   },
   "relationships": [
     {
@@ -51,36 +51,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-3"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-4"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-5"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-6"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-7"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-8"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-9"
     }
   ],
   "packages": [
@@ -98,7 +68,7 @@
     {
       "name": "qt5-webglplugin:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "30d4af385f780830c50183678e2271dede6c53b2f21ef7db9af1af077fc5a55f",
+      "versionInfo": "0a49f93945b9399db1e8dddaf2e1ab17278a38fc19693e34a715644af997bd87",
       "downloadLocation": "NONE",
       "licenseConcluded": "LicenseRef-vcpkg-null",
       "licenseDeclared": "NOASSERTION",
@@ -132,24 +102,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./plugins/platforms/libqwebgl.a",
+      "fileName": "./plugins/platforms/libqwebgl.so",
       "SPDXID": "SPDXRef-binary-file-0",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "981a3bc1a247d48334e8c75e14555ed00a64786b4afd728d2e9d90ab6892571d"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./plugins/platforms/libqwebgl.prl",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "70b8ffef5433b46ad2b6b75a111b4b406e29e5af46e74bbc92d67cb3c3657c1b"
+          "checksumValue": "7f3524577c8ca5b0f09d74875fc72b6b4704f40e7bec6e1881d7bd29b760a5a1"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -157,35 +115,11 @@
     },
     {
       "fileName": "./BUILD_INFO",
-      "SPDXID": "SPDXRef-binary-file-2",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "8050c7180be6359723ba520b1c6b622a378fdcdcb944962c4ac3e04d157d561c"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/plugins/platforms/libqwebgl.a",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "c9907d4db5766d6b34ac6f92d1620eb412fb5bce1f4f69593023255437013a52"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/plugins/platforms/libqwebgl.prl",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "34c88700be9b45de896a8306d21289d7fe9ad744f31acb4498f1694129af1c7b"
+          "checksumValue": "d6ce87baa93c0b203858bfdaea22026c29e15ea98d20301d0ed0ebb8016c71e7"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -193,7 +127,7 @@
     },
     {
       "fileName": "./share/qt5-webglplugin/copyright",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -204,48 +138,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/cmake/Qt5Gui/Qt5Gui_QWebGLIntegrationPlugin_Import.cpp",
-      "SPDXID": "SPDXRef-binary-file-6",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "c328c2c88a25c1622ca83ae9cac18ac13e0b0be34108776cbd66ed78de96a95d"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/cmake/Qt5Gui/Qt5Gui_QWebGLIntegrationPlugin.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e1a2f79440a6f7985464e8f884f5f14ce3913140aba24a07b239c90f84f08823"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./tools/qt5/debug/mkspecs/modules/qt_plugin_qwebgl.pri",
-      "SPDXID": "SPDXRef-binary-file-8",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "c6a1d899975b61f522cca263bcf8184987d2da0becc7e512261b7f389057daa0"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./tools/qt5/mkspecs/modules/qt_plugin_qwebgl.pri",
-      "SPDXID": "SPDXRef-binary-file-9",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "c6a1d899975b61f522cca263bcf8184987d2da0becc7e512261b7f389057daa0"
+          "checksumValue": "73a52c827435b9b5668c11f6a5ce2eacc948f55714d3eb81c1b8a42e16a0c027"
         }
       ],
       "licenseConcluded": "NOASSERTION",

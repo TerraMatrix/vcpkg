@@ -55,13 +55,13 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::atomic
-add_library(Boost::atomic STATIC IMPORTED)
+add_library(Boost::atomic SHARED IMPORTED)
 
 set_target_properties(Boost::atomic PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_ATOMIC_NO_LIB;BOOST_ATOMIC_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_ATOMIC_NO_LIB;BOOST_ATOMIC_DYN_LINK"
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::predef;Boost::type_traits;\$<LINK_ONLY:Boost::align>;\$<LINK_ONLY:Boost::preprocessor>;\$<LINK_ONLY:Threads::Threads>"
+  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::predef;Boost::type_traits"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

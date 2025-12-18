@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/jhasse-poly2tri-arm64-linux-2023-12-27#2-57839a9b-8d7c-4a93-afe8-6c54ec721028",
-  "name": "jhasse-poly2tri:arm64-linux@2023-12-27#2 f2278133f3f3a6363cc0022575f137187e6277941582997d24b8116ca5db2fec",
+  "documentNamespace": "https://spdx.org/spdxdocs/jhasse-poly2tri-arm64-linux-2023-12-27#2-b12f5136-2b67-4611-ae3a-849711c809f6",
+  "name": "jhasse-poly2tri:arm64-linux@2023-12-27#2 f0f38c0025257133408fe555cba1f02e96f637f0c43a48bb5129cb0c9ed4aa08",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-26T09:15:13Z"
+    "created": "2025-12-16T11:24:05Z"
   },
   "relationships": [
     {
@@ -111,16 +111,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-13"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-14"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-15"
     }
   ],
   "packages": [
@@ -139,7 +129,7 @@
     {
       "name": "jhasse-poly2tri:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "f2278133f3f3a6363cc0022575f137187e6277941582997d24b8116ca5db2fec",
+      "versionInfo": "f0f38c0025257133408fe555cba1f02e96f637f0c43a48bb5129cb0c9ed4aa08",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -216,31 +206,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libpoly2tri.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "a768b1b6f7492fbfac667b2a852c955efacb5196b48d6a354736a367f9d7f974"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/poly2tri/poly2triConfig-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "b4627bbf806eaf26187c4ef58ba3df0a33887608171b6b050699d444c32e2609"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -248,11 +214,11 @@
     },
     {
       "fileName": "./share/poly2tri/poly2triConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b81c90b31a3e40449c25535ae6fab7cef47dd7daa548737ec87741d53d5d35d8"
+          "checksumValue": "e0939a0eaf05f8854fbd95ce1e7d15cd553cf05c01474cac283629ad0bfc6bdd"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -260,11 +226,11 @@
     },
     {
       "fileName": "./share/poly2tri/poly2triConfig-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "6098fa3cc43d50542a982eb46b2ab5885c30c0581699a7beace609f83938e321"
+          "checksumValue": "f7b6be5e48f486264eca74f61af0c01cd5a3fa4b8a2a8252d1c4ae83562336cf"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -272,7 +238,7 @@
     },
     {
       "fileName": "./share/jhasse-poly2tri/copyright",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -284,7 +250,7 @@
     },
     {
       "fileName": "./share/jhasse-poly2tri/usage",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -296,7 +262,7 @@
     },
     {
       "fileName": "./include/poly2tri/sweep/cdt.h",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -308,7 +274,7 @@
     },
     {
       "fileName": "./include/poly2tri/sweep/advancing_front.h",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -320,7 +286,7 @@
     },
     {
       "fileName": "./include/poly2tri/sweep/sweep.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -332,7 +298,7 @@
     },
     {
       "fileName": "./include/poly2tri/sweep/sweep_context.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -344,7 +310,7 @@
     },
     {
       "fileName": "./include/poly2tri/poly2tri.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -356,7 +322,7 @@
     },
     {
       "fileName": "./include/poly2tri/common/dll_symbol.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -368,7 +334,7 @@
     },
     {
       "fileName": "./include/poly2tri/common/utils.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -380,7 +346,7 @@
     },
     {
       "fileName": "./include/poly2tri/common/shapes.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -391,12 +357,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libpoly2tri.a",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "fileName": "./lib/libpoly2tri.so",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "0c48fa78377a9a3cf7b1909e2c1ce0019fa0c415b518978fb7e8b130d68cb204"
+          "checksumValue": "7b9e45725319cc5d4a1f513f099390c73afa39fef75276f2230831d4fa370ac5"
         }
       ],
       "licenseConcluded": "NOASSERTION",

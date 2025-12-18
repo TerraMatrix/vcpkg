@@ -68,8 +68,8 @@ set (${HDF5_PACKAGE_NAME}_INSTALL_MOD_FORTRAN "")
 # Features:
 #-----------------------------------------------------------------------------
 set (${HDF5_PACKAGE_NAME}_BUILD_HL_LIB          ON)
-set (${HDF5_PACKAGE_NAME}_BUILD_SHARED_LIBS     NO)
-set (${HDF5_PACKAGE_NAME}_BUILD_STATIC_LIBS     YES)
+set (${HDF5_PACKAGE_NAME}_BUILD_SHARED_LIBS     YES)
+set (${HDF5_PACKAGE_NAME}_BUILD_STATIC_LIBS     NO)
 set (${HDF5_PACKAGE_NAME}_ENABLE_THREADSAFE     ON)
 set (${HDF5_PACKAGE_NAME}_ENABLE_PARALLEL       OFF)
 set (${HDF5_PACKAGE_NAME}_DEFAULT_API_VERSION  "v114")
@@ -78,7 +78,7 @@ set (${HDF5_PACKAGE_NAME}_BUILD_DIMENSION_SCALES_WITH_NEW_REF )
 #-----------------------------------------------------------------------------
 set (${HDF5_PACKAGE_NAME}_BUILD_TOOLS           OFF)
 set (${HDF5_PACKAGE_NAME}_BUILD_HL_GIF_TOOLS    OFF)
-set (${HDF5_PACKAGE_NAME}_BUILD_STATIC_TOOLS    ON)
+set (${HDF5_PACKAGE_NAME}_BUILD_STATIC_TOOLS    OFF)
 #-----------------------------------------------------------------------------
 set (${HDF5_PACKAGE_NAME}_ENABLE_NONSTANDARD_FEATURE_FLOAT16 ON)
 #-----------------------------------------------------------------------------
@@ -95,7 +95,7 @@ set (${HDF5_PACKAGE_NAME}_ENABLE_SUBFILING_VFD  OFF)
 set (${HDF5_PACKAGE_NAME}_ENABLE_PLUGIN_SUPPORT OFF)
 #-----------------------------------------------------------------------------
 set (${HDF5_PACKAGE_NAME}_PACKAGE_EXTLIBS       OFF)
-set (${HDF5_PACKAGE_NAME}_EXPORT_LIBRARIES      hdf5-static;hdf5_hl-static;hdf5_cpp-static;hdf5_hl_cpp-static)
+set (${HDF5_PACKAGE_NAME}_EXPORT_LIBRARIES      hdf5-shared;hdf5_hl-shared;hdf5_cpp-shared;hdf5_hl_cpp-shared)
 set (${HDF5_PACKAGE_NAME}_ARCHITECTURE         "")
 set (${HDF5_PACKAGE_NAME}_TOOLSET              "")
 

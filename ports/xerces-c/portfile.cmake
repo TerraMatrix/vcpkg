@@ -36,8 +36,10 @@ elseif(VCPKG_HOST_IS_OSX)
 else()
     # xercesc chooses gnuiconv or iconv (cmake/XercesTranscoderSelection.cmake)
 endif()
-if("xmlch-wchar" IN_LIST FEATURES)
+if("xmlch-wchar" IN_LIST FEATURES AND VCPKG_TARGET_IS_WINDOWS)
     vcpkg_list(APPEND options -Dxmlch-type=wchar_t)
+else()
+    vcpkg_list(APPEND options -Dxmlch-type=char16_t)
 endif()
 
 vcpkg_cmake_configure(

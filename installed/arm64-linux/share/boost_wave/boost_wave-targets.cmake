@@ -55,10 +55,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::wave
-add_library(Boost::wave STATIC IMPORTED)
+add_library(Boost::wave SHARED IMPORTED)
 
 set_target_properties(Boost::wave PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_WAVE_NO_LIB;BOOST_WAVE_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_WAVE_NO_LIB;BOOST_WAVE_DYN_LINK"
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::concept_check;Boost::config;Boost::core;Boost::filesystem;Boost::format;Boost::iterator;Boost::lexical_cast;Boost::mpl;Boost::multi_index;Boost::optional;Boost::pool;Boost::preprocessor;Boost::serialization;Boost::smart_ptr;Boost::spirit;Boost::static_assert;Boost::throw_exception;Boost::type_traits"

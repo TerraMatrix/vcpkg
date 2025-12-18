@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS Qhull::qhullcpp Qhull::qhullstatic Qhull::qhullstatic_r)
+foreach(_cmake_expected_target IN ITEMS Qhull::qhullcpp Qhull::qhull_r)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -61,17 +61,10 @@ set_target_properties(Qhull::qhullcpp PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
 )
 
-# Create imported target Qhull::qhullstatic
-add_library(Qhull::qhullstatic STATIC IMPORTED)
+# Create imported target Qhull::qhull_r
+add_library(Qhull::qhull_r SHARED IMPORTED)
 
-set_target_properties(Qhull::qhullstatic PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-)
-
-# Create imported target Qhull::qhullstatic_r
-add_library(Qhull::qhullstatic_r STATIC IMPORTED)
-
-set_target_properties(Qhull::qhullstatic_r PROPERTIES
+set_target_properties(Qhull::qhull_r PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
 )
 

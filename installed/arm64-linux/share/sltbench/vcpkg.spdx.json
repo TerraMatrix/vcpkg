@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/sltbench-arm64-linux-2.4.0#3-6cfd9498-e7d7-4939-aaa7-8c894c22879f",
-  "name": "sltbench:arm64-linux@2.4.0#3 b64191ace7ed3f00bbd3aa29c10745796f330c1f807f064f48ffc2d280c29967",
+  "documentNamespace": "https://spdx.org/spdxdocs/sltbench-arm64-linux-2.4.0#3-2cca3082-c77b-4210-89f2-2e98d176f3f3",
+  "name": "sltbench:arm64-linux@2.4.0#3 9a851c8ec924f2656322399ba099620ffe655118c65387d5dfad9cfd3b9ddd22",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-17T10:25:45Z"
+    "created": "2025-12-16T10:19:54Z"
   },
   "relationships": [
     {
@@ -181,16 +181,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-29"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-30"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-31"
     }
   ],
   "packages": [
@@ -209,7 +199,7 @@
     {
       "name": "sltbench:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "b64191ace7ed3f00bbd3aa29c10745796f330c1f807f064f48ffc2d280c29967",
+      "versionInfo": "9a851c8ec924f2656322399ba099620ffe655118c65387d5dfad9cfd3b9ddd22",
       "downloadLocation": "NONE",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
@@ -284,20 +274,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./debug/lib/libsltbench.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "c13a0d74c46ac58188fa10eb0b0b56c453eb95cd1852f6f4d86fac82f1c386c3"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/sltbench/copyright",
-      "SPDXID": "SPDXRef-binary-file-2",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -309,7 +287,7 @@
     },
     {
       "fileName": "./share/sltbench/sltbenchTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -321,7 +299,7 @@
     },
     {
       "fileName": "./share/sltbench/sltbenchTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -332,20 +310,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/sltbench/sltbenchTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "f38acf3832ad32d50f65377663283586f023b61c91f9d01c371dde238fce3240"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/sltbench/sltbench-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -357,7 +323,7 @@
     },
     {
       "fileName": "./include/sltbench/BenchCore.h",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -369,7 +335,7 @@
     },
     {
       "fileName": "./include/sltbench/Bench.h",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -381,7 +347,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/StopGenerationException.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -393,7 +359,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/Benchmark_F_AG.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -405,7 +371,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/RunWarnings.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -417,7 +383,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/IConfig.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -429,7 +395,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/Optional.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -441,7 +407,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/Benchmark_F_LAG.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -453,7 +419,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/Benchmark_FB_LAG.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -465,7 +431,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/BenchCoreApi.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -477,7 +443,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/Benchmark_F.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -489,7 +455,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/DoNotOptimize.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -501,7 +467,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/Benchmark_AG.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -513,7 +479,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/Verdict.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -525,7 +491,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/Descriptor.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -537,7 +503,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/BenchApi.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -549,7 +515,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/BenchmarksContainer.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -561,7 +527,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/Benchmark_FB_AG.h",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -573,7 +539,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/Benchmark_FB.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -585,7 +551,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/Env.h",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -597,7 +563,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/IReporter.h",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -609,7 +575,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/StaticAssertsUtil.h",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -621,7 +587,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/IBenchmark.h",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -633,7 +599,7 @@
     },
     {
       "fileName": "./include/sltbench/impl/Benchmark_LAG.h",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -645,11 +611,11 @@
     },
     {
       "fileName": "./lib/libsltbench.a",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "8fc8b0c8ff5f8356362e7ab3580c9cca5cf31af4a6faa09f7d8f34f26230c43e"
+          "checksumValue": "95cb2fdebeb69eacc8e41e4146483dee1888703c25890647c02da6e114eed70e"
         }
       ],
       "licenseConcluded": "NOASSERTION",

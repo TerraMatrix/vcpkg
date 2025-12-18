@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/icu-arm64-linux-74.2#6-1f6547e3-da74-4bfa-aa28-3c5e82309bf9",
-  "name": "icu:arm64-linux@74.2#6 2e68d71991f34cd420328d5e9953884dbf71876a2c38e74f975af62e90479614",
+  "documentNamespace": "https://spdx.org/spdxdocs/icu-arm64-linux-74.2#6-e06c0d42-261b-42bf-af9b-f861a5a6b62b",
+  "name": "icu:arm64-linux@74.2#6 2758a1aa5ce80d477fdab8cc079cfd339cc325af558613dd1010967f7854b71f",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-26T10:03:55Z"
+    "created": "2025-12-16T10:56:42Z"
   },
   "relationships": [
     {
@@ -1266,6 +1266,16 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-234"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-235"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-236"
     }
   ],
   "packages": [
@@ -1284,7 +1294,7 @@
     {
       "name": "icu:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "2e68d71991f34cd420328d5e9953884dbf71876a2c38e74f975af62e90479614",
+      "versionInfo": "2758a1aa5ce80d477fdab8cc079cfd339cc325af558613dd1010967f7854b71f",
       "downloadLocation": "NONE",
       "licenseConcluded": "ICU",
       "licenseDeclared": "NOASSERTION",
@@ -1482,103 +1492,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libicuuc.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "c96cded81fa04df4764b67b2495868efe7368952d1e550b77e4de9a333056db6"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libicutu.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "9d491105911bd10fe3c3f2d2c747e4c1c204d3f01af3b4a8f7e741ca118e1d6f"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libicudata.a",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "b6439df9c61a8db87d30cf01dfd5bca11443c066b45136467174a96309565d40"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libicui18n.a",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "45d6548161e4e07e28501d68d59b63d2628c9e2bc25858464f042cb3a6801b39"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libicuio.a",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "8d96d233cedffad98413dea3ba18c8605d9d85c238c787a70f35675c5742d6dd"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/icu-i18n.pc",
-      "SPDXID": "SPDXRef-binary-file-6",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "43efbad112e0b8612c472ebcc2ef9f27f46aaea7e4fed6983541df39ac6bae6c"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/icu-uc.pc",
-      "SPDXID": "SPDXRef-binary-file-7",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "0e26e1cbec4a4c8628c9e940e25f1a6c8cfaea829eb9853460c1e7e4048e66dc"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/icu-io.pc",
-      "SPDXID": "SPDXRef-binary-file-8",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "db7c4605a0b5d8df7eaa374735d69588fb38c69729d1e1bff17df86c18198927"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1586,11 +1500,11 @@
     },
     {
       "fileName": "./share/icu/vcpkg-cmake-wrapper.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "28f6b9ec507ad06e56bc7eabd40db2467fd38cb8e08739f7c7a1832c006926d5"
+          "checksumValue": "2ce91568f06b08b59095047a5923467f814ba2ec52b960582870a4b98c4be80d"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1598,7 +1512,7 @@
     },
     {
       "fileName": "./share/icu/copyright",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1610,7 +1524,7 @@
     },
     {
       "fileName": "./include/unicode/uiter.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1622,7 +1536,7 @@
     },
     {
       "fileName": "./include/unicode/dtitvfmt.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1634,7 +1548,7 @@
     },
     {
       "fileName": "./include/unicode/regex.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1646,7 +1560,7 @@
     },
     {
       "fileName": "./include/unicode/datefmt.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1658,7 +1572,7 @@
     },
     {
       "fileName": "./include/unicode/numfmt.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1670,7 +1584,7 @@
     },
     {
       "fileName": "./include/unicode/utf32.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1682,7 +1596,7 @@
     },
     {
       "fileName": "./include/unicode/choicfmt.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1694,7 +1608,7 @@
     },
     {
       "fileName": "./include/unicode/symtable.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1706,7 +1620,7 @@
     },
     {
       "fileName": "./include/unicode/utrace.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1718,7 +1632,7 @@
     },
     {
       "fileName": "./include/unicode/enumset.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1730,7 +1644,7 @@
     },
     {
       "fileName": "./include/unicode/bytestream.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1742,7 +1656,7 @@
     },
     {
       "fileName": "./include/unicode/ushape.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1754,7 +1668,7 @@
     },
     {
       "fileName": "./include/unicode/udisplaycontext.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1766,7 +1680,7 @@
     },
     {
       "fileName": "./include/unicode/measure.h",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1778,7 +1692,7 @@
     },
     {
       "fileName": "./include/unicode/ucoleitr.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1790,7 +1704,7 @@
     },
     {
       "fileName": "./include/unicode/ureldatefmt.h",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1802,7 +1716,7 @@
     },
     {
       "fileName": "./include/unicode/upluralrules.h",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1814,7 +1728,7 @@
     },
     {
       "fileName": "./include/unicode/udata.h",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1826,7 +1740,7 @@
     },
     {
       "fileName": "./include/unicode/alphaindex.h",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1838,7 +1752,7 @@
     },
     {
       "fileName": "./include/unicode/unorm.h",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1850,7 +1764,7 @@
     },
     {
       "fileName": "./include/unicode/currpinf.h",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1862,7 +1776,7 @@
     },
     {
       "fileName": "./include/unicode/dbbi.h",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1874,7 +1788,7 @@
     },
     {
       "fileName": "./include/unicode/timezone.h",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1886,7 +1800,7 @@
     },
     {
       "fileName": "./include/unicode/decimfmt.h",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1898,7 +1812,7 @@
     },
     {
       "fileName": "./include/unicode/unifilt.h",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1910,7 +1824,7 @@
     },
     {
       "fileName": "./include/unicode/ucsdet.h",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1922,7 +1836,7 @@
     },
     {
       "fileName": "./include/unicode/coleitr.h",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1934,7 +1848,7 @@
     },
     {
       "fileName": "./include/unicode/docmain.h",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1946,7 +1860,7 @@
     },
     {
       "fileName": "./include/unicode/ucurr.h",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1958,7 +1872,7 @@
     },
     {
       "fileName": "./include/unicode/unifunct.h",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1970,7 +1884,7 @@
     },
     {
       "fileName": "./include/unicode/compactdecimalformat.h",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1982,7 +1896,7 @@
     },
     {
       "fileName": "./include/unicode/schriter.h",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1994,7 +1908,7 @@
     },
     {
       "fileName": "./include/unicode/locdspnm.h",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2006,7 +1920,7 @@
     },
     {
       "fileName": "./include/unicode/uclean.h",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2018,7 +1932,7 @@
     },
     {
       "fileName": "./include/unicode/uldnames.h",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2030,7 +1944,7 @@
     },
     {
       "fileName": "./include/unicode/basictz.h",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2042,7 +1956,7 @@
     },
     {
       "fileName": "./include/unicode/edits.h",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2054,7 +1968,7 @@
     },
     {
       "fileName": "./include/unicode/displayoptions.h",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2066,7 +1980,7 @@
     },
     {
       "fileName": "./include/unicode/dtrule.h",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2078,7 +1992,7 @@
     },
     {
       "fileName": "./include/unicode/simpleformatter.h",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2090,7 +2004,7 @@
     },
     {
       "fileName": "./include/unicode/numsys.h",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2102,7 +2016,7 @@
     },
     {
       "fileName": "./include/unicode/unumsys.h",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2114,7 +2028,7 @@
     },
     {
       "fileName": "./include/unicode/tmutamt.h",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2126,7 +2040,7 @@
     },
     {
       "fileName": "./include/unicode/ptypes.h",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2138,7 +2052,7 @@
     },
     {
       "fileName": "./include/unicode/simplenumberformatter.h",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2150,7 +2064,7 @@
     },
     {
       "fileName": "./include/unicode/rep.h",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2162,7 +2076,7 @@
     },
     {
       "fileName": "./include/unicode/udat.h",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2174,7 +2088,7 @@
     },
     {
       "fileName": "./include/unicode/currunit.h",
-      "SPDXID": "SPDXRef-binary-file-58",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2186,7 +2100,7 @@
     },
     {
       "fileName": "./include/unicode/idna.h",
-      "SPDXID": "SPDXRef-binary-file-59",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2198,7 +2112,7 @@
     },
     {
       "fileName": "./include/unicode/uobject.h",
-      "SPDXID": "SPDXRef-binary-file-60",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2210,7 +2124,7 @@
     },
     {
       "fileName": "./include/unicode/ulistformatter.h",
-      "SPDXID": "SPDXRef-binary-file-61",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2222,7 +2136,7 @@
     },
     {
       "fileName": "./include/unicode/normalizer2.h",
-      "SPDXID": "SPDXRef-binary-file-62",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2234,7 +2148,7 @@
     },
     {
       "fileName": "./include/unicode/ugender.h",
-      "SPDXID": "SPDXRef-binary-file-63",
+      "SPDXID": "SPDXRef-binary-file-55",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2246,11 +2160,11 @@
     },
     {
       "fileName": "./include/unicode/utf_old.h",
-      "SPDXID": "SPDXRef-binary-file-64",
+      "SPDXID": "SPDXRef-binary-file-56",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "1d6d96b3bda80b0efd3f84701a135b9f41ec19ad880e85a61524dec22c3a8b42"
+          "checksumValue": "a62e7ad42bfca499d29ec04dffc4d17518634f6f8020d1337eefb06716c62a2a"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -2258,7 +2172,7 @@
     },
     {
       "fileName": "./include/unicode/bytestrie.h",
-      "SPDXID": "SPDXRef-binary-file-65",
+      "SPDXID": "SPDXRef-binary-file-57",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2270,7 +2184,7 @@
     },
     {
       "fileName": "./include/unicode/tmunit.h",
-      "SPDXID": "SPDXRef-binary-file-66",
+      "SPDXID": "SPDXRef-binary-file-58",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2282,7 +2196,7 @@
     },
     {
       "fileName": "./include/unicode/uformattable.h",
-      "SPDXID": "SPDXRef-binary-file-67",
+      "SPDXID": "SPDXRef-binary-file-59",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2294,7 +2208,7 @@
     },
     {
       "fileName": "./include/unicode/uenum.h",
-      "SPDXID": "SPDXRef-binary-file-68",
+      "SPDXID": "SPDXRef-binary-file-60",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2306,7 +2220,7 @@
     },
     {
       "fileName": "./include/unicode/curramt.h",
-      "SPDXID": "SPDXRef-binary-file-69",
+      "SPDXID": "SPDXRef-binary-file-61",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2318,7 +2232,7 @@
     },
     {
       "fileName": "./include/unicode/usetiter.h",
-      "SPDXID": "SPDXRef-binary-file-70",
+      "SPDXID": "SPDXRef-binary-file-62",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2330,7 +2244,7 @@
     },
     {
       "fileName": "./include/unicode/tztrans.h",
-      "SPDXID": "SPDXRef-binary-file-71",
+      "SPDXID": "SPDXRef-binary-file-63",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2342,7 +2256,7 @@
     },
     {
       "fileName": "./include/unicode/filteredbrk.h",
-      "SPDXID": "SPDXRef-binary-file-72",
+      "SPDXID": "SPDXRef-binary-file-64",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2354,7 +2268,7 @@
     },
     {
       "fileName": "./include/unicode/tmutfmt.h",
-      "SPDXID": "SPDXRef-binary-file-73",
+      "SPDXID": "SPDXRef-binary-file-65",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2366,7 +2280,7 @@
     },
     {
       "fileName": "./include/unicode/urename.h",
-      "SPDXID": "SPDXRef-binary-file-74",
+      "SPDXID": "SPDXRef-binary-file-66",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2378,7 +2292,7 @@
     },
     {
       "fileName": "./include/unicode/numberformatter.h",
-      "SPDXID": "SPDXRef-binary-file-75",
+      "SPDXID": "SPDXRef-binary-file-67",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2390,7 +2304,7 @@
     },
     {
       "fileName": "./include/unicode/unum.h",
-      "SPDXID": "SPDXRef-binary-file-76",
+      "SPDXID": "SPDXRef-binary-file-68",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2402,7 +2316,7 @@
     },
     {
       "fileName": "./include/unicode/utext.h",
-      "SPDXID": "SPDXRef-binary-file-77",
+      "SPDXID": "SPDXRef-binary-file-69",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2414,7 +2328,7 @@
     },
     {
       "fileName": "./include/unicode/tblcoll.h",
-      "SPDXID": "SPDXRef-binary-file-78",
+      "SPDXID": "SPDXRef-binary-file-70",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2426,7 +2340,7 @@
     },
     {
       "fileName": "./include/unicode/utmscale.h",
-      "SPDXID": "SPDXRef-binary-file-79",
+      "SPDXID": "SPDXRef-binary-file-71",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2438,7 +2352,7 @@
     },
     {
       "fileName": "./include/unicode/smpdtfmt.h",
-      "SPDXID": "SPDXRef-binary-file-80",
+      "SPDXID": "SPDXRef-binary-file-72",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2450,7 +2364,7 @@
     },
     {
       "fileName": "./include/unicode/unistr.h",
-      "SPDXID": "SPDXRef-binary-file-81",
+      "SPDXID": "SPDXRef-binary-file-73",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2462,7 +2376,7 @@
     },
     {
       "fileName": "./include/unicode/brkiter.h",
-      "SPDXID": "SPDXRef-binary-file-82",
+      "SPDXID": "SPDXRef-binary-file-74",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2474,7 +2388,7 @@
     },
     {
       "fileName": "./include/unicode/parsepos.h",
-      "SPDXID": "SPDXRef-binary-file-83",
+      "SPDXID": "SPDXRef-binary-file-75",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2486,7 +2400,7 @@
     },
     {
       "fileName": "./include/unicode/unorm2.h",
-      "SPDXID": "SPDXRef-binary-file-84",
+      "SPDXID": "SPDXRef-binary-file-76",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2498,7 +2412,7 @@
     },
     {
       "fileName": "./include/unicode/region.h",
-      "SPDXID": "SPDXRef-binary-file-85",
+      "SPDXID": "SPDXRef-binary-file-77",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2510,7 +2424,7 @@
     },
     {
       "fileName": "./include/unicode/ucnv.h",
-      "SPDXID": "SPDXRef-binary-file-86",
+      "SPDXID": "SPDXRef-binary-file-78",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2522,7 +2436,7 @@
     },
     {
       "fileName": "./include/unicode/uformattedvalue.h",
-      "SPDXID": "SPDXRef-binary-file-87",
+      "SPDXID": "SPDXRef-binary-file-79",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2534,7 +2448,7 @@
     },
     {
       "fileName": "./include/unicode/nounit.h",
-      "SPDXID": "SPDXRef-binary-file-88",
+      "SPDXID": "SPDXRef-binary-file-80",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2546,7 +2460,7 @@
     },
     {
       "fileName": "./include/unicode/dtfmtsym.h",
-      "SPDXID": "SPDXRef-binary-file-89",
+      "SPDXID": "SPDXRef-binary-file-81",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2558,7 +2472,7 @@
     },
     {
       "fileName": "./include/unicode/ustdio.h",
-      "SPDXID": "SPDXRef-binary-file-90",
+      "SPDXID": "SPDXRef-binary-file-82",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2570,7 +2484,7 @@
     },
     {
       "fileName": "./include/unicode/ustringtrie.h",
-      "SPDXID": "SPDXRef-binary-file-91",
+      "SPDXID": "SPDXRef-binary-file-83",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2582,7 +2496,7 @@
     },
     {
       "fileName": "./include/unicode/selfmt.h",
-      "SPDXID": "SPDXRef-binary-file-92",
+      "SPDXID": "SPDXRef-binary-file-84",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2594,7 +2508,7 @@
     },
     {
       "fileName": "./include/unicode/ubidi.h",
-      "SPDXID": "SPDXRef-binary-file-93",
+      "SPDXID": "SPDXRef-binary-file-85",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2606,7 +2520,7 @@
     },
     {
       "fileName": "./include/unicode/plurfmt.h",
-      "SPDXID": "SPDXRef-binary-file-94",
+      "SPDXID": "SPDXRef-binary-file-86",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2618,7 +2532,7 @@
     },
     {
       "fileName": "./include/unicode/dtintrv.h",
-      "SPDXID": "SPDXRef-binary-file-95",
+      "SPDXID": "SPDXRef-binary-file-87",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2630,7 +2544,7 @@
     },
     {
       "fileName": "./include/unicode/vtzone.h",
-      "SPDXID": "SPDXRef-binary-file-96",
+      "SPDXID": "SPDXRef-binary-file-88",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2642,7 +2556,7 @@
     },
     {
       "fileName": "./include/unicode/gregocal.h",
-      "SPDXID": "SPDXRef-binary-file-97",
+      "SPDXID": "SPDXRef-binary-file-89",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2654,7 +2568,7 @@
     },
     {
       "fileName": "./include/unicode/uregion.h",
-      "SPDXID": "SPDXRef-binary-file-98",
+      "SPDXID": "SPDXRef-binary-file-90",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2666,7 +2580,7 @@
     },
     {
       "fileName": "./include/unicode/msgfmt.h",
-      "SPDXID": "SPDXRef-binary-file-99",
+      "SPDXID": "SPDXRef-binary-file-91",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2678,7 +2592,7 @@
     },
     {
       "fileName": "./include/unicode/resbund.h",
-      "SPDXID": "SPDXRef-binary-file-100",
+      "SPDXID": "SPDXRef-binary-file-92",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2690,7 +2604,7 @@
     },
     {
       "fileName": "./include/unicode/measfmt.h",
-      "SPDXID": "SPDXRef-binary-file-101",
+      "SPDXID": "SPDXRef-binary-file-93",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2702,7 +2616,7 @@
     },
     {
       "fileName": "./include/unicode/uscript.h",
-      "SPDXID": "SPDXRef-binary-file-102",
+      "SPDXID": "SPDXRef-binary-file-94",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2714,7 +2628,7 @@
     },
     {
       "fileName": "./include/unicode/uversion.h",
-      "SPDXID": "SPDXRef-binary-file-103",
+      "SPDXID": "SPDXRef-binary-file-95",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2726,7 +2640,7 @@
     },
     {
       "fileName": "./include/unicode/ucharstriebuilder.h",
-      "SPDXID": "SPDXRef-binary-file-104",
+      "SPDXID": "SPDXRef-binary-file-96",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2738,7 +2652,7 @@
     },
     {
       "fileName": "./include/unicode/bytestriebuilder.h",
-      "SPDXID": "SPDXRef-binary-file-105",
+      "SPDXID": "SPDXRef-binary-file-97",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2750,7 +2664,7 @@
     },
     {
       "fileName": "./include/unicode/listformatter.h",
-      "SPDXID": "SPDXRef-binary-file-106",
+      "SPDXID": "SPDXRef-binary-file-98",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2762,7 +2676,7 @@
     },
     {
       "fileName": "./include/unicode/locid.h",
-      "SPDXID": "SPDXRef-binary-file-107",
+      "SPDXID": "SPDXRef-binary-file-99",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2774,7 +2688,7 @@
     },
     {
       "fileName": "./include/unicode/char16ptr.h",
-      "SPDXID": "SPDXRef-binary-file-108",
+      "SPDXID": "SPDXRef-binary-file-100",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2786,7 +2700,7 @@
     },
     {
       "fileName": "./include/unicode/utrans.h",
-      "SPDXID": "SPDXRef-binary-file-109",
+      "SPDXID": "SPDXRef-binary-file-101",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2798,7 +2712,7 @@
     },
     {
       "fileName": "./include/unicode/fpositer.h",
-      "SPDXID": "SPDXRef-binary-file-110",
+      "SPDXID": "SPDXRef-binary-file-102",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2810,7 +2724,7 @@
     },
     {
       "fileName": "./include/unicode/stringtriebuilder.h",
-      "SPDXID": "SPDXRef-binary-file-111",
+      "SPDXID": "SPDXRef-binary-file-103",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2822,7 +2736,7 @@
     },
     {
       "fileName": "./include/unicode/ucasemap.h",
-      "SPDXID": "SPDXRef-binary-file-112",
+      "SPDXID": "SPDXRef-binary-file-104",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2834,7 +2748,7 @@
     },
     {
       "fileName": "./include/unicode/search.h",
-      "SPDXID": "SPDXRef-binary-file-113",
+      "SPDXID": "SPDXRef-binary-file-105",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2846,7 +2760,7 @@
     },
     {
       "fileName": "./include/unicode/uset.h",
-      "SPDXID": "SPDXRef-binary-file-114",
+      "SPDXID": "SPDXRef-binary-file-106",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2858,7 +2772,7 @@
     },
     {
       "fileName": "./include/unicode/ulocale.h",
-      "SPDXID": "SPDXRef-binary-file-115",
+      "SPDXID": "SPDXRef-binary-file-107",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2870,7 +2784,7 @@
     },
     {
       "fileName": "./include/unicode/umutablecptrie.h",
-      "SPDXID": "SPDXRef-binary-file-116",
+      "SPDXID": "SPDXRef-binary-file-108",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2882,7 +2796,7 @@
     },
     {
       "fileName": "./include/unicode/udatpg.h",
-      "SPDXID": "SPDXRef-binary-file-117",
+      "SPDXID": "SPDXRef-binary-file-109",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2894,7 +2808,7 @@
     },
     {
       "fileName": "./include/unicode/icudataver.h",
-      "SPDXID": "SPDXRef-binary-file-118",
+      "SPDXID": "SPDXRef-binary-file-110",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2906,7 +2820,7 @@
     },
     {
       "fileName": "./include/unicode/dtitvinf.h",
-      "SPDXID": "SPDXRef-binary-file-119",
+      "SPDXID": "SPDXRef-binary-file-111",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2918,7 +2832,7 @@
     },
     {
       "fileName": "./include/unicode/urep.h",
-      "SPDXID": "SPDXRef-binary-file-120",
+      "SPDXID": "SPDXRef-binary-file-112",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2930,7 +2844,7 @@
     },
     {
       "fileName": "./include/unicode/rbtz.h",
-      "SPDXID": "SPDXRef-binary-file-121",
+      "SPDXID": "SPDXRef-binary-file-113",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2942,7 +2856,7 @@
     },
     {
       "fileName": "./include/unicode/stsearch.h",
-      "SPDXID": "SPDXRef-binary-file-122",
+      "SPDXID": "SPDXRef-binary-file-114",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2954,7 +2868,7 @@
     },
     {
       "fileName": "./include/unicode/messagepattern.h",
-      "SPDXID": "SPDXRef-binary-file-123",
+      "SPDXID": "SPDXRef-binary-file-115",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2966,7 +2880,7 @@
     },
     {
       "fileName": "./include/unicode/uspoof.h",
-      "SPDXID": "SPDXRef-binary-file-124",
+      "SPDXID": "SPDXRef-binary-file-116",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2978,7 +2892,7 @@
     },
     {
       "fileName": "./include/unicode/format.h",
-      "SPDXID": "SPDXRef-binary-file-125",
+      "SPDXID": "SPDXRef-binary-file-117",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2990,7 +2904,7 @@
     },
     {
       "fileName": "./include/unicode/ucpmap.h",
-      "SPDXID": "SPDXRef-binary-file-126",
+      "SPDXID": "SPDXRef-binary-file-118",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3002,7 +2916,7 @@
     },
     {
       "fileName": "./include/unicode/ucnv_cb.h",
-      "SPDXID": "SPDXRef-binary-file-127",
+      "SPDXID": "SPDXRef-binary-file-119",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3014,7 +2928,7 @@
     },
     {
       "fileName": "./include/unicode/umsg.h",
-      "SPDXID": "SPDXRef-binary-file-128",
+      "SPDXID": "SPDXRef-binary-file-120",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3026,7 +2940,7 @@
     },
     {
       "fileName": "./include/unicode/formattedvalue.h",
-      "SPDXID": "SPDXRef-binary-file-129",
+      "SPDXID": "SPDXRef-binary-file-121",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3038,7 +2952,7 @@
     },
     {
       "fileName": "./include/unicode/localematcher.h",
-      "SPDXID": "SPDXRef-binary-file-130",
+      "SPDXID": "SPDXRef-binary-file-122",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3050,7 +2964,7 @@
     },
     {
       "fileName": "./include/unicode/uchar.h",
-      "SPDXID": "SPDXRef-binary-file-131",
+      "SPDXID": "SPDXRef-binary-file-123",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3062,7 +2976,7 @@
     },
     {
       "fileName": "./include/unicode/putil.h",
-      "SPDXID": "SPDXRef-binary-file-132",
+      "SPDXID": "SPDXRef-binary-file-124",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3074,7 +2988,7 @@
     },
     {
       "fileName": "./include/unicode/localebuilder.h",
-      "SPDXID": "SPDXRef-binary-file-133",
+      "SPDXID": "SPDXRef-binary-file-125",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3086,7 +3000,7 @@
     },
     {
       "fileName": "./include/unicode/ubrk.h",
-      "SPDXID": "SPDXRef-binary-file-134",
+      "SPDXID": "SPDXRef-binary-file-126",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3098,7 +3012,7 @@
     },
     {
       "fileName": "./include/unicode/usprep.h",
-      "SPDXID": "SPDXRef-binary-file-135",
+      "SPDXID": "SPDXRef-binary-file-127",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3110,7 +3024,7 @@
     },
     {
       "fileName": "./include/unicode/ustream.h",
-      "SPDXID": "SPDXRef-binary-file-136",
+      "SPDXID": "SPDXRef-binary-file-128",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3122,7 +3036,7 @@
     },
     {
       "fileName": "./include/unicode/uconfig.h",
-      "SPDXID": "SPDXRef-binary-file-137",
+      "SPDXID": "SPDXRef-binary-file-129",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3134,7 +3048,7 @@
     },
     {
       "fileName": "./include/unicode/ucharstrie.h",
-      "SPDXID": "SPDXRef-binary-file-138",
+      "SPDXID": "SPDXRef-binary-file-130",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3146,7 +3060,7 @@
     },
     {
       "fileName": "./include/unicode/gender.h",
-      "SPDXID": "SPDXRef-binary-file-139",
+      "SPDXID": "SPDXRef-binary-file-131",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3158,7 +3072,7 @@
     },
     {
       "fileName": "./include/unicode/ucnvsel.h",
-      "SPDXID": "SPDXRef-binary-file-140",
+      "SPDXID": "SPDXRef-binary-file-132",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3170,7 +3084,7 @@
     },
     {
       "fileName": "./include/unicode/simpletz.h",
-      "SPDXID": "SPDXRef-binary-file-141",
+      "SPDXID": "SPDXRef-binary-file-133",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3182,7 +3096,7 @@
     },
     {
       "fileName": "./include/unicode/scientificnumberformatter.h",
-      "SPDXID": "SPDXRef-binary-file-142",
+      "SPDXID": "SPDXRef-binary-file-134",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3194,7 +3108,7 @@
     },
     {
       "fileName": "./include/unicode/chariter.h",
-      "SPDXID": "SPDXRef-binary-file-143",
+      "SPDXID": "SPDXRef-binary-file-135",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3206,7 +3120,7 @@
     },
     {
       "fileName": "./include/unicode/fmtable.h",
-      "SPDXID": "SPDXRef-binary-file-144",
+      "SPDXID": "SPDXRef-binary-file-136",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3218,11 +3132,11 @@
     },
     {
       "fileName": "./include/unicode/utypes.h",
-      "SPDXID": "SPDXRef-binary-file-145",
+      "SPDXID": "SPDXRef-binary-file-137",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f04d8b1dbc32c37b537dd9b29d155d55293e320a4d3ee81b931c6072012ab9ae"
+          "checksumValue": "c2f63f829396c0f567d646be45be806ec11798e9ff742468b760931c845bb4eb"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -3230,7 +3144,7 @@
     },
     {
       "fileName": "./include/unicode/rbbi.h",
-      "SPDXID": "SPDXRef-binary-file-146",
+      "SPDXID": "SPDXRef-binary-file-138",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3242,7 +3156,7 @@
     },
     {
       "fileName": "./include/unicode/udisplayoptions.h",
-      "SPDXID": "SPDXRef-binary-file-147",
+      "SPDXID": "SPDXRef-binary-file-139",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3254,7 +3168,7 @@
     },
     {
       "fileName": "./include/unicode/uidna.h",
-      "SPDXID": "SPDXRef-binary-file-148",
+      "SPDXID": "SPDXRef-binary-file-140",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3266,7 +3180,7 @@
     },
     {
       "fileName": "./include/unicode/measunit.h",
-      "SPDXID": "SPDXRef-binary-file-149",
+      "SPDXID": "SPDXRef-binary-file-141",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3278,7 +3192,7 @@
     },
     {
       "fileName": "./include/unicode/ulocdata.h",
-      "SPDXID": "SPDXRef-binary-file-150",
+      "SPDXID": "SPDXRef-binary-file-142",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3290,7 +3204,7 @@
     },
     {
       "fileName": "./include/unicode/caniter.h",
-      "SPDXID": "SPDXRef-binary-file-151",
+      "SPDXID": "SPDXRef-binary-file-143",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3302,7 +3216,7 @@
     },
     {
       "fileName": "./include/unicode/ures.h",
-      "SPDXID": "SPDXRef-binary-file-152",
+      "SPDXID": "SPDXRef-binary-file-144",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3314,7 +3228,7 @@
     },
     {
       "fileName": "./include/unicode/stringpiece.h",
-      "SPDXID": "SPDXRef-binary-file-153",
+      "SPDXID": "SPDXRef-binary-file-145",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3326,7 +3240,7 @@
     },
     {
       "fileName": "./include/unicode/ucnv_err.h",
-      "SPDXID": "SPDXRef-binary-file-154",
+      "SPDXID": "SPDXRef-binary-file-146",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3338,7 +3252,7 @@
     },
     {
       "fileName": "./include/unicode/normlzr.h",
-      "SPDXID": "SPDXRef-binary-file-155",
+      "SPDXID": "SPDXRef-binary-file-147",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3350,7 +3264,7 @@
     },
     {
       "fileName": "./include/unicode/unumberoptions.h",
-      "SPDXID": "SPDXRef-binary-file-156",
+      "SPDXID": "SPDXRef-binary-file-148",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3362,7 +3276,7 @@
     },
     {
       "fileName": "./include/unicode/appendable.h",
-      "SPDXID": "SPDXRef-binary-file-157",
+      "SPDXID": "SPDXRef-binary-file-149",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3374,7 +3288,7 @@
     },
     {
       "fileName": "./include/unicode/tzrule.h",
-      "SPDXID": "SPDXRef-binary-file-158",
+      "SPDXID": "SPDXRef-binary-file-150",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3386,7 +3300,7 @@
     },
     {
       "fileName": "./include/unicode/ucal.h",
-      "SPDXID": "SPDXRef-binary-file-159",
+      "SPDXID": "SPDXRef-binary-file-151",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3398,7 +3312,7 @@
     },
     {
       "fileName": "./include/unicode/ucptrie.h",
-      "SPDXID": "SPDXRef-binary-file-160",
+      "SPDXID": "SPDXRef-binary-file-152",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3410,7 +3324,7 @@
     },
     {
       "fileName": "./include/unicode/ulocbuilder.h",
-      "SPDXID": "SPDXRef-binary-file-161",
+      "SPDXID": "SPDXRef-binary-file-153",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3422,7 +3336,7 @@
     },
     {
       "fileName": "./include/unicode/dtptngen.h",
-      "SPDXID": "SPDXRef-binary-file-162",
+      "SPDXID": "SPDXRef-binary-file-154",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3434,7 +3348,7 @@
     },
     {
       "fileName": "./include/unicode/udateintervalformat.h",
-      "SPDXID": "SPDXRef-binary-file-163",
+      "SPDXID": "SPDXRef-binary-file-155",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3446,7 +3360,7 @@
     },
     {
       "fileName": "./include/unicode/icuplug.h",
-      "SPDXID": "SPDXRef-binary-file-164",
+      "SPDXID": "SPDXRef-binary-file-156",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3458,7 +3372,7 @@
     },
     {
       "fileName": "./include/unicode/umisc.h",
-      "SPDXID": "SPDXRef-binary-file-165",
+      "SPDXID": "SPDXRef-binary-file-157",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3470,7 +3384,7 @@
     },
     {
       "fileName": "./include/unicode/tzfmt.h",
-      "SPDXID": "SPDXRef-binary-file-166",
+      "SPDXID": "SPDXRef-binary-file-158",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3482,7 +3396,7 @@
     },
     {
       "fileName": "./include/unicode/ucol.h",
-      "SPDXID": "SPDXRef-binary-file-167",
+      "SPDXID": "SPDXRef-binary-file-159",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3494,7 +3408,7 @@
     },
     {
       "fileName": "./include/unicode/usearch.h",
-      "SPDXID": "SPDXRef-binary-file-168",
+      "SPDXID": "SPDXRef-binary-file-160",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3506,7 +3420,7 @@
     },
     {
       "fileName": "./include/unicode/sortkey.h",
-      "SPDXID": "SPDXRef-binary-file-169",
+      "SPDXID": "SPDXRef-binary-file-161",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3518,7 +3432,7 @@
     },
     {
       "fileName": "./include/unicode/strenum.h",
-      "SPDXID": "SPDXRef-binary-file-170",
+      "SPDXID": "SPDXRef-binary-file-162",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3530,11 +3444,11 @@
     },
     {
       "fileName": "./include/unicode/platform.h",
-      "SPDXID": "SPDXRef-binary-file-171",
+      "SPDXID": "SPDXRef-binary-file-163",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f9f4b56f4a7a5c760ad99e19625d4f3cac76a9b620c4bc44cb699e7f148c86f4"
+          "checksumValue": "d299faad255850be8a0b81f4758a8ca20a24c453e3206ddde24676dbf6621ddf"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -3542,7 +3456,7 @@
     },
     {
       "fileName": "./include/unicode/ucat.h",
-      "SPDXID": "SPDXRef-binary-file-172",
+      "SPDXID": "SPDXRef-binary-file-164",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3554,7 +3468,7 @@
     },
     {
       "fileName": "./include/unicode/utf16.h",
-      "SPDXID": "SPDXRef-binary-file-173",
+      "SPDXID": "SPDXRef-binary-file-165",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3566,7 +3480,7 @@
     },
     {
       "fileName": "./include/unicode/uniset.h",
-      "SPDXID": "SPDXRef-binary-file-174",
+      "SPDXID": "SPDXRef-binary-file-166",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3578,7 +3492,7 @@
     },
     {
       "fileName": "./include/unicode/numberrangeformatter.h",
-      "SPDXID": "SPDXRef-binary-file-175",
+      "SPDXID": "SPDXRef-binary-file-167",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3590,7 +3504,7 @@
     },
     {
       "fileName": "./include/unicode/utf8.h",
-      "SPDXID": "SPDXRef-binary-file-176",
+      "SPDXID": "SPDXRef-binary-file-168",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3602,7 +3516,7 @@
     },
     {
       "fileName": "./include/unicode/coll.h",
-      "SPDXID": "SPDXRef-binary-file-177",
+      "SPDXID": "SPDXRef-binary-file-169",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3614,7 +3528,7 @@
     },
     {
       "fileName": "./include/unicode/localpointer.h",
-      "SPDXID": "SPDXRef-binary-file-178",
+      "SPDXID": "SPDXRef-binary-file-170",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3626,7 +3540,7 @@
     },
     {
       "fileName": "./include/unicode/unumberformatter.h",
-      "SPDXID": "SPDXRef-binary-file-179",
+      "SPDXID": "SPDXRef-binary-file-171",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3638,7 +3552,7 @@
     },
     {
       "fileName": "./include/unicode/casemap.h",
-      "SPDXID": "SPDXRef-binary-file-180",
+      "SPDXID": "SPDXRef-binary-file-172",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3650,7 +3564,7 @@
     },
     {
       "fileName": "./include/unicode/uregex.h",
-      "SPDXID": "SPDXRef-binary-file-181",
+      "SPDXID": "SPDXRef-binary-file-173",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3662,7 +3576,7 @@
     },
     {
       "fileName": "./include/unicode/rbnf.h",
-      "SPDXID": "SPDXRef-binary-file-182",
+      "SPDXID": "SPDXRef-binary-file-174",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3674,7 +3588,7 @@
     },
     {
       "fileName": "./include/unicode/tznames.h",
-      "SPDXID": "SPDXRef-binary-file-183",
+      "SPDXID": "SPDXRef-binary-file-175",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3686,7 +3600,7 @@
     },
     {
       "fileName": "./include/unicode/uformattednumber.h",
-      "SPDXID": "SPDXRef-binary-file-184",
+      "SPDXID": "SPDXRef-binary-file-176",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3698,7 +3612,7 @@
     },
     {
       "fileName": "./include/unicode/dcfmtsym.h",
-      "SPDXID": "SPDXRef-binary-file-185",
+      "SPDXID": "SPDXRef-binary-file-177",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3710,7 +3624,7 @@
     },
     {
       "fileName": "./include/unicode/fieldpos.h",
-      "SPDXID": "SPDXRef-binary-file-186",
+      "SPDXID": "SPDXRef-binary-file-178",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3722,7 +3636,7 @@
     },
     {
       "fileName": "./include/unicode/umachine.h",
-      "SPDXID": "SPDXRef-binary-file-187",
+      "SPDXID": "SPDXRef-binary-file-179",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3734,7 +3648,7 @@
     },
     {
       "fileName": "./include/unicode/parseerr.h",
-      "SPDXID": "SPDXRef-binary-file-188",
+      "SPDXID": "SPDXRef-binary-file-180",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3746,7 +3660,7 @@
     },
     {
       "fileName": "./include/unicode/reldatefmt.h",
-      "SPDXID": "SPDXRef-binary-file-189",
+      "SPDXID": "SPDXRef-binary-file-181",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3758,7 +3672,7 @@
     },
     {
       "fileName": "./include/unicode/usimplenumberformatter.h",
-      "SPDXID": "SPDXRef-binary-file-190",
+      "SPDXID": "SPDXRef-binary-file-182",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3770,7 +3684,7 @@
     },
     {
       "fileName": "./include/unicode/formattednumber.h",
-      "SPDXID": "SPDXRef-binary-file-191",
+      "SPDXID": "SPDXRef-binary-file-183",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3782,7 +3696,7 @@
     },
     {
       "fileName": "./include/unicode/translit.h",
-      "SPDXID": "SPDXRef-binary-file-192",
+      "SPDXID": "SPDXRef-binary-file-184",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3794,7 +3708,7 @@
     },
     {
       "fileName": "./include/unicode/errorcode.h",
-      "SPDXID": "SPDXRef-binary-file-193",
+      "SPDXID": "SPDXRef-binary-file-185",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3806,7 +3720,7 @@
     },
     {
       "fileName": "./include/unicode/unirepl.h",
-      "SPDXID": "SPDXRef-binary-file-194",
+      "SPDXID": "SPDXRef-binary-file-186",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3818,7 +3732,7 @@
     },
     {
       "fileName": "./include/unicode/stringoptions.h",
-      "SPDXID": "SPDXRef-binary-file-195",
+      "SPDXID": "SPDXRef-binary-file-187",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3830,7 +3744,7 @@
     },
     {
       "fileName": "./include/unicode/plurrule.h",
-      "SPDXID": "SPDXRef-binary-file-196",
+      "SPDXID": "SPDXRef-binary-file-188",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3842,7 +3756,7 @@
     },
     {
       "fileName": "./include/unicode/ubiditransform.h",
-      "SPDXID": "SPDXRef-binary-file-197",
+      "SPDXID": "SPDXRef-binary-file-189",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3854,7 +3768,7 @@
     },
     {
       "fileName": "./include/unicode/unumberrangeformatter.h",
-      "SPDXID": "SPDXRef-binary-file-198",
+      "SPDXID": "SPDXRef-binary-file-190",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3866,7 +3780,7 @@
     },
     {
       "fileName": "./include/unicode/calendar.h",
-      "SPDXID": "SPDXRef-binary-file-199",
+      "SPDXID": "SPDXRef-binary-file-191",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3878,7 +3792,7 @@
     },
     {
       "fileName": "./include/unicode/unimatch.h",
-      "SPDXID": "SPDXRef-binary-file-200",
+      "SPDXID": "SPDXRef-binary-file-192",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3890,7 +3804,7 @@
     },
     {
       "fileName": "./include/unicode/uloc.h",
-      "SPDXID": "SPDXRef-binary-file-201",
+      "SPDXID": "SPDXRef-binary-file-193",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3902,7 +3816,7 @@
     },
     {
       "fileName": "./include/unicode/uchriter.h",
-      "SPDXID": "SPDXRef-binary-file-202",
+      "SPDXID": "SPDXRef-binary-file-194",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3914,7 +3828,7 @@
     },
     {
       "fileName": "./include/unicode/std_string.h",
-      "SPDXID": "SPDXRef-binary-file-203",
+      "SPDXID": "SPDXRef-binary-file-195",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3926,7 +3840,7 @@
     },
     {
       "fileName": "./include/unicode/ustring.h",
-      "SPDXID": "SPDXRef-binary-file-204",
+      "SPDXID": "SPDXRef-binary-file-196",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3938,7 +3852,7 @@
     },
     {
       "fileName": "./include/unicode/utf.h",
-      "SPDXID": "SPDXRef-binary-file-205",
+      "SPDXID": "SPDXRef-binary-file-197",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3950,7 +3864,7 @@
     },
     {
       "fileName": "./include/unicode/ufieldpositer.h",
-      "SPDXID": "SPDXRef-binary-file-206",
+      "SPDXID": "SPDXRef-binary-file-198",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3962,7 +3876,7 @@
     },
     {
       "fileName": "./include/unicode/uvernum.h",
-      "SPDXID": "SPDXRef-binary-file-207",
+      "SPDXID": "SPDXRef-binary-file-199",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3973,60 +3887,132 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libicuuc.a",
+      "fileName": "./lib/libicuuc.so.74.2",
+      "SPDXID": "SPDXRef-binary-file-200",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "426259e5e2e7bc90eafd1a952bba422579a7095fbe8e4c9f402c2f73cf5c70c6"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libicudata.so.74",
+      "SPDXID": "SPDXRef-binary-file-201",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f84cce5e2fea66efd558c180e32b4c1ad6e81520699430aa3694757fbb9789d2"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libicutu.so.74.2",
+      "SPDXID": "SPDXRef-binary-file-202",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cb5ce63dfdc85b511ae9afa834632cb17f86224dcdb9cd5b978ac8886f3bfdda"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libicutu.so.74",
+      "SPDXID": "SPDXRef-binary-file-203",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cb5ce63dfdc85b511ae9afa834632cb17f86224dcdb9cd5b978ac8886f3bfdda"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libicuio.so",
+      "SPDXID": "SPDXRef-binary-file-204",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "673c4fb71baf1c52c63b8c9f189cab3285eee7d117478be61d5081b5aa466a3b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libicudata.so.74.2",
+      "SPDXID": "SPDXRef-binary-file-205",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f84cce5e2fea66efd558c180e32b4c1ad6e81520699430aa3694757fbb9789d2"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libicuio.so.74.2",
+      "SPDXID": "SPDXRef-binary-file-206",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "673c4fb71baf1c52c63b8c9f189cab3285eee7d117478be61d5081b5aa466a3b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libicui18n.so",
+      "SPDXID": "SPDXRef-binary-file-207",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "882b625124db2d9aee3398b5fc15853e01ac01d0fe649648b732abd56639b350"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libicui18n.so.74",
       "SPDXID": "SPDXRef-binary-file-208",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "975b97a2bf1224fc3d9156a6a8ffee085ecc2062fe6230cdc92e08ac77dbb022"
+          "checksumValue": "882b625124db2d9aee3398b5fc15853e01ac01d0fe649648b732abd56639b350"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libicutu.a",
+      "fileName": "./lib/libicuuc.so",
       "SPDXID": "SPDXRef-binary-file-209",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d9e2dfb4e1b031fba13f67819d593f8253a58cc81d52b62a17fd2d9166e3a03e"
+          "checksumValue": "426259e5e2e7bc90eafd1a952bba422579a7095fbe8e4c9f402c2f73cf5c70c6"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libicudata.a",
+      "fileName": "./lib/libicutu.so",
       "SPDXID": "SPDXRef-binary-file-210",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b6439df9c61a8db87d30cf01dfd5bca11443c066b45136467174a96309565d40"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./lib/libicui18n.a",
-      "SPDXID": "SPDXRef-binary-file-211",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "0bd635e5eaceb40731cb4c1e1335c750d88b5e17761c0f7068311e1b9d7c3e25"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./lib/libicuio.a",
-      "SPDXID": "SPDXRef-binary-file-212",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "0a19eac6b8af76b3897cb744aa3f719f7381aec3845730c93c38a9bdb7e01211"
+          "checksumValue": "cb5ce63dfdc85b511ae9afa834632cb17f86224dcdb9cd5b978ac8886f3bfdda"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4034,11 +4020,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/icu-i18n.pc",
-      "SPDXID": "SPDXRef-binary-file-213",
+      "SPDXID": "SPDXRef-binary-file-211",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "cc4cce0fafd4749a14e2e84d3db2794af0853a7f6d28d7ed19751334b49c2845"
+          "checksumValue": "24d839a38e9d4dfa1003f4905cfaa79974366b2eefc39926a64edef643863609"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4046,11 +4032,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/icu-uc.pc",
-      "SPDXID": "SPDXRef-binary-file-214",
+      "SPDXID": "SPDXRef-binary-file-212",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "966f8f19069d7eb2d1b71235735c4ec34dfbe92881760a92360cbfa3ad05c266"
+          "checksumValue": "071866cad687b547a50b35491213637e73a89d59532a74f965b4270f410a9c4f"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4058,11 +4044,59 @@
     },
     {
       "fileName": "./lib/pkgconfig/icu-io.pc",
+      "SPDXID": "SPDXRef-binary-file-213",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "15de801117b8a72d6922d999de23c90499cab18336220b7d7638378efa3edcb2"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libicuio.so.74",
+      "SPDXID": "SPDXRef-binary-file-214",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "673c4fb71baf1c52c63b8c9f189cab3285eee7d117478be61d5081b5aa466a3b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libicuuc.so.74",
       "SPDXID": "SPDXRef-binary-file-215",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "1f0243343958079d4c80b8f8d8c5daa827738a6f64479f110d5d159393009bf5"
+          "checksumValue": "426259e5e2e7bc90eafd1a952bba422579a7095fbe8e4c9f402c2f73cf5c70c6"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libicudata.so",
+      "SPDXID": "SPDXRef-binary-file-216",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f84cce5e2fea66efd558c180e32b4c1ad6e81520699430aa3694757fbb9789d2"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libicui18n.so.74.2",
+      "SPDXID": "SPDXRef-binary-file-217",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "882b625124db2d9aee3398b5fc15853e01ac01d0fe649648b732abd56639b350"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4070,7 +4104,7 @@
     },
     {
       "fileName": "./tools/icu/config/icucross.inc",
-      "SPDXID": "SPDXRef-binary-file-216",
+      "SPDXID": "SPDXRef-binary-file-218",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4082,7 +4116,7 @@
     },
     {
       "fileName": "./tools/icu/config/icucross.mk",
-      "SPDXID": "SPDXRef-binary-file-217",
+      "SPDXID": "SPDXRef-binary-file-219",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4094,11 +4128,11 @@
     },
     {
       "fileName": "./tools/icu/bin/makeconv",
-      "SPDXID": "SPDXRef-binary-file-218",
+      "SPDXID": "SPDXRef-binary-file-220",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "5d2f532d58ccd59f80c898ef423a5cb49e0b316eee6bd36738ee22047b6bbf10"
+          "checksumValue": "a587b7f5a1716c3f207df4bdfdce8c58cb00f6c741e0656f09b7a465510851b7"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4106,11 +4140,11 @@
     },
     {
       "fileName": "./tools/icu/bin/genrb",
-      "SPDXID": "SPDXRef-binary-file-219",
+      "SPDXID": "SPDXRef-binary-file-221",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d650bdb2c346f3ec312ccecb06d02de869e50b818018152a47b115c7be2079a8"
+          "checksumValue": "0a44838cf406a643126ad72054e6df702ccbad0321c6ff61c5710399ea2f4f01"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4118,11 +4152,11 @@
     },
     {
       "fileName": "./tools/icu/bin/genbrk",
-      "SPDXID": "SPDXRef-binary-file-220",
+      "SPDXID": "SPDXRef-binary-file-222",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "72bb6dbe85c679a29fdb815de258b35f0140600031a5c6aae1388266fe094cb0"
+          "checksumValue": "944418ffbcdfecc49d12f1ccd0924eace95c5aac717c88ab46f705bd476259c8"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4130,11 +4164,11 @@
     },
     {
       "fileName": "./tools/icu/bin/gencfu",
-      "SPDXID": "SPDXRef-binary-file-221",
+      "SPDXID": "SPDXRef-binary-file-223",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2579d26341ba5380a8827ee0bfdef1e4b07289c5feaaaec3299e38c51ec78c62"
+          "checksumValue": "6614d5f3450bfa8193be637b8bc70d07bc472b43548dcc800c688dff01b2baef"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4142,11 +4176,11 @@
     },
     {
       "fileName": "./tools/icu/bin/gencmn",
-      "SPDXID": "SPDXRef-binary-file-222",
+      "SPDXID": "SPDXRef-binary-file-224",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "8d1d395845cc99e32912847839ffff1a581ee3bd3378a3c35fb630281952ef3a"
+          "checksumValue": "d0d1caf812953d9fff3bd2b720567ed3a552a3c38fde871892bbdb2fbed6d266"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4154,11 +4188,11 @@
     },
     {
       "fileName": "./tools/icu/bin/gendict",
-      "SPDXID": "SPDXRef-binary-file-223",
+      "SPDXID": "SPDXRef-binary-file-225",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ad88778212955425551422722e09aa5845ffcf39e8de73654bc3fe3cef4811fe"
+          "checksumValue": "9660ab710de33250f0ebb9f80c1e58922543bae3ed0930de87a8cf396b585fc2"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4166,11 +4200,11 @@
     },
     {
       "fileName": "./tools/icu/bin/gensprep",
-      "SPDXID": "SPDXRef-binary-file-224",
+      "SPDXID": "SPDXRef-binary-file-226",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "41cd9276a0c970aa2cce37a48c6583dc3a03490eb0e966ccc3a7244bd6527083"
+          "checksumValue": "499b11e67c9e8ca9cb67c879af3c0d5f560c30816d7d56c1affcc42cf816dc57"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4178,11 +4212,11 @@
     },
     {
       "fileName": "./tools/icu/bin/gencnval",
-      "SPDXID": "SPDXRef-binary-file-225",
+      "SPDXID": "SPDXRef-binary-file-227",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e172fc1dedb402f4caac88d11c262df6f5a57075586c4960a562ee3465dece94"
+          "checksumValue": "f853c7751cdfacff211d9a9dd76cd474d020aee4606c6a354e6e6f77053a43f2"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4190,11 +4224,11 @@
     },
     {
       "fileName": "./tools/icu/bin/uconv",
-      "SPDXID": "SPDXRef-binary-file-226",
+      "SPDXID": "SPDXRef-binary-file-228",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "23098cff2b5ce83d6dd13ec1606e43b76da7a65c448d7cd283d68474cb37a724"
+          "checksumValue": "0df06b5b1bb236887cc4bbd2e903303fbc04e3d43db2f0bd34e0518e4d631feb"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4202,11 +4236,11 @@
     },
     {
       "fileName": "./tools/icu/bin/pkgdata",
-      "SPDXID": "SPDXRef-binary-file-227",
+      "SPDXID": "SPDXRef-binary-file-229",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b89bac3ff504eaa5ad4eb77d196086f23e66c94ec630792c49868c8636e049c2"
+          "checksumValue": "77a6ab63738b52850de91e698110d751549fbd65f431fbaf8e4c378a744ddca9"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4214,11 +4248,11 @@
     },
     {
       "fileName": "./tools/icu/bin/icuinfo",
-      "SPDXID": "SPDXRef-binary-file-228",
+      "SPDXID": "SPDXRef-binary-file-230",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d5719b725f8fe618cf246681f8b1af67549040f72adb4116710008f403198832"
+          "checksumValue": "e7d6e4abca64a9b8d2197a5a64c75e71a5205a946d04c33c257732c9d718d987"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4226,11 +4260,11 @@
     },
     {
       "fileName": "./tools/icu/bin/derb",
-      "SPDXID": "SPDXRef-binary-file-229",
+      "SPDXID": "SPDXRef-binary-file-231",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "62c43cdea84209544d19d2e4dc09f3bb6ef5d249b920bdb80a95749b185c7c00"
+          "checksumValue": "f3146cc8cd4ecd75339336b3e81b43cf8cb071aab1d492dd61373baf783e5db5"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4238,11 +4272,11 @@
     },
     {
       "fileName": "./tools/icu/bin/gennorm2",
-      "SPDXID": "SPDXRef-binary-file-230",
+      "SPDXID": "SPDXRef-binary-file-232",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "a3344b63aab8096710f68a3e3e8e6d52602a522ad116a3d53b9b0db5a21aaeee"
+          "checksumValue": "8219d57bbc5f3481afa528ecbc75c3cb70fce81ff37f151dff6cd072ceb2528f"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4250,11 +4284,11 @@
     },
     {
       "fileName": "./tools/icu/bin/genccode",
-      "SPDXID": "SPDXRef-binary-file-231",
+      "SPDXID": "SPDXRef-binary-file-233",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "fc2e13b62ad44986cd7b6df043fa7daaeeaf174577ad9f797395226bbdd6068c"
+          "checksumValue": "3e341cab848311edb731c41fa313b47f0f8b5ddd3eaf837654901327e2561656"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4262,11 +4296,11 @@
     },
     {
       "fileName": "./tools/icu/bin/icuexportdata",
-      "SPDXID": "SPDXRef-binary-file-232",
+      "SPDXID": "SPDXRef-binary-file-234",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "111713f6bf3d3bf04eedb2f6166a768375769884e1d7aec792b85fe6c554b0e8"
+          "checksumValue": "d1f2fe10711d7cc5cee519dbfcb969d3c34ccdf0ab793f72869cf779d92a32d2"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4274,11 +4308,11 @@
     },
     {
       "fileName": "./tools/icu/bin/icupkg",
-      "SPDXID": "SPDXRef-binary-file-233",
+      "SPDXID": "SPDXRef-binary-file-235",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b2740a0bba9129fdf5358728ae38e5bbc60d34d213839780da14a17974d3ad94"
+          "checksumValue": "8e6cbbb5107950d034653384eb9f557a55a58713b9d3fbb8da4fbb8f51819529"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4286,11 +4320,11 @@
     },
     {
       "fileName": "./tools/icu/bin/icu-config",
-      "SPDXID": "SPDXRef-binary-file-234",
+      "SPDXID": "SPDXRef-binary-file-236",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "1851676ec629ca00cf6f783bedb7a2b5cdb8cb6b3ce8d3297af9e8160d9e5da5"
+          "checksumValue": "203cddfb5bd4ea4b886f8fc500826086d9836b9a9dc74d55f17934be4efe15cb"
         }
       ],
       "licenseConcluded": "NOASSERTION",

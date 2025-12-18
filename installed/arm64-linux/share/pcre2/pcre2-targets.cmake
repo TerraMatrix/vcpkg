@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS pcre2::pcre2-8-static pcre2::pcre2-posix-static pcre2::pcre2-16-static pcre2::pcre2-32-static)
+foreach(_cmake_expected_target IN ITEMS pcre2::pcre2-8-shared pcre2::pcre2-posix-shared pcre2::pcre2-16-shared pcre2::pcre2-32-shared)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -54,37 +54,35 @@ if(_IMPORT_PREFIX STREQUAL "/")
   set(_IMPORT_PREFIX "")
 endif()
 
-# Create imported target pcre2::pcre2-8-static
-add_library(pcre2::pcre2-8-static STATIC IMPORTED)
+# Create imported target pcre2::pcre2-8-shared
+add_library(pcre2::pcre2-8-shared SHARED IMPORTED)
 
-set_target_properties(pcre2::pcre2-8-static PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "PCRE2_STATIC"
+set_target_properties(pcre2::pcre2-8-shared PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "Threads::Threads"
 )
 
-# Create imported target pcre2::pcre2-posix-static
-add_library(pcre2::pcre2-posix-static STATIC IMPORTED)
+# Create imported target pcre2::pcre2-posix-shared
+add_library(pcre2::pcre2-posix-shared SHARED IMPORTED)
 
-set_target_properties(pcre2::pcre2-posix-static PROPERTIES
+set_target_properties(pcre2::pcre2-posix-shared PROPERTIES
+  INTERFACE_COMPILE_DEFINITIONS "PCRE2POSIX_SHARED"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "pcre2::pcre2-8-static"
+  INTERFACE_LINK_LIBRARIES "pcre2::pcre2-8-shared"
 )
 
-# Create imported target pcre2::pcre2-16-static
-add_library(pcre2::pcre2-16-static STATIC IMPORTED)
+# Create imported target pcre2::pcre2-16-shared
+add_library(pcre2::pcre2-16-shared SHARED IMPORTED)
 
-set_target_properties(pcre2::pcre2-16-static PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "PCRE2_STATIC"
+set_target_properties(pcre2::pcre2-16-shared PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "Threads::Threads"
 )
 
-# Create imported target pcre2::pcre2-32-static
-add_library(pcre2::pcre2-32-static STATIC IMPORTED)
+# Create imported target pcre2::pcre2-32-shared
+add_library(pcre2::pcre2-32-shared SHARED IMPORTED)
 
-set_target_properties(pcre2::pcre2-32-static PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "PCRE2_STATIC"
+set_target_properties(pcre2::pcre2-32-shared PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "Threads::Threads"
 )

@@ -55,10 +55,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::cobalt
-add_library(Boost::cobalt STATIC IMPORTED)
+add_library(Boost::cobalt SHARED IMPORTED)
 
 set_target_properties(Boost::cobalt PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_COBALT_NO_LIB=1;BOOST_COBALT_STATIC_LINK=1"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_COBALT_NO_LIB=1;BOOST_COBALT_DYN_LINK=1"
   INTERFACE_COMPILE_FEATURES "cxx_std_20"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "Boost::asio;Boost::callable_traits;Boost::circular_buffer;Boost::config;Boost::core;Boost::endian;Boost::intrusive;Boost::mp11;Boost::preprocessor;Boost::smart_ptr;Boost::static_string;Boost::system;Boost::throw_exception;Boost::variant2"

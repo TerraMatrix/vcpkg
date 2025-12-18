@@ -9,12 +9,18 @@ vcpkg_from_github(
     PATCHES
         osx.patch
         arm-uwp.patch
+        arm64-fix.patch
+        arm64-linux-fix.patch
 )
 
 vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
     FEATURES
         tool BUILD_TOOL
 )
+
+if(VCPKG_TARGET_ARCHITECTURE STREQUAL "arm64")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-error= narrowing -Wno-error=pointer-to-int-cast")
+endif()
 
 vcpkg_cmake_configure(
     SOURCE_PATH ${SOURCE_PATH}

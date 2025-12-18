@@ -5,15 +5,16 @@
 # Commands may need to know the format version.
 set(CMAKE_IMPORT_FILE_VERSION 1)
 
-# Import target "SuiteSparse::AMD_static" for configuration "Release"
-set_property(TARGET SuiteSparse::AMD_static APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(SuiteSparse::AMD_static PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libamd.a"
+# Import target "SuiteSparse::AMD" for configuration "Release"
+set_property(TARGET SuiteSparse::AMD APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(SuiteSparse::AMD PROPERTIES
+  IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "SuiteSparse::SuiteSparseConfig"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libamd.so.3.3.3"
+  IMPORTED_SONAME_RELEASE "libamd.so.3"
   )
 
-list(APPEND _cmake_import_check_targets SuiteSparse::AMD_static )
-list(APPEND _cmake_import_check_files_for_SuiteSparse::AMD_static "${_IMPORT_PREFIX}/lib/libamd.a" )
+list(APPEND _cmake_import_check_targets SuiteSparse::AMD )
+list(APPEND _cmake_import_check_files_for_SuiteSparse::AMD "${_IMPORT_PREFIX}/lib/libamd.so.3.3.3" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

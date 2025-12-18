@@ -3,19 +3,94 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/botan-arm64-linux-2.19.3-3edfcc94-c11b-46a2-b1c6-698562626c35",
-  "name": "botan:arm64-linux@2.19.3 NONE",
+  "documentNamespace": "https://spdx.org/spdxdocs/botan-arm64-linux-2.19.3-2b249ccd-83da-4714-875e-964f432b7151",
+  "name": "botan:arm64-linux@2.19.3 b84275c726977e6a20fc788e718b292097d5f836e3580db6b5c87a0307013a05",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-12-16T08:08:15Z"
+    "created": "2025-12-18T06:48:19Z"
   },
   "relationships": [
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "GENERATES",
       "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-3"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-4"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-4",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-5"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-6"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-7"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-8"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-9"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-10"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-11"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-12"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-13"
     },
     {
       "spdxElementId": "SPDXRef-binary",
@@ -1586,31 +1661,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-313"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-314"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-315"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-316"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-317"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-318"
     }
   ],
   "packages": [
@@ -1629,15 +1679,197 @@
     {
       "name": "botan:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "NONE",
+      "versionInfo": "b84275c726977e6a20fc788e718b292097d5f836e3580db6b5c87a0307013a05",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-2-Clause",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-0",
+      "name": "randombit/botan",
+      "downloadLocation": "git+https://github.com/randombit/botan@2.19.3",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "0f99ef4026e5180dd65dc0e935ba2cabaf750862c651699294b3521053463b7e65a90847fef6f0d640eb9f9eb5efce64b13e999aa9c215310998817d13bd5332"
+        }
+      ]
     }
   ],
   "files": [
+    {
+      "fileName": "./configure-zlib.patch",
+      "SPDXID": "SPDXRef-port-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cb805abee005e925d328bd3403ce9ac180ffd61cfd1788b9c280e3f9dd077918"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./0009-fix-regression-f2bf049-85491b3.patch",
+      "SPDXID": "SPDXRef-port-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d40e3e487126277d9e32b3ae5de063d6a4d10f02fce07af594b91ace1a010383"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./embed-debug-info.patch",
+      "SPDXID": "SPDXRef-port-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8acd4fdd54fed30b8274d522de2526f5e0aa3f58089379b6228f2df82b372957"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./libcxx-winpthread-fixes.patch",
+      "SPDXID": "SPDXRef-port-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "82de1430e8ed00bab24ad2ce0919aa2b651525c62ca6d8af0e86c2e24e23d228"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8061d7ff6f7584804cf3e8a86725364b2554eeb10a69fb546d842fbb95678539"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-objectfile-list.patch",
+      "SPDXID": "SPDXRef-port-file-5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "47ef0b86519f465d9dcb7a58da61b3027deff18ef1cf5d179a6263c13a35434b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./verbose-install.patch",
+      "SPDXID": "SPDXRef-port-file-6",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "30c0d4a51dc36168ac836d212a2acb4218c70d22c59e6d68eab6b71f3824e58c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix_android.patch",
+      "SPDXID": "SPDXRef-port-file-7",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "298cab70498833f8086c613bdce2f902a8efac48791edc4a8aee21b37bfd339c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./pkgconfig.patch",
+      "SPDXID": "SPDXRef-port-file-8",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2cf81342b497a110a7ded40cc7968e93045dc861a1e3c757b4dd0c6886f3d586"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-cmake-usage.patch",
+      "SPDXID": "SPDXRef-port-file-9",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4f9a97477176c21d782d9049bd547ed7d0f99541bc9953e0649a92a8325c7220"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-generate-build-path.patch",
+      "SPDXID": "SPDXRef-port-file-10",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e7349129ffe648bd4deaca22eccd2b00d08d59876a2051ec02f636ee386d0fc7"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-11",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e17002797ded465175accbfaac8664ed7ed2dc3a3d913469926bba7747d46103"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./arm64-windows.patch",
+      "SPDXID": "SPDXRef-port-file-12",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "77daf043bf3cfa555cb141e5289ab07520d4ce749094ed7b275bcfee7a06c3c5"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./configure",
+      "SPDXID": "SPDXRef-port-file-13",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "56578a5a0c8e33a8c0501fa078dafee70c1f7b33dd1223e9015d0627fb3b621f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
     {
       "fileName": "./BUILD_INFO",
       "SPDXID": "SPDXRef-binary-file-0",
@@ -1651,68 +1883,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./debug/lib/python3.8/site-packages/botan2.py",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "e37912538a9344770eb8cc1370fdbc00f3575b9dc5173d2853b338c378dbe462"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libbotan-2.so.19.19.3",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "b2716d47dfc17a34c51c2b65050f509b60d240e048e3edce0adba6e8fe3bbfe2"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libbotan-2.so",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "b2716d47dfc17a34c51c2b65050f509b60d240e048e3edce0adba6e8fe3bbfe2"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/botan-2.pc",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "2cd951bdf45d2b5cfbc489a1a808cd85c07e63831b1720b153590744db31a58a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libbotan-2.so.19",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "b2716d47dfc17a34c51c2b65050f509b60d240e048e3edce0adba6e8fe3bbfe2"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/botan/copyright",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1724,7 +1896,7 @@
     },
     {
       "fileName": "./include/botan/hkdf.h",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1736,7 +1908,7 @@
     },
     {
       "fileName": "./include/botan/crc32.h",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1748,7 +1920,7 @@
     },
     {
       "fileName": "./include/botan/kdf1.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1760,7 +1932,7 @@
     },
     {
       "fileName": "./include/botan/cecpq1.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1772,7 +1944,7 @@
     },
     {
       "fileName": "./include/botan/hash_id.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1784,7 +1956,7 @@
     },
     {
       "fileName": "./include/botan/eme.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1796,7 +1968,7 @@
     },
     {
       "fileName": "./include/botan/p11_module.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1808,7 +1980,7 @@
     },
     {
       "fileName": "./include/botan/fd_unix.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1820,7 +1992,7 @@
     },
     {
       "fileName": "./include/botan/sym_algo.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1832,7 +2004,7 @@
     },
     {
       "fileName": "./include/botan/scrypt.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1844,7 +2016,7 @@
     },
     {
       "fileName": "./include/botan/blake2b.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1856,7 +2028,7 @@
     },
     {
       "fileName": "./include/botan/p11_ecdsa.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1868,7 +2040,7 @@
     },
     {
       "fileName": "./include/botan/package.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1880,7 +2052,7 @@
     },
     {
       "fileName": "./include/botan/eme_raw.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1892,7 +2064,7 @@
     },
     {
       "fileName": "./include/botan/chacha.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1904,7 +2076,7 @@
     },
     {
       "fileName": "./include/botan/hash.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1916,7 +2088,7 @@
     },
     {
       "fileName": "./include/botan/emsa.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1928,7 +2100,7 @@
     },
     {
       "fileName": "./include/botan/bswap.h",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1940,7 +2112,7 @@
     },
     {
       "fileName": "./include/botan/roughtime.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1952,7 +2124,7 @@
     },
     {
       "fileName": "./include/botan/rotate.h",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1964,7 +2136,7 @@
     },
     {
       "fileName": "./include/botan/init.h",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1976,7 +2148,7 @@
     },
     {
       "fileName": "./include/botan/mutex.h",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1988,7 +2160,7 @@
     },
     {
       "fileName": "./include/botan/emsa_x931.h",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2000,7 +2172,7 @@
     },
     {
       "fileName": "./include/botan/gost_3410.h",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2012,7 +2184,7 @@
     },
     {
       "fileName": "./include/botan/basefilt.h",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2024,7 +2196,7 @@
     },
     {
       "fileName": "./include/botan/cipher_filter.h",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2036,7 +2208,7 @@
     },
     {
       "fileName": "./include/botan/p11_session.h",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2048,7 +2220,7 @@
     },
     {
       "fileName": "./include/botan/xmss_wots_parameters.h",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2060,7 +2232,7 @@
     },
     {
       "fileName": "./include/botan/bigint.h",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2072,7 +2244,7 @@
     },
     {
       "fileName": "./include/botan/x919_mac.h",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2084,7 +2256,7 @@
     },
     {
       "fileName": "./include/botan/cipher_mode.h",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2096,7 +2268,7 @@
     },
     {
       "fileName": "./include/botan/cast256.h",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2108,7 +2280,7 @@
     },
     {
       "fileName": "./include/botan/rc4.h",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2120,7 +2292,7 @@
     },
     {
       "fileName": "./include/botan/stream_mode.h",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2132,7 +2304,7 @@
     },
     {
       "fileName": "./include/botan/tls_session.h",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2144,7 +2316,7 @@
     },
     {
       "fileName": "./include/botan/adler32.h",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2156,7 +2328,7 @@
     },
     {
       "fileName": "./include/botan/mul128.h",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2168,7 +2340,7 @@
     },
     {
       "fileName": "./include/botan/blinding.h",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2180,7 +2352,7 @@
     },
     {
       "fileName": "./include/botan/certstor_flatfile.h",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2192,7 +2364,7 @@
     },
     {
       "fileName": "./include/botan/nist_keywrap.h",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2204,7 +2376,7 @@
     },
     {
       "fileName": "./include/botan/stream_cipher.h",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2216,7 +2388,7 @@
     },
     {
       "fileName": "./include/botan/hotp.h",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2228,7 +2400,7 @@
     },
     {
       "fileName": "./include/botan/gcm.h",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2240,7 +2412,7 @@
     },
     {
       "fileName": "./include/botan/shake.h",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2252,7 +2424,7 @@
     },
     {
       "fileName": "./include/botan/tls_channel.h",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2264,7 +2436,7 @@
     },
     {
       "fileName": "./include/botan/tls_handshake_msg.h",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2276,7 +2448,7 @@
     },
     {
       "fileName": "./include/botan/gost_3411.h",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2288,7 +2460,7 @@
     },
     {
       "fileName": "./include/botan/emsa_pkcs1.h",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2300,7 +2472,7 @@
     },
     {
       "fileName": "./include/botan/eax.h",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2312,7 +2484,7 @@
     },
     {
       "fileName": "./include/botan/pk_algs.h",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2324,7 +2496,7 @@
     },
     {
       "fileName": "./include/botan/crl_ent.h",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2336,7 +2508,7 @@
     },
     {
       "fileName": "./include/botan/credentials_manager.h",
-      "SPDXID": "SPDXRef-binary-file-58",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2348,7 +2520,7 @@
     },
     {
       "fileName": "./include/botan/bcrypt.h",
-      "SPDXID": "SPDXRef-binary-file-59",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2360,7 +2532,7 @@
     },
     {
       "fileName": "./include/botan/des.h",
-      "SPDXID": "SPDXRef-binary-file-60",
+      "SPDXID": "SPDXRef-binary-file-55",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2372,7 +2544,7 @@
     },
     {
       "fileName": "./include/botan/pbkdf.h",
-      "SPDXID": "SPDXRef-binary-file-61",
+      "SPDXID": "SPDXRef-binary-file-56",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2384,7 +2556,7 @@
     },
     {
       "fileName": "./include/botan/hex.h",
-      "SPDXID": "SPDXRef-binary-file-62",
+      "SPDXID": "SPDXRef-binary-file-57",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2396,7 +2568,7 @@
     },
     {
       "fileName": "./include/botan/xmss.h",
-      "SPDXID": "SPDXRef-binary-file-63",
+      "SPDXID": "SPDXRef-binary-file-58",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2408,7 +2580,7 @@
     },
     {
       "fileName": "./include/botan/x509_ca.h",
-      "SPDXID": "SPDXRef-binary-file-64",
+      "SPDXID": "SPDXRef-binary-file-59",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2420,7 +2592,7 @@
     },
     {
       "fileName": "./include/botan/scan_name.h",
-      "SPDXID": "SPDXRef-binary-file-65",
+      "SPDXID": "SPDXRef-binary-file-60",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2432,7 +2604,7 @@
     },
     {
       "fileName": "./include/botan/b64_filt.h",
-      "SPDXID": "SPDXRef-binary-file-66",
+      "SPDXID": "SPDXRef-binary-file-61",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2444,7 +2616,7 @@
     },
     {
       "fileName": "./include/botan/p11_rsa.h",
-      "SPDXID": "SPDXRef-binary-file-67",
+      "SPDXID": "SPDXRef-binary-file-62",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2456,7 +2628,7 @@
     },
     {
       "fileName": "./include/botan/ecdsa.h",
-      "SPDXID": "SPDXRef-binary-file-68",
+      "SPDXID": "SPDXRef-binary-file-63",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2468,7 +2640,7 @@
     },
     {
       "fileName": "./include/botan/ecc_key.h",
-      "SPDXID": "SPDXRef-binary-file-69",
+      "SPDXID": "SPDXRef-binary-file-64",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2480,7 +2652,7 @@
     },
     {
       "fileName": "./include/botan/chacha_rng.h",
-      "SPDXID": "SPDXRef-binary-file-70",
+      "SPDXID": "SPDXRef-binary-file-65",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2492,7 +2664,7 @@
     },
     {
       "fileName": "./include/botan/chacha20poly1305.h",
-      "SPDXID": "SPDXRef-binary-file-71",
+      "SPDXID": "SPDXRef-binary-file-66",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2504,7 +2676,7 @@
     },
     {
       "fileName": "./include/botan/system_rng.h",
-      "SPDXID": "SPDXRef-binary-file-72",
+      "SPDXID": "SPDXRef-binary-file-67",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2516,7 +2688,7 @@
     },
     {
       "fileName": "./include/botan/xmss_wots.h",
-      "SPDXID": "SPDXRef-binary-file-73",
+      "SPDXID": "SPDXRef-binary-file-68",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2528,7 +2700,7 @@
     },
     {
       "fileName": "./include/botan/cmac.h",
-      "SPDXID": "SPDXRef-binary-file-74",
+      "SPDXID": "SPDXRef-binary-file-69",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2540,7 +2712,7 @@
     },
     {
       "fileName": "./include/botan/key_filt.h",
-      "SPDXID": "SPDXRef-binary-file-75",
+      "SPDXID": "SPDXRef-binary-file-70",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2552,7 +2724,7 @@
     },
     {
       "fileName": "./include/botan/rsa.h",
-      "SPDXID": "SPDXRef-binary-file-76",
+      "SPDXID": "SPDXRef-binary-file-71",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2564,7 +2736,7 @@
     },
     {
       "fileName": "./include/botan/emsa1.h",
-      "SPDXID": "SPDXRef-binary-file-77",
+      "SPDXID": "SPDXRef-binary-file-72",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2576,7 +2748,7 @@
     },
     {
       "fileName": "./include/botan/pbkdf2.h",
-      "SPDXID": "SPDXRef-binary-file-78",
+      "SPDXID": "SPDXRef-binary-file-73",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2588,7 +2760,7 @@
     },
     {
       "fileName": "./include/botan/pubkey.h",
-      "SPDXID": "SPDXRef-binary-file-79",
+      "SPDXID": "SPDXRef-binary-file-74",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2600,7 +2772,7 @@
     },
     {
       "fileName": "./include/botan/tls_callbacks.h",
-      "SPDXID": "SPDXRef-binary-file-80",
+      "SPDXID": "SPDXRef-binary-file-75",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2612,7 +2784,7 @@
     },
     {
       "fileName": "./include/botan/sp800_56a.h",
-      "SPDXID": "SPDXRef-binary-file-81",
+      "SPDXID": "SPDXRef-binary-file-76",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2624,7 +2796,7 @@
     },
     {
       "fileName": "./include/botan/ghash.h",
-      "SPDXID": "SPDXRef-binary-file-82",
+      "SPDXID": "SPDXRef-binary-file-77",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2636,7 +2808,7 @@
     },
     {
       "fileName": "./include/botan/ec_group.h",
-      "SPDXID": "SPDXRef-binary-file-83",
+      "SPDXID": "SPDXRef-binary-file-78",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2648,7 +2820,7 @@
     },
     {
       "fileName": "./include/botan/srp6.h",
-      "SPDXID": "SPDXRef-binary-file-84",
+      "SPDXID": "SPDXRef-binary-file-79",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2660,7 +2832,7 @@
     },
     {
       "fileName": "./include/botan/streebog.h",
-      "SPDXID": "SPDXRef-binary-file-85",
+      "SPDXID": "SPDXRef-binary-file-80",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2672,7 +2844,7 @@
     },
     {
       "fileName": "./include/botan/aria.h",
-      "SPDXID": "SPDXRef-binary-file-86",
+      "SPDXID": "SPDXRef-binary-file-81",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2684,7 +2856,7 @@
     },
     {
       "fileName": "./include/botan/p11.h",
-      "SPDXID": "SPDXRef-binary-file-87",
+      "SPDXID": "SPDXRef-binary-file-82",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2696,7 +2868,7 @@
     },
     {
       "fileName": "./include/botan/xtea.h",
-      "SPDXID": "SPDXRef-binary-file-88",
+      "SPDXID": "SPDXRef-binary-file-83",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2708,7 +2880,7 @@
     },
     {
       "fileName": "./include/botan/hmac.h",
-      "SPDXID": "SPDXRef-binary-file-89",
+      "SPDXID": "SPDXRef-binary-file-84",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2720,7 +2892,7 @@
     },
     {
       "fileName": "./include/botan/polyn_gf2m.h",
-      "SPDXID": "SPDXRef-binary-file-90",
+      "SPDXID": "SPDXRef-binary-file-85",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2732,7 +2904,7 @@
     },
     {
       "fileName": "./include/botan/fpe_fe1.h",
-      "SPDXID": "SPDXRef-binary-file-91",
+      "SPDXID": "SPDXRef-binary-file-86",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2744,7 +2916,7 @@
     },
     {
       "fileName": "./include/botan/threefish.h",
-      "SPDXID": "SPDXRef-binary-file-92",
+      "SPDXID": "SPDXRef-binary-file-87",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2756,7 +2928,7 @@
     },
     {
       "fileName": "./include/botan/x509_obj.h",
-      "SPDXID": "SPDXRef-binary-file-93",
+      "SPDXID": "SPDXRef-binary-file-88",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2768,7 +2940,7 @@
     },
     {
       "fileName": "./include/botan/secmem.h",
-      "SPDXID": "SPDXRef-binary-file-94",
+      "SPDXID": "SPDXRef-binary-file-89",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2780,7 +2952,7 @@
     },
     {
       "fileName": "./include/botan/asn1_alt_name.h",
-      "SPDXID": "SPDXRef-binary-file-95",
+      "SPDXID": "SPDXRef-binary-file-90",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2792,7 +2964,7 @@
     },
     {
       "fileName": "./include/botan/ecies.h",
-      "SPDXID": "SPDXRef-binary-file-96",
+      "SPDXID": "SPDXRef-binary-file-91",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2804,7 +2976,7 @@
     },
     {
       "fileName": "./include/botan/oaep.h",
-      "SPDXID": "SPDXRef-binary-file-97",
+      "SPDXID": "SPDXRef-binary-file-92",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2816,7 +2988,7 @@
     },
     {
       "fileName": "./include/botan/tiger.h",
-      "SPDXID": "SPDXRef-binary-file-98",
+      "SPDXID": "SPDXRef-binary-file-93",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2828,7 +3000,7 @@
     },
     {
       "fileName": "./include/botan/md4.h",
-      "SPDXID": "SPDXRef-binary-file-99",
+      "SPDXID": "SPDXRef-binary-file-94",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2840,7 +3012,7 @@
     },
     {
       "fileName": "./include/botan/tss.h",
-      "SPDXID": "SPDXRef-binary-file-100",
+      "SPDXID": "SPDXRef-binary-file-95",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2852,7 +3024,7 @@
     },
     {
       "fileName": "./include/botan/newhope.h",
-      "SPDXID": "SPDXRef-binary-file-101",
+      "SPDXID": "SPDXRef-binary-file-96",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2864,7 +3036,7 @@
     },
     {
       "fileName": "./include/botan/tls_exceptn.h",
-      "SPDXID": "SPDXRef-binary-file-102",
+      "SPDXID": "SPDXRef-binary-file-97",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2876,7 +3048,7 @@
     },
     {
       "fileName": "./include/botan/asn1_attribute.h",
-      "SPDXID": "SPDXRef-binary-file-103",
+      "SPDXID": "SPDXRef-binary-file-98",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2888,7 +3060,7 @@
     },
     {
       "fileName": "./include/botan/alg_id.h",
-      "SPDXID": "SPDXRef-binary-file-104",
+      "SPDXID": "SPDXRef-binary-file-99",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2900,7 +3072,7 @@
     },
     {
       "fileName": "./include/botan/der_enc.h",
-      "SPDXID": "SPDXRef-binary-file-105",
+      "SPDXID": "SPDXRef-binary-file-100",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2912,7 +3084,7 @@
     },
     {
       "fileName": "./include/botan/lookup.h",
-      "SPDXID": "SPDXRef-binary-file-106",
+      "SPDXID": "SPDXRef-binary-file-101",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2924,7 +3096,7 @@
     },
     {
       "fileName": "./include/botan/filters.h",
-      "SPDXID": "SPDXRef-binary-file-107",
+      "SPDXID": "SPDXRef-binary-file-102",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2936,7 +3108,7 @@
     },
     {
       "fileName": "./include/botan/charset.h",
-      "SPDXID": "SPDXRef-binary-file-108",
+      "SPDXID": "SPDXRef-binary-file-103",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2948,7 +3120,7 @@
     },
     {
       "fileName": "./include/botan/sm2.h",
-      "SPDXID": "SPDXRef-binary-file-109",
+      "SPDXID": "SPDXRef-binary-file-104",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2960,7 +3132,7 @@
     },
     {
       "fileName": "./include/botan/serpent.h",
-      "SPDXID": "SPDXRef-binary-file-110",
+      "SPDXID": "SPDXRef-binary-file-105",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2972,7 +3144,7 @@
     },
     {
       "fileName": "./include/botan/eme_pkcs.h",
-      "SPDXID": "SPDXRef-binary-file-111",
+      "SPDXID": "SPDXRef-binary-file-106",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2984,7 +3156,7 @@
     },
     {
       "fileName": "./include/botan/crc24.h",
-      "SPDXID": "SPDXRef-binary-file-112",
+      "SPDXID": "SPDXRef-binary-file-107",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2996,7 +3168,7 @@
     },
     {
       "fileName": "./include/botan/xts.h",
-      "SPDXID": "SPDXRef-binary-file-113",
+      "SPDXID": "SPDXRef-binary-file-108",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3008,7 +3180,7 @@
     },
     {
       "fileName": "./include/botan/mdx_hash.h",
-      "SPDXID": "SPDXRef-binary-file-114",
+      "SPDXID": "SPDXRef-binary-file-109",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3020,7 +3192,7 @@
     },
     {
       "fileName": "./include/botan/ecgdsa.h",
-      "SPDXID": "SPDXRef-binary-file-115",
+      "SPDXID": "SPDXRef-binary-file-110",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3032,7 +3204,7 @@
     },
     {
       "fileName": "./include/botan/rfc3394.h",
-      "SPDXID": "SPDXRef-binary-file-116",
+      "SPDXID": "SPDXRef-binary-file-111",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3044,7 +3216,7 @@
     },
     {
       "fileName": "./include/botan/tls_magic.h",
-      "SPDXID": "SPDXRef-binary-file-117",
+      "SPDXID": "SPDXRef-binary-file-112",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3056,7 +3228,7 @@
     },
     {
       "fileName": "./include/botan/workfactor.h",
-      "SPDXID": "SPDXRef-binary-file-118",
+      "SPDXID": "SPDXRef-binary-file-113",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3068,7 +3240,7 @@
     },
     {
       "fileName": "./include/botan/asn1_str.h",
-      "SPDXID": "SPDXRef-binary-file-119",
+      "SPDXID": "SPDXRef-binary-file-114",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3080,7 +3252,7 @@
     },
     {
       "fileName": "./include/botan/hex_filt.h",
-      "SPDXID": "SPDXRef-binary-file-120",
+      "SPDXID": "SPDXRef-binary-file-115",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3092,7 +3264,7 @@
     },
     {
       "fileName": "./include/botan/pkcs11.h",
-      "SPDXID": "SPDXRef-binary-file-121",
+      "SPDXID": "SPDXRef-binary-file-116",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3104,7 +3276,7 @@
     },
     {
       "fileName": "./include/botan/tls_session_manager_sql.h",
-      "SPDXID": "SPDXRef-binary-file-122",
+      "SPDXID": "SPDXRef-binary-file-117",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3116,7 +3288,7 @@
     },
     {
       "fileName": "./include/botan/xmss_privatekey.h",
-      "SPDXID": "SPDXRef-binary-file-123",
+      "SPDXID": "SPDXRef-binary-file-118",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3128,7 +3300,7 @@
     },
     {
       "fileName": "./include/botan/passhash9.h",
-      "SPDXID": "SPDXRef-binary-file-124",
+      "SPDXID": "SPDXRef-binary-file-119",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3140,7 +3312,7 @@
     },
     {
       "fileName": "./include/botan/filter.h",
-      "SPDXID": "SPDXRef-binary-file-125",
+      "SPDXID": "SPDXRef-binary-file-120",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3152,7 +3324,7 @@
     },
     {
       "fileName": "./include/botan/base32.h",
-      "SPDXID": "SPDXRef-binary-file-126",
+      "SPDXID": "SPDXRef-binary-file-121",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3164,7 +3336,7 @@
     },
     {
       "fileName": "./include/botan/camellia.h",
-      "SPDXID": "SPDXRef-binary-file-127",
+      "SPDXID": "SPDXRef-binary-file-122",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3176,7 +3348,7 @@
     },
     {
       "fileName": "./include/botan/aead.h",
-      "SPDXID": "SPDXRef-binary-file-128",
+      "SPDXID": "SPDXRef-binary-file-123",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3188,7 +3360,7 @@
     },
     {
       "fileName": "./include/botan/x509_crl.h",
-      "SPDXID": "SPDXRef-binary-file-129",
+      "SPDXID": "SPDXRef-binary-file-124",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3200,7 +3372,7 @@
     },
     {
       "fileName": "./include/botan/dsa.h",
-      "SPDXID": "SPDXRef-binary-file-130",
+      "SPDXID": "SPDXRef-binary-file-125",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3212,7 +3384,7 @@
     },
     {
       "fileName": "./include/botan/rng.h",
-      "SPDXID": "SPDXRef-binary-file-131",
+      "SPDXID": "SPDXRef-binary-file-126",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3224,7 +3396,7 @@
     },
     {
       "fileName": "./include/botan/symkey.h",
-      "SPDXID": "SPDXRef-binary-file-132",
+      "SPDXID": "SPDXRef-binary-file-127",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3236,7 +3408,7 @@
     },
     {
       "fileName": "./include/botan/p11_object.h",
-      "SPDXID": "SPDXRef-binary-file-133",
+      "SPDXID": "SPDXRef-binary-file-128",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3248,7 +3420,7 @@
     },
     {
       "fileName": "./include/botan/point_gfp.h",
-      "SPDXID": "SPDXRef-binary-file-134",
+      "SPDXID": "SPDXRef-binary-file-129",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3260,7 +3432,7 @@
     },
     {
       "fileName": "./include/botan/certstor.h",
-      "SPDXID": "SPDXRef-binary-file-135",
+      "SPDXID": "SPDXRef-binary-file-130",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3272,7 +3444,7 @@
     },
     {
       "fileName": "./include/botan/psk_db_sql.h",
-      "SPDXID": "SPDXRef-binary-file-136",
+      "SPDXID": "SPDXRef-binary-file-131",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3284,7 +3456,7 @@
     },
     {
       "fileName": "./include/botan/reducer.h",
-      "SPDXID": "SPDXRef-binary-file-137",
+      "SPDXID": "SPDXRef-binary-file-132",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3296,7 +3468,7 @@
     },
     {
       "fileName": "./include/botan/mode_pad.h",
-      "SPDXID": "SPDXRef-binary-file-138",
+      "SPDXID": "SPDXRef-binary-file-133",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3308,7 +3480,7 @@
     },
     {
       "fileName": "./include/botan/prf_tls.h",
-      "SPDXID": "SPDXRef-binary-file-139",
+      "SPDXID": "SPDXRef-binary-file-134",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3320,7 +3492,7 @@
     },
     {
       "fileName": "./include/botan/tls_server.h",
-      "SPDXID": "SPDXRef-binary-file-140",
+      "SPDXID": "SPDXRef-binary-file-135",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3332,7 +3504,7 @@
     },
     {
       "fileName": "./include/botan/pgp_s2k.h",
-      "SPDXID": "SPDXRef-binary-file-141",
+      "SPDXID": "SPDXRef-binary-file-136",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3344,7 +3516,7 @@
     },
     {
       "fileName": "./include/botan/gf2m_small_m.h",
-      "SPDXID": "SPDXRef-binary-file-142",
+      "SPDXID": "SPDXRef-binary-file-137",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3356,7 +3528,7 @@
     },
     {
       "fileName": "./include/botan/sm4.h",
-      "SPDXID": "SPDXRef-binary-file-143",
+      "SPDXID": "SPDXRef-binary-file-138",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3368,7 +3540,7 @@
     },
     {
       "fileName": "./include/botan/key_spec.h",
-      "SPDXID": "SPDXRef-binary-file-144",
+      "SPDXID": "SPDXRef-binary-file-139",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3380,7 +3552,7 @@
     },
     {
       "fileName": "./include/botan/tls_blocking.h",
-      "SPDXID": "SPDXRef-binary-file-145",
+      "SPDXID": "SPDXRef-binary-file-140",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3392,7 +3564,7 @@
     },
     {
       "fileName": "./include/botan/base58.h",
-      "SPDXID": "SPDXRef-binary-file-146",
+      "SPDXID": "SPDXRef-binary-file-141",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3404,7 +3576,7 @@
     },
     {
       "fileName": "./include/botan/x509_ext.h",
-      "SPDXID": "SPDXRef-binary-file-147",
+      "SPDXID": "SPDXRef-binary-file-142",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3416,7 +3588,7 @@
     },
     {
       "fileName": "./include/botan/curve_nistp.h",
-      "SPDXID": "SPDXRef-binary-file-148",
+      "SPDXID": "SPDXRef-binary-file-143",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3428,7 +3600,7 @@
     },
     {
       "fileName": "./include/botan/sm3.h",
-      "SPDXID": "SPDXRef-binary-file-149",
+      "SPDXID": "SPDXRef-binary-file-144",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3440,7 +3612,7 @@
     },
     {
       "fileName": "./include/botan/p11_ecc_key.h",
-      "SPDXID": "SPDXRef-binary-file-150",
+      "SPDXID": "SPDXRef-binary-file-145",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3452,7 +3624,7 @@
     },
     {
       "fileName": "./include/botan/kdf2.h",
-      "SPDXID": "SPDXRef-binary-file-151",
+      "SPDXID": "SPDXRef-binary-file-146",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3464,7 +3636,7 @@
     },
     {
       "fileName": "./include/botan/p11_x509.h",
-      "SPDXID": "SPDXRef-binary-file-152",
+      "SPDXID": "SPDXRef-binary-file-147",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3476,7 +3648,7 @@
     },
     {
       "fileName": "./include/botan/locking_allocator.h",
-      "SPDXID": "SPDXRef-binary-file-153",
+      "SPDXID": "SPDXRef-binary-file-148",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3488,7 +3660,7 @@
     },
     {
       "fileName": "./include/botan/gmac.h",
-      "SPDXID": "SPDXRef-binary-file-154",
+      "SPDXID": "SPDXRef-binary-file-149",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3500,7 +3672,7 @@
     },
     {
       "fileName": "./include/botan/loadstor.h",
-      "SPDXID": "SPDXRef-binary-file-155",
+      "SPDXID": "SPDXRef-binary-file-150",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3512,7 +3684,7 @@
     },
     {
       "fileName": "./include/botan/xmss_key_pair.h",
-      "SPDXID": "SPDXRef-binary-file-156",
+      "SPDXID": "SPDXRef-binary-file-151",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3524,7 +3696,7 @@
     },
     {
       "fileName": "./include/botan/sp800_56c.h",
-      "SPDXID": "SPDXRef-binary-file-157",
+      "SPDXID": "SPDXRef-binary-file-152",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3536,7 +3708,7 @@
     },
     {
       "fileName": "./include/botan/database.h",
-      "SPDXID": "SPDXRef-binary-file-158",
+      "SPDXID": "SPDXRef-binary-file-153",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3548,7 +3720,7 @@
     },
     {
       "fileName": "./include/botan/ocsp.h",
-      "SPDXID": "SPDXRef-binary-file-159",
+      "SPDXID": "SPDXRef-binary-file-154",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3560,7 +3732,7 @@
     },
     {
       "fileName": "./include/botan/pkcs10.h",
-      "SPDXID": "SPDXRef-binary-file-160",
+      "SPDXID": "SPDXRef-binary-file-155",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3572,7 +3744,7 @@
     },
     {
       "fileName": "./include/botan/psk_db.h",
-      "SPDXID": "SPDXRef-binary-file-161",
+      "SPDXID": "SPDXRef-binary-file-156",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3584,7 +3756,7 @@
     },
     {
       "fileName": "./include/botan/tls_extensions.h",
-      "SPDXID": "SPDXRef-binary-file-162",
+      "SPDXID": "SPDXRef-binary-file-157",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3596,7 +3768,7 @@
     },
     {
       "fileName": "./include/botan/tls_version.h",
-      "SPDXID": "SPDXRef-binary-file-163",
+      "SPDXID": "SPDXRef-binary-file-158",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3608,7 +3780,7 @@
     },
     {
       "fileName": "./include/botan/sha2_32.h",
-      "SPDXID": "SPDXRef-binary-file-164",
+      "SPDXID": "SPDXRef-binary-file-159",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3620,7 +3792,7 @@
     },
     {
       "fileName": "./include/botan/whrlpool.h",
-      "SPDXID": "SPDXRef-binary-file-165",
+      "SPDXID": "SPDXRef-binary-file-160",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3632,7 +3804,7 @@
     },
     {
       "fileName": "./include/botan/kdf1_iso18033.h",
-      "SPDXID": "SPDXRef-binary-file-166",
+      "SPDXID": "SPDXRef-binary-file-161",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3644,7 +3816,7 @@
     },
     {
       "fileName": "./include/botan/curve25519.h",
-      "SPDXID": "SPDXRef-binary-file-167",
+      "SPDXID": "SPDXRef-binary-file-162",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3656,7 +3828,7 @@
     },
     {
       "fileName": "./include/botan/siv.h",
-      "SPDXID": "SPDXRef-binary-file-168",
+      "SPDXID": "SPDXRef-binary-file-163",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3668,7 +3840,7 @@
     },
     {
       "fileName": "./include/botan/stl_compatibility.h",
-      "SPDXID": "SPDXRef-binary-file-169",
+      "SPDXID": "SPDXRef-binary-file-164",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3680,7 +3852,7 @@
     },
     {
       "fileName": "./include/botan/lion.h",
-      "SPDXID": "SPDXRef-binary-file-170",
+      "SPDXID": "SPDXRef-binary-file-165",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3692,7 +3864,7 @@
     },
     {
       "fileName": "./include/botan/datastor.h",
-      "SPDXID": "SPDXRef-binary-file-171",
+      "SPDXID": "SPDXRef-binary-file-166",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3704,7 +3876,7 @@
     },
     {
       "fileName": "./include/botan/version.h",
-      "SPDXID": "SPDXRef-binary-file-172",
+      "SPDXID": "SPDXRef-binary-file-167",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3716,7 +3888,7 @@
     },
     {
       "fileName": "./include/botan/pkcs8.h",
-      "SPDXID": "SPDXRef-binary-file-173",
+      "SPDXID": "SPDXRef-binary-file-168",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3728,7 +3900,7 @@
     },
     {
       "fileName": "./include/botan/p11_slot.h",
-      "SPDXID": "SPDXRef-binary-file-174",
+      "SPDXID": "SPDXRef-binary-file-169",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3740,7 +3912,7 @@
     },
     {
       "fileName": "./include/botan/xmss_wots_privatekey.h",
-      "SPDXID": "SPDXRef-binary-file-175",
+      "SPDXID": "SPDXRef-binary-file-170",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3752,7 +3924,7 @@
     },
     {
       "fileName": "./include/botan/certstor_sql.h",
-      "SPDXID": "SPDXRef-binary-file-176",
+      "SPDXID": "SPDXRef-binary-file-171",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3764,7 +3936,7 @@
     },
     {
       "fileName": "./include/botan/sha3.h",
-      "SPDXID": "SPDXRef-binary-file-177",
+      "SPDXID": "SPDXRef-binary-file-172",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3776,7 +3948,7 @@
     },
     {
       "fileName": "./include/botan/compiler.h",
-      "SPDXID": "SPDXRef-binary-file-178",
+      "SPDXID": "SPDXRef-binary-file-173",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3788,7 +3960,7 @@
     },
     {
       "fileName": "./include/botan/assert.h",
-      "SPDXID": "SPDXRef-binary-file-179",
+      "SPDXID": "SPDXRef-binary-file-174",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3800,7 +3972,7 @@
     },
     {
       "fileName": "./include/botan/pow_mod.h",
-      "SPDXID": "SPDXRef-binary-file-180",
+      "SPDXID": "SPDXRef-binary-file-175",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3812,7 +3984,7 @@
     },
     {
       "fileName": "./include/botan/tls_ciphersuite.h",
-      "SPDXID": "SPDXRef-binary-file-181",
+      "SPDXID": "SPDXRef-binary-file-176",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3824,7 +3996,7 @@
     },
     {
       "fileName": "./include/botan/p11_ecdh.h",
-      "SPDXID": "SPDXRef-binary-file-182",
+      "SPDXID": "SPDXRef-binary-file-177",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3836,7 +4008,7 @@
     },
     {
       "fileName": "./include/botan/pem.h",
-      "SPDXID": "SPDXRef-binary-file-183",
+      "SPDXID": "SPDXRef-binary-file-178",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3848,7 +4020,7 @@
     },
     {
       "fileName": "./include/botan/dlies.h",
-      "SPDXID": "SPDXRef-binary-file-184",
+      "SPDXID": "SPDXRef-binary-file-179",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3860,7 +4032,7 @@
     },
     {
       "fileName": "./include/botan/skein_512.h",
-      "SPDXID": "SPDXRef-binary-file-185",
+      "SPDXID": "SPDXRef-binary-file-180",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3872,7 +4044,7 @@
     },
     {
       "fileName": "./include/botan/pssr.h",
-      "SPDXID": "SPDXRef-binary-file-186",
+      "SPDXID": "SPDXRef-binary-file-181",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3884,7 +4056,7 @@
     },
     {
       "fileName": "./include/botan/siphash.h",
-      "SPDXID": "SPDXRef-binary-file-187",
+      "SPDXID": "SPDXRef-binary-file-182",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3896,7 +4068,7 @@
     },
     {
       "fileName": "./include/botan/shake_cipher.h",
-      "SPDXID": "SPDXRef-binary-file-188",
+      "SPDXID": "SPDXRef-binary-file-183",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3908,7 +4080,7 @@
     },
     {
       "fileName": "./include/botan/salsa20.h",
-      "SPDXID": "SPDXRef-binary-file-189",
+      "SPDXID": "SPDXRef-binary-file-184",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3920,7 +4092,7 @@
     },
     {
       "fileName": "./include/botan/rfc6979.h",
-      "SPDXID": "SPDXRef-binary-file-190",
+      "SPDXID": "SPDXRef-binary-file-185",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3932,7 +4104,7 @@
     },
     {
       "fileName": "./include/botan/mem_ops.h",
-      "SPDXID": "SPDXRef-binary-file-191",
+      "SPDXID": "SPDXRef-binary-file-186",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3944,7 +4116,7 @@
     },
     {
       "fileName": "./include/botan/iso9796.h",
-      "SPDXID": "SPDXRef-binary-file-192",
+      "SPDXID": "SPDXRef-binary-file-187",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3956,7 +4128,7 @@
     },
     {
       "fileName": "./include/botan/shacal2.h",
-      "SPDXID": "SPDXRef-binary-file-193",
+      "SPDXID": "SPDXRef-binary-file-188",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3968,7 +4140,7 @@
     },
     {
       "fileName": "./include/botan/twofish.h",
-      "SPDXID": "SPDXRef-binary-file-194",
+      "SPDXID": "SPDXRef-binary-file-189",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3980,7 +4152,7 @@
     },
     {
       "fileName": "./include/botan/data_src.h",
-      "SPDXID": "SPDXRef-binary-file-195",
+      "SPDXID": "SPDXRef-binary-file-190",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3992,7 +4164,7 @@
     },
     {
       "fileName": "./include/botan/totp.h",
-      "SPDXID": "SPDXRef-binary-file-196",
+      "SPDXID": "SPDXRef-binary-file-191",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4004,7 +4176,7 @@
     },
     {
       "fileName": "./include/botan/x509_key.h",
-      "SPDXID": "SPDXRef-binary-file-197",
+      "SPDXID": "SPDXRef-binary-file-192",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4016,7 +4188,7 @@
     },
     {
       "fileName": "./include/botan/stateful_rng.h",
-      "SPDXID": "SPDXRef-binary-file-198",
+      "SPDXID": "SPDXRef-binary-file-193",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4028,7 +4200,7 @@
     },
     {
       "fileName": "./include/botan/http_util.h",
-      "SPDXID": "SPDXRef-binary-file-199",
+      "SPDXID": "SPDXRef-binary-file-194",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4040,7 +4212,7 @@
     },
     {
       "fileName": "./include/botan/cryptobox.h",
-      "SPDXID": "SPDXRef-binary-file-200",
+      "SPDXID": "SPDXRef-binary-file-195",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4052,7 +4224,7 @@
     },
     {
       "fileName": "./include/botan/idea.h",
-      "SPDXID": "SPDXRef-binary-file-201",
+      "SPDXID": "SPDXRef-binary-file-196",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4064,7 +4236,7 @@
     },
     {
       "fileName": "./include/botan/eckcdsa.h",
-      "SPDXID": "SPDXRef-binary-file-202",
+      "SPDXID": "SPDXRef-binary-file-197",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4076,7 +4248,7 @@
     },
     {
       "fileName": "./include/botan/asn1_print.h",
-      "SPDXID": "SPDXRef-binary-file-203",
+      "SPDXID": "SPDXRef-binary-file-198",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4088,7 +4260,7 @@
     },
     {
       "fileName": "./include/botan/mceies.h",
-      "SPDXID": "SPDXRef-binary-file-204",
+      "SPDXID": "SPDXRef-binary-file-199",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4100,7 +4272,7 @@
     },
     {
       "fileName": "./include/botan/threefish_512.h",
-      "SPDXID": "SPDXRef-binary-file-205",
+      "SPDXID": "SPDXRef-binary-file-200",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4112,7 +4284,7 @@
     },
     {
       "fileName": "./include/botan/ctr.h",
-      "SPDXID": "SPDXRef-binary-file-206",
+      "SPDXID": "SPDXRef-binary-file-201",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4124,7 +4296,7 @@
     },
     {
       "fileName": "./include/botan/oids.h",
-      "SPDXID": "SPDXRef-binary-file-207",
+      "SPDXID": "SPDXRef-binary-file-202",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4136,7 +4308,7 @@
     },
     {
       "fileName": "./include/botan/asn1_time.h",
-      "SPDXID": "SPDXRef-binary-file-208",
+      "SPDXID": "SPDXRef-binary-file-203",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4148,7 +4320,7 @@
     },
     {
       "fileName": "./include/botan/mceliece.h",
-      "SPDXID": "SPDXRef-binary-file-209",
+      "SPDXID": "SPDXRef-binary-file-204",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4160,7 +4332,7 @@
     },
     {
       "fileName": "./include/botan/comb4p.h",
-      "SPDXID": "SPDXRef-binary-file-210",
+      "SPDXID": "SPDXRef-binary-file-205",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4172,7 +4344,7 @@
     },
     {
       "fileName": "./include/botan/parsing.h",
-      "SPDXID": "SPDXRef-binary-file-211",
+      "SPDXID": "SPDXRef-binary-file-206",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4184,7 +4356,7 @@
     },
     {
       "fileName": "./include/botan/cfb.h",
-      "SPDXID": "SPDXRef-binary-file-212",
+      "SPDXID": "SPDXRef-binary-file-207",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4196,7 +4368,7 @@
     },
     {
       "fileName": "./include/botan/secqueue.h",
-      "SPDXID": "SPDXRef-binary-file-213",
+      "SPDXID": "SPDXRef-binary-file-208",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4208,7 +4380,7 @@
     },
     {
       "fileName": "./include/botan/cbc.h",
-      "SPDXID": "SPDXRef-binary-file-214",
+      "SPDXID": "SPDXRef-binary-file-209",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4220,7 +4392,7 @@
     },
     {
       "fileName": "./include/botan/cert_status.h",
-      "SPDXID": "SPDXRef-binary-file-215",
+      "SPDXID": "SPDXRef-binary-file-210",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4232,7 +4404,7 @@
     },
     {
       "fileName": "./include/botan/exceptn.h",
-      "SPDXID": "SPDXRef-binary-file-216",
+      "SPDXID": "SPDXRef-binary-file-211",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4244,7 +4416,7 @@
     },
     {
       "fileName": "./include/botan/auto_rng.h",
-      "SPDXID": "SPDXRef-binary-file-217",
+      "SPDXID": "SPDXRef-binary-file-212",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4256,7 +4428,7 @@
     },
     {
       "fileName": "./include/botan/kdf.h",
-      "SPDXID": "SPDXRef-binary-file-218",
+      "SPDXID": "SPDXRef-binary-file-213",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4268,7 +4440,7 @@
     },
     {
       "fileName": "./include/botan/build.h",
-      "SPDXID": "SPDXRef-binary-file-219",
+      "SPDXID": "SPDXRef-binary-file-214",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4280,7 +4452,7 @@
     },
     {
       "fileName": "./include/botan/types.h",
-      "SPDXID": "SPDXRef-binary-file-220",
+      "SPDXID": "SPDXRef-binary-file-215",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4292,7 +4464,7 @@
     },
     {
       "fileName": "./include/botan/sp800_108.h",
-      "SPDXID": "SPDXRef-binary-file-221",
+      "SPDXID": "SPDXRef-binary-file-216",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4304,7 +4476,7 @@
     },
     {
       "fileName": "./include/botan/sodium.h",
-      "SPDXID": "SPDXRef-binary-file-222",
+      "SPDXID": "SPDXRef-binary-file-217",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4316,7 +4488,7 @@
     },
     {
       "fileName": "./include/botan/cascade.h",
-      "SPDXID": "SPDXRef-binary-file-223",
+      "SPDXID": "SPDXRef-binary-file-218",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4328,7 +4500,7 @@
     },
     {
       "fileName": "./include/botan/keypair.h",
-      "SPDXID": "SPDXRef-binary-file-224",
+      "SPDXID": "SPDXRef-binary-file-219",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4340,7 +4512,7 @@
     },
     {
       "fileName": "./include/botan/desx.h",
-      "SPDXID": "SPDXRef-binary-file-225",
+      "SPDXID": "SPDXRef-binary-file-220",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4352,7 +4524,7 @@
     },
     {
       "fileName": "./include/botan/ofb.h",
-      "SPDXID": "SPDXRef-binary-file-226",
+      "SPDXID": "SPDXRef-binary-file-221",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4364,7 +4536,7 @@
     },
     {
       "fileName": "./include/botan/xmss_parameters.h",
-      "SPDXID": "SPDXRef-binary-file-227",
+      "SPDXID": "SPDXRef-binary-file-222",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4376,7 +4548,7 @@
     },
     {
       "fileName": "./include/botan/tls_policy.h",
-      "SPDXID": "SPDXRef-binary-file-228",
+      "SPDXID": "SPDXRef-binary-file-223",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4388,7 +4560,7 @@
     },
     {
       "fileName": "./include/botan/certstor_system.h",
-      "SPDXID": "SPDXRef-binary-file-229",
+      "SPDXID": "SPDXRef-binary-file-224",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4400,7 +4572,7 @@
     },
     {
       "fileName": "./include/botan/x509cert.h",
-      "SPDXID": "SPDXRef-binary-file-230",
+      "SPDXID": "SPDXRef-binary-file-225",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4412,7 +4584,7 @@
     },
     {
       "fileName": "./include/botan/block_cipher.h",
-      "SPDXID": "SPDXRef-binary-file-231",
+      "SPDXID": "SPDXRef-binary-file-226",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4424,7 +4596,7 @@
     },
     {
       "fileName": "./include/botan/kasumi.h",
-      "SPDXID": "SPDXRef-binary-file-232",
+      "SPDXID": "SPDXRef-binary-file-227",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4436,7 +4608,7 @@
     },
     {
       "fileName": "./include/botan/x509_dn.h",
-      "SPDXID": "SPDXRef-binary-file-233",
+      "SPDXID": "SPDXRef-binary-file-228",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4448,7 +4620,7 @@
     },
     {
       "fileName": "./include/botan/aes.h",
-      "SPDXID": "SPDXRef-binary-file-234",
+      "SPDXID": "SPDXRef-binary-file-229",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4460,7 +4632,7 @@
     },
     {
       "fileName": "./include/botan/tls_session_manager.h",
-      "SPDXID": "SPDXRef-binary-file-235",
+      "SPDXID": "SPDXRef-binary-file-230",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4472,7 +4644,7 @@
     },
     {
       "fileName": "./include/botan/sha160.h",
-      "SPDXID": "SPDXRef-binary-file-236",
+      "SPDXID": "SPDXRef-binary-file-231",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4484,7 +4656,7 @@
     },
     {
       "fileName": "./include/botan/ber_dec.h",
-      "SPDXID": "SPDXRef-binary-file-237",
+      "SPDXID": "SPDXRef-binary-file-232",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4496,7 +4668,7 @@
     },
     {
       "fileName": "./include/botan/ccm.h",
-      "SPDXID": "SPDXRef-binary-file-238",
+      "SPDXID": "SPDXRef-binary-file-233",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4508,7 +4680,7 @@
     },
     {
       "fileName": "./include/botan/ocb.h",
-      "SPDXID": "SPDXRef-binary-file-239",
+      "SPDXID": "SPDXRef-binary-file-234",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4520,7 +4692,7 @@
     },
     {
       "fileName": "./include/botan/bcrypt_pbkdf.h",
-      "SPDXID": "SPDXRef-binary-file-240",
+      "SPDXID": "SPDXRef-binary-file-235",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4532,7 +4704,7 @@
     },
     {
       "fileName": "./include/botan/noekeon.h",
-      "SPDXID": "SPDXRef-binary-file-241",
+      "SPDXID": "SPDXRef-binary-file-236",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4544,7 +4716,7 @@
     },
     {
       "fileName": "./include/botan/tls_messages.h",
-      "SPDXID": "SPDXRef-binary-file-242",
+      "SPDXID": "SPDXRef-binary-file-237",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4556,7 +4728,7 @@
     },
     {
       "fileName": "./include/botan/emsa_raw.h",
-      "SPDXID": "SPDXRef-binary-file-243",
+      "SPDXID": "SPDXRef-binary-file-238",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4568,7 +4740,7 @@
     },
     {
       "fileName": "./include/botan/curve_gfp.h",
-      "SPDXID": "SPDXRef-binary-file-244",
+      "SPDXID": "SPDXRef-binary-file-239",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4580,7 +4752,7 @@
     },
     {
       "fileName": "./include/botan/par_hash.h",
-      "SPDXID": "SPDXRef-binary-file-245",
+      "SPDXID": "SPDXRef-binary-file-240",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4592,7 +4764,7 @@
     },
     {
       "fileName": "./include/botan/pkix_types.h",
-      "SPDXID": "SPDXRef-binary-file-246",
+      "SPDXID": "SPDXRef-binary-file-241",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4604,7 +4776,7 @@
     },
     {
       "fileName": "./include/botan/buf_filt.h",
-      "SPDXID": "SPDXRef-binary-file-247",
+      "SPDXID": "SPDXRef-binary-file-242",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4616,7 +4788,7 @@
     },
     {
       "fileName": "./include/botan/buf_comp.h",
-      "SPDXID": "SPDXRef-binary-file-248",
+      "SPDXID": "SPDXRef-binary-file-243",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4628,7 +4800,7 @@
     },
     {
       "fileName": "./include/botan/seed.h",
-      "SPDXID": "SPDXRef-binary-file-249",
+      "SPDXID": "SPDXRef-binary-file-244",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4640,7 +4812,7 @@
     },
     {
       "fileName": "./include/botan/prf_x942.h",
-      "SPDXID": "SPDXRef-binary-file-250",
+      "SPDXID": "SPDXRef-binary-file-245",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4652,7 +4824,7 @@
     },
     {
       "fileName": "./include/botan/data_snk.h",
-      "SPDXID": "SPDXRef-binary-file-251",
+      "SPDXID": "SPDXRef-binary-file-246",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4664,7 +4836,7 @@
     },
     {
       "fileName": "./include/botan/ed25519.h",
-      "SPDXID": "SPDXRef-binary-file-252",
+      "SPDXID": "SPDXRef-binary-file-247",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4676,7 +4848,7 @@
     },
     {
       "fileName": "./include/botan/mgf1.h",
-      "SPDXID": "SPDXRef-binary-file-253",
+      "SPDXID": "SPDXRef-binary-file-248",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4688,7 +4860,7 @@
     },
     {
       "fileName": "./include/botan/numthry.h",
-      "SPDXID": "SPDXRef-binary-file-254",
+      "SPDXID": "SPDXRef-binary-file-249",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4700,7 +4872,7 @@
     },
     {
       "fileName": "./include/botan/name_constraint.h",
-      "SPDXID": "SPDXRef-binary-file-255",
+      "SPDXID": "SPDXRef-binary-file-250",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4712,7 +4884,7 @@
     },
     {
       "fileName": "./include/botan/tls_server_info.h",
-      "SPDXID": "SPDXRef-binary-file-256",
+      "SPDXID": "SPDXRef-binary-file-251",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4724,7 +4896,7 @@
     },
     {
       "fileName": "./include/botan/xmss_publickey.h",
-      "SPDXID": "SPDXRef-binary-file-257",
+      "SPDXID": "SPDXRef-binary-file-252",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4736,7 +4908,7 @@
     },
     {
       "fileName": "./include/botan/elgamal.h",
-      "SPDXID": "SPDXRef-binary-file-258",
+      "SPDXID": "SPDXRef-binary-file-253",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4748,7 +4920,7 @@
     },
     {
       "fileName": "./include/botan/base64.h",
-      "SPDXID": "SPDXRef-binary-file-259",
+      "SPDXID": "SPDXRef-binary-file-254",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4760,7 +4932,7 @@
     },
     {
       "fileName": "./include/botan/otp.h",
-      "SPDXID": "SPDXRef-binary-file-260",
+      "SPDXID": "SPDXRef-binary-file-255",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4772,7 +4944,7 @@
     },
     {
       "fileName": "./include/botan/x509self.h",
-      "SPDXID": "SPDXRef-binary-file-261",
+      "SPDXID": "SPDXRef-binary-file-256",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4784,7 +4956,7 @@
     },
     {
       "fileName": "./include/botan/pipe.h",
-      "SPDXID": "SPDXRef-binary-file-262",
+      "SPDXID": "SPDXRef-binary-file-257",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4796,7 +4968,7 @@
     },
     {
       "fileName": "./include/botan/p11_randomgenerator.h",
-      "SPDXID": "SPDXRef-binary-file-263",
+      "SPDXID": "SPDXRef-binary-file-258",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4808,7 +4980,7 @@
     },
     {
       "fileName": "./include/botan/pk_ops.h",
-      "SPDXID": "SPDXRef-binary-file-264",
+      "SPDXID": "SPDXRef-binary-file-259",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4820,7 +4992,7 @@
     },
     {
       "fileName": "./include/botan/tls_algos.h",
-      "SPDXID": "SPDXRef-binary-file-265",
+      "SPDXID": "SPDXRef-binary-file-260",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4832,7 +5004,7 @@
     },
     {
       "fileName": "./include/botan/sha2_64.h",
-      "SPDXID": "SPDXRef-binary-file-266",
+      "SPDXID": "SPDXRef-binary-file-261",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4844,7 +5016,7 @@
     },
     {
       "fileName": "./include/botan/pwdhash.h",
-      "SPDXID": "SPDXRef-binary-file-267",
+      "SPDXID": "SPDXRef-binary-file-262",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4856,7 +5028,7 @@
     },
     {
       "fileName": "./include/botan/xmss_wots_publickey.h",
-      "SPDXID": "SPDXRef-binary-file-268",
+      "SPDXID": "SPDXRef-binary-file-263",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4868,7 +5040,7 @@
     },
     {
       "fileName": "./include/botan/md5.h",
-      "SPDXID": "SPDXRef-binary-file-269",
+      "SPDXID": "SPDXRef-binary-file-264",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4880,7 +5052,7 @@
     },
     {
       "fileName": "./include/botan/pk_keys.h",
-      "SPDXID": "SPDXRef-binary-file-270",
+      "SPDXID": "SPDXRef-binary-file-265",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4892,7 +5064,7 @@
     },
     {
       "fileName": "./include/botan/dl_group.h",
-      "SPDXID": "SPDXRef-binary-file-271",
+      "SPDXID": "SPDXRef-binary-file-266",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4904,7 +5076,7 @@
     },
     {
       "fileName": "./include/botan/mac.h",
-      "SPDXID": "SPDXRef-binary-file-272",
+      "SPDXID": "SPDXRef-binary-file-267",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4916,7 +5088,7 @@
     },
     {
       "fileName": "./include/botan/ocsp_types.h",
-      "SPDXID": "SPDXRef-binary-file-273",
+      "SPDXID": "SPDXRef-binary-file-268",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4928,7 +5100,7 @@
     },
     {
       "fileName": "./include/botan/cpuid.h",
-      "SPDXID": "SPDXRef-binary-file-274",
+      "SPDXID": "SPDXRef-binary-file-269",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4940,7 +5112,7 @@
     },
     {
       "fileName": "./include/botan/cbc_mac.h",
-      "SPDXID": "SPDXRef-binary-file-275",
+      "SPDXID": "SPDXRef-binary-file-270",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4952,7 +5124,7 @@
     },
     {
       "fileName": "./include/botan/asn1_oid.h",
-      "SPDXID": "SPDXRef-binary-file-276",
+      "SPDXID": "SPDXRef-binary-file-271",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4964,7 +5136,7 @@
     },
     {
       "fileName": "./include/botan/botan.h",
-      "SPDXID": "SPDXRef-binary-file-277",
+      "SPDXID": "SPDXRef-binary-file-272",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4976,7 +5148,7 @@
     },
     {
       "fileName": "./include/botan/dyn_load.h",
-      "SPDXID": "SPDXRef-binary-file-278",
+      "SPDXID": "SPDXRef-binary-file-273",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4988,7 +5160,7 @@
     },
     {
       "fileName": "./include/botan/comp_filter.h",
-      "SPDXID": "SPDXRef-binary-file-279",
+      "SPDXID": "SPDXRef-binary-file-274",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5000,7 +5172,7 @@
     },
     {
       "fileName": "./include/botan/pkcs11t.h",
-      "SPDXID": "SPDXRef-binary-file-280",
+      "SPDXID": "SPDXRef-binary-file-275",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5012,7 +5184,7 @@
     },
     {
       "fileName": "./include/botan/misty1.h",
-      "SPDXID": "SPDXRef-binary-file-281",
+      "SPDXID": "SPDXRef-binary-file-276",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5024,7 +5196,7 @@
     },
     {
       "fileName": "./include/botan/entropy_src.h",
-      "SPDXID": "SPDXRef-binary-file-282",
+      "SPDXID": "SPDXRef-binary-file-277",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5036,7 +5208,7 @@
     },
     {
       "fileName": "./include/botan/argon2.h",
-      "SPDXID": "SPDXRef-binary-file-283",
+      "SPDXID": "SPDXRef-binary-file-278",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5048,7 +5220,7 @@
     },
     {
       "fileName": "./include/botan/xmss_hash.h",
-      "SPDXID": "SPDXRef-binary-file-284",
+      "SPDXID": "SPDXRef-binary-file-279",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5060,7 +5232,7 @@
     },
     {
       "fileName": "./include/botan/hmac_drbg.h",
-      "SPDXID": "SPDXRef-binary-file-285",
+      "SPDXID": "SPDXRef-binary-file-280",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5072,7 +5244,7 @@
     },
     {
       "fileName": "./include/botan/pkix_enums.h",
-      "SPDXID": "SPDXRef-binary-file-286",
+      "SPDXID": "SPDXRef-binary-file-281",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5084,7 +5256,7 @@
     },
     {
       "fileName": "./include/botan/uuid.h",
-      "SPDXID": "SPDXRef-binary-file-287",
+      "SPDXID": "SPDXRef-binary-file-282",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5096,7 +5268,7 @@
     },
     {
       "fileName": "./include/botan/poly1305.h",
-      "SPDXID": "SPDXRef-binary-file-288",
+      "SPDXID": "SPDXRef-binary-file-283",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5108,7 +5280,7 @@
     },
     {
       "fileName": "./include/botan/zfec.h",
-      "SPDXID": "SPDXRef-binary-file-289",
+      "SPDXID": "SPDXRef-binary-file-284",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5120,7 +5292,7 @@
     },
     {
       "fileName": "./include/botan/pkcs11f.h",
-      "SPDXID": "SPDXRef-binary-file-290",
+      "SPDXID": "SPDXRef-binary-file-285",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5132,7 +5304,7 @@
     },
     {
       "fileName": "./include/botan/p11_types.h",
-      "SPDXID": "SPDXRef-binary-file-291",
+      "SPDXID": "SPDXRef-binary-file-286",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5144,7 +5316,7 @@
     },
     {
       "fileName": "./include/botan/ecdh.h",
-      "SPDXID": "SPDXRef-binary-file-292",
+      "SPDXID": "SPDXRef-binary-file-287",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5156,7 +5328,7 @@
     },
     {
       "fileName": "./include/botan/divide.h",
-      "SPDXID": "SPDXRef-binary-file-293",
+      "SPDXID": "SPDXRef-binary-file-288",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5168,7 +5340,7 @@
     },
     {
       "fileName": "./include/botan/tls_client.h",
-      "SPDXID": "SPDXRef-binary-file-294",
+      "SPDXID": "SPDXRef-binary-file-289",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5180,7 +5352,7 @@
     },
     {
       "fileName": "./include/botan/pbkdf1.h",
-      "SPDXID": "SPDXRef-binary-file-295",
+      "SPDXID": "SPDXRef-binary-file-290",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5192,7 +5364,7 @@
     },
     {
       "fileName": "./include/botan/ffi.h",
-      "SPDXID": "SPDXRef-binary-file-296",
+      "SPDXID": "SPDXRef-binary-file-291",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5204,7 +5376,7 @@
     },
     {
       "fileName": "./include/botan/dh.h",
-      "SPDXID": "SPDXRef-binary-file-297",
+      "SPDXID": "SPDXRef-binary-file-292",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5216,7 +5388,7 @@
     },
     {
       "fileName": "./include/botan/cast128.h",
-      "SPDXID": "SPDXRef-binary-file-298",
+      "SPDXID": "SPDXRef-binary-file-293",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5228,7 +5400,7 @@
     },
     {
       "fileName": "./include/botan/x509path.h",
-      "SPDXID": "SPDXRef-binary-file-299",
+      "SPDXID": "SPDXRef-binary-file-294",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5240,7 +5412,7 @@
     },
     {
       "fileName": "./include/botan/dl_algo.h",
-      "SPDXID": "SPDXRef-binary-file-300",
+      "SPDXID": "SPDXRef-binary-file-295",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5252,7 +5424,7 @@
     },
     {
       "fileName": "./include/botan/blowfish.h",
-      "SPDXID": "SPDXRef-binary-file-301",
+      "SPDXID": "SPDXRef-binary-file-296",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5264,7 +5436,7 @@
     },
     {
       "fileName": "./include/botan/calendar.h",
-      "SPDXID": "SPDXRef-binary-file-302",
+      "SPDXID": "SPDXRef-binary-file-297",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5276,7 +5448,7 @@
     },
     {
       "fileName": "./include/botan/pk_ops_fwd.h",
-      "SPDXID": "SPDXRef-binary-file-303",
+      "SPDXID": "SPDXRef-binary-file-298",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5288,7 +5460,7 @@
     },
     {
       "fileName": "./include/botan/sm2_enc.h",
-      "SPDXID": "SPDXRef-binary-file-304",
+      "SPDXID": "SPDXRef-binary-file-299",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5300,7 +5472,7 @@
     },
     {
       "fileName": "./include/botan/gost_28147.h",
-      "SPDXID": "SPDXRef-binary-file-305",
+      "SPDXID": "SPDXRef-binary-file-300",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5312,7 +5484,7 @@
     },
     {
       "fileName": "./include/botan/key_constraint.h",
-      "SPDXID": "SPDXRef-binary-file-306",
+      "SPDXID": "SPDXRef-binary-file-301",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5324,7 +5496,7 @@
     },
     {
       "fileName": "./include/botan/rmd160.h",
-      "SPDXID": "SPDXRef-binary-file-307",
+      "SPDXID": "SPDXRef-binary-file-302",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5336,7 +5508,7 @@
     },
     {
       "fileName": "./include/botan/asn1_obj.h",
-      "SPDXID": "SPDXRef-binary-file-308",
+      "SPDXID": "SPDXRef-binary-file-303",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5348,7 +5520,7 @@
     },
     {
       "fileName": "./include/botan/tls_alert.h",
-      "SPDXID": "SPDXRef-binary-file-309",
+      "SPDXID": "SPDXRef-binary-file-304",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5360,7 +5532,7 @@
     },
     {
       "fileName": "./include/botan/pbes2.h",
-      "SPDXID": "SPDXRef-binary-file-310",
+      "SPDXID": "SPDXRef-binary-file-305",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5372,7 +5544,7 @@
     },
     {
       "fileName": "./include/botan/keccak.h",
-      "SPDXID": "SPDXRef-binary-file-311",
+      "SPDXID": "SPDXRef-binary-file-306",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5384,7 +5556,7 @@
     },
     {
       "fileName": "./include/botan/monty.h",
-      "SPDXID": "SPDXRef-binary-file-312",
+      "SPDXID": "SPDXRef-binary-file-307",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5396,7 +5568,7 @@
     },
     {
       "fileName": "./lib/python3.8/site-packages/botan2.py",
-      "SPDXID": "SPDXRef-binary-file-313",
+      "SPDXID": "SPDXRef-binary-file-308",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5408,11 +5580,11 @@
     },
     {
       "fileName": "./lib/libbotan-2.so.19.19.3",
-      "SPDXID": "SPDXRef-binary-file-314",
+      "SPDXID": "SPDXRef-binary-file-309",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2f089e7808abbeaa1cc852aba157c64c1b9682fe4dfa116221043b5d3d4fa836"
+          "checksumValue": "0a7c61120b0bfee2aa8d4fef5b528665775c70e688d0ce515bd54017e1060768"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -5420,11 +5592,11 @@
     },
     {
       "fileName": "./lib/libbotan-2.so",
-      "SPDXID": "SPDXRef-binary-file-315",
+      "SPDXID": "SPDXRef-binary-file-310",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2f089e7808abbeaa1cc852aba157c64c1b9682fe4dfa116221043b5d3d4fa836"
+          "checksumValue": "0a7c61120b0bfee2aa8d4fef5b528665775c70e688d0ce515bd54017e1060768"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -5432,7 +5604,7 @@
     },
     {
       "fileName": "./lib/pkgconfig/botan-2.pc",
-      "SPDXID": "SPDXRef-binary-file-316",
+      "SPDXID": "SPDXRef-binary-file-311",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -5444,11 +5616,11 @@
     },
     {
       "fileName": "./lib/libbotan-2.so.19",
-      "SPDXID": "SPDXRef-binary-file-317",
+      "SPDXID": "SPDXRef-binary-file-312",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2f089e7808abbeaa1cc852aba157c64c1b9682fe4dfa116221043b5d3d4fa836"
+          "checksumValue": "0a7c61120b0bfee2aa8d4fef5b528665775c70e688d0ce515bd54017e1060768"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -5456,11 +5628,11 @@
     },
     {
       "fileName": "./tools/botan/botan",
-      "SPDXID": "SPDXRef-binary-file-318",
+      "SPDXID": "SPDXRef-binary-file-313",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "5c2e6d2ea649c487e7b4166fdda7775d6b4de282eb263c30130d45378a13760b"
+          "checksumValue": "1df56e0f76ba8e630c7b229e98921116e43c88361882889cd4f6ddc63d85b428"
         }
       ],
       "licenseConcluded": "NOASSERTION",

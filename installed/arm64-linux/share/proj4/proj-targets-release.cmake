@@ -8,12 +8,13 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 # Import target "PROJ::proj" for configuration "Release"
 set_property(TARGET PROJ::proj APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(PROJ::proj PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C;CXX"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libproj.a"
+  IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "unofficial::sqlite3::sqlite3;CURL::libcurl_shared"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libproj.so.25.9.7.0"
+  IMPORTED_SONAME_RELEASE "libproj.so.25"
   )
 
 list(APPEND _cmake_import_check_targets PROJ::proj )
-list(APPEND _cmake_import_check_files_for_PROJ::proj "${_IMPORT_PREFIX}/lib/libproj.a" )
+list(APPEND _cmake_import_check_files_for_PROJ::proj "${_IMPORT_PREFIX}/lib/libproj.so.25.9.7.0" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

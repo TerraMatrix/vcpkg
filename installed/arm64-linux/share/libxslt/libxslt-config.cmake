@@ -105,7 +105,7 @@ set(LIBXSLT_EXSLT_LIBRARIES ${LIBXSLT_EXSLT_LIBRARY})
 
 include(CMakeFindDependencyMacro)
 
-set(LIBXSLT_SHARED OFF)
+set(LIBXSLT_SHARED ON)
 set(LIBXSLT_WITH_CRYPTO OFF)
 
 find_dependency(LibXml2 CONFIG)

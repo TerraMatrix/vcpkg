@@ -8,12 +8,12 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 # Import target "LibXml2::LibXml2" for configuration "Release"
 set_property(TARGET LibXml2::LibXml2 APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(LibXml2::LibXml2 PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libxml2.a"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libxml2.so.16.1.0"
+  IMPORTED_SONAME_RELEASE "libxml2.so.16"
   )
 
 list(APPEND _cmake_import_check_targets LibXml2::LibXml2 )
-list(APPEND _cmake_import_check_files_for_LibXml2::LibXml2 "${_IMPORT_PREFIX}/lib/libxml2.a" )
+list(APPEND _cmake_import_check_files_for_LibXml2::LibXml2 "${_IMPORT_PREFIX}/lib/libxml2.so.16.1.0" )
 
 # Import target "LibXml2::xmllint" for configuration "Release"
 set_property(TARGET LibXml2::xmllint APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)

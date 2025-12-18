@@ -8,6 +8,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 # Import target "blend2d::blend2d" for configuration "Release"
 set_property(TARGET blend2d::blend2d APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(blend2d::blend2d PROPERTIES
+  IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "asmjit::asmjit"
   IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libblend2d.so"
   IMPORTED_SONAME_RELEASE "libblend2d.so"
   )

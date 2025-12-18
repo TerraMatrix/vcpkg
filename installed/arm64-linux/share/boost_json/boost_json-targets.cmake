@@ -55,10 +55,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::json
-add_library(Boost::json STATIC IMPORTED)
+add_library(Boost::json SHARED IMPORTED)
 
 set_target_properties(Boost::json PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_JSON_NO_LIB=1;BOOST_JSON_STATIC_LINK=1"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_JSON_NO_LIB=1;BOOST_JSON_DYN_LINK=1"
   INTERFACE_COMPILE_FEATURES "cxx_constexpr"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "Boost::align;Boost::assert;Boost::config;Boost::container;Boost::container_hash;Boost::core;Boost::describe;Boost::endian;Boost::mp11;Boost::system;Boost::throw_exception"

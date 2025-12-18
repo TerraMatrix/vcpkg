@@ -15,27 +15,16 @@ set_target_properties(Qhull::qhullcpp PROPERTIES
 list(APPEND _cmake_import_check_targets Qhull::qhullcpp )
 list(APPEND _cmake_import_check_files_for_Qhull::qhullcpp "${_IMPORT_PREFIX}/lib/libqhullcpp.a" )
 
-# Import target "Qhull::qhullstatic" for configuration "Release"
-set_property(TARGET Qhull::qhullstatic APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(Qhull::qhullstatic PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C"
+# Import target "Qhull::qhull_r" for configuration "Release"
+set_property(TARGET Qhull::qhull_r APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(Qhull::qhull_r PROPERTIES
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "m"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libqhullstatic.a"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libqhull_r.so.8.0.2"
+  IMPORTED_SONAME_RELEASE "libqhull_r.so.8.0"
   )
 
-list(APPEND _cmake_import_check_targets Qhull::qhullstatic )
-list(APPEND _cmake_import_check_files_for_Qhull::qhullstatic "${_IMPORT_PREFIX}/lib/libqhullstatic.a" )
-
-# Import target "Qhull::qhullstatic_r" for configuration "Release"
-set_property(TARGET Qhull::qhullstatic_r APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(Qhull::qhullstatic_r PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C"
-  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "m"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libqhullstatic_r.a"
-  )
-
-list(APPEND _cmake_import_check_targets Qhull::qhullstatic_r )
-list(APPEND _cmake_import_check_files_for_Qhull::qhullstatic_r "${_IMPORT_PREFIX}/lib/libqhullstatic_r.a" )
+list(APPEND _cmake_import_check_targets Qhull::qhull_r )
+list(APPEND _cmake_import_check_files_for_Qhull::qhull_r "${_IMPORT_PREFIX}/lib/libqhull_r.so.8.0.2" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

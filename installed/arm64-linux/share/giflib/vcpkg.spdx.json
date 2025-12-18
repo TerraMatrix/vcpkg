@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/giflib-arm64-linux-5.2.2#2-57bba3cd-bead-4053-a9b4-107288c81b4f",
-  "name": "giflib:arm64-linux@5.2.2#2 a8eb138ab8fbcc63db9aae9b00e81adc928a2247b31e5e0f48965b975e45a381",
+  "documentNamespace": "https://spdx.org/spdxdocs/giflib-arm64-linux-5.2.2#2-d1b09df6-da81-42cc-9742-7ac8a70229c2",
+  "name": "giflib:arm64-linux@5.2.2#2 851d586a96e31fef33fc2667f79440385b4facec81fefa04250817cc1052be37",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T03:44:06Z"
+    "created": "2025-12-16T11:13:31Z"
   },
   "relationships": [
     {
@@ -86,11 +86,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-5"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-6"
     }
   ],
   "packages": [
@@ -109,7 +104,7 @@
     {
       "name": "giflib:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "a8eb138ab8fbcc63db9aae9b00e81adc928a2247b31e5e0f48965b975e45a381",
+      "versionInfo": "851d586a96e31fef33fc2667f79440385b4facec81fefa04250817cc1052be37",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -223,19 +218,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libgif.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "02ddee44cf86d7df0882020420604f5659c2b7d4542fd40c73350d580bd80b0c"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -243,7 +226,7 @@
     },
     {
       "fileName": "./share/gif/vcpkg-cmake-wrapper.cmake",
-      "SPDXID": "SPDXRef-binary-file-2",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -255,7 +238,7 @@
     },
     {
       "fileName": "./share/giflib/copyright",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -267,7 +250,7 @@
     },
     {
       "fileName": "./share/giflib/usage",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -279,7 +262,7 @@
     },
     {
       "fileName": "./include/gif_lib.h",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -290,12 +273,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libgif.a",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "fileName": "./lib/libgif.so",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "c3ac676ac08a0adcd5420feb923358f2d33cc2ae30629204d239b3f55fb27693"
+          "checksumValue": "90f656bb0c5dc5e2d7b53eaeb3709e2596288f2988b22bb1d5df4af23c34b13f"
         }
       ],
       "licenseConcluded": "NOASSERTION",

@@ -55,16 +55,11 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target liblzma::liblzma
-add_library(liblzma::liblzma STATIC IMPORTED)
+add_library(liblzma::liblzma SHARED IMPORTED)
 
 set_target_properties(liblzma::liblzma PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:Threads::Threads>"
 )
-
-if(CMAKE_VERSION VERSION_LESS 2.8.12)
-  message(FATAL_ERROR "This file relies on consumers using CMake 2.8.12 or greater.")
-endif()
 
 # Load information for each installed configuration.
 file(GLOB _cmake_config_files "${CMAKE_CURRENT_LIST_DIR}/liblzma-targets-*.cmake")

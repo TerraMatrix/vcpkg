@@ -55,21 +55,19 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target LibXslt::LibXslt
-add_library(LibXslt::LibXslt STATIC IMPORTED)
+add_library(LibXslt::LibXslt SHARED IMPORTED)
 
 set_target_properties(LibXslt::LibXslt PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "LIBXSLT_STATIC"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "LibXml2::LibXml2;\$<LINK_ONLY:m>"
+  INTERFACE_LINK_LIBRARIES "LibXml2::LibXml2"
 )
 
 # Create imported target LibXslt::LibExslt
-add_library(LibXslt::LibExslt STATIC IMPORTED)
+add_library(LibXslt::LibExslt SHARED IMPORTED)
 
 set_target_properties(LibXslt::LibExslt PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "LIBEXSLT_STATIC"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:m>;LibXslt::LibXslt;LibXml2::LibXml2"
+  INTERFACE_LINK_LIBRARIES "LibXslt::LibXslt;LibXml2::LibXml2"
 )
 
 # Create imported target LibXslt::xsltproc

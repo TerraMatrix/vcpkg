@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/freetype-arm64-linux-2.13.3-22cfe2ce-0eea-4d40-8e0f-9b08ed155431",
-  "name": "freetype:arm64-linux@2.13.3 bfe6ee8007f2d38f58769bc4e9c869806d1d51428dd0efc25ec9a2b796b3e6b6",
+  "documentNamespace": "https://spdx.org/spdxdocs/freetype-arm64-linux-2.13.3-3e5c7d5c-0e39-4889-9b25-37d8d836e684",
+  "name": "freetype:arm64-linux@2.13.3 82517ec6f16cbca1c8757aecf7b9de0b1d8e9b33dff00a19fa5bad84dede30d5",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-18T09:25:40Z"
+    "created": "2025-12-16T10:20:42Z"
   },
   "relationships": [
     {
@@ -401,11 +401,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-66"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-67"
     }
   ],
   "packages": [
@@ -424,7 +419,7 @@
     {
       "name": "freetype:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "bfe6ee8007f2d38f58769bc4e9c869806d1d51428dd0efc25ec9a2b796b3e6b6",
+      "versionInfo": "82517ec6f16cbca1c8757aecf7b9de0b1d8e9b33dff00a19fa5bad84dede30d5",
       "downloadLocation": "NONE",
       "licenseConcluded": "(FTL OR GPL-2.0-or-later)",
       "licenseDeclared": "NOASSERTION",
@@ -561,31 +556,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libfreetyped.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "57336c8745611864889fe71bfa098590e637d8c488c74891b713dd7bea291d62"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/freetype2.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "29f05e242d2aa47a66d3cfcd0125aedf7ffecdf78c3b44296adf00141bc7c8d4"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -593,23 +564,11 @@
     },
     {
       "fileName": "./share/freetype/vcpkg-cmake-wrapper.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "04e3de14e138db862265c695278ea5bbd16ad76aa7b443fef7258ff659079be3"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/freetype/freetype-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "51c09c4ca7cb46898455cc2e5b465959ae3a2bf8056f5772d6c5bae2e0602774"
+          "checksumValue": "c31d293c3fa5ec1fb1d16056bfe0e98b903e0ac4cd44f19a85d826e42b616abe"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -617,7 +576,7 @@
     },
     {
       "fileName": "./share/freetype/copyright",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -629,7 +588,7 @@
     },
     {
       "fileName": "./share/freetype/freetype-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -641,11 +600,11 @@
     },
     {
       "fileName": "./share/freetype/freetype-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "6034b6774887ac07797fabfbdf4d42aeb24e860fc1e3e883e7c062214f3a2462"
+          "checksumValue": "128c31173348d2f7e79663215ffe1c6c98983a323bd6e78389a801ba60cc0de9"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -653,11 +612,11 @@
     },
     {
       "fileName": "./share/freetype/freetype-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "0a476a47040eccaca68c46db0f8831e3f0756d5f8456d00d1f6cbdd93ddbc02f"
+          "checksumValue": "d73d29a31840f0ebdff85598f239aafd8ecad11a48d96fd5987bbe2a47ad9f05"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -665,11 +624,11 @@
     },
     {
       "fileName": "./share/freetype/freetype-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "fa3a38fd35fd2ed787d4df60297b51f821c91912d89d62f772beeeee44b3b830"
+          "checksumValue": "4b3bd7216252112331c8240dff04fa00d295960ecd2b28f0ec69c777459331b4"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -677,7 +636,7 @@
     },
     {
       "fileName": "./share/freetype/usage",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -689,7 +648,7 @@
     },
     {
       "fileName": "./include/freetype/ftchapters.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -701,7 +660,7 @@
     },
     {
       "fileName": "./include/freetype/ftbzip2.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -713,7 +672,7 @@
     },
     {
       "fileName": "./include/freetype/ftincrem.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -725,7 +684,7 @@
     },
     {
       "fileName": "./include/freetype/fttrigon.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -737,7 +696,7 @@
     },
     {
       "fileName": "./include/freetype/ftoutln.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -749,7 +708,7 @@
     },
     {
       "fileName": "./include/freetype/ftcid.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -761,7 +720,7 @@
     },
     {
       "fileName": "./include/freetype/otsvg.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -773,7 +732,7 @@
     },
     {
       "fileName": "./include/freetype/ttnameid.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -785,7 +744,7 @@
     },
     {
       "fileName": "./include/freetype/ftglyph.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -797,7 +756,7 @@
     },
     {
       "fileName": "./include/freetype/ftbdf.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -809,7 +768,7 @@
     },
     {
       "fileName": "./include/freetype/ftsynth.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -821,7 +780,7 @@
     },
     {
       "fileName": "./include/freetype/ftpfr.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -833,7 +792,7 @@
     },
     {
       "fileName": "./include/freetype/ftparams.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -845,7 +804,7 @@
     },
     {
       "fileName": "./include/freetype/ftlist.h",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -857,7 +816,7 @@
     },
     {
       "fileName": "./include/freetype/ftcolor.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -869,7 +828,7 @@
     },
     {
       "fileName": "./include/freetype/config/mac-support.h",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -881,7 +840,7 @@
     },
     {
       "fileName": "./include/freetype/config/public-macros.h",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -893,7 +852,7 @@
     },
     {
       "fileName": "./include/freetype/config/ftconfig.h",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -905,7 +864,7 @@
     },
     {
       "fileName": "./include/freetype/config/ftoption.h",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -917,7 +876,7 @@
     },
     {
       "fileName": "./include/freetype/config/ftmodule.h",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -929,7 +888,7 @@
     },
     {
       "fileName": "./include/freetype/config/integer-types.h",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -941,7 +900,7 @@
     },
     {
       "fileName": "./include/freetype/config/ftheader.h",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -953,7 +912,7 @@
     },
     {
       "fileName": "./include/freetype/config/ftstdlib.h",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -965,7 +924,7 @@
     },
     {
       "fileName": "./include/freetype/ftmm.h",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -977,7 +936,7 @@
     },
     {
       "fileName": "./include/freetype/ftsizes.h",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -989,7 +948,7 @@
     },
     {
       "fileName": "./include/freetype/ftstroke.h",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1001,7 +960,7 @@
     },
     {
       "fileName": "./include/freetype/ftwinfnt.h",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1013,7 +972,7 @@
     },
     {
       "fileName": "./include/freetype/ftbbox.h",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1025,7 +984,7 @@
     },
     {
       "fileName": "./include/freetype/ftlzw.h",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1037,7 +996,7 @@
     },
     {
       "fileName": "./include/freetype/ftmoderr.h",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1049,7 +1008,7 @@
     },
     {
       "fileName": "./include/freetype/ftcache.h",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1061,7 +1020,7 @@
     },
     {
       "fileName": "./include/freetype/ftsnames.h",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1073,7 +1032,7 @@
     },
     {
       "fileName": "./include/freetype/freetype.h",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1085,7 +1044,7 @@
     },
     {
       "fileName": "./include/freetype/ftdriver.h",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1097,7 +1056,7 @@
     },
     {
       "fileName": "./include/freetype/ftrender.h",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1109,7 +1068,7 @@
     },
     {
       "fileName": "./include/freetype/t1tables.h",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1121,7 +1080,7 @@
     },
     {
       "fileName": "./include/freetype/ftmac.h",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1133,7 +1092,7 @@
     },
     {
       "fileName": "./include/freetype/ftlogging.h",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1145,7 +1104,7 @@
     },
     {
       "fileName": "./include/freetype/fttypes.h",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1157,7 +1116,7 @@
     },
     {
       "fileName": "./include/freetype/ftfntfmt.h",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1169,7 +1128,7 @@
     },
     {
       "fileName": "./include/freetype/ftbitmap.h",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1181,7 +1140,7 @@
     },
     {
       "fileName": "./include/freetype/ftadvanc.h",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1193,7 +1152,7 @@
     },
     {
       "fileName": "./include/freetype/ftgxval.h",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1205,7 +1164,7 @@
     },
     {
       "fileName": "./include/freetype/fterrors.h",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1217,7 +1176,7 @@
     },
     {
       "fileName": "./include/freetype/tttags.h",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1229,7 +1188,7 @@
     },
     {
       "fileName": "./include/freetype/ftsystem.h",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1241,7 +1200,7 @@
     },
     {
       "fileName": "./include/freetype/ftmodapi.h",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1253,7 +1212,7 @@
     },
     {
       "fileName": "./include/freetype/ftgzip.h",
-      "SPDXID": "SPDXRef-binary-file-58",
+      "SPDXID": "SPDXRef-binary-file-55",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1265,7 +1224,7 @@
     },
     {
       "fileName": "./include/freetype/ftgasp.h",
-      "SPDXID": "SPDXRef-binary-file-59",
+      "SPDXID": "SPDXRef-binary-file-56",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1277,7 +1236,7 @@
     },
     {
       "fileName": "./include/freetype/ftlcdfil.h",
-      "SPDXID": "SPDXRef-binary-file-60",
+      "SPDXID": "SPDXRef-binary-file-57",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1289,7 +1248,7 @@
     },
     {
       "fileName": "./include/freetype/ftimage.h",
-      "SPDXID": "SPDXRef-binary-file-61",
+      "SPDXID": "SPDXRef-binary-file-58",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1301,7 +1260,7 @@
     },
     {
       "fileName": "./include/freetype/tttables.h",
-      "SPDXID": "SPDXRef-binary-file-62",
+      "SPDXID": "SPDXRef-binary-file-59",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1313,7 +1272,7 @@
     },
     {
       "fileName": "./include/freetype/fterrdef.h",
-      "SPDXID": "SPDXRef-binary-file-63",
+      "SPDXID": "SPDXRef-binary-file-60",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1325,7 +1284,7 @@
     },
     {
       "fileName": "./include/freetype/ftotval.h",
-      "SPDXID": "SPDXRef-binary-file-64",
+      "SPDXID": "SPDXRef-binary-file-61",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1337,7 +1296,7 @@
     },
     {
       "fileName": "./include/ft2build.h",
-      "SPDXID": "SPDXRef-binary-file-65",
+      "SPDXID": "SPDXRef-binary-file-62",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1348,12 +1307,36 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libfreetype.a",
-      "SPDXID": "SPDXRef-binary-file-66",
+      "fileName": "./lib/libfreetype.so.6",
+      "SPDXID": "SPDXRef-binary-file-63",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "164617ef556eaadfbb883ab5a21bf6e3d86ec666a3a3e7e21280619951617c4e"
+          "checksumValue": "b429e8d1d0920c7dd36c09d073952f3aab7178fd10d30d89dbe73abc17746b0f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libfreetype.so",
+      "SPDXID": "SPDXRef-binary-file-64",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b429e8d1d0920c7dd36c09d073952f3aab7178fd10d30d89dbe73abc17746b0f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libfreetype.so.6.20.2",
+      "SPDXID": "SPDXRef-binary-file-65",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b429e8d1d0920c7dd36c09d073952f3aab7178fd10d30d89dbe73abc17746b0f"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1361,11 +1344,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/freetype2.pc",
-      "SPDXID": "SPDXRef-binary-file-67",
+      "SPDXID": "SPDXRef-binary-file-66",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "a9c19f031f664df87f9bab68074c823ec248939e777bdf3b3459e8bfa406c7b0"
+          "checksumValue": "c1aa9a330cddb936586e08d36f47b4624eb9433b2def84adea9f798489cca8c6"
         }
       ],
       "licenseConcluded": "NOASSERTION",

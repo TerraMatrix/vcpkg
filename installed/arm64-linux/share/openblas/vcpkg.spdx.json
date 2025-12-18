@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/openblas-arm64-linux-0.3.29-ad2b53ec-20d4-4ab4-bde1-50e7ab796417",
-  "name": "openblas:arm64-linux@0.3.29 3758437aaeda0cae5853cbb8da9d29157a834b4ecdd63e7fdebd08496eeb1311",
+  "documentNamespace": "https://spdx.org/spdxdocs/openblas-arm64-linux-0.3.29-5f564435-c460-4536-80f1-bf8641a63cbe",
+  "name": "openblas:arm64-linux@0.3.29 0cc11f9bdee9e39e373b9063cea444e228a8d6ecc34a9ce80141e285306020d6",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T02:47:14Z"
+    "created": "2025-12-16T10:34:35Z"
   },
   "relationships": [
     {
@@ -131,11 +131,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-13"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-14"
     }
   ],
   "packages": [
@@ -154,7 +149,7 @@
     {
       "name": "openblas:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "3758437aaeda0cae5853cbb8da9d29157a834b4ecdd63e7fdebd08496eeb1311",
+      "versionInfo": "0cc11f9bdee9e39e373b9063cea444e228a8d6ecc34a9ce80141e285306020d6",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -279,31 +274,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libopenblas.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "7a266eda864430e5803b0d890cc37862982214b3e553e206f2d29a29b16c6be2"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/openblas.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "55e4e6b28d4d4afa707360a65be7c32a4e1eba4c72d1114ad93921a5d403670b"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -311,7 +282,7 @@
     },
     {
       "fileName": "./manual-tools/openblas/Linux_arm64/getarch_2nd",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -323,7 +294,7 @@
     },
     {
       "fileName": "./manual-tools/openblas/Linux_arm64/getarch",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -334,24 +305,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/openblas/OpenBLASTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "5b0e019e9b13ea2bf4c001fd9a7abb20d3590982eaac02f17b35220b72f7a488"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/openblas/OpenBLASTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "78286243010d68729458ca6163c0826f4b4ff10d5115096cc92b637eb003fae8"
+          "checksumValue": "5d6f95490ae9ff395aaf28943f72e5941d5d0e115282c26b968efc1d4df3066a"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -359,7 +318,7 @@
     },
     {
       "fileName": "./share/openblas/copyright",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -371,11 +330,11 @@
     },
     {
       "fileName": "./share/openblas/OpenBLASTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b145e09aeeb24182c2aec7400765677e2cc32957712498954f19a0536c76a128"
+          "checksumValue": "d1aad1639a18d82af561d3310d79595bc7b3c24a20fab49ca601ecfc2eb6982a"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -383,7 +342,7 @@
     },
     {
       "fileName": "./share/openblas/OpenBLASConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -395,7 +354,7 @@
     },
     {
       "fileName": "./share/openblas/OpenBLASConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -407,7 +366,7 @@
     },
     {
       "fileName": "./include/openblas/openblas_config.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -419,7 +378,7 @@
     },
     {
       "fileName": "./include/openblas/cblas.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -430,12 +389,36 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libopenblas.a",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "fileName": "./lib/libopenblas.so",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b83ed8c89153a10d8f9c9c9dae5716285fb16f51f9c7c8ed213d53fc3ffd6dd1"
+          "checksumValue": "548652c7b5df80dce9436a517606f3e8a8cd5d8fdbfa6581516763c0fd6624b7"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libopenblas.so.0",
+      "SPDXID": "SPDXRef-binary-file-11",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "548652c7b5df80dce9436a517606f3e8a8cd5d8fdbfa6581516763c0fd6624b7"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libopenblas.so.0.3",
+      "SPDXID": "SPDXRef-binary-file-12",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "548652c7b5df80dce9436a517606f3e8a8cd5d8fdbfa6581516763c0fd6624b7"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -443,11 +426,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/openblas.pc",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "68cda57ad9c330e4e83889262aa78eba4407a1bead381a660bf33182d0fc48f7"
+          "checksumValue": "3d4900645b66810f8271f2da1dbd00d5006e68f3667a255efb6ec98eeb599a06"
         }
       ],
       "licenseConcluded": "NOASSERTION",

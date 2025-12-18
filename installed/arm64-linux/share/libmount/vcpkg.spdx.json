@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/libmount-arm64-linux-2.40-fe72ba87-881b-4dc3-b8c3-ff3f7f47c32a",
-  "name": "libmount:arm64-linux@2.40 8f54bcaaecdd17f26dece78231b0b1956222fad16c748d4fae879429e1c52b4b",
+  "documentNamespace": "https://spdx.org/spdxdocs/libmount-arm64-linux-2.40-a61c763b-f1e4-452b-8536-2761364e1b88",
+  "name": "libmount:arm64-linux@2.40 6e8dc093934db82506030efe659cc1e45569205934b2b92993db2d49e71d2578",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T04:43:19Z"
+    "created": "2025-12-16T11:28:44Z"
   },
   "relationships": [
     {
@@ -114,7 +114,7 @@
     {
       "name": "libmount:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "8f54bcaaecdd17f26dece78231b0b1956222fad16c748d4fae879429e1c52b4b",
+      "versionInfo": "6e8dc093934db82506030efe659cc1e45569205934b2b92993db2d49e71d2578",
       "downloadLocation": "NONE",
       "licenseConcluded": "LicenseRef-vcpkg-null",
       "licenseDeclared": "NOASSERTION",
@@ -180,55 +180,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libmount.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "30dd28367c64a0f7f44d46072a669c3f3ea803546a5968e7481eb8e3cd5c8df1"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libblkid.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "3f72eb6a30ad0f2782b34624509b31bb575e9c33d45a92665064199896037683"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/mount.pc",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "4b97d1d34368a52d95a4e40f7c6064dd7f8da4305d0dfcaf19c6dd6ab653db7f"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/blkid.pc",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "f64fd25b2dc649c479191a2d1fc7a865e5b4b6db324cd0cb996dd1610e9c8625"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -236,7 +188,7 @@
     },
     {
       "fileName": "./share/libmount/copyright",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -248,7 +200,7 @@
     },
     {
       "fileName": "./include/blkid/blkid.h",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -260,7 +212,7 @@
     },
     {
       "fileName": "./include/libmount/libmount.h",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -271,24 +223,72 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libmount.a",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "fileName": "./lib/libblkid.so",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "87f52142d035a5efdb48afbd4957312dd68a1b3f77f52913b815ef6f06a763a6"
+          "checksumValue": "301967fda80e12ca1b03203b359663a33611e89388f1ea52b18f1d1aa235191f"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libblkid.a",
+      "fileName": "./lib/libmount.so.1",
+      "SPDXID": "SPDXRef-binary-file-5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cb031f9ce1c4dbfc69d99968a8b38542528c86620e91f8c995fcaefe0576f954"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libblkid.so.1",
+      "SPDXID": "SPDXRef-binary-file-6",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "301967fda80e12ca1b03203b359663a33611e89388f1ea52b18f1d1aa235191f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libblkid.so.1.1.0",
+      "SPDXID": "SPDXRef-binary-file-7",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "301967fda80e12ca1b03203b359663a33611e89388f1ea52b18f1d1aa235191f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libmount.so",
+      "SPDXID": "SPDXRef-binary-file-8",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cb031f9ce1c4dbfc69d99968a8b38542528c86620e91f8c995fcaefe0576f954"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libmount.so.1.1.0",
       "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "1ae2bf47b97f7c5efa72a43e186b6fc513a16243463ffb6feeed0131ecb39a08"
+          "checksumValue": "cb031f9ce1c4dbfc69d99968a8b38542528c86620e91f8c995fcaefe0576f954"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -300,7 +300,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ca4230b7321c94c8c3e95969a6e8f180e3e4e15743ba1e0552bafb834ace7de9"
+          "checksumValue": "61a8f60311df804f9a30feba6cc96a75d72c14712b429e81ebf2338339b453a5"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -312,7 +312,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "6467d6563450812dd3e42170c557547d030a0dc2879591b1d1d17dceb4d5a4a6"
+          "checksumValue": "b7822e34fa5b1fa2efb90ab60fe363c82891b17cce1ae99107d76d69d58c30a7"
         }
       ],
       "licenseConcluded": "NOASSERTION",

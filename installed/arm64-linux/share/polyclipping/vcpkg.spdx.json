@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/polyclipping-arm64-linux-6.4.2#13-034c76ce-cc17-4e26-bcdc-5415cb2e7803",
-  "name": "polyclipping:arm64-linux@6.4.2#13 0973ca731c7ae16a330f697cbcae96633e1b47b897229bf5d47d61c652f58629",
+  "documentNamespace": "https://spdx.org/spdxdocs/polyclipping-arm64-linux-6.4.2#13-ef7300e9-bcef-4a8d-9382-311aeea70b64",
+  "name": "polyclipping:arm64-linux@6.4.2#13 00a47315abce9a03a23822d39436e14ea3e750060b030e1b4ad0ff87c900c157",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-26T09:32:21Z"
+    "created": "2025-12-16T11:24:19Z"
   },
   "relationships": [
     {
@@ -91,21 +91,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-8"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-9"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-10"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-11"
     }
   ],
   "packages": [
@@ -124,7 +109,7 @@
     {
       "name": "polyclipping:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "0973ca731c7ae16a330f697cbcae96633e1b47b897229bf5d47d61c652f58629",
+      "versionInfo": "00a47315abce9a03a23822d39436e14ea3e750060b030e1b4ad0ff87c900c157",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSL-1.0",
       "licenseDeclared": "NOASSERTION",
@@ -221,32 +206,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./debug/lib/libpolyclipping.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "f28710e017ea52e0e22fad1b621d062d18dc31bc5b8a8b1823ed409c9331ad3f"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/polyclipping.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "960698233ca7a6d899a34c56b3f30bbf15ea322eeae857d6d735fe5969ad5442"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/clipper/FindCLIPPER.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -258,7 +219,7 @@
     },
     {
       "fileName": "./share/clipper/vcpkg-cmake-wrapper.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -270,7 +231,7 @@
     },
     {
       "fileName": "./share/polyclipping/polyclippingConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -282,7 +243,7 @@
     },
     {
       "fileName": "./share/polyclipping/copyright",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -293,20 +254,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/polyclipping/polyclippingConfig-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "3c7f0a913bd1dfb638d5e33af46b56aeaa8887af0153408f02b2a022efc7dcbb"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/polyclipping/polyclippingConfig-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -318,7 +267,7 @@
     },
     {
       "fileName": "./include/polyclipping/clipper.hpp",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -330,11 +279,11 @@
     },
     {
       "fileName": "./lib/libpolyclipping.a",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "bc3200002899dacb0ac5b6e282b5ebdd131980cc115e35c0c9b4cfd947bdba23"
+          "checksumValue": "af3f90a81f0077059297ff3cda759b0f2f995633123aec217b434a5bd1add46c"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -342,7 +291,7 @@
     },
     {
       "fileName": "./lib/pkgconfig/polyclipping.pc",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",

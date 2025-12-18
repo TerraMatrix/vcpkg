@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/suitesparse-colamd-arm64-linux-3.3.4-98e8549f-eeb9-4a0b-9d5e-efe04ba33978",
-  "name": "suitesparse-colamd:arm64-linux@3.3.4 0c3e0ff2bacea8c5d3c5e1648885991683d2ecc4ce577b47a87674a97023eaea",
+  "documentNamespace": "https://spdx.org/spdxdocs/suitesparse-colamd-arm64-linux-3.3.4-9fe1365b-60a2-4ed5-9b2d-0caa17c0db57",
+  "name": "suitesparse-colamd:arm64-linux@3.3.4 b99f37e9c32da219852d29ee94f25fa8ee3c22f31e0d7e72dc2d53cbba871671",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T03:14:02Z"
+    "created": "2025-12-16T10:38:19Z"
   },
   "relationships": [
     {
@@ -86,11 +86,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-10"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-11"
     }
   ],
   "packages": [
@@ -109,7 +104,7 @@
     {
       "name": "suitesparse-colamd:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "0c3e0ff2bacea8c5d3c5e1648885991683d2ecc4ce577b47a87674a97023eaea",
+      "versionInfo": "b99f37e9c32da219852d29ee94f25fa8ee3c22f31e0d7e72dc2d53cbba871671",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -162,31 +157,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libcolamd.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "558c2cf307bc3db1b6dc4a8ed323ceedd0eb58098bd62869f5f925fbae61d003"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/COLAMD.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "94e45e8e41201019e14bf0741e9be9b39259eda6272d1977278dd21760e29367"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -194,11 +165,11 @@
     },
     {
       "fileName": "./share/COLAMD/COLAMDTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "341e3d1698d5494236eabf8d8b88245951dfab4018fd85d9903128ac2e300044"
+          "checksumValue": "4d86bad8a18fb5ca8f7ef6da2d7ec7059c37d1f2dc3e718f44814b8d534ae248"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -206,7 +177,7 @@
     },
     {
       "fileName": "./share/COLAMD/COLAMDConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -218,11 +189,11 @@
     },
     {
       "fileName": "./share/COLAMD/COLAMDTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d36975722c6379fb5b9a62a74ca557bd24dd75e301bcb3c562db5bf40d21d041"
+          "checksumValue": "3a93c07f7b4fd39d47f8be113c6030be7f49a51bca0eab1e714707b408f62e1d"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -230,23 +201,11 @@
     },
     {
       "fileName": "./share/COLAMD/COLAMDConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "7b524f3fb7ca1c9a11dfd340e1ed2f5b205277114945a6350619623dfe67ed01"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/COLAMD/COLAMDTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "c83db52ddc6ff211d40d25b19a5fe5474ee5338ae0e9d28de25f6837a5317623"
+          "checksumValue": "0ebf44c3d3aeff73fd0d6f45b8050df4427c9484e8f20de32895153e17a03220"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -254,7 +213,7 @@
     },
     {
       "fileName": "./share/suitesparse-colamd/copyright",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -266,7 +225,7 @@
     },
     {
       "fileName": "./include/suitesparse/colamd.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -277,12 +236,36 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libcolamd.a",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "fileName": "./lib/libcolamd.so.3",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "57449e7d72b129359e3c43d19da29cb90ce8f06a36dd11d6f3e5d65cc0e8813c"
+          "checksumValue": "4ea5f3f389443654350ed24dcd87bf223918bc9e3cc00c1483bef3cd97e742dd"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libcolamd.so.3.3.4",
+      "SPDXID": "SPDXRef-binary-file-8",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4ea5f3f389443654350ed24dcd87bf223918bc9e3cc00c1483bef3cd97e742dd"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libcolamd.so",
+      "SPDXID": "SPDXRef-binary-file-9",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4ea5f3f389443654350ed24dcd87bf223918bc9e3cc00c1483bef3cd97e742dd"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -290,11 +273,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/COLAMD.pc",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "fb16f5cb6963d41eeae0264f206390f842c6d6ff8d2c1145628f3cc0c0f617ab"
+          "checksumValue": "beea1891ff10882229d5a43ea1f86a696300f98ba49550d8a432fbf2af5ead72"
         }
       ],
       "licenseConcluded": "NOASSERTION",

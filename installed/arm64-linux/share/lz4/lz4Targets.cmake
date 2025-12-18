@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS LZ4::lz4_static LZ4::lz4)
+foreach(_cmake_expected_target IN ITEMS LZ4::lz4_shared LZ4::lz4)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -54,10 +54,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
   set(_IMPORT_PREFIX "")
 endif()
 
-# Create imported target LZ4::lz4_static
-add_library(LZ4::lz4_static STATIC IMPORTED)
+# Create imported target LZ4::lz4_shared
+add_library(LZ4::lz4_shared SHARED IMPORTED)
 
-set_target_properties(LZ4::lz4_static PROPERTIES
+set_target_properties(LZ4::lz4_shared PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
 )
 
@@ -65,7 +65,7 @@ set_target_properties(LZ4::lz4_static PROPERTIES
 add_library(LZ4::lz4 INTERFACE IMPORTED)
 
 set_target_properties(LZ4::lz4 PROPERTIES
-  INTERFACE_LINK_LIBRARIES "LZ4::lz4_static"
+  INTERFACE_LINK_LIBRARIES "LZ4::lz4_shared"
 )
 
 if(CMAKE_VERSION VERSION_LESS 3.0.0)

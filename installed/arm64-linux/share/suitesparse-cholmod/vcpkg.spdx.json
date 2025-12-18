@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/suitesparse-cholmod-arm64-linux-5.3.0-9c3aea46-d3b1-4767-866e-860e1c36f4ac",
-  "name": "suitesparse-cholmod:arm64-linux@5.3.0 edbe6f584d02de707f557e7f12c1fb140c5f9fa7135be26b2220311a80089004",
+  "documentNamespace": "https://spdx.org/spdxdocs/suitesparse-cholmod-arm64-linux-5.3.0-b3591918-ca5e-4e51-a7de-87fa4f477ee1",
+  "name": "suitesparse-cholmod:arm64-linux@5.3.0 c92edb6add1a28d942a53d2adc90481496b4f98e9578da6f3e96c4564fb48086",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T03:15:21Z"
+    "created": "2025-12-16T10:39:02Z"
   },
   "relationships": [
     {
@@ -91,11 +91,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-10"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-11"
     }
   ],
   "packages": [
@@ -114,7 +109,7 @@
     {
       "name": "suitesparse-cholmod:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "edbe6f584d02de707f557e7f12c1fb140c5f9fa7135be26b2220311a80089004",
+      "versionInfo": "c92edb6add1a28d942a53d2adc90481496b4f98e9578da6f3e96c4564fb48086",
       "downloadLocation": "NONE",
       "licenseConcluded": "Apache-2.0 AND GPL-2.0-or-later AND LGPL-2.1-or-later",
       "licenseDeclared": "NOASSERTION",
@@ -179,31 +174,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libcholmod.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "5ee412dee2885e58398b0a42d1598f950674e9c774fb930538a0e57e4f8c8cc9"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/CHOLMOD.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "ff9e45ec569f9879ec37ef4f8ad860f711d1980c27e13ff0880c81dded0b23bf"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -211,7 +182,7 @@
     },
     {
       "fileName": "./share/suitesparse-cholmod/copyright",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -223,7 +194,7 @@
     },
     {
       "fileName": "./share/CHOLMOD/CHOLMODConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -235,11 +206,11 @@
     },
     {
       "fileName": "./share/CHOLMOD/CHOLMODConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "9a8a6b7931262552fcfff094934716dc923207e1bd3568a210370a77de83343a"
+          "checksumValue": "e73c91c817182122797ba722d8647df94cde01bdc148fd7008513fbe5f6e44b1"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -247,23 +218,11 @@
     },
     {
       "fileName": "./share/CHOLMOD/CHOLMODTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2ab34f466260ef656552be9c927eeca9b0ab76c03f554460e48def3f0c06142b"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/CHOLMOD/CHOLMODTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "7df301564d4e105dd4426150d132cf76865500d0d800d2bcdeba35bd1d4af42c"
+          "checksumValue": "b790cedb6cbc1cead7e1c1d749c1d1a2e77276e61a0cf15c977795d3d5afaeaf"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -271,11 +230,11 @@
     },
     {
       "fileName": "./share/CHOLMOD/CHOLMODTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "72cf71b42226360fb6699a1faac06754b4cc06d6186ff82dac07a9aef3f7fd76"
+          "checksumValue": "312a7e5d903da97943cb8aba53d1b496b1fd578a2c1031ea1d40fca059231902"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -283,7 +242,7 @@
     },
     {
       "fileName": "./include/suitesparse/cholmod.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -294,12 +253,24 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libcholmod.a",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "fileName": "./lib/libcholmod.so",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e71e580ddb14ed0d9f834b9620fde1276a919c1487ec3d763f28e3fa753c9879"
+          "checksumValue": "1d04383484f9706e89c11ac57470cc36523e736c7a240a913b5431df5f19bc62"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libcholmod.so.5.3.0",
+      "SPDXID": "SPDXRef-binary-file-8",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1d04383484f9706e89c11ac57470cc36523e736c7a240a913b5431df5f19bc62"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -307,11 +278,23 @@
     },
     {
       "fileName": "./lib/pkgconfig/CHOLMOD.pc",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "402b524d387fa444cd68351b70d5c328a81b2c9d1c9a466650bdc374fb6c4d7b"
+          "checksumValue": "3de4cb453feca776a7fe5995859f8b44d18499d28ec639ca9f89ce3661364134"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libcholmod.so.5",
+      "SPDXID": "SPDXRef-binary-file-10",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1d04383484f9706e89c11ac57470cc36523e736c7a240a913b5431df5f19bc62"
         }
       ],
       "licenseConcluded": "NOASSERTION",

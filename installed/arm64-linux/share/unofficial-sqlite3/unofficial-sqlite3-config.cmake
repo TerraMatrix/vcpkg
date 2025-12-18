@@ -3,7 +3,7 @@ include(CMakeFindDependencyMacro)
 if(NOT WIN32)
     find_dependency(Threads)
 endif()
-if("static" STREQUAL "static")
+if("dynamic" STREQUAL "static")
     find_package(ICU COMPONENTS uc i18n)
 endif()
 

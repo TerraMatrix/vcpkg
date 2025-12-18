@@ -11,7 +11,7 @@ endif()
 
 _find_package(${ARGS})
 
-if(TIFF_FOUND AND "static" STREQUAL "static")
+if(TIFF_FOUND AND "dynamic" STREQUAL "static")
     include(SelectLibraryConfigurations)
     set(z_vcpkg_tiff_link_libraries "")
     set(z_vcpkg_tiff_libraries "")

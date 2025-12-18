@@ -11,7 +11,7 @@ endif()
 
 _find_package(${ARGS})
 
-if(LibArchive_FOUND AND "static" STREQUAL "static")
+if(LibArchive_FOUND AND "dynamic" STREQUAL "static")
     set(z_vcpkg_libarchive_libs "")
     find_package(ZLIB ${z_vcpkg_libarchive_args})
     list(APPEND z_vcpkg_libarchive_libs ZLIB::ZLIB)

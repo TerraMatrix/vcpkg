@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/openjpeg-arm64-linux-2.5.4-ede45ee3-ff53-4676-8082-10f772012334",
-  "name": "openjpeg:arm64-linux@2.5.4 601bb3741f8ee4104a41c554dd838c98bb28161c9efb5319458c70a4da17417f",
+  "documentNamespace": "https://spdx.org/spdxdocs/openjpeg-arm64-linux-2.5.4-e1d4f604-6474-4dcd-8957-ed76a74e1c50",
+  "name": "openjpeg:arm64-linux@2.5.4 0e96c417952cc9703e716f665d66d578f20573e496e23dc225e17ba1dde4633d",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T06:11:38Z"
+    "created": "2025-12-16T11:00:39Z"
   },
   "relationships": [
     {
@@ -111,11 +111,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-12"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-13"
     }
   ],
   "packages": [
@@ -134,7 +129,7 @@
     {
       "name": "openjpeg:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "601bb3741f8ee4104a41c554dd838c98bb28161c9efb5319458c70a4da17417f",
+      "versionInfo": "0e96c417952cc9703e716f665d66d578f20573e496e23dc225e17ba1dde4633d",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-2-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -223,31 +218,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libopenjp2.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "b6f4cf8bb1319daf71837c16980d8014b6e7289e26a8902c91e3f89ff9d92a1f"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libopenjp2.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "e9a85b853033d0570b0306a23b5ef05ab4d467a90b1af52d4ddcb57914dc94fe"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -255,11 +226,11 @@
     },
     {
       "fileName": "./share/openjpeg/OpenJPEGTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "c1289a2b8f4f5005889ebf81d9f48859e3f1664b8bdf91b51a8ae59db8970ede"
+          "checksumValue": "03b917c156c8a934f3d903ad40d0d44bdf3fcf40478a0681c1e446d354342c4f"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -267,7 +238,7 @@
     },
     {
       "fileName": "./share/openjpeg/OpenJPEGConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -278,24 +249,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/openjpeg/OpenJPEGTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "1672f54369002d02c89504196920afab16ab38eff96aa3e64c6c7c31d61a5f57"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/openjpeg/OpenJPEGTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b7c1ace71961681b41ac7556e9c82171caead02065e8fe1192940b23b6eaef97"
+          "checksumValue": "241c823db0a5dad846b5f139f3c7603d508a1583c28aeac41aeb2a09a543f03f"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -303,7 +262,7 @@
     },
     {
       "fileName": "./share/openjpeg/copyright",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -315,11 +274,11 @@
     },
     {
       "fileName": "./share/openjpeg/OpenJPEGConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "6b07e4b16edfe34a7e48b643024fb6d03bdfe0c2e3059392ae7b519f8c43fca6"
+          "checksumValue": "351996dd63402460211b338f0cad99156bf346a74b44c7e0f2f0086a8596e5c3"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -327,7 +286,7 @@
     },
     {
       "fileName": "./share/openjpeg/usage",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -339,11 +298,11 @@
     },
     {
       "fileName": "./include/openjpeg-2.5/openjpeg.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "673f640fa8523176515baa83d623f9b22df29fc40c8fd1badbe716a955307810"
+          "checksumValue": "2ce745bc89ddea5678b843de99b8613854618040e7c0383e135241efc47d4704"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -351,7 +310,7 @@
     },
     {
       "fileName": "./include/openjpeg-2.5/opj_config.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -362,12 +321,36 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libopenjp2.a",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "fileName": "./lib/libopenjp2.so.2.5.4",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "401dee680358bf8ceaace7a8f25f992cfb397f8fee8fe8d4a07e7eb9e69b2639"
+          "checksumValue": "7e2e6b20e8baa03a5e41de8561bfe6265ab1b7869c91a14f4e3b4293e36df145"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libopenjp2.so",
+      "SPDXID": "SPDXRef-binary-file-10",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7e2e6b20e8baa03a5e41de8561bfe6265ab1b7869c91a14f4e3b4293e36df145"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libopenjp2.so.7",
+      "SPDXID": "SPDXRef-binary-file-11",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7e2e6b20e8baa03a5e41de8561bfe6265ab1b7869c91a14f4e3b4293e36df145"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -375,11 +358,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/libopenjp2.pc",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ee4bac7aa378097df6e120eec5c49c2cb1dbc7cd1cdea08c41f47b0b95435209"
+          "checksumValue": "4c707aa655a1aa7f70494b543163c7016109af9ce65a15592e1fa593af97a2cc"
         }
       ],
       "licenseConcluded": "NOASSERTION",

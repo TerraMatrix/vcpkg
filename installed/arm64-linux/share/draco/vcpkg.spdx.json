@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/draco-arm64-linux-1.5.7-100d539e-0406-42a7-a854-dd5ef52255c7",
-  "name": "draco:arm64-linux@1.5.7 09af6b125690417c7b427d9e9fd5d6795c9ac56bd9e3aacb87d031ad539f6749",
+  "documentNamespace": "https://spdx.org/spdxdocs/draco-arm64-linux-1.5.7-daca471f-ee06-486a-8366-f98ada6f77e0",
+  "name": "draco:arm64-linux@1.5.7 e54102c7e7e441ce3b20baac08a87a7d454a9f2c0e4080644c82267f51ea9d2a",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T04:01:24Z"
+    "created": "2025-12-17T02:13:31Z"
   },
   "relationships": [
     {
@@ -1111,21 +1111,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-210"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-211"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-212"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-213"
     }
   ],
   "packages": [
@@ -1144,7 +1129,7 @@
     {
       "name": "draco:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "09af6b125690417c7b427d9e9fd5d6795c9ac56bd9e3aacb87d031ad539f6749",
+      "versionInfo": "e54102c7e7e441ce3b20baac08a87a7d454a9f2c0e4080644c82267f51ea9d2a",
       "downloadLocation": "NONE",
       "licenseConcluded": "Apache-2.0",
       "licenseDeclared": "NOASSERTION",
@@ -1257,31 +1242,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libdraco.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "30c6697414d460d60f044de8ca3803067c0a20630b7e180e3f94f3cb13fd4544"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/draco.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "9e89ba74dc58da5ac0caa52c1232788d99179c259a0ca9609bef60e424216acc"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1289,7 +1250,7 @@
     },
     {
       "fileName": "./share/draco/copyright",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1301,11 +1262,11 @@
     },
     {
       "fileName": "./share/draco/draco-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ba74b4dff356ff512f2c2db7d115170a2d84099992b40bb64063919ed6c8d1c4"
+          "checksumValue": "9f119fbd496aab9865e4f0ec5deb84f4619b2ac20e80c0e42584e7feed666b51"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1313,7 +1274,7 @@
     },
     {
       "fileName": "./share/draco/draco-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1325,7 +1286,7 @@
     },
     {
       "fileName": "./share/draco/draco-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1337,23 +1298,11 @@
     },
     {
       "fileName": "./share/draco/draco-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f95b9cffbf066fb530a2746536a638d87cc50e9e568f1322a8b3a01fe1c89048"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/draco/draco-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "9dca5648a0b5ace9068753e33860ec5177f5f33d4d6b473323cad687ef8925c6"
+          "checksumValue": "7c5b3d76a4afa035481564e145de723de7c666198b44d2a205a78d3f1ccb4368"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1361,7 +1310,7 @@
     },
     {
       "fileName": "./include/draco/animation/keyframe_animation_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1373,7 +1322,7 @@
     },
     {
       "fileName": "./include/draco/animation/keyframe_animation.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1385,7 +1334,7 @@
     },
     {
       "fileName": "./include/draco/animation/keyframe_animation_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1397,7 +1346,7 @@
     },
     {
       "fileName": "./include/draco/mesh/triangle_soup_mesh_builder.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1409,7 +1358,7 @@
     },
     {
       "fileName": "./include/draco/mesh/corner_table.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1421,7 +1370,7 @@
     },
     {
       "fileName": "./include/draco/mesh/mesh_misc_functions.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1433,7 +1382,7 @@
     },
     {
       "fileName": "./include/draco/mesh/mesh_cleanup.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1445,7 +1394,7 @@
     },
     {
       "fileName": "./include/draco/mesh/valence_cache.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1457,7 +1406,7 @@
     },
     {
       "fileName": "./include/draco/mesh/mesh_are_equivalent.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1469,7 +1418,7 @@
     },
     {
       "fileName": "./include/draco/mesh/mesh_indices.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1481,7 +1430,7 @@
     },
     {
       "fileName": "./include/draco/mesh/mesh.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1493,7 +1442,7 @@
     },
     {
       "fileName": "./include/draco/mesh/mesh_attribute_corner_table.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1505,7 +1454,7 @@
     },
     {
       "fileName": "./include/draco/mesh/mesh_features.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1517,7 +1466,7 @@
     },
     {
       "fileName": "./include/draco/mesh/corner_table_iterators.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1529,7 +1478,7 @@
     },
     {
       "fileName": "./include/draco/mesh/mesh_stripifier.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1541,7 +1490,7 @@
     },
     {
       "fileName": "./include/draco/metadata/geometry_metadata.h",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1553,7 +1502,7 @@
     },
     {
       "fileName": "./include/draco/metadata/metadata_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1565,7 +1514,7 @@
     },
     {
       "fileName": "./include/draco/metadata/metadata_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1577,7 +1526,7 @@
     },
     {
       "fileName": "./include/draco/metadata/structural_metadata_schema.h",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1589,7 +1538,7 @@
     },
     {
       "fileName": "./include/draco/metadata/property_attribute.h",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1601,7 +1550,7 @@
     },
     {
       "fileName": "./include/draco/metadata/structural_metadata.h",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1613,7 +1562,7 @@
     },
     {
       "fileName": "./include/draco/metadata/property_table.h",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1625,7 +1574,7 @@
     },
     {
       "fileName": "./include/draco/metadata/metadata.h",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1637,7 +1586,7 @@
     },
     {
       "fileName": "./include/draco/compression/expert_encode.h",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1649,7 +1598,7 @@
     },
     {
       "fileName": "./include/draco/compression/entropy/rans_symbol_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1661,7 +1610,7 @@
     },
     {
       "fileName": "./include/draco/compression/entropy/rans_symbol_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1673,7 +1622,7 @@
     },
     {
       "fileName": "./include/draco/compression/entropy/rans_symbol_coding.h",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1685,7 +1634,7 @@
     },
     {
       "fileName": "./include/draco/compression/entropy/shannon_entropy.h",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1697,7 +1646,7 @@
     },
     {
       "fileName": "./include/draco/compression/entropy/symbol_encoding.h",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1709,7 +1658,7 @@
     },
     {
       "fileName": "./include/draco/compression/entropy/symbol_decoding.h",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1721,7 +1670,7 @@
     },
     {
       "fileName": "./include/draco/compression/entropy/ans.h",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1733,7 +1682,7 @@
     },
     {
       "fileName": "./include/draco/compression/encode_base.h",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1745,7 +1694,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/mesh_edgebreaker_traversal_predictive_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1757,7 +1706,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/mesh_edgebreaker_decoder_impl_interface.h",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1769,7 +1718,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/mesh_sequential_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1781,7 +1730,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/mesh_edgebreaker_traversal_valence_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1793,7 +1742,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/mesh_edgebreaker_traversal_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1805,7 +1754,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/mesh_edgebreaker_decoder_impl.h",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1817,7 +1766,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/mesh_edgebreaker_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1829,7 +1778,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/mesh_edgebreaker_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1841,7 +1790,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/mesh_edgebreaker_encoder_impl.h",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1853,7 +1802,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/mesh_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1865,7 +1814,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/mesh_sequential_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1877,7 +1826,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/mesh_edgebreaker_encoder_impl_interface.h",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1889,7 +1838,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/mesh_edgebreaker_traversal_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1901,7 +1850,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/mesh_edgebreaker_traversal_predictive_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1913,7 +1862,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/traverser/mesh_attribute_indices_encoding_observer.h",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1925,7 +1874,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/traverser/depth_first_traverser.h",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1937,7 +1886,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/traverser/traverser_base.h",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1949,7 +1898,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/traverser/mesh_traversal_sequencer.h",
-      "SPDXID": "SPDXRef-binary-file-58",
+      "SPDXID": "SPDXRef-binary-file-55",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1961,7 +1910,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/traverser/max_prediction_degree_traverser.h",
-      "SPDXID": "SPDXRef-binary-file-59",
+      "SPDXID": "SPDXRef-binary-file-56",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1973,7 +1922,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/mesh_edgebreaker_shared.h",
-      "SPDXID": "SPDXRef-binary-file-60",
+      "SPDXID": "SPDXRef-binary-file-57",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1985,7 +1934,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/mesh_edgebreaker_traversal_valence_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-61",
+      "SPDXID": "SPDXRef-binary-file-58",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1997,7 +1946,7 @@
     },
     {
       "fileName": "./include/draco/compression/mesh/mesh_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-62",
+      "SPDXID": "SPDXRef-binary-file-59",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2009,7 +1958,7 @@
     },
     {
       "fileName": "./include/draco/compression/config/decoder_options.h",
-      "SPDXID": "SPDXRef-binary-file-63",
+      "SPDXID": "SPDXRef-binary-file-60",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2021,7 +1970,7 @@
     },
     {
       "fileName": "./include/draco/compression/config/draco_options.h",
-      "SPDXID": "SPDXRef-binary-file-64",
+      "SPDXID": "SPDXRef-binary-file-61",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2033,7 +1982,7 @@
     },
     {
       "fileName": "./include/draco/compression/config/compression_shared.h",
-      "SPDXID": "SPDXRef-binary-file-65",
+      "SPDXID": "SPDXRef-binary-file-62",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2045,7 +1994,7 @@
     },
     {
       "fileName": "./include/draco/compression/config/encoding_features.h",
-      "SPDXID": "SPDXRef-binary-file-66",
+      "SPDXID": "SPDXRef-binary-file-63",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2057,7 +2006,7 @@
     },
     {
       "fileName": "./include/draco/compression/config/encoder_options.h",
-      "SPDXID": "SPDXRef-binary-file-67",
+      "SPDXID": "SPDXRef-binary-file-64",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2069,7 +2018,7 @@
     },
     {
       "fileName": "./include/draco/compression/draco_compression_options.h",
-      "SPDXID": "SPDXRef-binary-file-68",
+      "SPDXID": "SPDXRef-binary-file-65",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2081,7 +2030,7 @@
     },
     {
       "fileName": "./include/draco/compression/decode.h",
-      "SPDXID": "SPDXRef-binary-file-69",
+      "SPDXID": "SPDXRef-binary-file-66",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2093,7 +2042,7 @@
     },
     {
       "fileName": "./include/draco/compression/bit_coders/direct_bit_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-70",
+      "SPDXID": "SPDXRef-binary-file-67",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2105,7 +2054,7 @@
     },
     {
       "fileName": "./include/draco/compression/bit_coders/rans_bit_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-71",
+      "SPDXID": "SPDXRef-binary-file-68",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2117,7 +2066,7 @@
     },
     {
       "fileName": "./include/draco/compression/bit_coders/rans_bit_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-72",
+      "SPDXID": "SPDXRef-binary-file-69",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2129,7 +2078,7 @@
     },
     {
       "fileName": "./include/draco/compression/bit_coders/symbol_bit_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-73",
+      "SPDXID": "SPDXRef-binary-file-70",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2141,7 +2090,7 @@
     },
     {
       "fileName": "./include/draco/compression/bit_coders/folded_integer_bit_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-74",
+      "SPDXID": "SPDXRef-binary-file-71",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2153,7 +2102,7 @@
     },
     {
       "fileName": "./include/draco/compression/bit_coders/adaptive_rans_bit_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-75",
+      "SPDXID": "SPDXRef-binary-file-72",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2165,7 +2114,7 @@
     },
     {
       "fileName": "./include/draco/compression/bit_coders/adaptive_rans_bit_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-76",
+      "SPDXID": "SPDXRef-binary-file-73",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2177,7 +2126,7 @@
     },
     {
       "fileName": "./include/draco/compression/bit_coders/direct_bit_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-77",
+      "SPDXID": "SPDXRef-binary-file-74",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2189,7 +2138,7 @@
     },
     {
       "fileName": "./include/draco/compression/bit_coders/symbol_bit_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-78",
+      "SPDXID": "SPDXRef-binary-file-75",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2201,7 +2150,7 @@
     },
     {
       "fileName": "./include/draco/compression/bit_coders/adaptive_rans_bit_coding_shared.h",
-      "SPDXID": "SPDXRef-binary-file-79",
+      "SPDXID": "SPDXRef-binary-file-76",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2213,7 +2162,7 @@
     },
     {
       "fileName": "./include/draco/compression/bit_coders/folded_integer_bit_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-80",
+      "SPDXID": "SPDXRef-binary-file-77",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2225,7 +2174,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/sequential_attribute_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-81",
+      "SPDXID": "SPDXRef-binary-file-78",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2237,7 +2186,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/normal_compression_utils.h",
-      "SPDXID": "SPDXRef-binary-file-82",
+      "SPDXID": "SPDXRef-binary-file-79",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2249,7 +2198,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/sequential_integer_attribute_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-83",
+      "SPDXID": "SPDXRef-binary-file-80",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2261,7 +2210,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/attributes_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-84",
+      "SPDXID": "SPDXRef-binary-file-81",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2273,7 +2222,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/sequential_integer_attribute_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-85",
+      "SPDXID": "SPDXRef-binary-file-82",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2285,7 +2234,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/sequential_attribute_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-86",
+      "SPDXID": "SPDXRef-binary-file-83",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2297,7 +2246,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/sequential_quantization_attribute_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-87",
+      "SPDXID": "SPDXRef-binary-file-84",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2309,7 +2258,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/sequential_normal_attribute_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-88",
+      "SPDXID": "SPDXRef-binary-file-85",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2321,7 +2270,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/sequential_normal_attribute_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-89",
+      "SPDXID": "SPDXRef-binary-file-86",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2333,7 +2282,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/points_sequencer.h",
-      "SPDXID": "SPDXRef-binary-file-90",
+      "SPDXID": "SPDXRef-binary-file-87",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2345,7 +2294,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/kd_tree_attributes_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-91",
+      "SPDXID": "SPDXRef-binary-file-88",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2357,7 +2306,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/linear_sequencer.h",
-      "SPDXID": "SPDXRef-binary-file-92",
+      "SPDXID": "SPDXRef-binary-file-89",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2369,7 +2318,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/mesh_prediction_scheme_tex_coords_portable_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-93",
+      "SPDXID": "SPDXRef-binary-file-90",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2381,7 +2330,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/mesh_prediction_scheme_constrained_multi_parallelogram_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-94",
+      "SPDXID": "SPDXRef-binary-file-91",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2393,7 +2342,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_normal_octahedron_canonicalized_decoding_transform.h",
-      "SPDXID": "SPDXRef-binary-file-95",
+      "SPDXID": "SPDXRef-binary-file-92",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2405,7 +2354,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/mesh_prediction_scheme_constrained_multi_parallelogram_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-96",
+      "SPDXID": "SPDXRef-binary-file-93",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2417,7 +2366,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/mesh_prediction_scheme_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-97",
+      "SPDXID": "SPDXRef-binary-file-94",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2429,7 +2378,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_wrap_decoding_transform.h",
-      "SPDXID": "SPDXRef-binary-file-98",
+      "SPDXID": "SPDXRef-binary-file-95",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2441,7 +2390,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/mesh_prediction_scheme_geometric_normal_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-99",
+      "SPDXID": "SPDXRef-binary-file-96",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2453,7 +2402,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_delta_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-100",
+      "SPDXID": "SPDXRef-binary-file-97",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2465,7 +2414,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_delta_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-101",
+      "SPDXID": "SPDXRef-binary-file-98",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2477,7 +2426,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_interface.h",
-      "SPDXID": "SPDXRef-binary-file-102",
+      "SPDXID": "SPDXRef-binary-file-99",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2489,7 +2438,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/mesh_prediction_scheme_geometric_normal_predictor_base.h",
-      "SPDXID": "SPDXRef-binary-file-103",
+      "SPDXID": "SPDXRef-binary-file-100",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2501,7 +2450,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_encoding_transform.h",
-      "SPDXID": "SPDXRef-binary-file-104",
+      "SPDXID": "SPDXRef-binary-file-101",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2513,7 +2462,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_wrap_transform_base.h",
-      "SPDXID": "SPDXRef-binary-file-105",
+      "SPDXID": "SPDXRef-binary-file-102",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2525,7 +2474,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_normal_octahedron_transform_base.h",
-      "SPDXID": "SPDXRef-binary-file-106",
+      "SPDXID": "SPDXRef-binary-file-103",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2537,7 +2486,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-107",
+      "SPDXID": "SPDXRef-binary-file-104",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2549,7 +2498,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/mesh_prediction_scheme_multi_parallelogram_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-108",
+      "SPDXID": "SPDXRef-binary-file-105",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2561,7 +2510,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/mesh_prediction_scheme_parallelogram_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-109",
+      "SPDXID": "SPDXRef-binary-file-106",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2573,7 +2522,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_decoder_factory.h",
-      "SPDXID": "SPDXRef-binary-file-110",
+      "SPDXID": "SPDXRef-binary-file-107",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2585,7 +2534,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_decoding_transform.h",
-      "SPDXID": "SPDXRef-binary-file-111",
+      "SPDXID": "SPDXRef-binary-file-108",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2597,7 +2546,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_normal_octahedron_canonicalized_encoding_transform.h",
-      "SPDXID": "SPDXRef-binary-file-112",
+      "SPDXID": "SPDXRef-binary-file-109",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2609,7 +2558,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_normal_octahedron_decoding_transform.h",
-      "SPDXID": "SPDXRef-binary-file-113",
+      "SPDXID": "SPDXRef-binary-file-110",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2621,7 +2570,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/mesh_prediction_scheme_geometric_normal_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-114",
+      "SPDXID": "SPDXRef-binary-file-111",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2633,7 +2582,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_encoder_factory.h",
-      "SPDXID": "SPDXRef-binary-file-115",
+      "SPDXID": "SPDXRef-binary-file-112",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2645,7 +2594,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/mesh_prediction_scheme_tex_coords_portable_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-116",
+      "SPDXID": "SPDXRef-binary-file-113",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2657,7 +2606,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_factory.h",
-      "SPDXID": "SPDXRef-binary-file-117",
+      "SPDXID": "SPDXRef-binary-file-114",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2669,7 +2618,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_wrap_encoding_transform.h",
-      "SPDXID": "SPDXRef-binary-file-118",
+      "SPDXID": "SPDXRef-binary-file-115",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2681,7 +2630,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/mesh_prediction_scheme_data.h",
-      "SPDXID": "SPDXRef-binary-file-119",
+      "SPDXID": "SPDXRef-binary-file-116",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2693,7 +2642,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/mesh_prediction_scheme_constrained_multi_parallelogram_shared.h",
-      "SPDXID": "SPDXRef-binary-file-120",
+      "SPDXID": "SPDXRef-binary-file-117",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2705,7 +2654,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/mesh_prediction_scheme_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-121",
+      "SPDXID": "SPDXRef-binary-file-118",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2717,7 +2666,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/mesh_prediction_scheme_multi_parallelogram_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-122",
+      "SPDXID": "SPDXRef-binary-file-119",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2729,7 +2678,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/mesh_prediction_scheme_tex_coords_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-123",
+      "SPDXID": "SPDXRef-binary-file-120",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2741,7 +2690,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/mesh_prediction_scheme_parallelogram_shared.h",
-      "SPDXID": "SPDXRef-binary-file-124",
+      "SPDXID": "SPDXRef-binary-file-121",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2753,7 +2702,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/mesh_prediction_scheme_tex_coords_portable_predictor.h",
-      "SPDXID": "SPDXRef-binary-file-125",
+      "SPDXID": "SPDXRef-binary-file-122",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2765,7 +2714,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/mesh_prediction_scheme_tex_coords_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-126",
+      "SPDXID": "SPDXRef-binary-file-123",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2777,7 +2726,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_normal_octahedron_canonicalized_transform_base.h",
-      "SPDXID": "SPDXRef-binary-file-127",
+      "SPDXID": "SPDXRef-binary-file-124",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2789,7 +2738,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-128",
+      "SPDXID": "SPDXRef-binary-file-125",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2801,7 +2750,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_normal_octahedron_encoding_transform.h",
-      "SPDXID": "SPDXRef-binary-file-129",
+      "SPDXID": "SPDXRef-binary-file-126",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2813,7 +2762,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_decoder_interface.h",
-      "SPDXID": "SPDXRef-binary-file-130",
+      "SPDXID": "SPDXRef-binary-file-127",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2825,7 +2774,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/prediction_scheme_encoder_interface.h",
-      "SPDXID": "SPDXRef-binary-file-131",
+      "SPDXID": "SPDXRef-binary-file-128",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2837,7 +2786,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/prediction_schemes/mesh_prediction_scheme_geometric_normal_predictor_area.h",
-      "SPDXID": "SPDXRef-binary-file-132",
+      "SPDXID": "SPDXRef-binary-file-129",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2849,7 +2798,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/point_d_vector.h",
-      "SPDXID": "SPDXRef-binary-file-133",
+      "SPDXID": "SPDXRef-binary-file-130",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2861,7 +2810,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/attributes_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-134",
+      "SPDXID": "SPDXRef-binary-file-131",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2873,7 +2822,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/kd_tree_attributes_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-135",
+      "SPDXID": "SPDXRef-binary-file-132",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2885,7 +2834,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/kd_tree_attributes_shared.h",
-      "SPDXID": "SPDXRef-binary-file-136",
+      "SPDXID": "SPDXRef-binary-file-133",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2897,7 +2846,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/sequential_quantization_attribute_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-137",
+      "SPDXID": "SPDXRef-binary-file-134",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2909,7 +2858,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/mesh_attribute_indices_encoding_data.h",
-      "SPDXID": "SPDXRef-binary-file-138",
+      "SPDXID": "SPDXRef-binary-file-135",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2921,7 +2870,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/sequential_attribute_decoders_controller.h",
-      "SPDXID": "SPDXRef-binary-file-139",
+      "SPDXID": "SPDXRef-binary-file-136",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2933,7 +2882,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/attributes_decoder_interface.h",
-      "SPDXID": "SPDXRef-binary-file-140",
+      "SPDXID": "SPDXRef-binary-file-137",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2945,7 +2894,7 @@
     },
     {
       "fileName": "./include/draco/compression/attributes/sequential_attribute_encoders_controller.h",
-      "SPDXID": "SPDXRef-binary-file-141",
+      "SPDXID": "SPDXRef-binary-file-138",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2957,7 +2906,7 @@
     },
     {
       "fileName": "./include/draco/compression/point_cloud/point_cloud_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-142",
+      "SPDXID": "SPDXRef-binary-file-139",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2969,7 +2918,7 @@
     },
     {
       "fileName": "./include/draco/compression/point_cloud/point_cloud_sequential_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-143",
+      "SPDXID": "SPDXRef-binary-file-140",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2981,7 +2930,7 @@
     },
     {
       "fileName": "./include/draco/compression/point_cloud/point_cloud_kd_tree_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-144",
+      "SPDXID": "SPDXRef-binary-file-141",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2993,7 +2942,7 @@
     },
     {
       "fileName": "./include/draco/compression/point_cloud/point_cloud_kd_tree_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-145",
+      "SPDXID": "SPDXRef-binary-file-142",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3005,7 +2954,7 @@
     },
     {
       "fileName": "./include/draco/compression/point_cloud/algorithms/dynamic_integer_points_kd_tree_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-146",
+      "SPDXID": "SPDXRef-binary-file-143",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3017,7 +2966,7 @@
     },
     {
       "fileName": "./include/draco/compression/point_cloud/algorithms/quantize_points_3.h",
-      "SPDXID": "SPDXRef-binary-file-147",
+      "SPDXID": "SPDXRef-binary-file-144",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3029,7 +2978,7 @@
     },
     {
       "fileName": "./include/draco/compression/point_cloud/algorithms/queuing_policy.h",
-      "SPDXID": "SPDXRef-binary-file-148",
+      "SPDXID": "SPDXRef-binary-file-145",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3041,7 +2990,7 @@
     },
     {
       "fileName": "./include/draco/compression/point_cloud/algorithms/float_points_tree_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-149",
+      "SPDXID": "SPDXRef-binary-file-146",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3053,7 +3002,7 @@
     },
     {
       "fileName": "./include/draco/compression/point_cloud/algorithms/point_cloud_compression_method.h",
-      "SPDXID": "SPDXRef-binary-file-150",
+      "SPDXID": "SPDXRef-binary-file-147",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3065,7 +3014,7 @@
     },
     {
       "fileName": "./include/draco/compression/point_cloud/algorithms/float_points_tree_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-151",
+      "SPDXID": "SPDXRef-binary-file-148",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3077,7 +3026,7 @@
     },
     {
       "fileName": "./include/draco/compression/point_cloud/algorithms/point_cloud_types.h",
-      "SPDXID": "SPDXRef-binary-file-152",
+      "SPDXID": "SPDXRef-binary-file-149",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3089,7 +3038,7 @@
     },
     {
       "fileName": "./include/draco/compression/point_cloud/algorithms/dynamic_integer_points_kd_tree_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-153",
+      "SPDXID": "SPDXRef-binary-file-150",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3101,7 +3050,7 @@
     },
     {
       "fileName": "./include/draco/compression/point_cloud/point_cloud_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-154",
+      "SPDXID": "SPDXRef-binary-file-151",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3113,7 +3062,7 @@
     },
     {
       "fileName": "./include/draco/compression/point_cloud/point_cloud_sequential_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-155",
+      "SPDXID": "SPDXRef-binary-file-152",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3125,7 +3074,7 @@
     },
     {
       "fileName": "./include/draco/compression/encode.h",
-      "SPDXID": "SPDXRef-binary-file-156",
+      "SPDXID": "SPDXRef-binary-file-153",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3137,7 +3086,7 @@
     },
     {
       "fileName": "./include/draco/io/file_utils.h",
-      "SPDXID": "SPDXRef-binary-file-157",
+      "SPDXID": "SPDXRef-binary-file-154",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3149,7 +3098,7 @@
     },
     {
       "fileName": "./include/draco/io/ply_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-158",
+      "SPDXID": "SPDXRef-binary-file-155",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3161,7 +3110,7 @@
     },
     {
       "fileName": "./include/draco/io/file_writer_interface.h",
-      "SPDXID": "SPDXRef-binary-file-159",
+      "SPDXID": "SPDXRef-binary-file-156",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3173,7 +3122,7 @@
     },
     {
       "fileName": "./include/draco/io/ply_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-160",
+      "SPDXID": "SPDXRef-binary-file-157",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3185,7 +3134,7 @@
     },
     {
       "fileName": "./include/draco/io/ply_property_reader.h",
-      "SPDXID": "SPDXRef-binary-file-161",
+      "SPDXID": "SPDXRef-binary-file-158",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3197,7 +3146,7 @@
     },
     {
       "fileName": "./include/draco/io/stdio_file_reader.h",
-      "SPDXID": "SPDXRef-binary-file-162",
+      "SPDXID": "SPDXRef-binary-file-159",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3209,7 +3158,7 @@
     },
     {
       "fileName": "./include/draco/io/ply_property_writer.h",
-      "SPDXID": "SPDXRef-binary-file-163",
+      "SPDXID": "SPDXRef-binary-file-160",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3221,7 +3170,7 @@
     },
     {
       "fileName": "./include/draco/io/stdio_file_writer.h",
-      "SPDXID": "SPDXRef-binary-file-164",
+      "SPDXID": "SPDXRef-binary-file-161",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3233,7 +3182,7 @@
     },
     {
       "fileName": "./include/draco/io/obj_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-165",
+      "SPDXID": "SPDXRef-binary-file-162",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3245,7 +3194,7 @@
     },
     {
       "fileName": "./include/draco/io/file_writer_utils.h",
-      "SPDXID": "SPDXRef-binary-file-166",
+      "SPDXID": "SPDXRef-binary-file-163",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3257,7 +3206,7 @@
     },
     {
       "fileName": "./include/draco/io/file_reader_interface.h",
-      "SPDXID": "SPDXRef-binary-file-167",
+      "SPDXID": "SPDXRef-binary-file-164",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3269,7 +3218,7 @@
     },
     {
       "fileName": "./include/draco/io/ply_reader.h",
-      "SPDXID": "SPDXRef-binary-file-168",
+      "SPDXID": "SPDXRef-binary-file-165",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3281,7 +3230,7 @@
     },
     {
       "fileName": "./include/draco/io/file_reader_factory.h",
-      "SPDXID": "SPDXRef-binary-file-169",
+      "SPDXID": "SPDXRef-binary-file-166",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3293,7 +3242,7 @@
     },
     {
       "fileName": "./include/draco/io/point_cloud_io.h",
-      "SPDXID": "SPDXRef-binary-file-170",
+      "SPDXID": "SPDXRef-binary-file-167",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3305,7 +3254,7 @@
     },
     {
       "fileName": "./include/draco/io/obj_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-171",
+      "SPDXID": "SPDXRef-binary-file-168",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3317,7 +3266,7 @@
     },
     {
       "fileName": "./include/draco/io/parser_utils.h",
-      "SPDXID": "SPDXRef-binary-file-172",
+      "SPDXID": "SPDXRef-binary-file-169",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3329,7 +3278,7 @@
     },
     {
       "fileName": "./include/draco/io/file_writer_factory.h",
-      "SPDXID": "SPDXRef-binary-file-173",
+      "SPDXID": "SPDXRef-binary-file-170",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3341,7 +3290,7 @@
     },
     {
       "fileName": "./include/draco/io/stl_encoder.h",
-      "SPDXID": "SPDXRef-binary-file-174",
+      "SPDXID": "SPDXRef-binary-file-171",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3353,7 +3302,7 @@
     },
     {
       "fileName": "./include/draco/io/stl_decoder.h",
-      "SPDXID": "SPDXRef-binary-file-175",
+      "SPDXID": "SPDXRef-binary-file-172",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3365,7 +3314,7 @@
     },
     {
       "fileName": "./include/draco/io/mesh_io.h",
-      "SPDXID": "SPDXRef-binary-file-176",
+      "SPDXID": "SPDXRef-binary-file-173",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3377,7 +3326,7 @@
     },
     {
       "fileName": "./include/draco/core/draco_index_type.h",
-      "SPDXID": "SPDXRef-binary-file-177",
+      "SPDXID": "SPDXRef-binary-file-174",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3389,7 +3338,7 @@
     },
     {
       "fileName": "./include/draco/core/cycle_timer.h",
-      "SPDXID": "SPDXRef-binary-file-178",
+      "SPDXID": "SPDXRef-binary-file-175",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3401,7 +3350,7 @@
     },
     {
       "fileName": "./include/draco/core/draco_types.h",
-      "SPDXID": "SPDXRef-binary-file-179",
+      "SPDXID": "SPDXRef-binary-file-176",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3413,7 +3362,7 @@
     },
     {
       "fileName": "./include/draco/core/bounding_box.h",
-      "SPDXID": "SPDXRef-binary-file-180",
+      "SPDXID": "SPDXRef-binary-file-177",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3425,7 +3374,7 @@
     },
     {
       "fileName": "./include/draco/core/status.h",
-      "SPDXID": "SPDXRef-binary-file-181",
+      "SPDXID": "SPDXRef-binary-file-178",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3437,7 +3386,7 @@
     },
     {
       "fileName": "./include/draco/core/data_buffer.h",
-      "SPDXID": "SPDXRef-binary-file-182",
+      "SPDXID": "SPDXRef-binary-file-179",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3449,7 +3398,7 @@
     },
     {
       "fileName": "./include/draco/core/vector_d.h",
-      "SPDXID": "SPDXRef-binary-file-183",
+      "SPDXID": "SPDXRef-binary-file-180",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3461,7 +3410,7 @@
     },
     {
       "fileName": "./include/draco/core/math_utils.h",
-      "SPDXID": "SPDXRef-binary-file-184",
+      "SPDXID": "SPDXRef-binary-file-181",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3473,7 +3422,7 @@
     },
     {
       "fileName": "./include/draco/core/options.h",
-      "SPDXID": "SPDXRef-binary-file-185",
+      "SPDXID": "SPDXRef-binary-file-182",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3485,7 +3434,7 @@
     },
     {
       "fileName": "./include/draco/core/encoder_buffer.h",
-      "SPDXID": "SPDXRef-binary-file-186",
+      "SPDXID": "SPDXRef-binary-file-183",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3497,7 +3446,7 @@
     },
     {
       "fileName": "./include/draco/core/quantization_utils.h",
-      "SPDXID": "SPDXRef-binary-file-187",
+      "SPDXID": "SPDXRef-binary-file-184",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3509,7 +3458,7 @@
     },
     {
       "fileName": "./include/draco/core/bit_utils.h",
-      "SPDXID": "SPDXRef-binary-file-188",
+      "SPDXID": "SPDXRef-binary-file-185",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3521,7 +3470,7 @@
     },
     {
       "fileName": "./include/draco/core/decoder_buffer.h",
-      "SPDXID": "SPDXRef-binary-file-189",
+      "SPDXID": "SPDXRef-binary-file-186",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3533,7 +3482,7 @@
     },
     {
       "fileName": "./include/draco/core/macros.h",
-      "SPDXID": "SPDXRef-binary-file-190",
+      "SPDXID": "SPDXRef-binary-file-187",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3545,7 +3494,7 @@
     },
     {
       "fileName": "./include/draco/core/draco_version.h",
-      "SPDXID": "SPDXRef-binary-file-191",
+      "SPDXID": "SPDXRef-binary-file-188",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3557,7 +3506,7 @@
     },
     {
       "fileName": "./include/draco/core/status_or.h",
-      "SPDXID": "SPDXRef-binary-file-192",
+      "SPDXID": "SPDXRef-binary-file-189",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3569,7 +3518,7 @@
     },
     {
       "fileName": "./include/draco/core/varint_encoding.h",
-      "SPDXID": "SPDXRef-binary-file-193",
+      "SPDXID": "SPDXRef-binary-file-190",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3581,7 +3530,7 @@
     },
     {
       "fileName": "./include/draco/core/hash_utils.h",
-      "SPDXID": "SPDXRef-binary-file-194",
+      "SPDXID": "SPDXRef-binary-file-191",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3593,7 +3542,7 @@
     },
     {
       "fileName": "./include/draco/core/varint_decoding.h",
-      "SPDXID": "SPDXRef-binary-file-195",
+      "SPDXID": "SPDXRef-binary-file-192",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3605,7 +3554,7 @@
     },
     {
       "fileName": "./include/draco/core/divide.h",
-      "SPDXID": "SPDXRef-binary-file-196",
+      "SPDXID": "SPDXRef-binary-file-193",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3617,7 +3566,7 @@
     },
     {
       "fileName": "./include/draco/core/draco_index_type_vector.h",
-      "SPDXID": "SPDXRef-binary-file-197",
+      "SPDXID": "SPDXRef-binary-file-194",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3629,7 +3578,7 @@
     },
     {
       "fileName": "./include/draco/core/constants.h",
-      "SPDXID": "SPDXRef-binary-file-198",
+      "SPDXID": "SPDXRef-binary-file-195",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3641,7 +3590,7 @@
     },
     {
       "fileName": "./include/draco/attributes/geometry_attribute.h",
-      "SPDXID": "SPDXRef-binary-file-199",
+      "SPDXID": "SPDXRef-binary-file-196",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3653,7 +3602,7 @@
     },
     {
       "fileName": "./include/draco/attributes/attribute_octahedron_transform.h",
-      "SPDXID": "SPDXRef-binary-file-200",
+      "SPDXID": "SPDXRef-binary-file-197",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3665,7 +3614,7 @@
     },
     {
       "fileName": "./include/draco/attributes/attribute_transform_type.h",
-      "SPDXID": "SPDXRef-binary-file-201",
+      "SPDXID": "SPDXRef-binary-file-198",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3677,7 +3626,7 @@
     },
     {
       "fileName": "./include/draco/attributes/geometry_indices.h",
-      "SPDXID": "SPDXRef-binary-file-202",
+      "SPDXID": "SPDXRef-binary-file-199",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3689,7 +3638,7 @@
     },
     {
       "fileName": "./include/draco/attributes/attribute_transform.h",
-      "SPDXID": "SPDXRef-binary-file-203",
+      "SPDXID": "SPDXRef-binary-file-200",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3701,7 +3650,7 @@
     },
     {
       "fileName": "./include/draco/attributes/point_attribute.h",
-      "SPDXID": "SPDXRef-binary-file-204",
+      "SPDXID": "SPDXRef-binary-file-201",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3713,7 +3662,7 @@
     },
     {
       "fileName": "./include/draco/attributes/attribute_quantization_transform.h",
-      "SPDXID": "SPDXRef-binary-file-205",
+      "SPDXID": "SPDXRef-binary-file-202",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3725,7 +3674,7 @@
     },
     {
       "fileName": "./include/draco/attributes/attribute_transform_data.h",
-      "SPDXID": "SPDXRef-binary-file-206",
+      "SPDXID": "SPDXRef-binary-file-203",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3737,7 +3686,7 @@
     },
     {
       "fileName": "./include/draco/point_cloud/point_cloud.h",
-      "SPDXID": "SPDXRef-binary-file-207",
+      "SPDXID": "SPDXRef-binary-file-204",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3749,7 +3698,7 @@
     },
     {
       "fileName": "./include/draco/point_cloud/point_cloud_builder.h",
-      "SPDXID": "SPDXRef-binary-file-208",
+      "SPDXID": "SPDXRef-binary-file-205",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3761,7 +3710,7 @@
     },
     {
       "fileName": "./include/draco/draco_features.h",
-      "SPDXID": "SPDXRef-binary-file-209",
+      "SPDXID": "SPDXRef-binary-file-206",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3772,12 +3721,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libdraco.a",
-      "SPDXID": "SPDXRef-binary-file-210",
+      "fileName": "./lib/libdraco.so",
+      "SPDXID": "SPDXRef-binary-file-207",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "086177db1a47958a0f11d60968db9934c8fbd804328bf87fd9e608bb2042344a"
+          "checksumValue": "95cea7c0ce457c07acda237b45e225e17ada29494f0547350fabd6045ceeab45"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -3785,11 +3734,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/draco.pc",
-      "SPDXID": "SPDXRef-binary-file-211",
+      "SPDXID": "SPDXRef-binary-file-208",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "cd6ce81d7922ec4826012e8f4f99e8433e7fa5cd41acfa3dc1c74ea6fde0bd0e"
+          "checksumValue": "5fbd778aa37262d34fd460aa393a4834e48bcd32a7ef2ef94581e443e6514a53"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -3797,11 +3746,11 @@
     },
     {
       "fileName": "./tools/draco/draco_encoder",
-      "SPDXID": "SPDXRef-binary-file-212",
+      "SPDXID": "SPDXRef-binary-file-209",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2786b8c44967b357d6adcd82fa65960edf91798132a7c3aac29e0429cafd6ff9"
+          "checksumValue": "8e13422d04b000847892d38325f3e4ab29adddd74130bb06b4e8ca35478b978e"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -3809,11 +3758,11 @@
     },
     {
       "fileName": "./tools/draco/draco_decoder",
-      "SPDXID": "SPDXRef-binary-file-213",
+      "SPDXID": "SPDXRef-binary-file-210",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "927f6b71ef15d2c72153a2de703e7e06e2bbb2c03d7bb01413f4e7211932748e"
+          "checksumValue": "4df8072337d470a407bc6ba6165d7f7371491070c21c8e1397586970c2215a4c"
         }
       ],
       "licenseConcluded": "NOASSERTION",

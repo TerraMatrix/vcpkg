@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/suitesparse-spqr-arm64-linux-4.3.4-2999b6bb-dfd0-478c-810e-331299036887",
-  "name": "suitesparse-spqr:arm64-linux@4.3.4 803a121be2b7b31bde106d2e6c232dd485dc91af108de89a77505e7588fc017b",
+  "documentNamespace": "https://spdx.org/spdxdocs/suitesparse-spqr-arm64-linux-4.3.4-5f695075-482d-48f4-a3c4-0a079d0eda11",
+  "name": "suitesparse-spqr:arm64-linux@4.3.4 a5a788da32ca6f3e2750b25fd4f391048104668d9bf5574d19c3435147d1729f",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T03:15:57Z"
+    "created": "2025-12-16T10:39:20Z"
   },
   "relationships": [
     {
@@ -101,11 +101,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-12"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-13"
     }
   ],
   "packages": [
@@ -124,7 +119,7 @@
     {
       "name": "suitesparse-spqr:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "803a121be2b7b31bde106d2e6c232dd485dc91af108de89a77505e7588fc017b",
+      "versionInfo": "a5a788da32ca6f3e2750b25fd4f391048104668d9bf5574d19c3435147d1729f",
       "downloadLocation": "NONE",
       "licenseConcluded": "GPL-2.0-or-later",
       "licenseDeclared": "NOASSERTION",
@@ -189,31 +184,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libspqr.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "290839cd432dd3c91a38bf6d777556a3b7e94a96942f9ce572e84ba07c839ef1"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/SPQR.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "ea67c804c1ffab9f697a1dc242080c6c40cbbc6665171095d6beb2e365ef0ab5"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -221,7 +192,7 @@
     },
     {
       "fileName": "./share/suitesparse-spqr/copyright",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -233,11 +204,11 @@
     },
     {
       "fileName": "./share/SPQR/SPQRTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "4d2c01490a15e709af7d462a89923c285a764b8024b4ca1092bcb09953f9c1b0"
+          "checksumValue": "7d98ede5691251e3de75acf1511d3955f518c6f3eee648c34eec54b99761ba73"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -245,7 +216,7 @@
     },
     {
       "fileName": "./share/SPQR/SPQRConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -256,24 +227,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/SPQR/SPQRTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "9da3edadae9928891e6487f631e3f82314f62840a31c682d637bb04d6d0a77a1"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/SPQR/SPQRConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "10ec1f61347cc1d55ec7db6485717d271550e651fc90ad2de32eee4a38682e1d"
+          "checksumValue": "6841c26554c6f177bd4c0c68336f126baf8fec55586c96696dfc1735f639c468"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -281,11 +240,11 @@
     },
     {
       "fileName": "./share/SPQR/SPQRTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "147f06ea023b952f396278b9a14764860421e9d098c4cc0c1b5edc5b16d5ce14"
+          "checksumValue": "076a01d9a1e8a7562f368029d402eac7ae87cf3ed5cb4dd3e6613edbef0e9763"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -293,7 +252,7 @@
     },
     {
       "fileName": "./include/suitesparse/SuiteSparseQR_C.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -305,7 +264,7 @@
     },
     {
       "fileName": "./include/suitesparse/SuiteSparseQR.hpp",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -317,7 +276,7 @@
     },
     {
       "fileName": "./include/suitesparse/SuiteSparseQR_definitions.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -328,12 +287,36 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libspqr.a",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "fileName": "./lib/libspqr.so.4.3.4",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "285ae51c4ec50385b94dcb3b7b2984be2f6b9be3776d924186c8edb4a9d9e1d5"
+          "checksumValue": "07e51b89db31442b0b3272e4b551e87965456de054248366c45c57947ab0bb0e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libspqr.so.4",
+      "SPDXID": "SPDXRef-binary-file-10",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "07e51b89db31442b0b3272e4b551e87965456de054248366c45c57947ab0bb0e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libspqr.so",
+      "SPDXID": "SPDXRef-binary-file-11",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "07e51b89db31442b0b3272e4b551e87965456de054248366c45c57947ab0bb0e"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -341,11 +324,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/SPQR.pc",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "039c927a9dfb7c7b25bb9b889f685ed17d62db37155a0f26dba64ab256c470d7"
+          "checksumValue": "94a9343ba8ed1bcdaacff57860dfc1fcba4c534a534c84a8cc7f3eecedc23e95"
         }
       ],
       "licenseConcluded": "NOASSERTION",

@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/c-ares-arm64-linux-1.34.5#1-5b9c8508-b148-4197-a64b-f66c2408147b",
-  "name": "c-ares:arm64-linux@1.34.5#1 566875097eb851cb7c90c65aa4c7fe999e878ff23ddd081005095ab5c301e375",
+  "documentNamespace": "https://spdx.org/spdxdocs/c-ares-arm64-linux-1.34.5#1-4d0117cd-9e7c-49ff-8e4c-47f95a07f48a",
+  "name": "c-ares:arm64-linux@1.34.5#1 8b0bfd6524938bcd96d6904988c9b6bee69ad173b98a0ad4daab6364a661b7c7",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T04:50:14Z"
+    "created": "2025-12-16T13:11:42Z"
   },
   "relationships": [
     {
@@ -126,11 +126,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-16"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-17"
     }
   ],
   "packages": [
@@ -149,7 +144,7 @@
     {
       "name": "c-ares:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "566875097eb851cb7c90c65aa4c7fe999e878ff23ddd081005095ab5c301e375",
+      "versionInfo": "8b0bfd6524938bcd96d6904988c9b6bee69ad173b98a0ad4daab6364a661b7c7",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT-CMU",
       "licenseDeclared": "NOASSERTION",
@@ -226,31 +221,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libcares.pc",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "853481d5a4deaa47d5a9640e225211dfdb1663a920a4682a0ea82b2c435e0f88"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libcares.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "44d77bb5411a1663816209d3c91421bc2eebc0cf7518ab8f0ea373a0fdd8a684"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -258,7 +229,7 @@
     },
     {
       "fileName": "./share/c-ares/c-ares-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -269,20 +240,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/c-ares/c-ares-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "baab14562a74153c24aae1ceb866b59d1fe649d0f8c4a5905a875f1628d38618"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/c-ares/copyright",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -294,11 +253,11 @@
     },
     {
       "fileName": "./share/c-ares/c-ares-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "6b5bc337eecfa98a55bd3fa75e97c1331794e44c60c40f59bd850591457b274a"
+          "checksumValue": "e201094b525c22ede1b6328833e7ac65f350c18425af46f550c22c7369491b7e"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -306,11 +265,11 @@
     },
     {
       "fileName": "./share/c-ares/c-ares-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "6fdb08eab7c64abc0351724971cb2784e8e1e7c04dd5647292a16ce00b5fdc2b"
+          "checksumValue": "98aae32cc1c392a70b3eff8e615c7c59f3a7345fa9b5244c84f7a18b22610490"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -318,11 +277,11 @@
     },
     {
       "fileName": "./share/c-ares/c-ares-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "1cc5d120c6ce80d3c30cdae29689ef70e7fc824495e8ffc715ab3a0256eb9e0b"
+          "checksumValue": "d8008b897547c1f1c29dbb79b88d5c220b34e023e881dfaadd7468b304b28ea8"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -330,7 +289,7 @@
     },
     {
       "fileName": "./share/c-ares/usage",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -342,11 +301,11 @@
     },
     {
       "fileName": "./include/ares.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "21a1b7686301f47c68114847961adbd885f170f5daa81daefbb90d940fa9cf27"
+          "checksumValue": "cb6267f7afd2c23f7d94017110ffd3e14f7d6ddd735a90af6300f38eb9e62f05"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -354,7 +313,7 @@
     },
     {
       "fileName": "./include/ares_dns_record.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -366,7 +325,7 @@
     },
     {
       "fileName": "./include/ares_dns.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -378,7 +337,7 @@
     },
     {
       "fileName": "./include/ares_version.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -390,7 +349,7 @@
     },
     {
       "fileName": "./include/ares_build.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -402,11 +361,47 @@
     },
     {
       "fileName": "./include/ares_nameser.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
           "checksumValue": "cbfd9edb0bad63cf7ec9d763f20b72417a266e0c70c00991bf3d975bf187c2c3"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libcares.so.2",
+      "SPDXID": "SPDXRef-binary-file-13",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "21869d974c6fb36906d8204c8e0145cafc092dd30326f9e232099a55a8e9712a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libcares.so.2.19.4",
+      "SPDXID": "SPDXRef-binary-file-14",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "21869d974c6fb36906d8204c8e0145cafc092dd30326f9e232099a55a8e9712a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libcares.so",
+      "SPDXID": "SPDXRef-binary-file-15",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "21869d974c6fb36906d8204c8e0145cafc092dd30326f9e232099a55a8e9712a"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -418,19 +413,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f1a41effd4015a4c2bddf604da20059c434cf6ae7a665c5c4d51af388a9f9dfb"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./lib/libcares.a",
-      "SPDXID": "SPDXRef-binary-file-17",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "8be73b783b4b261a0ea397d4ff003856321477a08d0565a0f7ee6b684f2eaa0e"
+          "checksumValue": "dca5328cfde7c2594b759098776cb68b398065bdfbf0d59b793b79eac710739b"
         }
       ],
       "licenseConcluded": "NOASSERTION",

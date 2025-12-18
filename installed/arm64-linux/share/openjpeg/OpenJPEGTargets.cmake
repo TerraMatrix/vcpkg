@@ -55,7 +55,7 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target openjp2
-add_library(openjp2 STATIC IMPORTED)
+add_library(openjp2 SHARED IMPORTED)
 
 set_target_properties(openjp2 PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include/openjpeg-2.5"

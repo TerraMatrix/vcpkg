@@ -17,11 +17,15 @@ vcpkg_find_acquire_program(PYTHON3)
 get_filename_component(PYTHON3_PATH ${PYTHON3} DIRECTORY)
 vcpkg_add_to_path(${PYTHON3_PATH})
 
+# Force Qt5 usage
+set(ENV{QT_SELECT} 5)
+
 vcpkg_qmake_configure(
     SOURCE_PATH "${SOURCE_PATH}/src"
     QMAKE_OPTIONS
         "CONFIG-=hide_symbols"
         "DEFINES+=SCI_NAMESPACE"
+        "TARGET=qscintilla2_qt5"
 )
 vcpkg_qmake_install()
 

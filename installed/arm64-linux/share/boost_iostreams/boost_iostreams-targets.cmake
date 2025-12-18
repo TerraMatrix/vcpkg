@@ -55,12 +55,12 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::iostreams
-add_library(Boost::iostreams STATIC IMPORTED)
+add_library(Boost::iostreams SHARED IMPORTED)
 
 set_target_properties(Boost::iostreams PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_IOSTREAMS_NO_LIB;BOOST_IOSTREAMS_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_IOSTREAMS_NO_LIB;BOOST_IOSTREAMS_DYN_LINK"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:ZLIB::ZLIB>;\$<LINK_ONLY:BZip2::BZip2>;\$<LINK_ONLY:LibLZMA::LibLZMA>;\$<LINK_ONLY:zstd::libzstd_static>;Boost::assert;Boost::config;Boost::core;Boost::detail;Boost::function;Boost::integer;Boost::iterator;Boost::mpl;Boost::preprocessor;Boost::random;Boost::range;Boost::regex;Boost::smart_ptr;Boost::static_assert;Boost::throw_exception;Boost::type_traits;Boost::utility;\$<LINK_ONLY:Boost::numeric_conversion>"
+  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::core;Boost::detail;Boost::function;Boost::integer;Boost::iterator;Boost::mpl;Boost::preprocessor;Boost::random;Boost::range;Boost::regex;Boost::smart_ptr;Boost::static_assert;Boost::throw_exception;Boost::type_traits;Boost::utility"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

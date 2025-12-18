@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/fmt-arm64-linux-12.0.0-c67edaa9-5b0b-48bb-b130-4b60f249e64f",
+  "documentNamespace": "https://spdx.org/spdxdocs/fmt-arm64-linux-12.0.0-6931cc00-688b-4752-bf53-7a7f1f86748b",
   "name": "fmt:arm64-linux@12.0.0 NONE",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-18T09:22:37Z"
+    "created": "2025-12-16T09:18:12Z"
   },
   "relationships": [
     {
@@ -141,11 +141,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-24"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-25"
     }
   ],
   "packages": [
@@ -179,31 +174,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libfmtd.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "2d70496e7e6d40d6e3137dfbac39c119abe945e365361e115db856d0f452748d"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/fmt.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "428fda62e875c3ad461fa301da72b1ab677c365b00adb0584caeb64322fcd9c5"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -211,11 +182,11 @@
     },
     {
       "fileName": "./share/fmt/fmt-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "15d336582f27e84848da4d5cb44caa01ec3569bd4ae93666002dac4d08bea123"
+          "checksumValue": "4900ff748b264f3866f86c69e1f8f98cd3b8adac1dc658b4a44565c1201582fe"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -223,7 +194,7 @@
     },
     {
       "fileName": "./share/fmt/copyright",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -235,7 +206,7 @@
     },
     {
       "fileName": "./share/fmt/fmt-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -247,23 +218,11 @@
     },
     {
       "fileName": "./share/fmt/fmt-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d21bab9e7018b5573cafccaf6b1917012e4ea74d513e7c0a13a48534e2f59d80"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/fmt/fmt-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "e8072b20e2af68c3ae32919961d6ee9f2d2a6dd4cd7a2af8d3a336795c1e1882"
+          "checksumValue": "1d15cb11492c32295877434249de16ed9d2279ae172f0b01804c3041daa30bf2"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -271,7 +230,7 @@
     },
     {
       "fileName": "./share/fmt/fmt-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -283,7 +242,7 @@
     },
     {
       "fileName": "./share/fmt/usage",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -295,7 +254,7 @@
     },
     {
       "fileName": "./include/fmt/ranges.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -307,7 +266,7 @@
     },
     {
       "fileName": "./include/fmt/xchar.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -319,7 +278,7 @@
     },
     {
       "fileName": "./include/fmt/color.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -331,7 +290,7 @@
     },
     {
       "fileName": "./include/fmt/base.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -343,7 +302,7 @@
     },
     {
       "fileName": "./include/fmt/std.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -355,7 +314,7 @@
     },
     {
       "fileName": "./include/fmt/args.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -367,7 +326,7 @@
     },
     {
       "fileName": "./include/fmt/ostream.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -379,7 +338,7 @@
     },
     {
       "fileName": "./include/fmt/chrono.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -391,7 +350,7 @@
     },
     {
       "fileName": "./include/fmt/compile.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -403,7 +362,7 @@
     },
     {
       "fileName": "./include/fmt/format.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -415,7 +374,7 @@
     },
     {
       "fileName": "./include/fmt/printf.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -427,7 +386,7 @@
     },
     {
       "fileName": "./include/fmt/format-inl.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -439,7 +398,7 @@
     },
     {
       "fileName": "./include/fmt/core.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -451,7 +410,7 @@
     },
     {
       "fileName": "./include/fmt/os.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -462,12 +421,24 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libfmt.a",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "fileName": "./lib/libfmt.so.12",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "5f57c46b13afbbb588c1597562853d00b7e181a4338dac051eacdc8a7bbc9df9"
+          "checksumValue": "9be37a702b17c731e9c538018ae7bb7ed3dda3d188fdf974512ac3bbb028b9a5"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libfmt.so",
+      "SPDXID": "SPDXRef-binary-file-22",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9be37a702b17c731e9c538018ae7bb7ed3dda3d188fdf974512ac3bbb028b9a5"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -475,11 +446,23 @@
     },
     {
       "fileName": "./lib/pkgconfig/fmt.pc",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d45f14b5a36e9934fa88ba6b2dca252ca29be5f9f05d74b12004e172bf4f099a"
+          "checksumValue": "ed7e097ddedbbacd57990e320b71d292e41e56b40c307cf20cdbe9900c43f06b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libfmt.so.12.0.0",
+      "SPDXID": "SPDXRef-binary-file-24",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9be37a702b17c731e9c538018ae7bb7ed3dda3d188fdf974512ac3bbb028b9a5"
         }
       ],
       "licenseConcluded": "NOASSERTION",

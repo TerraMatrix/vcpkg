@@ -35,7 +35,7 @@ if(Freetype_FOUND)
     unset(_freetype_location_release)
 endif()
 
-if("static" STREQUAL "static")
+if("dynamic" STREQUAL "static")
     if("ON")
         find_package(ZLIB)
     endif()

@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/libarchive-arm64-linux-3.8.2-2d98733b-d943-4479-9f28-cb476c1f4d36",
-  "name": "libarchive:arm64-linux@3.8.2 f7093e39083b6feee6c73fd1e2f5abadc013c7a5b9aa9309d1d411f0bcbfe1b0",
+  "documentNamespace": "https://spdx.org/spdxdocs/libarchive-arm64-linux-3.8.2-fab9ccb4-ee41-451e-9cb4-a1249e19a8a1",
+  "name": "libarchive:arm64-linux@3.8.2 fccd517c34df37e4e625e83d11b769fca0df70ef5af355549e7519e07e0813de",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-26T12:39:03Z"
+    "created": "2025-12-16T12:40:17Z"
   },
   "relationships": [
     {
@@ -119,7 +119,7 @@
     {
       "name": "libarchive:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "f7093e39083b6feee6c73fd1e2f5abadc013c7a5b9aa9309d1d411f0bcbfe1b0",
+      "versionInfo": "fccd517c34df37e4e625e83d11b769fca0df70ef5af355549e7519e07e0813de",
       "downloadLocation": "NONE",
       "licenseConcluded": "LicenseRef-vcpkg-null",
       "licenseDeclared": "NOASSERTION",
@@ -220,31 +220,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libarchive.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "b25ced751919acbbdbc85624703d49788c12e4d8307b23e4b1d080bd9273e4a7"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libarchive.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "3e33d98f53e4034807fd89abc04a9b777e863120e1f18c8be475505822c95525"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -252,11 +228,11 @@
     },
     {
       "fileName": "./share/libarchive/vcpkg-cmake-wrapper.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "0941641220bf078deee9682967f8b56f1c797d140f7045ec7b584a722c2daf92"
+          "checksumValue": "82868c72763359b6f743eb89c108ff759c2a540bbb39b2e668ef44cee1a62869"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -264,7 +240,7 @@
     },
     {
       "fileName": "./share/libarchive/copyright",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -276,7 +252,7 @@
     },
     {
       "fileName": "./share/libarchive/usage",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -288,7 +264,7 @@
     },
     {
       "fileName": "./include/archive.h",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -300,7 +276,7 @@
     },
     {
       "fileName": "./include/archive_entry.h",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -311,12 +287,36 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libarchive.a",
+      "fileName": "./lib/libarchive.so",
+      "SPDXID": "SPDXRef-binary-file-6",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "05d233aebd79dd24c76e08c6790d3e146cf7df501d70f3cde05f9396f15b3829"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libarchive.so.13.8.2",
+      "SPDXID": "SPDXRef-binary-file-7",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "05d233aebd79dd24c76e08c6790d3e146cf7df501d70f3cde05f9396f15b3829"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libarchive.so.13",
       "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "02d4c6f96a4036501e9e0dc3bf156ddd4c0bcb0594a365c8a643cb172a1ff0e7"
+          "checksumValue": "05d233aebd79dd24c76e08c6790d3e146cf7df501d70f3cde05f9396f15b3829"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -328,7 +328,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "29f55771668ee1d3987c80d33dff75639e12f2b4a17d471581bec4d72600d875"
+          "checksumValue": "d934ec87648ef7fbbccd72a8c38188cb86a9f78f8e9be94cfad9bd08eb6f4aeb"
         }
       ],
       "licenseConcluded": "NOASSERTION",

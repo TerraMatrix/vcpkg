@@ -55,16 +55,11 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target assimp::assimp
-add_library(assimp::assimp STATIC IMPORTED)
+add_library(assimp::assimp SHARED IMPORTED)
 
 set_target_properties(assimp::assimp PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:polyclipping::polyclipping>;\$<LINK_ONLY:poly2tri::poly2tri>;\$<LINK_ONLY:unofficial::minizip::minizip>;\$<LINK_ONLY:ZLIB::ZLIB>;\$<LINK_ONLY:RapidJSON>;\$<LINK_ONLY:utf8cpp::utf8cpp>;\$<LINK_ONLY:pugixml>;\$<LINK_ONLY:zip::zip>;\$<LINK_ONLY:rt>"
 )
-
-if(CMAKE_VERSION VERSION_LESS 2.8.12)
-  message(FATAL_ERROR "This file relies on consumers using CMake 2.8.12 or greater.")
-endif()
 
 # Load information for each installed configuration.
 file(GLOB _cmake_config_files "${CMAKE_CURRENT_LIST_DIR}/assimpTargets-*.cmake")

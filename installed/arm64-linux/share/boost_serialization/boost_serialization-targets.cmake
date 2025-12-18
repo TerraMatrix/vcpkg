@@ -55,12 +55,12 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::serialization
-add_library(Boost::serialization STATIC IMPORTED)
+add_library(Boost::serialization SHARED IMPORTED)
 
 set_target_properties(Boost::serialization PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_SERIALIZATION_NO_LIB;BOOST_SERIALIZATION_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_SERIALIZATION_NO_LIB;BOOST_SERIALIZATION_DYN_LINK"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::array;Boost::assert;Boost::config;Boost::core;Boost::detail;Boost::integer;Boost::io;Boost::iterator;Boost::move;Boost::mpl;Boost::optional;Boost::predef;Boost::preprocessor;Boost::smart_ptr;Boost::spirit;Boost::static_assert;Boost::type_traits;Boost::unordered;Boost::utility;Boost::variant;\$<LINK_ONLY:Boost::function>"
+  INTERFACE_LINK_LIBRARIES "Boost::array;Boost::assert;Boost::config;Boost::core;Boost::detail;Boost::integer;Boost::io;Boost::iterator;Boost::move;Boost::mpl;Boost::optional;Boost::predef;Boost::preprocessor;Boost::smart_ptr;Boost::spirit;Boost::static_assert;Boost::type_traits;Boost::unordered;Boost::utility;Boost::variant"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

@@ -55,10 +55,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::charconv
-add_library(Boost::charconv STATIC IMPORTED)
+add_library(Boost::charconv SHARED IMPORTED)
 
 set_target_properties(Boost::charconv PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_CHARCONV_NO_LIB;BOOST_CHARCONV_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_CHARCONV_NO_LIB;BOOST_CHARCONV_DYN_LINK"
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "Boost::config;Boost::assert;Boost::core"

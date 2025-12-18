@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/pcre2-arm64-linux-10.46-f046020e-ba0c-4f6e-afb9-8c0c41ab7035",
-  "name": "pcre2:arm64-linux@10.46 5e1d5619cc1ff77b01d1ff483ab9ae305e063b13fcf6f9078cd6a09af4a242e7",
+  "documentNamespace": "https://spdx.org/spdxdocs/pcre2-arm64-linux-10.46-87f6d794-f41a-4c59-ac01-6945e05565a0",
+  "name": "pcre2:arm64-linux@10.46 8405cff5040b70da20aee39af3c559e91666c16423355cbb7bd039fc654b37e8",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T04:08:39Z"
+    "created": "2025-12-17T02:32:45Z"
   },
   "relationships": [
     {
@@ -676,16 +676,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-124"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-125"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-126"
     }
   ],
   "packages": [
@@ -704,7 +694,7 @@
     {
       "name": "pcre2:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "5e1d5619cc1ff77b01d1ff483ab9ae305e063b13fcf6f9078cd6a09af4a242e7",
+      "versionInfo": "8405cff5040b70da20aee39af3c559e91666c16423355cbb7bd039fc654b37e8",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -819,103 +809,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libpcre2-32.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "52a0570bbd6cdebdfe4c346c6ff001eec8a133457433b35514335c721c8308b2"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libpcre2-posix.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "74750d1e7bc37c25842646810df268083be149ea1286bfd42b36b7a9caf43933"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libpcre2-8.a",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "1d781fee23008ad0342f966ca47d3113ac572ade7aa8494390ec3ff90c44bebb"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libpcre2-16.a",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "99ae510445cdb9cf755e4cee358f803ff6d9e97815fd0d1017c3fbf3e0c6194d"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libpcre2-8.pc",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "b5f1fc68395d520d8789e3441a4e4efa61a71511758a2d4ab046f231477cd6be"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libpcre2-32.pc",
-      "SPDXID": "SPDXRef-binary-file-6",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "d5b2a10938ec38aacfbe53bbfc0579921df0c965c69c3120492675868dc442c4"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libpcre2-16.pc",
-      "SPDXID": "SPDXRef-binary-file-7",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "a9ce0690acfee192e0f823a3cb9b249bddd78c4b5c84e42f538cfc4a1d2ff4ea"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libpcre2-posix.pc",
-      "SPDXID": "SPDXRef-binary-file-8",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "3e4b5245d6041f5f03962760487c0ef8265c1443660a8b164974e21ed181f425"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -923,7 +817,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_substring_get_bynumber.3",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -935,7 +829,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2perform.3",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -947,7 +841,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_substring_copy_byname.3",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -959,7 +853,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2serialize.3",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -971,7 +865,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_match_data_create_from_pattern.3",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -983,7 +877,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_get_ovector_count.3",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -995,7 +889,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_general_context_copy.3",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1007,7 +901,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_config.3",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1019,7 +913,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_match.3",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1031,7 +925,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_heap_limit.3",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1043,7 +937,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_optimize.3",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1055,7 +949,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2api.3",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1067,7 +961,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_substitute.3",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1079,7 +973,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_jit_stack_create.3",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1091,7 +985,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_compile_recursion_guard.3",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1103,7 +997,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_substring_nametable_scan.3",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1115,7 +1009,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_dfa_match.3",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1127,7 +1021,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_max_pattern_length.3",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1139,7 +1033,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_compile_context_copy.3",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1151,7 +1045,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2posix.3",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1163,7 +1057,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2convert.3",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1175,7 +1069,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_match_context_create.3",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1187,7 +1081,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_serialize_encode.3",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1199,7 +1093,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_match_limit.3",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1211,7 +1105,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_offset_limit.3",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1223,7 +1117,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_max_varlookbehind.3",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1235,7 +1129,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_jit_stack_assign.3",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1247,7 +1141,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_get_mark.3",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1259,7 +1153,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_serialize_free.3",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1271,7 +1165,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_bsr.3",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1283,7 +1177,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_serialize_decode.3",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1295,7 +1189,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_convert_context_copy.3",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1307,7 +1201,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_code_copy_with_tables.3",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1319,7 +1213,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_pattern_info.3",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1331,7 +1225,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_recursion_limit.3",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1343,7 +1237,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_compile_context_free.3",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1355,7 +1249,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_get_match_data_heapframes_size.3",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1367,7 +1261,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_character_tables.3",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1379,7 +1273,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_get_error_message.3",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1391,7 +1285,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_substring_free.3",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1403,7 +1297,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_substring_list_free.3",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1415,7 +1309,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_get_match_data_size.3",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1427,7 +1321,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_maketables.3",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1439,7 +1333,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_converted_pattern_free.3",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1451,7 +1345,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_substring_copy_bynumber.3",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1463,7 +1357,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_recursion_memory_management.3",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1475,7 +1369,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_jit_free_unused_memory.3",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1487,7 +1381,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_match_data_create.3",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1499,7 +1393,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_callout_enumerate.3",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1511,7 +1405,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2compat.3",
-      "SPDXID": "SPDXRef-binary-file-58",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1523,7 +1417,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_compile_extra_options.3",
-      "SPDXID": "SPDXRef-binary-file-59",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1535,7 +1429,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_convert_context_create.3",
-      "SPDXID": "SPDXRef-binary-file-60",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1547,7 +1441,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_code_copy.3",
-      "SPDXID": "SPDXRef-binary-file-61",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1559,7 +1453,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2pattern.3",
-      "SPDXID": "SPDXRef-binary-file-62",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1571,7 +1465,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2partial.3",
-      "SPDXID": "SPDXRef-binary-file-63",
+      "SPDXID": "SPDXRef-binary-file-55",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1583,7 +1477,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2jit.3",
-      "SPDXID": "SPDXRef-binary-file-64",
+      "SPDXID": "SPDXRef-binary-file-56",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1595,7 +1489,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2build.3",
-      "SPDXID": "SPDXRef-binary-file-65",
+      "SPDXID": "SPDXRef-binary-file-57",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1607,7 +1501,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_convert_context_free.3",
-      "SPDXID": "SPDXRef-binary-file-66",
+      "SPDXID": "SPDXRef-binary-file-58",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1619,7 +1513,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_substitute_callout.3",
-      "SPDXID": "SPDXRef-binary-file-67",
+      "SPDXID": "SPDXRef-binary-file-59",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1631,7 +1525,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_substring_get_byname.3",
-      "SPDXID": "SPDXRef-binary-file-68",
+      "SPDXID": "SPDXRef-binary-file-60",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1643,7 +1537,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_get_startchar.3",
-      "SPDXID": "SPDXRef-binary-file-69",
+      "SPDXID": "SPDXRef-binary-file-61",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1655,7 +1549,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_compile.3",
-      "SPDXID": "SPDXRef-binary-file-70",
+      "SPDXID": "SPDXRef-binary-file-62",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1667,7 +1561,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_substring_length_bynumber.3",
-      "SPDXID": "SPDXRef-binary-file-71",
+      "SPDXID": "SPDXRef-binary-file-63",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1679,7 +1573,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_glob_escape.3",
-      "SPDXID": "SPDXRef-binary-file-72",
+      "SPDXID": "SPDXRef-binary-file-64",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1691,7 +1585,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2callout.3",
-      "SPDXID": "SPDXRef-binary-file-73",
+      "SPDXID": "SPDXRef-binary-file-65",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1703,7 +1597,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_depth_limit.3",
-      "SPDXID": "SPDXRef-binary-file-74",
+      "SPDXID": "SPDXRef-binary-file-66",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1715,7 +1609,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_parens_nest_limit.3",
-      "SPDXID": "SPDXRef-binary-file-75",
+      "SPDXID": "SPDXRef-binary-file-67",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1727,7 +1621,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_jit_match.3",
-      "SPDXID": "SPDXRef-binary-file-76",
+      "SPDXID": "SPDXRef-binary-file-68",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1739,7 +1633,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_match_data_free.3",
-      "SPDXID": "SPDXRef-binary-file-77",
+      "SPDXID": "SPDXRef-binary-file-69",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1751,7 +1645,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_general_context_create.3",
-      "SPDXID": "SPDXRef-binary-file-78",
+      "SPDXID": "SPDXRef-binary-file-70",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1763,7 +1657,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_substitute_case_callout.3",
-      "SPDXID": "SPDXRef-binary-file-79",
+      "SPDXID": "SPDXRef-binary-file-71",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1775,7 +1669,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2limits.3",
-      "SPDXID": "SPDXRef-binary-file-80",
+      "SPDXID": "SPDXRef-binary-file-72",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1787,7 +1681,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_compile_context_create.3",
-      "SPDXID": "SPDXRef-binary-file-81",
+      "SPDXID": "SPDXRef-binary-file-73",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1799,7 +1693,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2demo.3",
-      "SPDXID": "SPDXRef-binary-file-82",
+      "SPDXID": "SPDXRef-binary-file-74",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1811,7 +1705,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2unicode.3",
-      "SPDXID": "SPDXRef-binary-file-83",
+      "SPDXID": "SPDXRef-binary-file-75",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1823,7 +1717,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_serialize_get_number_of_codes.3",
-      "SPDXID": "SPDXRef-binary-file-84",
+      "SPDXID": "SPDXRef-binary-file-76",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1835,7 +1729,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_max_pattern_compiled_length.3",
-      "SPDXID": "SPDXRef-binary-file-85",
+      "SPDXID": "SPDXRef-binary-file-77",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1847,7 +1741,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_substring_number_from_name.3",
-      "SPDXID": "SPDXRef-binary-file-86",
+      "SPDXID": "SPDXRef-binary-file-78",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1859,7 +1753,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2matching.3",
-      "SPDXID": "SPDXRef-binary-file-87",
+      "SPDXID": "SPDXRef-binary-file-79",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1871,7 +1765,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_maketables_free.3",
-      "SPDXID": "SPDXRef-binary-file-88",
+      "SPDXID": "SPDXRef-binary-file-80",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1883,7 +1777,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_code_free.3",
-      "SPDXID": "SPDXRef-binary-file-89",
+      "SPDXID": "SPDXRef-binary-file-81",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1895,7 +1789,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_substring_length_byname.3",
-      "SPDXID": "SPDXRef-binary-file-90",
+      "SPDXID": "SPDXRef-binary-file-82",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1907,7 +1801,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2sample.3",
-      "SPDXID": "SPDXRef-binary-file-91",
+      "SPDXID": "SPDXRef-binary-file-83",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1919,7 +1813,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_jit_stack_free.3",
-      "SPDXID": "SPDXRef-binary-file-92",
+      "SPDXID": "SPDXRef-binary-file-84",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1931,7 +1825,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2.3",
-      "SPDXID": "SPDXRef-binary-file-93",
+      "SPDXID": "SPDXRef-binary-file-85",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1943,7 +1837,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_newline.3",
-      "SPDXID": "SPDXRef-binary-file-94",
+      "SPDXID": "SPDXRef-binary-file-86",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1955,7 +1849,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_callout.3",
-      "SPDXID": "SPDXRef-binary-file-95",
+      "SPDXID": "SPDXRef-binary-file-87",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1967,7 +1861,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_match_context_free.3",
-      "SPDXID": "SPDXRef-binary-file-96",
+      "SPDXID": "SPDXRef-binary-file-88",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1979,7 +1873,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_get_ovector_pointer.3",
-      "SPDXID": "SPDXRef-binary-file-97",
+      "SPDXID": "SPDXRef-binary-file-89",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1991,7 +1885,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_match_context_copy.3",
-      "SPDXID": "SPDXRef-binary-file-98",
+      "SPDXID": "SPDXRef-binary-file-90",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2003,7 +1897,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_general_context_free.3",
-      "SPDXID": "SPDXRef-binary-file-99",
+      "SPDXID": "SPDXRef-binary-file-91",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2015,7 +1909,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_pattern_convert.3",
-      "SPDXID": "SPDXRef-binary-file-100",
+      "SPDXID": "SPDXRef-binary-file-92",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2027,7 +1921,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_substring_list_get.3",
-      "SPDXID": "SPDXRef-binary-file-101",
+      "SPDXID": "SPDXRef-binary-file-93",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2039,7 +1933,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2syntax.3",
-      "SPDXID": "SPDXRef-binary-file-102",
+      "SPDXID": "SPDXRef-binary-file-94",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2051,7 +1945,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_set_glob_separator.3",
-      "SPDXID": "SPDXRef-binary-file-103",
+      "SPDXID": "SPDXRef-binary-file-95",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2063,7 +1957,7 @@
     },
     {
       "fileName": "./share/man/man3/pcre2_jit_compile.3",
-      "SPDXID": "SPDXRef-binary-file-104",
+      "SPDXID": "SPDXRef-binary-file-96",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2075,7 +1969,7 @@
     },
     {
       "fileName": "./share/man/man1/pcre2grep.1",
-      "SPDXID": "SPDXRef-binary-file-105",
+      "SPDXID": "SPDXRef-binary-file-97",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2087,7 +1981,7 @@
     },
     {
       "fileName": "./share/man/man1/pcre2-config.1",
-      "SPDXID": "SPDXRef-binary-file-106",
+      "SPDXID": "SPDXRef-binary-file-98",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2099,7 +1993,7 @@
     },
     {
       "fileName": "./share/man/man1/pcre2test.1",
-      "SPDXID": "SPDXRef-binary-file-107",
+      "SPDXID": "SPDXRef-binary-file-99",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2110,20 +2004,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/pcre2/pcre2-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-108",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "f474535cd21f9748c811704ef2ad7c74dbd1f7e665981f65540a05dd46a48740"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/pcre2/pcre2-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-109",
+      "SPDXID": "SPDXRef-binary-file-100",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2135,7 +2017,7 @@
     },
     {
       "fileName": "./share/pcre2/copyright",
-      "SPDXID": "SPDXRef-binary-file-110",
+      "SPDXID": "SPDXRef-binary-file-101",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2147,11 +2029,11 @@
     },
     {
       "fileName": "./share/pcre2/pcre2-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-111",
+      "SPDXID": "SPDXRef-binary-file-102",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "41a9e78e8d039e80063408e57ec7d0e629b7ca663529223963bef2165279c75c"
+          "checksumValue": "36c097870b9912a24eea00ee375558ffbccd7ff4f2839dbbffac0ba687c9a1e3"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -2159,11 +2041,11 @@
     },
     {
       "fileName": "./share/pcre2/pcre2-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-112",
+      "SPDXID": "SPDXRef-binary-file-103",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "5e47909924cc7fa980c56694d2e67182c4d1d288affc8a5ad2ff0e904cc0edb5"
+          "checksumValue": "a85f3e3c61a1cd760ca5d520d65078c48346176c876693cce001ef924955a93f"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -2171,7 +2053,7 @@
     },
     {
       "fileName": "./share/pcre2/pcre2-config-version.cmake",
-      "SPDXID": "SPDXRef-binary-file-113",
+      "SPDXID": "SPDXRef-binary-file-104",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2183,7 +2065,7 @@
     },
     {
       "fileName": "./share/pcre2/usage",
-      "SPDXID": "SPDXRef-binary-file-114",
+      "SPDXID": "SPDXRef-binary-file-105",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2195,11 +2077,11 @@
     },
     {
       "fileName": "./include/pcre2.h",
-      "SPDXID": "SPDXRef-binary-file-115",
+      "SPDXID": "SPDXRef-binary-file-106",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "22ce8f578f0ae80a3ce40c7547db8d8615304001f8d6b80d350e5923e7bcc0da"
+          "checksumValue": "eacd3ac1249c1dc31986651c32833268dca6da063baff65893c24ca35260596d"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -2207,7 +2089,7 @@
     },
     {
       "fileName": "./include/pcre2posix.h",
-      "SPDXID": "SPDXRef-binary-file-116",
+      "SPDXID": "SPDXRef-binary-file-107",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2218,48 +2100,120 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libpcre2-32.a",
+      "fileName": "./lib/libpcre2-8.so",
+      "SPDXID": "SPDXRef-binary-file-108",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "29cc2a5d555825ef3a3437254b63e0e2188bdb1f2af5d0099610e46543a9fa14"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libpcre2-16.so.0",
+      "SPDXID": "SPDXRef-binary-file-109",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a638a6045296cbae89988eafe205636495fb2f2b8f94dba8997e64a42a98bd3e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libpcre2-16.so",
+      "SPDXID": "SPDXRef-binary-file-110",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a638a6045296cbae89988eafe205636495fb2f2b8f94dba8997e64a42a98bd3e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libpcre2-posix.so",
+      "SPDXID": "SPDXRef-binary-file-111",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "efa71da9d828bb260db35615aaa8618d3a2fff1099fcf46b92c728879edf8c78"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libpcre2-32.so.0",
+      "SPDXID": "SPDXRef-binary-file-112",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e480c68efaadc96827d086ca220dfc96417c1f5209fb07c7e1ba345cdf1c2337"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libpcre2-8.so.0.14.0",
+      "SPDXID": "SPDXRef-binary-file-113",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "29cc2a5d555825ef3a3437254b63e0e2188bdb1f2af5d0099610e46543a9fa14"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libpcre2-posix.so.3",
+      "SPDXID": "SPDXRef-binary-file-114",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "efa71da9d828bb260db35615aaa8618d3a2fff1099fcf46b92c728879edf8c78"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libpcre2-16.so.0.14.0",
+      "SPDXID": "SPDXRef-binary-file-115",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a638a6045296cbae89988eafe205636495fb2f2b8f94dba8997e64a42a98bd3e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libpcre2-8.so.0",
+      "SPDXID": "SPDXRef-binary-file-116",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "29cc2a5d555825ef3a3437254b63e0e2188bdb1f2af5d0099610e46543a9fa14"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libpcre2-posix.so.3.0.6",
       "SPDXID": "SPDXRef-binary-file-117",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d502938e2e02f92899371fa3aa22712f6b517c4c021d7de8b41cb1e15e22c068"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./lib/libpcre2-posix.a",
-      "SPDXID": "SPDXRef-binary-file-118",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "d566d7b6bdb59b9ea94f10429f78945e4a3da27e7396f602d1a71560e27256f5"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./lib/libpcre2-8.a",
-      "SPDXID": "SPDXRef-binary-file-119",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "4338773d2bed28dba35ae91b831d55d2b7530e3a50c1c2bc23e89b02d2af1310"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./lib/libpcre2-16.a",
-      "SPDXID": "SPDXRef-binary-file-120",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "059e09d2ec3b71b500bf2904b0b507840cfa8c33528b661bc0a836827bef61ac"
+          "checksumValue": "efa71da9d828bb260db35615aaa8618d3a2fff1099fcf46b92c728879edf8c78"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -2267,11 +2221,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/libpcre2-8.pc",
-      "SPDXID": "SPDXRef-binary-file-121",
+      "SPDXID": "SPDXRef-binary-file-118",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "3a4c85aa2c3dda24deb42cd1a65851e89d07c6fd278a96f394af1f59fa51e49e"
+          "checksumValue": "9b9da9f0cd5c7594fb930a2eda53fb2228bea85ee757888096a7d9d13d710f77"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -2279,11 +2233,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/libpcre2-32.pc",
-      "SPDXID": "SPDXRef-binary-file-122",
+      "SPDXID": "SPDXRef-binary-file-119",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "791a16ee4ae7a6dcd979ef4f9a98ee36881b6a1c1fed6d10d5f763e3628af951"
+          "checksumValue": "46e17bb7e4efbd0bd927c692d455b557a1bcf79a9ccc53aeb888b1aa4a58908f"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -2291,11 +2245,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/libpcre2-16.pc",
-      "SPDXID": "SPDXRef-binary-file-123",
+      "SPDXID": "SPDXRef-binary-file-120",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "df104bfe99f365220b918b265e6197656293effa61309b89ee3d44bf58c0c838"
+          "checksumValue": "2d6d44030f37f450b4c62a7099653f61e2bb05c10fff82237b367de10b211ffe"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -2303,23 +2257,35 @@
     },
     {
       "fileName": "./lib/pkgconfig/libpcre2-posix.pc",
-      "SPDXID": "SPDXRef-binary-file-124",
+      "SPDXID": "SPDXRef-binary-file-121",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "a6100ba097560db43f90beb31e3df29617b5da7e865585bf5860d03209552013"
+          "checksumValue": "951889bc79877c19d38af3c8b4dc1f4cceb89c7f8756735e62301dbbe97aa67e"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./tools/pcre2/debug/pcre2-config",
-      "SPDXID": "SPDXRef-binary-file-125",
+      "fileName": "./lib/libpcre2-32.so",
+      "SPDXID": "SPDXRef-binary-file-122",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e88aefe35e3d19f3373323c4f2840978986ea903d3c45d494d687f61045b7b04"
+          "checksumValue": "e480c68efaadc96827d086ca220dfc96417c1f5209fb07c7e1ba345cdf1c2337"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libpcre2-32.so.0.14.0",
+      "SPDXID": "SPDXRef-binary-file-123",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e480c68efaadc96827d086ca220dfc96417c1f5209fb07c7e1ba345cdf1c2337"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -2327,11 +2293,11 @@
     },
     {
       "fileName": "./tools/pcre2/pcre2-config",
-      "SPDXID": "SPDXRef-binary-file-126",
+      "SPDXID": "SPDXRef-binary-file-124",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b57951efad47f9dd7a5036265412e7bac9b09750b1baf35d48e173215fdd8b71"
+          "checksumValue": "cc96c8867aa31e88c292d836cc9fdeb3d067ac4700743e4841c6cf294f88aa47"
         }
       ],
       "licenseConcluded": "NOASSERTION",

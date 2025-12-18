@@ -25,7 +25,7 @@ endmacro()
 ####################################################################################
 include(CMakeFindDependencyMacro)
 
-if(NOT "OFF")
+if(NOT "ON")
     find_dependency(zip CONFIG)
     find_dependency(unofficial-minizip CONFIG)
     find_dependency(pugixml CONFIG)
@@ -41,6 +41,6 @@ include("${CMAKE_CURRENT_LIST_DIR}/assimpTargets.cmake")
 
 set(ASSIMP_ROOT_DIR ${PACKAGE_PREFIX_DIR})
 set(ASSIMP_LIBRARIES assimp::assimp)
-set(ASSIMP_BUILD_SHARED_LIBS OFF)
+set(ASSIMP_BUILD_SHARED_LIBS ON)
 get_property(ASSIMP_INCLUDE_DIRS TARGET assimp::assimp PROPERTY INTERFACE_INCLUDE_DIRECTORIES)
 set(ASSIMP_LIBRARY_DIRS "")

@@ -18,18 +18,22 @@ if(VCPKG_CROSSCOMPILING)
 endif()
 
 set(ENV{ACLOCAL} "aclocal -I \"${CURRENT_INSTALLED_DIR}/share/libgpg-error/aclocal/\"")
+set(ENV{LIBS} "-lpthread")
 vcpkg_make_configure(
     SOURCE_PATH "${SOURCE_PATH}"
     AUTORECONF
     LANGUAGES C ASM
     OPTIONS
         --disable-doc
+        --disable-tests
     OPTIONS_RELEASE
         "GPG_ERROR_CONFIG=${CURRENT_INSTALLED_DIR}/tools/libgpg-error/bin/gpgrt-config gpg-error"
         "GPGRT_CONFIG=${CURRENT_INSTALLED_DIR}/tools/libgpg-error/bin/gpgrt-config"
+        "LIBS=-lpthread"
     OPTIONS_DEBUG
         "GPG_ERROR_CONFIG=${CURRENT_INSTALLED_DIR}/tools/libgpg-error/debug/bin/gpgrt-config gpg-error"
         "GPGRT_CONFIG=${CURRENT_INSTALLED_DIR}/tools/libgpg-error/debug/bin/gpgrt-config"
+        "LIBS=-lpthread"
 )
 
 vcpkg_make_install()

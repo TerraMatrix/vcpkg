@@ -3,19 +3,79 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/netcdf-c-arm64-linux-4.8.1#5-7b0d2b67-9204-416d-b62a-04c0f8b16ad6",
-  "name": "netcdf-c:arm64-linux@4.8.1#5 NONE",
+  "documentNamespace": "https://spdx.org/spdxdocs/netcdf-c-arm64-linux-4.8.1#5-2a50b3e8-29ca-4995-9c22-a96a41cc20df",
+  "name": "netcdf-c:arm64-linux@4.8.1#5 437cfad4263193b2ca7f4f976a7989da545de78abb14168dd02f7238031eb579",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-12-09T02:04:34Z"
+    "created": "2025-12-17T09:48:48Z"
   },
   "relationships": [
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "GENERATES",
       "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-3"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-3",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-4"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-5"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-6"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-7"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-8"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-9"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-10"
     },
     {
       "spdxElementId": "SPDXRef-binary",
@@ -106,21 +166,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-17"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-18"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-19"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-20"
     }
   ],
   "packages": [
@@ -139,58 +184,168 @@
     {
       "name": "netcdf-c:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "NONE",
+      "versionInfo": "437cfad4263193b2ca7f4f976a7989da545de78abb14168dd02f7238031eb579",
       "downloadLocation": "NONE",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-0",
+      "name": "Unidata/netcdf-c",
+      "downloadLocation": "git+https://github.com/Unidata/netcdf-c@cd6173f472b778fa0e558982c59f7183aa5b8e47",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "e965b9c865f31abcd0ae045cb709a41710e72bcf5bd237972cd62688f0f099f1b12be316a448d22315b1c73eb99fae3ea38072e9a3646a4f70ba42507d82f537"
+        }
+      ]
     }
   ],
   "files": [
+    {
+      "fileName": "./use_targets.patch",
+      "SPDXID": "SPDXRef-port-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "113927e2a73729de08d92c03586e9d464eff18aad8f2ccea3cc582c52b5c2cfa"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-pkgconfig.patch",
+      "SPDXID": "SPDXRef-port-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "47f59b1dfb29ae3724d2fc63f32bcf6fd1767b2fdaa2b7fbbbcbb3a15d30299c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-manpage-msys.patch",
+      "SPDXID": "SPDXRef-port-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "78ff7a119df33f4e89e472994267ab9840db180bc365c808a5b9b3a7f1093156"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c003b5c2063973e8ddf0e5506c4f32e3a50e22b263dcef1353e8386ce80f9192"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-dependency-libmath.patch",
+      "SPDXID": "SPDXRef-port-file-4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f82b974b3fb717211bb6d85797bf38b9f25aaf1233b5917a4a438e89b233e9a6"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-dependency-libzip.patch",
+      "SPDXID": "SPDXRef-port-file-5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "210164c3b594f02fe4baf9caa0174fcebc2dcb5fd288a929ecb10ed10707871a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-linkage-error.patch",
+      "SPDXID": "SPDXRef-port-file-6",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "022e4a705711a6b351243c8a12d30e46586b860759ddf0d231a9146ff05a335c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./no-install-deps.patch",
+      "SPDXID": "SPDXRef-port-file-7",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4d82359cb402effdd5307439d14919db40d143106395b21228400660e69d29db"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-dependency-mpi.patch",
+      "SPDXID": "SPDXRef-port-file-8",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "40e89984dca496c4a76d2716a1df4d54a624e1d5733c0b091c71725d3f23d224"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-9",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "89c01a4365feabb61402d425f786e6cdbffce1e86dd524114a8fdc48a3bbefe5"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-dependency-zlib.patch",
+      "SPDXID": "SPDXRef-port-file-10",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "106ecac70c5882d9dc9c6eb5d43c19ad446f38347e2c00c4530c67ad153455f2"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
     {
       "fileName": "./BUILD_INFO",
       "SPDXID": "SPDXRef-binary-file-0",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libnetcdf.settings",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "baab17422917ff9d71d7c3368827aa6c3f159e3e156f20fd9b0a10a2d854840d"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libnetcdf.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "3dc6d82fd7c12c5942fad94b915b7781d01c0be88ff21a62c045416346b16e33"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/netcdf.pc",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "1183a0540f294b5ed9b9d801909e1fcb188994d8d509c33b87fbffa85473c47b"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -198,7 +353,7 @@
     },
     {
       "fileName": "./share/netcdf-c/copyright",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -210,7 +365,7 @@
     },
     {
       "fileName": "./share/man/man3/netcdf.3",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -222,23 +377,11 @@
     },
     {
       "fileName": "./share/netcdf/netCDFTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f5b7739d96875e977aabd5a6a6f1d0e906da00744e2cc4df800dcf61fef6b064"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/netcdf/netCDFTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "6a062d0800e43c52bdcb60fc64b53726af341ba2ffbd8302a644b5bda154e82d"
+          "checksumValue": "9d480bd454a4388e7cb85144cbdfceb9ac2b72e59cfc9a037f07eb97ed899cbc"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -246,11 +389,11 @@
     },
     {
       "fileName": "./share/netcdf/netCDFConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "632d3ac4eccfdf87876965c04d421d520fc4170947912b37e1f6cbbffe20ae96"
+          "checksumValue": "92fc875b95742e44d532328471b357881de59e6855f9beeab64e69e1953ef98e"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -258,11 +401,11 @@
     },
     {
       "fileName": "./share/netcdf/netCDFTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "092267ebe206c4ae4bff5e903b5b973df85a2ac801bb5d093f98e38fab27bcb8"
+          "checksumValue": "693e70b50a4ee76c459061f00201daba2b15f143fdf1863121da26a5e5980957"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -270,7 +413,7 @@
     },
     {
       "fileName": "./share/netcdf/netCDFConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -282,7 +425,7 @@
     },
     {
       "fileName": "./include/netcdf_aux.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -294,7 +437,7 @@
     },
     {
       "fileName": "./include/netcdf_filter.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -306,7 +449,7 @@
     },
     {
       "fileName": "./include/netcdf_filter_build.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -318,7 +461,7 @@
     },
     {
       "fileName": "./include/netcdf_mem.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -330,7 +473,7 @@
     },
     {
       "fileName": "./include/netcdf.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -342,11 +485,11 @@
     },
     {
       "fileName": "./include/netcdf_meta.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "6bfc0955b9616babe1a7e36a0a51a49b59670c7aa8e56517089a489e8c11db35"
+          "checksumValue": "42162d9bafc2e3af8e51ef656cdfddf6111d29b06ae00e557ebc7ae827f6e8f4"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -354,7 +497,7 @@
     },
     {
       "fileName": "./include/netcdf_dispatch.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -365,24 +508,36 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libnetcdf.settings",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "fileName": "./lib/libnetcdf.so",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "56d3d38ef4f6bb619f2280de7d0ceca032e438abbe88857b2f7bc8531e05f14b"
+          "checksumValue": "7ef229a23cd51c8f2be87fbf753d4fcccd587126cd6e2ba49ce51433f2933342"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libnetcdf.a",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "fileName": "./lib/libnetcdf.settings",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "1d62dbbf74355ccd684d61cb3816ba2e90bc431019d50a51abd726bcb4fb6b24"
+          "checksumValue": "a372a642c42c8c63f570415aafbc3ff16d05afbbf5cd6e61a4638382835db217"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libnetcdf.so.19",
+      "SPDXID": "SPDXRef-binary-file-16",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7ef229a23cd51c8f2be87fbf753d4fcccd587126cd6e2ba49ce51433f2933342"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -390,11 +545,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/netcdf.pc",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "6a8779c5de2f01d0e63af7530a7b0ca0d6582fbf591b0a034630c2bd4d018283"
+          "checksumValue": "c6d4161edd35fe5064ba8ec0dc5d65d8a0e4d582c75aa2aab38221065014caec"
         }
       ],
       "licenseConcluded": "NOASSERTION",

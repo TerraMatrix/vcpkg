@@ -55,10 +55,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::prg_exec_monitor
-add_library(Boost::prg_exec_monitor STATIC IMPORTED)
+add_library(Boost::prg_exec_monitor SHARED IMPORTED)
 
 set_target_properties(Boost::prg_exec_monitor PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_TEST_NO_LIB;BOOST_TEST_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_TEST_NO_LIB;BOOST_TEST_DYN_LINK"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "Boost::algorithm;Boost::assert;Boost::bind;Boost::config;Boost::core;Boost::detail;Boost::describe;Boost::exception;Boost::function;Boost::io;Boost::iterator;Boost::mpl;Boost::numeric_conversion;Boost::optional;Boost::preprocessor;Boost::smart_ptr;Boost::static_assert;Boost::type_traits;Boost::utility"
 )

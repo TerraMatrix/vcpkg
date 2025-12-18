@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/imath-arm64-linux-3.2.2-26b07aea-0147-4b67-aa5a-1bb00146ad5b",
-  "name": "imath:arm64-linux@3.2.2 94c951a3e7a7b968281e7146fb37ae2963a0accecc0593f7e52d0d9684a20f3a",
+  "documentNamespace": "https://spdx.org/spdxdocs/imath-arm64-linux-3.2.2-a0ceee56-bf09-4114-88aa-9485bca9cf29",
+  "name": "imath:arm64-linux@3.2.2 54f8e229ad9ef3fde7b179353660142dee5454f1344b9bbec88116c300fb3d95",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T02:04:53Z"
+    "created": "2025-12-16T10:30:27Z"
   },
   "relationships": [
     {
@@ -256,11 +256,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-44"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-45"
     }
   ],
   "packages": [
@@ -279,7 +274,7 @@
     {
       "name": "imath:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "94c951a3e7a7b968281e7146fb37ae2963a0accecc0593f7e52d0d9684a20f3a",
+      "versionInfo": "54f8e229ad9ef3fde7b179353660142dee5454f1344b9bbec88116c300fb3d95",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -332,31 +327,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libImath-3_2_d.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "c88750c272654ba8328099345494909f4e4ff14311942154ac345a5eef3129e0"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/Imath.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "1b638f6e1ce3d2204c16b63da1eceefcd899a944c3eff285f394134edc248201"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -364,7 +335,7 @@
     },
     {
       "fileName": "./share/imath/copyright",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -375,24 +346,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/imath/ImathTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "0d37b6c46b9a3824e174713e1dd152efc8b99eed15e48a4cafac52d6c7200576"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/imath/ImathTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "4989b05ab8cf92cd63ae77c8b98b5764e062d88f1dfd4eeeef6022ba14fb0ff8"
+          "checksumValue": "64fd3cd79be62a1dd88b1e8ce20424a034fe0e576689d17dfcb755f31f5750a4"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -400,7 +359,7 @@
     },
     {
       "fileName": "./share/imath/ImathConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -412,11 +371,11 @@
     },
     {
       "fileName": "./share/imath/ImathTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "0b1de81fe8fee96a0f86bf84ad6b85e13f49876e0ea27c4c441e0387dc6c44b1"
+          "checksumValue": "89ed5d0c95a125ee6a6bc58557cc46c7f6bf494bbc7128aca7123a8fb42ef427"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -424,7 +383,7 @@
     },
     {
       "fileName": "./share/imath/ImathConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -436,7 +395,7 @@
     },
     {
       "fileName": "./include/Imath/ImathGL.h",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -448,7 +407,7 @@
     },
     {
       "fileName": "./include/Imath/ImathFrustum.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -460,7 +419,7 @@
     },
     {
       "fileName": "./include/Imath/ImathInterval.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -472,7 +431,7 @@
     },
     {
       "fileName": "./include/Imath/ImathLineAlgo.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -484,7 +443,7 @@
     },
     {
       "fileName": "./include/Imath/ImathNamespace.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -496,7 +455,7 @@
     },
     {
       "fileName": "./include/Imath/halfFunction.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -508,7 +467,7 @@
     },
     {
       "fileName": "./include/Imath/ImathPlatform.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -520,7 +479,7 @@
     },
     {
       "fileName": "./include/Imath/ImathVec.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -532,7 +491,7 @@
     },
     {
       "fileName": "./include/Imath/ImathPlane.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -544,7 +503,7 @@
     },
     {
       "fileName": "./include/Imath/ImathQuat.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -556,7 +515,7 @@
     },
     {
       "fileName": "./include/Imath/halfLimits.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -568,7 +527,7 @@
     },
     {
       "fileName": "./include/Imath/ImathEuler.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -580,7 +539,7 @@
     },
     {
       "fileName": "./include/Imath/ImathMatrix.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -592,7 +551,7 @@
     },
     {
       "fileName": "./include/Imath/ImathColor.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -604,7 +563,7 @@
     },
     {
       "fileName": "./include/Imath/ImathShear.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -616,7 +575,7 @@
     },
     {
       "fileName": "./include/Imath/ImathMatrixAlgo.h",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -628,7 +587,7 @@
     },
     {
       "fileName": "./include/Imath/half.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -640,7 +599,7 @@
     },
     {
       "fileName": "./include/Imath/ImathExport.h",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -652,7 +611,7 @@
     },
     {
       "fileName": "./include/Imath/ImathTypeTraits.h",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -664,7 +623,7 @@
     },
     {
       "fileName": "./include/Imath/ImathConfig.h",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -676,7 +635,7 @@
     },
     {
       "fileName": "./include/Imath/ImathFun.h",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -688,7 +647,7 @@
     },
     {
       "fileName": "./include/Imath/ImathInt64.h",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -700,7 +659,7 @@
     },
     {
       "fileName": "./include/Imath/ImathBoxAlgo.h",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -712,7 +671,7 @@
     },
     {
       "fileName": "./include/Imath/ImathRoots.h",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -724,7 +683,7 @@
     },
     {
       "fileName": "./include/Imath/ImathFrustumTest.h",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -736,7 +695,7 @@
     },
     {
       "fileName": "./include/Imath/ImathBox.h",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -748,7 +707,7 @@
     },
     {
       "fileName": "./include/Imath/ImathRandom.h",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -760,7 +719,7 @@
     },
     {
       "fileName": "./include/Imath/ImathGLU.h",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -772,7 +731,7 @@
     },
     {
       "fileName": "./include/Imath/ImathLine.h",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -784,7 +743,7 @@
     },
     {
       "fileName": "./include/Imath/ImathMath.h",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -796,7 +755,7 @@
     },
     {
       "fileName": "./include/Imath/ImathFrame.h",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -808,7 +767,7 @@
     },
     {
       "fileName": "./include/Imath/ImathSphere.h",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -820,7 +779,7 @@
     },
     {
       "fileName": "./include/Imath/ImathForward.h",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -832,7 +791,7 @@
     },
     {
       "fileName": "./include/Imath/ImathVecAlgo.h",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -844,7 +803,7 @@
     },
     {
       "fileName": "./include/Imath/ImathColorAlgo.h",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -855,12 +814,36 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libImath-3_2.a",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "fileName": "./lib/libImath-3_2.so.30",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "9e70b2da1e601caacec507ac43d18f63ef9658e0f11c14a587e4e9c2796e8a10"
+          "checksumValue": "1d602601f4c0758d44c4a8fb72bf9e628d03c20d3ef2f25bc58decf9ac1ae936"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libImath-3_2.so.30.3.2.2",
+      "SPDXID": "SPDXRef-binary-file-42",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1d602601f4c0758d44c4a8fb72bf9e628d03c20d3ef2f25bc58decf9ac1ae936"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libImath-3_2.so",
+      "SPDXID": "SPDXRef-binary-file-43",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1d602601f4c0758d44c4a8fb72bf9e628d03c20d3ef2f25bc58decf9ac1ae936"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -868,11 +851,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/Imath.pc",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "9231eaf74a2011a0145ee856ccdd1960cf799727b0be31519849f5ec5d541281"
+          "checksumValue": "f410426c5d2154596b8dbb2ff537d71e68817f4367680101b73416e1858b87de"
         }
       ],
       "licenseConcluded": "NOASSERTION",

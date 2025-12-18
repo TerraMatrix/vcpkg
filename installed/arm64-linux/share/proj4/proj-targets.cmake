@@ -55,17 +55,11 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target PROJ::proj
-add_library(PROJ::proj STATIC IMPORTED)
+add_library(PROJ::proj SHARED IMPORTED)
 
 set_target_properties(PROJ::proj PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "PROJ_DLL="
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:-lm>;\$<LINK_ONLY:-ldl>;\$<LINK_ONLY:-pthread>;\$<LINK_ONLY:unofficial::sqlite3::sqlite3>;\$<LINK_ONLY:>;\$<LINK_ONLY:TIFF::TIFF>"
 )
-
-if(CMAKE_VERSION VERSION_LESS 2.8.12)
-  message(FATAL_ERROR "This file relies on consumers using CMake 2.8.12 or greater.")
-endif()
 
 # Load information for each installed configuration.
 file(GLOB _cmake_config_files "${CMAKE_CURRENT_LIST_DIR}/proj-targets-*.cmake")

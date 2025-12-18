@@ -55,7 +55,7 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target WebP::sharpyuv
-add_library(WebP::sharpyuv STATIC IMPORTED)
+add_library(WebP::sharpyuv SHARED IMPORTED)
 
 set_target_properties(WebP::sharpyuv PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include/webp"
@@ -63,7 +63,7 @@ set_target_properties(WebP::sharpyuv PROPERTIES
 )
 
 # Create imported target WebP::webpdecoder
-add_library(WebP::webpdecoder STATIC IMPORTED)
+add_library(WebP::webpdecoder SHARED IMPORTED)
 
 set_target_properties(WebP::webpdecoder PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include"
@@ -71,7 +71,7 @@ set_target_properties(WebP::webpdecoder PROPERTIES
 )
 
 # Create imported target WebP::webp
-add_library(WebP::webp STATIC IMPORTED)
+add_library(WebP::webp SHARED IMPORTED)
 
 set_target_properties(WebP::webp PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include"
@@ -79,7 +79,7 @@ set_target_properties(WebP::webp PROPERTIES
 )
 
 # Create imported target WebP::webpdemux
-add_library(WebP::webpdemux STATIC IMPORTED)
+add_library(WebP::webpdemux SHARED IMPORTED)
 
 set_target_properties(WebP::webpdemux PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include"
@@ -87,7 +87,7 @@ set_target_properties(WebP::webpdemux PROPERTIES
 )
 
 # Create imported target WebP::libwebpmux
-add_library(WebP::libwebpmux STATIC IMPORTED)
+add_library(WebP::libwebpmux SHARED IMPORTED)
 
 set_target_properties(WebP::libwebpmux PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"

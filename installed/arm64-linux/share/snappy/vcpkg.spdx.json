@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/snappy-arm64-linux-1.2.2#1-ef5ec128-746a-49ca-997f-8e4ade515373",
-  "name": "snappy:arm64-linux@1.2.2#1 6e260690dd25106528972c3f12317ac179ea7d069dbc4fce6018fd53e0484db1",
+  "documentNamespace": "https://spdx.org/spdxdocs/snappy-arm64-linux-1.2.2#1-7aba68c6-aa9d-4497-a550-81f1eb87b68b",
+  "name": "snappy:arm64-linux@1.2.2#1 874fe5b2e675c942ded14883607a231e51f582f28dee413dfc88a3b64f42813a",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-26T13:01:26Z"
+    "created": "2025-12-16T12:53:20Z"
   },
   "relationships": [
     {
@@ -131,11 +131,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-14"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-15"
     }
   ],
   "packages": [
@@ -154,7 +149,7 @@
     {
       "name": "snappy:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "6e260690dd25106528972c3f12317ac179ea7d069dbc4fce6018fd53e0484db1",
+      "versionInfo": "874fe5b2e675c942ded14883607a231e51f582f28dee413dfc88a3b64f42813a",
       "downloadLocation": "NONE",
       "licenseConcluded": "LicenseRef-vcpkg-null",
       "licenseDeclared": "NOASSERTION",
@@ -267,31 +262,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libsnappy.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "fbd84ff06f5cc6d7373f2c8b0f0d1fc293d896ea05d0a0e6182c45bcc8434ba8"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/snappy.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "9b44c69a204983e9a8e68733d24452902c412bc4fdcbf695b4c7149be2b1432a"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -299,23 +270,11 @@
     },
     {
       "fileName": "./share/snappy/SnappyTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "90c47c63ac16dee7bd66957475a44ba18b353cbecd75df90e0f945575f6d5def"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./share/snappy/SnappyTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "e81f2963e50ddb797b889515a10199f46a85df8a9e8cd8ae3b2efc4dcb10f06d"
+          "checksumValue": "42499c87492abf160bdcacdc038a95f5c03e39565099a6b21bafa145587e80fa"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -323,7 +282,7 @@
     },
     {
       "fileName": "./share/snappy/copyright",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -335,7 +294,7 @@
     },
     {
       "fileName": "./share/snappy/SnappyConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -347,11 +306,11 @@
     },
     {
       "fileName": "./share/snappy/SnappyTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f8ec1d41c125ea07665eacdb5c742d0fddbc3dbd6aef682b5e882e247a3f2b3e"
+          "checksumValue": "5b50a2e05a5ae570ea07944d8bee75a94b2c2e8650e70af7175f3a632a9bb59f"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -359,7 +318,7 @@
     },
     {
       "fileName": "./share/snappy/usage",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -371,7 +330,7 @@
     },
     {
       "fileName": "./share/snappy/SnappyConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -383,7 +342,7 @@
     },
     {
       "fileName": "./include/snappy-stubs-public.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -395,7 +354,7 @@
     },
     {
       "fileName": "./include/snappy.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -407,7 +366,7 @@
     },
     {
       "fileName": "./include/snappy-c.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -419,7 +378,7 @@
     },
     {
       "fileName": "./include/snappy-sinksource.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -430,12 +389,36 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libsnappy.a",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "fileName": "./lib/libsnappy.so.1",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "df6630c3ddd39271a0a1a60eb3b74f9c393587fc0ca6fba73ed62ad75e7c1a93"
+          "checksumValue": "27e15fab3b76c0ab9ac02bb065e5a82e2b3beb560b45625c4d6803e88578e605"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libsnappy.so.1.2.2",
+      "SPDXID": "SPDXRef-binary-file-12",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "27e15fab3b76c0ab9ac02bb065e5a82e2b3beb560b45625c4d6803e88578e605"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libsnappy.so",
+      "SPDXID": "SPDXRef-binary-file-13",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "27e15fab3b76c0ab9ac02bb065e5a82e2b3beb560b45625c4d6803e88578e605"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -443,11 +426,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/snappy.pc",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "6a2bd9b54c1d3e4fbf73d4a311e4d3e3a2b1fbf75247f914669c3368dd63e558"
+          "checksumValue": "d19fef2d4dd6d21399d524f8486500998b4dd5bb38a2f77deb0861a91e634da4"
         }
       ],
       "licenseConcluded": "NOASSERTION",

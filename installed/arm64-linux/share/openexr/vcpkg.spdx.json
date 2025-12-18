@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/openexr-arm64-linux-3.3.5-4e63dee2-262f-4443-b97d-5098b390a10c",
-  "name": "openexr:arm64-linux@3.3.5 fa375c2837c2d3319f0e765760d32906e76a03d563c9baa525a49cece0b54c06",
+  "documentNamespace": "https://spdx.org/spdxdocs/openexr-arm64-linux-3.3.5-d4521679-2227-4731-a804-a9db6a27c3a9",
+  "name": "openexr:arm64-linux@3.3.5 a183098a68de8994be82f0330eb7eb4376cdfe8d2027ba2b73d11248d6092359",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T02:08:02Z"
+    "created": "2025-12-17T01:31:40Z"
   },
   "relationships": [
     {
@@ -866,6 +866,46 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-165"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-166"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-167"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-168"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-169"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-170"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-171"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-172"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-173"
     }
   ],
   "packages": [
@@ -884,7 +924,7 @@
     {
       "name": "openexr:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "fa375c2837c2d3319f0e765760d32906e76a03d563c9baa525a49cece0b54c06",
+      "versionInfo": "a183098a68de8994be82f0330eb7eb4376cdfe8d2027ba2b73d11248d6092359",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -949,79 +989,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libOpenEXR-3_3_d.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "628a31bdd80c69f1642233d59f21b75a4353457993bc2dffcbd78ddcf04da808"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libOpenEXRUtil-3_3_d.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "0699845740a4fb10c636f14cde3579f214fec6c23a0bb300cac57e5db296c893"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libIlmThread-3_3_d.a",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "49d8ebfae5da561bdf8397edd61c5860aea46150873e7fafc20bd8fa2d791c88"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libIex-3_3_d.a",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "6e8bdb7b206f8c4c0c1f9ccf176909be2e18e17d2b836b31bc806f9b187ae2ef"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/OpenEXR.pc",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "29aaf6b0e2a73caa03183ceeebfa80ff5b2ac4681fa77cb3b309aa034efb30e6"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libOpenEXRCore-3_3_d.a",
-      "SPDXID": "SPDXRef-binary-file-6",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "02b582720c1414aec55cba0a608d20304cec435d638e4eabb4eec5a8ffb50e1c"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1029,7 +997,7 @@
     },
     {
       "fileName": "./share/openexr/OpenEXRConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1041,7 +1009,7 @@
     },
     {
       "fileName": "./share/openexr/copyright",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1053,11 +1021,11 @@
     },
     {
       "fileName": "./share/openexr/OpenEXRTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "77480a26430fb8c5fd7ee4106ea7319200bb39c05c5a2befb23640c12e9b5bfd"
+          "checksumValue": "f1d1cf82d92dad9b6e2926ba6eac2451854a354b3fc5476484b1a84a04c269c0"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1065,7 +1033,7 @@
     },
     {
       "fileName": "./share/openexr/OpenEXRConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1076,24 +1044,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/openexr/OpenEXRTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-11",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "374d367c0fc408734325da720120011a5791b54e57eaee7e8fc2e5eb6edca532"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/openexr/OpenEXRTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "33acf18c86a266bfe58dab369f0f89f828ac77e5431f939aaf6bad3c340d4e7f"
+          "checksumValue": "37865234aac00deb23e60275ae00f10758d74cc5bbd458b507d4628167e77930"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1101,7 +1057,7 @@
     },
     {
       "fileName": "./share/openexr/usage",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1113,7 +1069,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfLut.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1125,7 +1081,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfTiledInputFile.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1137,7 +1093,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IexThrowErrnoExc.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1149,7 +1105,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfOutputPart.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1161,7 +1117,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfStringVectorAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1173,7 +1129,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IexExport.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1185,7 +1141,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IexMacros.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1197,7 +1153,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfRgbaYca.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1209,7 +1165,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfDeepImageState.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1221,7 +1177,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfKeyCodeAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1233,7 +1189,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfDeepScanLineOutputFile.h",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1245,7 +1201,7 @@
     },
     {
       "fileName": "./include/OpenEXR/openexr_base.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1257,7 +1213,7 @@
     },
     {
       "fileName": "./include/OpenEXR/openexr_encode.h",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1269,7 +1225,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfExport.h",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1281,7 +1237,7 @@
     },
     {
       "fileName": "./include/OpenEXR/openexr_errors.h",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1293,7 +1249,7 @@
     },
     {
       "fileName": "./include/OpenEXR/openexr.h",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1305,7 +1261,7 @@
     },
     {
       "fileName": "./include/OpenEXR/openexr_compression.h",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1317,7 +1273,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfMatrixAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1329,7 +1285,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfEnvmapAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1341,7 +1297,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfDeepImageChannel.h",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1353,7 +1309,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfFlatImageIO.h",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1365,7 +1321,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfUtilExport.h",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1377,7 +1333,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfKeyCode.h",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1389,7 +1345,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfTiledInputPart.h",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1401,7 +1357,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IexMathIeeeExc.h",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1413,7 +1369,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfCRgbaFile.h",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1425,7 +1381,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfHeader.h",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1437,7 +1393,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfImageIO.h",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1449,7 +1405,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfDeepScanLineOutputPart.h",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1461,7 +1417,7 @@
     },
     {
       "fileName": "./include/OpenEXR/OpenEXRConfig.h",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1473,7 +1429,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfFramesPerSecond.h",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1485,7 +1441,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfLineOrderAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1497,7 +1453,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfDeepTiledOutputPart.h",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1509,7 +1465,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfIntAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1521,7 +1477,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfChromaticitiesAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1533,7 +1489,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfIO.h",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1545,7 +1501,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfDeepImage.h",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1557,7 +1513,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfImageChannel.h",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1569,7 +1525,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IexConfig.h",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1581,7 +1537,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfRgba.h",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1593,7 +1549,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfGenericInputFile.h",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1605,7 +1561,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfFlatImageLevel.h",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1617,7 +1573,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfDoubleAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1629,7 +1585,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfChromaticities.h",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1641,7 +1597,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IlmThreadExport.h",
-      "SPDXID": "SPDXRef-binary-file-58",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1653,7 +1609,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfPreviewImageAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-59",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1665,7 +1621,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfImageDataWindow.h",
-      "SPDXID": "SPDXRef-binary-file-60",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1677,7 +1633,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfPartHelper.h",
-      "SPDXID": "SPDXRef-binary-file-61",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1689,7 +1645,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfOutputFile.h",
-      "SPDXID": "SPDXRef-binary-file-62",
+      "SPDXID": "SPDXRef-binary-file-55",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1701,7 +1657,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfFloatVectorAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-63",
+      "SPDXID": "SPDXRef-binary-file-56",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1713,7 +1669,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfDeepImageIO.h",
-      "SPDXID": "SPDXRef-binary-file-64",
+      "SPDXID": "SPDXRef-binary-file-57",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1725,7 +1681,7 @@
     },
     {
       "fileName": "./include/OpenEXR/openexr_std_attr.h",
-      "SPDXID": "SPDXRef-binary-file-65",
+      "SPDXID": "SPDXRef-binary-file-58",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1737,7 +1693,7 @@
     },
     {
       "fileName": "./include/OpenEXR/openexr_config.h",
-      "SPDXID": "SPDXRef-binary-file-66",
+      "SPDXID": "SPDXRef-binary-file-59",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1749,7 +1705,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfArray.h",
-      "SPDXID": "SPDXRef-binary-file-67",
+      "SPDXID": "SPDXRef-binary-file-60",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1761,7 +1717,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IexErrnoExc.h",
-      "SPDXID": "SPDXRef-binary-file-68",
+      "SPDXID": "SPDXRef-binary-file-61",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1773,7 +1729,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IlmThreadPool.h",
-      "SPDXID": "SPDXRef-binary-file-69",
+      "SPDXID": "SPDXRef-binary-file-62",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1785,7 +1741,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfGenericOutputFile.h",
-      "SPDXID": "SPDXRef-binary-file-70",
+      "SPDXID": "SPDXRef-binary-file-63",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1797,7 +1753,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfCompression.h",
-      "SPDXID": "SPDXRef-binary-file-71",
+      "SPDXID": "SPDXRef-binary-file-64",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1809,7 +1765,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IexForward.h",
-      "SPDXID": "SPDXRef-binary-file-72",
+      "SPDXID": "SPDXRef-binary-file-65",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1821,7 +1777,7 @@
     },
     {
       "fileName": "./include/OpenEXR/openexr_version.h",
-      "SPDXID": "SPDXRef-binary-file-73",
+      "SPDXID": "SPDXRef-binary-file-66",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1833,7 +1789,7 @@
     },
     {
       "fileName": "./include/OpenEXR/openexr_debug.h",
-      "SPDXID": "SPDXRef-binary-file-74",
+      "SPDXID": "SPDXRef-binary-file-67",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1845,7 +1801,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfFlatImage.h",
-      "SPDXID": "SPDXRef-binary-file-75",
+      "SPDXID": "SPDXRef-binary-file-68",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1857,7 +1813,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfMultiPartOutputFile.h",
-      "SPDXID": "SPDXRef-binary-file-76",
+      "SPDXID": "SPDXRef-binary-file-69",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1869,7 +1825,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfOpaqueAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-77",
+      "SPDXID": "SPDXRef-binary-file-70",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1881,7 +1837,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfDeepCompositing.h",
-      "SPDXID": "SPDXRef-binary-file-78",
+      "SPDXID": "SPDXRef-binary-file-71",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1893,7 +1849,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfTileDescription.h",
-      "SPDXID": "SPDXRef-binary-file-79",
+      "SPDXID": "SPDXRef-binary-file-72",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1905,7 +1861,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfTimeCode.h",
-      "SPDXID": "SPDXRef-binary-file-80",
+      "SPDXID": "SPDXRef-binary-file-73",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1917,7 +1873,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfDeepTiledInputPart.h",
-      "SPDXID": "SPDXRef-binary-file-81",
+      "SPDXID": "SPDXRef-binary-file-74",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1929,7 +1885,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfSampleCountChannel.h",
-      "SPDXID": "SPDXRef-binary-file-82",
+      "SPDXID": "SPDXRef-binary-file-75",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1941,7 +1897,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-83",
+      "SPDXID": "SPDXRef-binary-file-76",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1953,7 +1909,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfEnvmap.h",
-      "SPDXID": "SPDXRef-binary-file-84",
+      "SPDXID": "SPDXRef-binary-file-77",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1965,7 +1921,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfLineOrder.h",
-      "SPDXID": "SPDXRef-binary-file-85",
+      "SPDXID": "SPDXRef-binary-file-78",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1977,7 +1933,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfDeepScanLineInputPart.h",
-      "SPDXID": "SPDXRef-binary-file-86",
+      "SPDXID": "SPDXRef-binary-file-79",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1989,7 +1945,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfFrameBuffer.h",
-      "SPDXID": "SPDXRef-binary-file-87",
+      "SPDXID": "SPDXRef-binary-file-80",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2001,7 +1957,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfTimeCodeAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-88",
+      "SPDXID": "SPDXRef-binary-file-81",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2013,7 +1969,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfFloatAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-89",
+      "SPDXID": "SPDXRef-binary-file-82",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2025,7 +1981,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfMultiView.h",
-      "SPDXID": "SPDXRef-binary-file-90",
+      "SPDXID": "SPDXRef-binary-file-83",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2037,7 +1993,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfRational.h",
-      "SPDXID": "SPDXRef-binary-file-91",
+      "SPDXID": "SPDXRef-binary-file-84",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2049,7 +2005,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IlmThreadSemaphore.h",
-      "SPDXID": "SPDXRef-binary-file-92",
+      "SPDXID": "SPDXRef-binary-file-85",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2061,7 +2017,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfIDManifest.h",
-      "SPDXID": "SPDXRef-binary-file-93",
+      "SPDXID": "SPDXRef-binary-file-86",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2073,7 +2029,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfImageLevel.h",
-      "SPDXID": "SPDXRef-binary-file-94",
+      "SPDXID": "SPDXRef-binary-file-87",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2085,7 +2041,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IexNamespace.h",
-      "SPDXID": "SPDXRef-binary-file-95",
+      "SPDXID": "SPDXRef-binary-file-88",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2097,7 +2053,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfAcesFile.h",
-      "SPDXID": "SPDXRef-binary-file-96",
+      "SPDXID": "SPDXRef-binary-file-89",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2109,7 +2065,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfThreading.h",
-      "SPDXID": "SPDXRef-binary-file-97",
+      "SPDXID": "SPDXRef-binary-file-90",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2121,7 +2077,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfDeepImageLevel.h",
-      "SPDXID": "SPDXRef-binary-file-98",
+      "SPDXID": "SPDXRef-binary-file-91",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2133,7 +2089,7 @@
     },
     {
       "fileName": "./include/OpenEXR/openexr_context.h",
-      "SPDXID": "SPDXRef-binary-file-99",
+      "SPDXID": "SPDXRef-binary-file-92",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2145,7 +2101,7 @@
     },
     {
       "fileName": "./include/OpenEXR/openexr_decode.h",
-      "SPDXID": "SPDXRef-binary-file-100",
+      "SPDXID": "SPDXRef-binary-file-93",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2157,7 +2113,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfInputPart.h",
-      "SPDXID": "SPDXRef-binary-file-101",
+      "SPDXID": "SPDXRef-binary-file-94",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2169,7 +2125,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IlmThreadMutex.h",
-      "SPDXID": "SPDXRef-binary-file-102",
+      "SPDXID": "SPDXRef-binary-file-95",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2181,7 +2137,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfDeepTiledOutputFile.h",
-      "SPDXID": "SPDXRef-binary-file-103",
+      "SPDXID": "SPDXRef-binary-file-96",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2193,7 +2149,7 @@
     },
     {
       "fileName": "./include/OpenEXR/Iex.h",
-      "SPDXID": "SPDXRef-binary-file-104",
+      "SPDXID": "SPDXRef-binary-file-97",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2205,7 +2161,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfTiledOutputPart.h",
-      "SPDXID": "SPDXRef-binary-file-105",
+      "SPDXID": "SPDXRef-binary-file-98",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2217,7 +2173,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfContext.h",
-      "SPDXID": "SPDXRef-binary-file-106",
+      "SPDXID": "SPDXRef-binary-file-99",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2229,7 +2185,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfVersion.h",
-      "SPDXID": "SPDXRef-binary-file-107",
+      "SPDXID": "SPDXRef-binary-file-100",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2241,7 +2197,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfWav.h",
-      "SPDXID": "SPDXRef-binary-file-108",
+      "SPDXID": "SPDXRef-binary-file-101",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2253,7 +2209,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfStdIO.h",
-      "SPDXID": "SPDXRef-binary-file-109",
+      "SPDXID": "SPDXRef-binary-file-102",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2265,7 +2221,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfImageChannelRenaming.h",
-      "SPDXID": "SPDXRef-binary-file-110",
+      "SPDXID": "SPDXRef-binary-file-103",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2277,7 +2233,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfTileDescriptionAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-111",
+      "SPDXID": "SPDXRef-binary-file-104",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2289,7 +2245,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfMisc.h",
-      "SPDXID": "SPDXRef-binary-file-112",
+      "SPDXID": "SPDXRef-binary-file-105",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2301,7 +2257,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfHuf.h",
-      "SPDXID": "SPDXRef-binary-file-113",
+      "SPDXID": "SPDXRef-binary-file-106",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2313,7 +2269,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfRationalAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-114",
+      "SPDXID": "SPDXRef-binary-file-107",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2325,7 +2281,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfDeepScanLineInputFile.h",
-      "SPDXID": "SPDXRef-binary-file-115",
+      "SPDXID": "SPDXRef-binary-file-108",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2337,7 +2293,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfDeepFrameBuffer.h",
-      "SPDXID": "SPDXRef-binary-file-116",
+      "SPDXID": "SPDXRef-binary-file-109",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2349,7 +2305,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfPixelType.h",
-      "SPDXID": "SPDXRef-binary-file-117",
+      "SPDXID": "SPDXRef-binary-file-110",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2361,7 +2317,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfConvert.h",
-      "SPDXID": "SPDXRef-binary-file-118",
+      "SPDXID": "SPDXRef-binary-file-111",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2373,7 +2329,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfCompressionAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-119",
+      "SPDXID": "SPDXRef-binary-file-112",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2385,7 +2341,7 @@
     },
     {
       "fileName": "./include/OpenEXR/openexr_attr.h",
-      "SPDXID": "SPDXRef-binary-file-120",
+      "SPDXID": "SPDXRef-binary-file-113",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2397,7 +2353,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfVecAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-121",
+      "SPDXID": "SPDXRef-binary-file-114",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2409,7 +2365,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IexMathExc.h",
-      "SPDXID": "SPDXRef-binary-file-122",
+      "SPDXID": "SPDXRef-binary-file-115",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2421,7 +2377,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfForward.h",
-      "SPDXID": "SPDXRef-binary-file-123",
+      "SPDXID": "SPDXRef-binary-file-116",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2433,7 +2389,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfName.h",
-      "SPDXID": "SPDXRef-binary-file-124",
+      "SPDXID": "SPDXRef-binary-file-117",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2445,7 +2401,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfInt64.h",
-      "SPDXID": "SPDXRef-binary-file-125",
+      "SPDXID": "SPDXRef-binary-file-118",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2457,7 +2413,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfTiledRgbaFile.h",
-      "SPDXID": "SPDXRef-binary-file-126",
+      "SPDXID": "SPDXRef-binary-file-119",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2469,7 +2425,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfStringAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-127",
+      "SPDXID": "SPDXRef-binary-file-120",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2481,7 +2437,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfImage.h",
-      "SPDXID": "SPDXRef-binary-file-128",
+      "SPDXID": "SPDXRef-binary-file-121",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2493,7 +2449,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfNamespace.h",
-      "SPDXID": "SPDXRef-binary-file-129",
+      "SPDXID": "SPDXRef-binary-file-122",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2505,7 +2461,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfTiledOutputFile.h",
-      "SPDXID": "SPDXRef-binary-file-130",
+      "SPDXID": "SPDXRef-binary-file-123",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2517,7 +2473,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfInputFile.h",
-      "SPDXID": "SPDXRef-binary-file-131",
+      "SPDXID": "SPDXRef-binary-file-124",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2529,7 +2485,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfCompositeDeepScanLine.h",
-      "SPDXID": "SPDXRef-binary-file-132",
+      "SPDXID": "SPDXRef-binary-file-125",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2541,7 +2497,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IlmThreadProcessGroup.h",
-      "SPDXID": "SPDXRef-binary-file-133",
+      "SPDXID": "SPDXRef-binary-file-126",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2553,7 +2509,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfChannelList.h",
-      "SPDXID": "SPDXRef-binary-file-134",
+      "SPDXID": "SPDXRef-binary-file-127",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2565,7 +2521,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IexBaseExc.h",
-      "SPDXID": "SPDXRef-binary-file-135",
+      "SPDXID": "SPDXRef-binary-file-128",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2577,7 +2533,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfRgbaFile.h",
-      "SPDXID": "SPDXRef-binary-file-136",
+      "SPDXID": "SPDXRef-binary-file-129",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2589,7 +2545,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfMultiPartInputFile.h",
-      "SPDXID": "SPDXRef-binary-file-137",
+      "SPDXID": "SPDXRef-binary-file-130",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2601,7 +2557,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IlmThreadNamespace.h",
-      "SPDXID": "SPDXRef-binary-file-138",
+      "SPDXID": "SPDXRef-binary-file-131",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2613,7 +2569,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfXdr.h",
-      "SPDXID": "SPDXRef-binary-file-139",
+      "SPDXID": "SPDXRef-binary-file-132",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2625,7 +2581,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfDeepTiledInputFile.h",
-      "SPDXID": "SPDXRef-binary-file-140",
+      "SPDXID": "SPDXRef-binary-file-133",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2637,7 +2593,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfDeepImageStateAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-141",
+      "SPDXID": "SPDXRef-binary-file-134",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2649,7 +2605,7 @@
     },
     {
       "fileName": "./include/OpenEXR/openexr_part.h",
-      "SPDXID": "SPDXRef-binary-file-142",
+      "SPDXID": "SPDXRef-binary-file-135",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2661,7 +2617,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IlmThreadForward.h",
-      "SPDXID": "SPDXRef-binary-file-143",
+      "SPDXID": "SPDXRef-binary-file-136",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2673,7 +2629,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfFlatImageChannel.h",
-      "SPDXID": "SPDXRef-binary-file-144",
+      "SPDXID": "SPDXRef-binary-file-137",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2685,7 +2641,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfContextInit.h",
-      "SPDXID": "SPDXRef-binary-file-145",
+      "SPDXID": "SPDXRef-binary-file-138",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2697,7 +2653,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfChannelListAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-146",
+      "SPDXID": "SPDXRef-binary-file-139",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2709,7 +2665,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IexMathFloatExc.h",
-      "SPDXID": "SPDXRef-binary-file-147",
+      "SPDXID": "SPDXRef-binary-file-140",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2721,7 +2677,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfStandardAttributes.h",
-      "SPDXID": "SPDXRef-binary-file-148",
+      "SPDXID": "SPDXRef-binary-file-141",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2733,7 +2689,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfTestFile.h",
-      "SPDXID": "SPDXRef-binary-file-149",
+      "SPDXID": "SPDXRef-binary-file-142",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2745,7 +2701,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IlmThreadConfig.h",
-      "SPDXID": "SPDXRef-binary-file-150",
+      "SPDXID": "SPDXRef-binary-file-143",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2757,7 +2713,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfPreviewImage.h",
-      "SPDXID": "SPDXRef-binary-file-151",
+      "SPDXID": "SPDXRef-binary-file-144",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2769,7 +2725,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfCompressor.h",
-      "SPDXID": "SPDXRef-binary-file-152",
+      "SPDXID": "SPDXRef-binary-file-145",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2781,7 +2737,7 @@
     },
     {
       "fileName": "./include/OpenEXR/IlmThread.h",
-      "SPDXID": "SPDXRef-binary-file-153",
+      "SPDXID": "SPDXRef-binary-file-146",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2793,7 +2749,7 @@
     },
     {
       "fileName": "./include/OpenEXR/openexr_coding.h",
-      "SPDXID": "SPDXRef-binary-file-154",
+      "SPDXID": "SPDXRef-binary-file-147",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2805,7 +2761,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfIDManifestAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-155",
+      "SPDXID": "SPDXRef-binary-file-148",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2817,7 +2773,7 @@
     },
     {
       "fileName": "./include/OpenEXR/openexr_chunkio.h",
-      "SPDXID": "SPDXRef-binary-file-156",
+      "SPDXID": "SPDXRef-binary-file-149",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2829,7 +2785,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfCheckFile.h",
-      "SPDXID": "SPDXRef-binary-file-157",
+      "SPDXID": "SPDXRef-binary-file-150",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2841,7 +2797,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfPartType.h",
-      "SPDXID": "SPDXRef-binary-file-158",
+      "SPDXID": "SPDXRef-binary-file-151",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2853,7 +2809,7 @@
     },
     {
       "fileName": "./include/OpenEXR/ImfBoxAttribute.h",
-      "SPDXID": "SPDXRef-binary-file-159",
+      "SPDXID": "SPDXRef-binary-file-152",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2864,60 +2820,216 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libOpenEXRCore-3_3.a",
+      "fileName": "./lib/libOpenEXRCore.so",
+      "SPDXID": "SPDXRef-binary-file-153",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5fe3f84706790d5cb1c95e7f682c19237bb9552eb232e750e8ebab4fbc981222"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libOpenEXRCore-3_3.so.32.3.3.5",
+      "SPDXID": "SPDXRef-binary-file-154",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5fe3f84706790d5cb1c95e7f682c19237bb9552eb232e750e8ebab4fbc981222"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libIlmThread-3_3.so.32.3.3.5",
+      "SPDXID": "SPDXRef-binary-file-155",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b2bdf9222273a661b27f45504448b57cddee193aba45e7ce7c95df1373399aba"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libOpenEXR.so",
+      "SPDXID": "SPDXRef-binary-file-156",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "97e3b66f68b1ac2ff105116579a302d75223603994c4574268cbccfecc93d2b0"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libOpenEXRUtil.so",
+      "SPDXID": "SPDXRef-binary-file-157",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fd71e5ef0333d1c9f8b8d1faede89a0d2a24cebdc6bc64289b085315314b5535"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libIlmThread.so",
+      "SPDXID": "SPDXRef-binary-file-158",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b2bdf9222273a661b27f45504448b57cddee193aba45e7ce7c95df1373399aba"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libOpenEXRUtil-3_3.so",
+      "SPDXID": "SPDXRef-binary-file-159",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fd71e5ef0333d1c9f8b8d1faede89a0d2a24cebdc6bc64289b085315314b5535"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libIex-3_3.so",
       "SPDXID": "SPDXRef-binary-file-160",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "30ed54faf76e2e418dbc34c2af7af019ed2ec914a37096f81e84419c627e5487"
+          "checksumValue": "2c1b884c39a46bd3527df5e296aae50c3f3ab0722b6234580a435d2130feac77"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libIex-3_3.a",
+      "fileName": "./lib/libOpenEXR-3_3.so",
       "SPDXID": "SPDXRef-binary-file-161",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "96c37afd34e6bb63df604365d6e901ee96f5373a1ac4588672817f5fd81582b7"
+          "checksumValue": "97e3b66f68b1ac2ff105116579a302d75223603994c4574268cbccfecc93d2b0"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libOpenEXRUtil-3_3.a",
+      "fileName": "./lib/libOpenEXR-3_3.so.32",
       "SPDXID": "SPDXRef-binary-file-162",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f065e6fbbf710b7f43a7d1cb274603ee42699aa06e76cb28a391e1a8941423c4"
+          "checksumValue": "97e3b66f68b1ac2ff105116579a302d75223603994c4574268cbccfecc93d2b0"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libIlmThread-3_3.a",
+      "fileName": "./lib/libIlmThread-3_3.so.32",
       "SPDXID": "SPDXRef-binary-file-163",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "0e5fda26053ee2783b8449a7c4db75d85ab4c2420ca75de2d5e5ce9fef57fb10"
+          "checksumValue": "b2bdf9222273a661b27f45504448b57cddee193aba45e7ce7c95df1373399aba"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libOpenEXR-3_3.a",
+      "fileName": "./lib/libIlmThread-3_3.so",
       "SPDXID": "SPDXRef-binary-file-164",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "6d8ef73a53d9cb205adf93aef6494f6af52a56c69fd97b0d6dd9c1b38070121f"
+          "checksumValue": "b2bdf9222273a661b27f45504448b57cddee193aba45e7ce7c95df1373399aba"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libOpenEXRUtil-3_3.so.32.3.3.5",
+      "SPDXID": "SPDXRef-binary-file-165",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fd71e5ef0333d1c9f8b8d1faede89a0d2a24cebdc6bc64289b085315314b5535"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libIex-3_3.so.32",
+      "SPDXID": "SPDXRef-binary-file-166",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2c1b884c39a46bd3527df5e296aae50c3f3ab0722b6234580a435d2130feac77"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libIex.so",
+      "SPDXID": "SPDXRef-binary-file-167",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2c1b884c39a46bd3527df5e296aae50c3f3ab0722b6234580a435d2130feac77"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libOpenEXRCore-3_3.so",
+      "SPDXID": "SPDXRef-binary-file-168",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5fe3f84706790d5cb1c95e7f682c19237bb9552eb232e750e8ebab4fbc981222"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libOpenEXRUtil-3_3.so.32",
+      "SPDXID": "SPDXRef-binary-file-169",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fd71e5ef0333d1c9f8b8d1faede89a0d2a24cebdc6bc64289b085315314b5535"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libIex-3_3.so.32.3.3.5",
+      "SPDXID": "SPDXRef-binary-file-170",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2c1b884c39a46bd3527df5e296aae50c3f3ab0722b6234580a435d2130feac77"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -2925,11 +3037,35 @@
     },
     {
       "fileName": "./lib/pkgconfig/OpenEXR.pc",
-      "SPDXID": "SPDXRef-binary-file-165",
+      "SPDXID": "SPDXRef-binary-file-171",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "8c05962fa62a0cd79c8470a58cf9293ea95cb16fc92c11b1be2a2b8c77f3782b"
+          "checksumValue": "19d418492f735682ce6e2db78f91d23f252dbc5e0ee1b37c11c746cb362892fc"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libOpenEXRCore-3_3.so.32",
+      "SPDXID": "SPDXRef-binary-file-172",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5fe3f84706790d5cb1c95e7f682c19237bb9552eb232e750e8ebab4fbc981222"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libOpenEXR-3_3.so.32.3.3.5",
+      "SPDXID": "SPDXRef-binary-file-173",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "97e3b66f68b1ac2ff105116579a302d75223603994c4574268cbccfecc93d2b0"
         }
       ],
       "licenseConcluded": "NOASSERTION",

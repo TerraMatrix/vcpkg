@@ -55,12 +55,12 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::type_erasure
-add_library(Boost::type_erasure STATIC IMPORTED)
+add_library(Boost::type_erasure SHARED IMPORTED)
 
 set_target_properties(Boost::type_erasure PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_TYPE_ERASURE_NO_LIB;BOOST_TYPE_ERASURE_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_TYPE_ERASURE_NO_LIB;BOOST_TYPE_ERASURE_DYN_LINK"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::core;Boost::fusion;Boost::iterator;Boost::mp11;Boost::mpl;Boost::preprocessor;Boost::smart_ptr;Boost::throw_exception;Boost::type_traits;Boost::typeof;Boost::vmd;\$<LINK_ONLY:Boost::thread>"
+  INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::core;Boost::fusion;Boost::iterator;Boost::mp11;Boost::mpl;Boost::preprocessor;Boost::smart_ptr;Boost::throw_exception;Boost::type_traits;Boost::typeof;Boost::vmd"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

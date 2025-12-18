@@ -1,5 +1,5 @@
 _find_package(${ARGS})
-if("static" STREQUAL "static")
+if("dynamic" STREQUAL "static")
     if(NOT TARGET Fontconfig::Fontconfig)
         # Simplify wrapper for case of vendored FindFontconfig.cmake
         add_library(Fontconfig::Fontconfig UNKNOWN IMPORTED)

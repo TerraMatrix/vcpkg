@@ -5,15 +5,16 @@
 # Commands may need to know the format version.
 set(CMAKE_IMPORT_FILE_VERSION 1)
 
-# Import target "SuiteSparse::COLAMD_static" for configuration "Release"
-set_property(TARGET SuiteSparse::COLAMD_static APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(SuiteSparse::COLAMD_static PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libcolamd.a"
+# Import target "SuiteSparse::COLAMD" for configuration "Release"
+set_property(TARGET SuiteSparse::COLAMD APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(SuiteSparse::COLAMD PROPERTIES
+  IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "SuiteSparse::SuiteSparseConfig"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libcolamd.so.3.3.4"
+  IMPORTED_SONAME_RELEASE "libcolamd.so.3"
   )
 
-list(APPEND _cmake_import_check_targets SuiteSparse::COLAMD_static )
-list(APPEND _cmake_import_check_files_for_SuiteSparse::COLAMD_static "${_IMPORT_PREFIX}/lib/libcolamd.a" )
+list(APPEND _cmake_import_check_targets SuiteSparse::COLAMD )
+list(APPEND _cmake_import_check_files_for_SuiteSparse::COLAMD "${_IMPORT_PREFIX}/lib/libcolamd.so.3.3.4" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

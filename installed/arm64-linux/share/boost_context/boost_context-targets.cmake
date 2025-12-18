@@ -55,10 +55,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::context
-add_library(Boost::context STATIC IMPORTED)
+add_library(Boost::context SHARED IMPORTED)
 
 set_target_properties(Boost::context PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_CONTEXT_NO_LIB=;BOOST_CONTEXT_STATIC_LINK=;BOOST_CONTEXT_EXPORT="
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_CONTEXT_NO_LIB=;BOOST_CONTEXT_DYN_LINK=;BOOST_CONTEXT_EXPORT=EXPORT"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "Boost::assert;Boost::config;Boost::core;Boost::mp11;Boost::pool;Boost::predef;Boost::smart_ptr"
 )

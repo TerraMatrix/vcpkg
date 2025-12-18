@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/ade-arm64-linux-0.1.2e-5da9f1a2-925f-4bbf-b879-66f621cd55b2",
-  "name": "ade:arm64-linux@0.1.2e f1a57cde0c0b90dabafeb49c53804dcfac1378ef5bb6a4d315588e114cc2097d",
+  "documentNamespace": "https://spdx.org/spdxdocs/ade-arm64-linux-0.1.2e-81c9150b-24ee-4df8-8af7-d6c3bbb668d0",
+  "name": "ade:arm64-linux@0.1.2e bfc132967697db3fbf208aa4bd3c395e473a672ba6edaacf03d297a039beebaa",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T10:00:06Z"
+    "created": "2025-12-16T12:33:01Z"
   },
   "relationships": [
     {
@@ -321,16 +321,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-57"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-58"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-59"
     }
   ],
   "packages": [
@@ -348,7 +338,7 @@
     {
       "name": "ade:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "f1a57cde0c0b90dabafeb49c53804dcfac1378ef5bb6a4d315588e114cc2097d",
+      "versionInfo": "bfc132967697db3fbf208aa4bd3c395e473a672ba6edaacf03d297a039beebaa",
       "downloadLocation": "NONE",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
@@ -401,19 +391,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libaded.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "7dc3653ee67cceaa55ccc27943248ce269e2da1f7c10c6ecc833958e02861d66"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -421,7 +399,7 @@
     },
     {
       "fileName": "./share/ade/adeConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-2",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -432,20 +410,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/ade/adeTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "b24928cc5adbe6c071e4c5f3f0733991a03bdf1370fb3e284590518c14c45680"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/ade/adeTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -457,7 +423,7 @@
     },
     {
       "fileName": "./share/ade/copyright",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -469,7 +435,7 @@
     },
     {
       "fileName": "./share/ade/adeConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -481,7 +447,7 @@
     },
     {
       "fileName": "./share/ade/adeTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -493,7 +459,7 @@
     },
     {
       "fileName": "./include/ade/memory/alloc.hpp",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -505,7 +471,7 @@
     },
     {
       "fileName": "./include/ade/memory/memory_accessor.hpp",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -517,7 +483,7 @@
     },
     {
       "fileName": "./include/ade/memory/memory_access_listener.hpp",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -529,7 +495,7 @@
     },
     {
       "fileName": "./include/ade/memory/memory_descriptor_ref.hpp",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -541,7 +507,7 @@
     },
     {
       "fileName": "./include/ade/memory/memory_descriptor_view.hpp",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -553,7 +519,7 @@
     },
     {
       "fileName": "./include/ade/memory/memory_descriptor.hpp",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -565,7 +531,7 @@
     },
     {
       "fileName": "./include/ade/memory/memory_types.hpp",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -577,7 +543,7 @@
     },
     {
       "fileName": "./include/ade/edge.hpp",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -589,7 +555,7 @@
     },
     {
       "fileName": "./include/ade/typed_graph.hpp",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -601,7 +567,7 @@
     },
     {
       "fileName": "./include/ade/graph_listener.hpp",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -613,7 +579,7 @@
     },
     {
       "fileName": "./include/ade/graph.hpp",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -625,7 +591,7 @@
     },
     {
       "fileName": "./include/ade/communication/comm_interface.hpp",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -637,7 +603,7 @@
     },
     {
       "fileName": "./include/ade/communication/comm_buffer.hpp",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -649,7 +615,7 @@
     },
     {
       "fileName": "./include/ade/communication/callback_connector.hpp",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -661,7 +627,7 @@
     },
     {
       "fileName": "./include/ade/handle.hpp",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -673,7 +639,7 @@
     },
     {
       "fileName": "./include/ade/node.hpp",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -685,7 +651,7 @@
     },
     {
       "fileName": "./include/ade/metatypes/metatypes.hpp",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -697,7 +663,7 @@
     },
     {
       "fileName": "./include/ade/passmanager.hpp",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -709,7 +675,7 @@
     },
     {
       "fileName": "./include/ade/passes/topological_sort.hpp",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -721,7 +687,7 @@
     },
     {
       "fileName": "./include/ade/passes/communications.hpp",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -733,7 +699,7 @@
     },
     {
       "fileName": "./include/ade/passes/check_cycles.hpp",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -745,7 +711,7 @@
     },
     {
       "fileName": "./include/ade/passes/pass_base.hpp",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -757,7 +723,7 @@
     },
     {
       "fileName": "./include/ade/util/md_view.hpp",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -769,7 +735,7 @@
     },
     {
       "fileName": "./include/ade/util/chain_range.hpp",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -781,7 +747,7 @@
     },
     {
       "fileName": "./include/ade/util/range.hpp",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -793,7 +759,7 @@
     },
     {
       "fileName": "./include/ade/util/type_traits.hpp",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -805,7 +771,7 @@
     },
     {
       "fileName": "./include/ade/util/filter_range.hpp",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -817,7 +783,7 @@
     },
     {
       "fileName": "./include/ade/util/assert.hpp",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -829,7 +795,7 @@
     },
     {
       "fileName": "./include/ade/util/md_size.hpp",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -841,7 +807,7 @@
     },
     {
       "fileName": "./include/ade/util/md_io.hpp",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -853,7 +819,7 @@
     },
     {
       "fileName": "./include/ade/util/iota_range.hpp",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -865,7 +831,7 @@
     },
     {
       "fileName": "./include/ade/util/hash.hpp",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -877,7 +843,7 @@
     },
     {
       "fileName": "./include/ade/util/math.hpp",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -889,7 +855,7 @@
     },
     {
       "fileName": "./include/ade/util/checked_cast.hpp",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -901,7 +867,7 @@
     },
     {
       "fileName": "./include/ade/util/intrusive_list.hpp",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -913,7 +879,7 @@
     },
     {
       "fileName": "./include/ade/util/zip_range.hpp",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -925,7 +891,7 @@
     },
     {
       "fileName": "./include/ade/util/map_range.hpp",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -937,7 +903,7 @@
     },
     {
       "fileName": "./include/ade/util/range_iterator.hpp",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -949,7 +915,7 @@
     },
     {
       "fileName": "./include/ade/util/container_helper.hpp",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -961,7 +927,7 @@
     },
     {
       "fileName": "./include/ade/util/tuple.hpp",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -973,7 +939,7 @@
     },
     {
       "fileName": "./include/ade/util/md_cast.hpp",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -985,7 +951,7 @@
     },
     {
       "fileName": "./include/ade/util/func_ref.hpp",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -997,7 +963,7 @@
     },
     {
       "fileName": "./include/ade/util/memory_range.hpp",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1009,7 +975,7 @@
     },
     {
       "fileName": "./include/ade/util/md_span.hpp",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1021,7 +987,7 @@
     },
     {
       "fileName": "./include/ade/util/algorithm.hpp",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1033,7 +999,7 @@
     },
     {
       "fileName": "./include/ade/execution_engine/execution_engine.hpp",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1045,7 +1011,7 @@
     },
     {
       "fileName": "./include/ade/execution_engine/backend.hpp",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1057,7 +1023,7 @@
     },
     {
       "fileName": "./include/ade/execution_engine/executable.hpp",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1069,7 +1035,7 @@
     },
     {
       "fileName": "./include/ade/typed_metadata.hpp",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1081,7 +1047,7 @@
     },
     {
       "fileName": "./include/ade/helpers/search.hpp",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "SPDXID": "SPDXRef-binary-file-55",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1093,7 +1059,7 @@
     },
     {
       "fileName": "./include/ade/helpers/subgraphs.hpp",
-      "SPDXID": "SPDXRef-binary-file-58",
+      "SPDXID": "SPDXRef-binary-file-56",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1105,7 +1071,7 @@
     },
     {
       "fileName": "./lib/libade.a",
-      "SPDXID": "SPDXRef-binary-file-59",
+      "SPDXID": "SPDXRef-binary-file-57",
       "checksums": [
         {
           "algorithm": "SHA256",

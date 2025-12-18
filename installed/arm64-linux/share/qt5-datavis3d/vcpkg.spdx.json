@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/qt5-datavis3d-arm64-linux-5.15.17-e8f23e2a-426a-43f1-8e82-fc826e2d0885",
-  "name": "qt5-datavis3d:arm64-linux@5.15.17 8e0157a7f6bb2bbdf64d907f88aae29115d09c937e9c27d6343623f7dda442df",
+  "documentNamespace": "https://spdx.org/spdxdocs/qt5-datavis3d-arm64-linux-5.15.17-386129ad-90ec-4b29-a5db-71e97f8b4853",
+  "name": "qt5-datavis3d:arm64-linux@5.15.17 26077bff1bc877cc0856fa34e97db9ad2fe70d535403c990648b0f073b03ab53",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-12-10T09:07:13Z"
+    "created": "2025-12-17T05:56:06Z"
   },
   "relationships": [
     {
@@ -916,6 +916,31 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-176"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-177"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-178"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-179"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-180"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-181"
     }
   ],
   "packages": [
@@ -933,7 +958,7 @@
     {
       "name": "qt5-datavis3d:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "8e0157a7f6bb2bbdf64d907f88aae29115d09c937e9c27d6343623f7dda442df",
+      "versionInfo": "26077bff1bc877cc0856fa34e97db9ad2fe70d535403c990648b0f073b03ab53",
       "downloadLocation": "NONE",
       "licenseConcluded": "LicenseRef-vcpkg-null",
       "licenseDeclared": "NOASSERTION",
@@ -972,103 +997,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libQt5DataVisualization.la",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "ee0c902163692aace7c30441d740322e6ec64ad29ec122b9cf6c32fabdfb66e6"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libQt5DataVisualization.prl",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "784740d253de6be08279dc883601e59b27c95d758380a73ae7685b052fff31e2"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/Qt5DataVisualization.pc",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "cfd72d843c1efc72c1da2d2338bb8efa3dfb5d8065b2b8089ab0122294df16ed"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libQt5DataVisualization.a",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "40479bb2ecacaf6c67be82d05d7fa82a4cd9a54e61aaa63dbeac4b6324d95d25"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/qml/QtDataVisualization/libdatavisualizationqml2.a",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "a21ac4004bac115ecc7d8aae5453325bc8bdcaf4e8c89bfa2b4381758c61305a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/qml/QtDataVisualization/plugins.qmltypes",
-      "SPDXID": "SPDXRef-binary-file-6",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "db896cd1fc942ca84996711311a459f1a20194d9720b3510c60bafe52b153dfa"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/qml/QtDataVisualization/libdatavisualizationqml2.prl",
-      "SPDXID": "SPDXRef-binary-file-7",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "e6fb1af0b05a09fc8a6084267272a7e4ad5f725cc91b7aff207d6b61c8ebb2f0"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/qml/QtDataVisualization/qmldir",
-      "SPDXID": "SPDXRef-binary-file-8",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "ae309e0edc10df2d67f52b3c316f8bc2b9aebece7319e780c9a9c076d2bb6117"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1076,11 +1005,11 @@
     },
     {
       "fileName": "./share/cmake/Qt5DataVisualization/Qt5DataVisualizationConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "9799265e0bc7a6b7670f2d6a9848b2aca18d5e5f73bcf361b5e387df7797acc8"
+          "checksumValue": "613dd80ac09b366a40a76400f77f5de97c38b8666febff7c3c619ead9e154479"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -1088,7 +1017,7 @@
     },
     {
       "fileName": "./share/cmake/Qt5DataVisualization/Qt5DataVisualizationConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1100,7 +1029,7 @@
     },
     {
       "fileName": "./share/qt5-datavis3d/copyright",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1112,7 +1041,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qcustom3dlabel.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1124,7 +1053,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/q3dsurface.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1136,7 +1065,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QScatterDataArray",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1148,7 +1077,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QBarDataProxy",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1160,7 +1089,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qheightmapsurfacedataproxy.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1172,7 +1101,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QItemModelBarDataProxy",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1184,7 +1113,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QSurfaceDataRow",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1196,7 +1125,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QCategory3DAxis",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1208,7 +1137,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QBarDataItem",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1220,7 +1149,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QSurface3DSeries",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1232,7 +1161,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qbardataitem.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1244,7 +1173,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QTouch3DInputHandler",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1256,7 +1185,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/Q3DObject",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1268,7 +1197,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qcustom3dvolume.h",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1280,7 +1209,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qsurface3dseries.h",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1292,7 +1221,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/q3dinputhandler.h",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1304,7 +1233,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QtDataVisualizationDepends",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1316,7 +1245,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QAbstract3DSeries",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1328,7 +1257,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QAbstract3DInputHandler",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1340,7 +1269,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/Q3DScatter",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1352,7 +1281,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/Q3DLight",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1364,7 +1293,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QtDataVisualization",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1376,7 +1305,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/q3dcamera.h",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1388,7 +1317,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QAbstract3DGraph",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1400,7 +1329,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/Q3DBars",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1412,7 +1341,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/Q3DScene",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1424,7 +1353,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qscatter3dseries.h",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1436,7 +1365,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/q3dscatter.h",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1448,7 +1377,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qutils.h",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1460,7 +1389,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QCustom3DLabel",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1472,7 +1401,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QCustom3DVolume",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1484,7 +1413,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qabstract3daxis.h",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1496,7 +1425,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/q3dtheme.h",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1508,7 +1437,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/Q3DTheme",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1520,7 +1449,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QSurfaceDataItem",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1532,7 +1461,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QAbstractDataProxy",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1544,7 +1473,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QBarDataRow",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1556,7 +1485,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QCustom3DItem",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1568,7 +1497,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QHeightMapSurfaceDataProxy",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1580,7 +1509,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qvalue3daxisformatter.h",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1592,7 +1521,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qsurfacedataitem.h",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1604,7 +1533,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/abstractrenderitem_p.h",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1616,7 +1545,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/objecthelper_p.h",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1628,7 +1557,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/texturehelper_p.h",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1640,7 +1569,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qscatterdataproxy_p.h",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1652,7 +1581,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/scatter3drenderer_p.h",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1664,7 +1593,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/meshloader_p.h",
-      "SPDXID": "SPDXRef-binary-file-58",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1676,7 +1605,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/scatterobjectbufferhelper_p.h",
-      "SPDXID": "SPDXRef-binary-file-59",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1688,7 +1617,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/camerahelper_p.h",
-      "SPDXID": "SPDXRef-binary-file-60",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1700,7 +1629,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/scatteritemmodelhandler_p.h",
-      "SPDXID": "SPDXRef-binary-file-61",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1712,7 +1641,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qitemmodelsurfacedataproxy_p.h",
-      "SPDXID": "SPDXRef-binary-file-62",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1724,7 +1653,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/customrenderitem_p.h",
-      "SPDXID": "SPDXRef-binary-file-63",
+      "SPDXID": "SPDXRef-binary-file-55",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1736,7 +1665,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/abstract3drenderer_p.h",
-      "SPDXID": "SPDXRef-binary-file-64",
+      "SPDXID": "SPDXRef-binary-file-56",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1748,7 +1677,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/surfaceobject_p.h",
-      "SPDXID": "SPDXRef-binary-file-65",
+      "SPDXID": "SPDXRef-binary-file-57",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1760,7 +1689,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/q3dlight_p.h",
-      "SPDXID": "SPDXRef-binary-file-66",
+      "SPDXID": "SPDXRef-binary-file-58",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1772,7 +1701,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/abstractitemmodelhandler_p.h",
-      "SPDXID": "SPDXRef-binary-file-67",
+      "SPDXID": "SPDXRef-binary-file-59",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1784,7 +1713,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qabstract3dinputhandler_p.h",
-      "SPDXID": "SPDXRef-binary-file-68",
+      "SPDXID": "SPDXRef-binary-file-60",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1796,7 +1725,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/abstract3dcontroller_p.h",
-      "SPDXID": "SPDXRef-binary-file-69",
+      "SPDXID": "SPDXRef-binary-file-61",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1808,7 +1737,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qtouch3dinputhandler_p.h",
-      "SPDXID": "SPDXRef-binary-file-70",
+      "SPDXID": "SPDXRef-binary-file-62",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1820,7 +1749,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/thememanager_p.h",
-      "SPDXID": "SPDXRef-binary-file-71",
+      "SPDXID": "SPDXRef-binary-file-63",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1832,7 +1761,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/q3dscatter_p.h",
-      "SPDXID": "SPDXRef-binary-file-72",
+      "SPDXID": "SPDXRef-binary-file-64",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1844,7 +1773,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qsurfacedataitem_p.h",
-      "SPDXID": "SPDXRef-binary-file-73",
+      "SPDXID": "SPDXRef-binary-file-65",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1856,7 +1785,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qabstract3daxis_p.h",
-      "SPDXID": "SPDXRef-binary-file-74",
+      "SPDXID": "SPDXRef-binary-file-66",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1868,7 +1797,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/surfaceseriesrendercache_p.h",
-      "SPDXID": "SPDXRef-binary-file-75",
+      "SPDXID": "SPDXRef-binary-file-67",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1880,7 +1809,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qbardataitem_p.h",
-      "SPDXID": "SPDXRef-binary-file-76",
+      "SPDXID": "SPDXRef-binary-file-68",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1892,7 +1821,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qabstract3dgraph_p.h",
-      "SPDXID": "SPDXRef-binary-file-77",
+      "SPDXID": "SPDXRef-binary-file-69",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1904,7 +1833,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qscatter3dseries_p.h",
-      "SPDXID": "SPDXRef-binary-file-78",
+      "SPDXID": "SPDXRef-binary-file-70",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1916,7 +1845,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/labelitem_p.h",
-      "SPDXID": "SPDXRef-binary-file-79",
+      "SPDXID": "SPDXRef-binary-file-71",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1928,7 +1857,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/baritemmodelhandler_p.h",
-      "SPDXID": "SPDXRef-binary-file-80",
+      "SPDXID": "SPDXRef-binary-file-72",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1940,7 +1869,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/bars3dcontroller_p.h",
-      "SPDXID": "SPDXRef-binary-file-81",
+      "SPDXID": "SPDXRef-binary-file-73",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1952,7 +1881,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qlogvalue3daxisformatter_p.h",
-      "SPDXID": "SPDXRef-binary-file-82",
+      "SPDXID": "SPDXRef-binary-file-74",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1964,7 +1893,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qsurfacedataproxy_p.h",
-      "SPDXID": "SPDXRef-binary-file-83",
+      "SPDXID": "SPDXRef-binary-file-75",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1976,7 +1905,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/utils_p.h",
-      "SPDXID": "SPDXRef-binary-file-84",
+      "SPDXID": "SPDXRef-binary-file-76",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1988,7 +1917,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/scatterseriesrendercache_p.h",
-      "SPDXID": "SPDXRef-binary-file-85",
+      "SPDXID": "SPDXRef-binary-file-77",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2000,7 +1929,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/q3dbars_p.h",
-      "SPDXID": "SPDXRef-binary-file-86",
+      "SPDXID": "SPDXRef-binary-file-78",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2012,7 +1941,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/seriesrendercache_p.h",
-      "SPDXID": "SPDXRef-binary-file-87",
+      "SPDXID": "SPDXRef-binary-file-79",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2024,7 +1953,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qscatterdataitem_p.h",
-      "SPDXID": "SPDXRef-binary-file-88",
+      "SPDXID": "SPDXRef-binary-file-80",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2036,7 +1965,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/q3dscene_p.h",
-      "SPDXID": "SPDXRef-binary-file-89",
+      "SPDXID": "SPDXRef-binary-file-81",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2048,7 +1977,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qvalue3daxis_p.h",
-      "SPDXID": "SPDXRef-binary-file-90",
+      "SPDXID": "SPDXRef-binary-file-82",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2060,7 +1989,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qsurface3dseries_p.h",
-      "SPDXID": "SPDXRef-binary-file-91",
+      "SPDXID": "SPDXRef-binary-file-83",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2072,7 +2001,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/q3dcamera_p.h",
-      "SPDXID": "SPDXRef-binary-file-92",
+      "SPDXID": "SPDXRef-binary-file-84",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2084,7 +2013,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qheightmapsurfacedataproxy_p.h",
-      "SPDXID": "SPDXRef-binary-file-93",
+      "SPDXID": "SPDXRef-binary-file-85",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2096,7 +2025,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/axisrendercache_p.h",
-      "SPDXID": "SPDXRef-binary-file-94",
+      "SPDXID": "SPDXRef-binary-file-86",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2108,7 +2037,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qitemmodelbardataproxy_p.h",
-      "SPDXID": "SPDXRef-binary-file-95",
+      "SPDXID": "SPDXRef-binary-file-87",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2120,7 +2049,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/datavisualizationglobal_p.h",
-      "SPDXID": "SPDXRef-binary-file-96",
+      "SPDXID": "SPDXRef-binary-file-88",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2132,7 +2061,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qitemmodelscatterdataproxy_p.h",
-      "SPDXID": "SPDXRef-binary-file-97",
+      "SPDXID": "SPDXRef-binary-file-89",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2144,7 +2073,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qcustom3dvolume_p.h",
-      "SPDXID": "SPDXRef-binary-file-98",
+      "SPDXID": "SPDXRef-binary-file-90",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2156,7 +2085,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/abstractobjecthelper_p.h",
-      "SPDXID": "SPDXRef-binary-file-99",
+      "SPDXID": "SPDXRef-binary-file-91",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2168,7 +2097,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/scatterpointbufferhelper_p.h",
-      "SPDXID": "SPDXRef-binary-file-100",
+      "SPDXID": "SPDXRef-binary-file-92",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2180,7 +2109,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/surface3drenderer_p.h",
-      "SPDXID": "SPDXRef-binary-file-101",
+      "SPDXID": "SPDXRef-binary-file-93",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2192,7 +2121,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/vertexindexer_p.h",
-      "SPDXID": "SPDXRef-binary-file-102",
+      "SPDXID": "SPDXRef-binary-file-94",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2204,7 +2133,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/bars3drenderer_p.h",
-      "SPDXID": "SPDXRef-binary-file-103",
+      "SPDXID": "SPDXRef-binary-file-95",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2216,7 +2145,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/selectionpointer_p.h",
-      "SPDXID": "SPDXRef-binary-file-104",
+      "SPDXID": "SPDXRef-binary-file-96",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2228,7 +2157,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qvalue3daxisformatter_p.h",
-      "SPDXID": "SPDXRef-binary-file-105",
+      "SPDXID": "SPDXRef-binary-file-97",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2240,7 +2169,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/surfaceitemmodelhandler_p.h",
-      "SPDXID": "SPDXRef-binary-file-106",
+      "SPDXID": "SPDXRef-binary-file-98",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2252,7 +2181,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/q3dinputhandler_p.h",
-      "SPDXID": "SPDXRef-binary-file-107",
+      "SPDXID": "SPDXRef-binary-file-99",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2264,7 +2193,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/shaderhelper_p.h",
-      "SPDXID": "SPDXRef-binary-file-108",
+      "SPDXID": "SPDXRef-binary-file-100",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2276,7 +2205,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qbardataproxy_p.h",
-      "SPDXID": "SPDXRef-binary-file-109",
+      "SPDXID": "SPDXRef-binary-file-101",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2288,7 +2217,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/scatterrenderitem_p.h",
-      "SPDXID": "SPDXRef-binary-file-110",
+      "SPDXID": "SPDXRef-binary-file-102",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2300,7 +2229,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/barseriesrendercache_p.h",
-      "SPDXID": "SPDXRef-binary-file-111",
+      "SPDXID": "SPDXRef-binary-file-103",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2312,7 +2241,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qcustom3ditem_p.h",
-      "SPDXID": "SPDXRef-binary-file-112",
+      "SPDXID": "SPDXRef-binary-file-104",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2324,7 +2253,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/q3dsurface_p.h",
-      "SPDXID": "SPDXRef-binary-file-113",
+      "SPDXID": "SPDXRef-binary-file-105",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2336,7 +2265,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qcategory3daxis_p.h",
-      "SPDXID": "SPDXRef-binary-file-114",
+      "SPDXID": "SPDXRef-binary-file-106",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2348,7 +2277,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/scatter3dcontroller_p.h",
-      "SPDXID": "SPDXRef-binary-file-115",
+      "SPDXID": "SPDXRef-binary-file-107",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2360,7 +2289,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/q3dtheme_p.h",
-      "SPDXID": "SPDXRef-binary-file-116",
+      "SPDXID": "SPDXRef-binary-file-108",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2372,7 +2301,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qabstractdataproxy_p.h",
-      "SPDXID": "SPDXRef-binary-file-117",
+      "SPDXID": "SPDXRef-binary-file-109",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2384,7 +2313,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qcustom3dlabel_p.h",
-      "SPDXID": "SPDXRef-binary-file-118",
+      "SPDXID": "SPDXRef-binary-file-110",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2396,7 +2325,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/surface3dcontroller_p.h",
-      "SPDXID": "SPDXRef-binary-file-119",
+      "SPDXID": "SPDXRef-binary-file-111",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2408,7 +2337,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qabstract3dseries_p.h",
-      "SPDXID": "SPDXRef-binary-file-120",
+      "SPDXID": "SPDXRef-binary-file-112",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2420,7 +2349,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/q3dobject_p.h",
-      "SPDXID": "SPDXRef-binary-file-121",
+      "SPDXID": "SPDXRef-binary-file-113",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2432,7 +2361,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/barrenderitem_p.h",
-      "SPDXID": "SPDXRef-binary-file-122",
+      "SPDXID": "SPDXRef-binary-file-114",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2444,7 +2373,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/qbar3dseries_p.h",
-      "SPDXID": "SPDXRef-binary-file-123",
+      "SPDXID": "SPDXRef-binary-file-115",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2456,7 +2385,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/5.15.17/QtDataVisualization/private/drawer_p.h",
-      "SPDXID": "SPDXRef-binary-file-124",
+      "SPDXID": "SPDXRef-binary-file-116",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2468,7 +2397,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/q3dobject.h",
-      "SPDXID": "SPDXRef-binary-file-125",
+      "SPDXID": "SPDXRef-binary-file-117",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2480,7 +2409,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/Q3DInputHandler",
-      "SPDXID": "SPDXRef-binary-file-126",
+      "SPDXID": "SPDXRef-binary-file-118",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2492,7 +2421,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qdatavisualizationglobal.h",
-      "SPDXID": "SPDXRef-binary-file-127",
+      "SPDXID": "SPDXRef-binary-file-119",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2504,7 +2433,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QSurfaceDataProxy",
-      "SPDXID": "SPDXRef-binary-file-128",
+      "SPDXID": "SPDXRef-binary-file-120",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2516,7 +2445,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qabstract3dseries.h",
-      "SPDXID": "SPDXRef-binary-file-129",
+      "SPDXID": "SPDXRef-binary-file-121",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2528,7 +2457,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qabstract3dgraph.h",
-      "SPDXID": "SPDXRef-binary-file-130",
+      "SPDXID": "SPDXRef-binary-file-122",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2540,7 +2469,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QScatterDataItem",
-      "SPDXID": "SPDXRef-binary-file-131",
+      "SPDXID": "SPDXRef-binary-file-123",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2552,7 +2481,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QBarDataArray",
-      "SPDXID": "SPDXRef-binary-file-132",
+      "SPDXID": "SPDXRef-binary-file-124",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2564,7 +2493,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qabstractdataproxy.h",
-      "SPDXID": "SPDXRef-binary-file-133",
+      "SPDXID": "SPDXRef-binary-file-125",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2576,7 +2505,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qitemmodelscatterdataproxy.h",
-      "SPDXID": "SPDXRef-binary-file-134",
+      "SPDXID": "SPDXRef-binary-file-126",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2588,7 +2517,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QValue3DAxisFormatter",
-      "SPDXID": "SPDXRef-binary-file-135",
+      "SPDXID": "SPDXRef-binary-file-127",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2600,7 +2529,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qcategory3daxis.h",
-      "SPDXID": "SPDXRef-binary-file-136",
+      "SPDXID": "SPDXRef-binary-file-128",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2612,7 +2541,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QLogValue3DAxisFormatter",
-      "SPDXID": "SPDXRef-binary-file-137",
+      "SPDXID": "SPDXRef-binary-file-129",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2624,7 +2553,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qabstract3dinputhandler.h",
-      "SPDXID": "SPDXRef-binary-file-138",
+      "SPDXID": "SPDXRef-binary-file-130",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2636,7 +2565,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qvalue3daxis.h",
-      "SPDXID": "SPDXRef-binary-file-139",
+      "SPDXID": "SPDXRef-binary-file-131",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2648,7 +2577,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QItemModelSurfaceDataProxy",
-      "SPDXID": "SPDXRef-binary-file-140",
+      "SPDXID": "SPDXRef-binary-file-132",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2660,7 +2589,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qitemmodelbardataproxy.h",
-      "SPDXID": "SPDXRef-binary-file-141",
+      "SPDXID": "SPDXRef-binary-file-133",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2672,7 +2601,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/q3dlight.h",
-      "SPDXID": "SPDXRef-binary-file-142",
+      "SPDXID": "SPDXRef-binary-file-134",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2684,7 +2613,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qbar3dseries.h",
-      "SPDXID": "SPDXRef-binary-file-143",
+      "SPDXID": "SPDXRef-binary-file-135",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2696,7 +2625,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QtDataVisualizationVersion",
-      "SPDXID": "SPDXRef-binary-file-144",
+      "SPDXID": "SPDXRef-binary-file-136",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2708,7 +2637,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QScatter3DSeries",
-      "SPDXID": "SPDXRef-binary-file-145",
+      "SPDXID": "SPDXRef-binary-file-137",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2720,7 +2649,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qtdatavisualizationversion.h",
-      "SPDXID": "SPDXRef-binary-file-146",
+      "SPDXID": "SPDXRef-binary-file-138",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2732,7 +2661,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qscatterdataitem.h",
-      "SPDXID": "SPDXRef-binary-file-147",
+      "SPDXID": "SPDXRef-binary-file-139",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2744,7 +2673,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qbardataproxy.h",
-      "SPDXID": "SPDXRef-binary-file-148",
+      "SPDXID": "SPDXRef-binary-file-140",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2756,7 +2685,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qcustom3ditem.h",
-      "SPDXID": "SPDXRef-binary-file-149",
+      "SPDXID": "SPDXRef-binary-file-141",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2768,7 +2697,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QSurfaceDataArray",
-      "SPDXID": "SPDXRef-binary-file-150",
+      "SPDXID": "SPDXRef-binary-file-142",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2780,7 +2709,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/Q3DSurface",
-      "SPDXID": "SPDXRef-binary-file-151",
+      "SPDXID": "SPDXRef-binary-file-143",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2792,7 +2721,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QAbstract3DAxis",
-      "SPDXID": "SPDXRef-binary-file-152",
+      "SPDXID": "SPDXRef-binary-file-144",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2804,7 +2733,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QScatterDataProxy",
-      "SPDXID": "SPDXRef-binary-file-153",
+      "SPDXID": "SPDXRef-binary-file-145",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2816,7 +2745,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qlogvalue3daxisformatter.h",
-      "SPDXID": "SPDXRef-binary-file-154",
+      "SPDXID": "SPDXRef-binary-file-146",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2828,7 +2757,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qscatterdataproxy.h",
-      "SPDXID": "SPDXRef-binary-file-155",
+      "SPDXID": "SPDXRef-binary-file-147",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2840,7 +2769,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QValue3DAxis",
-      "SPDXID": "SPDXRef-binary-file-156",
+      "SPDXID": "SPDXRef-binary-file-148",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2852,7 +2781,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/q3dbars.h",
-      "SPDXID": "SPDXRef-binary-file-157",
+      "SPDXID": "SPDXRef-binary-file-149",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2864,7 +2793,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/q3dscene.h",
-      "SPDXID": "SPDXRef-binary-file-158",
+      "SPDXID": "SPDXRef-binary-file-150",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2876,7 +2805,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QBar3DSeries",
-      "SPDXID": "SPDXRef-binary-file-159",
+      "SPDXID": "SPDXRef-binary-file-151",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2888,7 +2817,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/QItemModelScatterDataProxy",
-      "SPDXID": "SPDXRef-binary-file-160",
+      "SPDXID": "SPDXRef-binary-file-152",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2900,7 +2829,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qitemmodelsurfacedataproxy.h",
-      "SPDXID": "SPDXRef-binary-file-161",
+      "SPDXID": "SPDXRef-binary-file-153",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2912,7 +2841,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qsurfacedataproxy.h",
-      "SPDXID": "SPDXRef-binary-file-162",
+      "SPDXID": "SPDXRef-binary-file-154",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2924,7 +2853,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/qtouch3dinputhandler.h",
-      "SPDXID": "SPDXRef-binary-file-163",
+      "SPDXID": "SPDXRef-binary-file-155",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2936,7 +2865,7 @@
     },
     {
       "fileName": "./include/qt5/QtDataVisualization/Q3DCamera",
-      "SPDXID": "SPDXRef-binary-file-164",
+      "SPDXID": "SPDXRef-binary-file-156",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2948,11 +2877,11 @@
     },
     {
       "fileName": "./lib/libQt5DataVisualization.la",
-      "SPDXID": "SPDXRef-binary-file-165",
+      "SPDXID": "SPDXRef-binary-file-157",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d2b52b524f2703406da46d08a94e05b972f2f40d9e7c6f3e8cabc35d6b685ec7"
+          "checksumValue": "b4165765b1ed656b3c2f29301c87d18b042e91f788a9226ed9ecf7f96ff7c304"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -2960,11 +2889,35 @@
     },
     {
       "fileName": "./lib/libQt5DataVisualization.prl",
-      "SPDXID": "SPDXRef-binary-file-166",
+      "SPDXID": "SPDXRef-binary-file-158",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b9c109907c5e1e38a24fa29b380079104e14789599e2ee3a8f90c51b98928bab"
+          "checksumValue": "39df3358977b98d6d9a2426b94c178d4749ac963f4034da7af965414eb407d95"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libQt5DataVisualization.so",
+      "SPDXID": "SPDXRef-binary-file-159",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "758370519899e837af7313fb108359cbab2aba88c617317b1e6052317e7a33fe"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libQt5DataVisualization.so.5.15",
+      "SPDXID": "SPDXRef-binary-file-160",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "758370519899e837af7313fb108359cbab2aba88c617317b1e6052317e7a33fe"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -2972,47 +2925,35 @@
     },
     {
       "fileName": "./lib/pkgconfig/Qt5DataVisualization.pc",
-      "SPDXID": "SPDXRef-binary-file-167",
+      "SPDXID": "SPDXRef-binary-file-161",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e0649e8f7c68e49748f473d99b9bebb8d4c408e2972e7520290aa2adcde226aa"
+          "checksumValue": "b3dceafcb22cd21bf2d361ee97456454b188042df0b3cfc706f3b1a5d3b9b30e"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libQt5DataVisualization.a",
-      "SPDXID": "SPDXRef-binary-file-168",
+      "fileName": "./lib/libQt5DataVisualization.so.5",
+      "SPDXID": "SPDXRef-binary-file-162",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b4aae2682cecd760ee03f73d52357d90161953bd7992da1be8e542800e702e61"
+          "checksumValue": "758370519899e837af7313fb108359cbab2aba88c617317b1e6052317e7a33fe"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./tools/qt5/debug/mkspecs/modules/qt_lib_datavisualization_private.pri",
-      "SPDXID": "SPDXRef-binary-file-169",
+      "fileName": "./lib/libQt5DataVisualization.so.5.15.17",
+      "SPDXID": "SPDXRef-binary-file-163",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b97e2d696673eb9febb3b4dd86f921591dd6b3e46bbe785f06d61fc04d3ab6b9"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./tools/qt5/debug/mkspecs/modules/qt_lib_datavisualization.pri",
-      "SPDXID": "SPDXRef-binary-file-170",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "e9ccc91bdf5ff1247ee38f73b55fbccc5d4be7f4d5bf9b095b339fe828a8a6b5"
+          "checksumValue": "758370519899e837af7313fb108359cbab2aba88c617317b1e6052317e7a33fe"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -3020,11 +2961,11 @@
     },
     {
       "fileName": "./tools/qt5/mkspecs/modules/qt_lib_datavisualization_private.pri",
-      "SPDXID": "SPDXRef-binary-file-171",
+      "SPDXID": "SPDXRef-binary-file-164",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b97e2d696673eb9febb3b4dd86f921591dd6b3e46bbe785f06d61fc04d3ab6b9"
+          "checksumValue": "e43712f43554e5c4b875afb96af9eb52affc60e5b66146f441abb3b0ceb7db89"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -3032,23 +2973,179 @@
     },
     {
       "fileName": "./tools/qt5/mkspecs/modules/qt_lib_datavisualization.pri",
-      "SPDXID": "SPDXRef-binary-file-172",
+      "SPDXID": "SPDXRef-binary-file-165",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e9ccc91bdf5ff1247ee38f73b55fbccc5d4be7f4d5bf9b095b339fe828a8a6b5"
+          "checksumValue": "e7d7cfbe54a1d438f8281c04aad80932a2501bb0c93a1a70cfcfe04e03eaea57"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./qml/QtDataVisualization/libdatavisualizationqml2.a",
+      "fileName": "./qml/QtDataVisualization/designer/Bars3DSpecifics.qml",
+      "SPDXID": "SPDXRef-binary-file-166",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1fc47e9dfc147a35e414c96608a4517c69d46e314cc62252ac129dc2bb0ead8d"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./qml/QtDataVisualization/designer/default/Surface3D.qml",
+      "SPDXID": "SPDXRef-binary-file-167",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5e9f39ba4cfe457c6d1e4e357374e28ccc578d5501ba8296a95c3a9f69d562b8"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./qml/QtDataVisualization/designer/default/Bars3D.qml",
+      "SPDXID": "SPDXRef-binary-file-168",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "382bbe2f7461f387e7e9f7d3e13c158e8b7e4e6409038de02bdd24c353885b2f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./qml/QtDataVisualization/designer/default/Scatter3D.qml",
+      "SPDXID": "SPDXRef-binary-file-169",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a4a3c25ab99cdae4a521dd98e19c4cc6c386cdc6e2200de13f2060d84d536ab3"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./qml/QtDataVisualization/designer/qtdatavisualization.metainfo",
+      "SPDXID": "SPDXRef-binary-file-170",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f33edbd3cc07fd6ec82747c16d86b2bc648ed356e3e97397f85848e31b41ddce"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./qml/QtDataVisualization/designer/Surface3DSpecifics.qml",
+      "SPDXID": "SPDXRef-binary-file-171",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f414b5fb80c083383c7645de1a9245ec595b8aa8b8327f4b0ef6e0a4ef0f15fc"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./qml/QtDataVisualization/designer/Scatter3DSpecifics.qml",
+      "SPDXID": "SPDXRef-binary-file-172",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "28ef65c0917da61bc1e3165b5dc7aab571f63463520f3464cf1c0c24cb35447a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./qml/QtDataVisualization/designer/images/bars3d-icon16.png",
       "SPDXID": "SPDXRef-binary-file-173",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "957f2fd15196cd32d6f71f01fb9fc49bca5d6467d939533249a4bb40c9465cc1"
+          "checksumValue": "055f241985f73cabb81d30aba5a4c4ea365213ed89481eba138c60b5b74be3ba"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./qml/QtDataVisualization/designer/images/bars3d-icon.png",
+      "SPDXID": "SPDXRef-binary-file-174",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b30d9579bdfe2d5013978fd7382165977595c86728ca90c7acf13b16a9f71e6c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./qml/QtDataVisualization/designer/images/surface3d-icon.png",
+      "SPDXID": "SPDXRef-binary-file-175",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6e14b24ed156a983c23cf6f04f782ea412991ce6058c3033afc42f787b60295c"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./qml/QtDataVisualization/designer/images/surface3d-icon16.png",
+      "SPDXID": "SPDXRef-binary-file-176",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "89cc3a126f1c0a129d85059c3a56eaa8ed307e3303ceb2eb971a3ba78ea84cc4"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./qml/QtDataVisualization/designer/images/scatter3d-icon16.png",
+      "SPDXID": "SPDXRef-binary-file-177",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ebef12dec0ffb5e7120012721eb871cf3a164967907144f45253bb9a9fd138c3"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./qml/QtDataVisualization/designer/images/scatter3d-icon.png",
+      "SPDXID": "SPDXRef-binary-file-178",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fce1b4064669a6f86d60bb4f91c83c88856e85853184c49f72472c716617bf8e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./qml/QtDataVisualization/libdatavisualizationqml2.so",
+      "SPDXID": "SPDXRef-binary-file-179",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5b8ee616641bfb323a31e130ab655fda7c65f1fafcebcc12a391a862a1dacc38"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -3056,7 +3153,7 @@
     },
     {
       "fileName": "./qml/QtDataVisualization/plugins.qmltypes",
-      "SPDXID": "SPDXRef-binary-file-174",
+      "SPDXID": "SPDXRef-binary-file-180",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3067,20 +3164,8 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./qml/QtDataVisualization/libdatavisualizationqml2.prl",
-      "SPDXID": "SPDXRef-binary-file-175",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "0b497910f20193b508b87c48be4719b2fa3d207d9bdca087ca555a5bc0d89ab4"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./qml/QtDataVisualization/qmldir",
-      "SPDXID": "SPDXRef-binary-file-176",
+      "SPDXID": "SPDXRef-binary-file-181",
       "checksums": [
         {
           "algorithm": "SHA256",

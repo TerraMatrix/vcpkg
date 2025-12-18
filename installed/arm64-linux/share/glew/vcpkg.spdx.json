@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/glew-arm64-linux-2.2.0#6-9a86e2d2-057a-4140-bb90-892776a5b893",
-  "name": "glew:arm64-linux@2.2.0#6 65dc52416ac5d92adc5a6556e703af8be5399d756a3427aa7e192c97f33f0275",
+  "documentNamespace": "https://spdx.org/spdxdocs/glew-arm64-linux-2.2.0#6-2966bc2e-8bb1-40ac-8c58-14cb10e0a54b",
+  "name": "glew:arm64-linux@2.2.0#6 6118c32b14621b38dd17a8803e139fdd82b30dd5679f3ff71fb7c5d13125a89d",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T02:04:36Z"
+    "created": "2025-12-16T10:29:11Z"
   },
   "relationships": [
     {
@@ -131,11 +131,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-14"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-15"
     }
   ],
   "packages": [
@@ -154,7 +149,7 @@
     {
       "name": "glew:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "65dc52416ac5d92adc5a6556e703af8be5399d756a3427aa7e192c97f33f0275",
+      "versionInfo": "6118c32b14621b38dd17a8803e139fdd82b30dd5679f3ff71fb7c5d13125a89d",
       "downloadLocation": "NONE",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
@@ -268,31 +263,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libGLEWd.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "3c2e62ccce81d586a4ba4cbb0a04b8dc5e12746a684769c0bcbc20d74e7e3a62"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/glew.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "bb6fb4d3c08063ce5fcb5e5f72ce16574e0896f55f351578b5006be129159fdf"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -300,7 +271,7 @@
     },
     {
       "fileName": "./share/glew/glew-config.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -312,7 +283,7 @@
     },
     {
       "fileName": "./share/glew/vcpkg-cmake-wrapper.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -324,7 +295,7 @@
     },
     {
       "fileName": "./share/glew/copyright",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -335,24 +306,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/glew/glew-targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "ae3d4a6a9694f2d1703ef9d8215e6c77f737331a518428ac69e8f1a30219b1b6"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/glew/glew-targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "bdc698bb744bd6f7dfdabf4cd1824e80d14f38aa06ea9dacd674722e1c3be637"
+          "checksumValue": "cdb99bc8b1432e827c1b5b089d30d60d2f977bac3de85d39b49d598b6d7fd764"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -360,7 +319,7 @@
     },
     {
       "fileName": "./share/glew/CopyImportedTargetProperties.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -372,11 +331,11 @@
     },
     {
       "fileName": "./share/glew/glew-targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b308f39a4b9d3fede29f33aa8d3a56d73c3227b9d73f7cdd640e33861ecf3ae9"
+          "checksumValue": "652eb83d302e62b899ce15f20dc4d422e340bdfec21cf1b82ce599cb4afefa1a"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -384,7 +343,7 @@
     },
     {
       "fileName": "./share/glew/usage",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -396,11 +355,11 @@
     },
     {
       "fileName": "./include/GL/glew.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "09813d11cded9a789364937052a12a68579b3479c4426c80c2d11cc15cf42ea1"
+          "checksumValue": "61cd17d17af24109ec49a0437e556201880e5de67b83d21fd4d7b13fb411693a"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -408,7 +367,7 @@
     },
     {
       "fileName": "./include/GL/glxew.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -420,23 +379,47 @@
     },
     {
       "fileName": "./include/GL/wglew.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "4ed212490f3fd23e3b066709ed77b6c71ee5dbd1d66c73e4e83993245961c1e1"
+          "checksumValue": "f9cca214f4d1937068d42de9be921b37a6d86e90c090b8a1b9649231be053c8d"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libGLEW.a",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "fileName": "./lib/libGLEW.so.2.2.0",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "def8b395a07b6c31c4a341229099766ee8cd0a23bb02d08146db488dd35b6e1d"
+          "checksumValue": "5be0344b730959cadcc6ec3de1b695e7e1862d8173f4aadda1055940ef36e84d"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libGLEW.so.2.2",
+      "SPDXID": "SPDXRef-binary-file-12",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5be0344b730959cadcc6ec3de1b695e7e1862d8173f4aadda1055940ef36e84d"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libGLEW.so",
+      "SPDXID": "SPDXRef-binary-file-13",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5be0344b730959cadcc6ec3de1b695e7e1862d8173f4aadda1055940ef36e84d"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -444,11 +427,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/glew.pc",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "5c17bfe7f086cb4b2e8a61575c563c39afcfdc930ac85fe5e4df14aae5a7501e"
+          "checksumValue": "c1800f5fce2cc225212a3ad141a41809f6a2c965575b6ae3d4a979679d390fe6"
         }
       ],
       "licenseConcluded": "NOASSERTION",

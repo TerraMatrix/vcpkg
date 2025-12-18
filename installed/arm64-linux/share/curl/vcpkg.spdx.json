@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/curl-arm64-linux-8.16.0-2b94c23c-9dd2-495f-a017-7f3cde51074d",
-  "name": "curl:arm64-linux@8.16.0 4e60b347be672202cdefa2ff9827182b5c97f3120631535ff8004eb2be2d5612",
+  "documentNamespace": "https://spdx.org/spdxdocs/curl-arm64-linux-8.16.0-1d4b0289-ca0e-4b82-ac3b-790b759acf93",
+  "name": "curl:arm64-linux@8.16.0 40671e3c0b950574b643b8519311ea4e1ebfafd2a8c8159c81ee2786b184525b",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-19T02:52:03Z"
+    "created": "2025-12-17T02:00:36Z"
   },
   "relationships": [
     {
@@ -181,16 +181,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-24"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-25"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-26"
     }
   ],
   "packages": [
@@ -209,7 +199,7 @@
     {
       "name": "curl:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "4e60b347be672202cdefa2ff9827182b5c97f3120631535ff8004eb2be2d5612",
+      "versionInfo": "40671e3c0b950574b643b8519311ea4e1ebfafd2a8c8159c81ee2786b184525b",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-3-Clause AND ISC AND curl",
       "licenseDeclared": "NOASSERTION",
@@ -322,31 +312,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libcurl-d.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "3db53668d3aa3f421811675acb8080ffe3f796803ad12e6f10ecf4be021d1e83"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libcurl.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "2ccd841fb23de7e3c3c2485b5505d0c07c5659d31c98824ab050cedb39d9fa7a"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -354,11 +320,11 @@
     },
     {
       "fileName": "./share/curl/CURLTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "0664870e08515d50ddf034b2b9af203f57c22097fd3ca77fd450d014d096e541"
+          "checksumValue": "684d6a12d5cb7ce9f5a2ea060803464bc9f424d514527e5dfd5c7d93c0317c8c"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -366,11 +332,11 @@
     },
     {
       "fileName": "./share/curl/CURLConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "c9258d041264835eca8c64d7987c8349404ff429e0f9946084ed360842c2a85b"
+          "checksumValue": "84e2fd109e2436c39f5f0d810014febc54d2509ff8f8d83022bbe4e0e8ffb233"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -378,7 +344,7 @@
     },
     {
       "fileName": "./share/curl/vcpkg-cmake-wrapper.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -390,7 +356,7 @@
     },
     {
       "fileName": "./share/curl/copyright",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -402,7 +368,7 @@
     },
     {
       "fileName": "./share/curl/CURLConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -413,24 +379,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/curl/CURLTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "18e7341b2fd479ca4b196a60191bf1b4e6d81d78dd235fe80ce98d0f4b4b3586"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/curl/CURLTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "dd3d614ae96b55bb4fe6e72008e77ababd84f5017f88ac1a57c5a55ec9e6b331"
+          "checksumValue": "72368b1b0aa32765bf955563fbce72520a0af97d53b49da0e7a431d1aae1c1ef"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -438,7 +392,7 @@
     },
     {
       "fileName": "./share/curl/usage",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -450,7 +404,7 @@
     },
     {
       "fileName": "./include/curl/curlver.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -462,7 +416,7 @@
     },
     {
       "fileName": "./include/curl/header.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -474,7 +428,7 @@
     },
     {
       "fileName": "./include/curl/urlapi.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -486,7 +440,7 @@
     },
     {
       "fileName": "./include/curl/typecheck-gcc.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -498,7 +452,7 @@
     },
     {
       "fileName": "./include/curl/options.h",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -510,7 +464,7 @@
     },
     {
       "fileName": "./include/curl/websockets.h",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -522,7 +476,7 @@
     },
     {
       "fileName": "./include/curl/easy.h",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -534,7 +488,7 @@
     },
     {
       "fileName": "./include/curl/multi.h",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -546,7 +500,7 @@
     },
     {
       "fileName": "./include/curl/system.h",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -558,7 +512,7 @@
     },
     {
       "fileName": "./include/curl/stdcheaders.h",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -570,11 +524,11 @@
     },
     {
       "fileName": "./include/curl/curl.h",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d1970164eacf5cc83d1a5f93276bdd93fb86f30f43761caa2d1c2eef7b6fff3f"
+          "checksumValue": "b9e8eb6651d9b880bc21b5906886f902f8efb186b220994c12c4a84ad69d0852"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -582,7 +536,7 @@
     },
     {
       "fileName": "./include/curl/mprintf.h",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -593,12 +547,36 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libcurl.a",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "fileName": "./lib/libcurl.so.4.8.0",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d7d9aeb01eeb37d9a4bab03138a2b30287fc06330849b3243849ef8c0104861b"
+          "checksumValue": "05b2d92b27bdab26f15cc83a81e79f0ea77a8559645109e0e8670e43c1ffaadf"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libcurl.so",
+      "SPDXID": "SPDXRef-binary-file-21",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "05b2d92b27bdab26f15cc83a81e79f0ea77a8559645109e0e8670e43c1ffaadf"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libcurl.so.4",
+      "SPDXID": "SPDXRef-binary-file-22",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "05b2d92b27bdab26f15cc83a81e79f0ea77a8559645109e0e8670e43c1ffaadf"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -606,23 +584,11 @@
     },
     {
       "fileName": "./lib/pkgconfig/libcurl.pc",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "db9f1142ddaafc8e6f59d787b14d3b7cf33d606d8de468915352df55d5b3befd"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./tools/curl/debug/bin/curl-config",
-      "SPDXID": "SPDXRef-binary-file-25",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "69832b55107d22f2c78fba53b580ae06ec86c16e7236209777b578cd924d6268"
+          "checksumValue": "ec3a8fbb4af0e20b7daa7cb373e373b7f1bef27f6dbae1d7e0a3079def1d2920"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -630,11 +596,11 @@
     },
     {
       "fileName": "./tools/curl/bin/curl-config",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ae24fbffa08b88c389fd312893d27a9c43396db174ffd1e04f066ce849c6250c"
+          "checksumValue": "faf99f340ba5bc57557d9adec8ea929910e62d50ddc90960491694928c77de84"
         }
       ],
       "licenseConcluded": "NOASSERTION",

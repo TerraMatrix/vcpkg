@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/lz4-arm64-linux-1.10.0-14ae095e-ba8d-46a8-b9fb-ec8ed283e43a",
-  "name": "lz4:arm64-linux@1.10.0 8f81ed410501af7c621ecdd5fc67f980bbdd2876d20c6b1cd6ae019da2ae8313",
+  "documentNamespace": "https://spdx.org/spdxdocs/lz4-arm64-linux-1.10.0-2c0b63f2-dcd9-4a7f-8b39-920cb9e532f1",
+  "name": "lz4:arm64-linux@1.10.0 535c9a6e6d72f1565ef43288b30c77958f4bb6f24e2204294c9da65ced4c7243",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-18T09:31:12Z"
+    "created": "2025-12-16T10:22:34Z"
   },
   "relationships": [
     {
@@ -121,11 +121,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-15"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-16"
     }
   ],
   "packages": [
@@ -144,7 +139,7 @@
     {
       "name": "lz4:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "8f81ed410501af7c621ecdd5fc67f980bbdd2876d20c6b1cd6ae019da2ae8313",
+      "versionInfo": "535c9a6e6d72f1565ef43288b30c77958f4bb6f24e2204294c9da65ced4c7243",
       "downloadLocation": "NONE",
       "licenseConcluded": "BSD-2-Clause",
       "licenseDeclared": "NOASSERTION",
@@ -221,31 +216,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/liblz4.pc",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "d4143331de6072d76e4eaea065cf8e22b071dcc8ca767de83602deb12bcc8746"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/liblz4d.a",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "e3dcdaecba24e18d0f1031f8effd54536aac8e1eb995dccb91ad8c667a661010"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -253,7 +224,7 @@
     },
     {
       "fileName": "./share/man/man1/lz4.1",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -265,7 +236,7 @@
     },
     {
       "fileName": "./share/lz4/copyright",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -277,7 +248,7 @@
     },
     {
       "fileName": "./share/lz4/lz4ConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -288,24 +259,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/lz4/lz4Targets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "aa7278c0ff06dca4064735aad169bc1bcdb00145ea7876077b0023f99dfe7bb1"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/lz4/lz4Targets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "6187fc63a778d24c39e2ce0b940866f575d38817fa0ae412c5d37fca1ce02025"
+          "checksumValue": "12df26853191385c3055eda410c67df7d5976959a1180e2bc8a6a9c98dd4eb2b"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -313,11 +272,11 @@
     },
     {
       "fileName": "./share/lz4/lz4Targets.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e1b4a92736fb4ef879e84c0bcb4a9c5eda81d47a66ea4ccc04ac37b7e9373fc1"
+          "checksumValue": "0b592134508805306ba6776513c9eabb22d881feded12e58966b599faaefc66c"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -325,11 +284,11 @@
     },
     {
       "fileName": "./share/lz4/lz4Config.cmake",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e7fb2d8f61e25ec7fe644db3954779654e29f3c813351b771dcf424c554c1d56"
+          "checksumValue": "62519fffce5fdb8480eaee54e17298254e7fd85bd270595962565dbff398d9c4"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -337,7 +296,7 @@
     },
     {
       "fileName": "./share/lz4/usage",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -349,11 +308,11 @@
     },
     {
       "fileName": "./include/lz4.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "1aba46b2e125521e51a187c39d23336878b9d3a484c76828058117553615f1fe"
+          "checksumValue": "14ea25c0933270e8e15c0084ccfc880ebf303830c5063f1ae79a7a8fd79547b8"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -361,11 +320,11 @@
     },
     {
       "fileName": "./include/lz4frame.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "5dd371c6f58b8396f06cae8cf662a7202dbfb3d754140c5acc4757de18f8c3c4"
+          "checksumValue": "f3d15865353f750a00640632d1477194f0ad2420436f1ec5fe29e2143577cab5"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -373,7 +332,7 @@
     },
     {
       "fileName": "./include/lz4hc.h",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -385,7 +344,7 @@
     },
     {
       "fileName": "./include/lz4file.h",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -396,24 +355,48 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/pkgconfig/liblz4.pc",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "fileName": "./lib/liblz4.so.1",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "debaaa96234230b9c41c43d9ca186fcabc4aa3572320dd538384126b9e0eb30c"
+          "checksumValue": "c4ed2350ccacaa998ff447430a7174bd031e7dc0bbc32589da6bb33b50edb895"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/liblz4.a",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "fileName": "./lib/liblz4.so",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "1b1615e750c50964c5b673804ff3d66c7c32c465df4b26dc2e5d28a38c55f804"
+          "checksumValue": "c4ed2350ccacaa998ff447430a7174bd031e7dc0bbc32589da6bb33b50edb895"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/pkgconfig/liblz4.pc",
+      "SPDXID": "SPDXRef-binary-file-14",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9345dec2fc45bc84f4d29708ca2ac4dbfd9c87233ea0f61d559bb24419fe4ffb"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/liblz4.so.1.10.0",
+      "SPDXID": "SPDXRef-binary-file-15",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c4ed2350ccacaa998ff447430a7174bd031e7dc0bbc32589da6bb33b50edb895"
         }
       ],
       "licenseConcluded": "NOASSERTION",

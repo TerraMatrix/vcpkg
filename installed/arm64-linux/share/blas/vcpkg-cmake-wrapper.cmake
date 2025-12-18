@@ -3,7 +3,7 @@
 # * https://cmake.org/cmake/help/latest/module/FindLAPACK.html
 
 set(BLA_VENDOR OpenBLAS)
-set(BLA_STATIC ON)
+set(BLA_STATIC OFF)
 _find_package(${ARGS})
 unset(BLA_VENDOR)
 unset(BLA_STATIC)

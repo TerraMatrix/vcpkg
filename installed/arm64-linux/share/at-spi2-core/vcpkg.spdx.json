@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/at-spi2-core-arm64-linux-2.44.1#4-b81f1d35-0753-44ad-af38-00f2b35a9ad5",
-  "name": "at-spi2-core:arm64-linux@2.44.1#4 c1c7f006de3f8f67f7dc3edb08e36bf14116e2f071ae2063ded7b6d740767637",
+  "documentNamespace": "https://spdx.org/spdxdocs/at-spi2-core-arm64-linux-2.44.1#4-df19796c-dc57-4d14-b806-ae0ac10d8096",
+  "name": "at-spi2-core:arm64-linux@2.44.1#4 c11d61866b11bda52d7e6721235d878bd875793b209bc87a8e3fbae9dfea6fd9",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-27T09:14:11Z"
+    "created": "2025-12-17T02:35:33Z"
   },
   "relationships": [
     {
@@ -616,31 +616,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-116"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-117"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-118"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-119"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-120"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-121"
     }
   ],
   "packages": [
@@ -659,7 +634,7 @@
     {
       "name": "at-spi2-core:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "c1c7f006de3f8f67f7dc3edb08e36bf14116e2f071ae2063ded7b6d740767637",
+      "versionInfo": "c11d61866b11bda52d7e6721235d878bd875793b209bc87a8e3fbae9dfea6fd9",
       "downloadLocation": "NONE",
       "licenseConcluded": "LicenseRef-vcpkg-null",
       "licenseDeclared": "NOASSERTION",
@@ -712,91 +687,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/libexec/at-spi2-registryd",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "d9613d35fcd4e58e3a33f75967d2e63d0a012d8cda287d7f476ca67059a3677e"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/libexec/at-spi-bus-launcher",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "179644aa978b178c97efc2dbefae36ddfc21a6936b00cb4f5fdbe3a552d95497"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libatspi.a",
-      "SPDXID": "SPDXRef-binary-file-3",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "2af6485ef31a16c98ca4c9188a002cc1a45c95cc32b97f76582241b88423dba4"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/systemd/user/at-spi-dbus-bus.service",
-      "SPDXID": "SPDXRef-binary-file-4",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "97c159b3a76b7f4e09f892db5502ffbe97080ef8afbcbdc30d37ab38047e6884"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/atspi-2.pc",
-      "SPDXID": "SPDXRef-binary-file-5",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "7adaa1fbbfae9369c301440a7461a44e038c8b1fe6621ad8f4ab4b5d0afb9a6d"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/etc/xdg/Xwayland-session.d/00-at-spi",
-      "SPDXID": "SPDXRef-binary-file-6",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "f6484e2febe3b767cb00710eca64de18ca2f8a2de1e679951682bcf5698beb05"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/etc/xdg/autostart/at-spi-dbus-bus.desktop",
-      "SPDXID": "SPDXRef-binary-file-7",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "e7af6a8bd32a4d05c3b8381864913af211b42c4d5d987b95a185f9476814874e"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -804,11 +695,11 @@
     },
     {
       "fileName": "./libexec/at-spi2-registryd",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "7102bf1e1b7c99ff03a181793661c4c25c54cc64b61b8611a3b7f3a924207af9"
+          "checksumValue": "6f951746dd8e703adc7e130bd5ce20c6f995968cefabcfdefb8e416a6490b1a5"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -816,11 +707,11 @@
     },
     {
       "fileName": "./libexec/at-spi-bus-launcher",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ef315d4e4deb191b0953fd51e91f3c1aae2ac6e2f5b5c05ef3f23d0d04af9b34"
+          "checksumValue": "7cb364bb0a648e5bf476872ec85edbb6f10046b3a58cca7b640ffa10761c382a"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -828,7 +719,7 @@
     },
     {
       "fileName": "./share/at-spi2-core/copyright",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -840,7 +731,7 @@
     },
     {
       "fileName": "./share/locale/en_GB/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -852,7 +743,7 @@
     },
     {
       "fileName": "./share/locale/ug/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -864,7 +755,7 @@
     },
     {
       "fileName": "./share/locale/el/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -876,7 +767,7 @@
     },
     {
       "fileName": "./share/locale/tg/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -888,7 +779,7 @@
     },
     {
       "fileName": "./share/locale/ru/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-15",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -900,7 +791,7 @@
     },
     {
       "fileName": "./share/locale/pa/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-16",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -912,7 +803,7 @@
     },
     {
       "fileName": "./share/locale/bs/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-17",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -924,7 +815,7 @@
     },
     {
       "fileName": "./share/locale/eu/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-18",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -936,7 +827,7 @@
     },
     {
       "fileName": "./share/locale/is/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-19",
+      "SPDXID": "SPDXRef-binary-file-12",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -948,7 +839,7 @@
     },
     {
       "fileName": "./share/locale/pl/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-20",
+      "SPDXID": "SPDXRef-binary-file-13",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -960,7 +851,7 @@
     },
     {
       "fileName": "./share/locale/lt/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-21",
+      "SPDXID": "SPDXRef-binary-file-14",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -972,7 +863,7 @@
     },
     {
       "fileName": "./share/locale/cs/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-22",
+      "SPDXID": "SPDXRef-binary-file-15",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -984,7 +875,7 @@
     },
     {
       "fileName": "./share/locale/ja/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-23",
+      "SPDXID": "SPDXRef-binary-file-16",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -996,7 +887,7 @@
     },
     {
       "fileName": "./share/locale/be/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-24",
+      "SPDXID": "SPDXRef-binary-file-17",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1008,7 +899,7 @@
     },
     {
       "fileName": "./share/locale/gl/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-25",
+      "SPDXID": "SPDXRef-binary-file-18",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1020,7 +911,7 @@
     },
     {
       "fileName": "./share/locale/fr/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-26",
+      "SPDXID": "SPDXRef-binary-file-19",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1032,7 +923,7 @@
     },
     {
       "fileName": "./share/locale/mr/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-27",
+      "SPDXID": "SPDXRef-binary-file-20",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1044,7 +935,7 @@
     },
     {
       "fileName": "./share/locale/gd/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-28",
+      "SPDXID": "SPDXRef-binary-file-21",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1056,7 +947,7 @@
     },
     {
       "fileName": "./share/locale/it/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-29",
+      "SPDXID": "SPDXRef-binary-file-22",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1068,7 +959,7 @@
     },
     {
       "fileName": "./share/locale/hr/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-30",
+      "SPDXID": "SPDXRef-binary-file-23",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1080,7 +971,7 @@
     },
     {
       "fileName": "./share/locale/ne/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-31",
+      "SPDXID": "SPDXRef-binary-file-24",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1092,7 +983,7 @@
     },
     {
       "fileName": "./share/locale/ca@valencia/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-32",
+      "SPDXID": "SPDXRef-binary-file-25",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1104,7 +995,7 @@
     },
     {
       "fileName": "./share/locale/te/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-33",
+      "SPDXID": "SPDXRef-binary-file-26",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1116,7 +1007,7 @@
     },
     {
       "fileName": "./share/locale/fur/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-34",
+      "SPDXID": "SPDXRef-binary-file-27",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1128,7 +1019,7 @@
     },
     {
       "fileName": "./share/locale/ro/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-35",
+      "SPDXID": "SPDXRef-binary-file-28",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1140,7 +1031,7 @@
     },
     {
       "fileName": "./share/locale/pt_BR/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-36",
+      "SPDXID": "SPDXRef-binary-file-29",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1152,7 +1043,7 @@
     },
     {
       "fileName": "./share/locale/sr/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-37",
+      "SPDXID": "SPDXRef-binary-file-30",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1164,7 +1055,7 @@
     },
     {
       "fileName": "./share/locale/ml/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-38",
+      "SPDXID": "SPDXRef-binary-file-31",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1176,7 +1067,7 @@
     },
     {
       "fileName": "./share/locale/sq/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-39",
+      "SPDXID": "SPDXRef-binary-file-32",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1188,7 +1079,7 @@
     },
     {
       "fileName": "./share/locale/kk/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-40",
+      "SPDXID": "SPDXRef-binary-file-33",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1200,7 +1091,7 @@
     },
     {
       "fileName": "./share/locale/sk/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-41",
+      "SPDXID": "SPDXRef-binary-file-34",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1212,7 +1103,7 @@
     },
     {
       "fileName": "./share/locale/gu/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-42",
+      "SPDXID": "SPDXRef-binary-file-35",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1224,7 +1115,7 @@
     },
     {
       "fileName": "./share/locale/fi/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-43",
+      "SPDXID": "SPDXRef-binary-file-36",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1236,7 +1127,7 @@
     },
     {
       "fileName": "./share/locale/tr/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-44",
+      "SPDXID": "SPDXRef-binary-file-37",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1248,7 +1139,7 @@
     },
     {
       "fileName": "./share/locale/sv/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-45",
+      "SPDXID": "SPDXRef-binary-file-38",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1260,7 +1151,7 @@
     },
     {
       "fileName": "./share/locale/sl/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-46",
+      "SPDXID": "SPDXRef-binary-file-39",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1272,7 +1163,7 @@
     },
     {
       "fileName": "./share/locale/as/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-47",
+      "SPDXID": "SPDXRef-binary-file-40",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1284,7 +1175,7 @@
     },
     {
       "fileName": "./share/locale/pt/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-48",
+      "SPDXID": "SPDXRef-binary-file-41",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1296,7 +1187,7 @@
     },
     {
       "fileName": "./share/locale/ast/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-49",
+      "SPDXID": "SPDXRef-binary-file-42",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1308,7 +1199,7 @@
     },
     {
       "fileName": "./share/locale/uz@cyrillic/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-50",
+      "SPDXID": "SPDXRef-binary-file-43",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1320,7 +1211,7 @@
     },
     {
       "fileName": "./share/locale/en_CA/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-51",
+      "SPDXID": "SPDXRef-binary-file-44",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1332,7 +1223,7 @@
     },
     {
       "fileName": "./share/locale/nl/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-52",
+      "SPDXID": "SPDXRef-binary-file-45",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1344,7 +1235,7 @@
     },
     {
       "fileName": "./share/locale/ab/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-53",
+      "SPDXID": "SPDXRef-binary-file-46",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1356,7 +1247,7 @@
     },
     {
       "fileName": "./share/locale/sr@latin/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-54",
+      "SPDXID": "SPDXRef-binary-file-47",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1368,7 +1259,7 @@
     },
     {
       "fileName": "./share/locale/da/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-55",
+      "SPDXID": "SPDXRef-binary-file-48",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1380,7 +1271,7 @@
     },
     {
       "fileName": "./share/locale/bg/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-56",
+      "SPDXID": "SPDXRef-binary-file-49",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1392,7 +1283,7 @@
     },
     {
       "fileName": "./share/locale/lv/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-57",
+      "SPDXID": "SPDXRef-binary-file-50",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1404,7 +1295,7 @@
     },
     {
       "fileName": "./share/locale/fa/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-58",
+      "SPDXID": "SPDXRef-binary-file-51",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1416,7 +1307,7 @@
     },
     {
       "fileName": "./share/locale/ta/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-59",
+      "SPDXID": "SPDXRef-binary-file-52",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1428,7 +1319,7 @@
     },
     {
       "fileName": "./share/locale/bn_IN/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-60",
+      "SPDXID": "SPDXRef-binary-file-53",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1440,7 +1331,7 @@
     },
     {
       "fileName": "./share/locale/hi/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-61",
+      "SPDXID": "SPDXRef-binary-file-54",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1452,7 +1343,7 @@
     },
     {
       "fileName": "./share/locale/km/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-62",
+      "SPDXID": "SPDXRef-binary-file-55",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1464,7 +1355,7 @@
     },
     {
       "fileName": "./share/locale/hu/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-63",
+      "SPDXID": "SPDXRef-binary-file-56",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1476,7 +1367,7 @@
     },
     {
       "fileName": "./share/locale/zh_TW/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-64",
+      "SPDXID": "SPDXRef-binary-file-57",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1488,7 +1379,7 @@
     },
     {
       "fileName": "./share/locale/or/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-65",
+      "SPDXID": "SPDXRef-binary-file-58",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1500,7 +1391,7 @@
     },
     {
       "fileName": "./share/locale/oc/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-66",
+      "SPDXID": "SPDXRef-binary-file-59",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1512,7 +1403,7 @@
     },
     {
       "fileName": "./share/locale/an/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-67",
+      "SPDXID": "SPDXRef-binary-file-60",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1524,7 +1415,7 @@
     },
     {
       "fileName": "./share/locale/vi/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-68",
+      "SPDXID": "SPDXRef-binary-file-61",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1536,7 +1427,7 @@
     },
     {
       "fileName": "./share/locale/et/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-69",
+      "SPDXID": "SPDXRef-binary-file-62",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1548,7 +1439,7 @@
     },
     {
       "fileName": "./share/locale/ms/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-70",
+      "SPDXID": "SPDXRef-binary-file-63",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1560,7 +1451,7 @@
     },
     {
       "fileName": "./share/locale/zh_CN/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-71",
+      "SPDXID": "SPDXRef-binary-file-64",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1572,7 +1463,7 @@
     },
     {
       "fileName": "./share/locale/id/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-72",
+      "SPDXID": "SPDXRef-binary-file-65",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1584,7 +1475,7 @@
     },
     {
       "fileName": "./share/locale/he/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-73",
+      "SPDXID": "SPDXRef-binary-file-66",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1596,7 +1487,7 @@
     },
     {
       "fileName": "./share/locale/zh_HK/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-74",
+      "SPDXID": "SPDXRef-binary-file-67",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1608,7 +1499,7 @@
     },
     {
       "fileName": "./share/locale/ko/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-75",
+      "SPDXID": "SPDXRef-binary-file-68",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1620,7 +1511,7 @@
     },
     {
       "fileName": "./share/locale/eo/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-76",
+      "SPDXID": "SPDXRef-binary-file-69",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1632,7 +1523,7 @@
     },
     {
       "fileName": "./share/locale/ga/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-77",
+      "SPDXID": "SPDXRef-binary-file-70",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1644,7 +1535,7 @@
     },
     {
       "fileName": "./share/locale/es/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-78",
+      "SPDXID": "SPDXRef-binary-file-71",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1656,7 +1547,7 @@
     },
     {
       "fileName": "./share/locale/nb/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-79",
+      "SPDXID": "SPDXRef-binary-file-72",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1668,7 +1559,7 @@
     },
     {
       "fileName": "./share/locale/ca/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-80",
+      "SPDXID": "SPDXRef-binary-file-73",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1680,7 +1571,7 @@
     },
     {
       "fileName": "./share/locale/kn/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-81",
+      "SPDXID": "SPDXRef-binary-file-74",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1692,7 +1583,7 @@
     },
     {
       "fileName": "./share/locale/de/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-82",
+      "SPDXID": "SPDXRef-binary-file-75",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1704,7 +1595,7 @@
     },
     {
       "fileName": "./share/locale/uk/LC_MESSAGES/at-spi2-core.mo",
-      "SPDXID": "SPDXRef-binary-file-83",
+      "SPDXID": "SPDXRef-binary-file-76",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1716,7 +1607,7 @@
     },
     {
       "fileName": "./share/dbus-1/accessibility-services/org.a11y.atspi.Registry.service",
-      "SPDXID": "SPDXRef-binary-file-84",
+      "SPDXID": "SPDXRef-binary-file-77",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1728,7 +1619,7 @@
     },
     {
       "fileName": "./share/dbus-1/services/org.a11y.Bus.service",
-      "SPDXID": "SPDXRef-binary-file-85",
+      "SPDXID": "SPDXRef-binary-file-78",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1740,7 +1631,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-hypertext.h",
-      "SPDXID": "SPDXRef-binary-file-86",
+      "SPDXID": "SPDXRef-binary-file-79",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1752,7 +1643,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-constants.h",
-      "SPDXID": "SPDXRef-binary-file-87",
+      "SPDXID": "SPDXRef-binary-file-80",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1764,7 +1655,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-object.h",
-      "SPDXID": "SPDXRef-binary-file-88",
+      "SPDXID": "SPDXRef-binary-file-81",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1776,7 +1667,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-collection.h",
-      "SPDXID": "SPDXRef-binary-file-89",
+      "SPDXID": "SPDXRef-binary-file-82",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1788,7 +1679,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-selection.h",
-      "SPDXID": "SPDXRef-binary-file-90",
+      "SPDXID": "SPDXRef-binary-file-83",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1800,7 +1691,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-misc.h",
-      "SPDXID": "SPDXRef-binary-file-91",
+      "SPDXID": "SPDXRef-binary-file-84",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1812,7 +1703,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-table-cell.h",
-      "SPDXID": "SPDXRef-binary-file-92",
+      "SPDXID": "SPDXRef-binary-file-85",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1824,7 +1715,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-gmain.h",
-      "SPDXID": "SPDXRef-binary-file-93",
+      "SPDXID": "SPDXRef-binary-file-86",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1836,7 +1727,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-stateset.h",
-      "SPDXID": "SPDXRef-binary-file-94",
+      "SPDXID": "SPDXRef-binary-file-87",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1848,7 +1739,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-types.h",
-      "SPDXID": "SPDXRef-binary-file-95",
+      "SPDXID": "SPDXRef-binary-file-88",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1860,7 +1751,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-document.h",
-      "SPDXID": "SPDXRef-binary-file-96",
+      "SPDXID": "SPDXRef-binary-file-89",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1872,7 +1763,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-registry.h",
-      "SPDXID": "SPDXRef-binary-file-97",
+      "SPDXID": "SPDXRef-binary-file-90",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1884,7 +1775,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-matchrule.h",
-      "SPDXID": "SPDXRef-binary-file-98",
+      "SPDXID": "SPDXRef-binary-file-91",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1896,7 +1787,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-editabletext.h",
-      "SPDXID": "SPDXRef-binary-file-99",
+      "SPDXID": "SPDXRef-binary-file-92",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1908,7 +1799,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-enum-types.h",
-      "SPDXID": "SPDXRef-binary-file-100",
+      "SPDXID": "SPDXRef-binary-file-93",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1920,7 +1811,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-value.h",
-      "SPDXID": "SPDXRef-binary-file-101",
+      "SPDXID": "SPDXRef-binary-file-94",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1932,7 +1823,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-table.h",
-      "SPDXID": "SPDXRef-binary-file-102",
+      "SPDXID": "SPDXRef-binary-file-95",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1944,7 +1835,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-action.h",
-      "SPDXID": "SPDXRef-binary-file-103",
+      "SPDXID": "SPDXRef-binary-file-96",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1956,7 +1847,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-relation.h",
-      "SPDXID": "SPDXRef-binary-file-104",
+      "SPDXID": "SPDXRef-binary-file-97",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1968,7 +1859,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-device-listener.h",
-      "SPDXID": "SPDXRef-binary-file-105",
+      "SPDXID": "SPDXRef-binary-file-98",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1980,7 +1871,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-text.h",
-      "SPDXID": "SPDXRef-binary-file-106",
+      "SPDXID": "SPDXRef-binary-file-99",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -1992,7 +1883,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-hyperlink.h",
-      "SPDXID": "SPDXRef-binary-file-107",
+      "SPDXID": "SPDXRef-binary-file-100",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2004,7 +1895,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-application.h",
-      "SPDXID": "SPDXRef-binary-file-108",
+      "SPDXID": "SPDXRef-binary-file-101",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2016,7 +1907,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-component.h",
-      "SPDXID": "SPDXRef-binary-file-109",
+      "SPDXID": "SPDXRef-binary-file-102",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2028,7 +1919,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-device-x11.h",
-      "SPDXID": "SPDXRef-binary-file-110",
+      "SPDXID": "SPDXRef-binary-file-103",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2040,7 +1931,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-accessible.h",
-      "SPDXID": "SPDXRef-binary-file-111",
+      "SPDXID": "SPDXRef-binary-file-104",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2052,7 +1943,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-image.h",
-      "SPDXID": "SPDXRef-binary-file-112",
+      "SPDXID": "SPDXRef-binary-file-105",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2064,7 +1955,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi.h",
-      "SPDXID": "SPDXRef-binary-file-113",
+      "SPDXID": "SPDXRef-binary-file-106",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2076,7 +1967,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-event-listener.h",
-      "SPDXID": "SPDXRef-binary-file-114",
+      "SPDXID": "SPDXRef-binary-file-107",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2088,7 +1979,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-device-legacy.h",
-      "SPDXID": "SPDXRef-binary-file-115",
+      "SPDXID": "SPDXRef-binary-file-108",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2100,7 +1991,7 @@
     },
     {
       "fileName": "./include/at-spi-2.0/atspi/atspi-device.h",
-      "SPDXID": "SPDXRef-binary-file-116",
+      "SPDXID": "SPDXRef-binary-file-109",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2111,12 +2002,24 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libatspi.a",
-      "SPDXID": "SPDXRef-binary-file-117",
+      "fileName": "./lib/libatspi.so.0.0.1",
+      "SPDXID": "SPDXRef-binary-file-110",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b2338f53af676f8ff40bee7e01876b12cb9319293a6ab5814289feb14dc1304a"
+          "checksumValue": "a34ac84c71bf720af594cccfbfa563635dd4538fe7861ab159f6f97ebf7b6828"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libatspi.so.0",
+      "SPDXID": "SPDXRef-binary-file-111",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a34ac84c71bf720af594cccfbfa563635dd4538fe7861ab159f6f97ebf7b6828"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -2124,7 +2027,7 @@
     },
     {
       "fileName": "./lib/systemd/user/at-spi-dbus-bus.service",
-      "SPDXID": "SPDXRef-binary-file-118",
+      "SPDXID": "SPDXRef-binary-file-112",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2136,11 +2039,23 @@
     },
     {
       "fileName": "./lib/pkgconfig/atspi-2.pc",
-      "SPDXID": "SPDXRef-binary-file-119",
+      "SPDXID": "SPDXRef-binary-file-113",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "37e3dbc6b11b9db0058ab6c59e73353bd977f63dbd0c1455dbee85fda5f9fffe"
+          "checksumValue": "0f6a5f3e6cc38ec86896835004a19a6eae39898e3f32704edc9eb02eb75411ce"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libatspi.so",
+      "SPDXID": "SPDXRef-binary-file-114",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a34ac84c71bf720af594cccfbfa563635dd4538fe7861ab159f6f97ebf7b6828"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -2148,7 +2063,7 @@
     },
     {
       "fileName": "./etc/xdg/Xwayland-session.d/00-at-spi",
-      "SPDXID": "SPDXRef-binary-file-120",
+      "SPDXID": "SPDXRef-binary-file-115",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -2160,7 +2075,7 @@
     },
     {
       "fileName": "./etc/xdg/autostart/at-spi-dbus-bus.desktop",
-      "SPDXID": "SPDXRef-binary-file-121",
+      "SPDXID": "SPDXRef-binary-file-116",
       "checksums": [
         {
           "algorithm": "SHA256",

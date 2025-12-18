@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/zstd-arm64-linux-1.5.7-cc4e1349-2e5b-44a5-9118-24ad02a72c34",
-  "name": "zstd:arm64-linux@1.5.7 ccbe60ef911b05cf764444f3f7a72db9f692a4f9cbb21f74bef8186f8bb0eb3c",
+  "documentNamespace": "https://spdx.org/spdxdocs/zstd-arm64-linux-1.5.7-2e8ac973-ec3b-425e-bc37-c720f7582b58",
+  "name": "zstd:arm64-linux@1.5.7 9043992c27637ad4dc4fb09ed2d991653869326f67b6b6c2583256efee9a599c",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-11-18T08:03:14Z"
+    "created": "2025-12-16T09:45:58Z"
   },
   "relationships": [
     {
@@ -121,11 +121,6 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-13"
-    },
-    {
-      "spdxElementId": "SPDXRef-binary",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-binary-file-14"
     }
   ],
   "packages": [
@@ -144,7 +139,7 @@
     {
       "name": "zstd:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "ccbe60ef911b05cf764444f3f7a72db9f692a4f9cbb21f74bef8186f8bb0eb3c",
+      "versionInfo": "9043992c27637ad4dc4fb09ed2d991653869326f67b6b6c2583256efee9a599c",
       "downloadLocation": "NONE",
       "licenseConcluded": "(BSD-3-Clause OR GPL-2.0-only)",
       "licenseDeclared": "NOASSERTION",
@@ -245,31 +240,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "b17d8abcb0fd6454b3c1ec6556988d624863978121b87c51af8b1b6d937db69a"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/libzstd.a",
-      "SPDXID": "SPDXRef-binary-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "e751080c75d43d60ea728ef480e9c77de72857aae4ed1681286f7c3dd51b7f7c"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./debug/lib/pkgconfig/libzstd.pc",
-      "SPDXID": "SPDXRef-binary-file-2",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "fafb22358d8d9a060168cecebc980566f85551c9cd06b176c2bc193492e13ea1"
+          "checksumValue": "045140e4f4d143487491a391e7e0dd7d9666acedead713998395b026719dc090"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -277,7 +248,7 @@
     },
     {
       "fileName": "./share/zstd/zstdConfigVersion.cmake",
-      "SPDXID": "SPDXRef-binary-file-3",
+      "SPDXID": "SPDXRef-binary-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -289,7 +260,7 @@
     },
     {
       "fileName": "./share/zstd/copyright",
-      "SPDXID": "SPDXRef-binary-file-4",
+      "SPDXID": "SPDXRef-binary-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -301,11 +272,11 @@
     },
     {
       "fileName": "./share/zstd/zstdTargets.cmake",
-      "SPDXID": "SPDXRef-binary-file-5",
+      "SPDXID": "SPDXRef-binary-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "90018f4279bea1813a2ad992201aa7059ce945c1971b76704260b043e8828280"
+          "checksumValue": "f94fa280842722823d27157055feba20197aed5969014ddc2aeb93756605a4e8"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -313,7 +284,7 @@
     },
     {
       "fileName": "./share/zstd/zstdConfig.cmake",
-      "SPDXID": "SPDXRef-binary-file-6",
+      "SPDXID": "SPDXRef-binary-file-4",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -324,24 +295,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./share/zstd/zstdTargets-debug.cmake",
-      "SPDXID": "SPDXRef-binary-file-7",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "46168d72d5e72c9ef06b7c61005d9c07472fe08bc384cd7536e61c4e3647ba42"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./share/zstd/zstdTargets-release.cmake",
-      "SPDXID": "SPDXRef-binary-file-8",
+      "SPDXID": "SPDXRef-binary-file-5",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "2e284ae61caa37a4f41422d91211a3fe7cdb371f09c1f651758eed58ce44f272"
+          "checksumValue": "000c0097aa56af3b32cf5259601c833817602d0502b8682964baf59b80c77886"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -349,7 +308,7 @@
     },
     {
       "fileName": "./share/zstd/usage",
-      "SPDXID": "SPDXRef-binary-file-9",
+      "SPDXID": "SPDXRef-binary-file-6",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -361,7 +320,7 @@
     },
     {
       "fileName": "./include/zdict.h",
-      "SPDXID": "SPDXRef-binary-file-10",
+      "SPDXID": "SPDXRef-binary-file-7",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -373,7 +332,7 @@
     },
     {
       "fileName": "./include/zstd_errors.h",
-      "SPDXID": "SPDXRef-binary-file-11",
+      "SPDXID": "SPDXRef-binary-file-8",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -385,7 +344,7 @@
     },
     {
       "fileName": "./include/zstd.h",
-      "SPDXID": "SPDXRef-binary-file-12",
+      "SPDXID": "SPDXRef-binary-file-9",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -396,12 +355,12 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./lib/libzstd.a",
-      "SPDXID": "SPDXRef-binary-file-13",
+      "fileName": "./lib/libzstd.so",
+      "SPDXID": "SPDXRef-binary-file-10",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "e194fe43367d155c0185d94bbec3a33d082cc54d7adf4e8750c5bf4881eed97f"
+          "checksumValue": "12d99369655c52e442fb8999f6a09b13fc62430e4cb6f55a2c33ef81019ff46e"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -409,11 +368,35 @@
     },
     {
       "fileName": "./lib/pkgconfig/libzstd.pc",
-      "SPDXID": "SPDXRef-binary-file-14",
+      "SPDXID": "SPDXRef-binary-file-11",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "a4e013d227b2c74851ccb599b00ad1c04d93e97dbc6df66fcf0f72a2097a7b59"
+          "checksumValue": "4b047534b576b35e967d457533063da94b5dc3940e8b22b3abadea5d7e5ca397"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libzstd.so.1.5.7",
+      "SPDXID": "SPDXRef-binary-file-12",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "12d99369655c52e442fb8999f6a09b13fc62430e4cb6f55a2c33ef81019ff46e"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./lib/libzstd.so.1",
+      "SPDXID": "SPDXRef-binary-file-13",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "12d99369655c52e442fb8999f6a09b13fc62430e4cb6f55a2c33ef81019ff46e"
         }
       ],
       "licenseConcluded": "NOASSERTION",

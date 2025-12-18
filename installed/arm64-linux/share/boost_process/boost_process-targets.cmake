@@ -55,10 +55,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target Boost::process
-add_library(Boost::process STATIC IMPORTED)
+add_library(Boost::process SHARED IMPORTED)
 
 set_target_properties(Boost::process PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "BOOST_PROCESS_STATIC_LINK"
+  INTERFACE_COMPILE_DEFINITIONS "BOOST_PROCESS_DYN_LINK"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "Boost::algorithm;Boost::asio;Boost::config;Boost::core;Boost::fusion;Boost::iterator;Boost::move;Boost::optional;Boost::system;Boost::tokenizer;Boost::type_index;Boost::winapi;Boost::filesystem"
 )

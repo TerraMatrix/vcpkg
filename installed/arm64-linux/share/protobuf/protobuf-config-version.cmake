@@ -47,8 +47,8 @@ endmacro()
 
 if(PACKAGE_VERSION_COMPATIBLE)
     _check_and_save_build_option(WITH_ZLIB OFF)
-    _check_and_save_build_option(MSVC_STATIC_RUNTIME 0)
-    _check_and_save_build_option(BUILD_SHARED_LIBS 0)
+    _check_and_save_build_option(MSVC_STATIC_RUNTIME OFF)
+    _check_and_save_build_option(BUILD_SHARED_LIBS 1)
 endif()
 
 # if the installed or the using project don't have CMAKE_SIZEOF_VOID_P set, ignore it:

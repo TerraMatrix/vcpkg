@@ -114,7 +114,7 @@ function(ceres_pretty_print_cmake_list OUTPUT_VAR)
 endfunction()
 
 # The list of (optional) components this version of Ceres was compiled with.
-set(CERES_COMPILED_COMPONENTS "")
+set(CERES_COMPILED_COMPONENTS "EigenSparse;SparseLinearAlgebraLibrary;LAPACK;SuiteSparse;SchurSpecializations")
 
 # If Ceres was not installed, then by definition it was exported
 # from a build directory.
@@ -177,8 +177,9 @@ set(CERES_VERSION 2.2.0)
 
 include(CMakeFindDependencyMacro)
 # Optional dependencies
-
-
+find_dependency(metis CONFIG)
+find_dependency(CHOLMOD CONFIG)
+find_dependency(SPQR CONFIG)
 
 find_dependency (Threads)
 

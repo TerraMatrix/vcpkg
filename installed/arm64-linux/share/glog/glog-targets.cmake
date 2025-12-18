@@ -55,13 +55,13 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target glog::glog
-add_library(glog::glog STATIC IMPORTED)
+add_library(glog::glog SHARED IMPORTED)
 
 set_target_properties(glog::glog PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "GLOG_USE_GLOG_EXPORT;GLOG_USE_GFLAGS"
   INTERFACE_COMPILE_FEATURES "cxx_std_14"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:Threads::Threads>;gflags::gflags"
+  INTERFACE_LINK_LIBRARIES "gflags::gflags"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

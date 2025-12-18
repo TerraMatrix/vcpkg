@@ -1,6 +1,6 @@
 string(FIND ";${ARGS};" ";CONFIG;" z_vcpkg_opencl_config)
 _find_package(${ARGS})
-if("static" STREQUAL "static" AND (NOT CMAKE_SYSTEM_NAME MATCHES "Darwin") AND z_vcpkg_opencl_config EQUAL "-1")
+if("dynamic" STREQUAL "static" AND (NOT CMAKE_SYSTEM_NAME MATCHES "Darwin") AND z_vcpkg_opencl_config EQUAL "-1")
   find_package(Threads REQUIRED)
   set(OpenCL_Extra_Libs ${CMAKE_DL_LIBS} ${CMAKE_THREAD_LIBS_INIT})
   if(CMAKE_SYSTEM_NAME MATCHES "Windows")

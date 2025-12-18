@@ -55,11 +55,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target LibXml2::LibXml2
-add_library(LibXml2::LibXml2 STATIC IMPORTED)
+add_library(LibXml2::LibXml2 SHARED IMPORTED)
 
 set_target_properties(LibXml2::LibXml2 PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include/libxml2"
-  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:Iconv::Iconv>;\$<LINK_ONLY:Threads::Threads>;\$<LINK_ONLY:ZLIB::ZLIB>"
 )
 
 # Create imported target LibXml2::xmllint
@@ -67,10 +66,6 @@ add_executable(LibXml2::xmllint IMPORTED)
 
 # Create imported target LibXml2::xmlcatalog
 add_executable(LibXml2::xmlcatalog IMPORTED)
-
-if(CMAKE_VERSION VERSION_LESS 2.8.12)
-  message(FATAL_ERROR "This file relies on consumers using CMake 2.8.12 or greater.")
-endif()
 
 # Load information for each installed configuration.
 file(GLOB _cmake_config_files "${CMAKE_CURRENT_LIST_DIR}/libxml2-export-*.cmake")

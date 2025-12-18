@@ -8,12 +8,13 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 # Import target "Boost::type_erasure" for configuration "Release"
 set_property(TARGET Boost::type_erasure APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(Boost::type_erasure PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libboost_type_erasure.a"
+  IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "Boost::thread"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libboost_type_erasure.so.1.89.0"
+  IMPORTED_SONAME_RELEASE "libboost_type_erasure.so.1.89.0"
   )
 
 list(APPEND _cmake_import_check_targets Boost::type_erasure )
-list(APPEND _cmake_import_check_files_for_Boost::type_erasure "${_IMPORT_PREFIX}/lib/libboost_type_erasure.a" )
+list(APPEND _cmake_import_check_files_for_Boost::type_erasure "${_IMPORT_PREFIX}/lib/libboost_type_erasure.so.1.89.0" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

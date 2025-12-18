@@ -55,10 +55,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target OpenCL::OpenCL
-add_library(OpenCL::OpenCL STATIC IMPORTED)
+add_library(OpenCL::OpenCL SHARED IMPORTED)
 
 set_target_properties(OpenCL::OpenCL PROPERTIES
-  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:-lpthread>;OpenCL::Headers;dl"
+  INTERFACE_LINK_LIBRARIES "OpenCL::Headers;dl"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)
