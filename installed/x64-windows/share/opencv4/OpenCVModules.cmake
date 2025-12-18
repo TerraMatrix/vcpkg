@@ -45,13 +45,12 @@ find_dependency(gflags CONFIG)
 find_dependency(Ceres CONFIG)
 find_dependency(TBB)
 find_dependency(TIFF)
-find_dependency(VTK)
 
 # Protect against multiple inclusion, which would fail when already imported targets are added once more.
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS opencv_core opencv_flann opencv_hdf opencv_imgproc opencv_intensity_transform opencv_ml opencv_phase_unwrapping opencv_photo opencv_plot opencv_reg opencv_signal opencv_surface_matching opencv_viz opencv_xphoto opencv_alphamat opencv_dnn opencv_dnn_superres opencv_features2d opencv_fuzzy opencv_hfs opencv_img_hash opencv_imgcodecs opencv_line_descriptor opencv_saliency opencv_text opencv_videoio opencv_calib3d opencv_datasets opencv_highgui opencv_mcc opencv_objdetect opencv_rapid opencv_shape opencv_structured_light opencv_video opencv_videostab opencv_wechat_qrcode opencv_xfeatures2d opencv_ximgproc opencv_xobjdetect opencv_aruco opencv_bgsegm opencv_bioinspired opencv_ccalib opencv_dnn_objdetect opencv_dpm opencv_face opencv_gapi opencv_optflow opencv_sfm opencv.sfm.correspondence opencv.sfm.multiview opencv.sfm.numeric opencv.sfm.simple_pipeline opencv_stitching opencv_superres opencv_tracking opencv_stereo)
+foreach(_cmake_expected_target IN ITEMS opencv_core opencv_flann opencv_hdf opencv_imgproc opencv_intensity_transform opencv_ml opencv_phase_unwrapping opencv_photo opencv_plot opencv_reg opencv_signal opencv_surface_matching opencv_xphoto opencv_alphamat opencv_dnn opencv_dnn_superres opencv_features2d opencv_fuzzy opencv_hfs opencv_img_hash opencv_imgcodecs opencv_line_descriptor opencv_saliency opencv_text opencv_videoio opencv_calib3d opencv_datasets opencv_highgui opencv_mcc opencv_objdetect opencv_rapid opencv_shape opencv_structured_light opencv_video opencv_videostab opencv_wechat_qrcode opencv_xfeatures2d opencv_ximgproc opencv_xobjdetect opencv_aruco opencv_bgsegm opencv_bioinspired opencv_ccalib opencv_dnn_objdetect opencv_dpm opencv_face opencv_gapi opencv_optflow opencv_sfm opencv.sfm.correspondence opencv.sfm.multiview opencv.sfm.numeric opencv.sfm.simple_pipeline opencv_stitching opencv_superres opencv_tracking opencv_stereo)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -164,13 +163,6 @@ add_library(opencv_surface_matching SHARED IMPORTED)
 
 set_target_properties(opencv_surface_matching PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_core;opencv_flann"
-)
-
-# Create imported target opencv_viz
-add_library(opencv_viz SHARED IMPORTED)
-
-set_target_properties(opencv_viz PROPERTIES
-  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_core"
 )
 
 # Create imported target opencv_xphoto
@@ -317,7 +309,7 @@ set_target_properties(opencv_shape PROPERTIES
 add_library(opencv_structured_light SHARED IMPORTED)
 
 set_target_properties(opencv_structured_light PROPERTIES
-  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_phase_unwrapping;opencv_viz;opencv_features2d;opencv_calib3d;opencv_core;opencv_flann;opencv_imgproc;opencv_phase_unwrapping;opencv_viz;opencv_features2d;opencv_calib3d"
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_phase_unwrapping;opencv_features2d;opencv_calib3d;opencv_core;opencv_flann;opencv_imgproc;opencv_phase_unwrapping;opencv_features2d;opencv_calib3d"
 )
 
 # Create imported target opencv_video

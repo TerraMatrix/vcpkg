@@ -28,22 +28,18 @@ get_filename_component(VCPKG_IMPORT_PREFIX "${CMAKE_CURRENT_LIST_DIR}/../../" AB
 # - features
 # - ml
 # - segmentation
-# - visualization
 # - surface
 # - registration
 # - keypoints
 # - tracking
 # - recognition
 # - stereo
-# - apps
 # - cuda_common
 # - cuda_features
 # - cuda_segmentation
 # - cuda_sample_consensus
 # - outofcore
 # - gpu_utils
-# - people
-# - simulation
 #
 # Some additional variables are set by PCLConfig.cmake, which are not needed when
 # using the (modern) linking approach described above:
@@ -270,12 +266,12 @@ endmacro()
 macro(find_VTK)
   if(PCL_ALL_IN_ONE_INSTALLER AND NOT ANDROID)
     if(EXISTS "${PCL_ROOT}/3rdParty/VTK/lib/cmake")
-      set(VTK_DIR "${PCL_ROOT}/3rdParty/VTK/lib/cmake/vtk-9.3" CACHE PATH "The directory containing VTKConfig.cmake")
+      set(VTK_DIR "${PCL_ROOT}/3rdParty/VTK/lib/cmake/vtk-." CACHE PATH "The directory containing VTKConfig.cmake")
     else()
-      set(VTK_DIR "${PCL_ROOT}/3rdParty/VTK/lib/vtk-9.3" CACHE PATH "The directory containing VTKConfig.cmake")
+      set(VTK_DIR "${PCL_ROOT}/3rdParty/VTK/lib/vtk-." CACHE PATH "The directory containing VTKConfig.cmake")
     endif()
   elseif(NOT VTK_DIR AND NOT ANDROID)
-    set(VTK_DIR "${VCPKG_IMPORT_PREFIX}/share/vtk" CACHE PATH "The directory containing VTKConfig.cmake")
+    set(VTK_DIR "" CACHE PATH "The directory containing VTKConfig.cmake")
   endif()
   if(NOT ANDROID)
     find_package(VTK ${QUIET_} COMPONENTS ${PCL_VTK_COMPONENTS})
@@ -486,7 +482,7 @@ list(APPEND PCL_COMPILE_OPTIONS )
 #set AVX flags used compiling PCL
 list(APPEND PCL_COMPILE_OPTIONS )
 
-set(pcl_all_components  common kdtree octree search sample_consensus filters 2d geometry io features ml segmentation visualization surface registration keypoints tracking recognition stereo apps cuda_common cuda_features cuda_segmentation cuda_sample_consensus outofcore gpu_utils people simulation)
+set(pcl_all_components  common kdtree octree search sample_consensus filters 2d geometry io features ml segmentation surface registration keypoints tracking recognition stereo cuda_common cuda_features cuda_segmentation cuda_sample_consensus outofcore gpu_utils)
 # insert "io_ply" before "io"
 list(FIND pcl_all_components "io" pcl_pos_io)
 list(INSERT pcl_all_components ${pcl_pos_io} "io_ply")
@@ -505,21 +501,17 @@ set(pcl_io_int_dep common octree )
 set(pcl_features_int_dep common search kdtree octree filters 2d )
 set(pcl_ml_int_dep common )
 set(pcl_segmentation_int_dep common geometry search sample_consensus kdtree octree features filters ml )
-set(pcl_visualization_int_dep common io kdtree geometry search octree )
 set(pcl_surface_int_dep common search kdtree octree )
 set(pcl_registration_int_dep common octree kdtree search sample_consensus features filters )
 set(pcl_keypoints_int_dep common search kdtree octree features filters )
 set(pcl_tracking_int_dep common search kdtree filters octree )
 set(pcl_recognition_int_dep common io search kdtree octree features filters registration sample_consensus ml )
 set(pcl_stereo_int_dep common io )
-set(pcl_apps_int_dep common geometry io filters sample_consensus segmentation visualization kdtree features surface octree registration keypoints tracking search recognition ml stereo 2d )
 set(pcl_cuda_features_int_dep cuda_common io common )
 set(pcl_cuda_segmentation_int_dep cuda_common io common )
 set(pcl_cuda_sample_consensus_int_dep cuda_common io common )
-set(pcl_outofcore_int_dep common io filters octree visualization )
+set(pcl_outofcore_int_dep common io filters octree )
 set(pcl_gpu_utils_int_dep common )
-set(pcl_people_int_dep common kdtree search sample_consensus filters io visualization geometry segmentation octree )
-set(pcl_simulation_int_dep common io surface kdtree features search octree visualization filters geometry )
 
 
 #list each component external dependencies (ext means mandatory and opt means optional)
@@ -527,20 +519,16 @@ set(pcl_common_ext_dep eigen3 boost )
 set(pcl_kdtree_ext_dep flann )
 set(pcl_search_ext_dep flann )
 set(pcl_io_ext_dep boost eigen3 )
-set(pcl_visualization_ext_dep vtk )
-set(pcl_simulation_ext_dep opengl glew )
 
 
 set(pcl_filters_opt_dep OpenMP )
-set(pcl_io_opt_dep openni2 png vtk OpenMP )
+set(pcl_io_opt_dep openni2 png OpenMP )
 set(pcl_features_opt_dep OpenMP )
 set(pcl_segmentation_opt_dep OpenMP )
-set(pcl_visualization_opt_dep openni2 )
-set(pcl_surface_opt_dep qhull vtk OpenMP )
+set(pcl_surface_opt_dep qhull OpenMP )
 set(pcl_registration_opt_dep OpenMP )
 set(pcl_keypoints_opt_dep OpenMP )
 set(pcl_tracking_opt_dep OpenMP )
-set(pcl_apps_opt_dep vtk )
 
 
 # io_ply subcomponent
@@ -549,7 +537,7 @@ set(pcl_io_ply_int_dep common)
 set(pcl_io_ply_ext_dep boost)
 
 # VTK components required by PCL
-set(PCL_VTK_COMPONENTS "ChartsCore;CommonColor;CommonComputationalGeometry;CommonCore;CommonDataModel;CommonExecutionModel;CommonMath;CommonMisc;CommonTransforms;FiltersCore;FiltersExtraction;FiltersGeneral;FiltersGeometry;FiltersModeling;FiltersSources;ImagingCore;ImagingSources;InteractionImage;InteractionStyle;InteractionWidgets;IOCore;IOGeometry;IOImage;IOLegacy;IOPLY;RenderingAnnotation;RenderingCore;RenderingContext2D;RenderingLOD;RenderingFreeType;ViewsCore;ViewsContext2D;RenderingOpenGL2;RenderingContextOpenGL2;GUISupportQt")
+set(PCL_VTK_COMPONENTS "")
 
 set(pcl_header_only_components 2d cuda_common geometry gpu_tracking modeler in_hand_scanner point_cloud_editor cloud_composer)
 

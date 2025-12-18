@@ -126,17 +126,6 @@ set_target_properties(opencv_surface_matching PROPERTIES
 list(APPEND _cmake_import_check_targets opencv_surface_matching )
 list(APPEND _cmake_import_check_files_for_opencv_surface_matching "${_IMPORT_PREFIX}/lib/opencv_surface_matching4.lib" "${_IMPORT_PREFIX}/bin/opencv_surface_matching4.dll" )
 
-# Import target "opencv_viz" for configuration "Release"
-set_property(TARGET opencv_viz APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(opencv_viz PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "${_IMPORT_PREFIX}/lib/opencv_viz4.lib"
-  IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "VTK::FiltersExtraction;VTK::FiltersSources;VTK::FiltersTexture;VTK::IOExport;VTK::IOGeometry;VTK::IOPLY;VTK::InteractionStyle;VTK::RenderingCore;VTK::RenderingLOD;VTK::RenderingOpenGL2"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/opencv_viz4.dll"
-  )
-
-list(APPEND _cmake_import_check_targets opencv_viz )
-list(APPEND _cmake_import_check_files_for_opencv_viz "${_IMPORT_PREFIX}/lib/opencv_viz4.lib" "${_IMPORT_PREFIX}/bin/opencv_viz4.dll" )
-
 # Import target "opencv_xphoto" for configuration "Release"
 set_property(TARGET opencv_xphoto APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_xphoto PROPERTIES

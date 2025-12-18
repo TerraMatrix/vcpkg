@@ -126,17 +126,6 @@ set_target_properties(opencv_surface_matching PROPERTIES
 list(APPEND _cmake_import_check_targets opencv_surface_matching )
 list(APPEND _cmake_import_check_files_for_opencv_surface_matching "${_IMPORT_PREFIX}/debug/lib/opencv_surface_matching4d.lib" "${_IMPORT_PREFIX}/debug/bin/opencv_surface_matching4d.dll" )
 
-# Import target "opencv_viz" for configuration "Debug"
-set_property(TARGET opencv_viz APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
-set_target_properties(opencv_viz PROPERTIES
-  IMPORTED_IMPLIB_DEBUG "${_IMPORT_PREFIX}/debug/lib/opencv_viz4d.lib"
-  IMPORTED_LINK_DEPENDENT_LIBRARIES_DEBUG "VTK::FiltersExtraction;VTK::FiltersSources;VTK::FiltersTexture;VTK::IOExport;VTK::IOGeometry;VTK::IOPLY;VTK::InteractionStyle;VTK::RenderingCore;VTK::RenderingLOD;VTK::RenderingOpenGL2"
-  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/debug/bin/opencv_viz4d.dll"
-  )
-
-list(APPEND _cmake_import_check_targets opencv_viz )
-list(APPEND _cmake_import_check_files_for_opencv_viz "${_IMPORT_PREFIX}/debug/lib/opencv_viz4d.lib" "${_IMPORT_PREFIX}/debug/bin/opencv_viz4d.dll" )
-
 # Import target "opencv_xphoto" for configuration "Debug"
 set_property(TARGET opencv_xphoto APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(opencv_xphoto PROPERTIES
