@@ -21,11 +21,10 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO qgis/QGIS
     REF final-3_44_5
-    SHA512 72f9c926aeb4d5a13787e640523831217641094d00dd742fe4d9981db30c7b1349fa2a5ce36dfd5b1cc55e21f26681fc261b00c4db8e1be5c7f517b3048bea79
+    SHA512 c29a6b6b466a848c4acd62ac9b55d4e42a2cdd3772d1715f3ae3f36cc2df901b0760e82a12c42fa25851606fe91626cb63914982031f5b05d29b88f46068797a
     HEAD_REF master
     PATCHES
         fix-build-failed.diff
-        fix-vrgis.diff
 )
 
 vcpkg_find_acquire_program(FLEX)
@@ -305,9 +304,11 @@ elseif(VCPKG_TARGET_IS_LINUX OR VCPKG_TARGET_IS_OSX) # Build in UNIX
              SHA512  1c07d93aefe1c24e80851eb4631b80a99e7ba06e823181325456edb90285d3d22417a9f7d4c3ff9c6195bd801e7dc2bbabf0587af844a5e4b0a410c4611d119e
         )
 
-        vcpkg_extract_source_archive(
-             ${PYQT5_PATH} ${PYTHON3_PATH}
-        )
+        # vcpkg_extract_source_archive(
+        #      ${PYQT5_PATH} ${PYTHON3_PATH}
+        # )
+        vcpkg_extract_source_archive(ARCHIVE ${PYQT5_PATH})
+        #set(PYQT5_SRC_DIR ${EXTRACTED_PYQT5_ARCHIVE})
 
         vcpkg_execute_required_process(
             COMMAND "${CURRENT_INSTALLED_DIR}/bin/sip-install" --target-dir "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages"
@@ -327,9 +328,11 @@ elseif(VCPKG_TARGET_IS_LINUX OR VCPKG_TARGET_IS_OSX) # Build in UNIX
              SHA512  fa1ebf773fb0a10b3ee58849c2273b6b5e9d3a5b14aa632c007381d494f6443d67e1d613a1fe65177412e6e46e9701767013ede1567a75f390930eda0bce19c4
         )
 
-        vcpkg_extract_source_archive(
-             ${PYQT3D_PATH} ${PYTHON3_PATH}
-        )
+        # vcpkg_extract_source_archive(
+        #      ${PYQT3D_PATH} ${PYTHON3_PATH}
+        # )
+        vcpkg_extract_source_archive(ARCHIVE ${PYQT3D_PATH})
+        #set(PYQT3D_SRC_DIR ${EXTRACTED_PYQT3D_ARCHIVE})
 
         vcpkg_execute_required_process(
             COMMAND "${CURRENT_INSTALLED_DIR}/bin/sip-install" --target-dir "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages"
@@ -349,9 +352,11 @@ elseif(VCPKG_TARGET_IS_LINUX OR VCPKG_TARGET_IS_OSX) # Build in UNIX
              SHA512  591379f4d48a6de1bc61db93f6c0d1c48b6830a852679b51e27debb866524c320e2db27d919baf32576c2bf40bba62e38378673a86f22db9839746e26b0f77cd
         )
 
-        vcpkg_extract_source_archive(
-             ${PYQSCINTILLA_PATH} ${PYTHON3_PATH}
-        )
+        # vcpkg_extract_source_archive(
+        #      ${PYQSCINTILLA_PATH} ${PYTHON3_PATH}
+        # )
+        vcpkg_extract_source_archive(ARCHIVE ${PYQSCINTILLA_PATH})
+        #set(PYQSCINTILLA_SRC_DIR ${EXTRACTED_PYQSCINTILLA_ARCHIVE})
 
         file(COPY "${PYTHON3_PATH}/QScintilla_src-2.13.4/Python/pyproject-qt5.toml" DESTINATION "${PYTHON3_PATH}/QScintilla_src-2.13.4/Python/pyproject.toml")
         vcpkg_execute_required_process(
@@ -372,9 +377,11 @@ elseif(VCPKG_TARGET_IS_LINUX OR VCPKG_TARGET_IS_OSX) # Build in UNIX
              SHA512  60d324369cd9274a60da834b63e177fc7e6e33018ee5ce558c9ebf060a149d2ff51246c4669cd62c6cc44d76555ae7521c234e1b592a02ad0da37b9e02afa1e3
         )
 
-        vcpkg_extract_source_archive(
-             ${PYGDAL_PATH} ${PYTHON3_PATH}
-        )
+        # vcpkg_extract_source_archive(
+        #      ${PYGDAL_PATH} ${PYTHON3_PATH}
+        # )
+        vcpkg_extract_source_archive( ARCHIVE ${PYGDAL_PATH})
+        #set(PYGDAL_SRC_DIR ${EXTRACTED_PYGDAL_ARCHIVE})
 
         vcpkg_execute_required_process(
             COMMAND "${PYTHON_EXECUTABLE}" setup.py install

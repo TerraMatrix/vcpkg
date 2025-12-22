@@ -163,21 +163,21 @@ echo "install opencv4 4.8.0#14"
 echo "--------------------------------------------"
 ./bash/opencv4.sh
 
-echo "install osg 3.6.5#25"  
-echo "--------------------------------------------"
-./bash/osg.sh
+# echo "install osg 3.6.5#25"  
+# echo "--------------------------------------------"
+# ./bash/osg.sh
 
-echo "install osg-qt Qt5#3"  
-echo "--------------------------------------------"
-./bash/osg-qt.sh
+# echo "install osg-qt Qt5#3"  
+# echo "--------------------------------------------"
+# ./bash/osg-qt.sh
 
 # echo "install leveldb 1.23"
 # echo "--------------------------------------------"
 # ./bash/leveldb.sh
 
-echo "install grpc 1.51.1"
-echo "--------------------------------------------"
-./bash/grpc.sh
+# echo "install grpc 1.51.1"
+# echo "--------------------------------------------"
+# ./bash/grpc.sh
 
 # echo "install shapelib 1.6.1"
 # echo "--------------------------------------------"
