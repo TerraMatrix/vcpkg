@@ -1,0 +1,110 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/dlfcn-win32-x64-windows-1.4.1-42fc280a-1ed2-4db4-a880-4afa069e7969",
+  "name": "dlfcn-win32:x64-windows@1.4.1 d5a72168a677f0cf2fb22ab50b8657124ff7426c070f874a33ad34fbdb2ed38a",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2024-11-12-eb492805e92a2c14a230f5c3deb3e89f6771c321"
+    ],
+    "created": "2025-12-29T07:58:05Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-0",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "dlfcn-win32",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "1.4.1",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/dlfcn-win32",
+      "homepage": "https://github.com/dlfcn-win32/dlfcn-win32",
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "dlfcn-win32 is an implementation of dlfcn for Windows.",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "dlfcn-win32:x64-windows",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "d5a72168a677f0cf2fb22ab50b8657124ff7426c070f874a33ad34fbdb2ed38a",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-1",
+      "name": "dlfcn-win32/dlfcn-win32",
+      "downloadLocation": "git+https://github.com/dlfcn-win32/dlfcn-win32@v1.4.1",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "2ddcaad7fff09be654589642af14689ebbc15212caea5b5fb0238b34188c87cd9cb53d7aee45c7ae4dd6ddf6e637ee945567d7b858b97ceefff8f1ec46b786ae"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./E:/vcpkg/vcpkg-win7/ports/dlfcn-win32/portfile.cmake",
+      "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0c9ffcb388c5c4bc690e5e97dcf0d3968fa73a4c8a2b124c3e6fba0435e8d343"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./E:/vcpkg/vcpkg-win7/ports/dlfcn-win32/vcpkg.json",
+      "SPDXID": "SPDXRef-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b4e8cc31fe2cc9a4c59dd8c3fb7af34ae34e033253ce09de65055eced02713df"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}
