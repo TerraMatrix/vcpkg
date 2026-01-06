@@ -299,23 +299,22 @@ elseif(VCPKG_TARGET_IS_LINUX OR VCPKG_TARGET_IS_OSX) # Build in UNIX
         MESSAGE(STATUS  "Install PyQt5 for Python Begin")
         vcpkg_download_distfile(
              PYQT5_PATH
-             URLS https://files.pythonhosted.org/packages/5c/46/b4b6eae1e24d9432905ef1d4e7c28b6610e28252527cdc38f2a75997d8b5/PyQt5-5.15.9.tar.gz
-             FILENAME PyQt5-5.15.9.tar.gz
-             SHA512  1c07d93aefe1c24e80851eb4631b80a99e7ba06e823181325456edb90285d3d22417a9f7d4c3ff9c6195bd801e7dc2bbabf0587af844a5e4b0a410c4611d119e
+             URLS https://files.pythonhosted.org/packages/source/P/PyQt5/PyQt5-5.15.11.tar.gz
+             FILENAME PyQt5-5.15.11.tar.gz
+             SHA512  e52ca215f65dbb035deff042112e26be38b77405a45caebdae3e626ffe6487c88c97c54bfa33cc83d96537daa82b67b7a1c621696538e154e5996714fc063a92
         )
 
         # vcpkg_extract_source_archive(
         #      ${PYQT5_PATH} ${PYTHON3_PATH}
         # )
-        vcpkg_extract_source_archive(ARCHIVE ${PYQT5_PATH})
-        #set(PYQT5_SRC_DIR ${EXTRACTED_PYQT5_ARCHIVE})
+        vcpkg_extract_source_archive(PYQT5_SRC_DIR ARCHIVE ${PYQT5_PATH} WORKING_DIRECTORY ${PYTHON3_PATH})
 
         vcpkg_execute_required_process(
-            COMMAND "${CURRENT_INSTALLED_DIR}/bin/sip-install" --target-dir "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages"
-            WORKING_DIRECTORY ${PYTHON3_PATH}/PyQt5-5.15.9
+            COMMAND "${CURRENT_INSTALLED_DIR}/bin/sip-install" --confirm-license --verbose --target-dir "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages"
+            WORKING_DIRECTORY ${PYQT5_SRC_DIR}
             LOGNAME pip
         )
-        file(REMOVE_RECURSE "${PYTHON3_PATH}/PyQt5-5.15.9")
+        file(REMOVE_RECURSE "${PYQT5_SRC_DIR}")
         MESSAGE(STATUS  "Install PyQt5 for Python End")
     endif()
 
@@ -331,15 +330,14 @@ elseif(VCPKG_TARGET_IS_LINUX OR VCPKG_TARGET_IS_OSX) # Build in UNIX
         # vcpkg_extract_source_archive(
         #      ${PYQT3D_PATH} ${PYTHON3_PATH}
         # )
-        vcpkg_extract_source_archive(ARCHIVE ${PYQT3D_PATH})
-        #set(PYQT3D_SRC_DIR ${EXTRACTED_PYQT3D_ARCHIVE})
+        vcpkg_extract_source_archive(PYQT3D_SRC_DIR ARCHIVE ${PYQT3D_PATH} WORKING_DIRECTORY ${PYTHON3_PATH})
 
         vcpkg_execute_required_process(
-            COMMAND "${CURRENT_INSTALLED_DIR}/bin/sip-install" --target-dir "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages"
-            WORKING_DIRECTORY ${PYTHON3_PATH}/PyQt3D-5.15.6
+            COMMAND "${CURRENT_INSTALLED_DIR}/bin/sip-install" --confirm-license --target-dir "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages"
+            WORKING_DIRECTORY ${PYQT3D_SRC_DIR}
             LOGNAME pip
         )
-        file(REMOVE_RECURSE "${PYTHON3_PATH}/PyQt3D-5.15.6")
+        file(REMOVE_RECURSE "${PYQT3D_SRC_DIR}")
         MESSAGE(STATUS  "Install PyQt3D for Python End")
     endif()
 
@@ -355,16 +353,15 @@ elseif(VCPKG_TARGET_IS_LINUX OR VCPKG_TARGET_IS_OSX) # Build in UNIX
         # vcpkg_extract_source_archive(
         #      ${PYQSCINTILLA_PATH} ${PYTHON3_PATH}
         # )
-        vcpkg_extract_source_archive(ARCHIVE ${PYQSCINTILLA_PATH})
-        #set(PYQSCINTILLA_SRC_DIR ${EXTRACTED_PYQSCINTILLA_ARCHIVE})
+        vcpkg_extract_source_archive(PYQSCINTILLA_SRC_DIR ARCHIVE ${PYQSCINTILLA_PATH} WORKING_DIRECTORY ${PYTHON3_PATH})
 
-        file(COPY "${PYTHON3_PATH}/QScintilla_src-2.13.4/Python/pyproject-qt5.toml" DESTINATION "${PYTHON3_PATH}/QScintilla_src-2.13.4/Python/pyproject.toml")
+        file(COPY "${PYQSCINTILLA_SRC_DIR}/Python/pyproject-qt5.toml" DESTINATION "${PYQSCINTILLA_SRC_DIR}/Python/pyproject.toml")
         vcpkg_execute_required_process(
-            COMMAND "${CURRENT_INSTALLED_DIR}/bin/sip-install" --target-dir "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages"
-            WORKING_DIRECTORY ${PYTHON3_PATH}/QScintilla_src-2.13.4/Python
+            COMMAND "${CURRENT_INSTALLED_DIR}/bin/sip-install" --confirm-license --target-dir "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages"
+            WORKING_DIRECTORY ${PYQSCINTILLA_SRC_DIR}/Python
             LOGNAME pip
         )
-        file(REMOVE_RECURSE "${PYTHON3_PATH}/QScintilla_src-2.13.4")
+        file(REMOVE_RECURSE "${PYQSCINTILLA_SRC_DIR}")
         MESSAGE(STATUS  "Install QScintilla for Python End")
     endif()
 
@@ -380,15 +377,14 @@ elseif(VCPKG_TARGET_IS_LINUX OR VCPKG_TARGET_IS_OSX) # Build in UNIX
         # vcpkg_extract_source_archive(
         #      ${PYGDAL_PATH} ${PYTHON3_PATH}
         # )
-        vcpkg_extract_source_archive( ARCHIVE ${PYGDAL_PATH})
-        #set(PYGDAL_SRC_DIR ${EXTRACTED_PYGDAL_ARCHIVE})
+        vcpkg_extract_source_archive(PYGDAL_SRC_DIR ARCHIVE ${PYGDAL_PATH} WORKING_DIRECTORY ${PYTHON3_PATH})
 
         vcpkg_execute_required_process(
             COMMAND "${PYTHON_EXECUTABLE}" setup.py install
-            WORKING_DIRECTORY ${PYTHON3_PATH}/GDAL-3.7.0
+            WORKING_DIRECTORY ${PYGDAL_SRC_DIR}
             LOGNAME pip
         )
-        file(REMOVE_RECURSE "${PYTHON3_PATH}/PyQt3D-5.15.6")
+        file(REMOVE_RECURSE "${PYGDAL_SRC_DIR}")
         MESSAGE(STATUS  "Install gdal for Python End")
     endif()
 
