@@ -310,7 +310,7 @@ elseif(VCPKG_TARGET_IS_LINUX OR VCPKG_TARGET_IS_OSX) # Build in UNIX
         vcpkg_extract_source_archive(PYQT5_SRC_DIR ARCHIVE ${PYQT5_PATH} WORKING_DIRECTORY ${PYTHON3_PATH})
 
         vcpkg_execute_required_process(
-            COMMAND "${CURRENT_INSTALLED_DIR}/bin/sip-install" --confirm-license --verbose --target-dir "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages"
+            COMMAND "${CURRENT_INSTALLED_DIR}/bin/sip-install" --confirm-license --verbose --target-dir "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages" --no-designer-plugin
             WORKING_DIRECTORY ${PYQT5_SRC_DIR}
             LOGNAME pip
         )
@@ -333,7 +333,7 @@ elseif(VCPKG_TARGET_IS_LINUX OR VCPKG_TARGET_IS_OSX) # Build in UNIX
         vcpkg_extract_source_archive(PYQT3D_SRC_DIR ARCHIVE ${PYQT3D_PATH} WORKING_DIRECTORY ${PYTHON3_PATH})
 
         vcpkg_execute_required_process(
-            COMMAND "${CURRENT_INSTALLED_DIR}/bin/sip-install" --confirm-license --target-dir "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages"
+            COMMAND "${CURRENT_INSTALLED_DIR}/bin/sip-install"  --target-dir "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages"
             WORKING_DIRECTORY ${PYQT3D_SRC_DIR}
             LOGNAME pip
         )
@@ -355,9 +355,9 @@ elseif(VCPKG_TARGET_IS_LINUX OR VCPKG_TARGET_IS_OSX) # Build in UNIX
         # )
         vcpkg_extract_source_archive(PYQSCINTILLA_SRC_DIR ARCHIVE ${PYQSCINTILLA_PATH} WORKING_DIRECTORY ${PYTHON3_PATH})
 
-        file(COPY "${PYQSCINTILLA_SRC_DIR}/Python/pyproject-qt5.toml" DESTINATION "${PYQSCINTILLA_SRC_DIR}/Python/pyproject.toml")
+        # file(COPY "${PYQSCINTILLA_SRC_DIR}/Python/pyproject-qt5.toml" DESTINATION "${PYQSCINTILLA_SRC_DIR}/Python/pyproject.toml")
         vcpkg_execute_required_process(
-            COMMAND "${CURRENT_INSTALLED_DIR}/bin/sip-install" --confirm-license --target-dir "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages"
+            COMMAND "${CURRENT_INSTALLED_DIR}/bin/sip-install"  --target-dir "${CURRENT_INSTALLED_DIR}/lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages"
             WORKING_DIRECTORY ${PYQSCINTILLA_SRC_DIR}/Python
             LOGNAME pip
         )
@@ -369,9 +369,9 @@ elseif(VCPKG_TARGET_IS_LINUX OR VCPKG_TARGET_IS_OSX) # Build in UNIX
         MESSAGE(STATUS  "Install gdal for Python Begin")
         vcpkg_download_distfile(
              PYGDAL_PATH
-             URLS https://files.pythonhosted.org/packages/22/b3/bb0c26730ad1fb1bfc8994bc9b6bea9d4cd0ded48a4e33ed66408d089466/GDAL-3.7.0.tar.gz
-             FILENAME GDAL-3.7.0.tar.gz
-             SHA512  60d324369cd9274a60da834b63e177fc7e6e33018ee5ce558c9ebf060a149d2ff51246c4669cd62c6cc44d76555ae7521c234e1b592a02ad0da37b9e02afa1e3
+             URLS https://files.pythonhosted.org/packages/source/G/GDAL/gdal-3.11.4.tar.gz
+             FILENAME GDAL-3.11.4.tar.gz
+             SHA512  521022fc4f1d514c409cee6dc83fd842ad19c90882b29a957d1b28c3596609967cf46b0b6703e53cf51b1f5e375fe778ac8029064360ba8c70d4c6e6fe306b76
         )
 
         # vcpkg_extract_source_archive(

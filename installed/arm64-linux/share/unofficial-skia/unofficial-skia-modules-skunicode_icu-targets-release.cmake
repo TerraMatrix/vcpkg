@@ -1,0 +1,19 @@
+get_filename_component(VCPKG_IMPORT_PREFIX "${CMAKE_CURRENT_LIST_DIR}/../../" ABSOLUTE)
+# Exported from "//modules/skunicode:skunicode_icu"
+if("1")
+    set_property(TARGET unofficial::skia::modules::skunicode_icu APPEND PROPERTY INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:\$<\$<NOT:\$<CONFIG:DEBUG>>:unofficial::skia::skia;unofficial::skia::modules::skunicode_core>>")
+endif()
+if("1")
+    set_property(TARGET unofficial::skia::modules::skunicode_icu APPEND PROPERTY IMPORTED_CONFIGURATIONS "RELEASE")
+    set_target_properties(unofficial::skia::modules::skunicode_icu PROPERTIES IMPORTED_LOCATION_RELEASE "${VCPKG_IMPORT_PREFIX}/lib/libskunicode_icu.so")
+    if("1")
+        set_property(TARGET unofficial::skia::modules::skunicode_icu APPEND PROPERTY INTERFACE_COMPILE_DEFINITIONS "\$<\$<NOT:\$<CONFIG:DEBUG>>:SK_GAMMA_APPLY_TO_A8;SK_ENABLE_AVX512_OPTS;SK_FONTMGR_FCI_AVAILABLE;SK_FONTMGR_ANDROID_AVAILABLE;SK_FONTMGR_FREETYPE_DIRECTORY_AVAILABLE;SK_TYPEFACE_FACTORY_FREETYPE;SK_FONTMGR_FREETYPE_EMBEDDED_AVAILABLE;SK_FONTMGR_FREETYPE_EMPTY_AVAILABLE;SK_FONTMGR_FONTCONFIG_AVAILABLE;SK_CODEC_DECODES_ICO;SK_CODEC_DECODES_PNG;SK_CODEC_DECODES_PNG_WITH_LIBPNG;SK_CODEC_ENCODES_PNG;SK_CODEC_ENCODES_PNG_WITH_LIBPNG;SK_GL;SK_CODEC_ENCODES_JPEG;SK_SUPPORT_PDF;SK_CODEC_DECODES_JPEG;SK_CODEC_ENCODES_WEBP;SK_CODEC_DECODES_RAW;SK_CODEC_DECODES_WEBP;SK_HAS_WUFFS_LIBRARY;SK_CODEC_DECODES_GIF;SK_XML;SK_CODEC_DECODES_BMP;SK_CODEC_DECODES_WBMP;SK_R32_SHIFT=16;SK_ENABLE_PRECOMPILE;SK_GANESH;SK_DISABLE_TRACING;SK_USE_PERFETTO>")
+        set_target_properties(unofficial::skia::modules::skunicode_icu PROPERTIES
+            INTERFACE_INCLUDE_DIRECTORIES "${VCPKG_IMPORT_PREFIX}/include/skia"
+            IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+        )
+        z_vcpkg_skia_get_link_libraries(z_vcpkg_skia_link_libs "RELEASE" "fontconfig;expat;freetype;png16;GL;turbojpeg;jpeg;z;harfbuzz-subset;harfbuzz;webpdecoder;webpdemux;webpmux;webp;icuuc;icudata;pthread")
+        set_property(TARGET unofficial::skia::modules::skunicode_icu APPEND PROPERTY INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:\$<\$<NOT:\$<CONFIG:DEBUG>>:${z_vcpkg_skia_link_libs}>>")
+        unset(z_vcpkg_skia_link_libs)
+    endif()
+endif()

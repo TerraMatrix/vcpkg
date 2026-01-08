@@ -3,19 +3,74 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/gdal-arm64-linux-3.11.4-fdc89cfa-1c4e-4d80-8498-350ef72b86c9",
-  "name": "gdal:arm64-linux@3.11.4 NONE",
+  "documentNamespace": "https://spdx.org/spdxdocs/gdal-arm64-linux-3.11.4-9e0108a6-54dd-43fe-9ac2-2327819a06fa",
+  "name": "gdal:arm64-linux@3.11.4 b59fb289077dcef9c62f708d92e0de17b02d65c9917fa5cf8b7ff3573d320428",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-12-18T01:56:02Z"
+    "created": "2026-01-06T09:38:24Z"
   },
   "relationships": [
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "GENERATES",
       "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-3"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-3",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-4"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-5"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-6"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-7"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-8"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-9"
     },
     {
       "spdxElementId": "SPDXRef-binary",
@@ -1431,6 +1486,11 @@
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-binary-file-282"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-binary-file-283"
     }
   ],
   "packages": [
@@ -1449,15 +1509,149 @@
     {
       "name": "gdal:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "NONE",
+      "versionInfo": "b59fb289077dcef9c62f708d92e0de17b02d65c9917fa5cf8b7ff3573d320428",
       "downloadLocation": "NONE",
       "licenseConcluded": "LicenseRef-vcpkg-null",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-0",
+      "name": "OSGeo/gdal",
+      "downloadLocation": "git+https://github.com/OSGeo/gdal@v3.11.4",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "84a9bd58e9992d2d447788727228410184ef31e881026aee1f48766ed8b25039ab1b09afe95c97b66d3a0751bab524dc9bb57ab2c78af53632b52ec8dcd6f4ad"
+        }
+      ]
     }
   ],
   "files": [
+    {
+      "fileName": "./cmake-project-include.cmake",
+      "SPDXID": "SPDXRef-port-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2ca2817d31a328ce3512e32074fa54b4915b4460e2fb2a846e089227c3e90c59"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./vcpkg-cmake-wrapper.cmake",
+      "SPDXID": "SPDXRef-port-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c507eaa077072e9877607fd5f70381eebf19900661e2e1fd099d84c4df1b8c24"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./target-is-valid.patch",
+      "SPDXID": "SPDXRef-port-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d9404cebec6e0f7dc6ae92af733ebad86584eafc40742c916603a8338acfcd15"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4ef371209d19cb51182e0e2f773bef07bde7945cb3761bd555b9948090966697"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./find-link-libraries.patch",
+      "SPDXID": "SPDXRef-port-file-4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "043cbdd6298fce33c29d128241470b71990dc13eb63bfa44b3d82b17f5384468"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "356a6d815e88b22ab654a6093e84c5fdf026929bc23996b46b1dd655619929e8"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./sqlite3.diff",
+      "SPDXID": "SPDXRef-port-file-6",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "656f219e949cd82fa76b827ea877c74fa998de6cc5535917ab9969b7cfeee510"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./libkml.patch",
+      "SPDXID": "SPDXRef-port-file-7",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fe888df8a7c9e468cdd87640c025f48f165d5264af1fa20604bd60859e6f000f"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./usage",
+      "SPDXID": "SPDXRef-port-file-8",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c85584261e2011a94b86f04c3a28dd2e165c9e6b47677a9bee26a3d387bc05f2"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-gdal-target-interfaces.patch",
+      "SPDXID": "SPDXRef-port-file-9",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9dbe9d5e0dbc3a21370bb3560aa32811d10cc0b19e4b6833cd7258699d206215"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
     {
       "fileName": "./BUILD_INFO",
       "SPDXID": "SPDXRef-binary-file-0",
@@ -3895,8 +4089,20 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./include/gdal_version.h",
+      "fileName": "./bin/gdal-config",
       "SPDXID": "SPDXRef-binary-file-203",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "695492d4b3fe6c934fe0403169979526aea4770e1bf98d3cb5508b0d77c4c015"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./include/gdal_version.h",
+      "SPDXID": "SPDXRef-binary-file-204",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3908,7 +4114,7 @@
     },
     {
       "fileName": "./include/cpl_config.h",
-      "SPDXID": "SPDXRef-binary-file-204",
+      "SPDXID": "SPDXRef-binary-file-205",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3920,7 +4126,7 @@
     },
     {
       "fileName": "./include/cpl_minixml.h",
-      "SPDXID": "SPDXRef-binary-file-205",
+      "SPDXID": "SPDXRef-binary-file-206",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3932,7 +4138,7 @@
     },
     {
       "fileName": "./include/gnmgraph.h",
-      "SPDXID": "SPDXRef-binary-file-206",
+      "SPDXID": "SPDXRef-binary-file-207",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3944,7 +4150,7 @@
     },
     {
       "fileName": "./include/cpl_string.h",
-      "SPDXID": "SPDXRef-binary-file-207",
+      "SPDXID": "SPDXRef-binary-file-208",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3956,7 +4162,7 @@
     },
     {
       "fileName": "./include/cpl_config_extras.h",
-      "SPDXID": "SPDXRef-binary-file-208",
+      "SPDXID": "SPDXRef-binary-file-209",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3968,7 +4174,7 @@
     },
     {
       "fileName": "./include/memdataset.h",
-      "SPDXID": "SPDXRef-binary-file-209",
+      "SPDXID": "SPDXRef-binary-file-210",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3980,7 +4186,7 @@
     },
     {
       "fileName": "./include/cpl_conv.h",
-      "SPDXID": "SPDXRef-binary-file-210",
+      "SPDXID": "SPDXRef-binary-file-211",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -3992,7 +4198,7 @@
     },
     {
       "fileName": "./include/ogr_p.h",
-      "SPDXID": "SPDXRef-binary-file-211",
+      "SPDXID": "SPDXRef-binary-file-212",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4004,7 +4210,7 @@
     },
     {
       "fileName": "./include/gdal_rat.h",
-      "SPDXID": "SPDXRef-binary-file-212",
+      "SPDXID": "SPDXRef-binary-file-213",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4016,7 +4222,7 @@
     },
     {
       "fileName": "./include/cpl_hash_set.h",
-      "SPDXID": "SPDXRef-binary-file-213",
+      "SPDXID": "SPDXRef-binary-file-214",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4028,7 +4234,7 @@
     },
     {
       "fileName": "./include/gdalgeorefpamdataset.h",
-      "SPDXID": "SPDXRef-binary-file-214",
+      "SPDXID": "SPDXRef-binary-file-215",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4040,7 +4246,7 @@
     },
     {
       "fileName": "./include/gdal_frmts.h",
-      "SPDXID": "SPDXRef-binary-file-215",
+      "SPDXID": "SPDXRef-binary-file-216",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4052,7 +4258,7 @@
     },
     {
       "fileName": "./include/gdal.h",
-      "SPDXID": "SPDXRef-binary-file-216",
+      "SPDXID": "SPDXRef-binary-file-217",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4064,7 +4270,7 @@
     },
     {
       "fileName": "./include/gdal_typetraits.h",
-      "SPDXID": "SPDXRef-binary-file-217",
+      "SPDXID": "SPDXRef-binary-file-218",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4076,7 +4282,7 @@
     },
     {
       "fileName": "./include/ogr_recordbatch.h",
-      "SPDXID": "SPDXRef-binary-file-218",
+      "SPDXID": "SPDXRef-binary-file-219",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4088,7 +4294,7 @@
     },
     {
       "fileName": "./include/gdal_utils.h",
-      "SPDXID": "SPDXRef-binary-file-219",
+      "SPDXID": "SPDXRef-binary-file-220",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4100,7 +4306,7 @@
     },
     {
       "fileName": "./include/ogr_core.h",
-      "SPDXID": "SPDXRef-binary-file-220",
+      "SPDXID": "SPDXRef-binary-file-221",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4112,7 +4318,7 @@
     },
     {
       "fileName": "./include/cpl_virtualmem.h",
-      "SPDXID": "SPDXRef-binary-file-221",
+      "SPDXID": "SPDXRef-binary-file-222",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4124,7 +4330,7 @@
     },
     {
       "fileName": "./include/cpl_spawn.h",
-      "SPDXID": "SPDXRef-binary-file-222",
+      "SPDXID": "SPDXRef-binary-file-223",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4136,7 +4342,7 @@
     },
     {
       "fileName": "./include/gdal_vrt.h",
-      "SPDXID": "SPDXRef-binary-file-223",
+      "SPDXID": "SPDXRef-binary-file-224",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4148,7 +4354,7 @@
     },
     {
       "fileName": "./include/vrtdataset.h",
-      "SPDXID": "SPDXRef-binary-file-224",
+      "SPDXID": "SPDXRef-binary-file-225",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4160,7 +4366,7 @@
     },
     {
       "fileName": "./include/ogr_spatialref.h",
-      "SPDXID": "SPDXRef-binary-file-225",
+      "SPDXID": "SPDXRef-binary-file-226",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4172,7 +4378,7 @@
     },
     {
       "fileName": "./include/cpl_vsi_error.h",
-      "SPDXID": "SPDXRef-binary-file-226",
+      "SPDXID": "SPDXRef-binary-file-227",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4184,7 +4390,7 @@
     },
     {
       "fileName": "./include/gdal_alg_priv.h",
-      "SPDXID": "SPDXRef-binary-file-227",
+      "SPDXID": "SPDXRef-binary-file-228",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4196,7 +4402,7 @@
     },
     {
       "fileName": "./include/gdal_proxy.h",
-      "SPDXID": "SPDXRef-binary-file-228",
+      "SPDXID": "SPDXRef-binary-file-229",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4208,7 +4414,7 @@
     },
     {
       "fileName": "./include/gdal_priv.h",
-      "SPDXID": "SPDXRef-binary-file-229",
+      "SPDXID": "SPDXRef-binary-file-230",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4220,7 +4426,7 @@
     },
     {
       "fileName": "./include/rawdataset.h",
-      "SPDXID": "SPDXRef-binary-file-230",
+      "SPDXID": "SPDXRef-binary-file-231",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4232,7 +4438,7 @@
     },
     {
       "fileName": "./include/gdalwarper.h",
-      "SPDXID": "SPDXRef-binary-file-231",
+      "SPDXID": "SPDXRef-binary-file-232",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4244,7 +4450,7 @@
     },
     {
       "fileName": "./include/gdal_pam.h",
-      "SPDXID": "SPDXRef-binary-file-232",
+      "SPDXID": "SPDXRef-binary-file-233",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4256,7 +4462,7 @@
     },
     {
       "fileName": "./include/gdal_fwd.h",
-      "SPDXID": "SPDXRef-binary-file-233",
+      "SPDXID": "SPDXRef-binary-file-234",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4268,7 +4474,7 @@
     },
     {
       "fileName": "./include/cplkeywordparser.h",
-      "SPDXID": "SPDXRef-binary-file-234",
+      "SPDXID": "SPDXRef-binary-file-235",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4280,7 +4486,7 @@
     },
     {
       "fileName": "./include/gdalpansharpen.h",
-      "SPDXID": "SPDXRef-binary-file-235",
+      "SPDXID": "SPDXRef-binary-file-236",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4292,7 +4498,7 @@
     },
     {
       "fileName": "./include/cpl_quad_tree.h",
-      "SPDXID": "SPDXRef-binary-file-236",
+      "SPDXID": "SPDXRef-binary-file-237",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4304,7 +4510,7 @@
     },
     {
       "fileName": "./include/ogr_swq.h",
-      "SPDXID": "SPDXRef-binary-file-237",
+      "SPDXID": "SPDXRef-binary-file-238",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4316,7 +4522,7 @@
     },
     {
       "fileName": "./include/cpl_list.h",
-      "SPDXID": "SPDXRef-binary-file-238",
+      "SPDXID": "SPDXRef-binary-file-239",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4328,7 +4534,7 @@
     },
     {
       "fileName": "./include/gdal_csv.h",
-      "SPDXID": "SPDXRef-binary-file-239",
+      "SPDXID": "SPDXRef-binary-file-240",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4340,7 +4546,7 @@
     },
     {
       "fileName": "./include/cpl_time.h",
-      "SPDXID": "SPDXRef-binary-file-240",
+      "SPDXID": "SPDXRef-binary-file-241",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4352,7 +4558,7 @@
     },
     {
       "fileName": "./include/gdalgrid.h",
-      "SPDXID": "SPDXRef-binary-file-241",
+      "SPDXID": "SPDXRef-binary-file-242",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4364,7 +4570,7 @@
     },
     {
       "fileName": "./include/ogr_geometry.h",
-      "SPDXID": "SPDXRef-binary-file-242",
+      "SPDXID": "SPDXRef-binary-file-243",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4376,7 +4582,7 @@
     },
     {
       "fileName": "./include/gnm.h",
-      "SPDXID": "SPDXRef-binary-file-243",
+      "SPDXID": "SPDXRef-binary-file-244",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4388,7 +4594,7 @@
     },
     {
       "fileName": "./include/cpl_json.h",
-      "SPDXID": "SPDXRef-binary-file-244",
+      "SPDXID": "SPDXRef-binary-file-245",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4400,7 +4606,7 @@
     },
     {
       "fileName": "./include/cpl_csv.h",
-      "SPDXID": "SPDXRef-binary-file-245",
+      "SPDXID": "SPDXRef-binary-file-246",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4412,7 +4618,7 @@
     },
     {
       "fileName": "./include/gdalsubdatasetinfo.h",
-      "SPDXID": "SPDXRef-binary-file-246",
+      "SPDXID": "SPDXRef-binary-file-247",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4424,7 +4630,7 @@
     },
     {
       "fileName": "./include/gdalalgorithm.h",
-      "SPDXID": "SPDXRef-binary-file-247",
+      "SPDXID": "SPDXRef-binary-file-248",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4436,7 +4642,7 @@
     },
     {
       "fileName": "./include/gdal_simplesurf.h",
-      "SPDXID": "SPDXRef-binary-file-248",
+      "SPDXID": "SPDXRef-binary-file-249",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4448,7 +4654,7 @@
     },
     {
       "fileName": "./include/gdal_priv_templates.hpp",
-      "SPDXID": "SPDXRef-binary-file-249",
+      "SPDXID": "SPDXRef-binary-file-250",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4460,7 +4666,7 @@
     },
     {
       "fileName": "./include/ogrsf_frmts.h",
-      "SPDXID": "SPDXRef-binary-file-250",
+      "SPDXID": "SPDXRef-binary-file-251",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4472,7 +4678,7 @@
     },
     {
       "fileName": "./include/cpl_vsi.h",
-      "SPDXID": "SPDXRef-binary-file-251",
+      "SPDXID": "SPDXRef-binary-file-252",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4484,7 +4690,7 @@
     },
     {
       "fileName": "./include/gdal_adbc.h",
-      "SPDXID": "SPDXRef-binary-file-252",
+      "SPDXID": "SPDXRef-binary-file-253",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4496,7 +4702,7 @@
     },
     {
       "fileName": "./include/gdaljp2metadata.h",
-      "SPDXID": "SPDXRef-binary-file-253",
+      "SPDXID": "SPDXRef-binary-file-254",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4508,7 +4714,7 @@
     },
     {
       "fileName": "./include/ogr_feature.h",
-      "SPDXID": "SPDXRef-binary-file-254",
+      "SPDXID": "SPDXRef-binary-file-255",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4520,7 +4726,7 @@
     },
     {
       "fileName": "./include/ogr_api.h",
-      "SPDXID": "SPDXRef-binary-file-255",
+      "SPDXID": "SPDXRef-binary-file-256",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4532,7 +4738,7 @@
     },
     {
       "fileName": "./include/cpl_multiproc.h",
-      "SPDXID": "SPDXRef-binary-file-256",
+      "SPDXID": "SPDXRef-binary-file-257",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4544,7 +4750,7 @@
     },
     {
       "fileName": "./include/cpl_compressor.h",
-      "SPDXID": "SPDXRef-binary-file-257",
+      "SPDXID": "SPDXRef-binary-file-258",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4556,7 +4762,7 @@
     },
     {
       "fileName": "./include/ogr_srs_api.h",
-      "SPDXID": "SPDXRef-binary-file-258",
+      "SPDXID": "SPDXRef-binary-file-259",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4568,7 +4774,7 @@
     },
     {
       "fileName": "./include/cpl_atomic_ops.h",
-      "SPDXID": "SPDXRef-binary-file-259",
+      "SPDXID": "SPDXRef-binary-file-260",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4580,7 +4786,7 @@
     },
     {
       "fileName": "./include/ogr_featurestyle.h",
-      "SPDXID": "SPDXRef-binary-file-260",
+      "SPDXID": "SPDXRef-binary-file-261",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4592,7 +4798,7 @@
     },
     {
       "fileName": "./include/gdal_mdreader.h",
-      "SPDXID": "SPDXRef-binary-file-261",
+      "SPDXID": "SPDXRef-binary-file-262",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4604,7 +4810,7 @@
     },
     {
       "fileName": "./include/gdal_minmax_element.hpp",
-      "SPDXID": "SPDXRef-binary-file-262",
+      "SPDXID": "SPDXRef-binary-file-263",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4616,7 +4822,7 @@
     },
     {
       "fileName": "./include/gdal_alg.h",
-      "SPDXID": "SPDXRef-binary-file-263",
+      "SPDXID": "SPDXRef-binary-file-264",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4628,7 +4834,7 @@
     },
     {
       "fileName": "./include/ogr_geocoding.h",
-      "SPDXID": "SPDXRef-binary-file-264",
+      "SPDXID": "SPDXRef-binary-file-265",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4640,7 +4846,7 @@
     },
     {
       "fileName": "./include/ogr_geomcoordinateprecision.h",
-      "SPDXID": "SPDXRef-binary-file-265",
+      "SPDXID": "SPDXRef-binary-file-266",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4652,7 +4858,7 @@
     },
     {
       "fileName": "./include/cpl_float.h",
-      "SPDXID": "SPDXRef-binary-file-266",
+      "SPDXID": "SPDXRef-binary-file-267",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4664,7 +4870,7 @@
     },
     {
       "fileName": "./include/gdaljp2abstractdataset.h",
-      "SPDXID": "SPDXRef-binary-file-267",
+      "SPDXID": "SPDXRef-binary-file-268",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4676,7 +4882,7 @@
     },
     {
       "fileName": "./include/gdalgrid_priv.h",
-      "SPDXID": "SPDXRef-binary-file-268",
+      "SPDXID": "SPDXRef-binary-file-269",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4688,7 +4894,7 @@
     },
     {
       "fileName": "./include/cpl_port.h",
-      "SPDXID": "SPDXRef-binary-file-269",
+      "SPDXID": "SPDXRef-binary-file-270",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4700,7 +4906,7 @@
     },
     {
       "fileName": "./include/cpl_error.h",
-      "SPDXID": "SPDXRef-binary-file-270",
+      "SPDXID": "SPDXRef-binary-file-271",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4712,7 +4918,7 @@
     },
     {
       "fileName": "./include/cpl_vsi_virtual.h",
-      "SPDXID": "SPDXRef-binary-file-271",
+      "SPDXID": "SPDXRef-binary-file-272",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4724,7 +4930,7 @@
     },
     {
       "fileName": "./include/gnm_api.h",
-      "SPDXID": "SPDXRef-binary-file-272",
+      "SPDXID": "SPDXRef-binary-file-273",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4736,7 +4942,7 @@
     },
     {
       "fileName": "./include/gdalcachedpixelaccessor.h",
-      "SPDXID": "SPDXRef-binary-file-273",
+      "SPDXID": "SPDXRef-binary-file-274",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4748,7 +4954,7 @@
     },
     {
       "fileName": "./include/cpl_progress.h",
-      "SPDXID": "SPDXRef-binary-file-274",
+      "SPDXID": "SPDXRef-binary-file-275",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4760,7 +4966,7 @@
     },
     {
       "fileName": "./include/cpl_auto_close.h",
-      "SPDXID": "SPDXRef-binary-file-275",
+      "SPDXID": "SPDXRef-binary-file-276",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4772,7 +4978,7 @@
     },
     {
       "fileName": "./include/geoheif.h",
-      "SPDXID": "SPDXRef-binary-file-276",
+      "SPDXID": "SPDXRef-binary-file-277",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4784,7 +4990,7 @@
     },
     {
       "fileName": "./include/cpl_http.h",
-      "SPDXID": "SPDXRef-binary-file-277",
+      "SPDXID": "SPDXRef-binary-file-278",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4796,7 +5002,7 @@
     },
     {
       "fileName": "./lib/gdalplugins/drivers.ini",
-      "SPDXID": "SPDXRef-binary-file-278",
+      "SPDXID": "SPDXRef-binary-file-279",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -4808,11 +5014,11 @@
     },
     {
       "fileName": "./lib/libgdal.so",
-      "SPDXID": "SPDXRef-binary-file-279",
+      "SPDXID": "SPDXRef-binary-file-280",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "60c18d8630c754ac9dd8247b1ccff08d6c1be21bb5676a68c9733537f51c6f48"
+          "checksumValue": "468601c4b29664b16e102bcd913aac8a0fc3d2b375a588e0e7c1a10fae8ee5a4"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4820,11 +5026,11 @@
     },
     {
       "fileName": "./lib/libgdal.so.37.3.11.4",
-      "SPDXID": "SPDXRef-binary-file-280",
+      "SPDXID": "SPDXRef-binary-file-281",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "60c18d8630c754ac9dd8247b1ccff08d6c1be21bb5676a68c9733537f51c6f48"
+          "checksumValue": "468601c4b29664b16e102bcd913aac8a0fc3d2b375a588e0e7c1a10fae8ee5a4"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4832,11 +5038,11 @@
     },
     {
       "fileName": "./lib/libgdal.so.37",
-      "SPDXID": "SPDXRef-binary-file-281",
+      "SPDXID": "SPDXRef-binary-file-282",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "60c18d8630c754ac9dd8247b1ccff08d6c1be21bb5676a68c9733537f51c6f48"
+          "checksumValue": "468601c4b29664b16e102bcd913aac8a0fc3d2b375a588e0e7c1a10fae8ee5a4"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -4844,7 +5050,7 @@
     },
     {
       "fileName": "./lib/pkgconfig/gdal.pc",
-      "SPDXID": "SPDXRef-binary-file-282",
+      "SPDXID": "SPDXRef-binary-file-283",
       "checksums": [
         {
           "algorithm": "SHA256",

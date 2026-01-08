@@ -3,19 +3,54 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/osg-qt-arm64-linux-Qt5#3-8d009cd0-b73a-4aef-bd47-ce23e27ee1e9",
-  "name": "osg-qt:arm64-linux@Qt5#3 NONE",
+  "documentNamespace": "https://spdx.org/spdxdocs/osg-qt-arm64-linux-Qt5#3-e5d1f984-20ab-4409-9403-f278682d2f90",
+  "name": "osg-qt:arm64-linux@Qt5#3 66f53e0554c725fd372a954b66f1bf3779517261417d3511f75d230ba7e3e38e",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2025-10-16-71538f2694db93da4668782d094768ba74c45991"
     ],
-    "created": "2025-12-18T12:40:59Z"
+    "created": "2026-01-08T02:19:23Z"
   },
   "relationships": [
     {
       "spdxElementId": "SPDXRef-port",
       "relationshipType": "GENERATES",
       "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-3"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-4"
+    },
+    {
+      "spdxElementId": "SPDXRef-port-file-4",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-port-file-5"
     },
     {
       "spdxElementId": "SPDXRef-binary",
@@ -103,15 +138,101 @@
     {
       "name": "osg-qt:arm64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "NONE",
+      "versionInfo": "66f53e0554c725fd372a954b66f1bf3779517261417d3511f75d230ba7e3e38e",
       "downloadLocation": "NONE",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
       "copyrightText": "NOASSERTION",
       "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-0",
+      "name": "openscenegraph/osgQt",
+      "downloadLocation": "git+https://github.com/openscenegraph/osgQt@2cb70673a4e83a618290e7ee66d52402a94ec3f6",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "29aeb5b31e70d5b12e69de7970b36ab7d1541c984873384a46c6468394e8562688c46ef39179820990817c94f283c7836c2c6ff207eefe385086d850ba3f8306"
+        }
+      ]
     }
   ],
   "files": [
+    {
+      "fileName": "./fix-static-install.patch",
+      "SPDXID": "SPDXRef-port-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ed6168cc19f7e360e523114ff5537226635cb5d9f349643cabaaecde54e9913b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./OsgMacroUtils.patch",
+      "SPDXID": "SPDXRef-port-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1a60ee2d5382b947fce5bba619a9f62d71250cd1ea49f1d99e29f7a6c8e28693"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./use-lib.patch",
+      "SPDXID": "SPDXRef-port-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4bd03bf897e786f02fc3e9f661ae93f02a57224b8729245dfb07a22fb99dfee4"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./CMakeLists.patch",
+      "SPDXID": "SPDXRef-port-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0775753644801035d766752d60ba79cafd0983dd9edda496d417d3fcfb3b90ce"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-port-file-4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "50570d7ed1d60816e638f9f78c0a907b5a1faa889905a6d97f54a063f78e1a33"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-port-file-5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0381e14f1ed47a71de0a91c034571cf9a1f0b1a399e840773e03b0330a9858b0"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
     {
       "fileName": "./BUILD_INFO",
       "SPDXID": "SPDXRef-binary-file-0",
@@ -238,7 +359,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f54f734d3ee3532f673e369cbc11dd28b7d31568a96699fdc258c3aedb94eebc"
+          "checksumValue": "98dbeba81e25c2029fedbdd82095e6327dfcdc690d5417434fb87df8d31b09e3"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -250,7 +371,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f54f734d3ee3532f673e369cbc11dd28b7d31568a96699fdc258c3aedb94eebc"
+          "checksumValue": "98dbeba81e25c2029fedbdd82095e6327dfcdc690d5417434fb87df8d31b09e3"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -274,7 +395,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "f54f734d3ee3532f673e369cbc11dd28b7d31568a96699fdc258c3aedb94eebc"
+          "checksumValue": "98dbeba81e25c2029fedbdd82095e6327dfcdc690d5417434fb87df8d31b09e3"
         }
       ],
       "licenseConcluded": "NOASSERTION",

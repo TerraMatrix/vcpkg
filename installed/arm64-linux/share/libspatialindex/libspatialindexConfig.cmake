@@ -25,7 +25,7 @@ endmacro()
 ####################################################################################
 
 set(SIDX_VERSION_MAJOR 2)
-set(SIDX_VERSION_MINOR 1)
+set(SIDX_VERSION_MINOR 0)
 set(SIDX_VERSION_PATCH 0)
 
 set_and_check(SIDX_INCLUDE_DIR "${PACKAGE_PREFIX_DIR}/include")
